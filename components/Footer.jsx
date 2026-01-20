@@ -185,7 +185,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-gray-700 py-2 text-center text-sm text-gray-400">
-        © 2025. A N GLOBAL SERVICES PVT. LTD. All Rights Reserved.
+        © 2026. A N GLOBAL SERVICES PVT. LTD. All Rights Reserved.
       </div>
     </footer>
   );
