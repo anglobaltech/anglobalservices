@@ -8,7 +8,7 @@ export const servicesMenu = [
         root: true,
       },
       { name: "BIS ISI MARK FOR FMCS", slug: "FMCS_services", root: true },
-      { name: "BIS HALLMARK CERTIFICATE", slug: "hallmarking", root: true },
+      { name: "BIS HALLMARK CERTIFICATION", slug: "hallmarking", root: true },
       {
         name: "NABL CERTIFICATION SERVICES",
         slug: "nabl_services",

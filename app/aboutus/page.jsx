@@ -145,11 +145,12 @@ export default function AboutPage() {
               <p>
                 We provide Product Certification (ISI mark), Foreign
                 Manufactures Certification Scheme (FMCS), Compulsory
-                Registration Scheme (CRS), and hallmarking of precious
-                metals/jewellery, BEE Registration, EPR Authorization (for
-                e-waste), WPC Approval and TEC Certification, NSIC
-                Certification, WMI Certification, NABL Accreditation Consultancy
-                Indian BIS and CRS Scheme for Electronics & IT Goods, WPC
+                Registration Scheme (CRS) for Electronics & IT Goods, 
+                 BIS hallmarking of precious For
+                metals/jewellery, BEE Registration Services, Trademark Registration Services,
+                CE Certification Services,  EPR Authorization (for
+                e-waste), Solar Panel BIS Registration Services, WPC Approval and TEC Certification, MSME & NSIC
+                Certification, WMI Certification, NABL Accreditation Consultancy, WPC
                 License and many more.
               </p>
               <p>
