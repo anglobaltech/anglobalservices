@@ -11,15 +11,15 @@ export const servicesMenu = [
       { name: "BIS HALLMARK CERTIFICATE", slug: "hallmarking", root: true },
       {
         name: "NABL CERTIFICATION SERVICES",
-        slug: "nabl-services",
+        slug: "nabl_services",
         root: true,
       },
       {
         name: "LABORATORY EQUIPMENT & SETUP",
-        slug: "lab-services",
+        slug: "lab_servces",
         root: true,
       },
-      { name: "WPC CERTIFICATION SERVICES", slug: "wpc-services", root: true },
+      { name: "WPC CERTIFICATION SERVICES", slug: "wpc_services", root: true },
     ],
   },
   {
