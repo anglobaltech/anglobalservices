@@ -50,11 +50,16 @@ export default function ISIPage() {
               <div className="w-150 h-0.5 bg-[#0072b1] mt-2 mb-4" />
 
               <p className="text-gray-500 text-[15px] leading-6 text-justify">
-                The BIS hallmark is a hallmarking system for gold as well as
-                silver jewelry sold in India certifying the purity of the metal.
-                It certifies that the piece of jewelry conforms to a set of
-                standards laid by the Bureau of Indian Standards, the national
-                standards organization of India.
+                The Wireless Planning & Coordination (WPC) Wing of the Ministry
+                of Communication & Information Technology, created in 1952, is
+                the national radio regulatory nodal agency of the Government of
+                India and is responsible for planning, regulating, and managing
+                the limited resources of Radio Frequency (RF) spectrum and
+                associated satellite orbits, including geo-stationary satellite
+                orbit as well as licensing of wireless stations in the country
+                under the Indian Telegraph Act 1885 (ITA 1885) and the Indian
+                Wireless Telegraphy Act 1933 (IWTA 1933), as statutory
+                requirement.
               </p>
             </div>
 

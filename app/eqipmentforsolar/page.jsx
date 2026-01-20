@@ -88,7 +88,7 @@ export default function SolarTestingEquipmentPage() {
 
           <div className="relative rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/equipment/solar-testing/hipot-testing1.jpeg"
+              src="/equipment/solar-testing/hipot-testing.jpeg"
               alt="Solar panel HIPOT testing system for electrical insulation safety"
               width={420}
               height={520}

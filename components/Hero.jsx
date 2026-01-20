@@ -13,28 +13,46 @@ const slides = ["/dash-image1.jpg", "/dash-image2.jpg", "/dash-image3.jpg"];
 export default function Hero() {
   const testimonials = [
     {
-      text: "AN Global Services did an exceptional job in understanding our requirements and executed our company formation including all the legal aspects of service tax compliance in a very professional and articulate manner.",
+      text: "AN Global Services provided excellent installation and support for our XRF machine. The team is highly professional, and the entire process was smooth and well-managed. Special thanks to Ayush Sharma for his guidance.",
       name: "Roni Dear",
-      position: "Ex Country Head, TUV",
-      image: "/",
+      position: "XRF Lab Owner",
+      image: "/images/testimonials/roni-dear.jpg",
     },
     {
-      text: "With help of Aleph India we have made a significant progress in our Business, we are four times more engaged in India as we were before. Their service is fast, genuine and updated. Looking forward for great business in future.",
-      name: "Nishant Singh Rajput",
-      position: "Sales Manager, Ningbo Polaris Metal Products Co. Ltd.",
-      image: "/",
+      text: "AN Global Services set up our LS Hallmarking system flawlessly. The setup quality and technical knowledge are outstanding. One of the best hallmarking solution providers in India.",
+      name: "Punit Soni",
+      position: "Jewellery Business Owner",
+      image: "/images/testimonials/punit-soni.jpg",
     },
     {
-      text: "Outstanding service and professional approach! They handled our WPC certification process seamlessly. The team's expertise and dedication made the entire journey smooth and hassle-free.",
-      name: "SHANKAR SINGH RAJASTHANI",
-      position: "Director, Tech Solutions India",
-      image: "/",
+      text: "Dil se dhanyavaad AN Global Services ko. Kalyan Hallmarking Center, Sojat ke liye unki service aur support kaafi reliable aur professional raha.",
+      name: "Shaitansingh Chauhan",
+      position: "Owner, Kalyan Hallmarking Center",
+      image: "/images/testimonials/shaitansingh.jpg",
     },
     {
-      text: "Excellent support throughout the TEC certification process. Their knowledge and prompt responses made everything so much easier. Highly recommend their services for any certification needs.",
-      name: "Priya Sharma",
-      position: "CEO, InnovateTech Solutions",
-      image: "/",
+      text: "Very excellent training and support. The team explained the entire process step by step in a very clear manner. Highly satisfied with their technical guidance.",
+      name: "Majeti Kumar Raja",
+      position: "Lab Technician",
+      image: "/images/testimonials/majeti-kumar.jpg",
+    },
+    {
+      text: "Mr. Ayush Ji is very friendly and positive. His team’s work quality is excellent, and their coordination is truly commendable. Highly recommended.",
+      name: "Amit Soni",
+      position: "Business Owner",
+      image: "/images/testimonials/amit-soni.jpg",
+    },
+    {
+      text: "Best teamwork and very good nature. The team is supportive, knowledgeable, and always ready to help.",
+      name: "GS Soni",
+      position: "Jewellery Professional",
+      image: "/images/testimonials/gs-soni.jpg",
+    },
+    {
+      text: "AN Global Services always delivers work up to expectations. Their commitment and professionalism make them a trusted service partner.",
+      name: "Ankit Gupta",
+      position: "Local Guide & Client",
+      image: "/images/testimonials/ankit-gupta.jpg",
     },
   ];
 
@@ -303,20 +321,22 @@ export default function Hero() {
     "
         >
           {slides.map((src, index) => (
-            <Image
-              key={index}
-              src={src}
-              alt={`Hero Slide ${index + 1}`}
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className={`
-          transition-opacity duration-700 ease-in-out
-          ${index === current ? "opacity-100" : "opacity-0"}
-          object-cover object-center scale-[1.05]
-          lg:scale-100 lg:object-cover
-        `}
-            />
+           <Image
+            key={index}
+            src={src}
+            alt={`Hero Slide ${index + 1}`}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className={`
+              transition-opacity duration-700 ease-in-out
+              ${index === current ? "opacity-100" : "opacity-0"}
+              object-cover
+              lg:object-contain
+              lg:scale-100
+            `}
+          />
+
           ))}
         </div>
 
@@ -357,10 +377,9 @@ export default function Hero() {
               </h2>
 
               <p className="text-gray-900 mb-4 leading-relaxed">
-                "AN Global Services" is a well-established and
-                leading consulting firm, a reliable service provider. We have
-                placed ourselves amongst the assured names in the corporate
-                world.
+                "AN Global Services" is a well-established and leading
+                consulting firm, a reliable service provider. We have placed
+                ourselves amongst the assured names in the corporate world.
               </p>
 
               <p className="text-gray-900 mb-4 leading-relaxed">
@@ -533,8 +552,7 @@ export default function Hero() {
                 </button>
                 {success && (
                   <p className="md:col-span-2 text-green-600 text-sm font-semibold mt-2">
-                    Your enquiry has been sent. We will respond within 24
-                    hours.
+                    Your enquiry has been sent. We will respond within 24 hours.
                   </p>
                 )}
 
