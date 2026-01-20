@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute   bg-[#0075B6] opacity-10 rounded-xl"></div>
               <img
-                src="/about-us.jpg"
+                src="/about-us1.jpeg"
                 alt="Professional Team"
                 className="relative rounded-xl shadow-xl w-full"
               />

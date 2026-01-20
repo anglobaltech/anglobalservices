@@ -3,7 +3,7 @@ export const updatesMenu = [
     items: [
       {
         name: "LATEST NOTIFICATIONS",
-        slug: "latest-notifications",
+        slug: "latest_updates",
         root: true,
       },
       { name: "NEWS & UPDATES", slug: "news-updates", root: true },
