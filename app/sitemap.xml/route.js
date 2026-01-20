@@ -8,13 +8,14 @@ export async function GET() {
 
   function getRoutes(dir, basePath = '') {
     const entries = fs.readdirSync(dir, { withFileTypes: true })
-
     let routes = []
 
     for (const entry of entries) {
-      if (entry.name.startsWith('_')) continue
-      if (entry.name === 'api') continue
-      if (entry.name === 'sitemap.xml') continue
+      if (
+        entry.name.startsWith('_') ||
+        entry.name === 'api' ||
+        entry.name === 'sitemap.xml'
+      ) continue
 
       const fullPath = path.join(dir, entry.name)
       const routePath = `${basePath}/${entry.name}`
@@ -35,7 +36,7 @@ export async function GET() {
   const urls = pages.map(
     (route) => `
     <url>
-      <loc>${baseUrl}${route === '/page' ? '' : route}</loc>
+      <loc>${baseUrl}${route}</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>`
@@ -51,8 +52,6 @@ export async function GET() {
   </urlset>`
 
   return new NextResponse(sitemap, {
-    headers: {
-      'Content-Type': 'application/xml',
-    },
+    headers: { 'Content-Type': 'application/xml' },
   })
 }
