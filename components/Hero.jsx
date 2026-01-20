@@ -412,10 +412,10 @@ export default function Hero() {
               { img: "/services/bis.jpg", link: "/crs_electronic_it" },
               { img: "/services/nabl-certification-service.png", link: "/nabl_services" },
               { img: "/services/bee.jpg", link: "/bee_services" },
-              { img: "/services/wpc.jpg", link: "/wpc_services" },
+              { img: "/services/wpc-certification.png", link: "/wpc_services" },
               { img: "/services/epr.jpg", link: "/epr_services" },
               { img: "/services/msme.jpg", link: "/msme_services" },
-              { img: "/services/lab.jpg", link: "/lab_servces" },
+              { img: "/services/lab-equipment-setup.png", link: "/lab_servces" },
               { img: "/services/solar.jpg", link: "/solar_services" },
               { img: "/services/tm.jpg", link: "/trademark_services" },
             ].map((item, index) => (
