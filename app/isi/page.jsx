@@ -18,13 +18,13 @@ export default function ISIPage() {
           priority
           className="object-cover " 
         />
-        {/* <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-white text-3xl md:text-4xl font-bold">
               BIS ISI CERTIFICATION SERVICES
             </h1>
           </div>
-        </div> */}
+        </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
