@@ -8,7 +8,8 @@ export default function LaserSolderingMachine() {
         "Laser soldering enables high-precision jewellery repair and manufacturing without heat damage.",
       details:
         "Stone-in-place repairs, crack fixing, and micro-part joining while preserving the original finish of precious metals.",
-      image: "/equipment/soldering-machine/jewellery-laser-soldering-machine.jpg",
+      image:
+        "/equipment/soldering-machine/jewellery-laser-soldering-machine.jpg",
       features: [
         "Repairing gold, silver, platinum jewellery",
         "Joining tiny parts like clasps and prongs",
@@ -22,7 +23,8 @@ export default function LaserSolderingMachine() {
         "Ideal for micro-electronics where conventional soldering may damage sensitive components.",
       details:
         "Precise heat control ensures reliable solder joints for miniature and high-density electronic assemblies.",
-      image: "/equipment/soldering-machine/laser-soldering-machine-electronics.png",
+      image:
+        "/equipment/soldering-machine/laser-soldering-machine-electronics.png",
       features: [
         "Soldering micro-components on PCBs",
         "Repairing sensors and connectors",
@@ -36,7 +38,8 @@ export default function LaserSolderingMachine() {
         "Medical manufacturing demands contamination-free and highly accurate joining solutions.",
       details:
         "Laser soldering eliminates oxidation and flux residue, ideal for surgical and implantable devices.",
-      image: "/equipment/soldering-machine/laser-soldering-machine-medical-product.jpg",
+      image:
+        "/equipment/soldering-machine/laser-soldering-machine-medical-product.jpg",
       features: [
         "Assembling surgical instruments",
         "Joining miniature components",
@@ -50,7 +53,8 @@ export default function LaserSolderingMachine() {
         "Watchmaking requires extreme accuracy with minimal thermal impact.",
       details:
         "Ultra-thin components can be joined without affecting nearby mechanisms or finishes.",
-      image: "/equipment/soldering-machine/laser-soldering-machine-watches-product.jpg",
+      image:
+        "/equipment/soldering-machine/laser-soldering-machine-watches-product.jpg",
       features: [
         "Repairing watch cases and crowns",
         "Joining ultra-thin metal parts",
@@ -64,10 +68,20 @@ export default function LaserSolderingMachine() {
     <main className="bg-gray-50">
       {/* HERO */}
       <section className="bg-linear-to-r from-gray-700 to-gray-600 text-white h-64 md:h-72 flex items-center justify-center px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-wide">
-            LASER SOLDERING MACHINE
-          </h1>
+        <div className="relative w-full h-75">
+          <Image
+            src="/service/isi/about.jpg"
+            alt="Latest Notifications"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center">
+            <div className="max-w-7xl mx-auto px-6">
+              <h1 className="text-white text-4xl font-bold">
+                LASER SOLDERING MACHINE
+              </h1>
+            </div>
+          </div>
         </div>
       </section>
 

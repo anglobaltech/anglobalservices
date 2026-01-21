@@ -167,10 +167,16 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
                 <div className="p-3 bg-[#0072b1]/10 rounded-lg group-hover:bg-[#0072b1] transition-colors">
-                  <Phone
-                    className="text-[#0072b1] group-hover:text-white transition-colors"
-                    size={20}
-                  />
+                  <a
+                    href="tel:+917782069184"
+                    className="group inline-flex"
+                    aria-label="Call us"
+                  >
+                    <Phone
+                      className="text-[#0072b1] group-hover:text-white transition-colors"
+                      size={20}
+                    />
+                  </a>
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">
@@ -187,10 +193,16 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4 group">
                 <div className="p-3 bg-[#0072b1]/10 rounded-lg group-hover:bg-[#0072b1] transition-colors">
-                  <Mail
-                    className="text-[#0072b1] group-hover:text-white transition-colors"
-                    size={20}
-                  />
+                  <a
+                    href="mailto:info@anglobalservices.com"
+                    className="group inline-flex"
+                    aria-label="Email us"
+                  >
+                    <Mail
+                      className="text-[#0072b1] group-hover:text-white transition-colors"
+                      size={20}
+                    />
+                  </a>
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">

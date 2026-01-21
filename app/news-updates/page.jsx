@@ -64,21 +64,20 @@ export default function NewsUpdatesPage() {
   return (
     <div className="w-full bg-white">
       <div className="relative w-full h-75">
-        <Image
-          src="/service/isi/about.jpg"
-          alt="News and Updates"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#727273] flex items-center">
-          <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-white text-4xl font-bold">
-              NEWS & REGULATORY UPDATES
-            </h1>
-          </div>
-        </div>
-      </div>
+             <Image
+               src="/service/isi/about.jpg"
+               alt="Latest Notifications"
+               fill
+               className="object-cover"
+             />
+             <div className="absolute inset-0 bg-black/40 flex items-center">
+               <div className="max-w-7xl mx-auto px-6">
+                 <h1 className="text-white text-4xl font-bold">
+                    NEWS & REGULATORY UPDATE
+                 </h1>
+               </div>
+             </div>
+           </div>
 
       <div className="max-w-7xl mx-auto px-6 py-16">
         {newsUpdates.map((item, index) => (

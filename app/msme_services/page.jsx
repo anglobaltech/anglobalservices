@@ -21,7 +21,7 @@ export default function ISIPage() {
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-white text-3xl md:text-4xl font-bold">
-              MSME SERVICES
+              MSME REGISTRATION SERVICES
             </h1>
           </div>
         </div>

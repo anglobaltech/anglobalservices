@@ -6,13 +6,14 @@ export default function sitemap() {
     'aboutus',
     'contact-us',
     'bee_services',
-    'bis-gold-hallmarking-consultant',
+    'bis-gold-hallmarking',
     'calibration-service',
     'chemicals-petrochemicals',
     'crs_electronic_it',
     'epr_services',
-    'equipmentforsolar',
-    'equipmentforlaser',
+    'eqipmentforsolar',
+    'equipmentforfootwear',
+    'eqipmentsforleaser',
     'equipmentforgold',
     'equipmentfortoy',
     'FMCS_services',
@@ -43,7 +44,7 @@ export default function sitemap() {
   return pages.map((page) => ({
     url: `${baseUrl}/${page}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly',
+    changeFrequency: 'daily',
     priority: page === '' ? 1 : 0.8,
   }))
 }

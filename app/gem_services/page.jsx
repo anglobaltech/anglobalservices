@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "GEM Services | AN Global Services",
+  title: "GEM REGISTRATION Services | AN Global Services",
   description:
-    "Get complete GEM Services for domestic and industrial products. AN Global Services provides end-to-end GEM registration support.",
+    "Get complete GEM Registration Services for domestic and industrial products. AN Global Services provides end-to-end GEM registration support.",
 };
 
 export default function ISIPage() {
@@ -21,7 +21,7 @@ export default function ISIPage() {
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-white text-3xl md:text-4xl font-bold">
-              GEM SERVICES
+              GEM REGISTRATION SERVICES
             </h1>
           </div>
         </div>

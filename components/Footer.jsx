@@ -24,30 +24,51 @@ export default function Footer() {
 
             <h3 className="text-white font-semibold mb-4">Contact Info</h3>
 
-            <div className="space-y-3 text-sm">
-              <div className="flex items-start gap-3">
-                <span>📞</span>
-                <span>+91 7782069184</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span>📞</span>
-                <span>+91 9958820184</span>
-              </div>
+            <div className="space-y-4 text-sm">
+              {/* Phone 1 */}
+              <a
+                href="tel:+917782069184"
+                className="flex items-start gap-3 group"
+              >
+                <Image src="/call.png" alt="Call" width={18} height={18} />
+                <span className="text-white group-hover:text-[#0072b1]">
+                  +91 7782069184
+                </span>
+              </a>
 
-              <div className="flex items-start gap-3">
-                <span>✉️</span>
-                <span>info@anglobalservices.com</span>
-              </div>
+              {/* Phone 2 */}
+              <a
+                href="tel:+919958820184"
+                className="flex items-start gap-3 group"
+              >
+                <Image src="/call.png" alt="Call" width={18} height={18} />
+                <span className="text-white group-hover:text-[#0072b1]">
+                  +91 9958820184
+                </span>
+              </a>
 
+              {/* Email */}
+              <a
+                href="mailto:info@anglobalservices.com"
+                className="flex items-start gap-3 group"
+              >
+                <Image src="/email.png" alt="Email" width={18} height={18} />
+                <span className="text-white group-hover:text-[#0072b1] break-all">
+                  info@anglobalservices.com
+                </span>
+              </a>
+
+              {/* Address */}
               <div className="flex items-start gap-3">
                 <span>📍</span>
-                <span>
+                <span className="text-white leading-5">
                   S-63, 7th Floor, Urbtech NPX, Noida <br />
                   Sector-153, Uttar Pradesh, INDIA <br />
                   Pin – 201310
                 </span>
               </div>
 
+              {/* ISO Image */}
               <div className="mt-6">
                 <Image
                   src="/iso.png"

@@ -51,7 +51,7 @@ export default function GoldHallmarkingPage() {
         <div className="absolute inset-0 bg-[#0a3d62]/70" />
 
         <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 leading-snug">
-          GOLD HALLMARKING SETUP AND REGISTRATION SERVICES
+          GOLD & SILVER HALLMARKING SETUP AND REGISTRATION SERVICES
         </h1>
       </section>
 

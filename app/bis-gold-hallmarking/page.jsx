@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "BIS Consultant for Gold Hallmarking | AN Global Services",
+  title: "BIS Gold Hallmarking | AN Global Services",
   description:
     "End-to-end BIS consultancy for Assaying & Hallmarking Centre (AHC) setup and Jeweller Registration as per latest HUID norms.",
 };
@@ -13,7 +13,7 @@ export default function GoldHallmarkingPage() {
       <section className="relative w-full h-65 md:h-68">
         <Image
           src="/service/isi/about.jpg"
-          alt="Gold Hallmarking BIS Consultant"
+          alt="Gold Hallmarking BIS"
           fill
           priority
           className="object-cover"
@@ -21,7 +21,7 @@ export default function GoldHallmarkingPage() {
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-white text-3xl md:text-4xl font-bold">
-              BIS CONSULTANT FOR GOLD HALLMARKING SETUP 
+              BIS GOLD HALLMARKING SETUP & REGISTRATION SERVICES
             </h1>
           </div>
         </div>

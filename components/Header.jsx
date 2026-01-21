@@ -21,26 +21,41 @@ export default function Header() {
         {/* Contact Info */}
         <div className="hidden md:flex items-center gap-8 text-xs">
           {/* Call */}
-          <div className="flex items-center gap-2">
-            <Image src="/call.png" alt="Call" width={22} height={22} />
+          <a href="tel:+917782069184" className="flex items-center gap-2 group">
+            <Image
+              src="/call.png"
+              alt="Call"
+              width={22}
+              height={22}
+              className="group-hover:scale-105 transition"
+            />
             <div className="leading-tight">
               <p className="text-gray-700 text-[11px] text-center">Call Us</p>
-              <p className="text-gray-900 font-semibold text-sm">
+              <p className="text-gray-900 font-semibold text-sm group-hover:text-[#0072b1]">
                 +91 7782069184
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Email */}
-          <div className="flex items-center gap-2">
-            <Image src="/email.png" alt="Email" width={22} height={22} />
+          <a
+            href="mailto:info@anglobalservices.com"
+            className="flex items-center gap-2 group"
+          >
+            <Image
+              src="/email.png"
+              alt="Email"
+              width={22}
+              height={22}
+              className="group-hover:scale-105 transition"
+            />
             <div className="leading-tight">
               <p className="text-gray-700 text-[11px] text-center">Email</p>
-              <p className="text-gray-900 font-semibold text-sm">
-                info@anglobalservices.com
+              <p className="text-gray-900 font-semibold text-sm group-hover:text-[#0072b1]">
+             info@anglobalservices.com
               </p>
             </div>
-          </div>
+          </a>
 
           <a
             href="/company-profile.pdf"

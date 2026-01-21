@@ -8,7 +8,7 @@ export const servicesMenu = [
         root: true,
       },
       { name: "BIS ISI MARK FOR FMCS", slug: "FMCS_services", root: true },
-      { name: "BIS HALLMARK CERTIFICATION", slug: "hallmarking", root: true },
+      { name: "BIS HALLMARKING CERTIFICATION", slug: "hallmarking", root: true },
       {
         name: "NABL CERTIFICATION SERVICES",
         slug: "nabl_services",
@@ -43,8 +43,8 @@ export const servicesMenu = [
       },
 
       {
-        name: "BIS CONSULTANT GOLD HALLMARKING SETUP & REGISTRATION SERVICES",
-        slug: "bis-gold-hallmarking-consultant",
+        name: "BIS GOLD HALLMARKING SETUP & REGISTRATION SERVICES",
+        slug: "bis-gold-hallmarking",
         root: true,
       },
       {
@@ -59,7 +59,7 @@ export const servicesMenu = [
     items: [
      
       {
-        name: "GEM SERVICES",
+        name: "GEM REGISTRATION SERVICES",
         slug: "gem_services",
         root: true,
       },

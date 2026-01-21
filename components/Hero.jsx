@@ -377,7 +377,7 @@ export default function Hero() {
               </h2>
 
               <p className="text-gray-900 mb-4 leading-relaxed">
-                "AN Global Services" is a well-established and leading
+                <span className="text-[#016398] font-bold">"AN Global Services"</span> is a well-established and leading
                 consulting firm, a reliable service provider. We have placed
                 ourselves amongst the assured names in the corporate world.
               </p>
