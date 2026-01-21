@@ -1,0 +1,49 @@
+export default function sitemap() {
+  const baseUrl = 'https://anglobalservices.com'
+
+  const pages = [
+    '',
+    'aboutus',
+    'contact-us',
+    'bee_services',
+    'bis-gold-hallmarking-consultant',
+    'calibration-service',
+    'chemicals-petrochemicals',
+    'crs_electronic_it',
+    'epr_services',
+    'equipmentforsolar',
+    'equipmentforlaser',
+    'equipmentforgold',
+    'equipmentfortoy',
+    'FMCS_services',
+    'footwear',
+    'gem_services',
+    'hallmarking',
+    'isi',
+    'lab_servces',
+    'latest_updates',
+    'news-updates',
+    'msme_services',
+    'nabl_services',
+    'notifi_bolts_nuts_order',
+    'solar_services',
+    'solar-equipment',
+    'solar-panel-plant-setup',
+    'steel-products',
+    'term-conditions',
+    'testing_footwear',
+    'testing_gold',
+    'testing_solar_panel',
+    'testing-toys',
+    'trademark_services',
+    'traning_services',
+    'wpc_services',
+  ]
+
+  return pages.map((page) => ({
+    url: `${baseUrl}/${page}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: page === '' ? 1 : 0.8,
+  }))
+}
