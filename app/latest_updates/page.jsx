@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Latest Notifications & Updates | AN Global Services",
+  description:
+    "Stay updated with the latest notifications, regulatory updates, certification announcements, and compliance-related information from AN Global Services.",
+};
+
 const notifications = [
   {
     title:
