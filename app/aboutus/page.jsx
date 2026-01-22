@@ -1,5 +1,11 @@
 import React from "react";
 import Link from "next/link";
+export const metadata = {
+  title: "About AN Global Services | Trusted Certification & Compliance Consultancy",
+  description:
+    "Learn about AN Global Services, a trusted certification and compliance consultancy helping businesses with BIS, WPC, NABL, CRS, FMCS, ISI Mark, Hallmarking, EPR Authorization, MSME, NSIC, and regulatory approvals in India.",
+};
+
 import {
   CheckCircle,
   Award,
