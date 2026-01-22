@@ -1,7 +1,10 @@
-"use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
 
+export const metadata = {
+  title: "Solar Panel Testing Services under BIS Certification | AN Global Services",
+  description:
+    "AN Global Services provides professional Solar Panel Testing services under BIS Certification. We assist with performance testing, power output evaluation, voltage and current measurement, and compliance with applicable Indian Standards for solar panels.",
+};
 
 export default function GoldHallmarkingPage() {
 

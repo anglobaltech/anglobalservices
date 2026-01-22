@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Trademark Registration Services | AN Global Services",
+  title: "MSME & NSIC Registration Services in India | AN Global Services",
   description:
-    "Get complete Trademark registration services for domestic and industrial products. AN Global Services provides end-to-end trademark registration support.",
+    "AN Global Services provides professional MSME and NSIC Registration services in India. Get expert assistance for MSME online registration under the MSMED Act to avail government subsidies, easy bank loans, tax benefits, and business support schemes.",
 };
 
 export default function ISIPage() {

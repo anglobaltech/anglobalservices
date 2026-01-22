@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Latest News & Industry Updates | AN Global Services",
+  description:
+    "Read the latest news, industry insights, regulatory developments, and certification-related updates from AN Global Services across testing, BIS, NABL, WPC, and compliance sectors.",
+};
+
+
 const newsUpdates = [
   {
     title:

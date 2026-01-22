@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Laser Soldering Machine for Jewellery, Electronics & Medical Devices | AN Global Services",
+  description:
+    "AN Global Services offers advanced Laser Soldering Machines for high-precision applications in jewellery, electronics, medical devices, and watchmaking. Achieve clean, accurate, and heat-controlled soldering with minimal thermal impact and superior joint quality.",
+};
+
 export default function LaserSolderingMachine() {
   const applications = [
     {

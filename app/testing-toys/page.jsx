@@ -1,6 +1,10 @@
-"use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
+
+export const metadata = {
+  title: "BIS Certified Toys Testing & Safety Compliance Services | AN Global Services",
+  description:
+    "Get expert assistance for BIS Certified Toys Testing. AN Global Services supports toy manufacturers and importers with safety, chemical, electrical, flammability, torque, and tension testing to meet regulatory requirements in India and global markets.",
+};
 
 export default function Page() {
   return (

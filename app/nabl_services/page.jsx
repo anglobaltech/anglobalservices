@@ -1,40 +1,13 @@
-"use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
 
-const images = [
-  "/service/hallmarking/acetic-acid.png",
-  "/service/hallmarking/beta-picoline.png",
-  "/service/hallmarking/Ferronickel.png",
-  "/service/hallmarking/hydrogenated-rice.png",
-  "/service/hallmarking/methenol.png",
-  "/service/hallmarking/potassium.png",
-  "/service/hallmarking/Morpholine.png",
-];
+export const metadata = {
+  title: "NABL Certification Services | Testing & Calibration Laboratory Accreditation | AN Global Services",
+  description:
+    "AN Global Services offers expert NABL Certification Services for testing, calibration, and medical laboratories. We assist with accreditation as per ISO/IEC 17025 and ISO 15189 standards, ensuring global recognition through ILAC and APLAC MRA compliance.",
+};
+
 
 export default function GoldHallmarkingPage() {
-  const sliderRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const startDrag = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
-  };
-
-  const stopDrag = () => {
-    setIsDragging(false);
-  };
-
-  const onDrag = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; 
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
 
   return (
     <main className="w-full bg-white">
@@ -210,36 +183,6 @@ export default function GoldHallmarkingPage() {
               provide financial benefits and enhance an organization&apos;s
               reputation for accuracy and precision.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full bg-gray-100 pb-14">
-        <div className="max-w-7xl mx-auto px-4">
-          <div
-            ref={sliderRef}
-            onMouseDown={startDrag}
-            onMouseLeave={stopDrag}
-            onMouseUp={stopDrag}
-            onMouseMove={onDrag}
-            className={`flex gap-6 overflow-x-scroll select-none cursor-grab ${
-              isDragging ? "cursor-grabbing" : ""
-            } scrollbar-hide`}
-          >
-            {images.map((src, index) => (
-              <div
-                key={index}
-                className="min-w-65 md:min-w-70 bg-white rounded-lg shadow-md overflow-hidden shrink-0"
-              >
-                <Image
-                  src={src}
-                  alt={`Hallmarking ${index + 1}`}
-                  width={300}
-                  height={200}
-                  className="w-full h-45 object-cover pointer-events-none"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>

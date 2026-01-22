@@ -1,5 +1,11 @@
-"use client";
+
 import Image from "next/image";
+
+export const metadata = {
+  title: "Gold & Silver BIS Hallmarking Certification & Setup Services | AN Global Services",
+  description:
+    "Get end-to-end assistance for BIS Hallmarking Certification of gold and silver jewellery. AN Global Services supports jeweller registration, hallmarking setup, HUID compliance, documentation, and BIS portal coordination.",
+};
 
 const SectionTitle = ({ title, width = "w-48" }) => (
   <>

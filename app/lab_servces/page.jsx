@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "ISI Certification Services | AN Global Services",
+  title: "Laboratory Equipment & Setup – ISI Mark Certification | AN Global Services",
   description:
-    "Get complete ISI Certification services for domestic and industrial products. AN Global Services provides end-to-end ISI certification support.",
+    "AN Global Services provides professional support for Laboratory Equipment & Setup under ISI Mark Certification. We assist with BIS laboratory recognition, compliance with BIS Act provisions, and quality testing requirements for well-equipped laboratories.",
 };
 
 export default function ISIPage() {

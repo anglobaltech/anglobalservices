@@ -1,6 +1,10 @@
-"use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
+
+export const metadata = {
+  title: "Footwear Testing Services under BIS Certification | AN Global Services",
+  description:
+    "AN Global Services provides professional Footwear Testing services under BIS Certification. We assist with safety, quality, and compliance testing for footwear products, including PPE footwear, as per applicable Indian and ISO standards for domestic and international markets.",
+};
 
 export default function Page() {
   return (
