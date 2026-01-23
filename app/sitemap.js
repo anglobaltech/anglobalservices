@@ -7,6 +7,7 @@ export default function sitemap() {
     'contact-us',
     'bee_services',
     'bis-hallmarking-setup-services',
+    'jewellery-registration',
     'calibration-service',
     'chemicals-petrochemicals',
     'crs_electronic_it',
