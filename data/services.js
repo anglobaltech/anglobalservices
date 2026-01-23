@@ -44,7 +44,7 @@ export const servicesMenu = [
 
       {
         name: "BIS GOLD HALLMARKING SETUP & REGISTRATION SERVICES",
-        slug: "bis-gold-hallmarking",
+        slug: "bis-hallmarking-setup-services",
         root: true,
       },
       {

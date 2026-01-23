@@ -6,7 +6,7 @@ export default function sitemap() {
     'aboutus',
     'contact-us',
     'bee_services',
-    'bis-gold-hallmarking',
+    'bis-hallmarking-setup-services',
     'calibration-service',
     'chemicals-petrochemicals',
     'crs_electronic_it',
