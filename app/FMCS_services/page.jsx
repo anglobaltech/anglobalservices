@@ -17,7 +17,7 @@ export default function GoldHallmarkingPage() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#0a3d62]/70" />
+        <div className="absolute inset-0 bg-[#0a3d62]/30" />
 
         <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 leading-snug">
            FMCS CERTIFICATION FOR THE BIS ISI MARK PRODUCTS
