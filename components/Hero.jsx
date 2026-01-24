@@ -235,7 +235,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 7000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
@@ -312,41 +312,42 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative w-screen bg-white">
+      <section className="relative w-full bg-white m-0 p-0">
         <div
           className="
-      relative w-screen
-      h-48 sm:h-58 md:h-80 lg:h-[85vh]
-      overflow-hidden bg-white
-    "
+          relative w-full
+          h-[152px]
+          sm:h-[230px]
+          md:h-[320px]
+          lg:h-[420px]
+          xl:h-[580px]
+          overflow-hidden
+        "
         >
           {slides.map((src, index) => (
-           <Image
-            key={index}
-            src={src}
-            alt={`Hero Slide ${index + 1}`}
-            fill
-            priority={index === 0}
-            sizes="100vw"
-            className={`
+            <Image
+              key={index}
+              src={src}
+              alt={`Hero Slide ${index + 1}`}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              className={`
               transition-opacity duration-700 ease-in-out
               ${index === current ? "opacity-100" : "opacity-0"}
-              object-cover
-              lg:object-contain
-              lg:scale-100
+              object-contain object-center
             `}
-          />
-
+            />
           ))}
         </div>
 
         {/* DOTS */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full ${
+              className={`w-3 h-3 rounded-full cursor-pointer ${
                 i === current ? "bg-blue-600" : "bg-gray-300"
               }`}
             />
@@ -355,7 +356,7 @@ export default function Hero() {
       </section>
 
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 pt-20">
+        <div className="max-w-7xl mx-auto px-6 pt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <Image
@@ -377,9 +378,12 @@ export default function Hero() {
               </h2>
 
               <p className="text-gray-900 mb-4 leading-relaxed">
-                <span className="text-[#016398] font-bold">"AN Global Services"</span> is a well-established and leading
-                consulting firm, a reliable service provider. We have placed
-                ourselves amongst the assured names in the corporate world.
+                <span className="text-[#016398] font-bold">
+                  "AN Global Services"
+                </span>{" "}
+                is a well-established and leading consulting firm, a reliable
+                service provider. We have placed ourselves amongst the assured
+                names in the corporate world.
               </p>
 
               <p className="text-gray-900 mb-4 leading-relaxed">
@@ -410,12 +414,18 @@ export default function Hero() {
               { img: "/services/hallmark.jpg", link: "/hallmarking" },
               { img: "/services/fmcs.jpg", link: "/FMCS_services" },
               { img: "/services/bis.jpg", link: "/crs_electronic_it" },
-              { img: "/services/nabl-certification-service.png", link: "/nabl_services" },
+              {
+                img: "/services/nabl-certification-service.png",
+                link: "/nabl_services",
+              },
               { img: "/services/bee.jpg", link: "/bee_services" },
               { img: "/services/wpc-certification.png", link: "/wpc_services" },
               { img: "/services/epr.jpg", link: "/epr_services" },
               { img: "/services/msme.jpg", link: "/msme_services" },
-              { img: "/services/lab-equipment-setup.png", link: "/lab_servces" },
+              {
+                img: "/services/lab-equipment-setup.png",
+                link: "/lab_servces",
+              },
               { img: "/services/solar.jpg", link: "/solar_services" },
               { img: "/services/tm.jpg", link: "/trademark_services" },
             ].map((item, index) => (

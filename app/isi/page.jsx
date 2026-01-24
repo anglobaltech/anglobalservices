@@ -1,4 +1,4 @@
-import Image from "next/image";
+        import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 export default function ISIPage() {
   return (
     <main className="w-full">
-      <section className="relative w-full h-65 md:h-68">
+      <section className="relative w-full h-65 md:h-68"> 
         <Image
           src="/service/isi/about.jpg"
           alt="BIS ISI Certification Services"

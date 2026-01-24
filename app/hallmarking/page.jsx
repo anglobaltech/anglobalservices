@@ -84,7 +84,7 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-10">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-10">
         <div className="text-center p-10">
           <h2 className="text-2xl md:text-2xl font-bold text-gray-900 uppercase tracking-wide">
             Gold Hallmarking HUID Centre Setup
@@ -675,7 +675,7 @@ export default function GoldHallmarkingPage() {
 
       {/* Silver HUID Process Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-10">
-         <div className="text-center p-10">
+        <div className="text-center p-10">
           <h2 className="text-2xl md:text-2xl font-bold text-gray-900 uppercase tracking-wide">
             Silver Hallmarking HUID Centre Setup
           </h2>
