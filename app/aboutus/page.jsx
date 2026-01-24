@@ -80,7 +80,7 @@ export default function AboutPage() {
   const stats = [
     { number: "10000+", label: "Clients Served" },
     { number: "8+", label: "Years Experience" },
-    { number: "50+", label: "Certifications" },
+    { number: "500+", label: "Certifications" },
     { number: "99%", label: "Success Rate" },
   ];
 

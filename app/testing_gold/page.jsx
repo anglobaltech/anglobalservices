@@ -157,10 +157,7 @@ export default function ISIPage() {
             authentic gold jewellery. Overall, the implementation of the HUID
             code is a positive development for consumers as it provides them
             with greater transparency and ensures that they are getting genuine
-            gold jewellery. The author is a Chartered Accountant with 2 decades
-            of experience into Accounting, Taxation, Auditing, Currently Author
-            is founder and member of RRL Global Services an advisory and
-            consultancy firm.
+            gold jewellery.
           </p>
         </div>
       </section>

@@ -205,24 +205,20 @@ export default function GoldHallmarkingPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="border border-gray-200 p-4 rounded-lg">
-              <p className="font-semibold text-gray-900">999</p>
+              <p className="font-semibold text-gray-900">958</p>
               <p className="text-gray-600 text-sm">
-                24 Karat (99.9% Pure Gold)
+                23 Karat 
               </p>
-            </div>
-            <div className="border border-gray-200 p-4 rounded-lg">
-              <p className="font-semibold text-gray-900">995</p>
-              <p className="text-gray-600 text-sm">23.88 Karat</p>
             </div>
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="font-semibold text-gray-900">916</p>
-              <p className="text-gray-600 text-sm">
-                22 Karat (Most common for jewelry)
-              </p>
+              <p className="text-gray-600 text-sm">22 Karat</p>
             </div>
             <div className="border border-gray-200 p-4 rounded-lg">
-              <p className="font-semibold text-gray-900">875</p>
-              <p className="text-gray-600 text-sm">21 Karat</p>
+              <p className="font-semibold text-gray-900">833</p>
+              <p className="text-gray-600 text-sm">
+                20 Karat 
+              </p>
             </div>
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="font-semibold text-gray-900">750</p>
@@ -231,6 +227,10 @@ export default function GoldHallmarkingPage() {
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="font-semibold text-gray-900">585</p>
               <p className="text-gray-600 text-sm">14 Karat</p>
+            </div>
+            <div className="border border-gray-200 p-4 rounded-lg">
+              <p className="font-semibold text-gray-900">375</p>
+              <p className="text-gray-600 text-sm">9 Karat</p>
             </div>
           </div>
         </div>
@@ -780,13 +780,12 @@ export default function GoldHallmarkingPage() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            ["999", "Fine Silver"],
             ["990", ""],
             ["970", ""],
-            ["958", "New Grade"],
-            ["925", "Sterling Silver"],
+            ["925", ""],
+            ["900", ""],
             ["835", ""],
-            ["800", "Utensils & Heavy Articles"],
+            ["800", ""],
           ].map(([grade, note]) => (
             <div
               key={grade}
