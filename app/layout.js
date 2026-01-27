@@ -4,6 +4,7 @@ import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 
 export default function RootLayout({ children }) {
   return (
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         </div>
         <Navbar />
         <main>{children}</main>
+        <FloatingContact />
         <Footer />
       </body>
     </html>

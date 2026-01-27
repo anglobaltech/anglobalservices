@@ -40,9 +40,15 @@ export default function GoldHallmarkingPage() {
               />
             </div>
 
-            <button className="w-full bg-[#0072b1] hover:bg-[#005f94] text-white font-semibold py-3 rounded-md flex items-center justify-center gap-2 transition cursor-pointer">
-              ⬇ COMPANY PROFILE
-            </button>
+            <a
+              href="/company-profile.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="w-full bg-[#0072b1] hover:bg-[#005f94] text-white font-semibold py-3 rounded-md flex items-center justify-center gap-2 transition cursor-pointer">
+                ⬇ COMPANY PROFILE
+              </button>
+            </a>
           </div>
 
           {/* Right Content */}
