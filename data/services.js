@@ -27,7 +27,7 @@ export const servicesMenu = [
     items: [
       {
         name: "BIS (CRS) REGISTRATION FOR ELECTRONICS PRODUCTS",
-        slug: "crs_electronic_it",
+        slug: "bis-crs-registration-electronic-products",
         root: true,
       },
       {

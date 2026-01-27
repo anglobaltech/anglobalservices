@@ -2,9 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "BIS Jeweller Registration Services | Gold & Silver Jewellery Compliance",
+  title:
+    "BIS Jewellery Registration for Gold & Silver Jewellery in India | AN Global Services",
+
   description:
-    "Get expert assistance for BIS Jeweller Registration for gold and silver jewellery. Complete support for HUID compliance, documentation, and online registration as per BIS norms.",
+    "AN Global Services provides BIS Jewellery Registration for gold & silver jewellery in India. Complete support for HUID compliance, online application, documentation & BIS approval. Serving jewellers in Noida, Delhi NCR & PAN India.",
+
+  keywords: [
+    "BIS Jewellery Registration India",
+    "BIS Jewellery Registration Noida",
+    "BIS Jewellery Registration Delhi",
+    "Gold Jewellery BIS Registration",
+    "Silver Jeweller BIS Registration",
+    "BIS HUID compliance for jewellery",
+    "BIS hallmarking registration jewellery",
+    "BIS jewellery registration consultant",
+    "Jewellery hallmarking registration India",
+    "BIS jewellery registration online",
+    "AN Global Services BIS Jewellery Registration"
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  authors: [{ name: "AN Global Services" }],
 };
 
 export default function GoldHallmarkingPage() {

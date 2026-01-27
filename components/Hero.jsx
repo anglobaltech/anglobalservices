@@ -413,7 +413,7 @@ export default function Hero() {
               { img: "/services/isi.jpg", link: "isi" },
               { img: "/services/hallmark.jpg", link: "/hallmarking" },
               { img: "/services/fmcs.jpg", link: "/FMCS_services" },
-              { img: "/services/bis.jpg", link: "/crs_electronic_it" },
+              { img: "/services/bis.jpg", link: "/bis-crs-registration-electronic-products" },
               {
                 img: "/services/nabl-certification-service.png",
                 link: "/nabl_services",
@@ -781,7 +781,7 @@ export default function Hero() {
               className="text-gray-500 text-sm mt-6 animate-fadeIn"
               style={{ animationDelay: "0.7s" }}
             >
-              Trusted by 1000+ businesses • Fast approval • Expert guidance
+              Trusted by 10000+ businesses • Fast approval • Expert guidance
             </p>
           </div>
         </div>

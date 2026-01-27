@@ -2,9 +2,33 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "BIS Hallmarking SetUp Services | AN Global Services",
+  title:
+    "BIS Hallmarking HUID Setup Services | Gold & Silver | AN Global Services",
+
   description:
-    "End-to-end BIS consultancy for Assaying & Hallmarking Centre (AHC) setup and Jeweller Registration as per latest HUID norms.",
+    "AN Global Services provides BIS Hallmarking HUID setup for Gold & Silver in India. Complete support for Assaying & Hallmarking Centre (AHC) setup, Jeweller Registration, documentation, inspections & BIS compliance. Serving Noida, Delhi NCR & PAN India.",
+
+  keywords: [
+    "BIS Hallmarking HUID setup",
+    "Gold Hallmarking HUID Centre setup",
+    "Silver Hallmarking HUID Centre setup",
+    "BIS Hallmarking services India",
+    "BIS Jeweller Registration",
+    "Assaying and Hallmarking Centre setup",
+    "BIS Hallmarking consultant Noida",
+    "BIS Hallmarking consultant Delhi",
+    "BIS Hallmarking services Delhi NCR",
+    "HUID hallmarking India",
+    "BIS compliance for jewellers",
+    "AHC setup consultant India"
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  authors: [{ name: "AN Global Services" }],
 };
 
 export default function GoldHallmarkingPage() {
