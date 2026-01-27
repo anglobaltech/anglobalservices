@@ -212,7 +212,7 @@ export default function ISIPage() {
               </p>
               <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 The registration, once granted, is valid for two years and can
-                be renewed thereafter, subject to continued compliance with BIS
+                be renewed thereafter, subject to continued with BIS
                 requirements.
               </p>
             </div>
