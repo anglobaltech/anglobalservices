@@ -25,7 +25,7 @@ export default function sitemap() {
     'lab_servces',
     'latest_updates',
     'news-updates',
-    'msme_services',
+    'msme-nsic-registration',
     'nabl_services',
     'notifi_bolts_nuts_order',
     'solar_services',

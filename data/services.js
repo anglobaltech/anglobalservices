@@ -80,7 +80,7 @@ export const servicesMenu = [
       },
       {
         name: "MSME NSIC REGISTRATION SERVICES",
-        slug: "msme_services",
+        slug: "msme-nsic-registration",
         root: true,
       },
     ],

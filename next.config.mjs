@@ -5,9 +5,20 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/:slug*.html',
-        destination: '/:slug*',
-        permanent: true, 
+        source: "/:path(.*).html",
+        destination: "/:path",
+        permanent: true,
+      },
+
+      {
+        source: "/msme_service",
+        destination: "/msme-nsic-registration",
+        permanent: true,
+      },
+      {
+        source: "/crs_electronic_it",
+        destination: "/bis-crs-registration-electronic-products",
+        permanent: true,
       },
     ];
   },

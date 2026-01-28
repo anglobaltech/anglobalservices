@@ -421,7 +421,7 @@ export default function Hero() {
               { img: "/services/bee.jpg", link: "/bee_services" },
               { img: "/services/wpc-certification.png", link: "/wpc_services" },
               { img: "/services/epr.jpg", link: "/epr_services" },
-              { img: "/services/msme.jpg", link: "/msme_services" },
+              { img: "/services/msme.jpg", link: "/msme-nsic-registration" },
               {
                 img: "/services/lab-equipment-setup.png",
                 link: "/lab_servces",
