@@ -412,7 +412,7 @@ export default function Hero() {
             {[
               { img: "/services/isi.jpg", link: "isi" },
               { img: "/services/hallmark.jpg", link: "/hallmarking" },
-              { img: "/services/fmcs.jpg", link: "/FMCS_services" },
+              { img: "/services/fmcs.jpg", link: "/foreign-manufacturers-certification-scheme-fmcs" },
               { img: "/services/bis.jpg", link: "/bis-crs-registration-electronic-products" },
               {
                 img: "/services/nabl-certification-service.png",

@@ -17,7 +17,7 @@ export default function sitemap() {
     'eqipmentsforleaser',
     'equipmentforgold',
     'equipmentfortoy',
-    'FMCS_services',
+    'foreign-manufacturers-certification-scheme-fmcs',
     'footwear',
     'gem_services',
     'hallmarking',

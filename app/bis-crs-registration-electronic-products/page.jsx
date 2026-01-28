@@ -134,6 +134,9 @@ const products = [
     "Printers & Plotters-IS 13252 (Part 1) : 2010*",
     "Automatic Data Processing Machines-IS 13252 (Part 1) : 2010*",
   ],
+  [
+    " etc."
+  ]
 ];
 
 export default function ISIPage() {
@@ -161,7 +164,7 @@ export default function ISIPage() {
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/bis-crs-registration (1).png"
+                src="/service/bis-crs-registration-services.png"
                 alt="BIS Certification"
                 width={420}
                 height={520}
@@ -672,7 +675,7 @@ export default function ISIPage() {
             </div>
 
             {/* Button */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <a
                 href="/contact-us"
                 className="

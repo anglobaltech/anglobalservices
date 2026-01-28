@@ -20,6 +20,12 @@ const nextConfig = {
         destination: "/bis-crs-registration-electronic-products",
         permanent: true,
       },
+       {
+        source: "/FMCS_services",
+        destination: "/foreign-manufacturers-certification-scheme-fmcs",
+        permanent: true,
+      },
+
     ];
   },
 };

@@ -1,9 +1,32 @@
 import Image from "next/image";
 export const metadata = {
   title:
-    "BIS ISI Mark for FMCS – Foreign Manufacturers Certification Scheme | AN Global Services",
+    "BIS ISI Mark for FMCS (Foreign Manufacturers Certification Scheme) | AN Global Services",
+
   description:
-    "AN Global Services provides expert consultancy for BIS ISI Mark under the Foreign Manufacturers Certification Scheme (FMCS). We assist foreign manufacturers with BIS licensing, documentation, factory inspection, testing, and compliance as per BIS Act 2016 and Conformity Assessment Regulations.",
+    "AN Global Services provides expert consultancy for BIS ISI Mark under the Foreign Manufacturers Certification Scheme (FMCS). We assist foreign manufacturers with BIS licensing, documentation, Authorized Indian Representative (AIR), factory inspection, product testing, and compliance under the BIS Act 2016 and Conformity Assessment Regulations.",
+
+  keywords: [
+    "BIS FMCS certification",
+    "BIS ISI Mark for foreign manufacturers",
+    "Foreign Manufacturers Certification Scheme",
+    "FMCS BIS registration",
+    "BIS ISI Mark import India",
+    "BIS certification for overseas manufacturers",
+    "Authorized Indian Representative BIS",
+    "BIS Act 2016 certification",
+    "FMCS certification process India",
+    "AN Global Services BIS FMCS",
+  ],
+
+  alternates: {
+    canonical: "https://www.anglobalservices.com/bis-fmcs-certification",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function GoldHallmarkingPage() {

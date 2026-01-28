@@ -7,7 +7,7 @@ export const servicesMenu = [
         slug: "isi",
         root: true,
       },
-      { name: "BIS ISI MARK FOR FMCS", slug: "FMCS_services", root: true },
+      { name: "BIS ISI MARK FOR FMCS", slug: "foreign-manufacturers-certification-scheme-fmcs", root: true },
       { name: "BIS HALLMARKING HUID (GOLD & SILVER) CERTIFICATION & SETUP SERVICES", slug: "hallmarking", root: true },
       {
         name: "NABL CERTIFICATION SERVICES",
