@@ -6,6 +6,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 
+export const metadata = {
+  title:
+    "BIS Certification Consultants | ISI Mark, FMCS, CRS & Calibration",
+  description:
+    "AN Global Services offers BIS (ISI Mark) certification, CRS registration for electronics, FMCS certification, NABL certification, WPC approval, EPR registration, GEM registration, and calibration services with complete compliance support across India.",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

@@ -11,7 +11,7 @@ const nextConfig = {
       },
 
       {
-        source: "/msme_service",
+        source: "/msme_services",
         destination: "/msme-nsic-registration",
         permanent: true,
       },

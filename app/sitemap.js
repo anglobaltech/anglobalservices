@@ -9,7 +9,7 @@ export default function sitemap() {
     'bis-crs-registration-electronic-products',
     'bis-hallmarking-setup-services',
     'jewellery-registration',
-    'calibration-service',
+    'calibration-certificate',
     'chemicals-petrochemicals',
     'epr_services',
     'eqipmentforsolar',
