@@ -410,7 +410,7 @@ export default function Hero() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { img: "/services/isi.jpg", link: "isi" },
+              { img: "/services/isi.jpg", link: "bis-isi-mark-certification" },
               { img: "/services/hallmark.jpg", link: "/hallmarking" },
               { img: "/services/fmcs.jpg", link: "/foreign-manufacturers-certification-scheme-fmcs" },
               { img: "/services/bis.jpg", link: "/bis-crs-registration-electronic-products" },

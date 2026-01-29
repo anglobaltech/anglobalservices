@@ -4,7 +4,7 @@ export const servicesMenu = [
     items: [
       {
         name: "BIS (ISI MARK) CERTIFICATION FOR DOMESTIC PRODUCTS",
-        slug: "isi",
+        slug: "bis-isi-mark-certification",
         root: true,
       },
       { name: "BIS ISI MARK FOR FMCS", slug: "foreign-manufacturers-certification-scheme-fmcs", root: true },

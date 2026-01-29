@@ -10,13 +10,13 @@ export const metadata = {
 export default function ISIPage() {
   return (
     <main className="w-full">
-      <section className="relative w-full h-65 md:h-68"> 
+      <section className="relative w-full h-65 md:h-68">
         <Image
           src="/service/isi/about.jpg"
           alt="BIS ISI Certification Services"
           fill
           priority
-          className="object-cover " 
+          className="object-cover "
         />
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-6xl mx-auto px-4">
@@ -319,83 +319,197 @@ export default function ISIPage() {
 
       <section className="w-full bg-[#f5f7fa] py-16">
         <div className="max-w-7xl mx-auto px-4">
+          {/* Heading */}
           <div className="mb-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              List Of Products Under BIS ISI MARK Certification
+              List of Products Covered Under BIS ISI Certification
             </h2>
             <p className="mt-3 text-gray-500 text-sm">
-              Choose your product category to get detailed ISI certification
-              requirements and process.
+              Select your product category to understand ISI certification
+              requirements, standards, and approval process.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {/* Footwear */}
             <Link
               href="/footwear"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
                 src="/service/isi/shoes.jpg"
-                alt="ISI Certification for Footwear"
+                alt="ISI Certification for Footwear Products"
                 width={400}
                 height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
               />
-              <div className="p-5">
+              <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Footwear Products
+                  Footwear Products
                 </h3>
                 <p className="text-sm text-gray-500">
-                  Mandatory ISI certification for leather & rubber footwear
-                  products.
+                  Mandatory ISI certification for leather, rubber & safety
+                  footwear.
                 </p>
               </div>
             </Link>
 
+            {/* Steel */}
             <Link
               href="/steel-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
-                src="/service/isi/building.jpg"
+                src="/service/isi/steel-products.webp"
                 alt="ISI Certification for Steel Products"
                 width={400}
                 height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
               />
-              <div className="p-5">
+              <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Steel Products
+                  Steel Products
                 </h3>
                 <p className="text-sm text-gray-500">
-                  ISI compliance for steel bars, rods, wires, and structural
-                  steel.
+                  ISI marking for steel bars, rods, wires & structural steel.
                 </p>
               </div>
             </Link>
 
+            {/* Plywood & Furniture */}
             <Link
-              href="/notifi_bolts_nuts_order"
+              href="/bis-isi-mark-certification"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
-                src="/service/isi/bolts.jpg"
-                alt="ISI Certification for Bolts Nuts and Fasteners"
+                src="/service/isi/plywood-furniture.jpg"
+                alt="ISI Certification for Plywood and Furniture Products"
                 width={400}
                 height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
               />
-              <div className="p-5">
+              <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Bolts & Nuts Products
+                   Furniture & Plywood 
                 </h3>
                 <p className="text-sm text-gray-500">
-                  Mandatory ISI marking for industrial fasteners & hardware
-                  products.
+                  BIS ISI certification for plywood, boards & furniture items.
                 </p>
               </div>
             </Link>
 
+            {/* Plastic */}
+            <Link
+              href="/bis-isi-mark-certification"
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
+            >
+              <Image
+                src="/service/isi/plastic-products.jpg"
+                alt="ISI Certification for Plastic Products"
+                width={400}
+                height={260}
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Plastic Products
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Mandatory ISI marking for plastic pipes & molded products.
+                </p>
+              </div>
+            </Link>
+
+            {/* Home Appliances */}
+            <Link
+              href="/bis-isi-mark-certification"
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
+            >
+              <Image
+                src="/service/isi/home-appliences.jpg"
+                alt="ISI Certification for Home Appliances"
+                width={400}
+                height={260}
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Home Appliances
+                </h3>
+                <p className="text-sm text-gray-500">
+                  ISI certification for household & electrical appliances.
+                </p>
+              </div>
+            </Link>
+
+            {/* Concrete */}
+            <Link
+              href="/bis-isi-mark-certification"
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
+            >
+              <Image
+                src="/service/isi/concrete-products.jpeg"
+                alt="ISI Certification for Concrete Products"
+                width={400}
+                height={260}
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Concrete Products
+                </h3>
+                <p className="text-sm text-gray-500">
+                  BIS ISI marking for cement & concrete construction materials.
+                </p>
+              </div>
+            </Link>
+
+            {/* Hardware */}
+            <Link
+              href="/bis-isi-mark-certification"
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
+            >
+              <Image
+                src="/service/isi/hardware-products.png"
+                alt="ISI Certification for Hardware Products"
+                width={400}
+                height={260}
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Hardware Products
+                </h3>
+                <p className="text-sm text-gray-500">
+                  ISI compliance for industrial & building hardware items.
+                </p>
+              </div>
+            </Link>
+
+            {/* Medical */}
+            <Link
+              href="/bis-isi-mark-certification"
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
+            >
+              <Image
+                src="/service/isi/medical.jpg"
+                alt="ISI Certification for Medical Products"
+                width={400}
+                height={260}
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Medical Products
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Mandatory ISI marking for medical & healthcare devices.
+                </p>
+              </div>
+            </Link>
+
+            {/* Chemicals */}
             <Link
               href="/chemicals-petrochemicals"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
@@ -405,64 +519,21 @@ export default function ISIPage() {
                 alt="ISI Certification for Chemical Products"
                 width={400}
                 height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
               />
-              <div className="p-5">
+              <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Chemical Products
+                  Chemical Products
                 </h3>
                 <p className="text-sm text-gray-500">
                   BIS ISI certification for industrial & construction chemicals.
                 </p>
               </div>
             </Link>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
+            {/* Electronics */}
             <Link
-              href="/isi"
-              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
-            >
-              <Image
-                src="/service/isi/medical.jpg"
-                alt="ISI Certification for Medical Products"
-                width={400}
-                height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
-              />
-              <div className="p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Medical Products
-                </h3>
-                <p className="text-sm text-gray-500">
-                  Mandatory ISI certification for medical & healthcare products.
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href="/isi"
-              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
-            >
-              <Image
-                src="/service/isi/kitchen.jpg"
-                alt="ISI Certification for Kitchen Appliances"
-                width={400}
-                height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
-              />
-              <div className="p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Kitchen Appliances
-                </h3>
-                <p className="text-sm text-gray-500">
-                  ISI compliance for kitchen & household electrical appliances.
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href="/isi"
+              href="/bis-isi-mark-certification"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
@@ -470,35 +541,14 @@ export default function ISIPage() {
                 alt="ISI Certification for Electronics Products"
                 width={400}
                 height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
+                className="w-full h-36 object-cover group-hover:scale-105 transition"
               />
-              <div className="p-5">
+              <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Electronics Products
+                  Electronics Products
                 </h3>
                 <p className="text-sm text-gray-500">
                   Mandatory ISI marking for electronic & IT products.
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href="/isi"
-              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
-            >
-              <Image
-                src="/service/isi/automobile.jpg"
-                alt="ISI Certification for Automobile Products "
-                width={400}
-                height={260}
-                className="w-full h-48 object-cover group-hover:scale-105 transition"
-              />
-              <div className="p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  ISI Certification for Automobile Products
-                </h3>
-                <p className="text-sm text-gray-500">
-                  BIS ISI certification for automobile & vehicle accessories.
                 </p>
               </div>
             </Link>

@@ -25,6 +25,11 @@ const nextConfig = {
         destination: "/foreign-manufacturers-certification-scheme-fmcs",
         permanent: true,
       },
+       {
+        source: "/isi",
+        destination: "/bis-isi-mark-certification",
+        permanent: true,
+      },
 
     ];
   },

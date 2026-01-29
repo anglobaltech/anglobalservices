@@ -21,7 +21,7 @@ export default function sitemap() {
     'footwear',
     'gem_services',
     'hallmarking',
-    'isi',
+    'bis-isi-mark-certification',
     'lab_servces',
     'latest_updates',
     'news-updates',

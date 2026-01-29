@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "Calibration Certificate Services in India | NABL & ISO/IEC 17025 Calibration – AN Global Services",
+    "Calibration Certificate Services in India | AN Global Services",
 
   description:
     "AN Global Services provides professional Calibration Certificate services in India with NABL and ISO/IEC 17025 traceability. We support on-site and laboratory calibration, audit-ready documentation, ISO compliance, regulatory inspections, and manufacturing quality assurance for all types of measuring instruments.",
