@@ -158,7 +158,7 @@ export default function Hero() {
           industry: formData.service,
           name: formData.name,
           phone: formData.phone,
-          source: "Website",
+          source: "website",
           status: "new",
           createdAt: serverTimestamp(),
         });
@@ -387,10 +387,15 @@ export default function Hero() {
               </p>
 
               <p className="text-gray-900 mb-4 leading-relaxed">
-                We provide Product Certification (ISI mark), FMCS, CRS,
-                hallmarking of precious metals/jewellery, BEE Registration, EPR
-                Authorization (for e-waste), WPC Approval, TEC Certification,
-                NSIC, WMI, NABL Accreditation and many more services.
+                We provide Product Certification (ISI mark), Foreign
+                Manufactures Certification Scheme (FMCS), Compulsory
+                Registration Scheme (CRS) for Electronics & IT Goods, BIS
+                hallmarking of precious For metals/jewellery, BEE Registration
+                Services, Trademark Registration Services, CE Certification
+                Services, EPR Authorization (for e-waste), Solar Panel BIS
+                Registration Services, WPC Approval and TEC Certification, MSME
+                & NSIC Certification, WMI Certification, NABL Accreditation
+                Consultancy, WPC License and many more.
               </p>
 
               <p className="text-gray-900 leading-relaxed">
@@ -412,8 +417,14 @@ export default function Hero() {
             {[
               { img: "/services/isi.jpg", link: "bis-isi-mark-certification" },
               { img: "/services/hallmark.jpg", link: "/hallmarking" },
-              { img: "/services/fmcs.jpg", link: "/foreign-manufacturers-certification-scheme-fmcs" },
-              { img: "/services/bis.jpg", link: "/bis-crs-registration-electronic-products" },
+              {
+                img: "/services/fmcs.jpg",
+                link: "/foreign-manufacturers-certification-scheme-fmcs",
+              },
+              {
+                img: "/services/bis.jpg",
+                link: "/bis-crs-registration-electronic-products",
+              },
               {
                 img: "/services/nabl-certification-service.png",
                 link: "/nabl_services",

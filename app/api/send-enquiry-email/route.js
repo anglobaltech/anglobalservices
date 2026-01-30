@@ -20,7 +20,7 @@ export async function POST(req) {
       ],
       subject: `New Enquiry Received – ${data.enquiryId}`,
       html: `
-        <h2>New Enquiry Received</h2>
+        <h2>New Enquiry Received From AN Global Services</h2>
         <p><strong>Enquiry ID:</strong> ${data.enquiryId}</p>
         <hr/>
         <p><strong>Name:</strong> ${data.name}</p>
@@ -30,7 +30,7 @@ export async function POST(req) {
         <p><strong>Message:</strong></p>
         <p>${data.comment}</p>
         <br/>
-        <p>Source: Website Contact Page</p>
+        <p>Source: website</p>
         <p><em>Auto-generated email. Do not reply.</em></p>
       `,
     };

@@ -102,7 +102,7 @@ export default function ContactPage() {
           phone: formData.phone,
           comment: formData.comment,
           createdAt: serverTimestamp(),
-          source: "Website",
+          source: "website",
           status: "new",
         });
       });

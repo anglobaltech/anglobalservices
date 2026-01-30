@@ -1,53 +1,46 @@
 "use client";
-import React from "react";
-import { Phone, MessageCircle } from "lucide-react";
+
 import Image from "next/image";
+import { useState } from "react";
+import ContactSlideForm from "./ContactSlideForm";
 
-const FloatingContact = () => {
+export default function FloatingContact() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="fixed right-3 bottom-1/8 z-50 flex flex-col gap-4">
-      {/* CALL BUTTON */}
-      <a
-        href="tel:7782069184"
-        className="w-10 h-10 text-blue-600 rounded-full flex items-center justify-center hover:scale-120  transition-all"
-        aria-label="Call Now"
-      >
-        <div className="relative w-9 h-9">
-          <Image
-            src="/call.png"
-            alt="call"
-            fill
-            className="object-contain hover:scale-130  transition-transform"
-            priority
-          />
-        </div>
-      </a>
+    <>
+      <div className="fixed right-0 bottom-1/9 z-40 flex flex-col gap-3 items-center">
+        <button
+          onClick={() => setOpen(true)}
+          className="fixed top-4/6 -translate-y-1/2 z-40
+         bg-[#7b6cf6] text-white px-2 py-1 rounded-lg
+          rotate-180  font-medium tracking-wide cursor-pointer"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          Contact Us
+        </button>
 
-      {/* WHATSAPP BUTTON */}
-      <a
-        href="https://wa.me/917782069184"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp Chat"
-        className="
-            w-10 h-10
-            rounded-full
-            flex items-center justify-center
-            transition-all
-            "
-      >
-        <div className="relative w-9 h-9">
+        {/* CALL */}
+        <a href="tel:+917782069184">
+          <Image src="/call.png" alt="Call" width={32} height={30} />
+        </a>
+
+        {/* WHATSAPP */}
+        <a
+          href="https://wa.me/917782069184"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src="/whatsapp-image.png"
             alt="WhatsApp"
-            fill
-            className="object-contain hover:scale-120  transition-transform"
-            priority
+            width={30}
+            height={30}
           />
-        </div>
-      </a>
-    </div>
-  );
-};
+        </a>
+      </div>
 
-export default FloatingContact;
+      <ContactSlideForm open={open} onClose={() => setOpen(false)} />
+    </>
+  );
+}

@@ -2,9 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "ISI Certification Services | AN Global Services",
+  title:
+    "BIS ISI Mark Certification Services | AN Global Services",
+
   description:
-    "Get complete ISI Certification services for domestic and industrial products. AN Global Services provides end-to-end ISI certification support.",
+    "Get BIS ISI Mark Certification in India for mandatory & voluntary products. Expert support for manufacturers & importers – documentation, testing, inspection & fast approval by BIS.",
+
+  keywords: [
+    "BIS ISI certification",
+    "ISI mark certification",
+    "BIS ISI mark registration",
+    "ISI certification in India",
+    "BIS certification services",
+    "mandatory ISI certification",
+    "ISI mark for manufacturers",
+    "ISI certification process",
+    "ISI certification documents",
+    "ISI mark consultant",
+    "BIS ISI certification cost",
+  ],
+
+  alternates: {
+    canonical: "https://www.anglobalservices.com/bis-isi-mark-certification",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ISIPage() {
