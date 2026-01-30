@@ -404,7 +404,7 @@ export default function ISIPage() {
 
             {/* Plywood & Furniture */}
             <Link
-              href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification-furniture-plywood"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
