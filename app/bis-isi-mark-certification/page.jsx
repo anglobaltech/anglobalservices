@@ -416,7 +416,7 @@ export default function ISIPage() {
               />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                   Furniture & Plywood 
+                   Furniture & Plywood Products
                 </h3>
                 <p className="text-sm text-gray-500">
                   BIS ISI certification for plywood, boards & furniture items.
@@ -514,7 +514,7 @@ export default function ISIPage() {
 
             {/* Medical */}
             <Link
-              href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification-medical-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
