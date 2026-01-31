@@ -573,7 +573,7 @@ export default function Hero() {
                 </button>
                 {success && (
                   <p className="md:col-span-2 text-green-600 text-sm font-semibold mt-2">
-                    Your enquiry has been sent. We will respond within 24 hours.
+                    Your enquiry has been sent. We will respond shortly.
                   </p>
                 )}
 

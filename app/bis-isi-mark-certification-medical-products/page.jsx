@@ -72,7 +72,7 @@ const products = [
     id: 3,
     name: "Sanitary napkins",
     standard: "IS 5405: 2019",
-    link: "/bis-isi-mark-certification-medical-products",
+    link: "isi-products/isi-mark-certification-for-sanitary-napkin-5405",
   },
   {
     id: 4,
@@ -419,7 +419,7 @@ export default function MedicalProductsISIPage() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-blue-50 border-b border-blue-400">
-                  <th className="border border-blue-400 px-3 py-2 w-12">Sr</th>
+                  
                   <th className="border border-blue-400 px-3 py-2 text-left">
                     Product
                   </th>
@@ -443,9 +443,7 @@ export default function MedicalProductsISIPage() {
                       rowIndex % 2 === 0 ? "bg-[#bfe4ef]" : "bg-white"
                     } hover:bg-blue-100 transition`}
                   >
-                    <td className="border border-blue-400 px-3 py-2 text-center font-medium">
-                      {rowIndex * 2 + 1}
-                    </td>
+                    
 
                     <td className="border border-blue-400 px-3 py-2">
                       {row[0] && (
@@ -525,23 +523,6 @@ export default function MedicalProductsISIPage() {
         </div>
       </section>
 
-      <section className="bg-gray-900 px-4 md:px-6 py-12">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Need BIS ISI Mark Certification for Medical Products?
-          </h2>
-          <p className="text-gray-300 mb-6">
-            Get expert assistance for documentation, testing, and BIS approvals
-            with AN Global Services.
-          </p>
-          <a
-            href="/contact-us"
-            className="inline-block bg-[#0072b1] text-white px-3 py-2 rounded-lg font-semibold"
-          >
-            Contact Us Now
-          </a>
-        </div>
-      </section>
     </main>
   );
 }

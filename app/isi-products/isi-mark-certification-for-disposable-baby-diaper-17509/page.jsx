@@ -22,12 +22,11 @@ export const metadata = {
     "Baby Diaper BIS Testing",
     "ISI Mark Consultant for Baby Diaper",
     "Medical Textile BIS Certification",
-    "AN Global Services BIS ISI Certification"
+    "AN Global Services BIS ISI Certification",
   ],
 
   openGraph: {
-    title:
-      "ISI Mark Certification for Disposable Baby Diaper IS 17509",
+    title: "ISI Mark Certification for Disposable Baby Diaper IS 17509",
     description:
       "Apply for ISI Mark Certification for Disposable Baby Diapers under IS 17509:2021. Complete BIS support for testing, documentation, factory inspection, and license approval.",
     url: "https://www.anglobalservices.com/isi-products/isi-mark-certification-for-disposable-baby-diaper-17509",
@@ -54,7 +53,6 @@ export const metadata = {
   },
 };
 
-
 export default function MedicalProductsISIPage() {
   return (
     <main className="w-full bg-white">
@@ -80,7 +78,7 @@ export default function MedicalProductsISIPage() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              Indian Standard IS 17509:2021 specifies the quality, safety, and
+              Indian Standard IS-17509:2021 specifies the quality, safety, and
               performance requirements for disposable baby diapers manufactured
               or sold in India. Since baby diapers remain in direct and
               prolonged contact with an infant’s sensitive skin, the standard
@@ -225,7 +223,7 @@ export default function MedicalProductsISIPage() {
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
             <li>
               Conformity of raw materials used in manufacturing as per the
-              requirements of Indian Standard IS 17509.
+              requirements of Indian Standard IS-17509.
             </li>
             <li>
               Availability of an in-house testing laboratory capable of

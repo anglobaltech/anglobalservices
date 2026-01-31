@@ -20,7 +20,7 @@ export const metadata = {
     "BIS Hallmarking services Delhi NCR",
     "HUID hallmarking India",
     "BIS compliance for jewellers",
-    "AHC setup consultant India"
+    "AHC setup consultant India",
   ],
 
   robots: {
@@ -227,12 +227,13 @@ export default function GoldHallmarkingPage() {
             Under current BIS standards, gold is hallmarked in the following
             specific grades:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div className="border border-gray-200 p-4 rounded-lg">
+              <p className="font-semibold text-gray-900">995</p>
+            </div>
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="font-semibold text-gray-900">958</p>
-              <p className="text-gray-600 text-sm">
-                23 Karat 
-              </p>
+              <p className="text-gray-600 text-sm">23 Karat</p>
             </div>
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="font-semibold text-gray-900">916</p>
@@ -240,9 +241,7 @@ export default function GoldHallmarkingPage() {
             </div>
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="font-semibold text-gray-900">833</p>
-              <p className="text-gray-600 text-sm">
-                20 Karat 
-              </p>
+              <p className="text-gray-600 text-sm">20 Karat</p>
             </div>
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="font-semibold text-gray-900">750</p>
@@ -334,6 +333,18 @@ export default function GoldHallmarkingPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-600">
                     Uniform heating capability up to 750°C, used for softening
                     gold samples prior to rolling and further chemical analysis.
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-900">
+                    Melting Furnace
+                  </td>
+                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                    Uniform heating capability up to 1200°C (or higher as
+                    required). Must be equipped with precise temperature control
+                    and even heat distribution to ensure complete and consistent
+                    melting of samples.
                   </td>
                 </tr>
 
@@ -1243,39 +1254,6 @@ export default function GoldHallmarkingPage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BIS Hallmarking CTA Section */}
-      <section className="relative w-full py-20 bg-gradient-to-r from-[#0b1220] via-[#0f172a] to-[#0b1220]">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-3xl font-bold text-white mb-4">
-            To Get Your BIS Hallmarking HUID Setup for Gold & Silver?
-          </h2>
-
-          <p className="text-gray-300 text-[15px] md:text-[15px] max-w-3xl mx-auto mb-8 leading-6">
-            Get expert assistance for BIS registration, HUID compliance, AHC
-            setup, documentation, and end-to-end support for gold and silver
-            hallmarking. Navigate the BIS hallmarking process with confidence,
-            accuracy, and speed.
-          </p>
-
-          <div className="flex justify-center">
-            <a
-              href="/contact-us"
-              className="relative inline-flex items-center justify-center rounded-xl 
-              bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#1d4ed8]
-              px-9 py-3 text-white font-semibold text-[15px]
-              shadow-md shadow-blue-900/30
-              transition-all duration-300
-              hover:scale-[1.03]
-             
-              hover:from-[#1e40af] hover:via-[#2563eb] hover:to-[#1e3a8a]
-              "
-            >
-              Get Started Today
-            </a>
           </div>
         </div>
       </section>
