@@ -130,7 +130,7 @@ export default function MedicalProductsISIPage() {
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            The Government of India has made compliance with Indian Standard IS
+            The Government of India has made compliance with Indian Standard IS-
             5405 mandatory for disposable sanitary napkins to safeguard public
             health and hygiene. Manufacturers and importers are required to
             obtain ISI Mark Certification before selling sanitary napkins in the
@@ -219,7 +219,7 @@ export default function MedicalProductsISIPage() {
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
             <li>
               Compliance of raw materials with the requirements specified under
-              Indian Standard IS 5405.
+              Indian Standard IS-5405.
             </li>
             <li>
               Availability of an in-house testing laboratory capable of

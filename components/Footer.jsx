@@ -157,7 +157,7 @@ export default function Footer() {
                   onChange={handleChange}
                   placeholder="Required Service"
                   required
-                  className="w-full bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full bg-gray-900 border border-gray-700 text-gray-400 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
 
                 {/* Row 1 – Name */}
@@ -168,7 +168,7 @@ export default function Footer() {
                   onChange={handleChange}
                   placeholder="Your Name"
                   required
-                  className="w-full bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full bg-gray-900 border border-gray-700 text-gray-400 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
 
                 {/* Row 2 – Email */}
@@ -179,7 +179,7 @@ export default function Footer() {
                   onChange={handleChange}
                   placeholder="Your Email Address"
                   required
-                  className="w-full bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full bg-gray-900 border border-gray-700 text-gray-400 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
 
                 {/* Row 2 – Phone */}
@@ -191,7 +191,7 @@ export default function Footer() {
                   placeholder="10 Digit Mobile No."
                   required
                   pattern="[0-9]{10}"
-                  className="w-full bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full bg-gray-900 border border-gray-700 text-gray-400 placeholder-gray-500 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
 
                 {/* Submit Button */}
