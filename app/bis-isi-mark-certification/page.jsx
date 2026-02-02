@@ -140,7 +140,7 @@ export default function ISIPage() {
             <p>
               More than{" "}
               <strong className="font-semibold text-gray-800">
-                450+ products
+                536+ products
               </strong>{" "}
               fall under mandatory ISI certification. Without ISI certification,
               manufacturers are not permitted to manufacture and sell products
@@ -357,179 +357,6 @@ export default function ISIPage() {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
-        <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
-          ISI Certification Cost in India
-        </h2>
-
-        <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-          <span className="absolute left-0 top-0 h-0.5 w-87 bg-[#0072b1]" />
-        </div>
-
-        {/* Intro */}
-        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          The cost of obtaining ISI Certification in India depends on several
-          factors such as the type of product, applicable Indian Standard (IS),
-          number of product variants, testing requirements, and factory
-          readiness. ISI Certification is issued under the BIS Product
-          Certification Scheme (Scheme I), and manufacturers are required to pay
-          certain statutory fees directly to the Bureau of Indian Standards
-          (BIS) along with applicable testing charges.
-        </p>
-
-        {/* Cost Table */}
-        <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg mb-6">
-          <table className="w-full border-collapse text-[15px]">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="border border-gray-200 px-4 py-2 text-left">
-                  S. No.
-                </th>
-                <th className="border border-gray-200 px-4 py-2 text-left">
-                  Cost Component
-                </th>
-                <th className="border border-gray-200 px-4 py-2 text-left">
-                  Amount (INR)
-                </th>
-                <th className="border border-gray-200 px-4 py-2 text-left">
-                  Remarks
-                </th>
-              </tr>
-            </thead>
-
-            <tbody className="divide-y">
-              <tr>
-                <td className="border border-gray-200 px-4 py-2">1</td>
-                <td className="border border-gray-200 px-4 py-2">
-                  Application Fee
-                </td>
-                <td className="border border-gray-200 px-4 py-2">₹1,000</td>
-                <td className="border border-gray-200 px-4 py-2">
-                  One-time fee payable to BIS
-                </td>
-              </tr>
-
-              <tr className="bg-gray-50">
-                <td className="border border-gray-200 px-4 py-2">2</td>
-                <td className="border border-gray-200 px-4 py-2">
-                  Factory Inspection / Audit Fee
-                </td>
-                <td className="border border-gray-200 px-4 py-2">₹7,000</td>
-                <td className="border border-gray-200 px-4 py-2">
-                  Payable to BIS for factory audit
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border border-gray-200 px-4 py-2">3</td>
-                <td className="border border-gray-200 px-4 py-2">
-                  Sample Testing Charges
-                </td>
-                <td className="border border-gray-200 px-4 py-2">
-                  As applicable
-                </td>
-                <td className="border border-gray-200 px-4 py-2">
-                  Depends on product & BIS-recognized lab
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border border-gray-200 px-4 py-2">4</td>
-                <td className="border border-gray-200 px-4 py-2">
-                  Marking Fee
-                </td>
-                <td className="border border-gray-200 px-4 py-2">As per IS</td>
-                <td className="border border-gray-200 px-4 py-2">
-                  Calculated based on production volume
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        {/* Additional Info */}
-        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-5">
-          <p className="text-gray-600 text-[15px] leading-6 text-justify">
-            <strong>Note:</strong> In addition to the above government fees,
-            manufacturers are required to invest in setting up an in-house
-            testing laboratory as per the applicable Indian Standard. The cost
-            of testing equipment, calibration, and quality control personnel
-            varies depending on the product category.
-          </p>
-        </div>
-
-        {/* Final Note */}
-        <div className="bg-white border border-gray-200 rounded-lg p-4">
-          <p className="text-gray-600 text-[14px] leading-6">
-            <strong>Important:</strong> The overall ISI Certification cost may
-            vary based on product complexity, number of test parameters, factory
-            preparedness, and inspection timelines. Proper documentation and
-            pre-audit readiness can significantly reduce delays and additional
-            expenses during the certification process.
-          </p>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 md:px-6">
-        <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
-          Time Required to Obtain BIS ISI Mark Certification in India
-        </h2>
-
-        <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-          <span className="absolute left-0 top-0 h-0.5 w-172 bg-[#0072b1]" />
-        </div>
-
-        {/* Intro */}
-        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          The time required to obtain ISI Certification in India varies
-          depending on the type of product, applicable Indian Standard (IS),
-          readiness of the manufacturing unit, and completion of testing and
-          documentation requirements. ISI Certification is granted under the BIS
-          Product Certification Scheme (Scheme I) and involves application
-          review, factory inspection, and laboratory testing before the license
-          is issued.
-        </p>
-
-        {/* Estimated Timeline Box */}
-        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
-          <p className="text-gray-600 text-[15px] leading-6">
-            <strong>Estimated Overall Timeline:</strong> For most domestic
-            manufacturers, the ISI Certification process typically takes around{" "}
-            <strong>45 to 60 days</strong>, provided the factory setup, in-house
-            testing facilities, and documentation are complete at the time of
-            application.
-          </p>
-        </div>
-
-        {/* Factors Affecting Time */}
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">
-            Factors Affecting ISI Certification Timeline
-          </h3>
-
-          <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
-            <li>
-              Readiness of the manufacturing unit and availability of required
-              machinery and in-house testing equipment.
-            </li>
-            <li>
-              Completeness and accuracy of documents submitted with the
-              application.
-            </li>
-            <li>
-              Number of product variants and complexity of testing requirements
-              as per the applicable Indian Standard.
-            </li>
-            <li>
-              Scheduling availability of BIS officials for factory inspection.
-            </li>
-            <li>
-              Turnaround time of BIS-recognized laboratories for sample testing.
-            </li>
-          </ul>
         </div>
       </section>
 
@@ -769,6 +596,179 @@ export default function ISIPage() {
               </div>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+        <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
+          ISI Certification Cost in India
+        </h2>
+
+        <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+          <span className="absolute left-0 top-0 h-0.5 w-87 bg-[#0072b1]" />
+        </div>
+
+        {/* Intro */}
+        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          The cost of obtaining ISI Certification in India depends on several
+          factors such as the type of product, applicable Indian Standard (IS),
+          number of product variants, testing requirements, and factory
+          readiness. ISI Certification is issued under the BIS Product
+          Certification Scheme (Scheme I), and manufacturers are required to pay
+          certain statutory fees directly to the Bureau of Indian Standards
+          (BIS) along with applicable testing charges.
+        </p>
+
+        {/* Cost Table */}
+        <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg mb-6">
+          <table className="w-full border-collapse text-[15px]">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  S. No.
+                </th>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  Cost Component
+                </th>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  Amount (INR)
+                </th>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  Remarks
+                </th>
+              </tr>
+            </thead>
+
+            <tbody className="divide-y">
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">1</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Application Fee
+                </td>
+                <td className="border border-gray-200 px-4 py-2">₹1,000</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  One-time fee payable to BIS
+                </td>
+              </tr>
+
+              <tr className="bg-gray-50">
+                <td className="border border-gray-200 px-4 py-2">2</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Factory Inspection / Audit Fee
+                </td>
+                <td className="border border-gray-200 px-4 py-2">₹7,000</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Payable to BIS for factory audit
+                </td>
+              </tr>
+
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">3</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Sample Testing Charges
+                </td>
+                <td className="border border-gray-200 px-4 py-2">
+                  As applicable
+                </td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Depends on product & BIS-recognized lab
+                </td>
+              </tr>
+
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">4</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Marking Fee
+                </td>
+                <td className="border border-gray-200 px-4 py-2">As per IS</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Calculated based on production volume
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Additional Info */}
+        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-5">
+          <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <strong>Note:</strong> In addition to the above government fees,
+            manufacturers are required to invest in setting up an in-house
+            testing laboratory as per the applicable Indian Standard. The cost
+            of testing equipment, calibration, and quality control personnel
+            varies depending on the product category.
+          </p>
+        </div>
+
+        {/* Final Note */}
+        <div className="bg-white border border-gray-200 rounded-lg p-4">
+          <p className="text-gray-600 text-[14px] leading-6">
+            <strong>Important:</strong> The overall ISI Certification cost may
+            vary based on product complexity, number of test parameters, factory
+            preparedness, and inspection timelines. Proper documentation and
+            pre-audit readiness can significantly reduce delays and additional
+            expenses during the certification process.
+          </p>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 md:px-6">
+        <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
+          Time Required to Obtain BIS ISI Mark Certification in India
+        </h2>
+
+        <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+          <span className="absolute left-0 top-0 h-0.5 w-172 bg-[#0072b1]" />
+        </div>
+
+        {/* Intro */}
+        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          The time required to obtain ISI Certification in India varies
+          depending on the type of product, applicable Indian Standard (IS),
+          readiness of the manufacturing unit, and completion of testing and
+          documentation requirements. ISI Certification is granted under the BIS
+          Product Certification Scheme (Scheme I) and involves application
+          review, factory inspection, and laboratory testing before the license
+          is issued.
+        </p>
+
+        {/* Estimated Timeline Box */}
+        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
+          <p className="text-gray-600 text-[15px] leading-6">
+            <strong>Estimated Overall Timeline:</strong> For most domestic
+            manufacturers, the ISI Certification process typically takes around{" "}
+            <strong>45 to 60 days</strong>, provided the factory setup, in-house
+            testing facilities, and documentation are complete at the time of
+            application.
+          </p>
+        </div>
+
+        {/* Factors Affecting Time */}
+        <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            Factors Affecting ISI Certification Timeline
+          </h3>
+
+          <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
+            <li>
+              Readiness of the manufacturing unit and availability of required
+              machinery and in-house testing equipment.
+            </li>
+            <li>
+              Completeness and accuracy of documents submitted with the
+              application.
+            </li>
+            <li>
+              Number of product variants and complexity of testing requirements
+              as per the applicable Indian Standard.
+            </li>
+            <li>
+              Scheduling availability of BIS officials for factory inspection.
+            </li>
+            <li>
+              Turnaround time of BIS-recognized laboratories for sample testing.
+            </li>
+          </ul>
         </div>
       </section>
 
