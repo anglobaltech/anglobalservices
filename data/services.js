@@ -32,7 +32,7 @@ export const servicesMenu = [
       },
       {
         name: "SOLAR PANEL BIS REGISTRATION SERVICES",
-        slug: "solar_services",
+        slug: "bis-registration-for-solar-panels",
         root: true,
       },
 

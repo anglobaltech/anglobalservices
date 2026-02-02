@@ -34,6 +34,7 @@ export default function sitemap() {
     'nabl_services',
     'notifi_bolts_nuts_order',
     'solar_services',
+    'bis-registration-for-solar-panels',
     'solar-equipment',
     'solar-panel-plant-setup',
     'steel-products',

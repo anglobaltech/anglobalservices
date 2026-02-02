@@ -30,7 +30,11 @@ const nextConfig = {
         destination: "/bis-isi-mark-certification",
         permanent: true,
       },
-
+      {
+        source: "/solar_services",
+        destination: "/bis-registration-for-solar-panels",
+        permanent: true,
+      },
     ];
   },
 };
