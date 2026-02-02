@@ -3,23 +3,41 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification Services | AN Global Services",
+    "BIS ISI Mark Certification in India | ISI Certification Consultant – AN Global Services",
 
   description:
-    "Get BIS ISI Mark Certification in India for mandatory & voluntary products. Expert support for manufacturers & importers – documentation, testing, inspection & fast approval by BIS.",
+    "Apply for BIS ISI Mark Certification in India with AN Global Services. Mandatory & voluntary ISI certification for manufacturers & importers. End-to-end support – documents, testing, factory inspection & fast BIS approval.",
 
   keywords: [
     "BIS ISI certification",
+    "ISI certification",
     "ISI mark certification",
-    "BIS ISI mark registration",
+    "BIS ISI mark",
     "ISI certification in India",
-    "BIS certification services",
-    "mandatory ISI certification",
-    "ISI mark for manufacturers",
+    "apply for ISI certification",
+    "how to get ISI mark",
+    "ISI mark registration process",
+    "ISI certificate apply online",
+    "ISI certification consultant",
+    "BIS ISI consultant India",
+    "ISI certification services",
+    "ISI mark agent",
+    "ISI certification consultancy",
+    "ISI certification for manufacturers",
+    "ISI certification for importers",
+    "foreign manufacturer ISI certification",
+    "ISI mark for factory",
     "ISI certification process",
-    "ISI certification documents",
-    "ISI mark consultant",
-    "BIS ISI certification cost",
+    "documents required for ISI certification",
+    "ISI certification cost",
+    "ISI certification fees",
+    "time required for ISI certification",
+    "mandatory ISI certification",
+    "products under ISI certification",
+    "list of products under ISI mark",
+    "electrical products ISI certification",
+    "AN Global Services ISI certification",
+    "BIS certification services India",
   ],
 
   alternates: {
@@ -56,7 +74,7 @@ export default function ISIPage() {
         <div className="md:col-span-1">
           <div className="rounded-xl overflow-hidden shadow-md">
             <Image
-              src="/service/isi/isi-1.jpg"
+              src="/service/isi/isi-certificate.png"
               alt="ISI Mark Certification"
               width={500}
               height={500}
@@ -66,8 +84,8 @@ export default function ISIPage() {
         </div>
 
         <div className="md:col-span-2">
-          <h2 className="text-2xl font-bold mb-4 border-b pb-2">
-            INTRODUCTION
+          <h2 className="text-2xl font-bold mb-4 border-b uppercase">
+            What is BIS ISI Certification?
           </h2>
 
           <div className="space-y-5 text-gray-500 leading-7 text-[15px]">
@@ -122,7 +140,7 @@ export default function ISIPage() {
             <p>
               More than{" "}
               <strong className="font-semibold text-gray-800">
-                346 products
+                450+ products
               </strong>{" "}
               fall under mandatory ISI certification. Without ISI certification,
               manufacturers are not permitted to manufacture and sell products
@@ -216,12 +234,12 @@ export default function ISIPage() {
       <section className="w-full bg-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+            <h2 className="text-xl md:text-xl font-bold text-gray-900">
               DOCUMENTS REQUIRED TO OBTAIN BIS ISI MARK CERTIFICATE IN INDIA
             </h2>
 
-            <div className="mt-2 h-0.5 w-full bg-gray-200 relative">
-              <span className="absolute left-0 top-0 h-0.5 w-215 bg-[#0075B6]"></span>
+            <div className=" h-0.5 w-full bg-gray-200 relative">
+              <span className="absolute left-0 top-0 h-0.5 w-180 bg-[#0075B6]"></span>
             </div>
           </div>
 
@@ -342,11 +360,184 @@ export default function ISIPage() {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+        <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
+          ISI Certification Cost in India
+        </h2>
+
+        <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+          <span className="absolute left-0 top-0 h-0.5 w-87 bg-[#0072b1]" />
+        </div>
+
+        {/* Intro */}
+        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          The cost of obtaining ISI Certification in India depends on several
+          factors such as the type of product, applicable Indian Standard (IS),
+          number of product variants, testing requirements, and factory
+          readiness. ISI Certification is issued under the BIS Product
+          Certification Scheme (Scheme I), and manufacturers are required to pay
+          certain statutory fees directly to the Bureau of Indian Standards
+          (BIS) along with applicable testing charges.
+        </p>
+
+        {/* Cost Table */}
+        <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg mb-6">
+          <table className="w-full border-collapse text-[15px]">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  S. No.
+                </th>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  Cost Component
+                </th>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  Amount (INR)
+                </th>
+                <th className="border border-gray-200 px-4 py-2 text-left">
+                  Remarks
+                </th>
+              </tr>
+            </thead>
+
+            <tbody className="divide-y">
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">1</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Application Fee
+                </td>
+                <td className="border border-gray-200 px-4 py-2">₹1,000</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  One-time fee payable to BIS
+                </td>
+              </tr>
+
+              <tr className="bg-gray-50">
+                <td className="border border-gray-200 px-4 py-2">2</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Factory Inspection / Audit Fee
+                </td>
+                <td className="border border-gray-200 px-4 py-2">₹7,000</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Payable to BIS for factory audit
+                </td>
+              </tr>
+
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">3</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Sample Testing Charges
+                </td>
+                <td className="border border-gray-200 px-4 py-2">
+                  As applicable
+                </td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Depends on product & BIS-recognized lab
+                </td>
+              </tr>
+
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">4</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Marking Fee
+                </td>
+                <td className="border border-gray-200 px-4 py-2">As per IS</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Calculated based on production volume
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Additional Info */}
+        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-5">
+          <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <strong>Note:</strong> In addition to the above government fees,
+            manufacturers are required to invest in setting up an in-house
+            testing laboratory as per the applicable Indian Standard. The cost
+            of testing equipment, calibration, and quality control personnel
+            varies depending on the product category.
+          </p>
+        </div>
+
+        {/* Final Note */}
+        <div className="bg-white border border-gray-200 rounded-lg p-4">
+          <p className="text-gray-600 text-[14px] leading-6">
+            <strong>Important:</strong> The overall ISI Certification cost may
+            vary based on product complexity, number of test parameters, factory
+            preparedness, and inspection timelines. Proper documentation and
+            pre-audit readiness can significantly reduce delays and additional
+            expenses during the certification process.
+          </p>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 md:px-6">
+        <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
+          Time Required to Obtain BIS ISI Mark Certification in India
+        </h2>
+
+        <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+          <span className="absolute left-0 top-0 h-0.5 w-172 bg-[#0072b1]" />
+        </div>
+
+        {/* Intro */}
+        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          The time required to obtain ISI Certification in India varies
+          depending on the type of product, applicable Indian Standard (IS),
+          readiness of the manufacturing unit, and completion of testing and
+          documentation requirements. ISI Certification is granted under the BIS
+          Product Certification Scheme (Scheme I) and involves application
+          review, factory inspection, and laboratory testing before the license
+          is issued.
+        </p>
+
+        {/* Estimated Timeline Box */}
+        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
+          <p className="text-gray-600 text-[15px] leading-6">
+            <strong>Estimated Overall Timeline:</strong> For most domestic
+            manufacturers, the ISI Certification process typically takes around{" "}
+            <strong>45 to 60 days</strong>, provided the factory setup, in-house
+            testing facilities, and documentation are complete at the time of
+            application.
+          </p>
+        </div>
+
+        {/* Factors Affecting Time */}
+        <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            Factors Affecting ISI Certification Timeline
+          </h3>
+
+          <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
+            <li>
+              Readiness of the manufacturing unit and availability of required
+              machinery and in-house testing equipment.
+            </li>
+            <li>
+              Completeness and accuracy of documents submitted with the
+              application.
+            </li>
+            <li>
+              Number of product variants and complexity of testing requirements
+              as per the applicable Indian Standard.
+            </li>
+            <li>
+              Scheduling availability of BIS officials for factory inspection.
+            </li>
+            <li>
+              Turnaround time of BIS-recognized laboratories for sample testing.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section className="w-full bg-[#f5f7fa] py-16">
         <div className="max-w-7xl mx-auto px-4">
           {/* Heading */}
           <div className="mb-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-gray-900">
               List of Products Covered Under BIS ISI Certification
             </h2>
             <p className="mt-3 text-gray-500 text-sm">
@@ -416,7 +607,7 @@ export default function ISIPage() {
               />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                   Furniture & Plywood Products
+                  Furniture & Plywood Products
                 </h3>
                 <p className="text-sm text-gray-500">
                   BIS ISI certification for plywood, boards & furniture items.
@@ -581,142 +772,125 @@ export default function ISIPage() {
         </div>
       </section>
 
-      {/* <section className="w-full bg-white py-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900">
-              List Of Products Under BIS ISI MARK Certification
-            </h2>
+      <section className="max-w-7xl mx-auto px-4 md:px-6">
+        <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
+          Who Needs ISI Mark Certification in India?
+        </h2>
+        <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+          <span className="absolute left-0 top-0 h-0.5 w-122 bg-[#0072b1]" />
+        </div>
 
-            <div className="mt-2 h-[2px] w-full bg-gray-200 relative">
-              <span className="absolute left-0 top-0 h-[2px] w-48 bg-[#0075B6]"></span>
-            </div>
+        {/* Intro */}
+        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          ISI Mark Certification is a mandatory quality certification issued by
+          the Bureau of Indian Standards (BIS) for products notified under
+          various Quality Control Orders (QCOs) in India. Any business involved
+          in the manufacturing, import, or branding of such notified products
+          must obtain ISI Certification before selling them in the Indian
+          market. The requirement applies to both domestic and foreign entities
+          to ensure product safety, quality, and consumer protection.
+        </p>
+
+        {/* Category Cards */}
+        <div className="space-y-4">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              1. Indian Manufacturers
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              Indian manufacturers producing goods that fall under mandatory BIS
+              certification must obtain an ISI Mark license before manufacturing
+              and selling their products. This includes industries such as
+              electrical appliances, medical products, construction materials,
+              toys, cement, household items, and consumer safety products.
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-14">
-            <div className="text-center">
-              <Image
-                src="/service/isi/shoes.jpg"
-                alt="Shoes & Leather Products"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">
-                Shoes & Leather Products
-              </p>
-            </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              2. Foreign Manufacturers Exporting to India
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              Foreign manufacturers supplying products to India must obtain ISI
+              Mark Certification through the Foreign Manufacturers Certification
+              Scheme (FMCS). These manufacturers are required to appoint an
+              Authorized Indian Representative (AIR) and comply with Indian
+              Standards to legally export and sell notified products in India.
+            </p>
+          </div>
 
-            <div className="text-center">
-              <Image
-                src="/service/isi/electronics.jpg"
-                alt="Electronic & IT Goods"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">
-                Electronic & IT Goods
-              </p>
-            </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              3. Importers and Traders
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              Importers and traders dealing with ISI-notified products are
+              responsible for ensuring that the imported goods carry a valid ISI
+              Mark. Importing or selling uncertified products may lead to
+              customs detention, penalties, seizure of goods, or cancellation of
+              import permissions.
+            </p>
+          </div>
 
-            <div className="text-center">
-              <Image
-                src="/service/isi/bolts.jpg"
-                alt="Bolts, Nuts and Fasteners"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">
-                Bolts, Nuts and Fasteners
-              </p>
-            </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              4. Brand Owners and Private Label Businesses
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              Businesses selling products under their own brand name, even if
+              the manufacturing is outsourced, must ensure ISI Certification is
+              obtained. Brand owners are legally accountable for compliance with
+              BIS requirements and product quality in the Indian market.
+            </p>
+          </div>
 
-            <div className="text-center">
-              <Image
-                src="/service/isi/automobile.jpg"
-                alt="Automobile Accessories"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">
-                Automobile Accessories
-              </p>
-            </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              5. Government Suppliers and Tender Participants
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              Manufacturers and suppliers participating in government tenders,
+              public sector procurement, and institutional supply contracts are
+              often required to provide ISI-certified products. ISI Mark
+              Certification is a prerequisite for eligibility in many government
+              and PSU tenders.
+            </p>
+          </div>
 
-            <div className="text-center">
-              <Image
-                src="/service/isi/building.jpg"
-                alt="Building Materials"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">Building Materials</p>
-            </div>
-
-            <div className="text-center">
-              <Image
-                src="/service/isi/chemicals.jpg"
-                alt="Chemicals & Petrochemicals"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">
-                Chemicals & Petrochemicals
-              </p>
-            </div>
-
-            <div className="text-center">
-              <Image
-                src="/service/isi/food.jpg"
-                alt="Food Related Products"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">
-                Food Related Products
-              </p>
-            </div>
-
-            <div className="text-center">
-              <Image
-                src="/service/isi/medical.jpg"
-                alt="Medical Equipment"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">Medical Equipment</p>
-            </div>
-
-            <div className="text-center">
-              <Image
-                src="/service/isi/kitchen.jpg"
-                alt="Kitchen Appliances"
-                width={220}
-                height={160}
-                className="mx-auto rounded-xl object-contain"
-              />
-              <p className="mt-3 text-sm text-gray-500">Kitchen Appliances</p>
-            </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              6. E-commerce Sellers and Online Marketplaces
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              Sellers listing ISI-notified products on e-commerce platforms must
+              provide valid BIS certification details. Online marketplaces are
+              increasingly enforcing BIS compliance to avoid regulatory action
+              and ensure consumer safety.
+            </p>
           </div>
         </div>
-      </section> */}
+
+        {/* Bottom Note */}
+        <div className="mt-6 bg-white border border-gray-200 rounded-lg p-4">
+          <p className="text-gray-600 text-[14px] leading-6">
+            <strong>Important:</strong> Selling, importing, or manufacturing
+            products without mandatory ISI Mark Certification is a punishable
+            offense under the BIS Act, 2016. Non-compliance may result in fines,
+            product seizure, cancellation of licenses, or legal action by
+            regulatory authorities.
+          </p>
+        </div>
+      </section>
 
       <section className="w-full bg-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+            <h2 className="text-xl  font-bold text-gray-900">
               OUR CONTRIBUTION IN OBTAINING BIS ISI MARK CERTIFICATE
             </h2>
 
-            <div className="mt-2 h-0.5 w-full bg-gray-200 relative">
-              <span className="absolute left-0 top-0 h-0.5 w-185 bg-[#0075B6]"></span>
+            <div className=" h-0.5 w-full bg-gray-200 relative">
+              <span className="absolute left-0 top-0 h-0.5 w-155 bg-[#0075B6]"></span>
             </div>
           </div>
 

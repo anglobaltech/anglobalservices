@@ -524,7 +524,7 @@ export default function Hero() {
 
             <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-gray-800">
               <p className="text-sm font-semibold text-gray-700 mb-4">
-                Select your requirement and request a call
+                Select your requirement and request a call back
               </p>
 
               <form

@@ -142,11 +142,11 @@ export default function Footer() {
             {/* Right Form */}
             <div className="bg-gray-900 border border-gray-900 rounded-xl shadow-xl p-4 md:p-6 text-gray-100">
               <p className="text-sm font-semibold text-gray-300 mb-3">
-                Write your requirement and request a call
+                Write your requirement and request a call back
               </p>
 
               <form
-                onSubmit={handleSubmit}
+                onSubmit={handleSubmit} 
                 className="grid grid-cols-1 md:grid-cols-2 gap-3"
               >
                 {/* Row 1 – Service */}
