@@ -66,7 +66,7 @@ const products = [
     id: 2,
     name: "Disposable adult diapers",
     standard: "IS 17508: 2020",
-    link: "/bis-isi-mark-certification-medical-products",
+    link: "isi-products/isi-mark-certification-for-disposable-adult-diaper-17508",
   },
   {
     id: 3,

@@ -3,33 +3,33 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "ISI Mark Certification for Sanitary Napkins IS 5405 | AN Global Services",
+    "ISI Mark Certification for Sanitary Napkins (IS 5405) | AN Global Services",
 
   description:
-    "Get ISI Mark Certification for Sanitary Napkins as per IS 5405. Expert BIS support for documentation, product testing, in-house lab setup, factory audit, and ISI license approval in India.",
+    "Mandatory ISI Mark Certification for Sanitary Napkins under IS 5405. Get BIS license approval with expert support for product testing, factory inspection, in-house lab setup, documentation, and fast-track ISI certification for manufacturers in India.",
 
   keywords: [
     "ISI Mark Certification for Sanitary Napkins",
-    "BIS Certification for Sanitary Napkins IS 5405",
-    "Sanitary Napkin ISI Mark",
-    "ISI Mark for Sanitary Napkins India",
-    "BIS License for Sanitary Napkins",
-    "IS 5405 Sanitary Napkin Certification",
-    "BIS ISI Mark for Feminine Hygiene Products",
-    "Sanitary Napkin Certification India",
-    "ISI Certification Scheme I",
-    "BIS Factory Audit for Sanitary Napkins",
-    "Sanitary Napkin BIS Testing",
+    "Sanitary Napkin ISI Mark IS 5405",
+    "BIS License for Sanitary Napkins India",
+    "ISI Mark Mandatory for Sanitary Napkins",
+    "IS 5405 BIS Certification",
+    "BIS ISI Certification Scheme I",
+    "Sanitary Napkin BIS Testing & Approval",
+    "BIS Factory Inspection for Sanitary Napkins",
+    "Medical & Hygiene Product ISI Certification",
+    "Feminine Hygiene BIS Certification",
     "ISI Mark Consultant for Sanitary Napkins",
-    "Medical Textile BIS Certification",
     "AN Global Services BIS ISI Certification",
   ],
 
   openGraph: {
-    title: "ISI Mark Certification for Sanitary Napkins IS 5405",
+    title:
+      "ISI Mark Certification for Sanitary Napkins (IS 5405) | Mandatory BIS Approval",
     description:
-      "Apply for ISI Mark Certification for Sanitary Napkins under IS 5405. Complete BIS support for testing, documentation, factory inspection, and license approval.",
-    url: "https://www.anglobalservices.com/isi-products/isi-mark-certification-for-sanitary-napkin-5405",
+      "Apply for mandatory ISI Mark Certification for Sanitary Napkins as per IS 5405. Complete BIS support for testing, factory audit, documentation, and license approval in India.",
+    url:
+      "https://www.anglobalservices.com/isi-products/isi-mark-certification-for-sanitary-napkin-5405",
     siteName: "AN Global Services",
     locale: "en_IN",
     type: "website",

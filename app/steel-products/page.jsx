@@ -157,7 +157,7 @@ export default function ISIPage() {
         <div className="md:col-span-1">
           <div className="rounded-xl overflow-hidden shadow-md">
             <Image
-              src="/service/isi/footwear/footwear-3.jpg"
+              src="/service/isi-certification-steelproducts.png"
               alt="ISI Mark Certification"
               width={500}
               height={500}

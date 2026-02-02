@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata = {
   title:
@@ -53,6 +54,62 @@ export const metadata = {
 export default function ISIPage() {
   return (
     <main className="w-full">
+
+       <Script
+        id="isi-faq-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is ISI Mark Certification?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ISI Mark Certification is a quality certification issued by the Bureau of Indian Standards (BIS) that confirms a product complies with the applicable Indian Standard for safety, quality, and performance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is ISI Mark Certification mandatory in India?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, ISI certification is mandatory for products notified under BIS Quality Control Orders. Selling or importing such products without ISI certification is a punishable offense."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who needs ISI Mark Certification?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Indian manufacturers, foreign manufacturers exporting to India, importers, brand owners, and sellers of notified products are required to obtain ISI Mark Certification."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to get ISI Certification?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The ISI Certification process generally takes 30 to 60 days, depending on product type, testing requirements, factory readiness, and BIS inspection timelines."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the cost of ISI Certification in India?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The cost includes BIS application fee, inspection fee, testing charges, marking fee, and license fee. The total cost varies based on the product and applicable Indian Standard."
+              }
+            }
+          ]
+        }
+        `}
+      </Script>
+
       <section className="relative w-full h-65 md:h-68">
         <Image
           src="/service/isi/about.jpg"
@@ -599,7 +656,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
           ISI Certification Cost in India
         </h2>
@@ -772,7 +829,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
           Who Needs ISI Mark Certification in India?
         </h2>
@@ -882,6 +939,73 @@ export default function ISIPage() {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 md:px-6 ">
+        <h2 className="text-xl uppercase font-semibold text-gray-900">
+          Frequently Asked Questions (FAQs) – ISI Certification
+        </h2>
+        <div className="h-0.5 w-full bg-gray-200 relative">
+          <span className="absolute left-0 top-0 h-0.5 w-153 bg-[#1f6ed5]"></span>
+        </div>
+
+        <div className="mt-6 space-y-4 text-[15px]">
+          <div>
+            <h3 className="font-semibold text-gray-800 ">
+              What is ISI Mark Certification?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6">
+              ISI Mark Certification is a quality certification issued by the
+              Bureau of Indian Standards (BIS) that confirms a product complies
+              with the applicable Indian Standard for safety, quality, and
+              performance.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-800">
+              Is ISI Mark Certification mandatory in India?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6">
+              Yes, ISI certification is mandatory for products notified under
+              BIS Quality Control Orders. Selling or importing such products
+              without ISI certification is a punishable offense.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-800">
+              Who needs ISI Mark Certification?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6">
+              Indian manufacturers, foreign manufacturers exporting to India,
+              importers, brand owners, and sellers of notified products are
+              required to obtain ISI Mark Certification.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-800">
+              How long does it take to get ISI Certification?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6">
+              The ISI Certification process generally takes 30 to 60 days,
+              depending on product type, testing requirements, factory
+              readiness, and BIS inspection timelines.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-800">
+              What is the cost of ISI Certification in India?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6">
+              The cost includes BIS application fee, inspection fee, testing
+              charges, marking fee, and license fee. The total cost varies based
+              on the product and applicable Indian Standard.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="w-full bg-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-8">
@@ -894,7 +1018,7 @@ export default function ISIPage() {
             </div>
           </div>
 
-          <ul className="space-y-1 text-gray-500 text-[15px] leading-7 list-disc pl-6">
+          <ul className="space-y-1 text-gray-600 text-[15px] leading-7 list-disc pl-6">
             <li>
               We will train you regarding what is ISI Mark and how to obtain it.
             </li>
