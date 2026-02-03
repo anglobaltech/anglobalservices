@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Trademark Registration in India | AN Global Services",
   description:
-    "Apply for trademark registration in India with expert support. AN Global Services provides complete online TM registration, trademark search, filing, objection handling, journal publication, and registration certificate assistance.",
+    "Apply for trademark registration in India with expert legal support. AN Global Services offers complete online TM registration, trademark search, filing, objection handling, journal publication, and registration certificate assistance.",
   keywords: [
     "Trademark Registration",
     "Trademark Registration in India",
@@ -22,6 +22,10 @@ export const metadata = {
     "Trademark Legal Services",
     "AN Global Services"
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 

@@ -4,22 +4,25 @@ import Link from "next/link";
 export const metadata = {
   title: "WPC Certification in India | AN Global Services",
   description:
-    "WPC Certification services in India for wireless and RF-enabled products. Get WPC ETA approval, RF testing, Saral Sanchar filing, and import clearance support for Wi-Fi, Bluetooth, RFID, and radio devices.",
+    "Get WPC Certification in India with expert assistance. AN Global Services provides complete WPC ETA approval, RF testing, Saral Sanchar filing, and import clearance support for wireless and RF-enabled products.",
   keywords: [
     "WPC Certification",
     "WPC Certification in India",
     "WPC ETA Approval",
     "ETA Certification India",
     "WPC Approval for Wireless Products",
-    "RF Certification India",
     "Wireless Product Certification India",
+    "RF Certification India",
     "Bluetooth WPC Certification",
     "WiFi WPC ETA Approval",
-    "RF Testing India",
     "Saral Sanchar WPC",
     "WPC Import Clearance",
-    "AN Global Services",
+    "AN Global Services"
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ISIPage() {
