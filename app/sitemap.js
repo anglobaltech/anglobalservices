@@ -43,7 +43,7 @@ export default function sitemap() {
     'testing_gold',
     'testing_solar_panel',
     'testing-toys',
-    'trademark_services',
+    'trademark-registration-services',
     'traning_services',
     'wpc-certification-services',
   ]

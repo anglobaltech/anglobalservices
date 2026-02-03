@@ -38,7 +38,12 @@ const nextConfig = {
       {
         source: "/wpc_services",
         destination: "/wpc-certification-services",
-        permanent: true,
+        permanent: true, 
+      },
+      {
+        source: "/trademark_services",
+        destination: "/trademark-registration-services",
+        permanent: true, 
       },
     ];
   },

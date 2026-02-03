@@ -75,7 +75,7 @@ export const servicesMenu = [
       },
       {
         name: "TRADEMARK REGISTRATION SERVICES",
-        slug: "trademark_services",
+        slug: "trademark-registration-services",
         root: true,
       },
       {

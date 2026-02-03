@@ -438,7 +438,7 @@ export default function Hero() {
                 link: "/lab_servces",
               },
               { img: "/services/solar.jpg", link: "/bis-registration-for-solar-panels" },
-              { img: "/services/tm.jpg", link: "/trademark_services" },
+              { img: "/services/tm.jpg", link: "/trademark-registration-services" },
             ].map((item, index) => (
               <Link
                 key={index}

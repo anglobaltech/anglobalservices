@@ -18,7 +18,7 @@ export const metadata = {
     "RF Testing India",
     "Saral Sanchar WPC",
     "WPC Import Clearance",
-    "AN Global Services"
+    "AN Global Services",
   ],
 };
 
@@ -47,7 +47,7 @@ export default function ISIPage() {
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/wpc-services.png"
+                src="/service/wpc-registration-services.png"
                 alt=" WPC Certification Services"
                 width={420}
                 height={520}
@@ -71,7 +71,7 @@ export default function ISIPage() {
                 India. It is issued by the Wireless Planning & Coordination
                 (WPC) Wing, which functions under the Ministry of
                 Communications, Government of India. Any device that uses
-                wireless technologies such as Wi-Fi, Bluetooth, RFID, or radio
+                wireless technologies such as Wi-Fi, Bluetooth, RFID, or Radio
                 signals must obtain WPC approval before it can be imported,
                 sold, or used in the Indian market.
               </p>
@@ -488,13 +488,13 @@ export default function ISIPage() {
           <div className="w-90 h-0.5 bg-[#0072b1] mb-3" />
 
           <p className="text-gray-600 text-[15px] leading-8 text-justify">
-            Wireless Bluetooth watches, Bluetooth Speakers, Bluetooth
-            Headphones, Wireless music players, Wireless Water Heaters, Wireless
-            Home Appliances, Wireless Car Radio, Radio Frequency Identification
-            (RFID) Tags and Readers, Wireless Medical products used for patient
-            profiling Laptops, Mobile Phones, Wireless Mouse and Keypads, Remote
-            key for entry, Wireless remotes, and any other radio frequency
-            modules.
+            Wireless Bluetooth watches, Bluetooth speakers, Bluetooth
+            headphones, wireless music players, wireless water heaters, wireless
+            home appliances, wireless car radios, Radio Frequency Identification
+            (RFID) tags and readers, wireless medical products used for patient
+            profiling, laptops, mobile phones, wireless mice and keyboards,
+            remote entry keys, wireless remote controls, and all other radio
+            frequency–based modules.
           </p>
         </div>
       </section>
@@ -506,14 +506,15 @@ export default function ISIPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-153 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-180 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
-            provides end-to-end assistance for obtaining WPC ETA certification
-            in India. We simplify the entire process by handling technical
-            evaluation, documentation, portal coordination, and follow-ups with
-            the WPC Wing, ensuring fast and hassle-free approval.
+            AN Global Services provides end-to-end assistance for obtaining WPC
+            ETA certification in India. We simplify the entire process by
+            handling technical evaluation, documentation, portal coordination,
+            and follow-ups with the WPC Wing, ensuring fast and hassle-free
+            approval.
           </p>
 
           <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg">
@@ -524,7 +525,7 @@ export default function ISIPage() {
                     Stage
                   </th>
                   <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">
-                    How AN Global Services Supports You
+                    How AN Global Services Support You
                   </th>
                 </tr>
               </thead>
@@ -598,10 +599,10 @@ export default function ISIPage() {
           {/* Benefit Note */}
           <div className="mt-6 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
-              <strong>Why Choose AN Global?</strong> Our structured approach,
-              regulatory expertise, and proactive follow-ups help reduce delays,
-              avoid rejections, and ensure faster WPC ETA approval with minimal
-              effort from your side.
+              <strong>Why Choose AN Global Services?</strong> Our structured
+              approach, regulatory expertise, and proactive follow-ups help
+              reduce delays, avoid rejections, and ensure faster WPC ETA
+              approval with minimal effort from your side.
             </p>
           </div>
         </div>
