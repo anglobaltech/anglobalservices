@@ -9,7 +9,6 @@ const metadata = {
     "Get complete ISI Certification services for domestic and industrial products. AN Global Services provides end-to-end ISI certification support.",
 };
 
-
 const images = [
   "/service/isi/footwear/1.png",
   "/service/isi/footwear/2.png",
@@ -22,7 +21,6 @@ const images = [
   "/service/isi/footwear/9.png",
   "/service/isi/footwear/10.png",
   "/service/isi/footwear/11.png",
-
 ];
 
 const products = [
@@ -113,30 +111,29 @@ const getGroupLink = (id) => {
 };
 
 export default function ISIPage() {
+  const sliderRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-   const sliderRef = useRef(null);
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
-  
-    const startDrag = (e) => {
-      setIsDragging(true);
-      setStartX(e.pageX - sliderRef.current.offsetLeft);
-      setScrollLeft(sliderRef.current.scrollLeft);
-    };
-  
-    const stopDrag = () => {
-      setIsDragging(false);
-    };
-  
-    const onDrag = (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.pageX - sliderRef.current.offsetLeft;
-      const walk = (x - startX) * 1.5; 
-      sliderRef.current.scrollLeft = scrollLeft - walk;
-    };
-  
+  const startDrag = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - sliderRef.current.offsetLeft);
+    setScrollLeft(sliderRef.current.scrollLeft);
+  };
+
+  const stopDrag = () => {
+    setIsDragging(false);
+  };
+
+  const onDrag = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - sliderRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    sliderRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
@@ -209,36 +206,39 @@ export default function ISIPage() {
       </section>
 
       <section className="w-full bg-white">
-        <div className="max-w-7xl mx-auto px-4 p-8">
-          <div className="space-y-6 text-black font-semibold text-[15px] leading-5 pb-4">
+        <div className="max-w-7xl mx-auto px-4 pt-8">
+          {/* Intro Paragraph */}
+          <div className="space-y-4 text-gray-900 text-[15px] leading-6 pb-4">
             <p>
-              The department has issued three quality control orders which are
-              going to cover and lie made from rubber/polymeric material,
-              leather and other materials and PPE footwear the mandatory
-              certification of BIS.
+              The department has issued three Quality Control Orders (QCOs)
+              which cover footwear made from rubber/polymeric materials,
+              leather, other materials, and PPE footwear, making BIS
+              certification mandatory.
             </p>
           </div>
 
-          <div className="space-y-6 text-gray-500 text-[15px] leading-2">
+          {/* QCO List */}
+          <div className="space-y-4 text-gray-600 text-[15px] leading-6">
             <p>
               The following three QCOs have been issued covering footwear made
-              from rubber/polymeric material, leather and other materials and
+              from rubber/polymeric material, leather and other materials, and
               PPE footwear:
             </p>
 
             <p>
-              i. Footwear made from all-Rubber and all Polymeric material and
-              its components (Quality Control) Order, 2020
+              <strong>i.</strong> Footwear made from all-rubber and all
+              polymeric materials and its components (Quality Control) Order,
+              2020
             </p>
 
             <p>
-              ii. Footwear made from Leather and other materials (Quality
-              Control) Order, 2020
+              <strong>ii.</strong> Footwear made from leather and other
+              materials (Quality Control) Order, 2020
             </p>
 
             <p>
-              iii. Personal Protective Equipment - Footwear (Quality Control)
-              Order, 2020
+              <strong>iii.</strong> Personal Protective Equipment – Footwear
+              (Quality Control) Order, 2020
             </p>
           </div>
         </div>
@@ -406,16 +406,14 @@ export default function ISIPage() {
       </section>
 
       <section className="w-full bg-gray-100 p-14">
-        
         <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+            TESTING EQUIPMENTS FOR FOOTWEAR:-
+          </h2>
 
-           <h2 className="text-xl md:text-2xl font-bold text-gray-900">
-              TESTING EQUIPMENTS FOR FOOTWEAR:-
-            </h2>
-
-            <div className="mt-2 h-0.5 w-full relative pb-5">
-              <span className="absolute left-0 top-0 h-0.5 w-80 bg-[#1f6ed5]"></span>
-            </div>
+          <div className="mt-2 h-0.5 w-full relative pb-5">
+            <span className="absolute left-0 top-0 h-0.5 w-80 bg-[#1f6ed5]"></span>
+          </div>
 
           <div
             ref={sliderRef}
