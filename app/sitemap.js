@@ -22,6 +22,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'eqipmentsforleaser',
     'equipmentforgold',
     'equipmentfortoy',
+    'fssai-registration-services',
     'foreign-manufacturers-certification-scheme-fmcs',
     'footwear',
     'gem_services',

@@ -52,17 +52,17 @@ export const servicesMenu = [
         slug: "bee_services",
         root: true,
       },
+      {
+        name: "GEM REGISTRATION SERVICES",
+        slug: "gem_services",
+        root: true,
+      },
     ],
   },
   {
     title: "",
     items: [
      
-      {
-        name: "GEM REGISTRATION SERVICES",
-        slug: "gem_services",
-        root: true,
-      },
        {
         name: "TRAINING SERVICES (NATIONAL / INTERNATIONAL)",
         slug: "traning_services",
@@ -81,6 +81,11 @@ export const servicesMenu = [
       {
         name: "MSME NSIC REGISTRATION SERVICES",
         slug: "msme-nsic-registration",
+        root: true,
+      },
+      {
+        name: "FSSAI REGISTRATION SERVICES",
+        slug: "fssai-registration-services",
         root: true,
       },
     ],
