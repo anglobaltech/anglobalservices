@@ -19,7 +19,7 @@ export const servicesMenu = [
         slug: "lab_servces",
         root: true,
       },
-      { name: "WPC CERTIFICATION SERVICES", slug: "wpc_services", root: true },
+      { name: "WPC CERTIFICATION SERVICES", slug: "wpc-certification-services", root: true },
     ],
   },
   {

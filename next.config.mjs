@@ -35,6 +35,11 @@ const nextConfig = {
         destination: "/bis-registration-for-solar-panels",
         permanent: true,
       },
+      {
+        source: "/wpc_services",
+        destination: "/wpc-certification-services",
+        permanent: true,
+      },
     ];
   },
 };

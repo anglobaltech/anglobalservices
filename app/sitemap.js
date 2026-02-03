@@ -45,7 +45,7 @@ export default function sitemap() {
     'testing-toys',
     'trademark_services',
     'traning_services',
-    'wpc_services',
+    'wpc-certification-services',
   ]
 
   return pages.map((page) => ({
