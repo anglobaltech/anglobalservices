@@ -4,14 +4,31 @@ import Link from "next/link";
 export const metadata = {
   title: "Trademark Registration in India | AN Global Services",
   description:
-    "Apply for trademark registration in India with expert legal support. AN Global Services offers complete online TM registration, trademark search, filing, objection handling, journal publication, and registration certificate assistance.",
+    "Apply for trademark registration in India with expert legal support. Online trademark search, filing, objection handling, journal publication and registration certificate by AN Global Services.",
+
+  keywords: [
+    "Trademark registration India",
+    "Trademark registration services",
+    "Online trademark registration",
+    "TM registration India",
+    "Trademark consultant India",
+    "Brand name registration India",
+    "Trademark lawyer India",
+  ],
+
+  alternates: {
+    canonical: "https://www.anglobalservices.com/trademark-registration-services",
+  },
+
   robots: {
     index: true,
     follow: true,
   },
+
+  authors: [{ name: "AN Global Services" }],
 };
 
-export default function ISIPage() {
+export default function TrademarkPage() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
