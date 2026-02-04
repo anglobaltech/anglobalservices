@@ -65,7 +65,7 @@ export const servicesMenu = [
      
        {
         name: "TRAINING SERVICES (NATIONAL / INTERNATIONAL)",
-        slug: "traning_services",
+        slug: "training-services-national-international",
         root: true,
       },
        {

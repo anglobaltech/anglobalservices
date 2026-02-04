@@ -45,7 +45,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'testing_solar_panel',
     'testing-toys',
     'trademark-registration-services',
-    'traning_services',
+    'training-services-national-international',
     'wpc-certification-services',
   ]
 

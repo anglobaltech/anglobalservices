@@ -50,6 +50,11 @@ const nextConfig = {
         destination: "/epr-registration-services",
         permanent: true, 
       },
+      {
+        source: "/traning_services",
+        destination: "/training-services-national-international",
+        permanent: true, 
+      },
     ];
   },
 };
