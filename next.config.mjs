@@ -45,6 +45,11 @@ const nextConfig = {
         destination: "/trademark-registration-services",
         permanent: true, 
       },
+       {
+        source: "/epr_services",
+        destination: "/epr-registration-services",
+        permanent: true, 
+      },
     ];
   },
 };

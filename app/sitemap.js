@@ -16,7 +16,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',
-    'epr_services',
+    'epr-registration-services',
     'eqipmentforsolar',
     'equipmentforfootwear',
     'eqipmentsforleaser',

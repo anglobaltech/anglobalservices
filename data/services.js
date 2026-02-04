@@ -70,7 +70,7 @@ export const servicesMenu = [
       },
        {
         name: "EPR REGISTRATION SERVICES",
-        slug: "epr_services",
+        slug: "epr-registration-services",
         root: true,
       },
       {
