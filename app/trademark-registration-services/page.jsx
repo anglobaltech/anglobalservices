@@ -5,29 +5,11 @@ export const metadata = {
   title: "Trademark Registration in India | AN Global Services",
   description:
     "Apply for trademark registration in India with expert legal support. AN Global Services offers complete online TM registration, trademark search, filing, objection handling, journal publication, and registration certificate assistance.",
-  keywords: [
-    "Trademark Registration",
-    "Trademark Registration in India",
-    "Online Trademark Registration",
-    "TM Registration India",
-    "Trademark Filing Online",
-    "Brand Name Trademark Registration",
-    "Logo Trademark Registration India",
-    "Trademark Search India",
-    "Trademark Application Filing",
-    "Trademark Objection Reply",
-    "Trademark Journal Publication",
-    "Registered Trademark Certificate",
-    "Trademark Consultant India",
-    "Trademark Legal Services",
-    "AN Global Services"
-  ],
   robots: {
     index: true,
     follow: true,
   },
 };
-
 
 export default function ISIPage() {
   return (
@@ -581,6 +563,86 @@ export default function ISIPage() {
               approach, legal expertise, and proactive follow-ups help minimize
               delays, avoid unnecessary objections, and ensure a smooth
               trademark registration process from start to finish.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions on Trademark Registration */}
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-8">
+        <div>
+          <h2 className="text-lg md:text-xl font-bold text-gray-900 uppercase leading-snug md:leading-normal">
+            Frequently Asked Questions on Trademark Registration
+          </h2>
+
+          <div className="w-24 md:w-165 h-0.5 bg-[#0072b1] mb-6" />
+        </div>
+
+        <div className="space-y-6">
+          <div>
+            <h3 className="font-semibold text-gray-900 text-[16px]">
+              1. What is a trademark?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify mt-2">
+              A trademark is a word, name, logo, symbol, or slogan that
+              identifies and distinguishes the goods or services of one business
+              from others. It represents the brand identity of a business.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 text-[16px]">
+              2. Is trademark registration mandatory in India?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify mt-2">
+              Trademark registration is not mandatory, but it is highly
+              recommended. Registration provides legal ownership, exclusive
+              rights, and protection against misuse or infringement.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 text-[16px]">
+              3. How long does trademark registration take?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify mt-2">
+              The complete trademark registration process generally takes 6 to
+              12 months, depending on examination objections or opposition.
+              However, legal protection starts from the date of application
+              filing.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 text-[16px]">
+              4. Can I use the ™ symbol after filing the trademark?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify mt-2">
+              Yes, the ™ symbol can be used immediately after filing the
+              trademark application. The ® symbol can only be used after the
+              trademark is officially registered.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 text-[16px]">
+              5. What happens if someone objects to my trademark?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify mt-2">
+              If an objection or opposition is raised, a formal reply must be
+              submitted with legal justification. If handled properly, the
+              trademark can still proceed to registration.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 text-[16px]">
+              6. How long is a trademark valid?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify mt-2">
+              A registered trademark is valid for 10 years from the date of
+              filing and can be renewed indefinitely every 10 years by paying
+              the renewal fee.
             </p>
           </div>
         </div>

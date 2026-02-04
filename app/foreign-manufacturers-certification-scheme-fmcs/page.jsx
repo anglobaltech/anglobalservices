@@ -514,13 +514,6 @@ export default function GoldHallmarkingPage() {
                   </td>
                   <td className="border border-gray-200 px-4 py-2">IS 9873</td>
                 </tr>
-                <tr>
-                  <td className="border border-gray-200 px-4 py-2">Food</td>
-                  <td className="border border-gray-200 px-4 py-2">
-                    Packaged Drinking Water
-                  </td>
-                  <td className="border border-gray-200 px-4 py-2">IS 14543</td>
-                </tr>
                 <tr className="bg-gray-50">
                   <td className="border border-gray-200 px-4 py-2">
                     Furniture
