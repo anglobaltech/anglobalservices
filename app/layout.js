@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import LeadPopup from "@/components/LeadPopup";
 
 export const metadata = {
   title:
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         </div>
         <Navbar />
         <main>{children}</main>
+          <LeadPopup />
         <FloatingContact />
         <Footer />
       </body>

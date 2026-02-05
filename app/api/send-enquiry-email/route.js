@@ -28,7 +28,7 @@ export async function POST(req) {
       to: [process.env.NOTIFY_EMAIL_1, process.env.NOTIFY_EMAIL_2],
       subject: `New Enquiry Received – ${enquiryId}`,
       html: `
-        <h2>New Enquiry Received AN Global Services</h2>
+        <h2>New Enquiry Received From AN Global Services</h2>
 
         <p><strong>Enquiry ID:</strong> ${enquiryId}</p>
         <p><strong>Source:</strong> ${source}</p>

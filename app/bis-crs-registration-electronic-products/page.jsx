@@ -223,7 +223,6 @@ export default function ISIPage() {
         </div>
       </section>
 
-      {/* Benefits of BIS CRS Registration */}
       <section className="bg-gray-50 pb-14">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
@@ -371,7 +370,6 @@ export default function ISIPage() {
         </div>
       </section>
 
-      {/* How to Get BIS CRS Registration – Process & Timeline */}
       <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           {/* Section Heading */}
@@ -525,7 +523,6 @@ export default function ISIPage() {
         </div>
       </section>
 
-      {/* Best Way to Get BIS CRS Registration */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-12">
         <div>
           <h2 className="text-xl uppercase font-semibold text-gray-900">
@@ -568,7 +565,6 @@ export default function ISIPage() {
         </div>
       </section>
 
-      {/* Requirements */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-12">
         <div>
           <h2 className="text-xl uppercase font-semibold text-gray-900">
@@ -654,7 +650,6 @@ export default function ISIPage() {
         </div>
       </section>
 
-      {/* Contact Us CTA */}
       <section className="bg-white pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="border border-gray-200 rounded-lg bg-gray-50 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

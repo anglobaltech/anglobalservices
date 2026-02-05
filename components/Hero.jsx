@@ -133,7 +133,6 @@ export default function Hero() {
       });
 
       const result = await res.json();
-
       if (!result.success) {
         setError("Captcha failed");
         setLoading(false);
@@ -141,6 +140,7 @@ export default function Hero() {
       }
 
       const counterRef = doc(db, "counters", "enquiries");
+      let enquiryId = "";
 
       await runTransaction(db, async (transaction) => {
         const counterSnap = await transaction.get(counterRef);
@@ -149,12 +149,11 @@ export default function Hero() {
           : 0;
 
         const next = current + 1;
-        const docId = `AN${String(next).padStart(5, "0")}`;
+        enquiryId = `AN${String(next).padStart(5, "0")}`;
 
         transaction.set(counterRef, { current: next }, { merge: true });
 
-        const enquiryRef = doc(db, "enquiries", docId);
-        transaction.set(enquiryRef, {
+        transaction.set(doc(db, "enquiries", enquiryId), {
           industry: formData.service,
           name: formData.name,
           phone: formData.phone,
@@ -164,8 +163,19 @@ export default function Hero() {
         });
       });
 
-      setSuccess(true);
+      await fetch("/api/send-enquiry-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          enquiryId,
+          name: formData.name,
+          phone: formData.phone,
+          service: formData.service,
+          source: "website",
+        }),
+      });
 
+      setSuccess(true);
       setFormData({ service: "", name: "", phone: "" });
       setCaptchaToken(null);
 
@@ -430,15 +440,24 @@ export default function Hero() {
                 link: "/nabl_services",
               },
               { img: "/services/bee.jpg", link: "/bee_services" },
-              { img: "/services/wpc-certification.png", link: "/wpc-certification-services" },
+              {
+                img: "/services/wpc-certification.png",
+                link: "/wpc-certification-services",
+              },
               { img: "/services/epr.jpg", link: "/epr-registration-services" },
               { img: "/services/msme.jpg", link: "/msme-nsic-registration" },
               {
                 img: "/services/lab-equipment-setup.png",
                 link: "/lab_servces",
               },
-              { img: "/services/solar.jpg", link: "/bis-registration-for-solar-panels" },
-              { img: "/services/tm.jpg", link: "/trademark-registration-services" },
+              {
+                img: "/services/solar.jpg",
+                link: "/bis-registration-for-solar-panels",
+              },
+              {
+                img: "/services/tm.jpg",
+                link: "/trademark-registration-services",
+              },
             ].map((item, index) => (
               <Link
                 key={index}

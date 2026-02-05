@@ -62,7 +62,6 @@ export default function ContactSlideForm({ open, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50">
-      {/* Overlay */}
       <div
         className="absolute inset-0 bg-black/30"
         onClick={() => {
@@ -73,10 +72,8 @@ export default function ContactSlideForm({ open, onClose }) {
         }}
       />
 
-      {/* Form Panel */}
       <div className="absolute right-0 bottom-10 w-75 bg-white rounded-xl shadow-xl p-6 animate-slideIn">
 
-        {/* Header */}
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-lg font-semibold text-[#7b6cf6]">
             Contact Us
@@ -93,7 +90,6 @@ export default function ContactSlideForm({ open, onClose }) {
           </button>
         </div>
 
-        {/* SUCCESS */}
         {isSubmitted ? (
           <div className="flex flex-col items-center justify-center py-6 text-center">
             <CheckCircle size={48} className="text-green-500 mb-4" />
@@ -139,7 +135,6 @@ export default function ContactSlideForm({ open, onClose }) {
               className="w-full border rounded-xl px-4 py-1 focus:outline-none focus:ring-2 focus:ring-[#7b6cf6]/40 resize-none"
             />
 
-            {/* TERMS */}
             <label className="flex items-center gap-2 text-sm text-gray-600">
               <input
                 type="checkbox"
@@ -150,14 +145,12 @@ export default function ContactSlideForm({ open, onClose }) {
               I agree to the terms and conditions.
             </label>
 
-            {/* ERROR MESSAGE */}
             {errorMsg && (
               <p className="text-sm text-red-600 font-medium">
                 {errorMsg}
               </p>
             )}
 
-            {/* SUBMIT */}
             <button
               onClick={onSubmitClick}
               disabled={isSubmitting}

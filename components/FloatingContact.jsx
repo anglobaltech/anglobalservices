@@ -20,12 +20,10 @@ export default function FloatingContact() {
           Contact Us
         </button>
 
-        {/* CALL */}
         <a href="tel:+917782069184">
           <Image src="/call.png" alt="Call" width={32} height={30} />
         </a>
 
-        {/* WHATSAPP */}
         <a
           href="https://wa.me/917782069184"
           target="_blank"

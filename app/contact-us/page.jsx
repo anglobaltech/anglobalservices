@@ -87,13 +87,10 @@ export default function ContactPage() {
 
         const next = current + 1;
 
-        // Generate ID like AN00001
         newDocId = `AN${String(next).padStart(5, "0")}`;
 
-        // Update counter
         transaction.set(counterRef, { current: next }, { merge: true });
 
-        // Create enquiry with custom ID
         const enquiryRef = doc(db, "enquiries", newDocId);
         transaction.set(enquiryRef, {
           name: formData.name,
