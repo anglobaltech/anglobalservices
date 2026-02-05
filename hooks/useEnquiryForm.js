@@ -10,7 +10,7 @@ export default function useEnquiryForm() {
     industry: "",
     email: "",
     phone: "",
-    comment: "",
+    service: "",
   };
 
   const [formData, setFormData] = useState(initialState);
@@ -61,7 +61,7 @@ export default function useEnquiryForm() {
           email: formData.email,
           phone: formData.phone,
           industry: formData.industry,
-          comment: formData.comment,
+          service: formData.service,
           source: "website",
         }),
       });

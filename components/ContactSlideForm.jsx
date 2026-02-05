@@ -37,9 +37,15 @@ export default function ContactSlideForm({ open, onClose }) {
       !formData.name.trim() ||
       !formData.phone.trim() ||
       !formData.email.trim() ||
-      !formData.comment.trim()
+      !formData.service.trim()
     ) {
       setErrorMsg("Please fill required details");
+      return false;
+    }
+
+    // ✅ Phone validation (10 digits)
+    if (!/^[0-9]{10}$/.test(formData.phone)) {
+      setErrorMsg("Please enter a valid 10 digit phone number");
       return false;
     }
 
@@ -54,7 +60,6 @@ export default function ContactSlideForm({ open, onClose }) {
 
   const onSubmitClick = () => {
     if (isSubmitting) return;
-
     if (!validateForm()) return;
 
     handleSubmit();
@@ -73,7 +78,6 @@ export default function ContactSlideForm({ open, onClose }) {
       />
 
       <div className="absolute right-0 bottom-10 w-75 bg-white rounded-xl shadow-xl p-6 animate-slideIn">
-
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-lg font-semibold text-[#7b6cf6]">
             Contact Us
@@ -102,45 +106,61 @@ export default function ContactSlideForm({ open, onClose }) {
           </div>
         ) : (
           <div className="space-y-4">
+            {/* NAME */}
             <input
+              type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
               placeholder="Name"
+              required
               className="w-full border rounded-xl px-4 py-1 focus:outline-none focus:ring-2 focus:ring-[#7b6cf6]/40"
             />
 
+            {/* PHONE */}
             <input
+              type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
               placeholder="Phone"
+              required
+              pattern="[0-9]{10}"
+              maxLength={10}
+              inputMode="numeric"
               className="w-full border rounded-xl px-4 py-1 focus:outline-none focus:ring-2 focus:ring-[#7b6cf6]/40"
             />
 
+            {/* EMAIL */}
             <input
+              type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               placeholder="Email"
+              required
               className="w-full border rounded-xl px-4 py-1 focus:outline-none focus:ring-2 focus:ring-[#7b6cf6]/40"
             />
 
+            {/* SERVICE */}
             <textarea
-              name="comment"
-              value={formData.comment}
+              name="service"
+              value={formData.service}
               onChange={handleChange}
-              placeholder="Your Message"
-              rows={4}
+              placeholder="Write down which service you are interested in..."
+              rows={3}
+              required
               className="w-full border rounded-xl px-4 py-1 focus:outline-none focus:ring-2 focus:ring-[#7b6cf6]/40 resize-none"
             />
 
+            {/* TERMS */}
             <label className="flex items-center gap-2 text-sm text-gray-600">
               <input
                 type="checkbox"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
                 className="accent-[#7b6cf6]"
+                required
               />
               I agree to the terms and conditions.
             </label>
