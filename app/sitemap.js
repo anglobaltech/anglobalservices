@@ -27,6 +27,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'footwear',
     'gem_services',
     'hallmarking',
+    'iso-certification-services',
     'bis-isi-mark-certification',
     'lab_servces',
     'latest_updates',
@@ -47,6 +48,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'trademark-registration-services',
     'training-services-national-international',
     'wpc-certification-services',
+
   ]
 
   return pages.map((page) => ({

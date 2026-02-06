@@ -77,7 +77,7 @@ export default function ContactSlideForm({ open, onClose }) {
         }}
       />
 
-      <div className="absolute right-0 bottom-10 w-75 bg-white rounded-xl shadow-xl p-6 animate-slideIn">
+      <div className="absolute right-0 bottom-10 w-73 bg-white rounded-xl shadow-xl p-6 animate-slideIn">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-lg font-semibold text-[#7b6cf6]">
             Contact Us

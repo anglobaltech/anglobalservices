@@ -19,7 +19,7 @@ export default function LeadPopup() {
   useEffect(() => {
     const firstTimer = setTimeout(() => {
       setShow(true);
-    }, 5000);
+    }, 7000);
 
     return () => clearTimeout(firstTimer);
   }, []);
@@ -105,7 +105,7 @@ export default function LeadPopup() {
       <div className="relative h-[390px] w-[850px] max-w-[97%] bg-white rounded-lg overflow-hidden flex pointer-events-auto">
         <button
           onClick={closePopup}
-          className="absolute top-1 right-3 text-2xl font-semibold text-gray-500 cursor-pointer hover:text-red-600"
+          className="absolute top-1 right-3 text-3xl  text-gray-600 cursor-pointer hover:text-red-600"
         >
           ×
         </button>

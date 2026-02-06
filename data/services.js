@@ -14,12 +14,12 @@ export const servicesMenu = [
         slug: "nabl_services",
         root: true,
       },
-      {
-        name: "LABORATORY EQUIPMENT & SETUP",
-        slug: "lab_servces",
+      { name: "WPC CERTIFICATION SERVICES", slug: "wpc-certification-services", root: true },
+       {
+        name: "ISO CERTIFICATION SERVICES",
+        slug: "iso-certification-services",
         root: true,
       },
-      { name: "WPC CERTIFICATION SERVICES", slug: "wpc-certification-services", root: true },
     ],
   },
   {
@@ -55,6 +55,11 @@ export const servicesMenu = [
       {
         name: "GEM REGISTRATION SERVICES",
         slug: "gem_services",
+        root: true,
+      },
+      {
+        name: "LABORATORY EQUIPMENT & SETUP",
+        slug: "lab_servces",
         root: true,
       },
     ],
