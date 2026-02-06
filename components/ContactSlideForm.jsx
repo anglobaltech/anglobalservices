@@ -43,7 +43,6 @@ export default function ContactSlideForm({ open, onClose }) {
       return false;
     }
 
-    // ✅ Phone validation (10 digits)
     if (!/^[0-9]{10}$/.test(formData.phone)) {
       setErrorMsg("Please enter a valid 10 digit phone number");
       return false;
@@ -79,7 +78,7 @@ export default function ContactSlideForm({ open, onClose }) {
 
       <div className="absolute right-0 bottom-10 w-73 bg-white rounded-xl shadow-xl p-6 animate-slideIn">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-lg font-semibold text-[#7b6cf6]">
+          <h3 className="text-lg font-semibold text-[#0072b1]">
             Contact Us
           </h3>
           <button
@@ -159,7 +158,7 @@ export default function ContactSlideForm({ open, onClose }) {
                 type="checkbox"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
-                className="accent-[#7b6cf6]"
+                className="accent-blue-900"
                 required
               />
               I agree to the terms and conditions.
@@ -180,7 +179,7 @@ export default function ContactSlideForm({ open, onClose }) {
                 ${
                   isSubmitting
                     ? "bg-gray-400 text-white cursor-not-allowed"
-                    : "bg-[#7b6cf6] text-white hover:bg-[#6a5be2]"
+                    : "bg-[#0072b1] text-white hover:bg-[#00466b]"
                 }
               `}
             >
