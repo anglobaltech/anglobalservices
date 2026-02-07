@@ -386,7 +386,6 @@ export default function ContactPage() {
                     )}
                   </div>
 
-                  {/* Button */}
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-4">
                     <button
                       onClick={handleSubmit}

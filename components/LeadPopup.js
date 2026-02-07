@@ -19,7 +19,7 @@ export default function LeadPopup() {
   useEffect(() => {
     const firstTimer = setTimeout(() => {
       setShow(true);
-    }, 7000);
+    }, 9000);
 
     return () => clearTimeout(firstTimer);
   }, []);

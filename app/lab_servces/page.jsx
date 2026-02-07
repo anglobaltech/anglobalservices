@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Laboratory Equipment & Setup – ISI Mark Certification | AN Global Services",
+  title:
+    "Laboratory Equipment & Setup – ISI Mark Certification | AN Global Services",
   description:
     "AN Global Services provides professional support for Laboratory Equipment & Setup under ISI Mark Certification. We assist with BIS laboratory recognition, compliance with BIS Act provisions, and quality testing requirements for well-equipped laboratories.",
 };
@@ -41,10 +42,10 @@ export default function ISIPage() {
         </div>
 
         <div className="md:col-span-2">
-          {/* <h2 className="text-2xl font-bold mb-4 border-b pb-2">
-            Introduction
-          </h2> */}
-
+          <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
+          <div className="w-full h-0.5 bg-gray-200 relative mb-3">
+            <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
+          </div>
           <div className="space-y-5 text-gray-500 leading-7 text-[15px]">
             <p>
               We are offering an extensive range of Laboratory Products &

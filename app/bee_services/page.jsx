@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "BEE REGISTRATION SERVICES | AN Global Services",
+  title: "BEE Registration & Star Labelling Services | AN Global Services",
   description:
-    "Get complete ISI Certification services for domestic and industrial products. AN Global Services provides end-to-end ISI certification support.",
+    "Get complete BEE Registration and Star Labelling services in India. AN Global Services provides end-to-end support for Bureau of Energy Efficiency compliance, product testing, documentation, and approval.",
 };
 
 export default function BEEPage() {
