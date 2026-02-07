@@ -128,3 +128,9 @@ body {
 .animate-slideIn {
   animation: slideIn 0.35s ease-out;
 }
+
+@media (min-width: 768px) {
+  .isi-cta-section {
+    padding-right: 80px;
+  }
+}

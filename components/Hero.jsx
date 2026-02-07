@@ -425,7 +425,11 @@ export default function Hero() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { img: "/services/isi.jpg", link: "bis-isi-mark-certification" },
+              {
+                img: "/services/isi.jpg",
+                link: "/bis-isi-mark-certification",
+                isISI: true,
+              },
               { img: "/services/hallmark.jpg", link: "/hallmarking" },
               {
                 img: "/services/fmcs.jpg",
@@ -464,10 +468,21 @@ export default function Hero() {
                 href={item.link}
                 className="group border-3 border-[#0077A8] rounded-xl overflow-hidden relative"
               >
+                {/* 🔥 SEO-only keyword anchor (ONLY for ISI service) */}
+                {item.isISI && (
+                  <span className="sr-only">
+                    ISI Certification & BIS Certification Services in India
+                  </span>
+                )}
+
                 <div className="relative w-full h-45">
                   <Image
                     src={item.img}
-                    alt="Service"
+                    alt={
+                      item.isISI
+                        ? "ISI Certification & BIS Certification Services in India"
+                        : "Service"
+                    }
                     fill
                     className="object-contain"
                   />

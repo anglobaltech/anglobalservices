@@ -4,14 +4,15 @@ import Script from "next/script";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification in India | ISI Certification Consultant – AN Global Services",
+    "ISI Certification & BIS Certification Services in India | BIS ISI Mark – AN Global Services",
 
   description:
-    "Apply for BIS ISI Mark Certification in India with AN Global Services. Mandatory & voluntary ISI certification for manufacturers & importers. End-to-end support – documents, testing, factory inspection & fast BIS approval.",
+    "Apply for ISI Certification & BIS Certification in India with AN Global Services. Trusted BIS ISI certification services for manufacturers & importers. End-to-end support including documentation, product testing, factory inspection & fast BIS approval.",
 
   keywords: [
-    "BIS ISI certification",
     "ISI certification",
+    "BIS certification",
+    "BIS ISI certification",
     "ISI mark certification",
     "BIS ISI mark",
     "ISI certification in India",
@@ -21,7 +22,6 @@ export const metadata = {
     "ISI certificate apply online",
     "ISI certification consultant",
     "BIS ISI consultant India",
-    "ISI certification services",
     "ISI mark agent",
     "ISI certification consultancy",
     "ISI certification for manufacturers",
@@ -38,6 +38,7 @@ export const metadata = {
     "list of products under ISI mark",
     "electrical products ISI certification",
     "AN Global Services ISI certification",
+    "BIS certification services",
     "BIS certification services India",
   ],
 
@@ -54,8 +55,7 @@ export const metadata = {
 export default function ISIPage() {
   return (
     <main className="w-full">
-
-       <Script
+      <Script
         id="isi-faq-schema"
         type="application/ld+json"
         strategy="afterInteractive"
@@ -118,11 +118,16 @@ export default function ISIPage() {
           priority
           className="object-cover "
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <h1 className="text-white text-3xl md:text-4xl  font-extrabold tracking-wide">
               BIS ISI CERTIFICATION SERVICES
             </h1>
+
+            <p className="text-gray-300 mt-4 text-md  max-w-3xl mx-auto leading-relaxed">
+              Expert ISI Certification & BIS Certification Consultants in India
+              for manufacturers, importers & brand owners.
+            </p>
           </div>
         </div>
       </section>
@@ -142,10 +147,15 @@ export default function ISIPage() {
 
         <div className="md:col-span-2">
           <h2 className="text-2xl font-bold mb-4 border-b uppercase">
-            What is BIS ISI Certification?
+            What is BIS ISI Certification in India?
           </h2>
 
           <div className="space-y-5 text-gray-500 leading-7 text-[15px]">
+            <p className="font-medium text-gray-500">
+              BIS ISI Certification is a mandatory product certification scheme
+              in India that ensures products comply with Indian Standards for
+              safety, quality, and performance.
+            </p>
             <p>
               The Bureau of Indian Standards (BIS) is the National Certification
               body of India that issues BIS licenses to manufacturers and
@@ -166,12 +176,6 @@ export default function ISIPage() {
               provider for both Indian and international manufacturers. We
               assist in managing the complete process required to obtain ISI
               Certification for mandatory as well as optional products.
-            </p>
-
-            <p>
-              ISI stands for <strong>Indian Standards Institute</strong>. ISI is
-              the certification scheme under BIS that confirms a product
-              complies with Indian Standards and guarantees safety and quality.
             </p>
           </div>
         </div>
@@ -209,6 +213,66 @@ export default function ISIPage() {
               inspection, evaluation, testing, and documentation. This process
               ensures that manufacturers strictly follow the standards and
               instructions laid down by BIS.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-[#f9fafb] pb-6">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-gray-900 uppercase">
+            ISI Certification Services in India
+          </h2>
+
+          <div className="h-0.5 w-full bg-gray-200 mb-3">
+            <span className="block h-0.5 w-95 bg-[#0075B6]"></span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p className="text-gray-600 text-[15px] leading-7">
+              AN Global Services provides professional ISI Certification
+              Services in India to help manufacturers, importers, and brand
+              owners obtain the ISI Mark as per Bureau of Indian Standards
+              requirements. Our experts manage the complete ISI certification
+              process including documentation, product testing, factory
+              inspection, and BIS coordination.
+            </p>
+
+            <ul className="space-y-3 text-gray-600 text-[15px] list-disc pl-6">
+              <li>ISI certification for Indian manufacturers</li>
+              <li>ISI certification for foreign manufacturers (FMCS)</li>
+              <li>ISI certification services for importers & brand owners</li>
+              <li>Product testing with BIS-recognized laboratories</li>
+              <li>Factory inspection & compliance preparation</li>
+              <li>End-to-end ISI certification consultancy</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white pb-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-gray-900 uppercase">
+            BIS Certification Services in India
+          </h2>
+
+          <div className="h-0.5 w-full bg-gray-200 mb-3">
+            <span className="block h-0.5 w-98 bg-[#0075B6]"></span>
+          </div>
+
+          <div className="space-y-5 text-gray-600 text-[15px] leading-7">
+            <p>
+              BIS Certification is mandatory for products notified under Quality
+              Control Orders issued by the Government of India. Since ISI Mark
+              Certification is issued under the BIS Product Certification
+              Scheme, manufacturers must comply with BIS regulations to obtain
+              ISI approval.
+            </p>
+
+            <p>
+              Our BIS certification consultants assist businesses in obtaining
+              BIS ISI Mark Certification, managing approvals, and avoiding
+              regulatory penalties by ensuring timely and accurate compliance.
             </p>
           </div>
         </div>
@@ -653,6 +717,36 @@ export default function ISIPage() {
               </div>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0f172a] py-12 sm:py-14 md:py-16">
+        <div className="max-w-6xl mx-auto px-4 text-white text-center">
+          <h2 className="text-xl sm:text-3xl  font-bold mb-4">
+            Need Help with ISI Certification?
+          </h2>
+
+          <p className="text-sm sm:text-base md:text-md text-gray-300 max-w-xl mx-auto mb-6 leading-relaxed">
+            Talk to our BIS & ISI certification experts for fast approval and
+            end-to-end compliance support.
+          </p>
+
+          <button
+            className="
+            w-full sm:w-auto cursor-pointer
+            bg-[#005f86]
+            hover:bg-[#004766]
+            text-white
+            font-semibold
+            px-3 sm:px-7
+            py-3 sm:py-3
+            rounded-lg
+            text-base sm:text-lg
+            shadow-lg
+            transition"
+          >
+            Request Free Consultation
+          </button>
         </div>
       </section>
 
