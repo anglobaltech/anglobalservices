@@ -585,7 +585,6 @@ export default function TrademarkPage() {
         </div>
       </section>
 
-      {/* Frequently Asked Questions on Trademark Registration */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-8">
         <div>
           <h2 className="text-lg md:text-xl font-bold text-gray-900 uppercase leading-snug md:leading-normal">

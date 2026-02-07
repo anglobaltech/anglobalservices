@@ -730,8 +730,8 @@ export default function ISIPage() {
             Talk to our BIS & ISI certification experts for fast approval and
             end-to-end compliance support.
           </p>
-
-          <button
+          <Link href="/contact-us">
+           <button
             className="
             w-full sm:w-auto cursor-pointer
             bg-[#005f86]
@@ -747,6 +747,7 @@ export default function ISIPage() {
           >
             Request Free Consultation
           </button>
+          </Link>
         </div>
       </section>
 
