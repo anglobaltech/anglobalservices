@@ -1,26 +1,26 @@
 import Image from "next/image";
 export const metadata = {
   title:
-    "BIS ISI Mark for FMCS (Foreign Manufacturers Certification Scheme) | AN Global Services",
+    "BIS FMCS Certification for Foreign Manufacturers | ISI Mark India | AN Global Services",
 
   description:
-    "AN Global Services provides expert consultancy for BIS ISI Mark under the Foreign Manufacturers Certification Scheme (FMCS). We assist foreign manufacturers with BIS licensing, documentation, Authorized Indian Representative (AIR), factory inspection, product testing, and compliance under the BIS Act 2016 and Conformity Assessment Regulations.",
+    "Get BIS FMCS Certification for Foreign Manufacturers. Apply for ISI Mark, FMCS BIS Registration, AIR support, factory audit & testing in India.",
 
   keywords: [
-    "BIS FMCS certification",
-    "BIS ISI Mark for foreign manufacturers",
+    "BIS FMCS Certification",
+    "FMCS BIS Registration",
+    "ISI Mark for Foreign Manufacturers",
     "Foreign Manufacturers Certification Scheme",
-    "FMCS BIS registration",
-    "BIS ISI Mark import India",
-    "BIS certification for overseas manufacturers",
+    "BIS FMCS License India",
+    "BIS FMCS Consultant",
+    "BIS ISI Mark Import India",
     "Authorized Indian Representative BIS",
-    "BIS Act 2016 certification",
-    "FMCS certification process India",
-    "AN Global Services BIS FMCS",
+    "BIS Certification for Overseas Manufacturers",
   ],
 
   alternates: {
-    canonical: "https://www.anglobalservices.com/bis-fmcs-certification",
+    canonical:
+      "https://www.anglobalservices.com/foreign-manufacturers-certification-scheme-fmcs",
   },
 
   robots: {
@@ -43,7 +43,8 @@ export default function GoldHallmarkingPage() {
         <div className="absolute inset-0 bg-[#0a3d62]/30" />
 
         <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 leading-snug">
-           FMCS CERTIFICATION FOR THE BIS ISI MARK PRODUCTS
+          BIS FMCS CERTIFICATION FOR FOREIGN FOREIGN MANUFACTURERS (ISI MARK
+          INDIA)
         </h1>
       </section>
 
@@ -64,27 +65,29 @@ export default function GoldHallmarkingPage() {
 
           <div className="flex flex-col gap-6">
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-gray-900 ">
+              <h2 className="text-xl font-bold text-gray-900 ">
                 BIS ISI MARK FOR FOREIGN MANUFACTURER CERTIFICATION SCHMES
                 (FMCS)
-              </h1>
+              </h2>
               <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-4" />
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
-                FMCS (Foreign Manufacturers Certification Scheme) is a
+              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+                BIS FMCS Certification (Foreign Manufacturers Certification
+                Scheme) is mandatory for foreign manufacturers who want to
+                export ISI-marked products to India. Under the BIS Act, 2016,
+                manufacturers located outside India must obtain BIS FMCS
+                Certification to legally use the ISI Mark and clear Indian
+                Customs. FMCS (Foreign Manufacturers Certification Scheme) is a
                 certification scheme regulated by the Bureau of Indian Standards
                 (BIS) under Scheme-I of Schedule-II of the Conformity Assessment
                 Regulations, 2018, and the BIS Act, 2016. This scheme allows
                 manufacturers located outside India to obtain a BIS license for
                 the use of the ISI Mark on products that conform to applicable
-                Indian Standards. Through FMCS, foreign manufacturers are able
-                to legally supply their products in the Indian market while
-                meeting the same quality and safety requirements applicable to
-                domestic manufacturers.
+                Indian Standards.
               </p>
             </div>
 
             <div>
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify">
                 FMCS is often considered the international equivalent of the ISI
                 certification system, as it ensures uniform compliance across
                 both foreign and Indian-made products. For many products
@@ -104,7 +107,7 @@ export default function GoldHallmarkingPage() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-8 space-y-10">
         <div>
-          <p className="text-gray-500 text-[15px] leading-6 text-justify">
+          <p className="text-gray-600 text-[15px] leading-6 text-justify">
             For products such as PVC soles and heels, compliance with Indian
             Standards involves strict adherence to prescribed material and
             physical requirements. The resins must be compounded using suitable
@@ -119,7 +122,85 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-      {/* How to Get BIS FMCS Certification */}
+      <section className="bg-gray-50 pb-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-xl  font-bold text-gray-900 uppercase">
+            Why BIS FMCS Certification is Mandatory for Imports into India?
+          </h2>
+
+          <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-182 bg-[#0072b1]" />
+          </div>
+
+          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+            FMCS BIS Registration is not optional for foreign manufacturers
+            exporting regulated products to India. It is a statutory compliance
+            requirement enforced by Indian authorities to ensure that imported
+            goods meet the same safety, quality, and performance standards as
+            products manufactured within India.
+          </p>
+
+          <ul className="space-y-4 text-gray-700 text-[15px] leading-6">
+            <li className="flex items-start gap-3">
+              <span className="text-[#0072b1] font-bold">✔</span>
+              <span>
+                <strong>Mandatory under Quality Control Orders (QCOs):</strong>{" "}
+                ISI Mark for Foreign Manufacturers is compulsory for products
+                notified under QCOs issued by the Government of India. Import of
+                such products without FMCS approval is legally prohibited.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-[#0072b1] font-bold">✔</span>
+              <span>
+                <strong>
+                  Customs clearance is not possible without FMCS license:
+                </strong>
+                Products lacking a valid BIS FMCS license are rejected or
+                detained at Indian ports, leading to shipment delays, demurrage
+                costs, and financial losses.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-[#0072b1] font-bold">✔</span>
+              <span>
+                <strong>
+                  Mandatory for legal use of ISI Mark on imported products:
+                </strong>
+                Foreign manufacturers are permitted to affix the ISI Mark only
+                after obtaining FMCS certification. Any unauthorized use of the
+                ISI Mark is treated as a serious offense under the BIS Act,
+                2016.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-[#0072b1] font-bold">✔</span>
+              <span>
+                <strong>
+                  Penalties, seizure, and blacklisting for non-compliance:
+                </strong>
+                Importing BIS-notified products without FMCS certification can
+                result in penalties, confiscation of goods, suspension of
+                imports, and blacklisting of the manufacturer or importer.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-[#0072b1] font-bold">✔</span>
+              <span>
+                <strong>Same quality standards as Indian manufacturers:</strong>
+                FMCS ensures that foreign manufacturers meet identical Indian
+                Standard requirements as domestic manufacturers, creating a
+                level playing field and protecting Indian consumers.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
@@ -127,7 +208,7 @@ export default function GoldHallmarkingPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-142 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-50 md:w-142 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -282,7 +363,7 @@ export default function GoldHallmarkingPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-118 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-118 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -330,7 +411,7 @@ export default function GoldHallmarkingPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-142 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-55 md:w-142 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-500 text-[15px] leading-6 text-justify">
@@ -370,15 +451,14 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-      {/* Products Covered Under BIS FMCS Certification */}
-      <section className="bg-gray-50 pb-14">
+      <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
             List of Products Covered under BIS FMCS Certification
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-167 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-167 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
@@ -427,11 +507,11 @@ export default function GoldHallmarkingPage() {
               </h3>
               <p className="leading-6 text-justify">
                 Most plug-in household appliances imported into India require
-                BIS FMCS certification. This category includes pressure cookers
-                (mandatory), gas stoves, induction cooktops, immersion heaters,
-                electric geysers, irons, food mixers, vacuum cleaners, and key
-                cooling system components used in refrigerators and air
-                conditioners.
+                ISI Mark for Foreign Manufacturers. This category includes
+                pressure cookers (mandatory), gas stoves, induction cooktops,
+                immersion heaters, electric geysers, irons, food mixers, vacuum
+                cleaners, and key cooling system components used in
+                refrigerators and air conditioners.
               </p>
             </div>
 
@@ -470,7 +550,7 @@ export default function GoldHallmarkingPage() {
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
                 Recent regulatory updates have expanded the scope of mandatory
-                BIS FMCS certification to include several new product
+                FMCS Certification India to include several new product
                 categories. Furniture items such as beds, chairs, tables, and
                 storage units require ISI marking from February 2026 onwards.
                 Additionally, under the newly introduced Scheme-X, various types
@@ -538,15 +618,14 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-      {/* Timeline for BIS FMCS Certification */}
-      <section className="bg-gray-50 pb-14">
+      <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
             Timeline for Getting BIS FMCS Certification
           </h2>
 
-         <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-130 bg-[#0072b1]" />
+          <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-130 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
@@ -676,6 +755,280 @@ export default function GoldHallmarkingPage() {
               <strong> AN Global Services</strong> can significantly streamline
               the process and reduce approval timelines.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white pb-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-xl  font-bold text-gray-900 uppercase">
+            Cost of BIS FMCS Certification
+          </h2>
+
+          <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-87 bg-[#0072b1]" />
+          </div>
+
+          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+            The cost of BIS FMCS (Foreign Manufacturers Certification Scheme)
+            certification varies depending on the product category, applicable
+            Indian Standard, factory location, and scope of inspection. BIS does
+            not follow a fixed or uniform pricing model, as the certification
+            process involves multiple regulatory and technical components.
+          </p>
+
+          <div className="space-y-5 text-gray-700 text-[15px] leading-6">
+            <div>
+              <strong>1. Application Fee:</strong>
+              <p className="text-gray-600 mt-1 text-justify">
+                A non-refundable application fee is payable to BIS at the time
+                of submitting the FMCS application. The fee depends on the
+                product type and the number of Indian Standards covered under
+                the license.
+              </p>
+            </div>
+
+            <div>
+              <strong>2. Inspection & Audit Charges:</strong>
+              <p className="text-gray-600 mt-1 text-justify">
+                BIS officials conduct an on-site inspection of the overseas
+                manufacturing facility. Inspection charges vary based on the
+                country, factory location, travel requirements, and duration of
+                the audit.
+              </p>
+            </div>
+
+            <div>
+              <strong>3. Product Testing Charges:</strong>
+              <p className="text-gray-600 mt-1 text-justify">
+                Sealed product samples are tested at BIS-recognized laboratories
+                in India. Testing costs depend on the product, test parameters,
+                and complexity of the applicable Indian Standard.
+              </p>
+            </div>
+
+            <div>
+              <strong>4. Marking Fee:</strong>
+              <p className="text-gray-600 mt-1 text-justify">
+                After grant of the FMCS license, manufacturers are required to
+                pay an annual marking fee to BIS. This fee is calculated based
+                on the product category and estimated production or import
+                volume.
+              </p>
+            </div>
+
+            <div>
+              <strong>5. Performance Bank Guarantee (PBG):</strong>
+              <p className="text-gray-600 mt-1 text-justify">
+                A Performance Bank Guarantee is mandatory under FMCS to ensure
+                ongoing compliance with BIS requirements. The PBG amount depends
+                on the product risk category and is refundable upon surrender or
+                cancellation of the license.
+              </p>
+            </div>
+
+            <div>
+              <strong>
+                6. Authorized Indian Representative (AIR) Service Charges:
+              </strong>
+              <p className="text-gray-600 mt-1 text-justify">
+                Foreign manufacturers must appoint an Authorized Indian
+                Representative (AIR) for regulatory coordination with BIS. AIR
+                service charges vary based on the level of technical support,
+                documentation, audit coordination, and post-certification
+                compliance management.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="text-gray-600 text-[14px] leading-6">
+              <strong>Cost Advisory:</strong> The overall cost of BIS FMCS
+              certification depends on the product category, number of models,
+              factory location, audit complexity, and testing requirements. For
+              an accurate cost estimate, a product-specific assessment is
+              strongly recommended before initiating the application.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white pb-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-5">
+          <h2 className="text-xl  font-bold text-gray-900 uppercase">
+            Frequently Asked Questions (FAQs) on BIS FMCS Certification
+          </h2>
+
+          <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-50 md:w-176 bg-[#0072b1]" />
+          </div>
+
+          <div className="space-y-6 text-gray-700 text-[15px] leading-6">
+            <div>
+              <strong>1. What is BIS FMCS Certification?</strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                BIS FMCS Certification refers to the Foreign Manufacturers
+                Certification Scheme under which foreign manufacturers are
+                granted permission to use the ISI Mark on products exported to
+                India. It ensures that imported products comply with applicable
+                Indian Standards and regulatory requirements.
+              </p>
+            </div>
+
+            <div>
+              <strong>2. Who needs FMCS Certification?</strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                FMCS certification is required for manufacturers located outside
+                India who export products to India that are notified under
+                mandatory BIS Quality Control Orders (QCOs). Importers, traders,
+                or distributors cannot apply in place of the manufacturer.
+              </p>
+            </div>
+
+            <div>
+              <strong>3. Is FMCS mandatory for all imported products?</strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                No, FMCS certification is mandatory only for products that fall
+                under BIS-notified Quality Control Orders. Products not covered
+                under QCOs may not require FMCS certification, though other
+                regulatory approvals may still apply.
+              </p>
+            </div>
+
+            <div>
+              <strong>4. How long does BIS FMCS certification take?</strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                The FMCS certification process generally takes between 6 to 9
+                months. The timeline depends on documentation readiness, factory
+                audit scheduling, sample testing duration, and compliance with
+                Indian Standards.
+              </p>
+            </div>
+
+            <div>
+              <strong>5. What is the validity of an FMCS license?</strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                An FMCS license is typically granted for a period of one year
+                and can be renewed annually, subject to satisfactory compliance,
+                payment of marking fees, and successful surveillance activities
+                by BIS.
+              </p>
+            </div>
+
+            <div>
+              <strong>6. Can one FMCS license cover multiple factories?</strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                No, FMCS licenses are factory-specific. Each manufacturing
+                location must obtain a separate FMCS license, even if the
+                product and company ownership remain the same.
+              </p>
+            </div>
+
+            <div>
+              <strong>
+                7. What is the role of an Authorized Indian Representative
+                (AIR)?
+              </strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                The Authorized Indian Representative (AIR) acts as the official
+                local representative of the foreign manufacturer in India. The
+                AIR is responsible for coordination with BIS, handling
+                compliance matters, responding to regulatory queries, and
+                supporting audits and surveillance activities.
+              </p>
+            </div>
+
+            <div>
+              <strong>
+                8. What happens if FMCS certification is not obtained?
+              </strong>
+              <p className="text-gray-600 mt-2 text-justify">
+                Importing BIS-notified products without FMCS certification can
+                lead to rejection at Indian Customs, seizure of goods, financial
+                penalties, suspension of imports, and potential blacklisting of
+                the manufacturer or importer under Indian law.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 pb-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-xl font-bold text-gray-900 uppercase">
+            Why Choose AN Global Services for BIS FMCS Certification?
+          </h2>
+
+          <div className="w-full h-0.5 bg-gray-200 relative mb-5">
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-170 bg-[#0072b1]" />
+          </div>
+
+          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
+            BIS FMCS certification is a highly technical and audit-intensive
+            process that requires precise regulatory understanding,
+            international audit coordination, and continuous compliance
+            management. AN Global Services provides structured, end-to-end FMCS
+            support designed to minimize delays, reduce compliance risks, and
+            ensure smooth approval for foreign manufacturers.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[15px] text-gray-700">
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Dedicated BIS FMCS Consultants
+              </h3>
+              <p className="leading-6 text-justify">
+                Our team consists of specialized BIS FMCS consultants who focus
+                exclusively on foreign manufacturer certifications, ensuring
+                accurate interpretation of Indian Standards and regulatory
+                requirements.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                AIR Services Under One Roof
+              </h3>
+              <p className="leading-6 text-justify">
+                We provide Authorized Indian Representative (AIR) services as
+                part of our FMCS offering, enabling seamless communication with
+                BIS and ensuring full legal and regulatory compliance in India.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Proven Experience with Overseas Audits
+              </h3>
+              <p className="leading-6 text-justify">
+                Our team has hands-on experience coordinating BIS audits at
+                overseas manufacturing facilities, including audit preparedness,
+                test witnessing support, and real-time query resolution.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Faster Approval & Query Handling
+              </h3>
+              <p className="leading-6 text-justify">
+                With pre-audit gap analysis and structured documentation
+                workflows, we help reduce BIS observations, respond to queries
+                efficiently, and accelerate the overall certification timeline.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-5 md:col-span-2">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Support Till License Grant & Renewal
+              </h3>
+              <p className="leading-6 text-justify">
+                Our engagement does not end with application submission. We
+                support clients through license grant, marking fee compliance,
+                surveillance requirements, renewals, and ongoing BIS
+                coordination to ensure long-term certification continuity.
+              </p>
+            </div>
           </div>
         </div>
       </section>
