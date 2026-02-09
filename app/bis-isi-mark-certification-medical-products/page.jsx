@@ -405,7 +405,6 @@ export default function MedicalProductsISIPage() {
         </div>
       </section>
       
-
       <section className="w-full bg-white px-4 md:px-6 pb-12">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-xl font-bold uppercase text-gray-900">

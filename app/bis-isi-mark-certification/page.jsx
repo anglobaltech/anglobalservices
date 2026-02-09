@@ -565,7 +565,7 @@ export default function ISIPage() {
 
             {/* Plastic */}
             <Link
-              href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification-plastic-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
