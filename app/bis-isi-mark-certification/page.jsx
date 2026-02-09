@@ -587,7 +587,7 @@ export default function ISIPage() {
 
             {/* Home Appliances */}
             <Link
-              href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification-home-appliances-kitchen-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
