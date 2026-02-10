@@ -19,14 +19,14 @@ export default function LeadPopup() {
   useEffect(() => {
     const firstTimer = setTimeout(() => {
       setShow(true);
-    }, 9000);
+    }, 10000);
 
     return () => clearTimeout(firstTimer);
   }, []);
 
   const closePopup = () => {
     setShow(false);
-    setTimeout(() => setShow(true), 60000);
+    setTimeout(() => setShow(true), 70000);
   };
 
   const handleChange = (e) => {

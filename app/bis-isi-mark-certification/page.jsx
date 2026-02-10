@@ -609,7 +609,7 @@ export default function ISIPage() {
 
             {/* Concrete */}
             <Link
-              href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification-concrete-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
