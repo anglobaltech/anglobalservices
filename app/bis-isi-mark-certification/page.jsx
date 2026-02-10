@@ -631,7 +631,7 @@ export default function ISIPage() {
 
             {/* Hardware */}
             <Link
-              href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification-hardware-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
