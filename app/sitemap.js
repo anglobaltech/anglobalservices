@@ -18,6 +18,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'isi-products/isi-mark-certification-for-disposable-baby-diaper-is-17509',
     'isi-products/isi-mark-certification-for-sanitary-napkin-5405',
     'isi-products/isi-mark-certification-for-disposable-adult-diaper-17508',
+    'isi-products/isi-certification-for-evaporative-air-coolers-desert-coolers-3315',
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',

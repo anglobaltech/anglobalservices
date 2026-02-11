@@ -64,7 +64,7 @@ export default function MedicalProductsISIPage() {
               src="/isi-products/isi-certification-adult-diapers.png"
               alt="BIS Certification for Disposable Adult Diaper IS 17508"
               width={420}
-              height={520}
+              height={320}
               className="w-full h-auto object-cover"
               priority
             />

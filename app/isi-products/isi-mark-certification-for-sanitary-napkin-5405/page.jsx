@@ -64,7 +64,7 @@ export default function MedicalProductsISIPage() {
               src="/isi-products/sanitary-napkins.png"
               alt="BIS Certification for Disposable Sanitary Napkins IS 5405"
               width={420}
-              height={520}
+              height={320}
               className="w-full h-auto object-cover"
               priority
             />

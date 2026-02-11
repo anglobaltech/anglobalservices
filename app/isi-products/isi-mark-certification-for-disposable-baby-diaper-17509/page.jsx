@@ -64,7 +64,7 @@ export default function MedicalProductsISIPage() {
               src="/isi-products/disposable-diaper.png"
               alt="BIS Certification for Disposable Baby Diaper IS 17509"
               width={420}
-              height={520}
+              height={320}
               className="w-full h-auto object-cover"
               priority
             />
