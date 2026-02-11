@@ -13,6 +13,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'bis-isi-mark-certification-plastic-products',
     'bis-isi-mark-certification-concrete-products',
     'bis-isi-mark-certification-hardware-products',
+    'bis-isi-mark-certification-electronics-products',
     'bis-isi-mark-certification-home-appliances-kitchen-products',
     'isi-products/isi-mark-certification-for-disposable-baby-diaper-is-17509',
     'isi-products/isi-mark-certification-for-sanitary-napkin-5405',

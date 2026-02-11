@@ -697,7 +697,7 @@ export default function ISIPage() {
 
             {/* Electronics */}
             <Link
-              href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification-electronics-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
