@@ -42,8 +42,8 @@ export default function GoldHallmarkingPage() {
       >
         <div className="absolute inset-0 bg-[#0a3d62]/30" />
 
-        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 leading-snug">
-          BIS FMCS CERTIFICATION FOR FOREIGN FOREIGN MANUFACTURERS
+        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 uppercase leading-snug">
+        BIS FMCS Certification for Foreign Manufacturers in India
         </h1>
       </section>
 
@@ -64,11 +64,10 @@ export default function GoldHallmarkingPage() {
 
           <div className="flex flex-col gap-6">
             <div>
-              <h2 className="text-xl font-bold text-gray-900 ">
-                BIS ISI MARK FOR FOREIGN MANUFACTURER CERTIFICATION SCHMES
-                (FMCS)
+              <h2 className="text-xl font-bold uppercase text-gray-900 ">
+                BIS ISI Mark under Foreign Manufacturers Certification Scheme (FMCS)
               </h2>
-              <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-4" />
+              <div className="w-full h-0.5 bg-[#0072b1]  mb-4" />
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
                 BIS FMCS Certification (Foreign Manufacturers Certification
                 Scheme) is mandatory for foreign manufacturers who want to

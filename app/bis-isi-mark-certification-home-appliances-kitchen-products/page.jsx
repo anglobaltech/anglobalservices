@@ -48,7 +48,7 @@ const homeApplianceProducts = [
     id: 2,
     name: "Ceiling Fans",
     standard: "IS 374",
-    link: "/bis-isi-mark-certification-home-appliances-kitchen-products",
+    link: "/isi-products/isi-certification-for-electric-ceiling-type-fan-374",
   },
   {
     id: 3,
