@@ -60,6 +60,11 @@ const nextConfig = {
         destination: "/nabl-accreditation-services",
         permanent: true, 
       },
+       {
+        source: "/bolgs",
+        destination: "/blogs",
+        permanent: true, 
+      },
     ];
   },
 };

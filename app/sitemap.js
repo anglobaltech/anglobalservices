@@ -4,6 +4,8 @@ const baseUrl = 'https://www.anglobalservices.com'
   const pages = [
     '',
     'aboutus',
+    'blogs',
+    'blogs/bis-isi-mark-product-certification-guide',
     'contact-us',
     'bee_services',
     'bis-crs-registration-electronic-products',

@@ -7,7 +7,7 @@ export const updatesMenu = [
         root: true,
       },
       { name: "NEWS & UPDATES", slug: "news-updates", root: true },
-      // { name: "BLOGS", slug: "blogs", root: true },
+      { name: "BLOGS", slug: "blogs", root: true },
     ],
   },
 ];

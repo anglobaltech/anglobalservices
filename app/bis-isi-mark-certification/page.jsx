@@ -278,7 +278,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="w-full bg-[#f5f5f5] py-16">
+      <section className="w-full bg-[#f5f5f5] py-12">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-center text-xl md:text-2xl font-semibold text-gray-900 mb-12">
             SIGNIFICANCE OF BIS/ISI MARK CERTIFICATION IN INDIA
@@ -352,7 +352,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-white py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-xl md:text-xl font-bold text-gray-900">
@@ -411,7 +411,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white py-8">
+      <section className="w-full bg-white py-6">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-[#4a5673] text-white p-6 md:p-8 mb-12">
             <h2 className="text-center text-xl md:text-2xl font-bold mb-4">
@@ -481,7 +481,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="w-full bg-[#f5f7fa] py-16">
+      <section className="w-full bg-[#f5f7fa] py-12">
         <div className="max-w-7xl mx-auto px-4">
           {/* Heading */}
           <div className="mb-12 text-center">
@@ -720,7 +720,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="bg-[#0f172a] py-12 sm:py-14 md:py-16">
+      <section className="bg-[#0f172a] py-12 ">
         <div className="max-w-6xl mx-auto px-4 text-white text-center">
           <h2 className="text-xl sm:text-3xl  font-bold mb-4">
             Need Help with ISI Certification?
@@ -731,8 +731,8 @@ export default function ISIPage() {
             end-to-end compliance support.
           </p>
           <Link href="/contact-us">
-           <button
-            className="
+            <button
+              className="
             w-full sm:w-auto cursor-pointer
             bg-[#005f86]
             hover:bg-[#004766]
@@ -744,14 +744,14 @@ export default function ISIPage() {
             text-base sm:text-lg
             shadow-lg
             transition"
-          >
-            Request Free Consultation
-          </button>
+            >
+              Request Free Consultation
+            </button>
           </Link>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-10">
         <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
           ISI Certification Cost in India
         </h2>
@@ -924,7 +924,7 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-10">
         <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
           Who Needs ISI Mark Certification in India?
         </h2>
@@ -1098,10 +1098,24 @@ export default function ISIPage() {
               on the product and applicable Indian Standard.
             </p>
           </div>
+
+          <div className="mt-6 bg-gray-100 border border-gray-200 rounded-lg p-4">
+            <p className="text-gray-700 text-[15px]">
+              Still have questions? Our in-depth{" "}
+              <Link
+                href="/bis-isi-mark-product-certification-guide"
+                className="text-blue-700 font-semibold "
+              >
+                BIS ISI Certification blog
+              </Link>{" "}
+              covers real-world scenarios, common mistakes, and compliance tips
+              for manufacturers.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-white py-10">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-xl  font-bold text-gray-900">
