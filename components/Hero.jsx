@@ -441,7 +441,7 @@ export default function Hero() {
               },
               {
                 img: "/services/nabl-certification-service.png",
-                link: "/nabl_services",
+                link: "/nabl-accreditation-services",
               },
               { img: "/services/bee.jpg", link: "/bee_services" },
               {
@@ -468,7 +468,6 @@ export default function Hero() {
                 href={item.link}
                 className="group border-3 border-[#0077A8] rounded-xl overflow-hidden relative"
               >
-                {/* 🔥 SEO-only keyword anchor (ONLY for ISI service) */}
                 {item.isISI && (
                   <span className="sr-only">
                     ISI Certification & BIS Certification Services in India

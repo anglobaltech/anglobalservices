@@ -55,6 +55,11 @@ const nextConfig = {
         destination: "/training-services-national-international",
         permanent: true, 
       },
+       {
+        source: "/nabl_services",
+        destination: "/nabl-accreditation-services",
+        permanent: true, 
+      },
     ];
   },
 };

@@ -11,7 +11,7 @@ export const servicesMenu = [
       { name: "BIS HALLMARKING HUID (GOLD & SILVER) CERTIFICATION & SETUP SERVICES", slug: "hallmarking", root: true },
       {
         name: "NABL CERTIFICATION SERVICES",
-        slug: "nabl_services",
+        slug: "nabl-accreditation-services",
         root: true,
       },
       { name: "WPC CERTIFICATION SERVICES", slug: "wpc-certification-services", root: true },

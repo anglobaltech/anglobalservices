@@ -1,15 +1,56 @@
 import Image from "next/image";
+import Script from "next/script";
 
 export const metadata = {
   title:
-    "NABL Certification Services | Testing & Calibration Laboratory Accreditation | AN Global Services",
+    "NABL Certification & Accreditation Services | ISO 17025 & ISO 15189 Consultants | AN Global Services",
   description:
-    "AN Global Services offers expert NABL Certification Services for testing, calibration, and medical laboratories. We assist with accreditation as per ISO/IEC 17025 and ISO 15189 standards, ensuring global recognition through ILAC and APLAC MRA compliance.",
+    "AN Global Services provides expert NABL certification and accreditation services for testing, calibration, and medical laboratories. Get end-to-end consultancy for ISO/IEC 17025 & ISO 15189, including documentation, audit preparation, NABL certificate assistance, and compliance support across India.",
+  keywords:
+    "NABL certification services, NABL accreditation services, NABL certificate services, NABL certificate consultants, NABL certificate India, NABL certification consultants India, ISO 17025 consultancy, ISO 15189 accreditation, NABL laboratory accreditation, testing laboratory NABL certificate, calibration lab NABL certification, medical laboratory NABL certificate",
+  alternates: {
+    canonical: "https://www.anglobalservices.com/nabl-accreditation-services",
+  },
+  openGraph: {
+  title: "NABL Certification & Accreditation Services | AN Global Services",
+  description:
+    "Expert NABL certification & accreditation consultancy for ISO/IEC 17025 & ISO 15189 laboratories across India.",
+  url: "https://www.anglobalservices.com/nabl-accreditation-services",
+  siteName: "AN Global Services",
+  type: "website",
+},
+
 };
 
-export default function GoldHallmarkingPage() {
+export default function NABLAccreditationPage() {
   return (
     <main className="w-full bg-white">
+      <Script
+        id="nabl-service-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "NABL Certification & Accreditation Services",
+            description:
+              "End-to-end NABL certification and accreditation consultancy for testing, calibration, and medical laboratories as per ISO/IEC 17025 and ISO 15189.",
+            provider: {
+              "@type": "Organization",
+              name: "AN Global Services",
+              url: "https://www.anglobalservices.com",
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "India",
+            },
+            serviceType: "NABL Accreditation Consultancy",
+            url: "https://www.anglobalservices.com/nabl-accreditation-services",
+          }),
+        }}
+      />
+
       <section
         className="relative w-full h-55 md:h-70 flex items-center justify-center"
         style={{
@@ -20,13 +61,13 @@ export default function GoldHallmarkingPage() {
       >
         <div className="absolute inset-0 bg-black/70" />
 
-        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 leading-snug">
-          NABL CERTIFICATION SERVICES
+        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center uppercase px-4 leading-snug">
+          NABL Certification & Accreditation Services for Laboratories
         </h1>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 ">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
+        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-start">
           {/* Left Image + CTA */}
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
@@ -53,7 +94,7 @@ export default function GoldHallmarkingPage() {
 
           {/* Right Content */}
           <div className="flex flex-col gap-12">
-            <div className="space-y-2">
+            <div className="space-y-1">
               <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
               <div className="w-full h-0.5 bg-gray-200 relative mb-3">
                 <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
@@ -116,15 +157,14 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-      {/* How to Get NABL Accreditation */}
-      <section className="bg-gray-50 pb-14">
+      <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
             How to Get NABL Accreditation
           </h2>
 
           {/* Consistent Underline */}
-          <div className="w-full h-0.5 bg-gray-200 relative mt-3 mb-6">
+          <div className="w-full h-0.5 bg-gray-200 relative  mb-6">
             <span className="absolute left-0 top-0 h-0.5 w-95 bg-[#0072b1]" />
           </div>
 
@@ -301,16 +341,14 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-      {/* Documents & Process for NABL Accreditation */}
-      <section className="bg-gray-50 pb-14">
+      <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
             Documents and Process Required for NABL Accreditation
           </h2>
 
-          {/* Consistent Underline */}
-          <div className="w-full h-0.5 bg-gray-200 relative mt-3 mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-175 bg-[#0072b1]" />
+          <div className="w-full h-0.5 bg-gray-200 relative  mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-175 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
@@ -323,7 +361,7 @@ export default function GoldHallmarkingPage() {
           </p>
 
           {/* Documents */}
-          <div className="space-y-6 mb-10">
+          <div className="space-y-6">
             <h3 className="font-semibold text-gray-900">
               1. Mandatory Documents & Records
             </h3>
@@ -349,7 +387,7 @@ export default function GoldHallmarkingPage() {
               </ul>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 pb-4">
               <h4 className="font-medium text-gray-900">
                 B. Technical Records (Evidence of Competence)
               </h4>
@@ -382,8 +420,7 @@ export default function GoldHallmarkingPage() {
             </div>
           </div>
 
-          {/* Process Table */}
-          <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg mb-10">
+          <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg ">
             <table className="w-full border-collapse text-[15px]">
               <thead className="bg-gray-100">
                 <tr>
@@ -478,6 +515,73 @@ export default function GoldHallmarkingPage() {
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0072b1] py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center text-white">
+          <h2 className="text-2xl font-bold mb-4">
+            Get Expert Help for NABL Certification & Accreditation
+          </h2>
+          <p className="mb-6 text-[15px] max-w-3xl mx-auto">
+            Avoid delays, reduce non-conformities, and achieve NABL
+            accreditation faster with expert consultancy from AN Global
+            Services.
+          </p>
+          <a
+            href="/contact-us"
+            className="inline-block bg-white text-[#0072b1] font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition"
+          >
+            Request Free Consultation
+          </a>
+        </div>
+      </section>
+
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-xl font-bold text-gray-900 uppercase">
+            NABL Certification – Frequently Asked Questions
+          </h2>
+
+          <div className="h-0.5 w-full bg-gray-200 relative mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-47 md:w-140 bg-[#0072b1]" />
+          </div>
+
+          <div className="space-y-6 text-gray-700 text-[15px] leading-7">
+            <p>
+              <strong>Is NABL certification mandatory?</strong>
+              <br />
+              NABL accreditation is mandatory or strongly recommended for
+              laboratories regulated by authorities such as FSSAI, CDSCO, BIS,
+              and other government agencies in India.
+            </p>
+
+            <p>
+              <strong>
+                What is the difference between NABL certification and
+                accreditation?
+              </strong>
+              <br />
+              Technically, NABL grants accreditation, not certification.
+              However, the term “NABL certificate” is commonly used to refer to
+              the accreditation certificate issued after successful assessment.
+            </p>
+
+            <p>
+              <strong>How long does NABL accreditation take?</strong>
+              <br />
+              The NABL accreditation process typically takes 4 to 6 months
+              depending on laboratory readiness, scope, and assessor
+              availability.
+            </p>
+
+            <p>
+              <strong>How long is the NABL certificate valid?</strong>
+              <br />
+              NABL accreditation is generally valid for two years, subject to
+              surveillance and compliance requirements.
+            </p>
           </div>
         </div>
       </section>

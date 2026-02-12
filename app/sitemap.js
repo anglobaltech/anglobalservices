@@ -40,7 +40,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'latest_updates',
     'news-updates',
     'msme-nsic-registration',
-    'nabl_services',
+    'nabl-accreditation-services',
     'notifi_bolts_nuts_order',
     'solar_services',
     'bis-registration-for-solar-panels',
