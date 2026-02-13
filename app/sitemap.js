@@ -24,6 +24,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'isi-products/isi-certification-for-evaporative-air-coolers-desert-coolers-3315',
     'isi-products/isi-certification-for-electric-ceiling-type-fan-374',
     'isi-products/isi-certification-for-domestic-pressure-cookers-2347',
+    'isi-products/isi-certification-for-upvc-pipes-for-water-supplies-4985',
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',

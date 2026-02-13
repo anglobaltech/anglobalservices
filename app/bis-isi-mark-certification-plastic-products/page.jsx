@@ -55,9 +55,9 @@ export const metadata = {
 const plasticProducts = [
   {
     id: 1,
-    name: "PVC Pipes for Potable Water",
+    name: "UPVC Pipes for Potable Water",
     standard: "IS 4985",
-    link: "/bis-isi-mark-certification-plastic-products",
+    link: "/isi-products/isi-certification-for-upvc-pipes-for-water-supplies-4985",
   },
   {
     id: 2,
