@@ -1084,7 +1084,7 @@ export default function ISIPage() {
             <p className="text-gray-600 text-[15px] leading-6">
               The ISI Certification process generally takes 30 to 60 days,
               depending on product type, testing requirements, factory
-              readiness, and BIS inspection timelines.
+              readiness, and BIS inspection timeline.
             </p>
           </div>
 
