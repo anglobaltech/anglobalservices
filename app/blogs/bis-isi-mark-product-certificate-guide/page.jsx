@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification in India – Process, Cost, Timeline & Documents| AN Global Services",
+    "BIS ISI Mark Certificate in India – Process, Cost, Timeline & Documents| AN Global Services",
   description:
     "Complete guide on BIS ISI Certification in India including eligibility, required documents, application process, cost, timeline, factory inspection and benefits for manufacturers.",
   keywords: [
@@ -20,14 +20,14 @@ export default function BISISIPage() {
     <main className="bg-white">
       <section className="bg-gradient-to-r from-blue-50 to-white py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <span className="text-sm font-semibold flex justify-center text-blue-700 uppercase tracking-wide">
-            BIS Certification Guide
+          <span className="text-md font-semibold flex justify-center text-blue-700 uppercase tracking-wide">
+            BIS Certificate Guide
           </span>
 
           <h1 className="mt-3 text-3xl flex justify-center font-bold text-gray-900 leading-tight">
-            BIS ISI Certification in India – Complete Process, Cost & Timeline
+            BIS ISI Certificate in India – Complete Process, Cost & Timeline
           </h1>
-          
+
           <p className="mt-4 text-gray-700">
             Manufacturers looking for hassle-free approval can also opt for
             professional{" "}
@@ -53,7 +53,7 @@ export default function BISISIPage() {
         >
           <Image
             src="/blogs/bis-isi-blogs.png"
-            alt="BIS ISI Certification India"
+            alt="BIS ISI Certificate India"
             fill
             className="object-cover"
           />
@@ -64,12 +64,12 @@ export default function BISISIPage() {
         <article className="space-y-6">
           {/* WHAT IS */}
           <div>
-            <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-1 rounded-md shadow mb-6">
-              What is BIS ISI Certification?
+            <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow mb-6">
+              What is BIS ISI Certificate?
             </h2>
 
             <p className="text-gray-600 leading-8">
-              BIS ISI Certification is a mandatory product certification scheme
+              BIS ISI Certificate is a mandatory product certificate scheme
               administered by the{" "}
               <strong>Bureau of Indian Standards (BIS)</strong>. The ISI Mark
               confirms that a product complies with the applicable
@@ -88,11 +88,11 @@ export default function BISISIPage() {
           {/* WHY REQUIRED */}
           <div>
             <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow mb-6">
-              Why is BIS ISI Certification Required?
+              Why is BIS ISI Certificate Required?
             </h2>
 
             <p className="text-gray-600 leading-8 mb-4">
-              The primary objective of BIS ISI Certification is to protect
+              The primary objective of BIS ISI Certificate is to protect
               consumers from substandard and unsafe products while ensuring
               uniform quality standards across industries.
             </p>
@@ -110,11 +110,11 @@ export default function BISISIPage() {
           {/* BENEFITS */}
           <div>
             <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow mb-6">
-              Benefits of BIS ISI Certification
+              Benefits of BIS ISI Certificate
             </h2>
 
             <p className="text-gray-600 leading-8 mb-4">
-              BIS ISI Certification provides both regulatory compliance and
+              BIS ISI Certificate provides both regulatory compliance and
               commercial advantages to manufacturers operating in the Indian
               market.
             </p>
@@ -131,7 +131,7 @@ export default function BISISIPage() {
           {/* DOCUMENTS */}
           <div>
             <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow mb-6">
-              Documents Required for BIS ISI Certification
+              Documents Required for BIS ISI Certificate
             </h2>
 
             <p className="text-gray-600 leading-8 mb-4">
@@ -154,7 +154,7 @@ export default function BISISIPage() {
           {/* PROCESS */}
           <div>
             <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow mb-6">
-              BIS ISI Certification Process
+              BIS ISI Certificate Process
             </h2>
 
             <p className="text-gray-600 leading-8 mb-2">
@@ -190,7 +190,7 @@ export default function BISISIPage() {
           {/* COST */}
           <div>
             <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow mb-6">
-              Cost of BIS ISI Certification
+              Cost of BIS ISI Certificate
             </h2>
 
             <p className="text-gray-600 leading-8 mb-4">
@@ -213,7 +213,7 @@ export default function BISISIPage() {
           {/* TIMELINE */}
           <div>
             <h2 className="inline-block w-full bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow mb-6">
-              Timeline for BIS ISI Certification
+              Timeline for BIS ISI Certificate
             </h2>
 
             <p className="text-gray-600 leading-8 mb-4">
@@ -238,19 +238,21 @@ export default function BISISIPage() {
               readiness and fast license approval.
             </p>
 
-            <Link
-              href="/contact-us"
-              className="inline-block mt-6  bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
-            >
-              Talk to Certification Expert →
-            </Link>
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <Link
+                href="/contact-us"
+                className="w-full sm:w-auto text-center bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+              >
+                Talk to Certification Expert →
+              </Link>
 
-            <Link
-              href="/bis-isi-mark-certification"
-              className="inline-block mt-4 ml-10 bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800"
-            >
-              View BIS ISI Certification Services →
-            </Link>
+              <Link
+                href="/bis-isi-mark-certification"
+                className="w-full sm:w-auto text-center bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+              >
+                View BIS ISI Certification Services →
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -261,10 +263,10 @@ export default function BISISIPage() {
             <div className="space-y-6 text-gray-600 leading-8">
               <div>
                 <p className="font-semibold text-gray-800">
-                  1. Is BIS ISI Certification mandatory in India?
+                  1. Is BIS ISI Certificate mandatory in India?
                 </p>
                 <p className="mt-1">
-                  Yes. BIS ISI Certification is mandatory for products that fall
+                  Yes. BIS ISI Certificate is mandatory for products that fall
                   under government-notified Quality Control Orders (QCOs).
                   Manufacturing, selling, or distributing such products without
                   ISI Mark is a punishable offence under Indian law.
@@ -273,11 +275,11 @@ export default function BISISIPage() {
 
               <div>
                 <p className="font-semibold text-gray-800">
-                  2. Who is eligible to apply for BIS ISI Certification?
+                  2. Who is eligible to apply for BIS ISI Certificate?
                 </p>
                 <p className="mt-1">
                   Only manufacturers having production facilities located in
-                  India are eligible to apply for BIS ISI Certification.
+                  India are eligible to apply for BIS ISI Certificate.
                   Traders, distributors, or retailers are not eligible to obtain
                   an ISI license.
                 </p>
@@ -321,12 +323,12 @@ export default function BISISIPage() {
 
               <div>
                 <p className="font-semibold text-gray-800">
-                  6. Can BIS ISI Certification be obtained without a factory
+                  6. Can BIS ISI Certificate be obtained without a factory
                   inspection?
                 </p>
                 <p className="mt-1">
                   No. Factory inspection by BIS officials is a mandatory part of
-                  the ISI Certification process. BIS verifies manufacturing
+                  the ISI Certificate process. BIS verifies manufacturing
                   capability, quality control measures, and in-house testing
                   facilities during the inspection.
                 </p>
@@ -334,12 +336,12 @@ export default function BISISIPage() {
 
               <div>
                 <p className="font-semibold text-gray-800">
-                  7. Is BIS ISI Certification applicable for imported products?
+                  7. Is BIS ISI Certificate applicable for imported products?
                 </p>
                 <p className="mt-1">
                   For imported products, manufacturers must comply with the
                   Foreign Manufacturers Certification Scheme (FMCS). Importers
-                  alone cannot obtain ISI Certification without manufacturer
+                  alone cannot obtain ISI Certificate without manufacturer
                   compliance.
                 </p>
               </div>

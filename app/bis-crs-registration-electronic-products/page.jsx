@@ -134,9 +134,7 @@ const products = [
     "Printers & Plotters-IS 13252 (Part 1) : 2010*",
     "Automatic Data Processing Machines-IS 13252 (Part 1) : 2010*",
   ],
-  [
-    " etc."
-  ]
+  [" etc."],
 ];
 
 export default function ISIPage() {
@@ -211,12 +209,20 @@ export default function ISIPage() {
                 submission of all required documents through the BIS online
                 portal. The CRS scheme is based on a self-declaration of
                 conformity, where the manufacturer declares compliance after
-                testing.
-              </p>
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
-                The registration, once granted, is valid for two years and can
-                be renewed thereafter, subject to continued with BIS
+                testing. The registration, once granted, is valid for two years
+                and can be renewed thereafter, subject to continued with BIS
                 requirements.
+              </p>
+              <p className="text-gray-500 text-[15px] leading-6 mb-4">
+                We have also explained the CRS registration process, documents,
+                and timelines in detail in our blog:
+                <Link
+                  href="/blogs/how-to-get-bis-crs-certification-for-electronic-products"
+                  className="text-[#0072b1] font-medium ml-1"
+                >
+                  Complete Guide to BIS CRS Registration
+                </Link>
+                .
               </p>
             </div>
           </div>
@@ -648,6 +654,16 @@ export default function ISIPage() {
             </tbody>
           </table>
         </div>
+        <p className="text-gray-600 text-[15px] leading-6 mb-6">
+          Still have questions? Our detailed article on{" "}
+          <Link
+            href="/blogs/how-to-get-bis-crs-certification-for-electronic-products"
+            className="text-[#0072b1] font-medium hover:underline"
+          >
+            BIS CRS Registration FAQs
+          </Link>{" "}
+          covers common doubts faced by manufacturers and importers.
+        </p>
       </section>
 
       <section className="bg-white pb-12">

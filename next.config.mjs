@@ -65,6 +65,11 @@ const nextConfig = {
         destination: "/blogs",
         permanent: true, 
       },
+      {
+        source: "/blogs/bis-isi-mark-product-certification-guide",
+        destination: "blogs/bis-isi-mark-product-certificate-guide",
+        permanent: true, 
+      },
     ];
   },
 };

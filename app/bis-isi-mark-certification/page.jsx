@@ -1103,7 +1103,7 @@ export default function ISIPage() {
             <p className="text-gray-700 text-[15px]">
               Still have questions? Our in-depth{" "}
               <Link
-                href="/bis-isi-mark-product-certification-guide"
+                href="/blogs/bis-isi-mark-product-certificate-guide"
                 className="text-blue-700 font-semibold "
               >
                 BIS ISI Certification blog
