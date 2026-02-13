@@ -58,9 +58,9 @@ const homeApplianceProducts = [
   },
   {
     id: 4,
-    name: "Pressure Cookers",
+    name: "Domestic Pressure Cookers",
     standard: "IS 2347",
-    link: "/bis-isi-mark-certification-home-appliances-kitchen-products",
+    link: "/isi-products/isi-certification-for-domestic-pressure-cookers-2347",
   },
   {
     id: 5,
