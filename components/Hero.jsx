@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import ReCAPTCHA from "react-google-recaptcha";
-import { db } from "@/src/lib/firebase";
-import { doc, runTransaction, serverTimestamp } from "firebase/firestore";
+import dynamic from "next/dynamic";
+
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
+  ssr: false,
+});
 
 const slides = ["/dash-image1.jpg", "/dash-image2.jpg", "/dash-image3.jpg"];
 
@@ -109,84 +111,89 @@ export default function Hero() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!captchaToken) {
-      setError("Please verify captcha");
-      return;
-    }
+  if (!captchaToken) {
+    setError("Please verify captcha");
+    return;
+  }
 
-    if (!formData.service || !formData.name || !formData.phone) {
-      setError("Please fill all fields");
-      return;
-    }
+  if (!formData.service || !formData.name || !formData.phone) {
+    setError("Please fill all fields");
+    return;
+  }
 
-    setLoading(true);
-    setError("");
+  setLoading(true);
+  setError("");
 
-    try {
-      const res = await fetch("/api/verify-captcha", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token: captchaToken }),
-      });
+  try {
+    // 🔥 Load Firebase only now
+    const { db } = await import("@/src/lib/firebase");
+    const {
+      doc,
+      runTransaction,
+      serverTimestamp,
+    } = await import("firebase/firestore");
 
-      const result = await res.json();
-      if (!result.success) {
-        setError("Captcha failed");
-        setLoading(false);
-        return;
-      }
+    const res = await fetch("/api/verify-captcha", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: captchaToken }),
+    });
 
-      const counterRef = doc(db, "counters", "enquiries");
-      let enquiryId = "";
-
-      await runTransaction(db, async (transaction) => {
-        const counterSnap = await transaction.get(counterRef);
-        const current = counterSnap.exists()
-          ? counterSnap.data().current || 0
-          : 0;
-
-        const next = current + 1;
-        enquiryId = `AN${String(next).padStart(5, "0")}`;
-
-        transaction.set(counterRef, { current: next }, { merge: true });
-
-        transaction.set(doc(db, "enquiries", enquiryId), {
-          industry: formData.service,
-          name: formData.name,
-          phone: formData.phone,
-          source: "website",
-          status: "new",
-          createdAt: serverTimestamp(),
-        });
-      });
-
-      await fetch("/api/send-enquiry-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          enquiryId,
-          name: formData.name,
-          phone: formData.phone,
-          service: formData.service,
-          source: "website",
-        }),
-      });
-
-      setSuccess(true);
-      setFormData({ service: "", name: "", phone: "" });
-      setCaptchaToken(null);
-
-      setTimeout(() => setSuccess(false), 3000);
-    } catch (err) {
-      console.error(err);
-      setError("Something went wrong. Please try again.");
-    } finally {
+    const result = await res.json();
+    if (!result.success) {
+      setError("Captcha failed");
       setLoading(false);
+      return;
     }
-  };
+
+    const counterRef = doc(db, "counters", "enquiries");
+    let enquiryId = "";
+
+    await runTransaction(db, async (transaction) => {
+      const counterSnap = await transaction.get(counterRef);
+      const current = counterSnap.exists()
+        ? counterSnap.data().current || 0
+        : 0;
+
+      const next = current + 1;
+      enquiryId = `AN${String(next).padStart(5, "0")}`;
+
+      transaction.set(counterRef, { current: next }, { merge: true });
+
+      transaction.set(doc(db, "enquiries", enquiryId), {
+        industry: formData.service,
+        name: formData.name,
+        phone: formData.phone,
+        source: "website",
+        status: "new",
+        createdAt: serverTimestamp(),
+      });
+    });
+
+    await fetch("/api/send-enquiry-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        enquiryId,
+        name: formData.name,
+        phone: formData.phone,
+        service: formData.service,
+        source: "website",
+      }),
+    });
+
+    setSuccess(true);
+    setFormData({ service: "", name: "", phone: "" });
+    setCaptchaToken(null);
+  } catch (err) {
+    setError("Something went wrong");
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     if (clientsPaused) return;
