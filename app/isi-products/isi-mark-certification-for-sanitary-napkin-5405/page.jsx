@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "ISI Mark Certification for Sanitary Napkins (IS 5405) | AN Global Services",
+    "ISI Certification for Sanitary Napkins (IS 5405) | AN Global Services",
 
   description:
     "Mandatory ISI Certification for Sanitary Napkins under IS 5405. Get BIS license approval with expert support for product testing, factory inspection, in-house lab setup, documentation, and fast-track ISI certification for manufacturers in India.",

@@ -3,34 +3,34 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "ISI Certification for UPVC Pipes for Water Supplies IS 4985 | AN Global Services",
+    "ISI Certification for HDPE Pipes for Potable Water Supplies IS 4984 | AN Global Services",
 
   description:
-    "Get ISI  Certification for UPVC Pipes for Water Supplies as per IS 4985:2021. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval for Indian and foreign manufacturers.",
+    "Get ISI Certification for High Density Polyethylene (HDPE) Pipes for Potable Water Supplies as per IS 4984:1995. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval for Indian and foreign manufacturers.",
 
   keywords: [
-    "ISI Certification for UPVC Pipes",
-    "BIS Certification for UPVC Pipes IS 4985",
-    "ISI Mark for UPVC Pipes India",
-    "UPVC Pipes for Water Supply ISI Certification",
-    "BIS License for UPVC Pipes",
-    "IS 4985:2021 UPVC Pipe Certification",
-    "BIS ISI Mark for Water Supply Pipes",
-    "UPVC Pipe BIS Testing",
-    "ISI Certification Scheme I UPVC Pipes",
-    "BIS Factory Inspection for UPVC Pipes",
-    "Pressure Class UPVC Pipes IS 4985",
-    "BIS Certification for PVC Water Pipes",
-    "ISI Mark Consultant for UPVC Pipes",
-    "AN Global Services BIS ISI Certification",
+    "ISI Certification for HDPE Pipes",
+    "BIS Certification for HDPE Pipes IS 4984",
+    "ISI Mark for HDPE Pipes India",
+    "HDPE Pipes for Potable Water ISI Certification",
+    "BIS License for HDPE Pipes",
+    "IS 4984:1995 HDPE Pipe Certification",
+    "BIS ISI Mark for Drinking Water Pipes",
+    "HDPE Pipe BIS Testing",
+    "ISI Certification Scheme I HDPE Pipes",
+    "BIS Factory Inspection for HDPE Pipes",
+    "Pressure Rating HDPE Pipes IS 4984",
+    "BIS Certification for Polyethylene Water Pipes",
+    "ISI Mark Consultant for HDPE Pipes",
+    "AN Global Services BIS ISI Certificate",
   ],
 
   openGraph: {
     title:
-      "ISI Mark Certification for UPVC Pipes for Water Supplies (IS 4985:2021)",
+      "ISI Mark Certification for HDPE Pipes for Potable Water Supplies (IS 4984:1995)",
     description:
-      "Apply for ISI Mark Certification for UPVC Pipes under IS 4985:2021. Complete BIS assistance for testing, documentation, factory inspection, and license approval.",
-    url: "https://www.anglobalservices.com/isi-products/isi-certification-for-upvc-pipes-for-water-supplies-4985",
+      "Apply for ISI Mark Certification for HDPE Pipes under IS 4984:1995. Complete BIS assistance for testing, documentation, factory inspection, and license approval.",
+    url: "https://www.anglobalservices.com/isi-products/isi-certification-high-density-polyethylene-pipes-4984",
     siteName: "AN Global Services",
     locale: "en_IN",
     type: "website",
@@ -50,19 +50,19 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.anglobalservices.com/isi-products/isi-certification-for-upvc-pipes-for-water-supplies-4985",
+      "https://www.anglobalservices.com/isi-products/isi-certification-high-density-polyethylene-pipes-4984",
   },
 };
 
-export default function UPVCPIPESPage() {
+export default function HDPEPIPESPage() {
   return (
     <main className="w-full bg-white">
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-upvc-pipe.png"
-              alt="BIS ISI Certification for UPVC Pipes for Water Supplies IS 4985"
+              src="/isi-products/isi-certification-hdpe-pipes.png"
+              alt="BIS ISI Certification for HDPE Pipes for Potable Water Supplies IS 4984"
               width={420}
               height={320}
               className="w-full h-auto object-cover"
@@ -73,26 +73,29 @@ export default function UPVCPIPESPage() {
           <div>
             {/* Heading */}
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for UPVC Pipes for Water Supplies – IS 4985
+              BIS Certification for HDPE Pipes for Potable Water Supplies – IS
+              4984
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for UPVC pipes used for water
-              supplies in India as per Indian Standard IS 4985:2021. In today’s
-              competitive Indian market, it is difficult to survive without
-              supplying standard quality and certified products. A valid BIS
-              license is essential for manufacturers and importers to legally
-              manufacture, import, and sell UPVC pipes for water supply
-              applications in India.
+              BIS certification is mandatory for High Density Polyethylene
+              (HDPE) pipes used for potable water supplies in India as per
+              Indian Standard IS 4984:1995. HDPE pipes play a crucial role in
+              drinking water distribution systems due to their superior
+              durability, flexibility, corrosion resistance, and chemical
+              stability. Without a valid BIS ISI license, manufacturers and
+              importers are not legally permitted to manufacture, import, or
+              sell HDPE pipes for potable water applications in India.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              IS 4985:2021 specifies comprehensive requirements related to
-              material composition, dimensions, pressure ratings, mechanical
-              strength, and testing of unplasticized PVC pipes. Certification
-              ensures that UPVC pipes are durable, safe, and suitable for
-              potable water supply and approved agricultural water conveyance
-              systems.
+              IS 4984:1995 ensures that HDPE pipes meet stringent quality and
+              safety requirements through rigorous testing of parameters such as
+              density, tensile strength, elongation at break, hydrostatic
+              pressure resistance, impact strength, and environmental stress
+              cracking resistance. These tests ensure long-term performance and
+              safe delivery of drinking water under varying pressure and
+              environmental conditions.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -102,9 +105,9 @@ export default function UPVCPIPESPage() {
               >
                 BIS ISI Mark certification
               </Link>{" "}
-              enhances market acceptance, ensures statutory compliance, and
-              builds confidence among government bodies, infrastructure
-              developers, and end users across India.
+              enhances product credibility, ensures statutory compliance, and
+              builds confidence among government authorities, water supply
+              boards, infrastructure developers, and end users across India.
             </p>
           </div>
         </div>
@@ -113,80 +116,89 @@ export default function UPVCPIPESPage() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-8">
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            IS 4985:2021 – Key Quality & Performance Requirements for UPVC Pipes
-            for Water Supplies
+            IS 4984:1995 – Key Quality & Performance Requirements for HDPE Pipes
+            for Potable Water Supplies
           </h2>
 
           <ul className="mt-6 space-y-2 text-[15px] text-gray-700">
             <li>
-              (i) Classification of pipes based on working pressure at 27°C
+              (i) Use of virgin High Density Polyethylene (HDPE) raw material
             </li>
-            <li>(ii) Dimensional accuracy and uniform wall thickness</li>
             <li>
-              (iii) Use of unplasticized polyvinyl chloride as base material
+              (ii) Classification based on pressure ratings and service
+              conditions
             </li>
-            <li>(iv) Mechanical strength and resistance to external loads</li>
-            <li>(v) Hydrostatic pressure performance requirements</li>
-            <li>(vi) Resistance to heat reversion and external impacts</li>
-            <li>(vii) Opacity and material quality compliance</li>
             <li>
-              (viii) Mandatory marking, traceability, and product identification
+              (iii) Dimensional accuracy, wall thickness, and ovality control
+            </li>
+            <li>(iv) Density and melt flow rate requirements</li>
+            <li>(v) Tensile strength and elongation at break performance</li>
+            <li>
+              (vi) Hydrostatic pressure resistance at specified temperatures
+            </li>
+            <li>
+              (vii) Resistance to impact and environmental stress cracking
+            </li>
+            <li>
+              (viii) Mandatory marking, traceability, and identification details
             </li>
           </ul>
         </div>
 
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Overview of ISI Mark Certification for UPVC Pipes for Water Supplies
+            Overview of ISI Mark Certification for HDPE Pipes for Potable Water
+            Supplies
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            IS 4985:2021 covers unplasticized PVC pipes intended for potable
-            water supply, including plain-ended and socket-ended pipes, as well
-            as pipes used with elastomeric sealing rings. The standard also
-            applies to certain agricultural water supply applications.
+            IS 4984:1995 specifies the requirements for High Density
+            Polyethylene pipes intended for potable water supply under pressure.
+            The standard applies to pipes manufactured from virgin polyethylene
+            materials to ensure non-toxicity and complete safety for human
+            consumption.
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            This standard does not apply to UPVC pipes used for agricultural
-            pump suction and delivery lines, which are covered separately under
-            IS 12231. Pipes certified under IS 4985:2021 must be suitable for
-            long-term service under specified temperature and pressure
-            conditions.
+            The standard lays down detailed specifications covering
+            classification, dimensions, physical and mechanical properties,
+            pressure ratings, and performance testing. HDPE pipes certified
+            under IS 4984 must demonstrate consistent quality and reliability
+            for long-term service in drinking water distribution networks.
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            The pipe material must primarily consist of unplasticized polyvinyl
-            chloride, with only approved additives used to achieve required
-            strength, durability, and surface finish. Certified pipes must
-            successfully pass prescribed type tests, acceptance tests, and
-            routine quality tests before being approved for ISI marking.
+            IS 4984:1995 also prescribes guidelines for marking, packaging, and
+            labeling to ensure product traceability and integrity. Compliance
+            with this standard reflects a manufacturer’s commitment to public
+            health, water safety, and regulatory excellence in India’s potable
+            water infrastructure.
           </p>
         </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Process Required for BIS ISI Mark Certification for UPVC Pipes for
-          Water Supplies (IS 4985:2021)
+          Process Required for BIS ISI Mark Certification for HDPE Pipes for
+          Potable Water Supplies (IS 4984:1995)
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          To obtain the BIS ISI Mark for UPVC pipes for water supplies under
-          Indian Standard IS 4985:2021, manufacturers must comply with the BIS
-          Product Certification Scheme (Scheme I). This certification ensures
-          that UPVC pipes meet mandatory requirements related to material
-          quality, pressure performance, and durability before they are
-          manufactured, imported, or supplied in the Indian market.
+          BIS ISI Mark certification is mandatory for High Density Polyethylene
+          (HDPE) pipes used for potable water supplies in India as per Indian
+          Standard IS 4984:1995. Manufacturers must comply with the BIS Product
+          Certification Scheme (Scheme I) to ensure that HDPE pipes meet
+          stringent quality, safety, and performance requirements before they
+          are manufactured, imported, or supplied in the Indian market.
         </p>
 
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
           <p className="text-gray-600 text-[15px] leading-6">
             <strong>Estimated Timeline:</strong> The BIS ISI certification
-            process for UPVC pipes generally takes around{" "}
+            process for HDPE pipes generally takes around{" "}
             <strong>30 days for Indian manufacturers</strong> and up to{" "}
             <strong>180 days for foreign manufacturers</strong>, depending on
-            factory preparedness, inspection scheduling, and product testing
+            factory preparedness, inspection scheduling, and laboratory testing
             requirements.
           </p>
         </div>
@@ -199,36 +211,36 @@ export default function UPVCPIPESPage() {
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
               <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing UPVC pipe
-              details, applicable Indian Standard (IS 4985:2021), factory
+              application through the Manak Online portal by providing HDPE pipe
+              details, applicable Indian Standard (IS 4984:1995), factory
               address, manufacturing process, and machinery information.
             </li>
 
             <li>
               <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities as required under IS 4985:2021, including checks for
-              hydrostatic pressure, dimensional accuracy, reversion, opacity,
-              and impact resistance.
+              facilities as prescribed under IS 4984:1995, including tests for
+              density, tensile strength, elongation at break, hydrostatic
+              pressure, impact resistance, and environmental stress cracking.
             </li>
 
             <li>
               <strong>Factory Inspection:</strong> A BIS officer conducts an
               on-site inspection to verify manufacturing infrastructure, raw
-              material controls, quality control systems, and compliance with
-              the Scheme of Inspection and Testing (SIT).
+              material controls, in-house testing facilities, and compliance
+              with the Scheme of Inspection and Testing (SIT).
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> UPVC pipe samples are
+              <strong>Sample Drawing and Testing:</strong> HDPE pipe samples are
               drawn during inspection and tested in BIS-recognized laboratories
-              as per IS 4985:2021 requirements.
+              as per IS 4984:1995 requirements.
             </li>
 
             <li>
               <strong>Grant of BIS License:</strong> Upon successful inspection
               and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), authorizing the use of the ISI Mark on UPVC pipes
-              for water supplies.
+              License (CM/L), authorizing the use of the ISI Mark on HDPE pipes
+              for potable water supplies.
             </li>
           </ol>
         </div>
@@ -238,36 +250,41 @@ export default function UPVCPIPESPage() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for UPVC Pipes for Water Supplies
-            (IS 4985)
+            Requirements to Obtain BIS License for HDPE Pipes for Potable Water
+            Supplies (IS 4984)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
             <li>
-              Compliance of UPVC pipes with all material, dimensional, pressure,
-              and performance requirements specified under IS 4985:2021.
+              Compliance of HDPE pipes with all material, dimensional, pressure,
+              and performance requirements specified under IS 4984:1995.
             </li>
             <li>
-              Availability of appropriate testing facilities for hydrostatic
-              pressure, impact resistance, reversion, opacity, and dimensional
-              verification.
+              Use of virgin polyethylene raw material suitable for potable water
+              applications and free from toxic additives.
+            </li>
+            <li>
+              Availability of in-house or third-party testing facilities for
+              hydrostatic pressure, tensile strength, elongation, impact
+              resistance, and environmental stress cracking tests.
             </li>
             <li>
               Appointment of qualified quality control personnel to ensure
-              consistent product quality and conformity to the standard.
+              consistent conformity to IS 4984 requirements.
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines applicable to UPVC pipes.
+              BIS certification guidelines applicable to HDPE pipes.
             </li>
           </ul>
         </div>
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for UPVC pipes for water supplies under
-            Product Certification Scheme-I, manufacturers are required to submit
-            documents broadly classified into the following categories:
+            To obtain BIS certification for HDPE pipes for potable water
+            supplies under Product Certification Scheme-I, manufacturers are
+            required to submit documents broadly classified into the following
+            categories:
           </p>
 
           <ul className="mt-4 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -277,14 +294,14 @@ export default function UPVCPIPESPage() {
               approvals.
             </li>
             <li>
-              <strong>Technical Details:</strong> UPVC pipe specifications,
-              pressure class, dimensions, raw material details, additives used,
-              and test parameters as per IS 4985:2021.
+              <strong>Technical Details:</strong> HDPE pipe specifications,
+              pressure rating, dimensions, raw material grade, manufacturing
+              process, and test parameters as per IS 4984:1995.
             </li>
             <li>
               <strong>Quality Control Personnel Details:</strong> Qualification,
-              experience, and responsibilities of personnel overseeing quality
-              assurance.
+              experience, and responsibilities of personnel responsible for
+              quality assurance.
             </li>
             <li>
               <strong>Commercial Details:</strong> Brand name, trademark
@@ -296,13 +313,13 @@ export default function UPVCPIPESPage() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for UPVC Pipes for Water Supplies (IS
-            4985)
+            Cost of BIS Certification for HDPE Pipes for Potable Water Supplies
+            (IS 4984)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for UPVC pipes under Product
+            in obtaining BIS certification for HDPE pipes under Product
             Certification Scheme-I. All statutory fees are payable directly to
             the Bureau of Indian Standards (BIS).
           </p>
@@ -346,7 +363,7 @@ export default function UPVCPIPESPage() {
                     Payable to BIS
                   </td>
                 </tr>
-                <tr className="bg-gray-50">
+                <tr>
                   <td className="border border-gray-200 px-4 py-2">3</td>
                   <td className="border border-gray-200 px-4 py-2">
                     Product Testing Fee
@@ -358,7 +375,7 @@ export default function UPVCPIPESPage() {
                     Depends on pipe size & laboratory
                   </td>
                 </tr>
-                <tr>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-200 px-4 py-2">4</td>
                   <td className="border border-gray-200 px-4 py-2">
                     Marking Fee
@@ -377,10 +394,11 @@ export default function UPVCPIPESPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              4985:2021 is a critical stage in the BIS certification process.
+              4984:1995 is a critical stage in the BIS certification process.
               BIS may conduct a factory pre-assessment to evaluate readiness
               prior to inspection. Charges mentioned above are indicative and
-              may vary depending on pipe class, diameter, and testing scope.
+              may vary depending on pipe diameter, pressure rating, and testing
+              scope.
             </p>
           </div>
         </div>
@@ -389,18 +407,18 @@ export default function UPVCPIPESPage() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         {/* Heading */}
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Benefits of Getting ISI Mark Certification for UPVC Pipes for Water
-          Supplies (IS 4985:2021)
+          Benefits of Getting ISI Mark Certification for HDPE Pipes for Potable
+          Water Supplies (IS 4984:1995)
         </h2>
 
         {/* Intro */}
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-8">
-          Obtaining the ISI Mark for UPVC pipes under Indian Standard IS
-          4985:2021 offers important legal, commercial, and quality advantages.
-          ISI certification confirms that UPVC pipes comply with prescribed
-          Indian standards for material composition, pressure performance, and
-          durability, making them legally approved for manufacture, import, and
-          supply in the Indian market.
+          Obtaining the ISI Mark for High Density Polyethylene (HDPE) pipes
+          under Indian Standard IS 4984:1995 offers significant legal,
+          commercial, and quality advantages. ISI certification confirms that
+          HDPE pipes meet prescribed Indian standards for potable water safety,
+          pressure performance, and long-term durability, making them legally
+          approved for manufacture, import, and supply in the Indian market.
         </p>
 
         {/* Benefits List */}
@@ -410,60 +428,58 @@ export default function UPVCPIPESPage() {
               1. Mandatory Legal Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              UPVC pipes for water supply are regulated products in India, and
-              ISI Mark certification under IS 4985:2021 is mandatory.
+              HDPE pipes used for potable water supply are regulated products in
+              India. ISI Mark certification under IS 4984:1995 is mandatory.
               Manufacturers and importers can legally sell certified pipes,
               while non-compliant products may face penalties, seizure, or
-              restrictions.
+              market bans.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              2. Wider Market Acceptance
+              2. Acceptance in Government & Infrastructure Projects
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI-certified UPVC pipes are widely accepted in government
-              projects, infrastructure developments, agricultural supply
-              networks, and private construction. Certification ensures easier
-              approval in tenders and procurement processes.
+              ISI-certified HDPE pipes are widely accepted by government water
+              supply departments, municipal bodies, infrastructure authorities,
+              and large EPC contractors. Certification simplifies approval in
+              tenders and public procurement.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              3. Assured Strength and Durability
+              3. Assured Potable Water Safety
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI certification ensures that UPVC pipes meet prescribed
-              requirements for hydrostatic pressure, impact resistance,
-              dimensional stability, and long-term performance. Certified pipes
-              offer reliable service life and resistance to environmental
-              stress.
+              IS 4984 certification ensures that HDPE pipes are manufactured
+              from virgin, non-toxic polyethylene material, making them safe for
+              drinking water applications without risk of contamination.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              4. Enhanced Brand Credibility and Trust
+              4. Proven Strength, Flexibility & Durability
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Displaying the ISI Mark on UPVC pipes builds confidence among
-              engineers, contractors, and end users. Certified products are
-              recognized as compliant with national standards and quality
-              benchmarks.
+              Certified HDPE pipes are tested for hydrostatic pressure
+              resistance, tensile strength, elongation at break, impact
+              resistance, and environmental stress cracking, ensuring long
+              service life even under demanding conditions.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              5. Competitive Advantage and Business Growth
+              5. Enhanced Brand Credibility & Business Growth
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI-certified UPVC pipes stand out in a competitive Indian market.
-              Certification supports participation in government tenders,
-              infrastructure contracts, and large-scale supply projects,
-              promoting sustainable business expansion.
+              The ISI Mark enhances trust among engineers, consultants, and end
+              users. Certified HDPE pipes gain a competitive advantage in the
+              Indian market and support participation in large-scale water
+              infrastructure and government projects.
             </p>
           </div>
         </div>
@@ -472,56 +488,55 @@ export default function UPVCPIPESPage() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         {/* Heading */}
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Frequently Asked Questions (FAQs) – BIS ISI Certification for UPVC
-          Pipes for Water Supplies (IS 4985:2021)
+          Frequently Asked Questions (FAQs) – BIS ISI Certification for HDPE
+          Pipes for Potable Water Supplies (IS 4984:1995)
         </h2>
 
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for UPVC pipes in India?
+              1. Is BIS certification mandatory for HDPE pipes in India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. UPVC pipes for potable water supply must comply with Indian
-              Standard IS 4985:2021. BIS ISI Mark certification is mandatory
-              before manufacturing, importing, or supplying these pipes in
-              India.
+              Yes. HDPE pipes used for potable water supply must comply with
+              Indian Standard IS 4984:1995. BIS ISI Mark certification is
+              mandatory before manufacturing, importing, or supplying these
+              pipes in India.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Which Indian Standard applies to UPVC pipes for water supplies?
+              2. Which Indian Standard applies to HDPE pipes for potable water?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              UPVC pipes used for water supply applications are governed by
-              Indian Standard IS 4985:2021, which specifies requirements related
-              to pressure rating, material composition, dimensions, and testing
-              methods.
+              HDPE pipes intended for potable water supply under pressure are
+              governed by Indian Standard IS 4984:1995, which specifies
+              material, dimensional, mechanical, and performance requirements.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              3. What are the pressure classes under IS 4985:2021?
+              3. What pressure ratings are covered under IS 4984?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Pipes are classified based on working pressure at 27°C, typically
-              ranging from 0.25 MPa to 1.25 MPa, depending on the class of pipe
-              specified under IS 4985:2021.
+              IS 4984 classifies HDPE pipes based on pressure ratings (PN
+              classes) suitable for potable water supply systems, depending on
+              pipe size, wall thickness, and application conditions.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification for UPVC
+              4. Can foreign manufacturers apply for BIS certification for HDPE
               pipes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes. Foreign manufacturers must obtain BIS certification under IS
-              4985:2021 before exporting UPVC pipes to India. They are required
-              to appoint an Authorized Indian Representative (AIR) and comply
-              with BIS inspection and testing procedures.
+              4984:1995 before exporting HDPE pipes to India. They must appoint
+              an Authorized Indian Representative (AIR) and comply with BIS
+              inspection and testing requirements.
             </p>
           </div>
 
@@ -530,35 +545,35 @@ export default function UPVCPIPESPage() {
               5. How long does the BIS certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The certification process generally takes around 30 days for
+              The BIS certification process generally takes around 30 days for
               Indian manufacturers and up to 180 days for foreign manufacturers,
-              depending on factory inspection schedules and laboratory testing
+              depending on inspection scheduling and laboratory testing
               timelines.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              6. What tests are conducted under IS 4985:2021?
+              6. What tests are conducted under IS 4984:1995?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Testing includes hydrostatic pressure testing, dimensional
-              verification, reversion test, opacity test, impact resistance
-              test, and other mechanical and physical performance checks as
-              specified under the standard.
+              Testing includes density, melt flow rate, tensile strength,
+              elongation at break, hydrostatic pressure resistance, impact
+              resistance, and environmental stress cracking resistance as
+              prescribed under IS 4984:1995.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              7. What happens if non-ISI certified UPVC pipes are supplied in
-              India?
+              7. What are the consequences of supplying non-ISI certified HDPE
+              pipes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Supplying non-ISI certified UPVC pipes for regulated applications
-              may result in penalties, product seizure, cancellation of
-              approvals, and legal action under the Bureau of Indian Standards
-              Act, 2016.
+              Supplying non-ISI certified HDPE pipes for potable water
+              applications may lead to penalties, product seizure, cancellation
+              of approvals, and legal action under the Bureau of Indian
+              Standards Act, 2016.
             </p>
           </div>
         </div>

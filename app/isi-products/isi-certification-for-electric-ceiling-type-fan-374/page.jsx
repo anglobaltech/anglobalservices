@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "ISI Mark Certification for Electric Ceiling Fans IS 374 | AN Global Services",
+    "ISI Certification for Electric Ceiling Fans IS 374 | AN Global Services",
 
   description:
-    "Get ISI Mark Certification for Electric Ceiling Type Fans as per IS 374:2019. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval for Indian and foreign manufacturers.",
+    "Get ISI Certification for Electric Ceiling Type Fans as per IS 374:2019. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval for Indian and foreign manufacturers.",
 
   keywords: [
-    "ISI Mark Certification for Electric Ceiling Fans",
+    "ISI Certification for Electric Ceiling Fans",
     "BIS Certification for Ceiling Fans IS 374",
     "ISI Mark for Ceiling Fans India",
     "Electric Ceiling Fan ISI Certification",

@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "ISI Mark Certification for Evaporative Air Coolers IS 3315 | AN Global Services",
+    "ISI Certification for Evaporative Air Coolers IS 3315 | AN Global Services",
 
   description:
-    "Get ISI Mark Certification for Evaporative Air Coolers (Desert Coolers) as per IS 3315:2019. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval in India.",
+    "Get ISI Certification for Evaporative Air Coolers (Desert Coolers) as per IS 3315:2019. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval in India.",
 
   keywords: [
-    "ISI Mark Certification for Evaporative Air Coolers",
+    "ISI  Certification for Evaporative Air Coolers",
     "BIS Certification for Air Coolers IS 3315",
     "Desert Cooler ISI Mark",
     "ISI Mark for Air Coolers India",

@@ -3,8 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title:
-    "Calibration Certificate Services | AN Global Services",
+  title: "Calibration Certificate Services | AN Global Services",
 
   description:
     "AN Global Services provides professional Calibration Certificate services in India with NABL and ISO/IEC 17025 traceability. We support on-site and laboratory calibration, audit-ready documentation, ISO compliance, regulatory inspections, and manufacturing quality assurance for all types of measuring instruments.",
@@ -563,7 +562,31 @@ export default function CalibrationCertificatePage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 pb-12 ">
+      <section className="bg-gray-900 py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Need Help with Calibration Certification?
+          </h2>
+
+          <p className="text-gray-300 text-[15px] leading-6 max-w-3xl mx-auto mb-8">
+            Get expert support from AN Global Services for calibration
+            certification, NABL-accredited calibration, audit-ready
+            documentation, and ISO compliance. Our team ensures accuracy,
+            compliance, and minimal operational disruption.
+          </p>
+
+          <div className="flex justify-center">
+            <Link
+              href="/contact-us"
+              className="inline-flex items-center justify-center rounded-lg bg-[#0072b1] px-8 py-3 text-white text-[15px] font-semibold hover:bg-[#005a8c] transition-colors duration-200"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-12 ">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold uppercase text-gray-900">
             How AN Global Services Supports Calibration Certification
@@ -622,30 +645,6 @@ export default function CalibrationCertificatePage() {
               success, and meet regulatory expectations without operational
               stress.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gray-900 py-14">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Need Help with Calibration Certification?
-          </h2>
-
-          <p className="text-gray-300 text-[15px] leading-6 max-w-3xl mx-auto mb-8">
-            Get expert support from AN Global Services for calibration
-            certification, NABL-accredited calibration, audit-ready
-            documentation, and ISO compliance. Our team ensures accuracy,
-            compliance, and minimal operational disruption.
-          </p>
-
-          <div className="flex justify-center">
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center justify-center rounded-lg bg-[#0072b1] px-8 py-3 text-white text-[15px] font-semibold hover:bg-[#005a8c] transition-colors duration-200"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
       </section>

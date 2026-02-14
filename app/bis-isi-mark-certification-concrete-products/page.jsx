@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification for Concrete Products in India | AN Global Services",
+    "BIS ISI Certification for Concrete Products in India | AN Global Services",
 
   description:
-    "Get BIS ISI Mark Certification for concrete products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders for construction and infrastructure materials.",
+    "Get BIS ISI Certification for concrete products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders for construction and infrastructure materials.",
 
   keywords: [
-    "BIS ISI Mark Certification for Concrete Products",
+    "BIS ISI Certification for Concrete Products",
     "BIS ISI Certification for Concrete Blocks",
     "ISI Mark for Concrete Products",
     "BIS Certification for Concrete Products India",

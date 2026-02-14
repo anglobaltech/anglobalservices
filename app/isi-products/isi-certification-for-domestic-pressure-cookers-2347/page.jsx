@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "ISI Mark Certification for Domestic Pressure Cookers IS 2347 | AN Global Services",
+    "ISI Certification for Domestic Pressure Cookers IS 2347 | AN Global Services",
 
   description:
-    "Get ISI Mark Certification for Domestic Pressure Cookers as per IS 2347:2017. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval for Indian and foreign manufacturers.",
+    "Get ISI Certification for Domestic Pressure Cookers as per IS 2347:2017. Expert BIS support for documentation, product testing, factory inspection, and ISI license approval for Indian and foreign manufacturers.",
 
   keywords: [
-    "ISI Mark Certification for Domestic Pressure Cookers",
+    "ISI Certification for Domestic Pressure Cookers",
     "BIS Certification for Pressure Cookers IS 2347",
     "ISI Mark for Pressure Cooker India",
     "Domestic Pressure Cooker ISI Certification",

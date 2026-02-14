@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification for Hardware Products in India | AN Global Services",
+    "BIS ISI Certification for Hardware Products in India | AN Global Services",
 
   description:
-    "Get BIS ISI Mark Certification for hardware products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders for fasteners and building hardware.",
+    "Get BIS ISI Certification for hardware products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders for fasteners and building hardware.",
 
   keywords: [
-    "BIS ISI Mark Certification for Hardware Products",
+    "BIS ISI Certification for Hardware Products",
     "BIS ISI Certification for Fasteners",
     "ISI Mark for Hardware Products",
     "BIS Certification for Hardware Products India",

@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "ISI Mark Certification for Disposable Baby Diaper IS 17509 | AN Global Services",
+    "ISI Certification for Disposable Baby Diaper IS 17509 | AN Global Services",
 
   description:
-    "Get ISI Mark Certification for Disposable Baby Diapers as per IS 17509:2021. Expert BIS support for documentation, testing, in-house lab setup, factory audit, and ISI license approval in India.",
+    "Get ISI Certification for Disposable Baby Diapers as per IS 17509:2021. Expert BIS support for documentation, testing, in-house lab setup, factory audit, and ISI license approval in India.",
 
   keywords: [
-    "ISI Mark Certification for Disposable Baby Diaper",
+    "ISI Certification for Disposable Baby Diaper",
     "BIS Certification for Baby Diaper IS 17509",
     "Disposable Baby Diaper ISI Mark",
     "ISI Mark for Baby Diaper India",

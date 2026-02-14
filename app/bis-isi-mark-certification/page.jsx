@@ -12,6 +12,8 @@ export const metadata = {
   keywords: [
     "ISI certification",
     "BIS certification",
+    "ISI certificate",
+    "BIS certificate",
     "BIS ISI certification",
     "ISI mark certification",
     "BIS ISI mark",

@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification for Electronics Products in India | AN Global Services",
+    "BIS ISI Certification for Electronics Products in India | AN Global Services",
 
   description:
-    "Get BIS ISI Mark Certification for electronics products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders for electrical and electronic items.",
+    "Get BIS ISI Certification for electronics products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders for electrical and electronic items.",
 
   keywords: [
-    "BIS ISI Mark Certification for Electronics Products",
+    "BIS ISI Certification for Electronics Products",
     "BIS ISI Certification for Electrical Products",
     "ISI Mark for Electronics Products",
     "BIS Certification for Electronics India",

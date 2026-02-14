@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification for Medical Products & Devices | AN Global Services",
+    "BIS ISI Certification for Medical Products & Devices | AN Global Services",
 
   description:
-    "Get BIS ISI Mark Certification for medical products and medical devices in India. Expert assistance for documentation, testing, factory audit, ISI license approval, and compliance under BIS Quality Control Orders. Trusted, fast, and hassle-free certification services.",
+    "Get BIS ISI Certification for medical products and medical devices in India. Expert assistance for documentation, testing, factory audit, ISI license approval, and compliance under BIS Quality Control Orders. Trusted, fast, and hassle-free certification services.",
 
   keywords: [
-    "BIS ISI Mark Certification",
+    "BIS ISI Certification",
     "BIS ISI Certification for Medical Products",
     "BIS Certification for Medical Devices",
     "ISI Mark for Medical Products",

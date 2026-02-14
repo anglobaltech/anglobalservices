@@ -211,7 +211,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="relative py-24 bg-white">
+      <div className="relative py-20 bg-white">
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-gray-200 to-transparent"></div>
 
         {/* Content */}
@@ -229,7 +229,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <Link
               href="/contact-us"
-              className="inline-block bg-[#0075B6] text-white font-bold py-4 px-10 rounded-xl
+              className="inline-block bg-[#0075B6] text-white font-bold py-3 px-10 rounded-xl
                 hover:bg-[#005a8f] transition-all duration-300
                 shadow-lg hover:scale-105"
             >
@@ -238,7 +238,7 @@ export default function AboutPage() {
 
 
             <button
-              className="border-2 border-[#0075B6] text-[#0075B6] font-bold py-4 px-10 rounded-xl
+              className="border-2 border-[#0075B6] text-[#0075B6] font-bold py-3 px-10 rounded-xl
         hover:bg-[#0075B6] hover:text-white transition-all duration-300 cursor-pointer"
             >
               View All Services

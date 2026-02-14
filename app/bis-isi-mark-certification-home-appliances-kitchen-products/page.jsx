@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification for Home Appliances & Kitchen Products in India | AN Global Services",
+    "BIS ISI Certification for Home Appliances & Kitchen Products in India | AN Global Services",
 
   description:
-    "Get BIS ISI Mark Certification for home appliances and kitchen products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders.",
+    "Get BIS ISI Certification for home appliances and kitchen products in India. Expert support for BIS testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders.",
 
   keywords: [
-    "BIS ISI Mark Certification for Home Appliances",
+    "BIS ISI Certification for Home Appliances",
     "BIS ISI Certification for Kitchen Products",
     "ISI Mark for Home Appliances",
     "BIS Certification for Kitchen Products India",

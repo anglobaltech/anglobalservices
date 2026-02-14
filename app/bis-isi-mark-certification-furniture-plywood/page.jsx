@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "BIS ISI Mark Certification for Furniture & Plywood | AN Global Services",
+    "BIS ISI Certification for Furniture & Plywood | AN Global Services",
 
   description:
-    "Get BIS ISI Mark Certification for furniture and plywood in India as per Furniture QCO 2025 & IS 303. AN Global Services provides complete support for BIS licensing, factory audit, testing, documentation, and approval for manufacturers and importers.",
+    "Get BIS ISI Certification for furniture and plywood in India as per Furniture QCO 2025 & IS 303. AN Global Services provides complete support for BIS licensing, factory audit, testing, documentation, and approval for manufacturers and importers.",
 
   keywords: [
-    "BIS ISI mark certification",
+    "BIS ISI certification",
     "BIS certification for furniture",
     "ISI mark for furniture India",
     "BIS ISI certification for plywood",
