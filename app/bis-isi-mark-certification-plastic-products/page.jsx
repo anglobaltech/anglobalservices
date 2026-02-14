@@ -20,12 +20,11 @@ export const metadata = {
     "BIS Testing for Medical Devices",
     "ISI License for Medical Products",
     "BIS Certification Consultant for Medical Products",
-    "AN Global Services BIS ISI Certification"
+    "AN Global Services BIS ISI Certification",
   ],
 
   openGraph: {
-    title:
-      "BIS ISI Mark Certification for Medical Products & Devices in India",
+    title: "BIS ISI Mark Certification for Medical Products & Devices in India",
     description:
       "Apply for BIS ISI Mark Certification for medical products and medical devices with expert assistance for BIS testing, documentation, factory audit, and ISI license approval under BIS Quality Control Orders.",
     url: "https://www.anglobalservices.com/bis-isi-mark-certification-medical-products",
@@ -61,10 +60,11 @@ const plasticProducts = [
   },
   {
     id: 2,
-    name: "Plastic Water Storage Tanks",
-    standard: "IS 12701",
-    link: "/bis-isi-mark-certification-plastic-products",
+    name: "HDPE Pipes for Potable Water Supplies",
+    standard: "IS 4984:1995",
+    link: "/isi-products/isi-certification-high-density-polyethylene-pipes-4984",
   },
+
   {
     id: 3,
     name: "HDPE Pipes",
