@@ -66,16 +66,16 @@ const plasticProducts = [
   },
 
   {
-  id: 3,
-  name: "Non-Pressure UPVC Pipes for Drainage and Sewerage Systems",
-  standard: "IS 15328",
-  link: "/isi-products/isi-certification-for-non-pressure-upvc-pipes-15328",
-},
+    id: 3,
+    name: "Non-Pressure UPVC Pipes for Drainage and Sewerage Systems",
+    standard: "IS 15328",
+    link: "/isi-products/isi-certification-for-non-pressure-upvc-pipes-15328",
+  },
   {
-    id: 4,
-    name: "PVC Sewer & Drainage Pipes",
+    id: 5,
+    name: "UPVC Pipes for Soil & Waste Discharge",
     standard: "IS 13592",
-    link: "/bis-isi-mark-certification-plastic-products",
+    link: "/isi-products/isi-certification-for-upvc-pipes-for-soil-and-waste-discharge-13592",
   },
   {
     id: 5,
