@@ -26,6 +26,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'isi-products/isi-certification-for-domestic-pressure-cookers-2347',
     'isi-products/isi-certification-for-upvc-pipes-for-water-supplies-4985',
     'isi-products/isi-certification-high-density-polyethylene-pipes-4984',
+    'isi-products/isi-certification-for-non-pressure-upvc-pipes-15328',
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',

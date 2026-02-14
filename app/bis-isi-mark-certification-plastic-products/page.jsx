@@ -66,11 +66,11 @@ const plasticProducts = [
   },
 
   {
-    id: 3,
-    name: "HDPE Pipes",
-    standard: "IS 4984",
-    link: "/bis-isi-mark-certification-plastic-products",
-  },
+  id: 3,
+  name: "Non-Pressure UPVC Pipes for Drainage and Sewerage Systems",
+  standard: "IS 15328",
+  link: "/isi-products/isi-certification-for-non-pressure-upvc-pipes-15328",
+},
   {
     id: 4,
     name: "PVC Sewer & Drainage Pipes",
