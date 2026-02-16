@@ -28,6 +28,8 @@ const baseUrl = 'https://www.anglobalservices.com'
     'isi-products/isi-certification-high-density-polyethylene-pipes-4984',
     'isi-products/isi-certification-for-non-pressure-upvc-pipes-15328',
     'isi-products/isi-certification-for-upvc-pipes-for-soil-and-waste-discharge-13592',
+    'isi-products/isi-certification-precast-concrete-pipes-458',
+    'isi-products/isi-certification-glazed-stoneware-pipes-651',
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',

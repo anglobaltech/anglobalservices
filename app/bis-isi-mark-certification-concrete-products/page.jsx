@@ -22,8 +22,7 @@ export const metadata = {
   ],
 
   openGraph: {
-    title:
-      "BIS ISI Mark Certification for Concrete Products in India",
+    title: "BIS ISI Mark Certification for Concrete Products in India",
     description:
       "Apply for BIS ISI Mark Certification for concrete products with expert assistance for BIS testing, factory inspection, and ISI license approval for construction materials.",
     url: "https://www.anglobalservices.com/bis-isi-mark-certification-concrete-products",
@@ -41,15 +40,15 @@ export const metadata = {
 const concreteProducts = [
   {
     id: 1,
-    name: "Cement Concrete Blocks",
-    standard: "IS 2185 (Part 1)",
-    link: "/bis-isi-mark-certification-concrete-products",
+    name: "Precast Concrete Pipes",
+    standard: "IS 458:2021",
+    link: "/isi-products/isi-certification-precast-concrete-pipes-458",
   },
   {
     id: 2,
-    name: "Solid Concrete Blocks",
-    standard: "IS 2185 (Part 1)",
-    link: "/bis-isi-mark-certification-concrete-products",
+    name: "Glazed Stoneware Pipes",
+    standard: "IS 651",
+    link: "/isi-products/isi-certification-glazed-stoneware-pipes-651",
   },
   {
     id: 3,

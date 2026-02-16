@@ -237,12 +237,13 @@ export default function AboutPage() {
             </Link>
 
 
-            <button
+            <Link
+            href="/bis-isi-mark-certification"
               className="border-2 border-[#0075B6] text-[#0075B6] font-bold py-3 px-10 rounded-xl
         hover:bg-[#0075B6] hover:text-white transition-all duration-300 cursor-pointer"
             >
               View All Services
-            </button>
+            </Link>
           </div>
         </div>
       </div>
