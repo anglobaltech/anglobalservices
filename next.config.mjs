@@ -70,6 +70,11 @@ const nextConfig = {
         destination: "blogs/bis-isi-mark-product-certificate-guide",
         permanent: true, 
       },
+       {
+        source: "/steel-products",
+        destination: "/bis-isi-certification-steel-products",
+        permanent: true, 
+      },
     ];
   },
 };

@@ -523,7 +523,7 @@ export default function ISIPage() {
 
             {/* Steel */}
             <Link
-              href="/steel-products"
+              href="/bis-isi-certification-steel-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image

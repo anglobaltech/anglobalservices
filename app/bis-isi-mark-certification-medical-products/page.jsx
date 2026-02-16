@@ -23,12 +23,11 @@ export const metadata = {
     "BIS License for Medical Devices",
     "BIS Factory Audit Medical Products",
     "BIS Testing for Medical Devices",
-    "AN Global Services BIS Certification"
+    "AN Global Services BIS Certification",
   ],
 
   openGraph: {
-    title:
-      "BIS ISI Mark Certification for Medical Products & Devices in India",
+    title: "BIS ISI Mark Certification for Medical Products & Devices in India",
     description:
       "Apply for BIS ISI Mark Certification for medical products and medical devices with expert support for testing, documentation, factory inspection, and ISI license approval under BIS Quality Control Orders.",
     url: "https://www.anglobalservices.com/bis-isi-mark-certification-medical-products",
@@ -92,7 +91,6 @@ const products = [
     standard: "IS 17509 (Part 2): 2021",
     link: "/bis-isi-mark-certification-medical-products",
   },
-  
 ];
 
 const chunkProducts = (arr, size = 2) => {
@@ -138,7 +136,6 @@ export default function MedicalProductsISIPage() {
             <h2 className="text-xl font-bold text-gray-900 uppercase ">
               What is BIS ISI Mark Certification for Medical Products?
             </h2>
-
             <div className="w-full h-0.5 bg-gray-200 relative mb-4">
               <span className="absolute left-0 top-0 h-0.5 w-163 bg-[#0072b1]" />
             </div>
@@ -404,7 +401,7 @@ export default function MedicalProductsISIPage() {
           </div>
         </div>
       </section>
-      
+
       <section className="w-full bg-white px-4 md:px-6 pb-12">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-xl font-bold uppercase text-gray-900">
@@ -419,7 +416,6 @@ export default function MedicalProductsISIPage() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-blue-50 border-b border-blue-400">
-                  
                   <th className="border border-blue-400 px-3 py-2 text-left">
                     Product
                   </th>
@@ -443,8 +439,6 @@ export default function MedicalProductsISIPage() {
                       rowIndex % 2 === 0 ? "bg-[#bfe4ef]" : "bg-white"
                     } hover:bg-blue-100 transition`}
                   >
-                    
-
                     <td className="border border-blue-400 px-3 py-2">
                       {row[0] && (
                         <Link
@@ -522,7 +516,6 @@ export default function MedicalProductsISIPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
