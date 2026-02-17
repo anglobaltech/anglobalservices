@@ -71,7 +71,7 @@ export default function SteelPipesWaterSupply() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Steel Pipes for Water & Sewage – IS 3589
+              BIS ISI Certification for Steel Pipes for Water & Sewage – IS 3589
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -156,7 +156,7 @@ export default function SteelPipesWaterSupply() {
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS certification for steel pipes for water and sewage under IS 3589
+            BIS ISI certification for steel pipes for water and sewage under IS 3589
             is compulsory to ensure that pipes used in potable water supply and
             sewage systems meet national quality and safety standards. These
             pipes are designed to withstand high internal pressure, external

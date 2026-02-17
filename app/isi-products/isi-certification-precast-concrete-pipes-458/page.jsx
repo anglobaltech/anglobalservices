@@ -72,7 +72,7 @@ export default function ConcretePipes() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Precast Concrete Pipes with and without
+              BIS ISI Certification for Precast Concrete Pipes with and without
               Reinforcement – IS 458
             </h1>
 
@@ -259,7 +259,7 @@ export default function ConcretePipes() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Precast Concrete Pipes (IS
+            Requirements to Obtain BIS ISI License for Precast Concrete Pipes (IS
             458)
           </h2>
 
@@ -291,7 +291,7 @@ export default function ConcretePipes() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for precast concrete pipes under Product
+            To obtain BIS ISI certification for precast concrete pipes under Product
             Certification Scheme-I, manufacturers are required to submit
             documents broadly classified into the following categories:
           </p>

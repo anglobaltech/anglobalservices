@@ -77,18 +77,25 @@ const plasticProducts = [
     standard: "IS 13592",
     link: "/isi-products/isi-certification-for-upvc-pipes-for-soil-and-waste-discharge-13592",
   },
+ {
+  id: 5,
+  name: "Injection Moulded PVC Socket Fittings",
+  standard: "IS 7834 (Parts 1 to 8):1987",
+  link: "/isi-products/isi-certification-for-injection-moulded-pvc-socket-fittings-7834"
+},
   {
-    id: 5,
-    name: "Plastic Footwear",
-    standard: "IS 15298",
-    link: "/bis-isi-mark-certification-plastic-products",
-  },
-  {
-    id: 6,
-    name: "Molded Plastic Components",
-    standard: "As per applicable IS",
-    link: "/bis-isi-mark-certification-plastic-products",
-  },
+  id: 6,
+  name: "CPVC Pipes for Potable Hot and Cold Water Distribution",
+  standard: "IS 15778",
+  link: "/isi-products/isi-certification-for-cpvc-pipes-for-potable-hot-and-cold-water-distribution-supplies-15778"
+},
+ {
+  id: 7,
+  name: "High Density Polyethylene (HDPE) Pipes for Sewerage",
+  standard: "IS 14333",
+  link: "/isi-products/isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333"
+},
+
 ];
 
 const chunkPlasticProducts = (arr, size = 2) => {

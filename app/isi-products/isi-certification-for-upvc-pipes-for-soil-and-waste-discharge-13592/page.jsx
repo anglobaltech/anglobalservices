@@ -72,7 +72,7 @@ export default function SoilWasteDischargePipes() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for UPVC Pipes for Soil & Waste Discharge
+              BIS ISI Certification for UPVC Pipes for Soil & Waste Discharge
               Systems – IS 13592
             </h1>
 
@@ -292,7 +292,7 @@ export default function SoilWasteDischargePipes() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for UPVC pipes for soil and waste
+            To obtain BIS ISI certification for UPVC pipes for soil and waste
             discharge systems under Product Certification Scheme-I,
             manufacturers are required to submit documents broadly classified
             into the following categories:
@@ -331,7 +331,7 @@ export default function SoilWasteDischargePipes() {
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for UPVC soil and waste discharge
+            in obtaining BIS ISI certification for UPVC soil and waste discharge
             pipes under Product Certification Scheme-I. All statutory fees are
             payable directly to the Bureau of Indian Standards (BIS).
           </p>

@@ -72,7 +72,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Non-Pressure UPVC Pipes for Drainage &
+              BIS ISI Certification for Non-Pressure UPVC Pipes for Drainage &
               Sewerage Systems – IS 15328
             </h1>
 
@@ -328,7 +328,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for non-pressure UPVC drainage and
+            in obtaining BIS ISI certification for non-pressure UPVC drainage and
             sewerage pipes under Product Certification Scheme-I. All statutory
             fees are payable directly to the Bureau of Indian Standards (BIS).
           </p>

@@ -73,7 +73,7 @@ export default function PVCFittingSockets() {
           {/* Content */}
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Injection Moulded PVC Socket Fittings – IS
+              BIS ISI Certification for Injection Moulded PVC Socket Fittings – IS
               7834 (Parts 1 to 8):1987
             </h1>
 

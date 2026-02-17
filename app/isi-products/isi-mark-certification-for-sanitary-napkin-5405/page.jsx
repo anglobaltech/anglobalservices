@@ -73,7 +73,7 @@ export default function MedicalProductsISIPage() {
           {/* RIGHT CONTENT */}
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Disposable Sanitary Napkins IS 5405
+              BIS ISI Certification for Disposable Sanitary Napkins IS 5405
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -351,7 +351,7 @@ export default function MedicalProductsISIPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing is the most
-              critical stage of BIS certification for sanitary napkins.
+              critical stage of BIS ISI certification for sanitary napkins.
               Manufacturers must invest in adequate in-house testing facilities.
               In some cases, a pre-inspection visit may be conducted to assess
               factory readiness and compliance with BIS requirements.

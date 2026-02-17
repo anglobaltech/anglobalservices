@@ -65,7 +65,7 @@ export default function GoldHallmarkingPage() {
           <div className="flex flex-col gap-6">
             <div>
               <h2 className="text-xl font-bold uppercase text-gray-900 ">
-                BIS ISI Mark under Foreign Manufacturers Certification Scheme (FMCS)
+                BIS Mark under Foreign Manufacturers Certification Scheme (FMCS)
               </h2>
               <div className="w-full h-0.5 bg-[#0072b1]  mb-4" />
               <p className="text-gray-600 text-[15px] leading-6 text-justify">

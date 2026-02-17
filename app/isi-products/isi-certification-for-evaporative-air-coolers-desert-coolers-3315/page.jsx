@@ -73,7 +73,7 @@ export default function EvaporativeAirCooler() {
           <div>
             {/* Heading */}
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Evaporative Air Coolers (Desert Coolers) IS
+              BIS ISI Certification for Evaporative Air Coolers (Desert Coolers) IS
               3315
             </h1>
 
@@ -283,12 +283,12 @@ export default function EvaporativeAirCooler() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Evaporative Air Coolers (IS 3315)
+            Cost of BIS ISI Certification for Evaporative Air Coolers (IS 3315)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for evaporative air coolers under
+            in obtaining BIS ISI certification for evaporative air coolers under
             Product Certification Scheme-I. All statutory fees are payable
             directly to the Bureau of Indian Standards (BIS).
           </p>

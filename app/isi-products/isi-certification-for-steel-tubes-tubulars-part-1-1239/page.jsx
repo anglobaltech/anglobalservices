@@ -71,7 +71,7 @@ export default function SteepTubesISI() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Steel Tubes – IS 1239 (Part 1)
+              BIS ISI Certification for Steel Tubes – IS 1239 (Part 1)
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">

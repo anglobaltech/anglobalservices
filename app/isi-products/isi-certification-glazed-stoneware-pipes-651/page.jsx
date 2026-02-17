@@ -71,7 +71,7 @@ export default function GlanzedStonewarePipes() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Glazed Stoneware Pipes and Fittings – IS 651
+              BIS ISI Certification for Glazed Stoneware Pipes and Fittings – IS 651
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -304,13 +304,13 @@ export default function GlanzedStonewarePipes() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Glazed Stoneware Pipes and Fittings
+            Cost of BIS ISI Certification for Glazed Stoneware Pipes and Fittings
             (IS 651)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for glazed stoneware pipes and
+            in obtaining BIS ISI certification for glazed stoneware pipes and
             fittings under Product Certification Scheme-I. All statutory fees
             are payable directly to the Bureau of Indian Standards (BIS).
           </p>

@@ -72,7 +72,7 @@ export default function ElectricCeilingFan() {
           <div>
             {/* Heading */}
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS Certification for Electric Ceiling Type Fans – IS 374
+              BIS ISI Certification for Electric Ceiling Type Fans – IS 374
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
