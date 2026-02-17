@@ -60,7 +60,7 @@ export default function SteelPipesWaterSupply() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-steel-pipes-water-sewage-supplyy.png"
+              src="/isi-products/isi-certification-steel-pipes-water-sewage-supply.png"
               alt="BIS ISI Certification for Steel Pipes for Water and Sewage IS 3589"
               width={420}
               height={320}

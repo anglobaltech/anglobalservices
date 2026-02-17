@@ -32,6 +32,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'isi-products/isi-certification-glazed-stoneware-pipes-651',
     'isi-products/isi-certification-for-steel-tubes-tubulars-part-1-1239',
     'isi-products/isi-certification-for-steel-pipes-for-water-sewage-3589',
+    'isi-products/isi-certification-for-injection-moulded-pvc-socket-fittings-7834',
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',
