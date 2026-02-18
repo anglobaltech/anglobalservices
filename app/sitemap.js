@@ -36,6 +36,8 @@ const baseUrl = 'https://www.anglobalservices.com'
     'isi-products/isi-certification-for-cpvc-pipes-for-potable-hot-and-cold-water-distribution-supplies-15778',
     'isi-products/isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333',
     'isi-products/isi-certification-for-surgical-face-masks-16289',
+    'isi-products/isi-certification-for-respiratory-protective-devices-filtering-half-masks-9473',
+    'isi-products/isi-certification-for-disposable-surgical-rubber-gloves-13422',
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',

@@ -74,23 +74,24 @@ const products = [
     link: "isi-products/isi-mark-certification-for-sanitary-napkin-5405",
   },
  {
-    id: 5,
+    id: 4,
     name: "Surgical Face Masks",
     standard: "IS 16289: 2014",
     link: "isi-products/isi-certification-for-surgical-face-masks-16289",
 },
   {
     id: 5,
-    name: "Disposable underpads (bed protectors)",
-    standard: "IS 17379: 2020",
-    link: "/bis-isi-mark-certification-medical-products",
-  },
+    name: "Respiratory Protective Devices – Filtering Half Masks",
+    standard: "IS 9473: 2002",
+    link: "isi-products/isi-certification-for-respiratory-protective-devices-filtering-half-masks-9473",
+},
   {
     id: 6,
-    name: "Feminine hygiene pants",
-    standard: "IS 17509 (Part 2): 2021",
-    link: "/bis-isi-mark-certification-medical-products",
-  },
+    name: "Disposable Surgical Rubber Gloves",
+    standard: "IS 13422: 1992",
+    link: "isi-products/isi-certification-for-disposable-surgical-rubber-gloves-13422",
+},
+
 ];
 
 const chunkProducts = (arr, size = 2) => {

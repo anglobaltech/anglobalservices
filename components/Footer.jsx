@@ -239,7 +239,7 @@ export default function Footer() {
                 href="tel:+917782069184"
                 className="flex items-start gap-3 group"
               >
-                <Image src="/call.png" alt="Call" width={18} height={18} />
+                <Image src="/call-image.png" alt="Call" width={18} height={18} />
                 <span className="text-white group-hover:text-[#0072b1]">
                   +91 7782069184
                 </span>
@@ -250,7 +250,7 @@ export default function Footer() {
                 href="tel:+919958820184"
                 className="flex items-start gap-3 group"
               >
-                <Image src="/call.png" alt="Call" width={18} height={18} />
+                <Image src="/call-image.png" alt="Call" width={18} height={18} />
                 <span className="text-white group-hover:text-[#0072b1]">
                   +91 9958820184
                 </span>

@@ -23,7 +23,7 @@ export default function Header() {
           {/* Call */}
           <a href="tel:+917782069184" className="flex items-center gap-2 group">
             <Image
-              src="/call.png"
+              src="/call-image.png"
               alt="Call"
               width={22}
               height={22}
