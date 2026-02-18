@@ -35,6 +35,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'isi-products/isi-certification-for-injection-moulded-pvc-socket-fittings-7834',
     'isi-products/isi-certification-for-cpvc-pipes-for-potable-hot-and-cold-water-distribution-supplies-15778',
     'isi-products/isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333',
+    'isi-products/isi-certification-for-surgical-face-masks-16289',
     'jewellery-registration',
     'calibration-certificate',
     'chemicals-petrochemicals',

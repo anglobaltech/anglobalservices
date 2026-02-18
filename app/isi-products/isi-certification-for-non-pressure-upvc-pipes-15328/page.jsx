@@ -258,7 +258,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Non-Pressure UPVC Pipes for
+            Requirements to Obtain BIS ISI License for Non-Pressure UPVC Pipes for
             Drainage & Sewerage Systems (IS 15328)
           </h2>
 
@@ -282,7 +282,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines applicable to drainage and sewerage
+              BIS ISI certification guidelines applicable to drainage and sewerage
               pipes.
             </li>
           </ul>
@@ -290,7 +290,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for non-pressure UPVC pipes for drainage
+            To obtain BIS ISI certification for non-pressure UPVC pipes for drainage
             and sewerage systems under Product Certification Scheme-I,
             manufacturers are required to submit documents broadly classified
             into the following categories:
@@ -322,7 +322,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Non-Pressure UPVC Pipes for Drainage &
+            Cost of BIS ISI Certification for Non-Pressure UPVC Pipes for Drainage &
             Sewerage Systems (IS 15328)
           </h2>
 
@@ -403,7 +403,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              15328:2003 is a critical stage in the BIS certification process.
+              15328:2003 is a critical stage in the BIS ISI certification process.
               BIS may conduct a factory pre-assessment to evaluate readiness
               prior to inspection. Charges mentioned above are indicative and
               may vary depending on pipe size, stiffness class, and testing
@@ -504,7 +504,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for UPVC drainage and sewerage
+              1. Is BIS ISI certification mandatory for UPVC drainage and sewerage
               pipes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -541,19 +541,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification under IS
-              15328?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              15328:2003 before exporting UPVC drainage and sewerage pipes to
-              India and must appoint an Authorized Indian Representative (AIR).
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. How long does the BIS certification process take?
+              5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The certification process typically takes around 30 days for

@@ -73,12 +73,12 @@ const products = [
     standard: "IS 5405: 2019",
     link: "isi-products/isi-mark-certification-for-sanitary-napkin-5405",
   },
-  {
-    id: 4,
-    name: "Reusable sanitary napkins",
-    standard: "IS 17514: 2021",
-    link: "/bis-isi-mark-certification-medical-products",
-  },
+ {
+    id: 5,
+    name: "Surgical Face Masks",
+    standard: "IS 16289: 2014",
+    link: "isi-products/isi-certification-for-surgical-face-masks-16289",
+},
   {
     id: 5,
     name: "Disposable underpads (bed protectors)",

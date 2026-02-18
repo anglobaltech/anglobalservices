@@ -21,7 +21,7 @@ export default function FloatingContact() {
         </button>
 
         <a href="tel:+917782069184">
-          <Image src="/call.png" alt="Call" width={34} height={34} />
+          <Image src="/calL.png" alt="Call" width={34} height={34} />
         </a>
 
         <a

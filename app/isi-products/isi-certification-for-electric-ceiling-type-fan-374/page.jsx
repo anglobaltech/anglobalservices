@@ -147,7 +147,7 @@ export default function ElectricCeilingFan() {
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS certification under the ISI Mark Scheme (Scheme I – Schedule II)
+            BIS ISI certification under the ISI Mark Scheme (Scheme I – Schedule II)
             is mandatory for electric ceiling fans. Compliance with IS 374:2019
             assures adherence to national quality and energy conservation
             standards, strengthens consumer trust, and supports procurement by
@@ -248,14 +248,14 @@ export default function ElectricCeilingFan() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines applicable to ceiling fans.
+              BIS ISI certification guidelines applicable to ceiling fans.
             </li>
           </ul>
         </div>
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for electric ceiling fans under Product
+            To obtain BIS ISI certification for electric ceiling fans under Product
             Certification Scheme-I, manufacturers are required to submit
             documents broadly classified into the following categories:
           </p>
@@ -286,12 +286,12 @@ export default function ElectricCeilingFan() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Electric Ceiling Fans (IS 374)
+            Cost of BIS ISI Certification for Electric Ceiling Fans (IS 374)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for electric ceiling fans under
+            in obtaining BIS ISI certification for electric ceiling fans under
             Product Certification Scheme-I. All statutory fees are payable
             directly to the Bureau of Indian Standards (BIS).
           </p>
@@ -366,7 +366,7 @@ export default function ElectricCeilingFan() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              374:2019 is a critical stage in the BIS certification process. BIS
+              374:2019 is a critical stage in the BIS ISI certification process. BIS
               may conduct a factory pre-assessment to evaluate readiness prior
               to inspection. The above charges are indicative and may vary
               depending on fan type, testing requirements, and inspection scope.
@@ -468,7 +468,7 @@ export default function ElectricCeilingFan() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for electric ceiling fans in
+              1. Is BIS ISI certification mandatory for electric ceiling fans in
               India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -504,23 +504,10 @@ export default function ElectricCeilingFan() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification for
-              ceiling fans?
+              5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              374:2019 before exporting ceiling fans to India. They are required
-              to appoint an Authorized Indian Representative (AIR) and comply
-              with BIS inspection and testing procedures.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. How long does the BIS certification process take?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS certification process generally takes around 30 days for
+              The BIS ISI certification process generally takes around 30 days for
               Indian manufacturers and up to 180 days for foreign manufacturers,
               depending on testing, documentation, and inspection timelines.
             </p>

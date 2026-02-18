@@ -77,7 +77,7 @@ export default function HDPEPipesISI() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS certification is mandatory for High Density Polyethylene
+              BIS ISI certification is mandatory for High Density Polyethylene
               (HDPE) Pipes used in sewerage and drainage systems as per Indian
               Standard IS 14333:2022. This standard ensures that HDPE pipes meet
               essential strength, durability, and performance requirements
@@ -277,14 +277,14 @@ export default function HDPEPipesISI() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines for HDPE sewerage pipes.
+              BIS ISI certification guidelines for HDPE sewerage pipes.
             </li>
           </ul>
         </div>
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for HDPE Pipes for Sewerage under
+            To obtain BIS ISI certification for HDPE Pipes for Sewerage under
             Product Certification Scheme-I, manufacturers are required to submit
             documents broadly classified into the following categories:
           </p>
@@ -395,7 +395,7 @@ export default function HDPEPipesISI() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Note:</strong> Product testing under IS 14333 is a
-              critical stage of the BIS certification process. Costs may vary
+              critical stage of the BIS ISI certification process. Costs may vary
               depending on pipe size, ring stiffness class, and testing scope.
             </p>
           </div>
@@ -489,7 +489,7 @@ export default function HDPEPipesISI() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for HDPE pipes used for
+              1. Is BIS ISI certification mandatory for HDPE pipes used for
               sewerage?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -517,18 +517,6 @@ export default function HDPEPipesISI() {
               IS 14333 HDPE pipes are used in underground sewerage systems,
               municipal drainage networks, industrial effluent pipelines, and
               wastewater management projects.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification under IS
-              14333?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers can apply for BIS certification under
-              IS 14333 through the FMCS route and must appoint an Authorized
-              Indian Representative (AIR).
             </p>
           </div>
 

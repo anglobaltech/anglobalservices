@@ -241,7 +241,7 @@ export default function DomesticPressureCookers() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Domestic Pressure Cookers (IS
+            Requirements to Obtain BIS ISI License for Domestic Pressure Cookers (IS
             2347)
           </h2>
 
@@ -261,7 +261,7 @@ export default function DomesticPressureCookers() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines applicable to domestic pressure
+              BIS ISI certification guidelines applicable to domestic pressure
               cookers.
             </li>
           </ul>
@@ -300,7 +300,7 @@ export default function DomesticPressureCookers() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Domestic Pressure Cookers (IS 2347)
+            Cost of BIS ISI Certification for Domestic Pressure Cookers (IS 2347)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -380,7 +380,7 @@ export default function DomesticPressureCookers() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              2347:2017 is a crucial part of the BIS certification process. BIS
+              2347:2017 is a crucial part of the BIS  certification process. BIS
               may conduct a factory pre-assessment to evaluate readiness prior
               to inspection. Charges mentioned above are indicative and may vary
               depending on cooker type, capacity group, and testing scope.
@@ -481,7 +481,7 @@ export default function DomesticPressureCookers() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for domestic pressure cookers in
+              1. Is BIS ISI certification mandatory for domestic pressure cookers in
               India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -518,23 +518,10 @@ export default function DomesticPressureCookers() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification for
-              pressure cookers?
+              5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              2347:2017 before exporting domestic pressure cookers to India.
-              They must appoint an Authorized Indian Representative (AIR) and
-              comply with BIS inspection and testing requirements.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. How long does the BIS certification process take?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS certification process typically takes around 30 days for
+              The BIS ISI certification process typically takes around 30 days for
               Indian manufacturers and up to 180 days for foreign manufacturers,
               depending on documentation, product testing, and factory
               inspection timelines.

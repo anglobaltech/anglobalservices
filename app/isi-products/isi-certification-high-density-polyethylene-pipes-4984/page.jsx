@@ -78,7 +78,7 @@ export default function HDPEPIPESPage() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS certification is mandatory for High Density Polyethylene
+              BIS ISI certification is mandatory for High Density Polyethylene
               (HDPE) pipes used for potable water supplies in India as per
               Indian Standard IS 4984:1995. HDPE pipes play a crucial role in
               drinking water distribution systems due to their superior
@@ -274,14 +274,14 @@ export default function HDPEPIPESPage() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines applicable to HDPE pipes.
+              BIS ISI certification guidelines applicable to HDPE pipes.
             </li>
           </ul>
         </div>
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for HDPE pipes for potable water
+            To obtain BIS ISI certification for HDPE pipes for potable water
             supplies under Product Certification Scheme-I, manufacturers are
             required to submit documents broadly classified into the following
             categories:
@@ -313,7 +313,7 @@ export default function HDPEPIPESPage() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for HDPE Pipes for Potable Water Supplies
+            Cost of BIS ISI Certification for HDPE Pipes for Potable Water Supplies
             (IS 4984)
           </h2>
 
@@ -394,7 +394,7 @@ export default function HDPEPIPESPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              4984:1995 is a critical stage in the BIS certification process.
+              4984:1995 is a critical stage in the BIS ISI certification process.
               BIS may conduct a factory pre-assessment to evaluate readiness
               prior to inspection. Charges mentioned above are indicative and
               may vary depending on pipe diameter, pressure rating, and testing
@@ -495,7 +495,7 @@ export default function HDPEPIPESPage() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for HDPE pipes in India?
+              1. Is BIS ISI certification mandatory for HDPE pipes in India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes. HDPE pipes used for potable water supply must comply with
@@ -529,23 +529,10 @@ export default function HDPEPIPESPage() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification for HDPE
-              pipes?
+              5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              4984:1995 before exporting HDPE pipes to India. They must appoint
-              an Authorized Indian Representative (AIR) and comply with BIS
-              inspection and testing requirements.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. How long does the BIS certification process take?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS certification process generally takes around 30 days for
+              The BIS ISI certification process generally takes around 30 days for
               Indian manufacturers and up to 180 days for foreign manufacturers,
               depending on inspection scheduling and laboratory testing
               timelines.

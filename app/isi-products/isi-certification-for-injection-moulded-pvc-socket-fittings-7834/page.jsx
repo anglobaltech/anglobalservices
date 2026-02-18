@@ -87,7 +87,7 @@ export default function PVCFittingSockets() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              To obtain BIS certification and manufacture a standard quality
+              To obtain BIS ISI certification and manufacture a standard quality
               product, it is mandatory that the fittings strictly comply with
               the relevant parts of IS 7834. Compliance ensures uniform
               dimensions, reliable jointing, pressure resistance, and long-term
@@ -330,7 +330,7 @@ export default function PVCFittingSockets() {
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            The BIS certification process validates manufacturing consistency,
+            The BIS ISI certification process validates manufacturing consistency,
             quality control practices, and testing capability before permitting
             the use of the ISI Mark on PVC socket fittings covered under IS
             7834.
@@ -475,7 +475,7 @@ export default function PVCFittingSockets() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for PVC Socket Fittings (IS 7834)
+            Cost of BIS ISI Certification for PVC Socket Fittings (IS 7834)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -635,7 +635,7 @@ export default function PVCFittingSockets() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for PVC socket fittings?
+              1. Is BIS ISI certification mandatory for PVC socket fittings?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6">
               Yes. PVC socket fittings used for water supply applications must

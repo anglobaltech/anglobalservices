@@ -49,7 +49,7 @@ export default function CalibrationCertificatePage() {
         }}
       >
         <h1 className="relative z-10 text-white text-3xl md:text-4xl font-bold uppercase tracking-wide text-center px-4">
-          BIS Certification For Furniture & Plywood Products
+          BIS ISI Certification For Furniture & Plywood Products
         </h1>
       </section>
 
@@ -125,7 +125,7 @@ export default function CalibrationCertificatePage() {
             Along with furniture, BIS ISI Mark certification is also compulsory
             for plywood products sold or imported in India. As per the Quality
             Control Order issued in 2024, plywood manufacturers and importers
-            must obtain BIS certification to legally sell plywood in the Indian
+            must obtain BIS ISI certification to legally sell plywood in the Indian
             market. Non-certified plywood products are not permitted for sale or
             distribution.
           </p>
@@ -678,7 +678,7 @@ export default function CalibrationCertificatePage() {
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
                 Government departments, public sector units, and large
                 institutions prefer or require ISI-marked furniture for
-                procurement. BIS certification allows manufacturers to
+                procurement. BIS ISI certification allows manufacturers to
                 participate in high-volume government tenders and institutional
                 supply contracts without restrictions.
               </p>
@@ -704,7 +704,7 @@ export default function CalibrationCertificatePage() {
                 3. Better Quality Control and Production Efficiency
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                BIS certification encourages manufacturers to follow standard
+                BIS ISI certification encourages manufacturers to follow standard
                 production practices and regular in-house testing. This results
                 in consistent product quality, reduced defects, fewer customer
                 complaints, and lower rejection or return rates.

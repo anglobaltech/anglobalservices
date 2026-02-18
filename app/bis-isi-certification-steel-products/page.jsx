@@ -64,7 +64,7 @@ const products = [
     id: 2,
     name: "Hot Rolled Steel Plates",
     standard: "IS 2062: 2011",
-    link: "/isi-products/isi-mark-certification-for-hot-rolled-steel-plates-2062",
+    link: "/bis-isi-certification-steel-products",
   },
   {
     id: 3,
@@ -76,19 +76,19 @@ const products = [
     id: 4,
     name: "Structural Steel Sections",
     standard: "IS 2062: 2011",
-    link: "/isi-products/isi-mark-certification-for-structural-steel-2062",
+    link: "/bis-isi-certification-steel-products",
   },
   {
     id: 5,
     name: "Cold Rolled Steel Sheets",
     standard: "IS 513: 2016",
-    link: "/isi-products/isi-mark-certification-for-cold-rolled-steel-513",
+    link: "/bis-isi-certification-steel-products",
   },
   {
     id: 6,
     name: "Galvanized Steel Sheets",
     standard: "IS 277: 2018",
-    link: "/isi-products/isi-mark-certification-for-galvanized-steel-sheets-277",
+    link: "/bis-isi-certification-steel-products",
   },
 ];
 

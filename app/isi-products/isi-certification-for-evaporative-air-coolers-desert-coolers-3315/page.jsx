@@ -91,7 +91,7 @@ export default function EvaporativeAirCooler() {
               Evaporative air coolers are extensively used in homes, offices,
               shops, warehouses, and commercial spaces due to their low power
               consumption, cost-effective operation, and eco-friendly cooling
-              process. BIS certification under IS 3315:2019 ensures that the
+              process. BIS ISI certification under IS 3315:2019 ensures that the
               product meets Indian standards for safety, performance, and
               reliability, thereby increasing consumer confidence.
             </p>
@@ -252,7 +252,7 @@ export default function EvaporativeAirCooler() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for evaporative air coolers under
+            To obtain BIS ISI certification for evaporative air coolers under
             Product Certification Scheme-I, manufacturers are required to submit
             documents broadly classified into the following categories:
           </p>
@@ -363,7 +363,7 @@ export default function EvaporativeAirCooler() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              3315:2019 is a key stage in the BIS certification process. BIS may
+              3315:2019 is a key stage in the BIS ISI certification process. BIS may
               conduct a factory pre-assessment to evaluate readiness before
               formal inspection. The above charges are indicative and may vary
               depending on product type, testing requirements, and inspection
@@ -467,7 +467,7 @@ export default function EvaporativeAirCooler() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for evaporative air coolers in
+              1. Is BIS ISI certification mandatory for evaporative air coolers in
               India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -505,20 +505,7 @@ export default function EvaporativeAirCooler() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification for
-              desert coolers?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification before
-              exporting evaporative air coolers to India. They are required to
-              appoint an Authorized Indian Representative (AIR) and comply with
-              BIS procedures for inspection and testing.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. How long does the BIS certification process take?
+              5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The certification process typically takes 30 to 45 days, depending

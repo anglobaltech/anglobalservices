@@ -62,7 +62,7 @@ export default function MedicalProductsISIPage() {
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
               src="/isi-products/sanitary-napkins.png"
-              alt="BIS Certification for Disposable Sanitary Napkins IS 5405"
+              alt="BIS ISI Certification for Disposable Sanitary Napkins IS 5405"
               width={420}
               height={320}
               className="w-full h-auto object-cover"
@@ -271,7 +271,7 @@ export default function MedicalProductsISIPage() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Disposable Sanitary Napkins (IS 5405)
+            Cost of BIS ISI Certification for Disposable Sanitary Napkins (IS 5405)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">

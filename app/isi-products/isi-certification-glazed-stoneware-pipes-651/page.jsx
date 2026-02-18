@@ -156,7 +156,7 @@ export default function GlanzedStonewarePipes() {
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS certification under IS 651 is granted only after successful
+            BIS ISI certification under IS 651 is granted only after successful
             product testing, factory inspection, and verification of quality
             control systems. Certified glazed stoneware pipes and fittings are
             permitted to bear the ISI Mark, confirming conformity to Indian
@@ -265,14 +265,14 @@ export default function GlanzedStonewarePipes() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines for stoneware pipes and fittings.
+              BIS ISI certification guidelines for stoneware pipes and fittings.
             </li>
           </ul>
         </div>
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for glazed stoneware pipes and fittings
+            To obtain BIS ISI certification for glazed stoneware pipes and fittings
             under Product Certification Scheme-I, manufacturers are required to
             submit documents broadly classified into the following categories:
           </p>
@@ -385,7 +385,7 @@ export default function GlanzedStonewarePipes() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing under IS 651:2007
-              is a critical stage of the BIS certification process. BIS may
+              is a critical stage of the BIS ISI certification process. BIS may
               conduct a factory pre-assessment to evaluate manufacturing and
               glazing quality readiness. Charges may vary depending on pipe
               size, fittings, and testing scope.
@@ -486,7 +486,7 @@ export default function GlanzedStonewarePipes() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for precast concrete pipes?
+              1. Is BIS ISI certification mandatory for precast concrete pipes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes. Precast concrete pipes used for drainage, sewerage, culverts,
@@ -525,18 +525,6 @@ export default function GlanzedStonewarePipes() {
               IS 458 pipes are widely used in sewerage systems, stormwater
               drains, culverts, irrigation pipelines, and underground water
               conveyance systems in urban and rural infrastructure.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. Can foreign manufacturers apply for BIS certification under IS
-              458?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              458:2021 before exporting precast concrete pipes to India and must
-              appoint an Authorized Indian Representative (AIR).
             </p>
           </div>
 

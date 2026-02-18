@@ -60,7 +60,7 @@ export default function SteelPipesWaterSupply() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-steel-pipes-water-sewage-supply.png"
+              src="/isi-products/isi-certification-steel-pipes-water-sewage-supplyy.png"
               alt="BIS ISI Certification for Steel Pipes for Water and Sewage IS 3589"
               width={420}
               height={320}
@@ -292,7 +292,7 @@ export default function SteelPipesWaterSupply() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for steel pipes for water and sewage
+            To obtain BIS ISI certification for steel pipes for water and sewage
             under Product Certification Scheme-I, manufacturers are required to
             submit documents broadly classified into the following categories:
           </p>
@@ -324,13 +324,13 @@ export default function SteelPipesWaterSupply() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Steel Pipes for Water & Sewage (IS
+            Cost of BIS ISI Certification for Steel Pipes for Water & Sewage (IS
             3589)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for steel pipes under Product
+            in obtaining BIS ISI certification for steel pipes under Product
             Certification Scheme-I. All statutory fees are payable directly to
             the Bureau of Indian Standards (BIS).
           </p>
@@ -405,7 +405,7 @@ export default function SteelPipesWaterSupply() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS 3589 is
-              a critical stage in the BIS certification process. BIS may conduct
+              a critical stage in the BIS ISI certification process. BIS may conduct
               a factory pre-assessment to evaluate manufacturing and quality
               control readiness. Charges may vary depending on pipe diameter,
               grade, welding type, and testing scope.
@@ -505,7 +505,7 @@ export default function SteelPipesWaterSupply() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for steel pipes used for water
+              1. Is BIS ISI certification mandatory for steel pipes used for water
               and sewage?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -534,18 +534,6 @@ export default function SteelPipesWaterSupply() {
               IS 3589 covers steel pipes with outside diameters ranging from
               168.3 mm to 2540 mm, suitable for large-scale water and sewage
               infrastructure applications.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification under IS
-              3589?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              3589 before exporting steel pipes for water and sewage to India
-              and must appoint an Authorized Indian Representative (AIR).
             </p>
           </div>
 

@@ -238,7 +238,7 @@ export default function UPVCPIPESPage() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for UPVC Pipes for Water Supplies
+            Requirements to Obtain BIS ISI License for UPVC Pipes for Water Supplies
             (IS 4985)
           </h2>
 
@@ -258,14 +258,14 @@ export default function UPVCPIPESPage() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines applicable to UPVC pipes.
+              BIS ISI certification guidelines applicable to UPVC pipes.
             </li>
           </ul>
         </div>
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for UPVC pipes for water supplies under
+            To obtain BIS ISI certification for UPVC pipes for water supplies under
             Product Certification Scheme-I, manufacturers are required to submit
             documents broadly classified into the following categories:
           </p>
@@ -377,7 +377,7 @@ export default function UPVCPIPESPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              4985:2021 is a critical stage in the BIS certification process.
+              4985:2021 is a critical stage in the BIS ISI certification process.
               BIS may conduct a factory pre-assessment to evaluate readiness
               prior to inspection. Charges mentioned above are indicative and
               may vary depending on pipe class, diameter, and testing scope.
@@ -479,7 +479,7 @@ export default function UPVCPIPESPage() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for UPVC pipes in India?
+              1. Is BIS ISI certification mandatory for UPVC pipes in India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes. UPVC pipes for potable water supply must comply with Indian
@@ -514,20 +514,7 @@ export default function UPVCPIPESPage() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Can foreign manufacturers apply for BIS certification for UPVC
-              pipes?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              4985:2021 before exporting UPVC pipes to India. They are required
-              to appoint an Authorized Indian Representative (AIR) and comply
-              with BIS inspection and testing procedures.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. How long does the BIS certification process take?
+              5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The certification process generally takes around 30 days for

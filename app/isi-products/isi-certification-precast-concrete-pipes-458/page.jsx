@@ -173,7 +173,7 @@ export default function ConcretePipes() {
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS certification under IS 458 is granted only after successful
+            BIS ISI certification under IS 458 is granted only after successful
             product testing, factory inspection, and implementation of an
             effective quality control system. Certified products are permitted
             to carry the ISI Mark, signifying conformity to Indian Standards and
@@ -284,7 +284,7 @@ export default function ConcretePipes() {
             </li>
             <li>
               Strict implementation of the Scheme of Inspection and Testing
-              (SIT) and BIS certification guidelines for concrete pipes.
+              (SIT) and BIS ISI certification guidelines for concrete pipes.
             </li>
           </ul>
         </div>
@@ -323,12 +323,12 @@ export default function ConcretePipes() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Precast Concrete Pipes (IS 458)
+            Cost of BIS ISI Certification for Precast Concrete Pipes (IS 458)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for precast concrete pipes under
+            in obtaining BIS ISI certification for precast concrete pipes under
             Product Certification Scheme-I. All statutory fees are payable
             directly to the Bureau of Indian Standards (BIS).
           </p>
@@ -403,7 +403,7 @@ export default function ConcretePipes() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing under IS 458:2021
-              is a critical component of the BIS certification process. BIS may
+              is a critical component of the BIS ISI certification process. BIS may
               conduct a factory pre-assessment to evaluate manufacturing and
               quality control readiness. Costs may vary based on pipe diameter,
               class, reinforcement, and laboratory testing requirements.
@@ -504,7 +504,7 @@ export default function ConcretePipes() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for precast concrete pipes?
+              1. Is BIS ISI certification mandatory for precast concrete pipes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes. Precast concrete pipes used for drainage, sewerage, culverts,
@@ -543,18 +543,6 @@ export default function ConcretePipes() {
               IS 458 pipes are widely used in sewerage systems, stormwater
               drains, culverts, irrigation pipelines, and underground water
               conveyance systems in urban and rural infrastructure.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. Can foreign manufacturers apply for BIS certification under IS
-              458?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              458:2021 before exporting precast concrete pipes to India and must
-              appoint an Authorized Indian Representative (AIR).
             </p>
           </div>
 

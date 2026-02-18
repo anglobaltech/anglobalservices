@@ -62,7 +62,7 @@ export default function MedicalProductsISIPage() {
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
               src="/isi-products/disposable-diaper.png"
-              alt="BIS Certification for Disposable Baby Diaper IS 17509"
+              alt="BIS ISI Certification for Disposable Baby Diaper IS 17509"
               width={420}
               height={320}
               className="w-full h-auto object-cover"
@@ -242,7 +242,7 @@ export default function MedicalProductsISIPage() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS certification for disposable baby diapers under
+            To obtain BIS ISI certification for disposable baby diapers under
             Product Certification Scheme-I, manufacturers are required to submit
             documents broadly classified into the following categories:
           </p>
@@ -270,12 +270,12 @@ export default function MedicalProductsISIPage() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for Disposable Baby Diaper (IS 17509)
+            Cost of BIS ISI Certification for Disposable Baby Diaper (IS 17509)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS certification for disposable baby diapers under
+            in obtaining BIS ISI certification for disposable baby diapers under
             Product Certification Scheme-I. All statutory fees are payable
             directly to the Bureau of Indian Standards (BIS).
           </p>
@@ -352,7 +352,7 @@ export default function MedicalProductsISIPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing is a critical
-              stage of the BIS certification process and determines compliance
+              stage of the BIS ISI certification process and determines compliance
               with IS 17509. Manufacturers are required to invest in suitable
               in-house testing facilities. In certain cases, a pre-visit to the
               factory may be conducted to assess readiness and conformity with

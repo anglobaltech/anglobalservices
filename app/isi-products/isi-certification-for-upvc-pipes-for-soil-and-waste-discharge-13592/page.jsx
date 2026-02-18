@@ -284,7 +284,7 @@ export default function SoilWasteDischargePipes() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS certification guidelines applicable to soil and waste
+              BIS ISI certification guidelines applicable to soil and waste
               discharge pipes.
             </li>
           </ul>
@@ -325,7 +325,7 @@ export default function SoilWasteDischargePipes() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS Certification for UPVC Pipes for Soil & Waste Discharge
+            Cost of BIS ISI Certification for UPVC Pipes for Soil & Waste Discharge
             Systems (IS 13592)
           </h2>
 
@@ -406,7 +406,7 @@ export default function SoilWasteDischargePipes() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              13592:2013 is a critical stage in the BIS certification process.
+              13592:2013 is a critical stage in the BIS ISI certification process.
               BIS may conduct a factory pre-assessment to evaluate readiness
               prior to inspection. Charges mentioned above are indicative and
               may vary depending on pipe diameter, pipe type (A or B), and
@@ -506,7 +506,7 @@ export default function SoilWasteDischargePipes() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS certification mandatory for UPVC soil and waste
+              1. Is BIS ISI certification mandatory for UPVC soil and waste
               discharge pipes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -547,18 +547,6 @@ export default function SoilWasteDischargePipes() {
               Type A pipes are used for ventilation, rainwater, and rainwater
               harvesting systems, while Type B pipes are used for soil and waste
               discharge systems inside and outside buildings.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              5. Can foreign manufacturers apply for BIS certification under IS
-              13592?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Foreign manufacturers must obtain BIS certification under IS
-              13592:2013 before exporting UPVC soil and waste discharge pipes to
-              India and must appoint an Authorized Indian Representative (AIR).
             </p>
           </div>
 
