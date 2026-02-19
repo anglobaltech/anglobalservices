@@ -18,7 +18,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'bis-isi-mark-certification-hardware-products',
     'bis-isi-mark-certification-electronics-products',
     'bis-isi-mark-certification-home-appliances-kitchen-products',
-    'isi-products/isi-mark-certification-for-disposable-baby-diaper-is-17509',
+    'isi-products/isi-mark-certification-for-disposable-baby-diaper-17509',
     'isi-products/isi-mark-certification-for-sanitary-napkin-5405',
     'isi-products/isi-mark-certification-for-disposable-adult-diaper-17508',
     'isi-products/isi-certification-for-evaporative-air-coolers-desert-coolers-3315',

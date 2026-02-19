@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export const metadata = {
   title:
-    "ISI Certification & BIS Certification Services in India | BIS ISI Mark – AN Global Services",
+    "ISI Certification & BIS Certification Services in India | AN Global Services",
 
   description:
     "Apply for ISI Certification & BIS Certification in India with AN Global Services. Trusted BIS ISI certification services for manufacturers & importers. End-to-end support including documentation, product testing, factory inspection & fast BIS approval.",
@@ -242,7 +242,6 @@ export default function ISIPage() {
 
             <ul className="space-y-3 text-gray-600 text-[15px] list-disc pl-6">
               <li>ISI certification for Indian manufacturers</li>
-              <li>ISI certification for foreign manufacturers (FMCS)</li>
               <li>ISI certification services for importers & brand owners</li>
               <li>Product testing with BIS-recognized laboratories</li>
               <li>Factory inspection & compliance preparation</li>
@@ -421,7 +420,7 @@ export default function ISIPage() {
             </h2>
 
             <ul className="space-y-2 text-[15px] list-disc pl-6">
-              <li>Step1: Organize the Lab Test Report (LTR) by BIS</li>
+              <li>Step1: Organize the Lab Test Report (LTR) from a BIS-recognized laboratory</li>
               <li>Step2: Filling of Application</li>
               <li>Step3: Preparation of Manual</li>
               <li>Step4: Documentations</li>

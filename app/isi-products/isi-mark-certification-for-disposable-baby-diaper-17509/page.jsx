@@ -90,14 +90,10 @@ export default function MedicalProductsISIPage() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              The biocompatibility evaluation of raw materials is required to be
-              carried out at least once for existing materials and must be
-              repeated whenever there is any change in the raw material
-              composition or the source of supply. Conformity of raw materials
-              to the standard may be established through supplier test
-              certificates, test reports issued by BIS-recognized or empanelled
-              laboratories, reports from NABL-accredited laboratories, or valid
-              in-house testing carried out by the manufacturer.
+              AN Global Services provides end-to-end BIS ISI Mark Certification
+              services for Disposable Baby Diapers as per IS 17509:2021. We
+              assist manufacturers with documentation, testing, in-house lab
+              setup, BIS factory audit, and license approval across India.
             </p>
           </div>
         </div>
@@ -216,8 +212,8 @@ export default function MedicalProductsISIPage() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS ISI License for Disposable Baby Diaper (IS
-            17509)
+            Requirements to Obtain BIS ISI License for Disposable Baby Diaper
+            (IS 17509)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -352,12 +348,13 @@ export default function MedicalProductsISIPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing is a critical
-              stage of the BIS ISI certification process and determines compliance
-              with IS 17509. Manufacturers are required to invest in suitable
-              in-house testing facilities. In certain cases, a pre-visit to the
-              factory may be conducted to assess readiness and conformity with
-              BIS requirements. All charges mentioned above are exclusive of any
-              additional laboratory or inspection-related expenses.
+              stage of the BIS ISI certification process and determines
+              compliance with IS 17509. Manufacturers are required to invest in
+              suitable in-house testing facilities. In certain cases, a
+              pre-visit to the factory may be conducted to assess readiness and
+              conformity with BIS requirements. All charges mentioned above are
+              exclusive of any additional laboratory or inspection-related
+              expenses.
             </p>
           </div>
         </div>

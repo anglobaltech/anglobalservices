@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 export const metadata = {
-  title: "About AN Global Services | Trusted Certification & Compliance Consultancy",
+  title:
+    "About AN Global Services | Trusted Certification & Compliance Consultancy",
   description:
     "Learn about AN Global Services, a trusted certification and compliance consultancy helping businesses with BIS, WPC, NABL, CRS, FMCS, ISI Mark, Hallmarking, EPR Authorization, MSME, NSIC, and regulatory approvals in India.",
 };
@@ -104,7 +105,7 @@ export default function AboutPage() {
       </div>
 
       {/* Stats Section */}
-      <div className="py-12 bg-gray-50">
+      <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -119,7 +120,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="relative">
@@ -151,13 +152,13 @@ export default function AboutPage() {
               <p>
                 We provide Product Certification (ISI mark), Foreign
                 Manufactures Certification Scheme (FMCS), Compulsory
-                Registration Scheme (CRS) for Electronics & IT Goods, 
-                 BIS hallmarking of precious For
-                metals/jewellery, BEE Registration Services, Trademark Registration Services,
-                CE Certification Services,  EPR Authorization (for
-                e-waste), Solar Panel BIS Registration Services, WPC Approval and TEC Certification, MSME & NSIC
-                Certification, WMI Certification, NABL Accreditation Consultancy, WPC
-                License and many more.
+                Registration Scheme (CRS) for Electronics & IT Goods, BIS
+                hallmarking of precious For metals/jewellery, BEE Registration
+                Services, Trademark Registration Services, CE Certification
+                Services, EPR Authorization (for e-waste), Solar Panel BIS
+                Registration Services, WPC Approval and TEC Certification, MSME
+                & NSIC Certification, WMI Certification, NABL Accreditation
+                Consultancy, WPC License and many more.
               </p>
               <p>
                 The Government of India has established various parameters to
@@ -236,9 +237,8 @@ export default function AboutPage() {
               Contact Us Today
             </Link>
 
-
             <Link
-            href="/bis-isi-mark-certification"
+              href="/bis-isi-mark-certification"
               className="border-2 border-[#0075B6] text-[#0075B6] font-bold py-3 px-10 rounded-xl
         hover:bg-[#0075B6] hover:text-white transition-all duration-300 cursor-pointer"
             >

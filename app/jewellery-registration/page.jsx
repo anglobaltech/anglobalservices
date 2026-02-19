@@ -50,7 +50,7 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-14">
         <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
@@ -108,13 +108,13 @@ export default function GoldHallmarkingPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 md:py-20">
+      <section className="bg-gray-50 py-12 ">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900">
             BIS JEWELLER REGISTRATION
           </h2>
-          <div className="w-full h-0.5 bg-gray-200 relative mb-8">
-            <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
+          <div className="w-full h-0.5 bg-gray-200 relative mb-4">
+            <span className="absolute left-0 top-0 h-0.5 w-76 bg-[#0072b1]"></span>
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -136,7 +136,7 @@ export default function GoldHallmarkingPage() {
               <p className="text-gray-600 text-[15px] leading-6 mb-3">
                 As per government notifications, hallmarking of gold jewellery
                 is mandatory across notified districts in India. Jewellers
-                dealing in commonly traded gold purities such as 14K, 18K, 20K,
+                dealing in commonly traded gold purities such as 9K, 14K, 18K, 20K,
                 22K, 23K, and 24K must obtain BIS Jeweller Registration before
                 selling hallmarked jewellery.
               </p>
