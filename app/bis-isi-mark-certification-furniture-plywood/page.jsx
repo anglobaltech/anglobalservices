@@ -36,6 +36,54 @@ export const metadata = {
   },
 };
 
+const products = [
+  {
+    id: 1,
+    name: "Wooden Chairs",
+    standard: "IS 13713: 2019",
+    link: "bis-isi-mark-certification-furniture-plywood",
+  },
+  {
+    id: 2,
+    name: "Wooden Tables",
+    standard: "IS 2112: 1981",
+    link: "bis-isi-mark-certification-furniture-plywood",
+  },
+  {
+    id: 3,
+    name: "Steel Furniture",
+    standard: "IS 14061: 2003",
+    link: "bis-isi-mark-certification-furniture-plywood",
+  },
+  {
+    id: 4,
+    name: "Office Chairs",
+    standard: "IS 17631: 2022",
+    link: "bis-isi-mark-certification-furniture-plywood",
+  },
+  {
+    id: 5,
+    name: "School Furniture",
+    standard: "IS 4837: 1990",
+    link: "bis-isi-mark-certification-furniture-plywood",
+  },
+  {
+    id: 6,
+    name: "Metal Beds",
+    standard: "IS 11336: 1985",
+    link: "bis-isi-mark-certification-furniture-plywood",
+  },
+];
+
+const chunkProducts = (arr, size = 2) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+};
+
+const productRows = chunkProducts(products, 2);
 export default function CalibrationCertificatePage() {
   return (
     <main className="w-full bg-white">
@@ -118,7 +166,7 @@ export default function CalibrationCertificatePage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-8">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-8">
         <div>
           {/* Content */}
           <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -158,8 +206,8 @@ export default function CalibrationCertificatePage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 px-4 pb-12">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+      <section className="bg-gray-50 px-4 pb-8">
+        <div className="max-w-7xl mx-auto px-0 md:px-6 pb-8">
           {/* Heading */}
           <h2 className="text-xl font-bold uppercase text-gray-900">
             How to Get BIS ISI Mark Certification for Furniture
@@ -167,7 +215,7 @@ export default function CalibrationCertificatePage() {
 
           {/* Underline */}
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-150 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-80 md:w-150 bg-[#0072b1]" />
           </div>
 
           {/* Intro */}
@@ -285,7 +333,7 @@ export default function CalibrationCertificatePage() {
             </p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+        <div className="max-w-7xl mx-auto  md:px-6 pb-8">
           {/* Heading */}
           <h2 className="text-xl font-bold uppercase text-gray-900">
             Documents Required for BIS ISI Mark Certification for Furniture
@@ -293,7 +341,7 @@ export default function CalibrationCertificatePage() {
 
           {/* Underline */}
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-185 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-30 md:w-185 bg-[#0072b1]" />
           </div>
 
           {/* Intro */}
@@ -402,7 +450,7 @@ export default function CalibrationCertificatePage() {
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-7xl mx-auto px-2 md:px-6">
           {/* Heading */}
           <h2 className="text-xl font-bold uppercase text-gray-900">
             Estimated Fees Required for BIS ISI Mark Certification of Furniture
@@ -410,12 +458,12 @@ export default function CalibrationCertificatePage() {
           </h2>
 
           {/* Underline */}
-          <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-225 bg-[#0072b1]" />
+          <div className="w-full h-0.5 bg-gray-200 relative  ">
+            <span className="absolute left-0 top-0 h-0.5 w-60 md:w-225 bg-[#0072b1]" />
           </div>
 
           {/* Intro */}
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-600 text-[15px] leading-6  pt-5 text-justify mb-6">
             BIS ISI Mark certification involves certain government fees payable
             to the Bureau of Indian Standards (BIS) and BIS-recognized
             laboratories. The actual cost may vary based on product type, number
@@ -489,6 +537,121 @@ export default function CalibrationCertificatePage() {
         </div>
       </section>
 
+       <section className="w-full bg-white px-3 md:px-6 pb-12">
+              <div className="max-w-7xl mx-auto px-2">
+                <h2 className="text-xl font-bold uppercase text-gray-900">
+                  FURNITURE AND PLYWOOD PRODUCTS UNDER BIS ISI CERTIFICATION SERVICE
+                </h2>
+      
+                <div className="w-full h-0.5 bg-gray-200 relative mb-4">
+                  <span className="absolute left-0 top-0 h-0.5 w-60 md:w-157 bg-[#0072b1]" />
+                </div>
+      
+                <div className="hidden md:block mt-5 overflow-x-auto border border-[#0072b1]">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-blue-50 border-b border-blue-400">
+                        <th className="border border-blue-400 px-3 py-2 text-left">
+                          Product
+                        </th>
+                        <th className="border border-blue-400 px-3 py-2 w-44 text-center">
+                          Standard
+                        </th>
+                        <th className="border border-blue-400 px-3 py-2 text-left">
+                          Product
+                        </th>
+                        <th className="border border-blue-400 px-3 py-2 w-44 text-center">
+                          Standard
+                        </th>
+                      </tr>
+                    </thead>
+      
+                    <tbody>
+                      {productRows.map((row, rowIndex) => (
+                        <tr
+                          key={rowIndex}
+                          className={`${
+                            rowIndex % 2 === 0 ? "bg-[#bfe4ef]" : "bg-white"
+                          } hover:bg-blue-100 transition`}
+                        >
+                          <td className="border border-blue-400 px-3 py-2">
+                            {row[0] && (
+                              <Link
+                                href={row[0].link}
+                                className="font-medium text-gray-900 hover:text-blue-700 hover:underline"
+                              >
+                                {row[0].name}
+                              </Link>
+                            )}
+                          </td>
+                          <td className="border border-blue-400 px-3 py-2 text-center text-gray-700">
+                            {row[0]?.standard}
+                          </td>
+      
+                          <td className="border border-blue-400 px-3 py-2">
+                            {row[1] && (
+                              <Link
+                                href={row[1].link}
+                                className="font-medium text-gray-900 hover:text-blue-700 hover:underline"
+                              >
+                                {row[1].name}
+                              </Link>
+                            )}
+                          </td>
+                          <td className="border border-blue-400 px-3 py-2 text-center text-gray-700">
+                            {row[1]?.standard || "-"}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+      
+                <div className="md:hidden mt-5 space-y-0">
+                  {productRows.map((row, rowIndex) => (
+                    <div
+                      key={rowIndex}
+                      className="border border-[#0072b1]  overflow-hidden"
+                    >
+                      {row[0] && (
+                        <div className="bg-[#bfe4ef] px-4 py-1 border-b border-blue-400">
+                          {/* <p className="text-xs text-gray-600 mb-1">
+                            Sr. {rowIndex * 2 + 1}
+                          </p> */}
+                          <Link
+                            href={row[0].link}
+                            className="font-medium text-gray-900 hover:underline block"
+                          >
+                            {row[0].name}
+                          </Link>
+                          <p className="text-[14px] text-gray-600 mt-1">
+                            {row[0].standard}
+                          </p>
+                        </div>
+                      )}
+      
+                      {row[1] && (
+                        <div className="bg-white px-4 py-1">
+                          {/* <p className="text-xs text-gray-600 mb-1">
+                            Sr. {rowIndex * 2 + 2}
+                          </p> */}
+                          <Link
+                            href={row[1].link}
+                            className="font-medium text-gray-900 hover:underline block"
+                          >
+                            {row[1].name}
+                          </Link>
+                          <p className="text-[14px] text-gray-600 mt-1">
+                            {row[1].standard}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
       <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
           {/* Heading */}
@@ -499,7 +662,7 @@ export default function CalibrationCertificatePage() {
 
           {/* Underline */}
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-205 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-30 md:w-205 bg-[#0072b1]" />
           </div>
 
           {/* Intro */}
@@ -656,7 +819,7 @@ export default function CalibrationCertificatePage() {
 
           {/* Underline */}
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-150 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-80 md:w-150 bg-[#0072b1]" />
           </div>
 
           {/* Intro */}
@@ -748,7 +911,7 @@ export default function CalibrationCertificatePage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-165 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-10 md:w-165 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -845,7 +1008,7 @@ export default function CalibrationCertificatePage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-            <span className="absolute left-0 top-0 h-0.5 w-202 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-23 md:w-202 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-5">

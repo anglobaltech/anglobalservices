@@ -17,7 +17,7 @@ export const metadata = {
     "BIS ISI certification",
     "ISI mark certification",
     "BIS ISI mark",
-    "ISI certification in India",
+    "ISI certificate in India",
     "apply for ISI certification",
     "how to get ISI mark",
     "ISI mark registration process",
@@ -26,13 +26,13 @@ export const metadata = {
     "BIS ISI consultant India",
     "ISI mark agent",
     "ISI certification consultancy",
-    "ISI certification for manufacturers",
+    "ISI certificate for manufacturers",
     "ISI certification for importers",
     "foreign manufacturer ISI certification",
     "ISI mark for factory",
     "ISI certification process",
-    "documents required for ISI certification",
-    "ISI certification cost",
+    "documents required for ISI certificate",
+    "ISI certificate cost",
     "ISI certification fees",
     "time required for ISI certification",
     "mandatory ISI certification",
@@ -40,7 +40,7 @@ export const metadata = {
     "list of products under ISI mark",
     "electrical products ISI certification",
     "AN Global Services ISI certification",
-    "BIS certification services",
+    "BIS certificate services",
     "BIS certification services India",
   ],
 
@@ -162,15 +162,15 @@ export default function ISIPage() {
               The Bureau of Indian Standards (BIS) is the National Certification
               body of India that issues BIS licenses to manufacturers and
               importers for various products under voluntary or mandatory
-              certification schemes. BIS certification is a third-party
+              certification schemes. BIS certificate is a third-party
               assurance of product quality, consumer safety, and reliability.
             </p>
 
             <p>
-              BIS certification ensures that a product conforms to relevant
+              BIS certificate ensures that a product conforms to relevant
               Indian Standards and is safe for use in the Indian market. Certain
               products listed under the Mandatory Product Certification Scheme
-              of BIS must obtain certification before being sold in India.
+              of BIS must obtain certificate before being sold in India.
             </p>
 
             <p>
@@ -205,7 +205,7 @@ export default function ISIPage() {
               <strong className="font-semibold text-gray-800">
                 536+ products
               </strong>{" "}
-              fall under mandatory ISI certification. Without ISI certification,
+              fall under mandatory ISI certification. Without ISI License,
               manufacturers are not permitted to manufacture and sell products
               in India.
             </p>
@@ -241,7 +241,7 @@ export default function ISIPage() {
             </p>
 
             <ul className="space-y-3 text-gray-600 text-[15px] list-disc pl-6">
-              <li>ISI certification for Indian manufacturers</li>
+              <li>ISI certificate for Indian manufacturers</li>
               <li>ISI certification services for importers & brand owners</li>
               <li>Product testing with BIS-recognized laboratories</li>
               <li>Factory inspection & compliance preparation</li>
@@ -313,7 +313,7 @@ export default function ISIPage() {
               <p className="text-gray-500 text-[15px] leading-7">
                 An ISI certified product signifies exemplary quality and
                 provides the manufacturer a competitive edge. Consumers prefer
-                certified products over uncertified ones. ISI certification
+                certified products over uncertified ones. BIS ISI certificate
                 ensures quality, enhances trust, and helps businesses achieve
                 higher revenue by standing out from competitors.
               </p>
@@ -342,7 +342,7 @@ export default function ISIPage() {
                 <span className="block h-0.5 w-32 bg-[#0075B6]"></span>
               </div>
               <p className="text-gray-500 text-[15px] leading-7">
-                ISI certification offers legal benefits by allowing
+                BIS ISI certification offers legal benefits by allowing
                 manufacturers to produce mandatory listed goods without legal
                 issues. It protects businesses from penalties, fines, and legal
                 actions that may arise due to non-compliance with BIS
@@ -876,7 +876,7 @@ export default function ISIPage() {
 
         {/* Intro */}
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          The time required to obtain ISI Certification in India varies
+          The time required to obtain BIS ISI Certificate in India varies
           depending on the type of product, applicable Indian Standard (IS),
           readiness of the manufacturing unit, and completion of testing and
           documentation requirements. ISI Certification is granted under the BIS
@@ -1049,7 +1049,7 @@ export default function ISIPage() {
               What is ISI Mark Certification?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6">
-              ISI Mark Certification is a quality certification issued by the
+              ISI Mark Certification is a quality certificate issued by the
               Bureau of Indian Standards (BIS) that confirms a product complies
               with the applicable Indian Standard for safety, quality, and
               performance.
@@ -1141,7 +1141,7 @@ export default function ISIPage() {
             <li>
               Obtaining a BIS ISI Mark certificate is not an easy task; however,
               there is no better place to obtain it than AN Global Services. We
-              provide complete ISI Mark certification consultancy services from
+              provide complete BIS ISI Mark certificate consultancy services from
               start to end, including all documentation formalities and
               coordination with BIS offices in India.
             </li>

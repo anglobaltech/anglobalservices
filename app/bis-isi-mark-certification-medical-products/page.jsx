@@ -73,25 +73,24 @@ const products = [
     standard: "IS 5405: 2019",
     link: "isi-products/isi-mark-certification-for-sanitary-napkin-5405",
   },
- {
+  {
     id: 4,
     name: "Surgical Face Masks",
     standard: "IS 16289: 2014",
     link: "isi-products/isi-certification-for-surgical-face-masks-16289",
-},
+  },
   {
     id: 5,
     name: "Respiratory Protective Devices – Filtering Half Masks",
     standard: "IS 9473: 2002",
     link: "isi-products/isi-certification-for-respiratory-protective-devices-filtering-half-masks-9473",
-},
+  },
   {
     id: 6,
     name: "Disposable Surgical Rubber Gloves",
     standard: "IS 13422: 1992",
     link: "isi-products/isi-certification-for-disposable-surgical-rubber-gloves-13422",
-},
-
+  },
 ];
 
 const chunkProducts = (arr, size = 2) => {
@@ -121,12 +120,12 @@ export default function MedicalProductsISIPage() {
         </h1>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
             <Image
               src="/service/isi-certification-medical-products.png"
-              alt="BIS ISI Mark for Medical Products"
+              alt="BIS ISI Mark Certification for Medical Products"
               width={420}
               height={520}
               className="w-full h-auto object-cover"
@@ -134,118 +133,107 @@ export default function MedicalProductsISIPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 uppercase ">
+            <h2 className="text-xl font-bold text-gray-900 uppercase">
               What is BIS ISI Mark Certification for Medical Products?
             </h2>
+
             <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-              <span className="absolute left-0 top-0 h-0.5 w-163 bg-[#0072b1]" />
+              <span className="absolute left-0 top-0 h-0.5 md:w-163 w-68 bg-[#0072b1]" />
             </div>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI Mark certification for medical products is a mandatory
-              quality compliance requirement introduced under various Quality
-              Control Orders issued by the Government of India. It ensures that
-              medical products comply with applicable Indian Standards for
-              safety, performance, hygiene, and reliability before they are
-              manufactured, sold, or imported into the Indian market.
+              BIS ISI Mark Certification for medical products is a mandatory
+              product certification scheme governed by the Bureau of Indian
+              Standards (BIS) under Scheme-I of the BIS Conformity Assessment
+              Regulations. It ensures that medical products conform to the
+              applicable Indian Standards (IS) specified under notified Quality
+              Control Orders (QCOs).
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              The ISI Mark signifies that a medical product has undergone
-              testing, factory inspection, and conformity assessment as per
-              Bureau of Indian Standards (BIS) guidelines. Certified products
-              are subject to ongoing surveillance to maintain consistent
-              quality, helping prevent substandard medical supplies from
-              reaching hospitals, clinics, and patients.
+              Under the ISI Mark scheme, manufacturers are required to
+              demonstrate compliance through product testing, implementation of
+              an effective quality control system, and successful factory
+              inspection conducted by BIS officials. Only after meeting these
+              requirements is a Certification Marks License (CM/L) granted,
+              allowing the use of the ISI Mark on the product.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Commonly regulated medical products include surgical instruments,
-              gloves, syringes, needles, hospital furniture, disposable medical
-              items, and select medical devices used in routine healthcare
-              settings. BIS ISI Mark certification applies to both Indian and
-              foreign manufacturers supplying medical products to India, and
-              compliance is essential to avoid legal penalties and market
-              restrictions.
+              BIS ISI certification applies to a wide range of medical products
+              such as surgical gloves, face masks, sanitary products, disposable
+              medical items, and other notified healthcare products. The
+              certification is mandatory for both Indian and foreign
+              manufacturers supplying medical products to the Indian market and
+              helps ensure patient safety, regulatory compliance, and consistent
+              product quality.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 px-4 md:px-6 py-12">
+      <section className="bg-gray-50 px-1 md:px-6 py-10">
         <div className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
           <h2 className="text-xl font-bold uppercase text-gray-900">
-            Benefits of BIS CRS Registration for Medical Products
+            Benefits of BIS ISI Certification for Medical Products
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-160 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 md:w-160 w-65 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
-            BIS CRS (Compulsory Registration Scheme) registration is a mandatory
-            regulatory requirement in India for medical products that contain
-            electronic or electrical components. While the ISI Mark scheme
-            applies to conventional medical items, CRS registration specifically
-            covers electronic medical devices and components regulated under the
-            Electronics and IT Goods (Requirement for Compulsory Registration)
-            Order. Apart from legal compliance, CRS registration offers multiple
-            operational and commercial benefits for manufacturers and importers.
+            BIS ISI Certification is a mandatory quality conformity scheme for
+            notified medical products in India. It ensures that medical devices
+            conform to applicable Indian Standards for safety, performance, and
+            reliability. Apart from statutory compliance, ISI certification
+            offers significant commercial, operational, and credibility benefits
+            for manufacturers.
           </p>
 
           <div className="space-y-1">
             <div className="bg-white border border-gray-200 rounded-lg p-2">
               <h3 className="font-semibold text-gray-900 mb-2">
-                1. Mandatory Legal Compliance and Market Access
+                1. Mandatory Regulatory Compliance
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                BIS CRS registration provides the legal authority to
-                manufacture, import, and sell notified electronic medical
-                products in India. Products covered under CRS cannot be marketed
-                without a valid registration number. Compliance helps avoid
-                penalties, product seizure, customs detention, and regulatory
-                action by Indian authorities.
+                BIS ISI Certification is legally required for specified medical
+                products before manufacturing or sale in India. Non-certified
+                products are subject to penalties, seizure, and regulatory
+                action by authorities.
               </p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-lg p-2">
               <h3 className="font-semibold text-gray-900 mb-2">
-                2. Enhanced Safety and Quality Assurance
+                2. Assured Quality and Patient Safety
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                Medical products registered under BIS CRS are tested in
-                BIS-recognized laboratories for electrical safety, performance,
-                and reliability. Compliance with Indian Standards reduces the
-                risk of electrical hazards, malfunction, and inconsistent
-                performance, ensuring patient safety and reliable clinical
-                outcomes.
+                ISI-certified medical products undergo rigorous testing as per
+                Indian Standards to ensure quality, safety, and consistent
+                performance, reducing risks of malfunction and clinical hazards.
               </p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-lg p-2">
               <h3 className="font-semibold text-gray-900 mb-2">
-                3. Increased Trust Among Healthcare Professionals
+                3. Increased Trust and Market Acceptance
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                Doctors, hospitals, diagnostic labs, and procurement teams
-                prefer CRS-registered medical products due to assured compliance
-                with Indian safety norms. The BIS Standard Mark serves as proof
-                of authenticity, helping eliminate low-quality or non-compliant
-                electronic medical equipment from healthcare environments.
+                Hospitals, healthcare institutions, and procurement agencies
+                prefer ISI-certified products due to assured compliance with
+                national quality standards, improving brand credibility.
               </p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-lg p-2">
               <h3 className="font-semibold text-gray-900 mb-2">
-                4. Competitive Advantage in Tenders and Procurement
+                4. Eligibility for Government Tenders
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                Many government tenders, public healthcare institutions, and
-                large private hospitals mandate BIS CRS registration as an
-                eligibility requirement. Certified products gain priority in
-                institutional procurement, organized retail channels, and
-                e-commerce platforms that restrict listings to compliant
-                electronic medical devices.
+                BIS ISI Certification is mandatory for participation in most
+                government tenders, PSU procurements, and public healthcare
+                projects, enabling access to large institutional buyers.
               </p>
             </div>
 
@@ -254,163 +242,136 @@ export default function MedicalProductsISIPage() {
                 5. Reduced Legal and Business Risk
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                CRS registration helps manufacturers and importers minimize
-                legal, financial, and reputational risks. Adherence to BIS
-                standards lowers the chances of product failure, recalls, and
-                liability claims. In case of inspections or investigations, a
-                valid CRS registration demonstrates due diligence and regulatory
-                compliance.
+                Compliance with ISI standards minimizes risks related to product
+                recalls, legal liability, and reputational damage, ensuring
+                long-term business sustainability.
               </p>
             </div>
           </div>
         </div>
+
         <div className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
-          {/* Heading */}
           <h2 className="text-xl font-bold uppercase text-gray-900">
             Documents Required for BIS ISI Certification for Medical Products
           </h2>
 
-          {/* Underline */}
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-195 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 md:w-195 w-30 bg-[#0072b1]" />
           </div>
 
-          {/* Intro */}
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
-            For obtaining BIS ISI Certification (Scheme I) for medical products,
-            manufacturers must submit basic business, product, and
-            factory-related documents. These documents help BIS verify the
-            company’s legal status, production capability, and product quality.
+            To obtain BIS ISI Certification under Scheme I, manufacturers must
+            submit documents related to business registration, product details,
+            manufacturing infrastructure, and quality control systems.
           </p>
 
-          {/* Grid: 2 per row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Card 1 */}
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 1. Business & Company Documents
               </h3>
               <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
-                <li>
-                  Company registration proof (Incorporation / Partnership).
-                </li>
-                <li>
-                  Factory address proof (Factory License / Rent Agreement).
-                </li>
-                <li>GST registration and PAN card.</li>
-                <li>MSME / Udyam certificate (if available).</li>
-                <li>Trademark certificate, if applicable.</li>
+                <li>Certificate of Incorporation / Partnership Deed</li>
+                <li>Factory address proof (License / Lease Agreement)</li>
+                <li>GST registration and PAN card</li>
+                <li>MSME / Udyam registration (if applicable)</li>
+                <li>Trademark certificate (if applicable)</li>
               </ul>
             </div>
 
-            {/* Card 2 */}
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 2. Product Details
               </h3>
               <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
-                <li>Product description with model, size, or type.</li>
-                <li>Product drawings or design layout (if required).</li>
-                <li>List of raw materials and components.</li>
-                <li>Manufacturing process flow chart.</li>
+                <li>Product description with model and variants</li>
+                <li>Technical drawings or specifications</li>
+                <li>List of raw materials and components</li>
+                <li>Manufacturing process flow chart</li>
               </ul>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 3. Factory & Quality Control Details
               </h3>
               <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
-                <li>List of manufacturing machinery.</li>
-                <li>List of in-house testing equipment.</li>
-                <li>Calibration certificates from NABL labs.</li>
-                <li>Details of quality control staff.</li>
-                <li>Factory layout plan.</li>
+                <li>Manufacturing machinery list</li>
+                <li>In-house testing equipment details</li>
+                <li>Calibration certificates from NABL labs</li>
+                <li>Quality control staff details</li>
+                <li>Factory layout plan</li>
               </ul>
             </div>
 
-            {/* Card 4 */}
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 4. Application & Authorization Documents
               </h3>
               <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
-                <li>Online BIS application (Form V).</li>
-                <li>Authorization letter, if applicable.</li>
-                <li>AIR details for foreign manufacturers.</li>
-                <li>Product test reports from BIS-recognized lab.</li>
+                <li>Online BIS application (Form V)</li>
+                <li>Authorization letter (if applicable)</li>
+                <li>AIR details for foreign manufacturers</li>
+                <li>Product test reports from BIS-recognized labs</li>
               </ul>
             </div>
           </div>
         </div>
+
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-          {/* Heading */}
           <h2 className="text-xl font-bold uppercase text-gray-900">
-            Process to get BIS ISI Mark Certification on Medical Products
+            Process to Get BIS ISI Mark Certification on Medical Products
           </h2>
 
-          {/* Underline */}
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-180 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 md:w-180 w-30 bg-[#0072b1]" />
           </div>
 
-          {/* Intro */}
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
-            The BIS ISI Mark certification process for medical products follows
-            a structured procedure that includes application filing, factory
-            inspection, and product testing. For domestic manufacturers, the
-            entire process generally takes 60 to 90 days, depending on
-            inspection schedules and laboratory test results.
+            The BIS ISI Mark certification process includes application
+            submission, factory inspection, and product testing. The process
+            generally takes 60 to 90 days for domestic manufacturers.
           </p>
 
-          {/* Process Steps */}
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-3">
               <li>
                 <strong>Selection of Applicable Indian Standard:</strong>{" "}
-                Identify the correct IS Code relevant to the medical product,
-                such as IS 3055 for clinical thermometers or IS 7620 for
-                diagnostic X-ray equipment.
+                Identify the correct IS Code applicable to the medical product.
               </li>
               <li>
-                <strong>Online Application Submission:</strong> File the
-                application through the BIS Manak Online portal along with
-                required documents, product details, and factory layout.
+                <strong>Online Application Submission:</strong> Apply through
+                the BIS Manak Online Portal with required documents.
               </li>
               <li>
-                <strong>Appointment of Quality Control Personnel:</strong>{" "}
-                Nominate a qualified technical person responsible for in-house
-                testing and quality monitoring.
+                <strong>Nomination of Quality Control Personnel:</strong>{" "}
+                Appoint a qualified technical person for quality monitoring.
               </li>
               <li>
-                <strong>Factory Inspection by BIS:</strong> A BIS officer visits
-                the manufacturing unit to verify production processes,
-                machinery, testing facilities, and quality control systems.
+                <strong>Factory Inspection by BIS:</strong> BIS officials
+                inspect the manufacturing unit and testing facilities.
               </li>
               <li>
-                <strong>Sample Drawing and Testing:</strong> Product samples are
-                sealed during inspection. One set is tested in-house and another
-                is sent to a BIS-recognized laboratory for independent testing.
+                <strong>Sample Testing:</strong> Samples are tested in
+                BIS-recognized laboratories for conformity.
               </li>
               <li>
-                <strong>Grant of ISI License:</strong> If test results conform
-                to the applicable IS and the inspection is satisfactory, BIS
-                grants the Certification Marks License (CM/L).
+                <strong>Grant of ISI License:</strong> Upon compliance, BIS
+                issues the ISI Certification Marks License (CM/L).
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 md:px-6 pb-12">
+      <section className="w-full bg-white px-4 md:px-6 pb-10">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-xl font-bold uppercase text-gray-900">
-            MEDICAL PRODUCTS UNDER BIS CRS CERTIFICATION SERVICE
+            MEDICAL PRODUCTS UNDER BIS ISI CERTIFICATION SERVICE
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-            <span className="absolute left-0 top-0 h-0.5 w-157 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 md:w-157 w-70 bg-[#0072b1]" />
           </div>
 
           <div className="hidden md:block mt-5 overflow-x-auto border border-[#0072b1]">
