@@ -75,6 +75,11 @@ const nextConfig = {
         destination: "/bis-isi-certification-steel-products",
         permanent: true, 
       },
+       {
+        source: "/latest_updates",
+        destination: "/latest-notifications",
+        permanent: true, 
+      },
     ];
   },
 };

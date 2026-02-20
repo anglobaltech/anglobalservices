@@ -84,7 +84,7 @@ const chunkProducts = (arr, size = 2) => {
 };
 
 const productRows = chunkProducts(products, 2);
-export default function CalibrationCertificatePage() {
+export default function FurnitureISI() {
   return (
     <main className="w-full bg-white">
       <section

@@ -29,7 +29,7 @@ export const metadata = {
   },
 };
 
-export default function GoldHallmarkingPage() {
+export default function FMCSPage() {
   return (
     <main className="w-full bg-white">
       <section
@@ -43,7 +43,7 @@ export default function GoldHallmarkingPage() {
         <div className="absolute inset-0 bg-[#0a3d62]/30" />
 
         <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 uppercase leading-snug">
-        BIS FMCS Certification for Foreign Manufacturers in India
+          BIS FMCS Certification for Foreign Manufacturers in India
         </h1>
       </section>
 
@@ -86,14 +86,15 @@ export default function GoldHallmarkingPage() {
 
             <div>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                FMCS is often considered the international equivalent of the ISI
-                certification system, as it ensures uniform compliance across
-                both foreign and Indian-made products. For many products
-                notified under Quality Control Orders (QCOs), FMCS certification
-                is mandatory for import clearance in India. Under this scheme,
-                foreign manufacturers are required to appoint an Authorized
-                Indian Representative (AIR) who acts as a local point of contact
-                for BIS and is responsible for regulatory coordination and legal
+                FMCS is the overseas extension of the ISI Certification Scheme
+                under Scheme-I, applicable to manufacturers located outside
+                India, as it ensures uniform compliance across both foreign and
+                Indian-made products. For many products notified under Quality
+                Control Orders (QCOs), FMCS certification is mandatory for
+                import clearance in India. Under this scheme, foreign
+                manufacturers are required to appoint an Authorized Indian
+                Representative (AIR) who acts as a local point of contact for
+                BIS and is responsible for regulatory coordination and legal
                 compliance. AN Global Services provides end-to-end assistance in
                 FMCS certification, including AIR support and liaison with BIS
                 authorities.
@@ -113,9 +114,10 @@ export default function GoldHallmarkingPage() {
             free from defects or blemishes. The size and thickness of soles and
             heels must be mutually agreed upon between the purchaser and
             supplier, while the hardness of the material is required to be
-            maintained between 65 and 75 IRHD. Meeting these specifications
-            ensures durability, safety, and consistent product quality in line
-            with BIS standards.
+            maintained between 65 and 75 IRHD as prescribed under the applicable
+            Indian Standard for footwear components, as notified under the
+            relevant QCO.. Meeting these specifications ensures durability,
+            safety, and consistent product quality in line with BIS standards.
           </p>
         </div>
       </section>
@@ -273,9 +275,9 @@ export default function GoldHallmarkingPage() {
                     Application Submission
                   </td>
                   <td className="border border-gray-200 px-4 py-3 text-gray-600">
-                    Submission of Form VI online along with a hard copy
-                    application to the Foreign Manufacturers Certification
-                    Department (FMCD), New Delhi, along with the applicable
+                    Submission of Form VI through the BIS Manak Online portal
+                    along with supporting documents (physical copies only if
+                    specifically requested by BIS) along with the applicable
                     application fee.
                   </td>
                 </tr>
@@ -463,7 +465,7 @@ export default function GoldHallmarkingPage() {
             As of 2026, the Bureau of Indian Standards (BIS) has significantly
             expanded the scope of products requiring mandatory certification
             under the Foreign Manufacturers Certification Scheme (FMCS). More
-            than 450+ products now require an ISI Mark for import into India.
+            than 400+ products now require an ISI Mark for import into India.
             These products are regulated through Quality Control Orders (QCOs),
             and non-compliance may result in rejection at Indian Customs.
           </p>
@@ -491,9 +493,10 @@ export default function GoldHallmarkingPage() {
               </h3>
               <p className="leading-6 text-justify">
                 Heavy electrical and power equipment manufactured outside India
-                fall under FMCS, while consumer electronics are regulated
-                separately under CRS. Mandatory FMCS products include power and
-                distribution transformers, PVC insulated cables and wires,
+                fall under FMCS, while Certain electronic and IT products are
+                regulated under CRS, while non-electronic and heavy electrical
+                products fall under FMCS.. Mandatory FMCS products include power
+                and distribution transformers, PVC insulated cables and wires,
                 induction motors, sealed lead-acid batteries, and shunt
                 capacitors used in power systems.
               </p>

@@ -55,7 +55,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'iso-certification-services',
     'bis-isi-mark-certification',
     'lab_servces',
-    'latest_updates',
+    'latest-notifications',
     'news-updates',
     'msme-nsic-registration',
     'nabl-accreditation-services',
