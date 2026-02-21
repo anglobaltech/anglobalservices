@@ -27,7 +27,7 @@ export const metadata = {
             "ISI Mark Certification for Furniture – Work Chairs (IS 17631:2022)",
         description:
             "Apply for ISI Mark Certification for Work Chairs under IS 17631:2022. Complete BIS assistance for documentation, product testing, factory inspection, and license approval.",
-        url: "https://www.anglobalservices.com/isi-products/isi-certification-office-work-chair-17635",
+        url: "https://www.anglobalservices.com/isi-products/isi-certification-office-work-chair-17631",
         siteName: "AN Global Services",
         locale: "en_IN",
         type: "website",
@@ -47,7 +47,7 @@ export const metadata = {
 
     alternates: {
         canonical:
-            "https://www.anglobalservices.com/isi-products/isi-certification-office-work-chair-17635",
+            "https://www.anglobalservices.com/isi-products/isi-certification-office-work-chair-17631",
     },
 };
 

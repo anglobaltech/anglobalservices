@@ -41,7 +41,7 @@ const products = [
     id: 1,
     name: "Work Chairs",
     standard: "IS 17631: 2022",
-    link: "isi-products/isi-certification-office-work-chair-17635",
+    link: "isi-products/isi-certification-office-work-chair-17631",
   },
   {
     id: 2,
