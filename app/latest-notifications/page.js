@@ -9,16 +9,24 @@ export const metadata = {
 
 const notifications = [
   {
-  slug: "import-exemption-qco-dpiit-feb-2026",
-  title:
-    "Import Exemption under Quality Control Orders – DPIIT Notification dated 12 February 2026",
-  description:
-    "Ministry of Commerce and Industry (Department for Promotion of Industry and Internal Trade) vide S.O. 775(E) dated 12 February 2026 has granted exemption for import of specified goods under various Quality Control Orders, provided the consignment was shipped before the date of implementation and the Bill of Entry is filed within 180 days from the implementation date.",
-   date: "03 January 2026",
-},
+    slug: "import-exemption-qco-dpiit-feb-2026-so-776e",
+    title:
+      "Import Exemption under Quality Control Orders – DPIIT Order S.O. 776(E) dated 12 February 2026",
+    description:
+      "The Ministry of Commerce and Industry (Department for Promotion of Industry and Internal Trade), vide Order S.O. 776(E) dated 12 February 2026, issued under section 16 of the Bureau of Indian Standards Act, 2016, has granted an exemption from compliance with specified Quality Control Orders for certain goods. The exemption applies where the purchase order was placed prior to the implementation date of the relevant Quality Control Order and where the Bill of Lading and Bill of Entry are dated on or before 180 days from the date of implementation, subject to prescribed conditions.",
+    date: "12 February 2026",
+  },
+  {
+    slug: "import-exemption-qco-dpiit-feb-2026",
+    title:
+      "Import Exemption under Quality Control Orders – DPIIT Notification dated 12 February 2026",
+    description:
+      "Ministry of Commerce and Industry (Department for Promotion of Industry and Internal Trade) vide S.O. 775(E) dated 12 February 2026 has granted exemption for import of specified goods under various Quality Control Orders, provided the consignment was shipped before the date of implementation and the Bill of Entry is filed within 180 days from the implementation date.",
+    date: "12 February 2026",
+  },
 ];
 export default function LatestNotificationsPage() {
-   return (
+  return (
     <div className="w-full bg-gray-50">
       {/* ===== HERO SECTION ===== */}
       <div className="relative w-full h-[300px]">
