@@ -39,9 +39,9 @@ export const metadata = {
 const products = [
   {
     id: 1,
-    name: "Wooden Chairs",
-    standard: "IS 13713: 2019",
-    link: "bis-isi-mark-certification-furniture-plywood",
+    name: "Work Chairs",
+    standard: "IS 17631: 2022",
+    link: "isi-products/isi-certification-office-work-chair-17635",
   },
   {
     id: 2,
@@ -57,18 +57,12 @@ const products = [
   },
   {
     id: 4,
-    name: "Office Chairs",
-    standard: "IS 17631: 2022",
-    link: "bis-isi-mark-certification-furniture-plywood",
-  },
-  {
-    id: 5,
     name: "School Furniture",
     standard: "IS 4837: 1990",
     link: "bis-isi-mark-certification-furniture-plywood",
   },
   {
-    id: 6,
+    id: 5,
     name: "Metal Beds",
     standard: "IS 11336: 1985",
     link: "bis-isi-mark-certification-furniture-plywood",
@@ -101,7 +95,7 @@ export default function FurnitureISI() {
         </h1>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
         <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
