@@ -488,7 +488,7 @@ export default function ISOPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-3">
-            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-165 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-80 md:w-165 bg-[#0072b1]" />
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg">
