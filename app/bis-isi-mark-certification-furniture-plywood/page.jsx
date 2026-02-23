@@ -45,9 +45,9 @@ const products = [
   },
   {
     id: 2,
-    name: "Wooden Tables",
-    standard: "IS 2112: 1981",
-    link: "bis-isi-mark-certification-furniture-plywood",
+    name: "General Purpose Chairs & Stool",
+    standard: "IS 17632: 2022",
+    link: "isi-products/isi-certification-furniture-general-purpose-chairs-and-stools-17632",
   },
   {
     id: 3,

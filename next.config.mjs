@@ -80,6 +80,11 @@ const nextConfig = {
         destination: "/latest-notifications",
         permanent: true, 
       },
+      {
+        source: "/isi-products/isi-certification-office-work-chair-17635",
+        destination: "/isi-products/isi-certification-office-work-chair-17631",
+        permanent: true, 
+      },
     ];
   },
 };
