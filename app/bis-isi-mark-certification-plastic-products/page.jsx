@@ -147,7 +147,7 @@ export default function PlasticProductsISIPage() {
             </div>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI Mark certification for plastic products is a mandatory
+              BIS ISI Mark certificate for plastic products is a mandatory
               quality compliance requirement enforced under various Quality
               Control Orders (QCOs) issued by the Government of India. It
               ensures that plastic products meet prescribed Indian Standards
