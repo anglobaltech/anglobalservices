@@ -131,7 +131,7 @@ export default function WoodenTablesDesks() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS certification for Wooden Tables and Desks is governed by
+              BIS ISI certification for Wooden Tables and Desks is governed by
               Indian Standard IS 17633:2022. This standard specifies minimum
               requirements related to strength, load-bearing capacity, material
               quality, ergonomic design, and long-term durability.
@@ -203,7 +203,7 @@ export default function WoodenTablesDesks() {
             >
               general-purpose chairs and stools
             </Link>{" "}
-            may also require separate BIS certification under applicable Indian
+            may also require separate BIS ISI certification under applicable Indian
             Standards.
           </p>
         </div>

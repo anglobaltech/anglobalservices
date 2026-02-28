@@ -56,11 +56,11 @@ const products = [
   link: "isi-products/isi-certificate-furniture-tables-and-desks",
 },
   {
-    id: 4,
-    name: "School Furniture",
-    standard: "IS 4837: 1990",
-    link: "bis-isi-mark-certification-furniture-plywood",
-  },
+  id: 4,
+  name: "Furniture – Storage Units",
+  standard: "IS 17634:2022",
+  link: "isi-products/isi-certificate-furniture-storage-units",
+},
   {
     id: 5,
     name: "Metal Beds",
