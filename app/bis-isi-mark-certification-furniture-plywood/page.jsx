@@ -50,11 +50,11 @@ const products = [
     link: "isi-products/isi-certification-furniture-general-purpose-chairs-and-stools-17632",
   },
   {
-    id: 3,
-    name: "Steel Furniture",
-    standard: "IS 14061: 2003",
-    link: "bis-isi-mark-certification-furniture-plywood",
-  },
+  id: 3,
+  name: "Furniture Tables and Desks",
+  standard: "IS 17633:2022",
+  link: "isi-products/isi-certificate-furniture-tables-and-desks",
+},
   {
     id: 4,
     name: "School Furniture",
