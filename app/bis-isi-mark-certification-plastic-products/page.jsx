@@ -484,7 +484,7 @@ export default function PlasticProductsISIPage() {
       <section className="bg-white pb-12">
         <div className="max-w-7xl mx-auto px-7 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase">
-            Frequently Asked Questions (FAQs) on BIS ISI Certification for
+            Frequently Asked Questions (FAQs) on BIS ISI Certificate for
             Plastic Products
           </h2>
 
