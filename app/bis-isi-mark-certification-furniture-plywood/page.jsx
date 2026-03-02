@@ -63,10 +63,16 @@ const products = [
 },
   {
     id: 5,
-    name: "Metal Beds",
-    standard: "IS 11336: 1985",
-    link: "bis-isi-mark-certification-furniture-plywood",
-  },
+    name: "Furniture - Beds",
+    standard: "IS 17635: 2022",
+    link: "isi-products/isi-certificate-furniture-beds"
+},
+{
+    id: 6,
+    name: "Furniture - Bunk Beds",
+    standard: "IS 17636: 2022",
+    link: "isi-products/isi-certificate-bunk-beds-17636"
+},
 ];
 
 const chunkProducts = (arr, size = 2) => {
