@@ -57,16 +57,17 @@ const electronicsProducts = [
   },
   {
     id: 4,
-    name: "Electric Wires",
-    standard: "IS 694",
-    link: "/bis-isi-mark-certification-electronics-products",
+    name: "Plugs and Socket-Outlets",
+    standard: "IS 1293",
+    link: "/isi-products/isi-certification-plugs-and-socket-outlets-1293",
   },
   {
     id: 5,
-    name: "Power Adapters",
-    standard: "IS 13252 (Part 1)",
-    link: "/bis-isi-mark-certification-electronics-products",
+    name: "Stationary Storage Type Electric Water Heaters",
+    standard: "IS 2082",
+    link: "/isi-products/isi-certificate-stationary-storage-type-electric-water-heaters",
   },
+
   {
     id: 6,
     name: "Switch Mode Power Supplies (SMPS)",
