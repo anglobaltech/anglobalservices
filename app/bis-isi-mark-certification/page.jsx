@@ -710,7 +710,7 @@ export default function ISIPage() {
               />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  Electronics Products
+                  Electronics & Electrical Products
                 </h3>
                 <p className="text-sm text-gray-500">
                   Mandatory ISI marking for electronic & IT products.

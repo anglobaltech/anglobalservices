@@ -41,14 +41,14 @@ const electronicsProducts = [
     id: 1,
     name: "Air Coolers",
     standard: "IS 3315",
-    link: "/bis-isi-mark-certification-electronics-products",
+    link: "/isi-products/isi-certification-for-evaporative-air-coolers-desert-coolers-3315",
   },
-  {
-    id: 2,
-    name: "Electrical Switches",
-    standard: "IS 3854",
-    link: "/bis-isi-mark-certification-electronics-products",
-  },
+ {
+  id: 2,
+  name: "PVC Insulated Cables",
+  standard: "IS 694",
+  link: "/isi-products/isi-certificate-pvc-insulated-cables-694",
+},
   {
     id: 3,
     name: "Electric Fans",
