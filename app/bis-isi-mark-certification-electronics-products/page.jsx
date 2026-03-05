@@ -43,17 +43,17 @@ const electronicsProducts = [
     standard: "IS 3315",
     link: "/isi-products/isi-certification-for-evaporative-air-coolers-desert-coolers-3315",
   },
- {
-  id: 2,
-  name: "PVC Insulated Cables",
-  standard: "IS 694",
-  link: "/isi-products/isi-certificate-pvc-insulated-cables-694",
-},
+  {
+    id: 2,
+    name: "PVC Insulated Cables",
+    standard: "IS 694",
+    link: "/isi-products/isi-certificate-pvc-insulated-cables-694",
+  },
   {
     id: 3,
-    name: "Electric Fans",
-    standard: "IS 374",
-    link: "/bis-isi-mark-certification-electronics-products",
+    name: "Bayonet Lamp Holders",
+    standard: "IS 1258",
+    link: "/isi-products/isi-certificate-bayonet-lamp-holders-1258",
   },
   {
     id: 4,
@@ -189,7 +189,7 @@ export default function ElectronicsISIPage() {
               power supplies, electrical cables, switches, plugs, sockets, LED
               lighting products, circuit breakers, and other notified items. The
               BIS ISI Mark certification is applicable to both Indian and
-              foreign manufacturers. 
+              foreign manufacturers.
             </p>
           </div>
         </div>
@@ -619,5 +619,6 @@ export default function ElectronicsISIPage() {
         </div>
       </section>
     </main>
-  );N
+  );
+  N;
 }
