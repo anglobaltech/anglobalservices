@@ -95,6 +95,12 @@ const plasticProducts = [
   standard: "IS 14333",
   link: "/isi-products/isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333"
 },
+{
+  id: 8,
+  name: "Protective Helmets for Two Wheeler Riders",
+  standard: "IS 4151",
+  link: "/isi-products/isi-certificate-protective-two-wheelers-helmets"
+},
 
 ];
 
