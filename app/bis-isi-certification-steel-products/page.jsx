@@ -74,16 +74,16 @@ const products = [
   },
   {
     id: 4,
-    name: "Structural Steel Sections",
-    standard: "IS 2062: 2011",
-    link: "/bis-isi-certification-steel-products",
+    name: "Steel Wire Ropes for General Engineering Purposes",
+    standard: "IS 2266: 2019",
+    link: "/isi-products/isi-certificate-steel-wire-ropes-for-general-engineering-purposes",
   },
-  {
-    id: 5,
-    name: "Cold Rolled Steel Sheets",
-    standard: "IS 513: 2016",
-    link: "/bis-isi-certification-steel-products",
-  },
+ {
+  id: 5,
+  name: "Adjustable Steel Shelving Cabinets",
+  standard: "IS 3312",
+  link: "/isi-products/isi-certificate-adjustable-steel-shelving-cabinets",
+},
   {
     id: 6,
     name: "Galvanized Steel Sheets",
