@@ -62,12 +62,12 @@ const homeApplianceProducts = [
     standard: "IS 2347",
     link: "/isi-products/isi-certification-for-domestic-pressure-cookers-2347",
   },
-  {
-    id: 5,
-    name: "Gas Stoves",
-    standard: "IS 4246",
-    link: "/bis-isi-mark-certification-home-appliances-kitchen-products",
-  },
+ {
+  id: 5,
+  name: "Domestic Gas Stoves ",
+  standard: "IS 4246",
+  link: "/isi-products/isi-certificate-domestic-gas-stove",
+},
   {
     id: 6,
     name: "LPG Regulators",
