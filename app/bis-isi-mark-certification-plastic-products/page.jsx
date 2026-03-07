@@ -77,31 +77,36 @@ const plasticProducts = [
     standard: "IS 13592",
     link: "/isi-products/isi-certification-for-upvc-pipes-for-soil-and-waste-discharge-13592",
   },
- {
-  id: 5,
-  name: "Injection Moulded PVC Socket Fittings",
-  standard: "IS 7834 (Parts 1 to 8):1987",
-  link: "/isi-products/isi-certification-for-injection-moulded-pvc-socket-fittings-7834"
-},
   {
-  id: 6,
-  name: "CPVC Pipes for Potable Hot and Cold Water Distribution",
-  standard: "IS 15778",
-  link: "/isi-products/isi-certification-for-cpvc-pipes-for-potable-hot-and-cold-water-distribution-supplies-15778"
-},
- {
-  id: 7,
-  name: "High Density Polyethylene (HDPE) Pipes for Sewerage",
-  standard: "IS 14333",
-  link: "/isi-products/isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333"
-},
-{
-  id: 8,
-  name: "Protective Helmets for Two Wheeler Riders",
-  standard: "IS 4151",
-  link: "/isi-products/isi-certificate-protective-two-wheelers-helmets"
-},
-
+    id: 5,
+    name: "Injection Moulded PVC Socket Fittings",
+    standard: "IS 7834 (Parts 1 to 8):1987",
+    link: "/isi-products/isi-certification-for-injection-moulded-pvc-socket-fittings-7834",
+  },
+  {
+    id: 6,
+    name: "CPVC Pipes for Potable Hot and Cold Water Distribution",
+    standard: "IS 15778",
+    link: "/isi-products/isi-certification-for-cpvc-pipes-for-potable-hot-and-cold-water-distribution-supplies-15778",
+  },
+  {
+    id: 7,
+    name: "High Density Polyethylene (HDPE) Pipes for Sewerage",
+    standard: "IS 14333",
+    link: "/isi-products/isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333",
+  },
+  {
+    id: 8,
+    name: "Protective Helmets for Two Wheeler Riders",
+    standard: "IS 4151",
+    link: "/isi-products/isi-certificate-protective-two-wheelers-helmets",
+  },
+  {
+    id: 9,
+    name: "Plastic Bib Taps, Pillar Taps and Angle Stop Valves",
+    standard: "IS 9763",
+    link: "/isi-products/isi-certificate-plastics-bib-taps-pillar-taps-angle-stop-valves",
+  },
 ];
 
 const chunkPlasticProducts = (arr, size = 2) => {
@@ -490,8 +495,8 @@ export default function PlasticProductsISIPage() {
       <section className="bg-white pb-12">
         <div className="max-w-7xl mx-auto px-7 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase">
-            Frequently Asked Questions (FAQs) on BIS ISI Certificate for
-            Plastic Products
+            Frequently Asked Questions (FAQs) on BIS ISI Certificate for Plastic
+            Products
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-5">
