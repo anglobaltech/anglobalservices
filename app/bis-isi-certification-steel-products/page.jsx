@@ -85,11 +85,11 @@ const products = [
   link: "/isi-products/isi-certificate-adjustable-steel-shelving-cabinets",
 },
   {
-    id: 6,
-    name: "Galvanized Steel Sheets",
-    standard: "IS 277: 2018",
-    link: "/bis-isi-certification-steel-products",
-  },
+  id: 6,
+  name: "Stainless Steel Butt Hinges",
+  standard: "IS 12817",
+  link: "/isi-products/isi-certificate-stainless-steel-butt-hinges"
+},
 ];
 
 const chunkProducts = (arr, size = 2) => {
