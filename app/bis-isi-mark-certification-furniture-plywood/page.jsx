@@ -3,8 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title:
-    "BIS ISI Certification for Furniture & Plywood | AN Global Services",
+  title: "BIS ISI Certification for Furniture & Plywood | AN Global Services",
 
   description:
     "Get BIS ISI Certification for furniture and plywood in India as per Furniture QCO 2025 & IS 303. AN Global Services provides complete support for BIS licensing, factory audit, testing, documentation, and approval for manufacturers and importers.",
@@ -50,29 +49,36 @@ const products = [
     link: "isi-products/isi-certification-furniture-general-purpose-chairs-and-stools-17632",
   },
   {
-  id: 3,
-  name: "Furniture Tables and Desks",
-  standard: "IS 17633:2022",
-  link: "isi-products/isi-certificate-furniture-tables-and-desks",
-},
+    id: 3,
+    name: "Furniture Tables and Desks",
+    standard: "IS 17633:2022",
+    link: "isi-products/isi-certificate-furniture-tables-and-desks",
+  },
   {
-  id: 4,
-  name: "Furniture – Storage Units",
-  standard: "IS 17634:2022",
-  link: "isi-products/isi-certificate-furniture-storage-units",
-},
+    id: 4,
+    name: "Furniture – Storage Units",
+    standard: "IS 17634:2022",
+    link: "isi-products/isi-certificate-furniture-storage-units",
+  },
   {
     id: 5,
     name: "Furniture - Beds",
     standard: "IS 17635: 2022",
-    link: "isi-products/isi-certificate-furniture-beds"
-},
-{
+    link: "isi-products/isi-certificate-furniture-beds",
+  },
+  {
     id: 6,
     name: "Furniture - Bunk Beds",
     standard: "IS 17636: 2022",
-    link: "isi-products/isi-certificate-bunk-beds-17636"
-},
+    link: "isi-products/isi-certificate-bunk-beds-17636",
+  },
+  {
+    id: 7,
+    name: "Plywood for General Purposes",
+    standard: "IS 303: 1989",
+    link: "isi-products/isi-certification-plywood-for-general-purposes",
+  },
+
 ];
 
 const chunkProducts = (arr, size = 2) => {
@@ -173,9 +179,9 @@ export default function FurnitureISI() {
             Along with furniture, BIS ISI Mark certification is also compulsory
             for plywood products sold or imported in India. As per the Quality
             Control Order issued in 2024, plywood manufacturers and importers
-            must obtain BIS ISI certification to legally sell plywood in the Indian
-            market. Non-certified plywood products are not permitted for sale or
-            distribution.
+            must obtain BIS ISI certification to legally sell plywood in the
+            Indian market. Non-certified plywood products are not permitted for
+            sale or distribution.
           </p>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -192,7 +198,7 @@ export default function FurnitureISI() {
           </p>
 
           <ul className="list-disc pl-6 text-[15px] text-gray-500 space-y-1 mb-4">
-            <li>IS 303 – Plywood for General Purpose Applications</li>
+            <li>IS 303 – Plywood for General Purposes </li>
             <li>IS 710 – Marine Grade Plywood for High Moisture Conditions</li>
           </ul>
 
@@ -537,120 +543,120 @@ export default function FurnitureISI() {
         </div>
       </section>
 
-       <section className="w-full bg-white px-3 md:px-6 pb-12">
-              <div className="max-w-7xl mx-auto px-2">
-                <h2 className="text-xl font-bold uppercase text-gray-900">
-                  FURNITURE AND PLYWOOD PRODUCTS UNDER BIS ISI CERTIFICATION SERVICE
-                </h2>
-      
-                <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-                  <span className="absolute left-0 top-0 h-0.5 w-60 md:w-157 bg-[#0072b1]" />
-                </div>
-      
-                <div className="hidden md:block mt-5 overflow-x-auto border border-[#0072b1]">
-                  <table className="w-full text-sm border-collapse">
-                    <thead>
-                      <tr className="bg-blue-50 border-b border-blue-400">
-                        <th className="border border-blue-400 px-3 py-2 text-left">
-                          Product
-                        </th>
-                        <th className="border border-blue-400 px-3 py-2 w-44 text-center">
-                          Standard
-                        </th>
-                        <th className="border border-blue-400 px-3 py-2 text-left">
-                          Product
-                        </th>
-                        <th className="border border-blue-400 px-3 py-2 w-44 text-center">
-                          Standard
-                        </th>
-                      </tr>
-                    </thead>
-      
-                    <tbody>
-                      {productRows.map((row, rowIndex) => (
-                        <tr
-                          key={rowIndex}
-                          className={`${
-                            rowIndex % 2 === 0 ? "bg-[#bfe4ef]" : "bg-white"
-                          } hover:bg-blue-100 transition`}
-                        >
-                          <td className="border border-blue-400 px-3 py-2">
-                            {row[0] && (
-                              <Link
-                                href={row[0].link}
-                                className="font-medium text-gray-900 hover:text-blue-700 hover:underline"
-                              >
-                                {row[0].name}
-                              </Link>
-                            )}
-                          </td>
-                          <td className="border border-blue-400 px-3 py-2 text-center text-gray-700">
-                            {row[0]?.standard}
-                          </td>
-      
-                          <td className="border border-blue-400 px-3 py-2">
-                            {row[1] && (
-                              <Link
-                                href={row[1].link}
-                                className="font-medium text-gray-900 hover:text-blue-700 hover:underline"
-                              >
-                                {row[1].name}
-                              </Link>
-                            )}
-                          </td>
-                          <td className="border border-blue-400 px-3 py-2 text-center text-gray-700">
-                            {row[1]?.standard || "-"}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-      
-                <div className="md:hidden mt-5 space-y-0">
-                  {productRows.map((row, rowIndex) => (
-                    <div
-                      key={rowIndex}
-                      className="border border-[#0072b1]  overflow-hidden"
-                    >
+      <section className="w-full bg-white px-3 md:px-6 pb-12">
+        <div className="max-w-7xl mx-auto px-2">
+          <h2 className="text-xl font-bold uppercase text-gray-900">
+            FURNITURE AND PLYWOOD PRODUCTS UNDER BIS ISI CERTIFICATION SERVICE
+          </h2>
+
+          <div className="w-full h-0.5 bg-gray-200 relative mb-4">
+            <span className="absolute left-0 top-0 h-0.5 w-60 md:w-157 bg-[#0072b1]" />
+          </div>
+
+          <div className="hidden md:block mt-5 overflow-x-auto border border-[#0072b1]">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-blue-50 border-b border-blue-400">
+                  <th className="border border-blue-400 px-3 py-2 text-left">
+                    Product
+                  </th>
+                  <th className="border border-blue-400 px-3 py-2 w-44 text-center">
+                    Standard
+                  </th>
+                  <th className="border border-blue-400 px-3 py-2 text-left">
+                    Product
+                  </th>
+                  <th className="border border-blue-400 px-3 py-2 w-44 text-center">
+                    Standard
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {productRows.map((row, rowIndex) => (
+                  <tr
+                    key={rowIndex}
+                    className={`${
+                      rowIndex % 2 === 0 ? "bg-[#bfe4ef]" : "bg-white"
+                    } hover:bg-blue-100 transition`}
+                  >
+                    <td className="border border-blue-400 px-3 py-2">
                       {row[0] && (
-                        <div className="bg-[#bfe4ef] px-4 py-1 border-b border-blue-400">
-                          {/* <p className="text-xs text-gray-600 mb-1">
+                        <Link
+                          href={row[0].link}
+                          className="font-medium text-gray-900 hover:text-blue-700 hover:underline"
+                        >
+                          {row[0].name}
+                        </Link>
+                      )}
+                    </td>
+                    <td className="border border-blue-400 px-3 py-2 text-center text-gray-700">
+                      {row[0]?.standard}
+                    </td>
+
+                    <td className="border border-blue-400 px-3 py-2">
+                      {row[1] && (
+                        <Link
+                          href={row[1].link}
+                          className="font-medium text-gray-900 hover:text-blue-700 hover:underline"
+                        >
+                          {row[1].name}
+                        </Link>
+                      )}
+                    </td>
+                    <td className="border border-blue-400 px-3 py-2 text-center text-gray-700">
+                      {row[1]?.standard || "-"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="md:hidden mt-5 space-y-0">
+            {productRows.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="border border-[#0072b1]  overflow-hidden"
+              >
+                {row[0] && (
+                  <div className="bg-[#bfe4ef] px-4 py-1 border-b border-blue-400">
+                    {/* <p className="text-xs text-gray-600 mb-1">
                             Sr. {rowIndex * 2 + 1}
                           </p> */}
-                          <Link
-                            href={row[0].link}
-                            className="font-medium text-gray-900 hover:underline block"
-                          >
-                            {row[0].name}
-                          </Link>
-                          <p className="text-[14px] text-gray-600 mt-1">
-                            {row[0].standard}
-                          </p>
-                        </div>
-                      )}
-      
-                      {row[1] && (
-                        <div className="bg-white px-4 py-1">
-                          {/* <p className="text-xs text-gray-600 mb-1">
+                    <Link
+                      href={row[0].link}
+                      className="font-medium text-gray-900 hover:underline block"
+                    >
+                      {row[0].name}
+                    </Link>
+                    <p className="text-[14px] text-gray-600 mt-1">
+                      {row[0].standard}
+                    </p>
+                  </div>
+                )}
+
+                {row[1] && (
+                  <div className="bg-white px-4 py-1">
+                    {/* <p className="text-xs text-gray-600 mb-1">
                             Sr. {rowIndex * 2 + 2}
                           </p> */}
-                          <Link
-                            href={row[1].link}
-                            className="font-medium text-gray-900 hover:underline block"
-                          >
-                            {row[1].name}
-                          </Link>
-                          <p className="text-[14px] text-gray-600 mt-1">
-                            {row[1].standard}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                    <Link
+                      href={row[1].link}
+                      className="font-medium text-gray-900 hover:underline block"
+                    >
+                      {row[1].name}
+                    </Link>
+                    <p className="text-[14px] text-gray-600 mt-1">
+                      {row[1].standard}
+                    </p>
+                  </div>
+                )}
               </div>
-            </section>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
@@ -867,10 +873,10 @@ export default function FurnitureISI() {
                 3. Better Quality Control and Production Efficiency
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                BIS ISI certification encourages manufacturers to follow standard
-                production practices and regular in-house testing. This results
-                in consistent product quality, reduced defects, fewer customer
-                complaints, and lower rejection or return rates.
+                BIS ISI certification encourages manufacturers to follow
+                standard production practices and regular in-house testing. This
+                results in consistent product quality, reduced defects, fewer
+                customer complaints, and lower rejection or return rates.
               </p>
             </div>
 
