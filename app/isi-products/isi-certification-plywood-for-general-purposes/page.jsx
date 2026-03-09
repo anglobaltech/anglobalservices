@@ -1,5 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
+
+export const dynamic = "force-static";
+export const revalidate = 86400;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is BIS ISI certification mandatory for plywood for general purposes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. In India, certain plywood products are covered under Quality Control Orders (QCOs) issued by the Government of India, requiring BIS ISI certification before manufacture or sale.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which Indian Standard applies to plywood for general purposes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Plywood for general purposes is governed by Indian Standard IS 303:1989, which specifies requirements for materials, grading, dimensions, bonding strength, and performance of plywood used in general applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What grades are specified under IS 303:1989?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IS 303:1989 specifies Moisture Resistant (MR) grade and Boiling Water Resistant (BWR) grade plywood depending on the adhesive bond strength used during veneer bonding.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What tests are conducted for plywood under IS 303:1989?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Major tests include water resistance testing, moisture content determination, static bending strength test, adhesive bond strength verification, thickness of veneers, dimensional tolerance checks, workmanship inspection, and mycological resistance tests.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does BIS certification take for plywood for general purposes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The BIS ISI certification process generally takes around 30 to 45 days for Indian manufacturers and approximately 180 days for foreign manufacturers, subject to successful inspection, testing, and documentation verification.",
+      },
+    },
+  ],
+};
+
 export const metadata = {
   title: "BIS ISI Certification for Plywood (IS 303:1989) | AN Global Services",
 
@@ -49,64 +100,17 @@ export const metadata = {
       "https://www.anglobalservices.com/isi-products/isi-certification-plywood-for-general-purposes",
   },
 };
+
 export default function PlywoodForGeneralPurposes() {
   return (
     <main className="w-full bg-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Is BIS ISI certification mandatory for plywood for general purposes?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. In India, certain plywood products are covered under Quality Control Orders (QCOs) issued by the Government of India, requiring BIS ISI certification before manufacture or sale.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Which Indian Standard applies to plywood for general purposes?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Plywood for general purposes is governed by Indian Standard IS 303:1989, which specifies requirements for materials, grading, dimensions, bonding strength, and performance of plywood used in general applications.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What grades are specified under IS 303:1989?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "IS 303:1989 specifies Moisture Resistant (MR) grade and Boiling Water Resistant (BWR) grade plywood depending on the adhesive bond strength used during veneer bonding.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What tests are conducted for plywood under IS 303:1989?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Major tests include water resistance testing, moisture content determination, static bending strength test, adhesive bond strength verification, thickness of veneers, dimensional tolerance checks, workmanship inspection, and mycological resistance tests.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How long does BIS certification take for plywood for general purposes?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The BIS ISI certification process generally takes around 30 to 45 days for Indian manufacturers and approximately 180 days for foreign manufacturers, subject to successful inspection, testing, and documentation verification.",
-                },
-              },
-            ],
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
-          {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
               src="/isi-products/bis-isi-certification-for-general-purposes-plywood.png"
@@ -114,11 +118,10 @@ export default function PlywoodForGeneralPurposes() {
               width={420}
               height={320}
               className="w-full h-auto object-cover"
-              priority
+              unoptimized
             />
           </div>
 
-          {/* Content */}
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
               BIS ISI Certification for Plywood for General Purposes (IS
@@ -145,6 +148,7 @@ export default function PlywoodForGeneralPurposes() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               <Link
                 href="/bis-isi-mark-certification"
+                prefetch={false}
                 className="text-[#0072b1] font-medium hover:underline"
               >
                 BIS ISI Mark certification
@@ -227,9 +231,10 @@ export default function PlywoodForGeneralPurposes() {
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
           <p className="text-gray-600 text-[15px] leading-6">
             <strong>Estimated Timeline:</strong> BIS ISI certification generally
-            takes around <strong>30 to 45 days for Indian manufacturers</strong> subject to
-            successful inspection, testing, and documentation verification. The
-            timeline may vary depending on inspection and test results.
+            takes around <strong>30 to 45 days for Indian manufacturers</strong>{" "}
+            subject to successful inspection, testing, and documentation
+            verification. The timeline may vary depending on inspection and test
+            results.
           </p>
         </div>
 

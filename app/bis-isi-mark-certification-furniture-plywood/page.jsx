@@ -78,7 +78,12 @@ const products = [
     standard: "IS 303: 1989",
     link: "isi-products/isi-certification-plywood-for-general-purposes",
   },
-
+  {
+  id: 8,
+  name: "Marine Plywood",
+  standard: "IS 710: 2010",
+  link: "isi-products/isi-certification-for-marine-plywood",
+},
 ];
 
 const chunkProducts = (arr, size = 2) => {
