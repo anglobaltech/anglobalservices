@@ -23,5 +23,24 @@ Disallow: /
 User-agent: YandexBot
 Disallow: /
 
+# Additional SEO tool crawlers
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
 # Sitemap
 Sitemap: https://www.anglobalservices.com/sitemap.xml
