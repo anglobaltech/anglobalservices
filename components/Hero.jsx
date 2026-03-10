@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import dynamic from "next/dynamic";
+import { useMemo } from "react";
 
 const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
   ssr: false,
@@ -13,65 +14,63 @@ const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
 const slides = ["/dash-image1.jpg", "/dash-image2.jpg", "/dash-image3.jpg"];
 
 export default function Hero() {
-  const testimonials = [
-    {
-      text: "AN Global Services provided excellent installation and support for our XRF machine. The team is highly professional, and the entire process was smooth and well-managed. Special thanks to Ayush Sharma for his guidance.",
-      name: "Roni Dear",
-      position: "XRF Lab Owner",
-      image: "/images/testimonials/roni-dear.jpg",
-    },
-    {
-      text: "AN Global Services set up our LS Hallmarking system flawlessly. The setup quality and technical knowledge are outstanding. One of the best hallmarking solution providers in India.",
-      name: "Punit Soni",
-      position: "Jewellery Business Owner",
-      image: "/images/testimonials/punit-soni.jpg",
-    },
-    {
-      text: "Dil se dhanyavaad AN Global Services ko. Kalyan Hallmarking Center, Sojat ke liye unki service aur support kaafi reliable aur professional raha.",
-      name: "Shaitansingh Chauhan",
-      position: "Owner, Kalyan Hallmarking Center",
-      image: "/images/testimonials/shaitansingh.jpg",
-    },
-    {
-      text: "Very excellent training and support. The team explained the entire process step by step in a very clear manner. Highly satisfied with their technical guidance.",
-      name: "Majeti Kumar Raja",
-      position: "Lab Technician",
-      image: "/images/testimonials/majeti-kumar.jpg",
-    },
-    {
-      text: "Mr. Ayush Ji is very friendly and positive. His team’s work quality is excellent, and their coordination is truly commendable. Highly recommended.",
-      name: "Amit Soni",
-      position: "Business Owner",
-      image: "/images/testimonials/amit-soni.jpg",
-    },
-    {
-      text: "Best teamwork and very good nature. The team is supportive, knowledgeable, and always ready to help.",
-      name: "GS Soni",
-      position: "Jewellery Professional",
-      image: "/images/testimonials/gs-soni.jpg",
-    },
-    {
-      text: "AN Global Services always delivers work up to expectations. Their commitment and professionalism make them a trusted service partner.",
-      name: "Ankit Gupta",
-      position: "Local Guide & Client",
-      image: "/images/testimonials/ankit-gupta.jpg",
-    },
-  ];
-
-  const clientsLogos = [
-    "/clients/spago.jpg",
-    "/clients/sga.jpg",
-    "/clients/nhf.jpg",
-    "/clients/mtras.jpg",
-    "/clients/kse.jpg",
-    "/clients/kowa.jpg",
-    "/clients/jasmine.jpg",
-    "/clients/health.jpg",
-    "/clients/force.jpg",
-    "/clients/fire-guard.jpg",
-    "/clients/birat.jpg",
-    "/clients/10.jpg",
-  ];
+  const testimonials = useMemo(
+    () => [
+      {
+        text: "AN Global Services provided excellent installation and support for our XRF machine. The team is highly professional, and the entire process was smooth and well-managed. Special thanks to Ayush Sharma for his guidance.",
+        name: "Roni Dear",
+        position: "XRF Lab Owner",
+      },
+      {
+        text: "AN Global Services set up our LS Hallmarking system flawlessly. The setup quality and technical knowledge are outstanding. One of the best hallmarking solution providers in India.",
+        name: "Punit Soni",
+        position: "Jewellery Business Owner",
+      },
+      {
+        text: "Dil se dhanyavaad AN Global Services ko. Kalyan Hallmarking Center, Sojat ke liye unki service aur support kaafi reliable aur professional raha.",
+        name: "Shaitansingh Chauhan",
+        position: "Owner, Kalyan Hallmarking Center",
+      },
+      {
+        text: "Very excellent training and support. The team explained the entire process step by step in a very clear manner. Highly satisfied with their technical guidance.",
+        name: "Majeti Kumar Raja",
+        position: "Lab Technician",
+      },
+      {
+        text: "Mr. Ayush Ji is very friendly and positive. His team’s work quality is excellent, and their coordination is truly commendable. Highly recommended.",
+        name: "Amit Soni",
+        position: "Business Owner",
+      },
+      {
+        text: "Best teamwork and very good nature. The team is supportive, knowledgeable, and always ready to help.",
+        name: "GS Soni",
+        position: "Jewellery Professional",
+      },
+      {
+        text: "AN Global Services always delivers work up to expectations. Their commitment and professionalism make them a trusted service partner.",
+        name: "Ankit Gupta",
+        position: "Local Guide & Client",
+      },
+    ],
+    [],
+  );
+  const clientsLogos = useMemo(
+    () => [
+      "/clients/spago.jpg",
+      "/clients/sga.jpg",
+      "/clients/nhf.jpg",
+      "/clients/mtras.jpg",
+      "/clients/kse.jpg",
+      "/clients/kowa.jpg",
+      "/clients/jasmine.jpg",
+      "/clients/health.jpg",
+      "/clients/force.jpg",
+      "/clients/fire-guard.jpg",
+      "/clients/birat.jpg",
+      "/clients/10.jpg",
+    ],
+    [],
+  );
 
   const [formData, setFormData] = useState({
     service: "",
@@ -89,11 +88,26 @@ export default function Hero() {
   const totalSlides = testimonials.length + 1;
   const clientsRef = useRef(null);
   const [clientsPaused, setClientsPaused] = useState(false);
-  const clientItems = [...clientsLogos, ...clientsLogos];
+  const clientItems = useMemo(
+    () => [...clientsLogos, ...clientsLogos],
+    [clientsLogos],
+  );
   const clientsX = useRef(0);
   const [captchaToken, setCaptchaToken] = useState(null);
   const [error, setError] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+  const [isTabActive, setIsTabActive] = useState(true);
+
+  useEffect(() => {
+    const handleVisibility = () => {
+      setIsTabActive(!document.hidden);
+    };
+
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () =>
+      document.removeEventListener("visibilitychange", handleVisibility);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -111,98 +125,94 @@ export default function Hero() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  if (!captchaToken) {
-    setError("Please verify captcha");
-    return;
-  }
-
-  if (!formData.service || !formData.name || !formData.phone) {
-    setError("Please fill all fields");
-    return;
-  }
-
-  setLoading(true);
-  setError("");
-
-  try {
-    // 🔥 Load Firebase only now
-    const { db } = await import("@/src/lib/firebase");
-    const {
-      doc,
-      runTransaction,
-      serverTimestamp,
-    } = await import("firebase/firestore");
-
-    const res = await fetch("/api/verify-captcha", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token: captchaToken }),
-    });
-
-    const result = await res.json();
-    if (!result.success) {
-      setError("Captcha failed");
-      setLoading(false);
+    if (!captchaToken) {
+      setError("Please verify captcha");
       return;
     }
 
-    const counterRef = doc(db, "counters", "enquiries");
-    let enquiryId = "";
+    if (!formData.service || !formData.name || !formData.phone) {
+      setError("Please fill all fields");
+      return;
+    }
 
-    await runTransaction(db, async (transaction) => {
-      const counterSnap = await transaction.get(counterRef);
-      const current = counterSnap.exists()
-        ? counterSnap.data().current || 0
-        : 0;
+    setLoading(true);
+    setError("");
 
-      const next = current + 1;
-      enquiryId = `AN${String(next).padStart(5, "0")}`;
+    try {
+      // 🔥 Load Firebase only now
+      const { db } = await import("@/src/lib/firebase");
+      const { doc, runTransaction, serverTimestamp } =
+        await import("firebase/firestore");
 
-      transaction.set(counterRef, { current: next }, { merge: true });
-
-      transaction.set(doc(db, "enquiries", enquiryId), {
-        industry: formData.service,
-        name: formData.name,
-        phone: formData.phone,
-        source: "website",
-        status: "new",
-        createdAt: serverTimestamp(),
+      const res = await fetch("/api/verify-captcha", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: captchaToken }),
       });
-    });
 
-    await fetch("/api/send-enquiry-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        enquiryId,
-        name: formData.name,
-        phone: formData.phone,
-        service: formData.service,
-        source: "website",
-      }),
-    });
+      const result = await res.json();
+      if (!result.success) {
+        setError("Captcha failed");
+        setLoading(false);
+        return;
+      }
 
-    setSuccess(true);
-    setFormData({ service: "", name: "", phone: "" });
-    setCaptchaToken(null);
-  } catch (err) {
-    setError("Something went wrong");
-  } finally {
-    setLoading(false);
-  }
-};
+      const counterRef = doc(db, "counters", "enquiries");
+      let enquiryId = "";
+
+      await runTransaction(db, async (transaction) => {
+        const counterSnap = await transaction.get(counterRef);
+        const current = counterSnap.exists()
+          ? counterSnap.data().current || 0
+          : 0;
+
+        const next = current + 1;
+        enquiryId = `AN${String(next).padStart(5, "0")}`;
+
+        transaction.set(counterRef, { current: next }, { merge: true });
+
+        transaction.set(doc(db, "enquiries", enquiryId), {
+          industry: formData.service,
+          name: formData.name,
+          phone: formData.phone,
+          source: "website",
+          status: "new",
+          createdAt: serverTimestamp(),
+        });
+      });
+
+      await fetch("/api/send-enquiry-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          enquiryId,
+          name: formData.name,
+          phone: formData.phone,
+          service: formData.service,
+          source: "website",
+        }),
+      });
+
+      setSuccess(true);
+      setFormData({ service: "", name: "", phone: "" });
+      setCaptchaToken(null);
+    } catch (err) {
+      setError("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    if (clientsPaused) return;
-
+    if (clientsPaused || !isTabActive) return;
     const track = clientsRef.current;
     if (!track) return;
 
     let rafId;
-    const speed = 1;
+    const speed = 0.4;
 
     const animate = () => {
       clientsX.current -= speed;
@@ -276,7 +286,7 @@ export default function Hero() {
 
       let x = 0;
       let raf;
-      const speed = 0.35;
+      const speed = 0.18;
 
       const animate = () => {
         x -= speed;

@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import LeadPopup from "@/components/LeadPopup";
+export const revalidate = 86400
 
 export const metadata = {
   title:

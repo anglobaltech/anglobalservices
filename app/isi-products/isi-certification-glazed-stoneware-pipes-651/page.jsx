@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification for Glazed Stoneware Pipes & Fittings IS 651 | AN Global Services",

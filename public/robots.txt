@@ -1,9 +1,27 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://www.anglobalservices.com
+# Block heavy SEO crawlers
+User-agent: AhrefsBot
+Disallow: /
 
-# Sitemaps
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+# Sitemap
 Sitemap: https://www.anglobalservices.com/sitemap.xml

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { blogs } from "./blogData";
 
+export const revalidate = 86400
+
 export const metadata = {
   title: "Blogs | AN Global Services",
   description:

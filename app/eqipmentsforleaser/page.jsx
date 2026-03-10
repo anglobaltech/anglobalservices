@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+export const revalidate = 86400
+
 export const metadata = {
   title: "Laser Soldering Machine for Jewellery, Electronics & Medical Devices | AN Global Services",
   description:

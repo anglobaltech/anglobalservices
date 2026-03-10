@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification for Steel Wire Ropes for General Engineering Purposes IS 2266:2002 | AN Global Services",

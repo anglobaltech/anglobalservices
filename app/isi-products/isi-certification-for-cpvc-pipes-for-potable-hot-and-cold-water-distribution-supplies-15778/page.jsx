@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification for CPVC Pipes for Hot & Cold Water IS 15778 | AN Global Services",

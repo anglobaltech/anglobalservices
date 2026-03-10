@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification for UPVC Pipes for Soil & Waste Discharge Systems IS 13592 | AN Global Services",

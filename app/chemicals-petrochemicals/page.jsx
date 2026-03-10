@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 
+
 const images = [
   "/service/hallmarking/acetic-acid.png",
   "/service/hallmarking/beta-picoline.png",

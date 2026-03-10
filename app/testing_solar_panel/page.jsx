@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const revalidate = 86400
 
 export const metadata = {
   title: "Solar Panel Testing Services under BIS Certification | AN Global Services",

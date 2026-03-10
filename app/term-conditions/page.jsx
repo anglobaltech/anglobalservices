@@ -1,3 +1,5 @@
+export const revalidate = 86400
+
 export const metadata = {
   title: "Terms & Conditions | AN Global Services",
   description:

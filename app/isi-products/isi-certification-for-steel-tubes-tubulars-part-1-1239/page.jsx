@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification for Steel Tubes, Tulalers, Steel Fittings IS 1239 (Part 1) | AN Global Services",

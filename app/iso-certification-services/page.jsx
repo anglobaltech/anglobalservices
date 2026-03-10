@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title: "ISO Certification Services in India | ISO 9001, 14001, 45001 | AN Global Services",
   description:

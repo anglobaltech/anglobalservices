@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification for Non-Pressure UPVC Pipes for Drainage & Sewerage IS 15328 | AN Global Services",

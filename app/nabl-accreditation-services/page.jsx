@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Script from "next/script";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "NABL Certification & Accreditation Services | ISO 17025 & ISO 15189 Consultants | AN Global Services",

@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+export const revalidate = 86400
 export const metadata = {
   title:
     "BIS FMCS Certification for Foreign Manufacturers | ISI Mark India | AN Global Services",

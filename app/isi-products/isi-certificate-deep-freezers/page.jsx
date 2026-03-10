@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "BIS ISI Certification for Deep Freezers (IS 7872:2020) | AN Global Services",

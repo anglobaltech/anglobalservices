@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title: "BEE Registration & Star Labelling Services | AN Global Services",
   description:

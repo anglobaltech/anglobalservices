@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification for HDPE Pipes for Potable Water Supplies IS 4984 | AN Global Services",

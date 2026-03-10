@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
+export const revalidate = 86400
+
 export const metadata = {
   title:
     "ISI Certification & BIS Certification Services in India | AN Global Services",
