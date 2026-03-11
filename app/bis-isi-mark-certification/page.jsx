@@ -6,15 +6,15 @@ export const revalidate = 86400
 
 export const metadata = {
   title:
-    "ISI Certification & BIS Certification Services in India | AN Global Services",
+    "ISI Mark Certificate - Process, Documents, Cost, Benefits | AN Global Services",
 
   description:
-    "Apply for ISI Certification & BIS Certification in India with AN Global Services. Trusted BIS ISI certification services for manufacturers & importers. End-to-end support including documentation, product testing, factory inspection & fast BIS approval.",
+    "Apply for ISI Certificate & BIS Certificate in India with AN Global Services. Trusted BIS ISI certificate services for manufacturers & importers. End-to-end support including documentation, product testing, factory inspection & fast BIS approval.",
 
   keywords: [
+    "ISI certificate",
     "ISI certification",
     "BIS certification",
-    "ISI certificate",
     "BIS certificate",
     "BIS ISI certification",
     "ISI mark certification",
@@ -27,10 +27,10 @@ export const metadata = {
     "ISI certification consultant",
     "BIS ISI consultant India",
     "ISI mark agent",
-    "ISI certification consultancy",
+    "ISI certificate consultancy",
     "ISI certificate for manufacturers",
-    "ISI certification for importers",
-    "foreign manufacturer ISI certification",
+    "ISI certificate for importers",
+    "foreign manufacturer ISI certificate",
     "ISI mark for factory",
     "ISI certification process",
     "documents required for ISI certificate",
@@ -38,10 +38,10 @@ export const metadata = {
     "ISI certification fees",
     "time required for ISI certification",
     "mandatory ISI certification",
-    "products under ISI certification",
+    "products under ISI certificate",
     "list of products under ISI mark",
     "electrical products ISI certification",
-    "AN Global Services ISI certification",
+    "AN Global Services ISI certificate",
     "BIS certificate services",
     "BIS certification services India",
   ],
@@ -71,10 +71,10 @@ export default function ISIPage() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is ISI Mark Certification?",
+              "name": "What is ISI Mark Certificate?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "ISI Mark Certification is a quality certification issued by the Bureau of Indian Standards (BIS) that confirms a product complies with the applicable Indian Standard for safety, quality, and performance."
+                "text": "ISI Mark Certificate is a quality certification issued by the Bureau of Indian Standards (BIS) that confirms a product complies with the applicable Indian Standard for safety, quality, and performance."
               }
             },
             {
@@ -87,7 +87,7 @@ export default function ISIPage() {
             },
             {
               "@type": "Question",
-              "name": "Who needs ISI Mark Certification?",
+              "name": "Who needs ISI Mark Certificate?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Indian manufacturers, foreign manufacturers exporting to India, importers, brand owners, and sellers of notified products are required to obtain ISI Mark Certification."
@@ -95,15 +95,15 @@ export default function ISIPage() {
             },
             {
               "@type": "Question",
-              "name": "How long does it take to get ISI Certification?",
+              "name": "How long does it take to get ISI Certificate?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The ISI Certification process generally takes 30 to 60 days, depending on product type, testing requirements, factory readiness, and BIS inspection timelines."
+                "text": "The ISI Certificate process generally takes 30 to 60 days, depending on product type, testing requirements, factory readiness, and BIS inspection timelines."
               }
             },
             {
               "@type": "Question",
-              "name": "What is the cost of ISI Certification in India?",
+              "name": "What is the cost of ISI Certificate in India?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The cost includes BIS application fee, inspection fee, testing charges, marking fee, and license fee. The total cost varies based on the product and applicable Indian Standard."
@@ -125,11 +125,11 @@ export default function ISIPage() {
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4 text-center">
             <h1 className="text-white text-3xl md:text-4xl  font-extrabold tracking-wide">
-              BIS ISI CERTIFICATION SERVICES
+              BIS ISI CERTIFICATE SERVICES
             </h1>
 
             <p className="text-gray-300 mt-4 text-md  max-w-3xl mx-auto leading-relaxed">
-              Expert ISI Certification & BIS Certification Consultants in India
+              Expert ISI Certificate & BIS Certificate Consultants in India
               for manufacturers, importers & brand owners.
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function ISIPage() {
           <div className="rounded-xl overflow-hidden shadow-md">
             <Image
               src="/service/isi/isi-certificate.png"
-              alt="ISI Mark Certification"
+              alt="ISI Mark Certificate in India"
               width={500}
               height={500}
               className="w-full h-auto"
@@ -151,12 +151,12 @@ export default function ISIPage() {
 
         <div className="md:col-span-2">
           <h2 className="text-2xl font-bold mb-4 border-b uppercase">
-            What is BIS ISI Certification in India?
+            What is BIS ISI Certificate in India?
           </h2>
 
           <div className="space-y-5 text-gray-500 leading-7 text-[15px]">
             <p className="font-medium text-gray-500">
-              BIS ISI Certification is a mandatory product certification scheme
+              BIS ISI Certificate is a mandatory product certificate scheme
               in India that ensures products comply with Indian Standards for
               safety, quality, and performance.
             </p>
@@ -176,10 +176,10 @@ export default function ISIPage() {
             </p>
 
             <p>
-              AN Global Services is an established ISI Certification service
+              AN Global Services is an established ISI Certificate service
               provider for both Indian and international manufacturers. We
               assist in managing the complete process required to obtain ISI
-              Certification for mandatory as well as optional products.
+              Certificate for mandatory as well as optional products.
             </p>
           </div>
         </div>
@@ -284,7 +284,7 @@ export default function ISIPage() {
       <section className="w-full bg-[#f5f5f5] py-12">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-center text-xl md:text-2xl font-semibold text-gray-900 mb-12">
-            SIGNIFICANCE OF BIS/ISI MARK CERTIFICATION IN INDIA
+            SIGNIFICANCE OF BIS/ISI MARK CERTIFICATE IN INDIA
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-14">
@@ -344,7 +344,7 @@ export default function ISIPage() {
                 <span className="block h-0.5 w-32 bg-[#0075B6]"></span>
               </div>
               <p className="text-gray-500 text-[15px] leading-7">
-                BIS ISI certification offers legal benefits by allowing
+                BIS ISI certificate offers legal benefits by allowing
                 manufacturers to produce mandatory listed goods without legal
                 issues. It protects businesses from penalties, fines, and legal
                 actions that may arise due to non-compliance with BIS
@@ -489,10 +489,10 @@ export default function ISIPage() {
           {/* Heading */}
           <div className="mb-12 text-center">
             <h2 className="text-2xl font-bold text-gray-900">
-              List of Products Covered Under BIS ISI Certification
+              List of Products Covered Under BIS ISI Certificate
             </h2>
             <p className="mt-3 text-gray-500 text-sm">
-              Select your product category to understand ISI certification
+              Select your product category to understand ISI certificate
               requirements, standards, and approval process.
             </p>
           </div>

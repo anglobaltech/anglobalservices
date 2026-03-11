@@ -45,7 +45,7 @@ export default function FMCSPage() {
         <div className="absolute inset-0 bg-[#0a3d62]/30" />
 
         <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 uppercase leading-snug">
-          BIS FMCS Certification for Foreign Manufacturers in India
+          BIS FMCS Certification for Foreign Manufacturers
         </h1>
       </section>
 
