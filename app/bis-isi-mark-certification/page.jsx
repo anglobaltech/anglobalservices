@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
-    "ISI Mark Certificate - Process, Documents, Cost, Benefits | AN Global Services",
+    "ISI Certificate - Process, Documents, Cost, Benefits | AN Global Services",
 
   description:
     "Apply for ISI Certificate & BIS Certificate in India with AN Global Services. Trusted BIS ISI certificate services for manufacturers & importers. End-to-end support including documentation, product testing, factory inspection & fast BIS approval.",
@@ -60,58 +60,115 @@ export default function ISIPage() {
   return (
     <main className="w-full">
       <Script
-        id="isi-faq-schema"
+        id="isi-schema"
         type="application/ld+json"
         strategy="afterInteractive"
       >
         {`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "name": "AN Global Services",
+      "url": "https://www.anglobalservices.com",
+      "logo": "https://www.anglobalservices.com/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com",
+        "https://www.facebook.com"
+      ]
+    },
+
+    {
+      "@type": "Service",
+      "serviceType": "ISI Certificate Consultancy",
+      "provider": {
+        "@type": "Organization",
+        "name": "AN Global Services"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "description": "Professional ISI certificate consultancy services for manufacturers, importers and brand owners including documentation, BIS product testing, factory inspection and license approval."
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is ISI Mark Certificate?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ISI Mark Certificate is a quality certification issued by the Bureau of Indian Standards (BIS) that confirms a product complies with the applicable Indian Standard for safety, quality, and performance."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is ISI Mark Certification mandatory in India?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, ISI certification is mandatory for products notified under BIS Quality Control Orders. Selling or importing such products without ISI certification is a punishable offense."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Who needs ISI Mark Certificate?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Indian manufacturers, foreign manufacturers exporting to India, importers, brand owners, and sellers of notified products are required to obtain ISI Mark Certification."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How long does it take to get ISI Certificate?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The ISI Certificate process generally takes 30 to 60 days, depending on product type, testing requirements, factory readiness, and BIS inspection timelines."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the cost of ISI Certificate in India?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The cost includes BIS application fee, inspection fee, testing charges, marking fee, and license fee. The total cost varies based on the product and applicable Indian Standard."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.anglobalservices.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ISI Certificate",
+          "item": "https://www.anglobalservices.com/bis-isi-mark-certification"
         }
-        `}
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is ISI Certificate in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ISI Certificate is a product certification issued by the Bureau of Indian Standards (BIS) confirming that a product complies with the relevant Indian Standard for safety, quality and performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ISI Certificate mandatory in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, ISI certification is mandatory for products notified under BIS Quality Control Orders. Manufacturing or selling such products without ISI certification can lead to penalties under the BIS Act."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who needs an ISI Certificate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indian manufacturers, foreign manufacturers exporting to India, importers, brand owners and traders dealing in notified products must obtain ISI certification before selling products in the Indian market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to obtain an ISI Certificate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ISI certificate approval process usually takes between 30 to 60 days depending on the product category, BIS inspection schedule, factory readiness and product testing timelines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the cost of ISI Certificate in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ISI certification cost includes BIS application fee, inspection charges, product testing fees, marking fee and license fee. The total cost varies depending on the product category and applicable Indian Standard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to apply for ISI Certificate in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manufacturers can apply for ISI certification by submitting an application to BIS, arranging product testing in BIS-recognized laboratories, undergoing factory inspection and complying with the relevant Indian Standard."
+          }
+        }
+      ]
+    }
+
+  ]
+}
+`}
       </Script>
 
       <section className="relative w-full h-65 md:h-68">
@@ -124,13 +181,13 @@ export default function ISIPage() {
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4 text-center">
-            <h1 className="text-white text-3xl md:text-4xl  font-extrabold tracking-wide">
-              BIS ISI CERTIFICATE SERVICES
+            <h1 className="text-white text-3xl  font-bold uppercase tracking-wide">
+              ISI Certificate Process, Cost, Documents & Consultant Services
             </h1>
 
             <p className="text-gray-300 mt-4 text-md  max-w-3xl mx-auto leading-relaxed">
-              Expert ISI Certificate & BIS Certificate Consultants in India
-              for manufacturers, importers & brand owners.
+              Expert ISI Certificate & BIS Certificate Consultants in India for
+              manufacturers, importers & brand owners.
             </p>
           </div>
         </div>
@@ -156,21 +213,21 @@ export default function ISIPage() {
 
           <div className="space-y-5 text-gray-500 leading-7 text-[15px]">
             <p className="font-medium text-gray-500">
-              BIS ISI Certificate is a mandatory product certificate scheme
-              in India that ensures products comply with Indian Standards for
+              BIS ISI Certificate is a mandatory product certificate scheme in
+              India that ensures products comply with Indian Standards for
               safety, quality, and performance.
             </p>
             <p>
               The Bureau of Indian Standards (BIS) is the National Certification
               body of India that issues BIS licenses to manufacturers and
               importers for various products under voluntary or mandatory
-              certification schemes. BIS certificate is a third-party
-              assurance of product quality, consumer safety, and reliability.
+              certification schemes. BIS certificate is a third-party assurance
+              of product quality, consumer safety, and reliability.
             </p>
 
             <p>
-              BIS certificate ensures that a product conforms to relevant
-              Indian Standards and is safe for use in the Indian market. Certain
+              BIS certificate ensures that a product conforms to relevant Indian
+              Standards and is safe for use in the Indian market. Certain
               products listed under the Mandatory Product Certification Scheme
               of BIS must obtain certificate before being sold in India.
             </p>
@@ -422,7 +479,10 @@ export default function ISIPage() {
             </h2>
 
             <ul className="space-y-2 text-[15px] list-disc pl-6">
-              <li>Step1: Organize the Lab Test Report (LTR) from a BIS-recognized laboratory</li>
+              <li>
+                Step1: Organize the Lab Test Report (LTR) from a BIS-recognized
+                laboratory
+              </li>
               <li>Step2: Filling of Application</li>
               <li>Step3: Preparation of Manual</li>
               <li>Step4: Documentations</li>
@@ -1143,8 +1203,8 @@ export default function ISIPage() {
             <li>
               Obtaining a BIS ISI Mark certificate is not an easy task; however,
               there is no better place to obtain it than AN Global Services. We
-              provide complete BIS ISI Mark certificate consultancy services from
-              start to end, including all documentation formalities and
+              provide complete BIS ISI Mark certificate consultancy services
+              from start to end, including all documentation formalities and
               coordination with BIS offices in India.
             </li>
 
