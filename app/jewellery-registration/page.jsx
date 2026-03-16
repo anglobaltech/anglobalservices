@@ -32,7 +32,7 @@ export const metadata = {
   authors: [{ name: "AN Global Services" }],
 };
 
-export default function GoldHallmarkingPage() {
+export default function JewelleryRegistrationPage() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">

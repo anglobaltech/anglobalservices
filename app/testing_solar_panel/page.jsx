@@ -7,7 +7,7 @@ export const metadata = {
     "AN Global Services provides professional Solar Panel Testing services under BIS Certification. We assist with performance testing, power output evaluation, voltage and current measurement, and compliance with applicable Indian Standards for solar panels.",
 };
 
-export default function GoldHallmarkingPage() {
+export default function TestingSolarPanelPage() {
 
 
   return (

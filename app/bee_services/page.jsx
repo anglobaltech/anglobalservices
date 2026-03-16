@@ -9,7 +9,7 @@ export const metadata = {
     "Get complete BEE Registration and Star Labelling services in India. AN Global Services provides end-to-end support for Bureau of Energy Efficiency compliance, product testing, documentation, and approval.",
 };
 
-export default function BEEPage() {
+export default function BEERegistrationPage() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">

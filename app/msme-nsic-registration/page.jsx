@@ -33,7 +33,7 @@ export const metadata = {
   },
 };
 
-export default function ISIPage() {
+export default function MSMENSICRegistrationPage() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">

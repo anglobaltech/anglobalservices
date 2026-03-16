@@ -139,7 +139,7 @@ const products = [
   [" etc."],
 ];
 
-export default function ISIPage() {
+export default function BISCRSRegistrationElectronicProducts() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">

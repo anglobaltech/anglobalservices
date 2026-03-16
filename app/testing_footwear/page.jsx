@@ -7,7 +7,7 @@ export const metadata = {
     "AN Global Services provides professional Footwear Testing services under BIS Certification. We assist with safety, quality, and compliance testing for footwear products, including PPE footwear, as per applicable Indian and ISO standards for domestic and international markets.",
 };
 
-export default function Page() {
+export default function TestingFootwearPage() {
   return (
     <main className="w-full bg-white">
       <section

@@ -13,7 +13,7 @@ const images = [
   "/service/hallmarking/Morpholine.png",
 ];
 
-export default function GoldHallmarkingPage() {
+export default function ChemicalsPetrochemicalsPage() {
   const sliderRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);

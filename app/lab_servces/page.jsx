@@ -8,7 +8,7 @@ export const metadata = {
     "AN Global Services provides professional support for Laboratory Equipment & Setup under ISI Mark Certification. We assist with BIS laboratory recognition, compliance with BIS Act provisions, and quality testing requirements for well-equipped laboratories.",
 };
 
-export default function ISIPage() {
+export default function LaboratoryServices() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">

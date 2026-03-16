@@ -6,7 +6,7 @@ export const metadata = {
     "Get expert assistance for BIS Certified Toys Testing. AN Global Services supports toy manufacturers and importers with safety, chemical, electrical, flammability, torque, and tension testing to meet regulatory requirements in India and global markets.",
 };
 
-export default function Page() {
+export default function TestingToysPage() {
   return (
     <main className="w-full bg-white">
       <section

@@ -8,7 +8,7 @@ export const metadata = {
     "Get complete Gold testing services for domestic and industrial products. AN Global Services provides end-to-end gold testing support.",
 };
 
-export default function ISIPage() {
+export default function TestingGoldPage() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">

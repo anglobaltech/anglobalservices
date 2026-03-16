@@ -9,7 +9,7 @@ export const metadata = {
     "Get complete GEM Registration Services for domestic and industrial products. AN Global Services provides end-to-end GEM registration support.",
 };
 
-export default function ISIPage() {
+export default function GemServices() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
