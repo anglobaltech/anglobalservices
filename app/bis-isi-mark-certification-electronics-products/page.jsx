@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -69,12 +69,11 @@ const electronicsProducts = [
     standard: "IS 2082",
     link: "/isi-products/isi-certificate-stationary-storage-type-electric-water-heaters",
   },
-
   {
     id: 6,
-    name: "Switch Mode Power Supplies (SMPS)",
-    standard: "IS 13252 (Part 1)",
-    link: "/bis-isi-mark-certification-electronics-products",
+    name: "Line Operated Three Phase AC Motors",
+    standard: "IS 12615",
+    link: "/isi-products/isi-certificate-line-operated-three-phase-ac-motors",
   },
   {
     id: 7,
