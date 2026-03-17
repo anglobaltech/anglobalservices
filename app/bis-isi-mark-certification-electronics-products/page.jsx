@@ -77,9 +77,9 @@ const electronicsProducts = [
   },
   {
     id: 7,
-    name: "Electrical Cables",
-    standard: "IS 694",
-    link: "/bis-isi-mark-certification-electronics-products",
+    name: "Safety of Electric Toys",
+    standard: "IS 15644",
+    link: "/isi-products/isi-certificate-safety-of-electric-toys-15644",
   },
   {
     id: 8,
