@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -54,9 +54,9 @@ const concreteProducts = [
   },
   {
     id: 3,
-    name: "Paver Blocks",
-    standard: "IS 15658",
-    link: "/bis-isi-mark-certification-concrete-products",
+    name: "Wall Putty",
+    standard: "IS 17545:2021",
+    link: "/isi-products/isi-certificate-for-wall-putty-17545",
   },
   {
     id: 4,
