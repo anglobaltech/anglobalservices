@@ -174,7 +174,7 @@ export default function ISIPage() {
       <section className="relative w-full h-65 md:h-68">
         <Image
           src="/service/isi/about.jpg"
-          alt="BIS ISI Certification Services"
+          alt="BIS ISI Certification Service"
           fill
           priority
           className="object-cover "
@@ -184,7 +184,7 @@ export default function ISIPage() {
             <h1 className="text-white text-3xl  font-bold uppercase tracking-wide">
               ISI Certificate Process, Cost, Documents & Consultant Services
             </h1>
-
+ 
             <p className="text-gray-300 mt-4 text-md  max-w-3xl mx-auto leading-relaxed">
               Expert ISI Certificate & BIS Certificate Consultants in India for
               manufacturers, importers & brand owners.
@@ -760,7 +760,7 @@ export default function ISIPage() {
 
             {/* Electronics */}
             <Link
-              href="/bis-isi-mark-certification-electronics-products"
+              href="/bis-isi-mark-certification-electrical-electronics-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
@@ -772,7 +772,7 @@ export default function ISIPage() {
               />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  Electronics & Electrical Products
+                 Electrical & Electronics Products
                 </h3>
                 <p className="text-sm text-gray-500">
                   Mandatory ISI marking for electronic & IT products.

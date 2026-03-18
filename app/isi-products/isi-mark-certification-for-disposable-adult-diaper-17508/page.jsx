@@ -55,7 +55,7 @@ export const metadata = {
   },
 };
 
-export default function MedicalProductsISIPage() {
+export default function AdultDiaperISIPage() {
   return (
     <main className="w-full bg-white">
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">

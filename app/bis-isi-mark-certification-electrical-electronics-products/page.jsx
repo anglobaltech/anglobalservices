@@ -26,7 +26,7 @@ export const metadata = {
     title: "BIS ISI Mark Certification for Electronics Products in India",
     description:
       "Apply for BIS ISI Mark Certification for electronics products with expert assistance for BIS testing, factory inspection, and ISI license approval.",
-    url: "https://www.anglobalservices.com/bis-isi-mark-certification-electronics-products",
+    url: "https://www.anglobalservices.com/bis-isi-mark-certification-electrical-electronics-products",
     siteName: "AN Global Services",
     locale: "en_IN",
     type: "website",
@@ -34,7 +34,7 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.anglobalservices.com/bis-isi-mark-certification-electronics-products",
+      "https://www.anglobalservices.com/bis-isi-mark-certification-electrical-electronics-products",
   },
 };
 
@@ -83,9 +83,9 @@ const electronicsProducts = [
   },
   {
     id: 8,
-    name: "Sockets & Plugs",
-    standard: "IS 1293",
-    link: "/bis-isi-mark-certification-electronics-products",
+    name: "Bottled Water Dispensers",
+    standard: "IS 17681",
+    link: "/isi-products/isi-certificate-bottled-water-dispensers",
   },
   {
     id: 9,
