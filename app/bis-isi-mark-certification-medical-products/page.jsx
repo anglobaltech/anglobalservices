@@ -93,6 +93,12 @@ const products = [
     standard: "IS 13422: 1992",
     link: "isi-products/isi-certification-for-disposable-surgical-rubber-gloves-13422",
   },
+  {
+    id: 7,
+    name: "Medical Textile Bedsheets and Pillow Covers",
+    standard: "IS 17630: 2021",
+    link: "isi-products/isi-certificate-medical-textile-bedsheet-and-pillow-cover"
+},
 ];
 
 const chunkProducts = (arr, size = 2) => {
