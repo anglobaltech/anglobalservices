@@ -87,6 +87,11 @@ const nextConfig = {
         destination: "/isi-products/isi-certification-office-work-chair-17631",
         permanent: true, 
       },
+       {
+        source: "/bis-isi-mark-certification-electronics-products",
+        destination: "/bis-isi-mark-certification-electrical-electronics-products",
+        permanent: true, 
+      },
     ];
   },
 };
