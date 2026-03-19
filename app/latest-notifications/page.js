@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title: "Latest Notifications & Updates | AN Global Services",
@@ -9,6 +9,14 @@ export const metadata = {
 };
 
 const notifications = [
+  {
+    slug: "aluminium-and-aluminium-alloy-products-qco-2026",
+    title:
+      "BIS Certification for Aluminium and Aluminium Alloy Products under QCO 2026 in India",
+    description:
+      "The Ministry of Commerce and Industry has notified the Aluminium and Aluminium Alloy Products (QCO), 2026 on 11 March 2026, making BIS certification mandatory for specified aluminium products. Effective from 13 March 2026, the Order replaces the 2025 regulation and requires compliance with Indian Standards along with the BIS Standard Mark under a valid license. It covers 17 categories including irrigation tubes, EC-grade rods, pharmaceutical foils, aluminium panels, corrugated sheets, aerospace materials, and wrought products such as bars, rods, sheets, wires, and rivets, aiming to enhance quality, safety, and standardisation across key sectors.",
+    date: "16 March 2026",
+  },
   {
     slug: "import-exemption-qco-dpiit-feb-2026-so-776e",
     title:
