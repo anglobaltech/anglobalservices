@@ -90,6 +90,12 @@ const products = [
   name: "Wrought Aluminium and Aluminium Alloys Wire for General Engineering Purposes",
   standard: "IS 739",
   link: "/isi-products/isi-certificate-wrought-aluminum-and-aluminum-alloys-wire-for-general-engineering-purposes"
+},
+{
+  id: 7,
+  name: "Aluminium and Aluminium Alloy Foil for Pharmaceutical Packaging",
+  standard: "IS 16011",
+  link: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-foil-for-pharmaceutical-packaging"
 }
 ];
 

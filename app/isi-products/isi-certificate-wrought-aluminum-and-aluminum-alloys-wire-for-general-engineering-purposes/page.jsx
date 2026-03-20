@@ -422,7 +422,7 @@ export default function AluminiumWire() {
 
           <div className="bg-white border border-gray-300 rounded-lg p-4">
             <h3 className="font-semibold mb-2">
-              3. Is BIS certification mandatory?
+              3. Is BIS ISI certification mandatory?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes, certification is mandatory as per applicable Quality Control
