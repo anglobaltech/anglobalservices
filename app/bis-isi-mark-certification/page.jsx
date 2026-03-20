@@ -584,7 +584,7 @@ export default function ISIPage() {
 
             {/* Steel */}
             <Link
-              href="/bis-isi-certification-steel-products"
+              href="/bis-isi-certification-metal-products"
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
             >
               <Image
@@ -596,10 +596,10 @@ export default function ISIPage() {
               />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  Steel Products
+                  Metal Products
                 </h3>
                 <p className="text-sm text-gray-500">
-                  ISI marking for steel bars, rods, wires & structural steel.
+                  ISI marking for metal bars, rods, wires & structural metal.
                 </p>
               </div>
             </Link>

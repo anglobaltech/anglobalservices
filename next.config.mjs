@@ -74,7 +74,7 @@ const nextConfig = {
       },
        {
         source: "/steel-products",
-        destination: "/bis-isi-certification-steel-products",
+        destination: "/bis-isi-certification-metal-products",
         permanent: true, 
       },
        {
@@ -90,6 +90,11 @@ const nextConfig = {
        {
         source: "/bis-isi-mark-certification-electronics-products",
         destination: "/bis-isi-mark-certification-electrical-electronics-products",
+        permanent: true, 
+      },
+       {
+        source: "/bis-isi-certification-steel-products",
+        destination: "/bis-isi-certification-metal-products",
         permanent: true, 
       },
     ];

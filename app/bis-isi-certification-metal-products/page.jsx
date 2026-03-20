@@ -30,7 +30,7 @@ export const metadata = {
     title: "BIS ISI Certification for Steel Products in India",
     description:
       "Apply for BIS ISI Mark Certification for steel products with expert support for testing, documentation, factory inspection, and ISI license approval under BIS Quality Control Orders.",
-    url: "https://www.anglobalservices.com/bis-isi-certification-steel-products",
+    url: "https://www.anglobalservices.com/bis-isi-certification-metal-products",
     siteName: "AN Global Services",
     locale: "en_IN",
     type: "website",
@@ -50,7 +50,7 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.anglobalservices.com/bis-isi-certification-steel-products",
+      "https://www.anglobalservices.com/bis-isi-certification-metal-products",
   },
 };
 
@@ -58,40 +58,39 @@ const products = [
   {
     id: 1,
     name: "Steel Tubes, Tubulars and Other Wrought Steel Fittings – Part 1",
-    standard: "IS 1239 (Part 1): 2014",
+    standard: "IS 1239 (Part 1)",
     link: "/isi-products/isi-certification-for-steel-tubes-tubulars-part-1-1239",
   },
-
   {
     id: 2,
-    name: "Hot Rolled Steel Plates",
-    standard: "IS 2062: 2011",
-    link: "/bis-isi-certification-steel-products",
-  },
-  {
-    id: 3,
     name: "Steel Pipes for Water Supply",
-    standard: "IS 3589: 2001",
+    standard: "IS 3589",
     link: "/isi-products/isi-certification-for-steel-pipes-for-water-sewage-3589",
   },
   {
-    id: 4,
+    id: 3,
     name: "Steel Wire Ropes for General Engineering Purposes",
-    standard: "IS 2266: 2019",
+    standard: "IS 2266",
     link: "/isi-products/isi-certificate-steel-wire-ropes-for-general-engineering-purposes",
   },
  {
-  id: 5,
+  id: 4,
   name: "Adjustable Steel Shelving Cabinets",
   standard: "IS 3312",
   link: "/isi-products/isi-certificate-adjustable-steel-shelving-cabinets",
 },
   {
-  id: 6,
+  id: 5,
   name: "Stainless Steel Butt Hinges",
   standard: "IS 12817",
   link: "/isi-products/isi-certificate-stainless-steel-butt-hinges"
 },
+{
+  id: 6,
+  name: "Wrought Aluminium and Aluminium Alloys Wire for General Engineering Purposes",
+  standard: "IS 739",
+  link: "/isi-products/isi-certificate-wrought-aluminum-and-aluminum-alloys-wire-for-general-engineering-purposes"
+}
 ];
 
 const chunkProducts = (arr, size = 2) => {
@@ -267,7 +266,7 @@ export default function ISISteelProductsPage() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="max-w-7xl mx-auto px-4 pb-10">
           <div className="mb-6">
             <h1 className="text-xl font-semibold text-gray-900 uppercase">
               Documents Required for BIS (ISI) Certification for Steel Products

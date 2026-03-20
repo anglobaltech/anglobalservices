@@ -64,7 +64,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'bis-registration-for-solar-panels',
     'solar-equipment',
     'solar-panel-plant-setup',
-    'bis-isi-certification-steel-products',
+    'bis-isi-certification-metal-products',
     'term-conditions',
     'testing_footwear',
     'testing_gold',
