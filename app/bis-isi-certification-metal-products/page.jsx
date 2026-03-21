@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title: "BIS ISI Certification for Steel Products | AN Global Services",
@@ -73,30 +73,36 @@ const products = [
     standard: "IS 2266",
     link: "/isi-products/isi-certificate-steel-wire-ropes-for-general-engineering-purposes",
   },
- {
-  id: 4,
-  name: "Adjustable Steel Shelving Cabinets",
-  standard: "IS 3312",
-  link: "/isi-products/isi-certificate-adjustable-steel-shelving-cabinets",
-},
   {
-  id: 5,
-  name: "Stainless Steel Butt Hinges",
-  standard: "IS 12817",
-  link: "/isi-products/isi-certificate-stainless-steel-butt-hinges"
-},
-{
-  id: 6,
-  name: "Wrought Aluminium and Aluminium Alloys Wire for General Engineering Purposes",
-  standard: "IS 739",
-  link: "/isi-products/isi-certificate-wrought-aluminum-and-aluminum-alloys-wire-for-general-engineering-purposes"
-},
-{
-  id: 7,
-  name: "Aluminium and Aluminium Alloy Foil for Pharmaceutical Packaging",
-  standard: "IS 16011",
-  link: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-foil-for-pharmaceutical-packaging"
-}
+    id: 4,
+    name: "Adjustable Steel Shelving Cabinets",
+    standard: "IS 3312",
+    link: "/isi-products/isi-certificate-adjustable-steel-shelving-cabinets",
+  },
+  {
+    id: 5,
+    name: "Stainless Steel Butt Hinges",
+    standard: "IS 12817",
+    link: "/isi-products/isi-certificate-stainless-steel-butt-hinges",
+  },
+  {
+    id: 6,
+    name: "Wrought Aluminium and Aluminium Alloys Wire for General Engineering Purposes",
+    standard: "IS 739",
+    link: "/isi-products/isi-certificate-wrought-aluminum-and-aluminum-alloys-wire-for-general-engineering-purposes",
+  },
+  {
+    id: 7,
+    name: "Aluminium and Aluminium Alloy Foil for Pharmaceutical Packaging",
+    standard: "IS 16011",
+    link: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-foil-for-pharmaceutical-packaging",
+  },
+  {
+    id: 8,
+    name: "Aluminium and Aluminium Alloy Bare Foil for Food Packaging",
+    standard: "IS 15392",
+    link: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-bare-foil-for-food-packaging",
+  },
 ];
 
 const chunkProducts = (arr, size = 2) => {
