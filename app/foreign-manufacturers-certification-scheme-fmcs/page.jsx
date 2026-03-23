@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 export const metadata = {
   title:
     "BIS FMCS Certification for Foreign Manufacturers | ISI Mark India | AN Global Services",
@@ -64,19 +64,24 @@ export default function FMCSPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             <div>
               <h2 className="text-xl font-bold uppercase text-gray-900 ">
                 BIS Mark under Foreign Manufacturers Certification Scheme (FMCS)
               </h2>
-              <div className="w-full h-0.5 bg-[#0072b1]  mb-4" />
+              <div className="w-full h-0.5 bg-[#0072b1]  mb-2" />
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                BIS FMCS Certification (Foreign Manufacturers Certification
-                Scheme) is mandatory for foreign manufacturers who want to
-                export ISI-marked products to India. Under the BIS Act, 2016,
-                manufacturers located outside India must obtain BIS FMCS
-                Certification to legally use the ISI Mark and clear Indian
-                Customs. FMCS (Foreign Manufacturers Certification Scheme) is a
+                BIS FMCS Certification in India (Foreign Manufacturers
+                Certification Scheme) is a mandatory compliance requirement for
+                foreign manufacturers who want to export products to India. The
+                FMCS registration allows overseas manufacturers to obtain BIS
+                certification and use the ISI Mark under Indian standards. This
+                certification is essential for market entry into India and
+                ensures compliance with Indian product certification
+                requirements for foreign companies. Whether you are dealing in
+                electronics, steel, machinery, or industrial products, FMCS
+                approval is required for customs clearance and legal sales in
+                India. FMCS (Foreign Manufacturers Certification Scheme) is a
                 certification scheme regulated by the Bureau of Indian Standards
                 (BIS) under Scheme-I of Schedule-II of the Conformity Assessment
                 Regulations, 2018, and the BIS Act, 2016. This scheme allows
@@ -206,7 +211,8 @@ export default function FMCSPage() {
       <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
-            How to Get BIS FMCS Certification on Products
+            FMCS Certification Process in India | Step-by-Step BIS FMCS Approval
+            Process
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
@@ -409,7 +415,8 @@ export default function FMCSPage() {
         {/* Documents */}
         <div>
           <h2 className="text-xl md:text-xl font-semibold uppercase text-gray-900">
-            Documents Required for BIS FMCS Certification
+            Documents Required for FMCS Certification in India | FMCS
+            Documentation Support
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
@@ -765,7 +772,7 @@ export default function FMCSPage() {
       <section className="bg-white pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl  font-bold text-gray-900 uppercase">
-            Cost of BIS FMCS Certification
+            FMCS Certification Cost in India | Fees, Timeline & Charges
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
