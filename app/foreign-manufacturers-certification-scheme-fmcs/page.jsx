@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Head from "next/head";
 
 export const revalidate = 86400;
 export const metadata = {
   title:
-    "BIS FMCS Certification for Foreign Manufacturers | ISI Mark India | AN Global Services",
+    "BIS FMCS Certification in India for Foreign Manufacturers | FMCS Registration, Cost & Process",
 
   description:
-    "Get BIS FMCS Certification for Foreign Manufacturers. Apply for ISI Mark, FMCS BIS Registration, AIR support, factory audit & testing in India.",
+    "Get BIS FMCS Certification in India for foreign manufacturers. Complete support for FMCS registration, process, documentation, cost, AIR services, and BIS approval. Fast FMCS consultancy in India.",
 
   keywords: [
     "BIS FMCS Certification",
@@ -31,9 +32,56 @@ export const metadata = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is BIS FMCS certification in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "BIS FMCS certification is mandatory for foreign manufacturers exporting products to India.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How to get FMCS certification in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "FMCS certification requires application submission, factory audit, testing, and BIS approval.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is FMCS certification cost in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "FMCS certification cost depends on product type, audit, testing, and BIS fees.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What documents are required for FMCS certification?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Documents include factory details, process flow, testing equipment, and quality control records.",
+      },
+    },
+  ],
+};
+
 export default function FMCSPage() {
   return (
     <main className="w-full bg-white">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
+          }}
+        />
+      </Head>
       <section
         className="relative w-full h-55 md:h-65 flex items-center justify-center"
         style={{
@@ -45,7 +93,8 @@ export default function FMCSPage() {
         <div className="absolute inset-0 bg-[#0a3d62]/30" />
 
         <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 uppercase leading-snug">
-          BIS FMCS Certification for Foreign Manufacturers
+          BIS FMCS Certification in India for Foreign Manufacturers (FMCS
+          Registration & ISI Mark)
         </h1>
       </section>
 
@@ -55,7 +104,7 @@ export default function FMCSPage() {
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
                 src="/service/bis-fmcs-certificate.png"
-                alt="BIS Certification"
+                alt="BIS FMCS Certification in India for Foreign Manufacturers ISI Mark"
                 width={420}
                 height={520}
                 className="w-full h-auto object-cover"
@@ -216,7 +265,7 @@ export default function FMCSPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-50 md:w-142 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-50 md:w-232 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -420,7 +469,7 @@ export default function FMCSPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-55 md:w-142 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-90 md:w-235 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-500 text-[15px] leading-6 text-justify">
@@ -776,7 +825,7 @@ export default function FMCSPage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-87 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-87 md:w-165 bg-[#0072b1]" />
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">

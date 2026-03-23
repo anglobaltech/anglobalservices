@@ -2,34 +2,39 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
-  title: "Calibration Certificate Services | AN Global Services",
+  title:
+    "Calibration Certificate Services in India | NABL ISO 17025 Calibration",
 
   description:
-    "AN Global Services provides professional Calibration Certificate services in India with NABL and ISO/IEC 17025 traceability. We support on-site and laboratory calibration, audit-ready documentation, ISO compliance, regulatory inspections, and manufacturing quality assurance for all types of measuring instruments.",
+    "Get NABL calibration certificate services in India with ISO 17025 compliance. On-site & lab calibration, audit-ready documentation, ISO 9001 support.",
 
   keywords: [
-    "calibration certificate",
-    "calibration services India",
-    "NABL calibration",
-    "ISO 17025 calibration",
-    "instrument calibration services",
+    "calibration certificate services India",
+    "NABL calibration certificate",
+    "ISO 17025 calibration services",
+    "instrument calibration services India",
+    "on site calibration services",
+    "lab calibration services India",
     "calibration certificate for ISO audit",
-    "on-site calibration services",
-    "laboratory calibration India",
-    "traceable calibration certificate",
-    "calibration for manufacturing",
-    "calibration for ISO 9001",
-    "calibration for ISO 14001",
-    "calibration for ISO 45001",
-    "calibration audit support",
-    "AN Global Services calibration",
+    "calibration services Delhi India",
+    "NABL lab calibration services",
   ],
 
   alternates: {
     canonical: "https://www.anglobalservices.com/calibration-certificate",
+  },
+
+  openGraph: {
+    title: "Calibration Certificate Services India",
+    description:
+      "NABL & ISO 17025 calibration services with audit-ready documentation.",
+    url: "https://www.anglobalservices.com/calibration-certificate",
+    siteName: "AN Global Services",
+    locale: "en_IN",
+    type: "website",
   },
 
   robots: {
@@ -41,6 +46,27 @@ export const metadata = {
 export default function CalibrationCertificatePage() {
   return (
     <main className="w-full bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Calibration Certificate Services",
+            provider: {
+              "@type": "Organization",
+              name: "AN Global Services",
+              url: "https://www.anglobalservices.com",
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "India",
+            },
+            description:
+              "NABL and ISO 17025 calibration certificate services including on-site and laboratory calibration.",
+          }),
+        }}
+      />
       <section
         className="relative h-70 md:h-70 flex items-center justify-center"
         style={{
@@ -61,7 +87,7 @@ export default function CalibrationCertificatePage() {
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
                 src="/service/calibration-certificate-services.png"
-                alt="Calibration Certificate Services"
+                alt="NABL Calibration Certificate Services in India for ISO 17025 compliance"
                 width={420}
                 height={520}
                 className="w-full h-auto object-cover"
@@ -91,7 +117,7 @@ export default function CalibrationCertificatePage() {
               </p>
 
               <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-                The calibration certificate serves as verifiable evidence that
+                The calibration certificate services as verifiable evidence that
                 the instrument was tested under controlled conditions, meets
                 specified accuracy requirements, and maintains traceability to
                 recognized standards such as NABL, ISO, or international
@@ -648,6 +674,178 @@ export default function CalibrationCertificatePage() {
               stress.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 pb-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-xl font-bold uppercase text-gray-900">
+            Explore More Services
+          </h2>
+
+          <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-67 bg-[#0072b1]" />
+          </div>
+
+          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
+            Discover our complete range of certification and compliance services
+            designed to help your business meet regulatory requirements, improve
+            quality systems, and achieve global standards.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* BIS ISI */}
+            <Link
+              href="https://www.anglobalservices.com/bis-isi-mark-certification"
+              className="group"
+            >
+              <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition duration-200 h-full">
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
+                  BIS ISI Mark Certification
+                </h3>
+                <p className="text-gray-600 text-[14px] leading-6">
+                  Get BIS ISI certification for product quality compliance as
+                  per Indian standards with complete documentation and approval
+                  support.
+                </p>
+              </div>
+            </Link>
+
+            {/* FMCS */}
+            <Link
+              href="https://www.anglobalservices.com/foreign-manufacturers-certification-scheme-fmcs"
+              className="group"
+            >
+              <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition duration-200 h-full">
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
+                  FMCS Certification
+                </h3>
+                <p className="text-gray-600 text-[14px] leading-6">
+                  Certification for foreign manufacturers to sell products in
+                  India under BIS regulations with end-to-end compliance
+                  assistance.
+                </p>
+              </div>
+            </Link>
+
+            {/* Hallmark */}
+            <Link
+              href="https://www.anglobalservices.com/hallmarking"
+              className="group"
+            >
+              <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition duration-200 h-full">
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
+                  Hallmark Registration
+                </h3>
+                <p className="text-gray-600 text-[14px] leading-6">
+                  BIS hallmark registration for gold and silver jewellery
+                  ensuring purity compliance and legal authorization.
+                </p>
+              </div>
+            </Link>
+
+            {/* ISO */}
+            <Link
+              href="https://www.anglobalservices.com/iso-certification-services"
+              className="group"
+            >
+              <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition duration-200 h-full">
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
+                  ISO Certification Services
+                </h3>
+                <p className="text-gray-600 text-[14px] leading-6">
+                  End-to-end ISO certification including ISO 9001, ISO 14001,
+                  ISO 45001, and more with audit-ready documentation support.
+                </p>
+              </div>
+            </Link>
+
+            {/* NABL */}
+            <Link
+              href="https://www.anglobalservices.com/nabl-accreditation-services"
+              className="group"
+            >
+              <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition duration-200 h-full">
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
+                  NABL Accreditation Services
+                </h3>
+                <p className="text-gray-600 text-[14px] leading-6">
+                  NABL accreditation support for testing and calibration
+                  laboratories as per ISO/IEC 17025 standards.
+                </p>
+              </div>
+            </Link>
+            {/* BIS CRS */}
+            <Link
+              href="https://www.anglobalservices.com/bis-crs-registration-electronic-products"
+              className="group"
+            >
+              <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition duration-200 h-full">
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
+                  BIS CRS Registration (Electronics)
+                </h3>
+                <p className="text-gray-600 text-[14px] leading-6">
+                  BIS CRS registration for electronic products under compulsory
+                  registration scheme to ensure compliance with Indian safety
+                  standards.
+                </p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+        <h2 className="text-2xl  font-bold text-gray-900 mb-2">
+          Frequently Asked Questions
+        </h2>
+
+        <p className="text-gray-500 text-sm mb-8">
+          Get answers about calibration certificate services, NABL calibration,
+          and ISO compliance.
+        </p>
+
+        <div className="space-y-3">
+          {[
+            {
+              q: "What is a calibration certificate?",
+              a: "A calibration certificate is an official document that verifies the accuracy of measuring instruments and ensures traceability to NABL or ISO standards.",
+            },
+            {
+              q: "Is NABL calibration mandatory?",
+              a: "Yes, NABL calibration is highly recommended for ISO audits and regulatory compliance.",
+            },
+            {
+              q: "What is ISO 17025 calibration?",
+              a: "ISO/IEC 17025 calibration ensures laboratories meet international standards for accuracy and technical competence.",
+            },
+            {
+              q: "How often should calibration be done?",
+              a: "Calibration is typically required every 6 to 12 months depending on usage and compliance requirements.",
+            },
+            {
+              q: "What is the difference between NABL and non-NABL calibration?",
+              a: "NABL calibration is accredited and accepted for audits, while non-NABL calibration may not be valid for compliance.",
+            },
+          ].map((item, i) => (
+            <details
+              key={i}
+              className="group bg-white rounded-xl shadow-sm transition duration-200"
+            >
+              <summary className="flex justify-between items-center cursor-pointer list-none px-5 py-4">
+                <span className="font-medium text-gray-800">{item.q}</span>
+                <span className="text-gray-400 group-open:rotate-45 transition">
+                  +
+                </span>
+              </summary>
+
+              <div className="px-5 pb-4">
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.a}
+                </p>
+              </div>
+            </details>
+          ))}
         </div>
       </section>
     </main>
