@@ -77,7 +77,7 @@ export default function CalibrationCertificatePage() {
         }}
       >
         <h1 className="relative z-10 text-white text-3xl md:text-4xl font-bold tracking-wide text-center px-4">
-          CALIBRATION CERTIFICATE SERVICES
+          CALIBRATION CERTIFICATE 
         </h1>
       </section>
 
@@ -150,7 +150,7 @@ export default function CalibrationCertificatePage() {
         <div className="flex flex-col gap-6 pb-12">
           <div>
             <h2 className="text-xl font-bold text-gray-900">
-              CALIBRATION CERTIFICATE IS MANDATORY FOR
+              CALIBRATION CERTIFICATE IS REQUIRED FOR
             </h2>
 
             <div className="w-full h-0.5 bg-gray-200 relative mb-4">
@@ -677,6 +677,60 @@ export default function CalibrationCertificatePage() {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+        <h2 className="text-2xl  font-bold text-gray-900 mb-2">
+          Frequently Asked Questions
+        </h2>
+
+        <p className="text-gray-500 text-sm mb-8">
+          Get answers about calibration certificate services, NABL calibration,
+          and ISO compliance.
+        </p>
+
+        <div className="space-y-3">
+          {[
+            {
+              q: "What is a calibration certificate?",
+              a: "A calibration certificate is an official document that verifies the accuracy of measuring instruments and ensures traceability to NABL or ISO standards.",
+            },
+            {
+              q: "Is NABL calibration mandatory?",
+              a: "Yes, NABL calibration is highly recommended for ISO audits and regulatory compliance.",
+            },
+            {
+              q: "What is ISO 17025 calibration?",
+              a: "ISO/IEC 17025 calibration ensures laboratories meet international standards for accuracy and technical competence.",
+            },
+            {
+              q: "How often should calibration be done?",
+              a: "Calibration is typically required every 6 to 12 months depending on usage and compliance requirements.",
+            },
+            {
+              q: "What is the difference between NABL and non-NABL calibration?",
+              a: "NABL calibration is accredited and accepted for audits, while non-NABL calibration may not be valid for compliance.",
+            },
+          ].map((item, i) => (
+            <details
+              key={i}
+              className="group bg-white rounded-xl shadow-sm transition duration-200"
+            >
+              <summary className="flex justify-between items-center cursor-pointer list-none px-5 py-4">
+                <span className="font-medium text-gray-800">{item.q}</span>
+                <span className="text-gray-400 group-open:rotate-45 transition">
+                  +
+                </span>
+              </summary>
+
+              <div className="px-5 pb-4">
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.a}
+                </p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <section className="bg-gray-50 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold uppercase text-gray-900">
@@ -792,60 +846,6 @@ export default function CalibrationCertificatePage() {
               </div>
             </Link>
           </div>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
-        <h2 className="text-2xl  font-bold text-gray-900 mb-2">
-          Frequently Asked Questions
-        </h2>
-
-        <p className="text-gray-500 text-sm mb-8">
-          Get answers about calibration certificate services, NABL calibration,
-          and ISO compliance.
-        </p>
-
-        <div className="space-y-3">
-          {[
-            {
-              q: "What is a calibration certificate?",
-              a: "A calibration certificate is an official document that verifies the accuracy of measuring instruments and ensures traceability to NABL or ISO standards.",
-            },
-            {
-              q: "Is NABL calibration mandatory?",
-              a: "Yes, NABL calibration is highly recommended for ISO audits and regulatory compliance.",
-            },
-            {
-              q: "What is ISO 17025 calibration?",
-              a: "ISO/IEC 17025 calibration ensures laboratories meet international standards for accuracy and technical competence.",
-            },
-            {
-              q: "How often should calibration be done?",
-              a: "Calibration is typically required every 6 to 12 months depending on usage and compliance requirements.",
-            },
-            {
-              q: "What is the difference between NABL and non-NABL calibration?",
-              a: "NABL calibration is accredited and accepted for audits, while non-NABL calibration may not be valid for compliance.",
-            },
-          ].map((item, i) => (
-            <details
-              key={i}
-              className="group bg-white rounded-xl shadow-sm transition duration-200"
-            >
-              <summary className="flex justify-between items-center cursor-pointer list-none px-5 py-4">
-                <span className="font-medium text-gray-800">{item.q}</span>
-                <span className="text-gray-400 group-open:rotate-45 transition">
-                  +
-                </span>
-              </summary>
-
-              <div className="px-5 pb-4">
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {item.a}
-                </p>
-              </div>
-            </details>
-          ))}
         </div>
       </section>
     </main>
