@@ -97,6 +97,11 @@ const nextConfig = {
         destination: "/bis-isi-certification-metal-products",
         permanent: true, 
       },
+       {
+        source: "/testing_gold",
+        destination: "/gold-testing",
+        permanent: true, 
+      },
     ];
   },
 };

@@ -290,43 +290,43 @@ export default function AluminiumWire() {
           </p>
 
           <div className="overflow-x-auto bg-white border border-gray-300 rounded-lg">
-            <table className="w-full text-[15px]">
+            <table className="w-full border-collapse text-[15px]">
               <thead className="bg-gray-200">
                 <tr>
-                  <th className="px-4 py-2 text-left">S. No.</th>
-                  <th className="px-4 py-2 text-left">Particular</th>
-                  <th className="px-4 py-2 text-left">Amount (INR)</th>
-                  <th className="px-4 py-2 text-left">Remarks</th>
+                  <th className="px-4 py-2 border border-gray-200 text-left">S. No.</th>
+                  <th className="px-4 py-2 border border-gray-200 text-left">Particular</th>
+                  <th className="px-4 py-2 border border-gray-200 text-left">Amount (INR)</th>
+                  <th className="px-4 py-2 border border-gray-200 text-left">Remarks</th>
                 </tr>
               </thead>
 
-              <tbody>
+              <tbody  className="divide-y">
                 <tr>
-                  <td className="px-4 py-2">1</td>
-                  <td className="px-4 py-2">Application Fee</td>
-                  <td className="px-4 py-2">₹1,000</td>
-                  <td className="px-4 py-2">Payable to BIS</td>
+                  <td className="px-4 border border-gray-200 py-2">1</td>
+                  <td className="px-4 border border-gray-200 py-2">Application Fee</td>
+                  <td className="px-4 border border-gray-200 py-2">₹1,000</td>
+                  <td className="px-4 border border-gray-200 py-2">Payable to BIS</td>
                 </tr>
 
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-2">2</td>
-                  <td className="px-4 py-2">Inspection Fee</td>
-                  <td className="px-4 py-2">₹7,000</td>
-                  <td className="px-4 py-2">Payable to BIS</td>
+                  <td className="px-4 border border-gray-200 py-2">2</td>
+                  <td className="px-4 border border-gray-200 py-2">Inspection Fee</td>
+                  <td className="px-4 border border-gray-200 py-2">₹7,000</td>
+                  <td className="px-4 border border-gray-200 py-2">Payable to BIS</td>
                 </tr>
 
                 <tr>
-                  <td className="px-4 py-2">3</td>
-                  <td className="px-4 py-2">Testing Fee</td>
-                  <td className="px-4 py-2">As applicable</td>
-                  <td className="px-4 py-2">Depends on laboratory testing</td>
+                  <td className="px-4 border border-gray-200 py-2">3</td>
+                  <td className="px-4 border border-gray-200 py-2">Testing Fee</td>
+                  <td className="px-4 border border-gray-200 py-2">As applicable</td>
+                  <td className="px-4 border border-gray-200 py-2">Depends on laboratory testing</td>
                 </tr>
 
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-2">4</td>
-                  <td className="px-4 py-2">Marking Fee</td>
-                  <td className="px-4 py-2">As per actual</td>
-                  <td className="px-4 py-2">As per BIS norms</td>
+                  <td className="px-4 border border-gray-200 py-2">4</td>
+                  <td className="px-4 border border-gray-200 py-2">Marking Fee</td>
+                  <td className="px-4 border border-gray-200 py-2">As per actual</td>
+                  <td className="px-4 border border-gray-200 py-2">As per BIS norms</td>
                 </tr>
               </tbody>
             </table>

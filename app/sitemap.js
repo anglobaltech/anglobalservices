@@ -67,7 +67,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'bis-isi-certification-metal-products',
     'term-conditions',
     'testing_footwear',
-    'testing_gold',
+    'gold-testing',
     'testing_solar_panel',
     'testing-toys',
     'trademark-registration-services',

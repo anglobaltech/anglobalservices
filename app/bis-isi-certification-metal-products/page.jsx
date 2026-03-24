@@ -103,6 +103,12 @@ const products = [
     standard: "IS 15392",
     link: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-bare-foil-for-food-packaging",
   },
+  {
+    id: 9,
+    name: "Wrought Aluminium and Aluminium Alloy Bars, Rods",
+    standard: "IS 733",
+    link: "/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-bars-rods",
+  },
 ];
 
 const chunkProducts = (arr, size = 2) => {
