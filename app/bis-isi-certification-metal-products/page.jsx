@@ -109,6 +109,18 @@ const products = [
     standard: "IS 733",
     link: "/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-bars-rods",
   },
+  {
+    id: 10,
+    name: "Wrought Aluminium and Aluminium Alloy Plates",
+    standard: "IS 736",
+    link: "/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-plate",
+  },
+  {
+    id: 11,
+    name: "Aluminium and Aluminium Alloy Sheet and Strip",
+    standard: "IS 737",
+    link: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-sheet-and-strip",
+  },
 ];
 
 const chunkProducts = (arr, size = 2) => {
@@ -134,7 +146,7 @@ export default function ISISteelProductsPage() {
         />
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl uppercase font-bold">
               BIS ISI Certification For Steel Products
             </h1>
           </div>
@@ -155,9 +167,9 @@ export default function ISISteelProductsPage() {
         </div>
 
         <div className="md:col-span-2">
-          <h2 className="text-xl font-bold">BIS CERTIFICATION FOR STEEL</h2>
+          <h2 className="text-xl font-bold">BIS ISI CERTIFICATION FOR STEEL</h2>
           <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-            <span className="absolute left-0 top-0 h-0.5 w-78 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-86 bg-[#0072b1]" />
           </div>
           <div>
             <p className="text-gray-500 text-[15px] pb-5">
