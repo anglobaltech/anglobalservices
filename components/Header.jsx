@@ -8,7 +8,7 @@ export default function Header() {
         <Link href="/" className="cursor-pointer">
           <div className="flex items-center gap-3 h-full">
             <Image
-              src="/logo.png"
+              src="/company-logo.png"
               alt="AN Global Services Logo"
               width={280}
               height={64}

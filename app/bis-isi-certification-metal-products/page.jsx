@@ -121,6 +121,12 @@ const products = [
     standard: "IS 737",
     link: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-sheet-and-strip",
   },
+  {
+    id: 12,
+    name: "Wrought Aluminium and Aluminium Alloy for Electrical Purposes",
+    standard: "IS 5082",
+    link: "/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-electrical-purposes",
+  },
 ];
 
 const chunkProducts = (arr, size = 2) => {

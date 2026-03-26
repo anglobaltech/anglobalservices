@@ -5,36 +5,36 @@ export const revalidate = 86400;
 
 export const metadata = {
   title:
-    "BIS ISI Certification for Wrought Aluminium and Aluminium Alloy Bars, Rods and Sections (IS 733:1983) | AN Global Services",
+    "BIS ISI Certification for Wrought Aluminium and Aluminium Alloy Products for Electrical Applications (IS 5082:1998) | AN Global Services",
 
   description:
-    "Get BIS ISI Certification for Wrought Aluminium and Aluminium Alloy Bars, Rods and Sections as per IS 733:1983. Complete assistance for BIS documentation, product testing, factory inspection, and ISI license approval for aluminium manufacturers in India.",
+    "Get BIS ISI Certification for Wrought Aluminium and Aluminium Alloy Bars, Rods, Tubes, Sections, Plates and Sheets for Electrical Applications as per IS 5082:1998. Complete assistance for BIS documentation, product testing, factory inspection, and ISI license approval in India.",
 
   keywords: [
-    "ISI Certification for Aluminium Bars Rods Sections",
-    "BIS ISI Certification IS 733",
-    "Wrought Aluminium ISI Certification India",
-    "ISI Mark for Aluminium Alloy Bars",
-    "BIS License for Aluminium Manufacturers",
-    "IS 733 Aluminium Bars Rods Sections Certification",
-    "BIS ISI Mark for Aluminium Sections",
-    "Aluminium Alloy BIS Certification India",
+    "ISI Certification for Aluminium Electrical Products",
+    "BIS ISI Certification IS 5082",
+    "Wrought Aluminium Electrical Applications Certification India",
+    "ISI Mark for Aluminium Conductors and Busbars",
+    "BIS License for Aluminium Electrical Products",
+    "IS 5082 Aluminium Certification India",
+    "BIS ISI Mark for Aluminium Electrical Products",
+    "Aluminium Electrical Conductivity BIS Certification",
     "ISI Certification Scheme I",
-    "BIS Factory Inspection for Aluminium Products",
-    "Aluminium Bars BIS Testing India",
-    "ISI Mark Consultant for Aluminium Products",
-    "BIS Certification for Aluminium Rods",
+    "BIS Factory Inspection for Aluminium Electrical Products",
+    "Electrical Aluminium BIS Testing India",
+    "ISI Mark Consultant for Aluminium Electrical Products",
+    "BIS Certification for Aluminium Busbars",
     "AN Global Services BIS ISI Certification",
   ],
 
   openGraph: {
     title:
-      "ISI Mark Certification for Aluminium Bars, Rods and Sections (IS 733:1983)",
+      "ISI Mark Certification for Aluminium Electrical Products (IS 5082:1998)",
 
     description:
-      "Apply for BIS ISI Mark Certification for Wrought Aluminium and Aluminium Alloy Bars, Rods and Sections under IS 733:1983. Get complete BIS support including documentation, testing, inspection, and license approval.",
+      "Apply for BIS ISI Mark Certification for Wrought Aluminium and Aluminium Alloy Products for Electrical Applications under IS 5082:1998. Get complete BIS support including documentation, testing, inspection, and license approval.",
 
-    url: "https://www.anglobalservices.com/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-bars-rods",
+    url: "https://www.anglobalservices.com/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-electrical-purposes",
 
     siteName: "AN Global Services",
     locale: "en_IN",
@@ -55,18 +55,18 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.anglobalservices.com/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-bars-rods",
+      "https://www.anglobalservices.com/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-electrical-purposes",
   },
 };
-export default function AlluminiumAlloyBarsRodsSections() {
+export default function AluminiumElectricalProducts() {
   return (
     <main className="w-full bg-white">
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-aluminium-alloy-bars-rods-sections.png"
-              alt="BIS ISI Certification for Wrought Aluminium Bars Rods Sections IS 733"
+              src="/isi-products/isi-certificate-aluminium-products-electric-application.png"
+              alt="BIS ISI Certification for Aluminium Electrical Products IS 5082"
               width={420}
               height={320}
               className="w-full h-auto object-cover"
@@ -77,25 +77,25 @@ export default function AlluminiumAlloyBarsRodsSections() {
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
               BIS ISI Certification for Wrought Aluminium and Aluminium Alloy
-              Bars, Rods and Sections for general engineering applications IS 733:1983
+              Bars, Rods, Tubes, Sections, Plates and Sheets for Electrical
+              Applications IS 5082:1998
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              Wrought aluminium and aluminium alloy bars, rods, and sections are
-              widely used in general engineering applications due to their
-              excellent strength-to-weight ratio, corrosion resistance, and
-              formability. These products are manufactured through processes
-              such as extrusion, rolling, or drawing, making them suitable for
-              structural, fabrication, and industrial applications.
+              Wrought aluminium and aluminium alloy products such as bars, rods,
+              tubes, sections, plates, and sheets are widely used in electrical
+              applications due to their good electrical conductivity,
+              lightweight nature, and corrosion resistance. These materials are
+              commonly used in power transmission, distribution systems, and
+              electrical components.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              Indian Standard IS 733:1983 specifies the requirements for wrought
-              aluminium and aluminium alloy bars, rods, and sections used for
-              general engineering purposes. The standard covers material
-              composition, dimensions, tolerances, mechanical properties, and
-              quality requirements to ensure reliable performance in various
-              industrial applications.
+              Indian Standard IS 5082:1998 specifies the requirements for these
+              products used in electrical applications. The standard defines
+              chemical composition, mechanical properties, and electrical
+              resistivity or conductivity requirements to ensure reliable
+              electrical performance.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -105,11 +105,16 @@ export default function AlluminiumAlloyBarsRodsSections() {
               >
                 BIS ISI certification
               </Link>{" "}
-              under IS 733:1983 is mandatory for these products, 
-              Manufacturers must obtain a BIS license to use the ISI mark before
-              manufacturing, importing, or selling them in the Indian market.
-              This certification ensures that the products meet prescribed
-              quality, safety, and performance standards.
+              under IS 5082:1998 is mandatory for products covered under the
+              relevant {" "}
+               <Link
+                href="/notifications/aluminium-and-aluminium-alloy-products-qco-2026"
+                className="text-[#0072b1] font-medium hover:underline"
+              >
+                Quality Control Order (QCO).
+              </Link>{" "} Manufacturers must obtain a
+              BIS license before manufacturing, importing, or selling these
+              products in the Indian market.
             </p>
           </div>
         </div>
@@ -118,25 +123,18 @@ export default function AlluminiumAlloyBarsRodsSections() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-8">
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            IS 733:1983 – Key Technical Requirements for Wrought Aluminium Bars,
-            Rods and Sections
+            IS 5082:1998 – Key Technical Requirements for Aluminium Electrical
+            Products
           </h2>
 
           <ul className="mt-6 space-y-2 text-[15px] text-gray-700">
             <li>(i) Chemical composition requirements of aluminium alloys</li>
             <li>(ii) Mechanical properties including tensile strength</li>
-            <li>
-              (iii) Dimensional accuracy, tolerances, and sectional limits
-            </li>
-            <li>(iv) Freedom from surface and internal defects</li>
-            <li>(v) Peripheral coarse grain structure requirements</li>
-            <li>
-              (vi) Manufacturing processes such as extrusion, rolling, or
-              drawing
-            </li>
-            <li>
-              (vii) Marking, identification, and traceability requirements
-            </li>
+            <li>(iii) Electrical resistivity and conductivity requirements</li>
+            <li>(iv) Dimensional accuracy and tolerances</li>
+            <li>(v) Freedom from surface and internal defects</li>
+            <li>(vi) Manufacturing processes such as extrusion and rolling</li>
+            <li>(vii) Marking and identification requirements</li>
             <li>
               (viii) Inspection and testing procedures as per the standard
             </li>
@@ -145,53 +143,51 @@ export default function AlluminiumAlloyBarsRodsSections() {
 
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Overview of ISI Mark Certification for Wrought Aluminium and
-            Aluminium Alloy Products
+            Overview of ISI Mark Certification for Aluminium Electrical Products
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            IS 733:1983 applies to wrought aluminium and aluminium alloy bars,
-            rods, and sections intended for general engineering purposes. These
-            products are used in construction, transportation, machinery, and
-            various fabrication applications where strength and corrosion
-            resistance are essential.
+            IS 5082:1998 applies to wrought aluminium and aluminium alloy bars,
+            rods, tubes, sections, plates, and sheets intended for electrical
+            applications. These products are used in conductors, busbars, and
+            other electrical components where conductivity and performance are
+            critical.
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            The standard ensures that the materials meet specified chemical,
-            mechanical, and dimensional requirements. It also defines acceptable
-            manufacturing practices and quality control measures to maintain
-            consistency and reliability of the products.
+            The standard ensures that products meet specified requirements for
+            electrical performance, mechanical strength, and dimensional
+            accuracy. It also defines acceptable manufacturing and inspection
+            practices to ensure consistency and reliability.
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
             BIS ISI certification under the Product Certification Scheme (Scheme
-            I) confirms compliance with IS 733:1983. Manufacturers must
-            establish proper manufacturing facilities, testing capabilities, and
-            quality assurance systems before obtaining the license to use the
-            ISI mark.
+            I) confirms compliance with IS 5082:1998. Manufacturers must
+            establish adequate production facilities, testing capability, and
+            quality control systems before obtaining certification.
           </p>
         </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Process Required for BIS ISI Mark Certification for Wrought Aluminium
-          Bars, Rods and Sections (IS 733:1983)
+          Process Required for BIS ISI Mark Certification for Aluminium
+          Electrical Products (IS 5082:1998)
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          To obtain BIS ISI Mark Certification under IS 733:1983, manufacturers
+          To obtain BIS ISI Mark Certification under IS 5082:1998, manufacturers
           must follow the BIS Product Certification Scheme (Scheme I). The
-          process ensures that the products comply with the specified
-          requirements before being introduced into the Indian market.
+          process ensures that products comply with all specified requirements
+          before being marketed in India.
         </p>
 
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
           <p className="text-gray-600 text-[15px] leading-6">
-            <strong>Estimated Timeline:</strong> The BIS ISI certification
-            process generally takes around <strong>30 to 45 days</strong>{" "}
-            depending on factory inspection scheduling and testing timelines.
+            <strong>Estimated Timeline:</strong> The BIS ISI certification process
+            generally takes around <strong>30 to 45 days</strong> depending on
+            inspection and testing timelines.
           </p>
         </div>
 
@@ -202,33 +198,31 @@ export default function AlluminiumAlloyBarsRodsSections() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> The manufacturer submits
-              the application through the BIS Manak Online portal with product
-              details, applicable standard (IS 733:1983), and manufacturing
-              information.
+              <strong>Application Submission:</strong> Submit application on BIS
+              Manak Online portal with product details and IS 5082:1998
+              standard.
             </li>
 
             <li>
-              <strong>Product Testing Preparation:</strong> The manufacturer
-              must ensure testing arrangements for chemical composition,
-              dimensional accuracy, and mechanical properties.
+              <strong>Product Testing Preparation:</strong> Ensure testing
+              facilities for chemical composition, tensile properties,
+              electrical conductivity, and dimensional checks.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> BIS officials inspect the
-              manufacturing unit to verify production processes, quality control
-              systems, and testing facilities.
+              <strong>Factory Inspection:</strong> BIS officials inspect
+              manufacturing unit, production process, and quality control
+              system.
             </li>
 
             <li>
-              <strong>Sample Testing:</strong> Samples are collected and tested
-              in BIS-recognized laboratories as per IS 733:1983 requirements.
+              <strong>Sample Testing:</strong> Samples are tested in
+              BIS-recognized laboratories as per IS 5082:1998.
             </li>
 
             <li>
               <strong>Grant of BIS License:</strong> After successful
-              evaluation, BIS grants the Certification Marks License (CM/L),
-              allowing the use of the ISI mark on the product.
+              compliance, BIS grants CM/L license to use ISI mark.
             </li>
           </ol>
         </div>
@@ -239,20 +233,21 @@ export default function AlluminiumAlloyBarsRodsSections() {
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
             Requirements to Obtain BIS License for Wrought Aluminium and
-            Aluminium Alloy Bars, Rods and Sections (IS 733:1983)
+            Aluminium Alloy Products for Electrical Applications (IS 5082:1998)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
             <li>
-              Compliance of aluminium bars, rods, and sections with chemical
-              composition, mechanical properties, and dimensional requirements
-              as specified under IS 733:1983.
+              Compliance of aluminium products (bars, rods, tubes, sections,
+              plates, and sheets) with chemical composition, mechanical
+              properties, and electrical conductivity requirements as specified
+              under IS 5082:1998.
             </li>
 
             <li>
               Availability of testing facilities for chemical analysis, tensile
-              testing, dimensional verification, and inspection of surface
-              defects.
+              testing, electrical resistivity/conductivity testing, and
+              dimensional verification.
             </li>
 
             <li>
@@ -263,7 +258,8 @@ export default function AlluminiumAlloyBarsRodsSections() {
 
             <li>
               Implementation of the Scheme of Inspection and Testing (SIT)
-              prescribed by BIS for consistent product quality and conformity.
+              prescribed by BIS for maintaining consistent product quality and
+              conformity.
             </li>
           </ul>
         </div>
@@ -271,29 +267,28 @@ export default function AlluminiumAlloyBarsRodsSections() {
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
             To obtain BIS ISI Mark Certification for wrought aluminium and
-            aluminium alloy bars, rods, and sections under Product Certification
-            Scheme-I, manufacturers must submit documents categorized as
-            follows:
+            aluminium alloy products for electrical applications under Product
+            Certification Scheme-I, manufacturers must submit documents
+            categorized as follows:
           </p>
 
           <ul className="mt-4 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
             <li>
               <strong>Administrative Details:</strong> Business registration
-              documents, factory address proof, GST registration, and other
-              statutory approvals.
+              documents, factory address proof, GST registration, and statutory
+              approvals.
             </li>
 
             <li>
               <strong>Technical Details:</strong> Product specifications, alloy
-              grades, sectional dimensions, manufacturing processes
-              (extrusion/rolling/drawing), and testing parameters as per IS
-              733:1983.
+              grades, dimensions, manufacturing processes (extrusion/rolling),
+              and testing parameters as per IS 5082:1998.
             </li>
 
             <li>
               <strong>Quality Control Personnel Details:</strong> Qualification
-              and experience of personnel responsible for testing and
-              inspection.
+              and experience of personnel responsible for inspection and
+              testing.
             </li>
 
             <li>
@@ -306,8 +301,8 @@ export default function AlluminiumAlloyBarsRodsSections() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS ISI Certification for Wrought Aluminium and Aluminium
-            Alloy Bars, Rods and Sections (IS 733:1983)
+            Cost of BIS ISI Certification for Aluminium Electrical Products (IS
+            5082:1998)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -390,7 +385,7 @@ export default function AlluminiumAlloyBarsRodsSections() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              733:1983 is mandatory before grant of license. BIS evaluates
+              5082:1998 is mandatory before grant of license. BIS evaluates
               manufacturing capability, testing facilities, and quality control
               systems during certification.
             </p>
@@ -400,35 +395,34 @@ export default function AlluminiumAlloyBarsRodsSections() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Benefits of Getting ISI Mark Certification for Wrought Aluminium
-          Products (IS 733:1983)
+          Benefits of Getting ISI Mark Certification for Aluminium Electrical
+          Products (IS 5082:1998)
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-8">
-          ISI certification for aluminium bars, rods, and sections ensures
-          compliance with Indian standards and provides multiple advantages to
-          manufacturers and users.
+          ISI certification for aluminium products used in electrical
+          applications ensures compliance with Indian standards and provides
+          multiple advantages.
         </p>
 
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Assured Product Quality
+              1. Assured Electrical Performance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Certification ensures compliance with chemical composition,
-              mechanical properties, and dimensional accuracy as per IS
-              733:1983.
+              Certification ensures compliance with electrical conductivity and
+              resistivity requirements as per IS 5082:1998.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              2. Mandatory Market Compliance
+              2. Regulatory Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              BIS ISI certification is mandatory, and products may require
-              certification if covered under mandatory BIS regulations.
+              Products covered under applicable QCO must comply with BIS
+              certification before being marketed in India.
             </p>
           </div>
 
@@ -437,8 +431,8 @@ export default function AlluminiumAlloyBarsRodsSections() {
               3. Improved Market Acceptance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI-marked aluminium products are widely accepted across
-              engineering, construction, and industrial sectors.
+              ISI-marked electrical aluminium products are widely accepted in
+              power and electrical industries.
             </p>
           </div>
 
@@ -447,8 +441,8 @@ export default function AlluminiumAlloyBarsRodsSections() {
               4. Enhanced Brand Credibility
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The ISI mark builds trust among customers, contractors, and
-              regulatory bodies.
+              The ISI mark enhances trust among utilities, contractors, and
+              regulatory authorities.
             </p>
           </div>
 
@@ -457,8 +451,8 @@ export default function AlluminiumAlloyBarsRodsSections() {
               5. Competitive Advantage
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Certified manufacturers gain preference in government tenders and
-              industrial projects.
+              Certified manufacturers gain preference in electrical
+              infrastructure projects and procurement.
             </p>
           </div>
         </div>
@@ -467,32 +461,44 @@ export default function AlluminiumAlloyBarsRodsSections() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-16">
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
           Frequently Asked Questions (FAQs) – BIS ISI Certification for
-          Aluminium Bars, Rods and Sections (IS 733:1983)
+          Aluminium Electrical Products (IS 5082:1998)
         </h2>
 
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Which standard applies to aluminium bars, rods, and sections?
+              1. Which standard applies to aluminium products for electrical
+              applications?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              These products are covered under Indian Standard IS 733:1983.
+              These products are covered under Indian Standard IS 5082:1998.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Are aluminium bars and rods BIS ISI certification mandatory?
+              2. Is BIS ISI certification mandatory for these products?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes, BIS ISI certification is mandatory for products covered under
-              IS 733:1983.
+              BIS ISI certification is mandatory for products notified under the
+              relevant Quality Control Order (QCO).
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              3. What is the validity of BIS ISI license?
+              3. What tests are conducted under IS 5082?
+            </h3>
+            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              Tests include chemical composition, tensile testing, electrical
+              conductivity or resistivity, dimensional checks, and inspection
+              for defects.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              4. What is the validity of BIS license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The BIS license is generally valid for one year and can be
@@ -502,20 +508,10 @@ export default function AlluminiumAlloyBarsRodsSections() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What tests are conducted under IS 733?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Tests include chemical composition, tensile strength, dimensional
-              checks, and inspection for surface defects.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
               5. How long does certification take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The certification process generally takes 30 to 45 days.
+              The certification process typically takes 30 to 45 days.
             </p>
           </div>
         </div>
