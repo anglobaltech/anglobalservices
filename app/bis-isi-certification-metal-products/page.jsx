@@ -4,24 +4,24 @@ import Link from "next/link";
 export const revalidate = 86400;
 
 export const metadata = {
-  title: "BIS ISI Certification for Steel Products | AN Global Services",
+  title: "BIS ISI Certification for Metal Products | AN Global Services",
 
   description:
     "Get BIS ISI Certification for steel products in India. Expert assistance for documentation, product testing, factory inspection, ISI license approval, and compliance with BIS Quality Control Orders for steel materials. Trusted, fast, and hassle-free BIS certification services.",
 
   keywords: [
-    "BIS ISI Certification for Steel Products",
-    "BIS Certification for Steel",
-    "ISI Mark for Steel Products",
+    "BIS ISI Certification for Metal Products",
+    "BIS Certification for Metal",
+    "ISI Mark for Metal Products",
     "BIS ISI Mark India",
     "Steel Products BIS Certification",
-    "ISI Certification for Steel",
+    "ISI Certification for Metal",
     "BIS QCO Steel Products",
-    "BIS ISI Scheme I Steel",
-    "ISI License for Steel Products",
-    "BIS Factory Audit for Steel",
-    "BIS Testing for Steel Products",
-    "ISI Mark Registration for Steel",
+    "BIS ISI Scheme I Metal",
+    "ISI License for Metal Products",
+    "BIS Factory Audit for Metal",
+    "BIS Testing for Metal Products",
+    "ISI Mark Registration for Metal",
     "BIS Certification Consultant India",
     "AN Global Services BIS Certification",
   ],
@@ -139,7 +139,7 @@ const chunkProducts = (arr, size = 2) => {
 
 const productRows = chunkProducts(products, 2);
 
-export default function ISISteelProductsPage() {
+export default function ISIMetalProductsPage() {
   return (
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
@@ -153,7 +153,7 @@ export default function ISISteelProductsPage() {
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-white text-3xl md:text-4xl uppercase font-bold">
-              BIS ISI Certification For Steel Products
+              BIS ISI Certification For Metal Products
             </h1>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function ISISteelProductsPage() {
         </div>
 
         <div className="md:col-span-2">
-          <h2 className="text-xl font-bold">BIS ISI CERTIFICATION FOR STEEL</h2>
+          <h2 className="text-xl font-bold">BIS ISI CERTIFICATION FOR METAL</h2>
           <div className="w-full h-0.5 bg-gray-200 relative mb-4">
             <span className="absolute left-0 top-0 h-0.5 w-86 bg-[#0072b1]" />
           </div>
