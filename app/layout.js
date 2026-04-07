@@ -8,6 +8,7 @@ import FloatingContact from "@/components/FloatingContact";
 import LeadPopup from "@/components/LeadPopup";
 import Script from "next/script";
 import Analytics from "@/components/Analytics";
+import { Suspense } from "react";
 
 export const revalidate = 86400;
 
@@ -52,7 +53,9 @@ export default function RootLayout({ children }) {
 
         <main>{children}</main>
 
-        <Analytics />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
 
         <div className="layout-item">
           <LeadPopup />
