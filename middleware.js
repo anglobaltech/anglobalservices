@@ -2,12 +2,14 @@ import { NextResponse } from "next/server";
 
 export function middleware(req) {
   const ua = req.headers.get("user-agent") || "";
+  const url = req.nextUrl.pathname;
 
-  const allowedBots = ["Googlebot", "Bingbot"];
-  for (const bot of allowedBots) {
-    if (ua.includes(bot)) {
-      return NextResponse.next();
-    }
+  if (!url.startsWith("/api")) {
+    return NextResponse.next();
+  }
+
+  if (ua.includes("Googlebot") || ua.includes("Bingbot")) {
+    return NextResponse.next();
   }
 
   const badBots = [
@@ -34,9 +36,13 @@ export function middleware(req) {
     }
   }
 
-  if (!ua.includes("Mozilla")) {
+  if (!ua || ua.length < 10) {
     return new NextResponse("Blocked", { status: 403 });
   }
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: ["/api/:path*"],
+};
