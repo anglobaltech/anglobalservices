@@ -134,3 +134,7 @@ body {
     padding-right: 80px;
   }
 }
+
+body.ads-page .layout-item {
+  display: none !important;
+}

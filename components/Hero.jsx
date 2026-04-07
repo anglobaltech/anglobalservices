@@ -147,18 +147,18 @@ export default function Hero() {
       const { doc, runTransaction, serverTimestamp } =
         await import("firebase/firestore");
 
-      const res = await fetch("/api/verify-captcha", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token: captchaToken }),
-      });
+      // const res = await fetch("/api/verify-captcha", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ token: captchaToken }),
+      // });
 
-      const result = await res.json();
-      if (!result.success) {
-        setError("Captcha failed");
-        setLoading(false);
-        return;
-      }
+      // const result = await res.json();
+      // if (!result.success) {
+      //   setError("Captcha failed");
+      //   setLoading(false);
+      //   return;
+      // }
 
       const counterRef = doc(db, "counters", "enquiries");
       let enquiryId = "";
@@ -193,6 +193,8 @@ export default function Hero() {
           phone: formData.phone,
           service: formData.service,
           source: "website",
+          token: captchaToken,
+          hiddenField: "",
         }),
       });
 

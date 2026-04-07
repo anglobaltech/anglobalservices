@@ -1,19 +1,4 @@
-import nodemailer from "nodemailer";
-
-let transporter;
-
-function getTransporter() {
-  if (!transporter) {
-    transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-  }
-  return transporter;
-}
+import { google } from "googleapis";
 
 const rateMap = new Map();
 
@@ -24,7 +9,7 @@ function isRateLimited(ip) {
 
   if (!rateMap.has(ip)) rateMap.set(ip, []);
 
-  const logs = rateMap.get(ip).filter(t => now - t < WINDOW);
+  const logs = rateMap.get(ip).filter((t) => now - t < WINDOW);
   logs.push(now);
   rateMap.set(ip, logs);
 
@@ -41,7 +26,7 @@ export async function POST(req) {
     if (isRateLimited(ip)) {
       return Response.json(
         { success: false, message: "Too many requests" },
-        { status: 429 }
+        { status: 429 },
       );
     }
 
@@ -52,28 +37,26 @@ export async function POST(req) {
       name,
       email,
       phone,
-      industry,
       service,
       comment,
-      source = "website",
-      token, 
-      hiddenField, 
+      token,
+      hiddenField,
     } = data;
 
-
+    // honeypot
     if (hiddenField) {
       return Response.json({ success: false });
     }
 
-   
+    // validation
     if (!name || !phone || !token) {
       return Response.json(
         { success: false, message: "Invalid request" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
-   
+    // captcha verify
     const captchaRes = await fetch(
       "https://www.google.com/recaptcha/api/siteverify",
       {
@@ -82,7 +65,7 @@ export async function POST(req) {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
-      }
+      },
     );
 
     const captchaData = await captchaRes.json();
@@ -90,25 +73,35 @@ export async function POST(req) {
     if (!captchaData.success) {
       return Response.json(
         { success: false, message: "Captcha failed" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
-    const transporter = getTransporter();
+    // ✅ GOOGLE SHEETS
+    const auth = new google.auth.GoogleAuth({
+      credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
+      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+    });
 
-    await transporter.sendMail({
-      from: `"AN Global Services" <${process.env.EMAIL_USER}>`,
-      to: [process.env.NOTIFY_EMAIL_1, process.env.NOTIFY_EMAIL_2],
-      subject: `New Enquiry Received – ${enquiryId}`,
-      html: `
-        <h2>New Enquiry</h2>
-        <p><b>ID:</b> ${enquiryId}</p>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Phone:</b> ${phone}</p>
-        ${email ? `<p><b>Email:</b> ${email}</p>` : ""}
-        <p><b>Service:</b> ${industry || service}</p>
-        ${comment ? `<p>${comment}</p>` : ""}
-      `,
+    const sheets = google.sheets({ version: "v4", auth });
+
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.SHEET_ID,
+      range: "Sheet1!A:G",
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [
+          [
+            enquiryId,
+            name,
+            phone,
+            email || "",
+            service || "",
+            comment || "",
+            new Date().toLocaleString(),
+          ],
+        ],
+      },
     });
 
     return Response.json({ success: true });

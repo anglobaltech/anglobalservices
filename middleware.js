@@ -1,32 +1,42 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from "next/server";
 
 export function middleware(req) {
-  const userAgent = req.headers.get('user-agent') || ''
+  const ua = req.headers.get("user-agent") || "";
 
-  const blockedBots = [
-    'AhrefsBot',
-    'SemrushBot',
-    'MJ12bot',
-    'DotBot',
-    'BLEXBot',
-    'MegaIndex',
-    'PetalBot',
-    'SeznamBot',
-    'Barkrowler',
-    'DataForSeoBot'
-  ]
-
-  for (const bot of blockedBots) {
-    if (userAgent.includes(bot)) {
-      return new Response('Blocked', { status: 403 })
+  const allowedBots = ["Googlebot", "Bingbot"];
+  for (const bot of allowedBots) {
+    if (ua.includes(bot)) {
+      return NextResponse.next();
     }
   }
 
-  return NextResponse.next()
-}
+  const badBots = [
+    "AhrefsBot",
+    "SemrushBot",
+    "MJ12bot",
+    "DotBot",
+    "BLEXBot",
+    "MegaIndex",
+    "PetalBot",
+    "SeznamBot",
+    "Barkrowler",
+    "DataForSeoBot",
+    "python",
+    "curl",
+    "wget",
+    "axios",
+    "node-fetch",
+  ];
 
-export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
-  ],
+  for (const bot of badBots) {
+    if (ua.toLowerCase().includes(bot.toLowerCase())) {
+      return new NextResponse("Blocked", { status: 403 });
+    }
+  }
+
+  if (!ua.includes("Mozilla")) {
+    return new NextResponse("Blocked", { status: 403 });
+  }
+
+  return NextResponse.next();
 }
