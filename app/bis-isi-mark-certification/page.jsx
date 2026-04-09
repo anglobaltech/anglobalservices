@@ -290,7 +290,7 @@ export default function ISIPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <p className="text-gray-600 text-[15px] leading-7">
+            <p className="text-gray-500 text-[15px] leading-7">
               AN Global Services provides professional ISI Certification
               Services in India to help manufacturers, importers, and brand
               owners obtain the ISI Mark as per Bureau of Indian Standards
@@ -299,7 +299,7 @@ export default function ISIPage() {
               inspection, and BIS coordination.
             </p>
 
-            <ul className="space-y-3 text-gray-600 text-[15px] list-disc pl-6">
+            <ul className="space-y-3 text-gray-500 text-[15px] list-disc pl-6">
               <li>ISI certificate for Indian manufacturers</li>
               <li>ISI certification services for importers & brand owners</li>
               <li>Product testing with BIS-recognized laboratories</li>
@@ -320,7 +320,7 @@ export default function ISIPage() {
             <span className="block h-0.5 w-98 bg-[#0075B6]"></span>
           </div>
 
-          <div className="space-y-5 text-gray-600 text-[15px] leading-7">
+          <div className="space-y-5 text-gray-500 text-[15px] leading-7">
             <p>
               BIS Certification is mandatory for products notified under Quality
               Control Orders issued by the Government of India. Since ISI Mark
@@ -824,7 +824,7 @@ export default function ISIPage() {
         </div>
 
         {/* Intro */}
-        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+        <p className="mt-6 text-gray-500 text-[15px] leading-6 text-justify mb-6">
           The cost of obtaining ISI Certification in India depends on several
           factors such as the type of product, applicable Indian Standard (IS),
           number of product variants, testing requirements, and factory
@@ -906,7 +906,7 @@ export default function ISIPage() {
 
         {/* Additional Info */}
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-5">
-          <p className="text-gray-600 text-[15px] leading-6 text-justify">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify">
             <strong>Note:</strong> In addition to the above government fees,
             manufacturers are required to invest in setting up an in-house
             testing laboratory as per the applicable Indian Standard. The cost
@@ -917,7 +917,7 @@ export default function ISIPage() {
 
         {/* Final Note */}
         <div className="bg-white border border-gray-200 rounded-lg p-4">
-          <p className="text-gray-600 text-[14px] leading-6">
+          <p className="text-gray-500 text-[14px] leading-6">
             <strong>Important:</strong> The overall ISI Certification cost may
             vary based on product complexity, number of test parameters, factory
             preparedness, and inspection timelines. Proper documentation and
@@ -937,7 +937,7 @@ export default function ISIPage() {
         </div>
 
         {/* Intro */}
-        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+        <p className="mt-6 text-gray-500 text-[15px] leading-6 text-justify mb-6">
           The time required to obtain BIS ISI Certificate in India varies
           depending on the type of product, applicable Indian Standard (IS),
           readiness of the manufacturing unit, and completion of testing and
@@ -949,7 +949,7 @@ export default function ISIPage() {
 
         {/* Estimated Timeline Box */}
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
-          <p className="text-gray-600 text-[15px] leading-6">
+          <p className="text-gray-500 text-[15px] leading-6">
             <strong>Estimated Overall Timeline:</strong> For most domestic
             manufacturers, the ISI Certification process typically takes around{" "}
             <strong>45 to 60 days</strong>, provided the factory setup, in-house
@@ -964,7 +964,7 @@ export default function ISIPage() {
             Factors Affecting ISI Certification Timeline
           </h3>
 
-          <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
+          <ul className="list-disc pl-6 text-[15px] text-gray-500 space-y-2">
             <li>
               Readiness of the manufacturing unit and availability of required
               machinery and in-house testing equipment.
@@ -996,7 +996,7 @@ export default function ISIPage() {
         </div>
 
         {/* Intro */}
-        <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
+        <p className="mt-6 text-gray-500 text-[15px] leading-6 text-justify mb-6">
           ISI Mark Certification is a mandatory quality certification issued by
           the Bureau of Indian Standards (BIS) for products notified under
           various Quality Control Orders (QCOs) in India. Any business involved
@@ -1012,7 +1012,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-900 mb-2">
               1. Indian Manufacturers
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <p className="text-gray-500 text-[15px] leading-6 text-justify">
               Indian manufacturers producing goods that fall under mandatory BIS
               certification must obtain an ISI Mark license before manufacturing
               and selling their products. This includes industries such as
@@ -1025,7 +1025,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-900 mb-2">
               2. Foreign Manufacturers Exporting to India
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <p className="text-gray-500 text-[15px] leading-6 text-justify">
               Foreign manufacturers supplying products to India must obtain ISI
               Mark Certification through the Foreign Manufacturers Certification
               Scheme (FMCS). These manufacturers are required to appoint an
@@ -1038,7 +1038,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-900 mb-2">
               3. Importers and Traders
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <p className="text-gray-500 text-[15px] leading-6 text-justify">
               Importers and traders dealing with ISI-notified products are
               responsible for ensuring that the imported goods carry a valid ISI
               Mark. Importing or selling uncertified products may lead to
@@ -1051,7 +1051,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-900 mb-2">
               4. Brand Owners and Private Label Businesses
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <p className="text-gray-500 text-[15px] leading-6 text-justify">
               Businesses selling products under their own brand name, even if
               the manufacturing is outsourced, must ensure ISI Certification is
               obtained. Brand owners are legally accountable for compliance with
@@ -1063,7 +1063,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-900 mb-2">
               5. Government Suppliers and Tender Participants
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <p className="text-gray-500 text-[15px] leading-6 text-justify">
               Manufacturers and suppliers participating in government tenders,
               public sector procurement, and institutional supply contracts are
               often required to provide ISI-certified products. ISI Mark
@@ -1076,7 +1076,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-900 mb-2">
               6. E-commerce Sellers and Online Marketplaces
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
+            <p className="text-gray-500 text-[15px] leading-6 text-justify">
               Sellers listing ISI-notified products on e-commerce platforms must
               provide valid BIS certification details. Online marketplaces are
               increasingly enforcing BIS compliance to avoid regulatory action
@@ -1087,7 +1087,7 @@ export default function ISIPage() {
 
         {/* Bottom Note */}
         <div className="mt-6 bg-white border border-gray-200 rounded-lg p-4">
-          <p className="text-gray-600 text-[14px] leading-6">
+          <p className="text-gray-500 text-[14px] leading-6">
             <strong>Important:</strong> Selling, importing, or manufacturing
             products without mandatory ISI Mark Certification is a punishable
             offense under the BIS Act, 2016. Non-compliance may result in fines,
@@ -1110,7 +1110,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-800 ">
               What is ISI Mark Certification?
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6">
+            <p className="text-gray-500 text-[15px] leading-6">
               ISI Mark Certification is a quality certificate issued by the
               Bureau of Indian Standards (BIS) that confirms a product complies
               with the applicable Indian Standard for safety, quality, and
@@ -1122,7 +1122,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-800">
               Is ISI Mark Certification mandatory in India?
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6">
+            <p className="text-gray-500 text-[15px] leading-6">
               Yes, ISI certification is mandatory for products notified under
               BIS Quality Control Orders. Selling or importing such products
               without ISI certification is a punishable offense.
@@ -1133,7 +1133,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-800">
               Who needs ISI Mark Certification?
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6">
+            <p className="text-gray-500 text-[15px] leading-6">
               Indian manufacturers, foreign manufacturers exporting to India,
               importers, brand owners, and sellers of notified products are
               required to obtain ISI Mark Certification.
@@ -1144,7 +1144,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-800">
               How long does it take to get ISI Certification?
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6">
+            <p className="text-gray-500 text-[15px] leading-6">
               The ISI Certification process generally takes 30 to 60 days,
               depending on product type, testing requirements, factory
               readiness, and BIS inspection timeline.
@@ -1155,7 +1155,7 @@ export default function ISIPage() {
             <h3 className="font-semibold text-gray-800">
               What is the cost of ISI Certification in India?
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6">
+            <p className="text-gray-500 text-[15px] leading-6">
               The cost includes BIS application fee, inspection fee, testing
               charges, marking fee, and license fee. The total cost varies based
               on the product and applicable Indian Standard.
@@ -1190,7 +1190,7 @@ export default function ISIPage() {
             </div>
           </div>
 
-          <ul className="space-y-1 text-gray-600 text-[15px] leading-7 list-disc pl-6">
+          <ul className="space-y-1 text-gray-500 text-[15px] leading-7 list-disc pl-6">
             <li>
               We will train you regarding what is ISI Mark and how to obtain it.
             </li>

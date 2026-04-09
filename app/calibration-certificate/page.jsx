@@ -106,7 +106,7 @@ export default function CalibrationCertificatePage() {
                 <span className="absolute left-0 top-0 h-0.5 w-100 bg-[#0072b1]"></span>
               </div>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify pb-5">
                 A <strong>Calibration Certificate</strong> is an official,
                 traceable document issued by a competent calibration laboratory
                 confirming that a specific measuring instrument has been
@@ -116,7 +116,7 @@ export default function CalibrationCertificatePage() {
                 results.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify pb-4">
                 The calibration certificate services as verifiable evidence that
                 the instrument was tested under controlled conditions, meets
                 specified accuracy requirements, and maintains traceability to
@@ -125,7 +125,7 @@ export default function CalibrationCertificatePage() {
                 management, compliance, and audit readiness.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 pb-3">
+              <p className="text-gray-500 text-[15px] leading-6 pb-3">
                 A calibration certificate typically confirms that the
                 instrument:
               </p>
@@ -154,10 +154,10 @@ export default function CalibrationCertificatePage() {
             </h2>
 
             <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-              <span className="absolute left-0 top-0 h-0.5 w-120 bg-[#0072b1]"></span>
+              <span className="absolute left-0 top-0 h-0.5 w-40 md:w-115 bg-[#0072b1]"></span>
             </div>
 
-            <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
+            <p className="text-gray-500 text-[15px] leading-6 text-justify pb-4">
               Calibration certificates are essential compliance documents
               required across multiple quality management systems, regulatory
               frameworks, and industrial operations. They ensure measurement
@@ -165,7 +165,7 @@ export default function CalibrationCertificatePage() {
               standards.
             </p>
 
-            <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
+            <ul className="list-disc pl-6 text-[15px] text-gray-500 space-y-2">
               <li>
                 <strong>ISO 9001</strong> – Quality Management System (QMS)
               </li>
@@ -190,16 +190,16 @@ export default function CalibrationCertificatePage() {
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-7xl mx-auto ">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
             Calibration Certificate Process
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-100 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-25 md:w-100 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             The calibration certificate process follows a structured and
             documented methodology to ensure measurement accuracy, traceability,
             and compliance with ISO and regulatory requirements. Each step is
@@ -231,7 +231,7 @@ export default function CalibrationCertificatePage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Instrument Identification
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     Identification of the instrument including name, category,
                     make, model, serial number, measurement range, least count,
                     and usage criticality. This step helps determine the
@@ -246,7 +246,7 @@ export default function CalibrationCertificatePage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Selection of Calibration Method
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     Calibration planning based on compliance needs, including
                     on-site or laboratory calibration and accredited or
                     non-accredited calibration. For ISO audits and regulatory
@@ -308,7 +308,7 @@ export default function CalibrationCertificatePage() {
           </div>
 
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
-            <p className="text-gray-600 text-[14px] leading-6">
+            <p className="text-gray-500 text-[14px] leading-6">
               <strong>Compliance Note:</strong> Proper calibration planning,
               timely recalibration, and documented traceability are essential
               for maintaining compliance with ISO standards, regulatory
@@ -325,10 +325,10 @@ export default function CalibrationCertificatePage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-145 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-70 md:w-145 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             To issue a valid calibration certificate, calibration laboratories
             require specific technical and organizational details related to the
             instrument and the applicant. The documentation requirements may
@@ -377,10 +377,10 @@ export default function CalibrationCertificatePage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-105 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-30 md:w-105 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             The turnaround time for calibration services depends on the type of
             calibration, instrument complexity, and service location. Below is a
             general timeline to help organizations plan calibration activities
@@ -432,7 +432,7 @@ export default function CalibrationCertificatePage() {
           </div>
 
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
-            <p className="text-gray-600 text-[14px] leading-6">
+            <p className="text-gray-500 text-[14px] leading-6">
               <strong>Note:</strong> Actual timelines may vary depending on the
               type of instrument, quantity of equipment, calibration scope, and
               whether NABL-accredited calibration is required.
@@ -451,7 +451,7 @@ export default function CalibrationCertificatePage() {
             <span className="absolute left-0 top-0 h-0.5 w-90 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-8">
             Calibration services can be performed using different approaches
             depending on the type of instrument, accuracy requirements, and
             compliance needs. Below are the commonly offered types of
@@ -464,7 +464,7 @@ export default function CalibrationCertificatePage() {
               <h3 className="font-semibold text-gray-900 mb-2">
                 1. On-Site (In-House) Calibration
               </h3>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 Calibration is performed directly at the customer’s premises,
                 reducing equipment downtime and eliminating transportation
                 risks. This method is ideal for large, fixed, or critical
@@ -476,7 +476,7 @@ export default function CalibrationCertificatePage() {
               <h3 className="font-semibold text-gray-900 mb-2">
                 2. Laboratory Calibration
               </h3>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 Instruments are calibrated in a controlled laboratory
                 environment using high-accuracy master instruments. Laboratory
                 calibration offers higher precision and is suitable for
@@ -488,7 +488,7 @@ export default function CalibrationCertificatePage() {
               <h3 className="font-semibold text-gray-900 mb-2">
                 3. Traceable Calibration
               </h3>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 Calibration results are traceable to recognized national or
                 international reference standards, ensuring measurement
                 consistency and reliability across different locations and
@@ -500,7 +500,7 @@ export default function CalibrationCertificatePage() {
               <h3 className="font-semibold text-gray-900 mb-2">
                 4. NABL / ISO/IEC 17025 Accredited Calibration (Recommended)
               </h3>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 NABL-accredited calibration under ISO/IEC 17025 is the most
                 preferred and audit-accepted form of calibration. It is
                 mandatory for regulated industries and ISO-certified
@@ -516,10 +516,10 @@ export default function CalibrationCertificatePage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-105 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 md:w-105 w-30 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             A calibration certificate is more than a compliance document—it is a
             critical quality assurance tool that ensures measurement accuracy,
             process reliability, and regulatory compliance. Regular calibration
@@ -528,9 +528,9 @@ export default function CalibrationCertificatePage() {
             audits and inspections.
           </p>
 
-          <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-3">
+          <ul className="list-disc pl-6 text-[15px] text-gray-500 space-y-3">
             <li>
-              <strong className="text-gray-700">
+              <strong className="text-gray-600">
                 Ensures accurate and reliable measurements:
               </strong>{" "}
               Calibration verifies that measuring instruments provide precise
@@ -539,7 +539,7 @@ export default function CalibrationCertificatePage() {
             </li>
 
             <li>
-              <strong className="text-gray-700">
+              <strong className="text-gray-600">
                 Improves product quality and process efficiency:
               </strong>
               Accurate measurements help maintain process control, resulting in
@@ -547,7 +547,7 @@ export default function CalibrationCertificatePage() {
             </li>
 
             <li>
-              <strong className="text-gray-700">
+              <strong className="text-gray-600">
                 Reduces manufacturing errors and rework:
               </strong>{" "}
               Properly calibrated instruments minimize deviations, reducing
@@ -555,7 +555,7 @@ export default function CalibrationCertificatePage() {
             </li>
 
             <li>
-              <strong className="text-gray-700">
+              <strong className="text-gray-600">
                 Meets ISO, NABL, and regulatory requirements:
               </strong>
               Calibration certificates are mandatory for ISO 9001, ISO 14001,
@@ -563,7 +563,7 @@ export default function CalibrationCertificatePage() {
             </li>
 
             <li>
-              <strong className="text-gray-700">
+              <strong className="text-gray-600">
                 Enhances audit readiness and compliance confidence:
               </strong>
               Up-to-date calibration records demonstrate control over monitoring
@@ -571,7 +571,7 @@ export default function CalibrationCertificatePage() {
             </li>
 
             <li>
-              <strong className="text-gray-700">
+              <strong className="text-gray-600">
                 Builds customer trust and business credibility:
               </strong>
               Certified calibration assures customers and stakeholders of
@@ -579,7 +579,7 @@ export default function CalibrationCertificatePage() {
             </li>
 
             <li>
-              <strong className="text-gray-700">
+              <strong className="text-gray-600">
                 Prevents non-conformities and penalties:
               </strong>
               Regular calibration helps avoid audit non-conformities, legal
@@ -621,10 +621,10 @@ export default function CalibrationCertificatePage() {
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-175 bg-[#0072b1]" />
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-175 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             AN Global Services offers end-to-end calibration management
             solutions designed to ensure measurement accuracy, regulatory
             compliance, and minimal disruption to business operations. Our
@@ -637,7 +637,7 @@ export default function CalibrationCertificatePage() {
               Our Key Advantages
             </h3>
 
-            <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2">
+            <ul className="list-disc pl-6 text-[15px] text-gray-500 space-y-2">
               <li>
                 Instrument evaluation and calibration planning based on usage
                 criticality and compliance needs
@@ -666,7 +666,7 @@ export default function CalibrationCertificatePage() {
           </div>
 
           <div className="mt-6 bg-white border border-gray-200 rounded-lg p-4">
-            <p className="text-gray-600 text-[14px] leading-6">
+            <p className="text-gray-500 text-[14px] leading-6">
               <strong>Our Commitment:</strong> With deep compliance expertise
               and a client-focused approach, AN Global Services helps
               organizations maintain accurate measurements, achieve audit
@@ -678,9 +678,13 @@ export default function CalibrationCertificatePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
-        <h2 className="text-2xl  font-bold text-gray-900 mb-2">
+        <h2 className="text-2xl uppercase font-bold text-gray-900 mb-2">
           Frequently Asked Questions
         </h2>
+
+         <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+            <span className="absolute left-0 top-0 h-0.5 w-40 md:w-175 bg-[#0072b1]" />
+          </div>
 
         <p className="text-gray-500 text-sm mb-8">
           Get answers about calibration certificate services, NABL calibration,
@@ -722,7 +726,7 @@ export default function CalibrationCertificatePage() {
               </summary>
 
               <div className="px-5 pb-4">
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed">
                   {item.a}
                 </p>
               </div>
@@ -741,7 +745,7 @@ export default function CalibrationCertificatePage() {
             <span className="absolute left-0 top-0 h-0.5 w-67 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-8">
             Discover our complete range of certification and compliance services
             designed to help your business meet regulatory requirements, improve
             quality systems, and achieve global standards.
@@ -757,7 +761,7 @@ export default function CalibrationCertificatePage() {
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
                   BIS ISI Mark Certification
                 </h3>
-                <p className="text-gray-600 text-[14px] leading-6">
+                <p className="text-gray-500 text-[14px] leading-6">
                   Get BIS ISI certification for product quality compliance as
                   per Indian standards with complete documentation and approval
                   support.
@@ -774,7 +778,7 @@ export default function CalibrationCertificatePage() {
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
                   FMCS Certification
                 </h3>
-                <p className="text-gray-600 text-[14px] leading-6">
+                <p className="text-gray-500 text-[14px] leading-6">
                   Certification for foreign manufacturers to sell products in
                   India under BIS regulations with end-to-end compliance
                   assistance.
@@ -791,7 +795,7 @@ export default function CalibrationCertificatePage() {
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
                   Hallmark Registration
                 </h3>
-                <p className="text-gray-600 text-[14px] leading-6">
+                <p className="text-gray-500 text-[14px] leading-6">
                   BIS hallmark registration for gold and silver jewellery
                   ensuring purity compliance and legal authorization.
                 </p>
@@ -807,7 +811,7 @@ export default function CalibrationCertificatePage() {
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
                   ISO Certification Services
                 </h3>
-                <p className="text-gray-600 text-[14px] leading-6">
+                <p className="text-gray-500 text-[14px] leading-6">
                   End-to-end ISO certification including ISO 9001, ISO 14001,
                   ISO 45001, and more with audit-ready documentation support.
                 </p>
@@ -823,7 +827,7 @@ export default function CalibrationCertificatePage() {
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
                   NABL Accreditation Services
                 </h3>
-                <p className="text-gray-600 text-[14px] leading-6">
+                <p className="text-gray-500 text-[14px] leading-6">
                   NABL accreditation support for testing and calibration
                   laboratories as per ISO/IEC 17025 standards.
                 </p>
@@ -838,7 +842,7 @@ export default function CalibrationCertificatePage() {
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#0072b1]">
                   BIS CRS Registration (Electronics)
                 </h3>
-                <p className="text-gray-600 text-[14px] leading-6">
+                <p className="text-gray-500 text-[14px] leading-6">
                   BIS CRS registration for electronic products under compulsory
                   registration scheme to ensure compliance with Indian safety
                   standards.

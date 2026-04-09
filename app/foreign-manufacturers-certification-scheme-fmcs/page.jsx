@@ -119,7 +119,7 @@ export default function FMCSPage() {
                 BIS Mark under Foreign Manufacturers Certification Scheme (FMCS)
               </h2>
               <div className="w-full h-0.5 bg-[#0072b1]  mb-2" />
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 BIS FMCS Certification in India (Foreign Manufacturers
                 Certification Scheme) is a mandatory compliance requirement for
                 foreign manufacturers who want to export products to India. The
@@ -141,7 +141,7 @@ export default function FMCSPage() {
             </div>
 
             <div>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 FMCS is the overseas extension of the ISI Certification Scheme
                 under Scheme-I, applicable to manufacturers located outside
                 India, as it ensures uniform compliance across both foreign and
@@ -162,7 +162,7 @@ export default function FMCSPage() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-8 space-y-10">
         <div>
-          <p className="text-gray-600 text-[15px] leading-6 text-justify">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify">
             For products such as PVC soles and heels, compliance with Indian
             Standards involves strict adherence to prescribed material and
             physical requirements. The resins must be compounded using suitable
@@ -188,7 +188,7 @@ export default function FMCSPage() {
             <span className="absolute left-0 top-0 h-0.5 w-40 md:w-182 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             FMCS BIS Registration is not optional for foreign manufacturers
             exporting regulated products to India. It is a statutory compliance
             requirement enforced by Indian authorities to ensure that imported
@@ -268,7 +268,7 @@ export default function FMCSPage() {
             <span className="absolute left-0 top-0 h-0.5 w-50 md:w-232 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             BIS FMCS (Foreign Manufacturers Certification Scheme) certification
             is a structured and audit-driven process designed to ensure that
             foreign-made products comply with applicable Indian Standards (IS).
@@ -302,7 +302,7 @@ export default function FMCSPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Pre-Requisites & Planning
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     Identify the applicable Indian Standard (IS), appoint an
                     Authorized Indian Representative (AIR), and ensure
                     availability of in-house testing facilities as required
@@ -317,7 +317,7 @@ export default function FMCSPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Documentation
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     Preparation of factory layout, manufacturing flow chart,
                     machinery list, test equipment details, calibration records,
                     quality control plan, and AIR nomination documents.
@@ -331,7 +331,7 @@ export default function FMCSPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Application Submission
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     Submission of Form VI through the BIS Manak Online portal
                     along with supporting documents (physical copies only if
                     specifically requested by BIS) along with the applicable
@@ -346,7 +346,7 @@ export default function FMCSPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Application Scrutiny
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     BIS reviews the submitted documents and raises queries, if
                     any. Observations must be resolved before proceeding to the
                     factory audit stage.
@@ -360,7 +360,7 @@ export default function FMCSPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Factory Audit
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     A BIS officer conducts an on-site inspection of the overseas
                     manufacturing facility, verifies the production process, and
                     witnesses product testing in the in-house laboratory.
@@ -374,7 +374,7 @@ export default function FMCSPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Sample Sealing & Testing
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     Samples are sealed by the BIS officer and sent to a
                     BIS-recognized laboratory in India for independent
                     conformity testing.
@@ -388,7 +388,7 @@ export default function FMCSPage() {
                   <td className="border border-gray-200 px-4 py-3 text-gray-900">
                     Grant of License
                   </td>
-                  <td className="border border-gray-200 px-4 py-3 text-gray-600">
+                  <td className="border border-gray-200 px-4 py-3 text-gray-500">
                     Upon successful audit and test results, the manufacturer
                     submits the license fee, marking fee, and Performance Bank
                     Guarantee (PBG), after which the ISI Mark license is
@@ -401,7 +401,7 @@ export default function FMCSPage() {
 
           {/* Compliance Note */}
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
-            <p className="text-gray-600 text-[14px] leading-6">
+            <p className="text-gray-500 text-[14px] leading-6">
               <strong>Compliance Note:</strong> BIS FMCS licenses are subject to
               ongoing surveillance, periodic inspections, and sample testing.
               Manufacturers must maintain consistent product quality, valid test
@@ -423,14 +423,14 @@ export default function FMCSPage() {
             <span className="absolute left-0 top-0 h-0.5 w-40 md:w-118 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify">
             Foreign manufacturers intending to export products to India under
             the Foreign Manufacturers Certification Scheme (FMCS) must comply
             with the following mandatory requirements prescribed by the Bureau
             of Indian Standards (BIS):
           </p>
 
-          <ol className="mt-6 list-decimal pl-6 space-y-4 text-gray-600 text-[15px] leading-5">
+          <ol className="mt-6 list-decimal pl-6 space-y-4 text-gray-500 text-[15px] leading-5">
             <li>
               The manufacturing facility must be physically located outside the
               territory of India.
@@ -478,7 +478,7 @@ export default function FMCSPage() {
             evaluation by BIS authorities:
           </p>
 
-          <ol className="mt-6 list-decimal pl-6 space-y-4 text-gray-600 text-[15px] leading-5">
+          <ol className="mt-6 list-decimal pl-6 space-y-4 text-gray-500 text-[15px] leading-5">
             <li>
               Factory registration, business license, and company incorporation
               documents.
@@ -519,7 +519,7 @@ export default function FMCSPage() {
             <span className="absolute left-0 top-0 h-0.5 w-40 md:w-167 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-8">
             As of 2026, the Bureau of Indian Standards (BIS) has significantly
             expanded the scope of products requiring mandatory certification
             under the Foreign Manufacturers Certification Scheme (FMCS). More
@@ -607,7 +607,7 @@ export default function FMCSPage() {
               <h3 className="font-semibold text-gray-900 mb-2">
                 6. Additions in 2026
               </h3>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
                 Recent regulatory updates have expanded the scope of mandatory
                 FMCS Certification India to include several new product
                 categories. Furniture items such as beds, chairs, tables, and
@@ -687,7 +687,7 @@ export default function FMCSPage() {
             <span className="absolute left-0 top-0 h-0.5 w-40 md:w-130 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-8">
             The timeline for obtaining BIS FMCS (Foreign Manufacturers
             Certification Scheme) certification in 2026 generally ranges between{" "}
             <strong>6 to 9 months</strong>. Since the scheme involves mandatory
@@ -806,7 +806,7 @@ export default function FMCSPage() {
 
           {/* Note */}
           <div className="mt-6 bg-white border border-gray-200 rounded-lg p-4">
-            <p className="text-gray-600 text-[14px] leading-6">
+            <p className="text-gray-500 text-[14px] leading-6">
               <strong>Important Note:</strong> Delays may occur due to
               incomplete documentation, audit scheduling constraints, laboratory
               backlogs, or travel-related factors. Engaging an experienced BIS
@@ -828,7 +828,7 @@ export default function FMCSPage() {
             <span className="absolute left-0 top-0 h-0.5 w-87 md:w-165 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-6">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-6">
             The cost of BIS FMCS (Foreign Manufacturers Certification Scheme)
             certification varies depending on the product category, applicable
             Indian Standard, factory location, and scope of inspection. BIS does
@@ -839,7 +839,7 @@ export default function FMCSPage() {
           <div className="space-y-5 text-gray-700 text-[15px] leading-6">
             <div>
               <strong>1. Application Fee:</strong>
-              <p className="text-gray-600 mt-1 text-justify">
+              <p className="text-gray-500 mt-1 text-justify">
                 A non-refundable application fee is payable to BIS at the time
                 of submitting the FMCS application. The fee depends on the
                 product type and the number of Indian Standards covered under
@@ -849,7 +849,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>2. Inspection & Audit Charges:</strong>
-              <p className="text-gray-600 mt-1 text-justify">
+              <p className="text-gray-500 mt-1 text-justify">
                 BIS officials conduct an on-site inspection of the overseas
                 manufacturing facility. Inspection charges vary based on the
                 country, factory location, travel requirements, and duration of
@@ -859,7 +859,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>3. Product Testing Charges:</strong>
-              <p className="text-gray-600 mt-1 text-justify">
+              <p className="text-gray-500 mt-1 text-justify">
                 Sealed product samples are tested at BIS-recognized laboratories
                 in India. Testing costs depend on the product, test parameters,
                 and complexity of the applicable Indian Standard.
@@ -868,7 +868,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>4. Marking Fee:</strong>
-              <p className="text-gray-600 mt-1 text-justify">
+              <p className="text-gray-500 mt-1 text-justify">
                 After grant of the FMCS license, manufacturers are required to
                 pay an annual marking fee to BIS. This fee is calculated based
                 on the product category and estimated production or import
@@ -878,7 +878,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>5. Performance Bank Guarantee (PBG):</strong>
-              <p className="text-gray-600 mt-1 text-justify">
+              <p className="text-gray-500 mt-1 text-justify">
                 A Performance Bank Guarantee is mandatory under FMCS to ensure
                 ongoing compliance with BIS requirements. The PBG amount depends
                 on the product risk category and is refundable upon surrender or
@@ -890,7 +890,7 @@ export default function FMCSPage() {
               <strong>
                 6. Authorized Indian Representative (AIR) Service Charges:
               </strong>
-              <p className="text-gray-600 mt-1 text-justify">
+              <p className="text-gray-500 mt-1 text-justify">
                 Foreign manufacturers must appoint an Authorized Indian
                 Representative (AIR) for regulatory coordination with BIS. AIR
                 service charges vary based on the level of technical support,
@@ -901,7 +901,7 @@ export default function FMCSPage() {
           </div>
 
           <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-4">
-            <p className="text-gray-600 text-[14px] leading-6">
+            <p className="text-gray-500 text-[14px] leading-6">
               <strong>Cost Advisory:</strong> The overall cost of BIS FMCS
               certification depends on the product category, number of models,
               factory location, audit complexity, and testing requirements. For
@@ -925,7 +925,7 @@ export default function FMCSPage() {
           <div className="space-y-6 text-gray-700 text-[15px] leading-6">
             <div>
               <strong>1. What is BIS FMCS Certification?</strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 BIS FMCS Certification refers to the Foreign Manufacturers
                 Certification Scheme under which foreign manufacturers are
                 granted permission to use the ISI Mark on products exported to
@@ -936,7 +936,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>2. Who needs FMCS Certification?</strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 FMCS certification is required for manufacturers located outside
                 India who export products to India that are notified under
                 mandatory BIS Quality Control Orders (QCOs). Importers, traders,
@@ -946,7 +946,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>3. Is FMCS mandatory for all imported products?</strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 No, FMCS certification is mandatory only for products that fall
                 under BIS-notified Quality Control Orders. Products not covered
                 under QCOs may not require FMCS certification, though other
@@ -956,7 +956,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>4. How long does BIS FMCS certification take?</strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 The FMCS certification process generally takes between 6 to 9
                 months. The timeline depends on documentation readiness, factory
                 audit scheduling, sample testing duration, and compliance with
@@ -966,7 +966,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>5. What is the validity of an FMCS license?</strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 An FMCS license is typically granted for a period of one year
                 and can be renewed annually, subject to satisfactory compliance,
                 payment of marking fees, and successful surveillance activities
@@ -976,7 +976,7 @@ export default function FMCSPage() {
 
             <div>
               <strong>6. Can one FMCS license cover multiple factories?</strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 No, FMCS licenses are factory-specific. Each manufacturing
                 location must obtain a separate FMCS license, even if the
                 product and company ownership remain the same.
@@ -988,7 +988,7 @@ export default function FMCSPage() {
                 7. What is the role of an Authorized Indian Representative
                 (AIR)?
               </strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 The Authorized Indian Representative (AIR) acts as the official
                 local representative of the foreign manufacturer in India. The
                 AIR is responsible for coordination with BIS, handling
@@ -1001,7 +1001,7 @@ export default function FMCSPage() {
               <strong>
                 8. What happens if FMCS certification is not obtained?
               </strong>
-              <p className="text-gray-600 mt-2 text-justify">
+              <p className="text-gray-500 mt-2 text-justify">
                 Importing BIS-notified products without FMCS certification can
                 lead to rejection at Indian Customs, seizure of goods, financial
                 penalties, suspension of imports, and potential blacklisting of
@@ -1022,7 +1022,7 @@ export default function FMCSPage() {
             <span className="absolute left-0 top-0 h-0.5 w-40 md:w-170 bg-[#0072b1]" />
           </div>
 
-          <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
+          <p className="text-gray-500 text-[15px] leading-6 text-justify mb-8">
             BIS FMCS certification is a highly technical and audit-intensive
             process that requires precise regulatory understanding,
             international audit coordination, and continuous compliance

@@ -43,41 +43,39 @@ export async function POST(req) {
       hiddenField,
     } = data;
 
-    // honeypot
     if (hiddenField) {
       return Response.json({ success: false });
     }
 
-    // validation
-    if (!name || !phone || !token) {
+    if (!name || !phone) {
       return Response.json(
         { success: false, message: "Invalid request" },
         { status: 400 },
       );
     }
 
-    // captcha verify
-    const captchaRes = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+    if (token && token !== "no-captcha") {
+      const captchaRes = await fetch(
+        "https://www.google.com/recaptcha/api/siteverify",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
         },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
-      },
-    );
-
-    const captchaData = await captchaRes.json();
-
-    if (!captchaData.success) {
-      return Response.json(
-        { success: false, message: "Captcha failed" },
-        { status: 400 },
       );
+
+      const captchaData = await captchaRes.json();
+
+      if (!captchaData.success) {
+        return Response.json(
+          { success: false, message: "Captcha failed" },
+          { status: 400 },
+        );
+      }
     }
 
-    // ✅ GOOGLE SHEETS
     const auth = new google.auth.GoogleAuth({
       credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
