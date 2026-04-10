@@ -589,7 +589,7 @@ export default function BISPage() {
           Time Required to Obtain BIS license India
         </h2>
         <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-          <span className="absolute left-0 top-0 h-0.5 w-62 md:w-145 bg-[#0072b1]" />
+          <span className="absolute left-0 top-0 h-0.5 w-62 md:w-121 bg-[#0072b1]" />
         </div>
 
         <p className="mt-6 text-gray-500 text-[15px] leading-6 text-justify mb-6">
@@ -669,7 +669,7 @@ export default function BISPage() {
           Who Needs BIS license in India?
         </h2>
         <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-          <span className="absolute left-0 top-0 h-0.5 w-15 md:w-108 bg-[#0072b1]" />
+          <span className="absolute left-0 top-0 h-0.5 w-15 md:w-90 bg-[#0072b1]" />
         </div>
 
         <p className="mt-6 text-gray-500 text-[15px] leading-6 text-justify mb-6">
