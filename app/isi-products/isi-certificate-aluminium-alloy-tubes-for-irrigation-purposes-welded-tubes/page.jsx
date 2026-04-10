@@ -5,30 +5,32 @@ export const revalidate = 86400;
 
 export const metadata = {
   title:
-    "BIS ISI Certification for EC Grade Aluminium Rod Produced by Continuous Casting and Rolling (IS 5484:2023) | AN Global Services",
+    "BIS ISI Certification for Aluminium Alloy Tubes for Irrigation Purposes – Welded Tubes (IS 7092 Part 1:1992) | AN Global Services",
 
   description:
-    "Get BIS ISI Certification for EC Grade Aluminium Rod produced by Continuous Casting and Rolling as per IS 5484:2023. Complete assistance for BIS documentation, product testing, factory inspection, and ISI license approval in India.",
+    "Get BIS ISI Certification for Aluminium Alloy Tubes for Irrigation Purposes – Welded Tubes as per IS 7092 (Part 1):1992. Complete assistance for BIS documentation, product testing, factory inspection, and ISI license approval in India.",
 
   keywords: [
-    "ISI Certification for EC Grade Aluminium Rod",
-    "BIS ISI Certification IS 5484",
-    "EC Grade Aluminium Rod Certification India",
-    "BIS License for Aluminium Rod Manufacturers",
-    "IS 5484 Aluminium Rod Certification",
-    "BIS ISI Mark for EC Aluminium Rod",
-    "Aluminium Rod BIS Testing India",
-    "ISI Mark Consultant Aluminium Rod",
+    "ISI Certification for Aluminium Alloy Tubes",
+    "BIS ISI Certification IS 7092",
+    "Aluminium Tubes for Irrigation Certification India",
+    "ISI Mark for Welded Aluminium Tubes",
+    "BIS License for Aluminium Tube Manufacturers",
+    "IS 7092 Part 1 Certification",
+    "BIS ISI Mark Aluminium Irrigation Tubes",
+    "Aluminium Tubes BIS Testing India",
+    "ISI Mark Consultant Aluminium Tubes",
     "AN Global Services BIS ISI Certification",
   ],
 
   openGraph: {
-    title: "ISI Mark Certification for EC Grade Aluminium Rod (IS 5484:2023)",
+    title:
+      "ISI Mark Certification for Aluminium Alloy Tubes for Irrigation (IS 7092 Part 1:1992)",
 
     description:
-      "Apply for BIS ISI Mark Certification for EC Grade Aluminium Rod produced by Continuous Casting and Rolling under IS 5484:2023. Get complete BIS support including documentation, testing, inspection, and license approval.",
+      "Apply for BIS ISI Mark Certification for Aluminium Alloy Welded Tubes for Irrigation under IS 7092 (Part 1):1992. Get complete BIS support including documentation, testing, inspection, and license approval.",
 
-    url: "https://www.anglobalservices.com/isi-products/isi-certificate-ec-grade-aluminium-rod-produced-by-continuous-casting-and-rolling",
+    url: "https://www.anglobalservices.com/isi-products/isi-certificate-aluminium-alloy-tubes-for-irrigation-purposes-welded-tubes",
 
     siteName: "AN Global Services",
     locale: "en_IN",
@@ -49,18 +51,19 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.anglobalservices.com/isi-products/isi-certificate-ec-grade-aluminium-rod-produced-by-continuous-casting-and-rolling",
+      "https://www.anglobalservices.com/isi-products/isi-certificate-aluminium-alloy-tubes-for-irrigation-purposes-welded-tubes",
   },
 };
-export default function ECGradeAluminiumRod() {
+
+export default function AluminiumAlloyTubesForIrrigation() {
   return (
     <main className="w-full bg-white">
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-ec-grade-aluminium-rod.webp"
-              alt="BIS ISI Certification for EC Grade Aluminium Rod IS 5484"
+              src="/isi-products/isi-certificate-aluminium-alloy-welded-tubes.jpeg"
+              alt="BIS ISI Certification for Aluminium Alloy Tubes for Irrigation IS 7092"
               width={420}
               height={300}
               className="w-full h-auto object-cover"
@@ -70,24 +73,24 @@ export default function ECGradeAluminiumRod() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS ISI Certification for EC Grade Aluminium Rod Produced by
-              Continuous Casting and Rolling IS 5484:2023
+              BIS ISI Certification for Aluminium Alloy Tubes for Irrigation
+              Purposes – Welded Tubes IS 7092 (Part 1):1992
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              EC Grade Aluminium Rods produced through continuous casting and
-              rolling are widely used in electrical and electronic applications
-              due to their high conductivity and purity. These rods serve as a
-              primary raw material for manufacturing conductors, cables, and
-              winding wires.
+              Aluminium alloy welded tubes used for irrigation purposes are
+              designed for efficient water distribution in agricultural systems
+              such as sprinkler irrigation. These tubes offer corrosion
+              resistance, durability, and reliable performance under varying
+              field conditions.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              Indian Standard IS 5484:2023 specifies the requirements for EC
-              grade aluminium redraw rods manufactured using continuous casting
-              and rolling processes. The standard ensures uniformity in chemical
-              composition, mechanical properties, electrical performance, and
-              dimensional accuracy.
+              Indian Standard IS 7092 (Part 1):1992 specifies the requirements
+              for aluminium alloy welded tubes including chemical composition,
+              mechanical properties, dimensions, and testing criteria. The
+              standard ensures that the tubes can withstand working pressure and
+              environmental exposure in irrigation applications.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
@@ -95,11 +98,11 @@ export default function ECGradeAluminiumRod() {
                 href="/bis-isi-mark-certification"
                 className="text-[#0072b1] font-medium hover:underline"
               >
-                BIS ISI certification
+                BIS ISI Certification
               </Link>{" "}
-              under IS 5484:2023 is mandatory for these products. Manufacturers
-              must obtain BIS certification before selling, importing, or
-              distributing EC grade aluminium rods in the Indian market.
+              under IS 7092 (Part 1):1992 is mandatory. Manufacturers must
+              obtain BIS certification before manufacturing, selling, or
+              importing these tubes in India.
             </p>
           </div>
         </div>
@@ -108,58 +111,58 @@ export default function ECGradeAluminiumRod() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-8">
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            IS 5484:2023 – Key Technical Requirements
+            IS 7092 (Part 1):1992 – Key Technical Requirements
           </h2>
 
           <ul className="mt-6 space-y-2 text-[15px] text-gray-700">
-            <li>(i) Chemical composition requirements of aluminium ingots</li>
-            <li>(ii) Electrical resistivity and conductivity parameters</li>
-            <li>(iii) Tensile strength and elongation properties</li>
-            <li>(iv) Dimensional tolerances (6.5 mm to 15 mm diameter)</li>
-            <li>(v) Surface finish and absence of defects</li>
-            <li>(vi) Joint quality and continuity</li>
-            <li>(vii) Marking, identification, and traceability</li>
+            <li>(i) Chemical composition of aluminium alloy</li>
+            <li>(ii) Mechanical properties including tensile strength</li>
+            <li>(iii) Dimensional requirements and tolerances</li>
+            <li>(iv) Quality of welds and structural integrity</li>
+            <li>(v) Resistance to corrosion for irrigation use</li>
+            <li>(vi) Hydrostatic pressure performance</li>
+            <li>(vii) Marking and identification requirements</li>
           </ul>
         </div>
 
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Overview of ISI Certification for EC Grade Aluminium Rod
+            Overview of ISI Certification for Aluminium Alloy Welded Tubes
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            IS 5484:2023 applies to EC grade aluminium redraw rods used in
-            electrical conductors, cables, and winding wire applications. These
-            rods are manufactured through continuous casting and rolling
-            processes to ensure consistency and performance.
+            IS 7092 (Part 1):1992 applies to aluminium alloy welded tubes used
+            in irrigation systems, including sprinkler irrigation. These tubes
+            are manufactured using electric resistance welding and are designed
+            to ensure efficient water flow and durability in agricultural
+            environments.
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            The standard defines strict requirements for electrical
-            conductivity, mechanical strength, dimensional accuracy, and surface
-            quality. It ensures that the product performs reliably in power
-            transmission and electrical applications.
+            The standard specifies requirements for strength, weld quality,
+            corrosion resistance, and pressure handling capability. Tubes
+            covered under this standard are suitable for working pressures up to
+            1,000 kN/m² (10 kgf/cm²) for diameters up to 200 mm.
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS ISI certification under the Product Certification Scheme (Scheme
-            I) confirms compliance with IS 5484:2023. Without ISI marking, these
-            products cannot be legally sold or distributed in India.
+            BIS ISI Certification under Product Certification Scheme (Scheme I)
+            confirms compliance with IS 7092 (Part 1):1992. Products without ISI
+            mark cannot be sold or distributed in the Indian market.
           </p>
         </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Process for BIS ISI Certification for EC Grade Aluminium Rod (IS
-          5484:2023)
+          Process for BIS ISI Certification for Aluminium Alloy Welded Tubes (IS
+          7092 Part 1:1992)
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
           Manufacturers must follow the BIS Product Certification Scheme (Scheme
-          I) to obtain ISI certification. The process ensures that the product
-          complies with all technical and quality requirements specified under
-          IS 5484:2023.
+          I) to obtain ISI certification. The process ensures compliance with
+          all requirements specified under IS 7092 (Part 1):1992.
         </p>
 
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
@@ -180,27 +183,27 @@ export default function ECGradeAluminiumRod() {
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
               <strong>Application Filing:</strong> Submit application on BIS
-              portal with product details and IS 5484:2023 standard.
+              portal with product details and IS 7092 (Part 1):1992.
             </li>
 
             <li>
-              <strong>Testing Arrangements:</strong> Ensure facility for testing
-              chemical composition, resistivity, and mechanical properties.
+              <strong>Testing Preparation:</strong> Ensure facilities for
+              tensile, hydrostatic pressure, and weld quality testing.
             </li>
 
             <li>
               <strong>Factory Inspection:</strong> BIS officials inspect
-              manufacturing unit, process controls, and quality systems.
+              production process, welding quality, and quality control system.
             </li>
 
             <li>
-              <strong>Sample Testing:</strong> Product samples are tested in
+              <strong>Sample Testing:</strong> Samples are tested in
               BIS-recognized laboratories.
             </li>
 
             <li>
               <strong>Grant of License:</strong> BIS grants license to use ISI
-              mark upon successful compliance.
+              mark after successful compliance.
             </li>
           </ol>
         </div>
@@ -210,26 +213,27 @@ export default function ECGradeAluminiumRod() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for EC Grade Aluminium Rod (IS
-            5484:2023)
+            Requirements to Obtain BIS License for Aluminium Alloy Welded Tubes
+            (IS 7092 Part 1:1992)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
             <li>
-              Compliance of EC grade aluminium rods with chemical composition,
-              electrical resistivity, mechanical properties, and dimensional
-              requirements as specified under IS 5484:2023.
+              Compliance of aluminium alloy welded tubes with chemical
+              composition, mechanical properties, dimensional requirements, and
+              pressure capacity as specified under IS 7092 (Part 1):1992.
             </li>
 
             <li>
-              Availability of testing facilities for resistivity, tensile
-              strength, elongation, chemical composition, and dimensional
+              Availability of testing facilities for tensile strength,
+              flattening, hydrostatic pressure, weld quality, and dimensional
               verification.
             </li>
 
             <li>
               Appointment of qualified quality control personnel responsible for
-              monitoring production and ensuring compliance with BIS standards.
+              monitoring welding processes and ensuring compliance with BIS
+              standards.
             </li>
 
             <li>
@@ -241,23 +245,21 @@ export default function ECGradeAluminiumRod() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS ISI Mark Certification for EC grade aluminium rods
-            under Product Certification Scheme-I, manufacturers must submit
-            documents under the following categories:
+            To obtain BIS ISI Mark Certification for aluminium alloy welded
+            tubes under Product Certification Scheme-I, manufacturers must
+            submit documents under the following categories:
           </p>
 
           <ul className="mt-4 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
             <li>
               <strong>Administrative Details:</strong> Business registration,
-              manufacturing unit address proof, GST registration, and statutory
-              approvals.
+              factory address proof, GST registration, and statutory approvals.
             </li>
 
             <li>
-              <strong>Technical Details:</strong> Product specifications, rod
-              diameter range (6.5 mm to 15 mm), manufacturing process
-              (continuous casting and rolling), and test parameters as per IS
-              5484:2023.
+              <strong>Technical Details:</strong> Tube specifications, diameter
+              range, manufacturing process (electric resistance welding), and
+              test parameters as per IS 7092 (Part 1):1992.
             </li>
 
             <li>
@@ -276,14 +278,14 @@ export default function ECGradeAluminiumRod() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS ISI Certification for EC Grade Aluminium Rod (IS
-            5484:2023)
+            Cost of BIS ISI Certification for Aluminium Alloy Welded Tubes (IS
+            7092 Part 1:1992)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government fees for BIS ISI
             certification under Product Certification Scheme-I. Actual costs may
-            vary depending on product testing and inspection requirements.
+            vary depending on inspection and testing requirements.
           </p>
 
           <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg">
@@ -359,11 +361,11 @@ export default function ECGradeAluminiumRod() {
 
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
-              <strong>Important Note:</strong> Testing of EC grade aluminium
-              rods as per IS 5484:2023 is mandatory before grant of license. BIS
-              evaluates manufacturing capability, testing infrastructure, and
-              quality control systems. Fees are indicative and subject to change
-              as per BIS guidelines.
+              <strong>Important Note:</strong> Testing of aluminium alloy welded
+              tubes as per IS 7092 (Part 1):1992 is mandatory before grant of
+              license. BIS evaluates manufacturing capability, welding quality,
+              and testing infrastructure. Fees are indicative and subject to
+              change as per BIS guidelines.
             </p>
           </div>
         </div>
@@ -371,54 +373,52 @@ export default function ECGradeAluminiumRod() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Benefits of Getting ISI Mark Certification for EC Grade Aluminium Rod
-          (IS 5484:2023)
+          Benefits of Getting ISI Mark Certification for Aluminium Alloy Welded
+          Tubes (IS 7092 Part 1:1992)
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-8">
           BIS ISI certification ensures compliance with Indian standards and
-          enhances the reliability and acceptance of EC grade aluminium rods in
-          the market.
+          enhances the reliability of aluminium alloy welded tubes used in
+          irrigation systems.
         </p>
 
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Assured Electrical Performance
+              1. Reliable Irrigation Performance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Certification ensures proper conductivity and resistivity as
-              required for electrical applications.
+              Ensures consistent water flow and durability under agricultural
+              conditions.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              2. Mandatory Regulatory Compliance
+              2. Mandatory Market Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              BIS certification is mandatory for products covered under IS
-              5484:2023 before sale in India.
+              Certification is mandatory before selling these tubes in India.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              3. Increased Market Acceptance
+              3. Enhanced Product Durability
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI-marked rods are widely accepted in cable, conductor, and
-              electrical industries.
+              Ensures resistance to corrosion and long service life in
+              irrigation use.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              4. Improved Brand Trust
+              4. Increased Market Trust
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The ISI mark builds confidence among buyers, contractors, and
-              regulatory bodies.
+              ISI mark builds confidence among farmers, contractors, and buyers.
             </p>
           </div>
 
@@ -427,8 +427,8 @@ export default function ECGradeAluminiumRod() {
               5. Better Business Opportunities
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Certified products gain preference in government tenders and
-              large-scale projects.
+              Certified products are preferred in government and irrigation
+              projects.
             </p>
           </div>
         </div>
@@ -436,58 +436,59 @@ export default function ECGradeAluminiumRod() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Frequently Asked Questions (FAQs) – BIS ISI Certification for EC Grade
-          Aluminium Rod (IS 5484:2023)
+          Frequently Asked Questions (FAQs) – BIS ISI Certification for
+          Aluminium Alloy Welded Tubes (IS 7092 Part 1:1992)
         </h2>
 
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Which standard applies to EC grade aluminium rods?
+              1. Which standard applies to aluminium alloy welded tubes for
+              irrigation?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              EC grade aluminium rods produced by continuous casting and rolling
-              are covered under IS 5484:2023.
+              Aluminium alloy welded tubes for irrigation are covered under IS
+              7092 (Part 1):1992.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Is BIS certification mandatory for these products?
+              2. Is BIS certification mandatory for these tubes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes, BIS ISI certification is mandatory before manufacturing,
-              selling, or importing these products in India.
+              Yes, BIS ISI certification is mandatory before manufacturing or
+              selling these products in India.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              3. What are the key tests conducted?
+              3. What tests are conducted under this standard?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Tests include chemical composition, electrical resistivity,
-              tensile strength, elongation, and dimensional checks.
+              Tests include tensile strength, flattening, hydrostatic pressure,
+              weld quality, and dimensional checks.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What is the validity of the BIS license?
+              4. What is the validity of BIS license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally valid for one year and can be renewed
-              upon compliance.
+              The BIS license is generally valid for one year and can be
+              renewed.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              5. How long does it take to get certification?
+              5. How long does certification take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              It usually takes around 30–45 days for Indian manufacturers and 6
-              to 9 months for foreign manufacturers.
+              Certification usually takes 30–45 days for Indian manufacturers
+              and 6 to 9 months for foreign manufacturers.
             </p>
           </div>
         </div>

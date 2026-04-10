@@ -123,9 +123,15 @@ const products = [
   },
   {
     id: 12,
-    name: "Wrought Aluminium and Aluminium Alloy for Electrical Purposes",
-    standard: "IS 5082",
-    link: "/isi-products/isi-certificate-wrought-aluminium-and-aluminium-alloy-electrical-purposes",
+    name: "EC Grade Aluminium Rod Produced by Continuous Casting and Rolling",
+    standard: "IS 5484",
+    link: "/isi-products/isi-certificate-ec-grade-aluminium-rod-produced-by-continuous-casting-and-rolling",
+  },
+  {
+    id: 13,
+    name: "Aluminium Alloy Welded Tubes for Irrigation Purposes",
+    standard: "IS 7092 (Part 1)", 
+    link: "/isi-products/isi-certificate-aluminium-alloy-tubes-for-irrigation-purposes-welded-tubes",
   },
 ];
 
