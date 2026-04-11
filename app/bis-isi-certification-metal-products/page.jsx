@@ -133,6 +133,12 @@ const products = [
     standard: "IS 7092 (Part 1)", 
     link: "/isi-products/isi-certificate-aluminium-alloy-tubes-for-irrigation-purposes-welded-tubes",
   },
+  {
+  id: 14,
+  name: "Aluminium Alloy Extruded Tubes for Irrigation Purposes",
+  standard: "IS 7092 (Part 2)",
+  link: "/isi-products/isi-certificate-aluminium-alloy-extruded-tubes-for-irrigation-purposes",
+},
 ];
 
 const chunkProducts = (arr, size = 2) => {

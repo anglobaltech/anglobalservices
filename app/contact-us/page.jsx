@@ -139,7 +139,7 @@ export default function ContactPage() {
 
   return (
     <div className="w-full bg-[#f7f9fc] min-h-screen">
-      <div className="relative h-55 sm:h-65 md:h-75 bg-linear-to-r from-[#0072b1] to-[#004e7a]">
+      <div className="relative h-50 sm:h-55 md:h-65 bg-linear-to-r from-[#0072b1] to-[#004e7a]">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center h-full text-center">
           <h1 className="text-white text-2xl items sm:text-3xl md:text-4xl font-bold tracking-tight mb-3">
@@ -151,9 +151,9 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
-          <div className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-md border border-gray-100 h-fit">
+          <div className="bg-white rounded-lg p-6  shadow-md border border-gray-100 h-fit">
             <h3 className="text-xl font-bold text-gray-900 mb-1">
               Get In Touch
             </h3>

@@ -22,7 +22,10 @@ export default function Navbar() {
             <NavLink href="/aboutus" label="ABOUT US" />
 
             <DesktopDropdown title="SERVICES" menu={servicesMenu} />
-            <DesktopDropdown title="TESTING & CALIBRATION SERVICES" menu={testingMenu} />
+            <DesktopDropdown
+              title="TESTING & CALIBRATION SERVICES"
+              menu={testingMenu}
+            />
             <DesktopDropdown
               title="EQUIPMENTS & PRODUCTS"
               menu={equipmentMenu}
@@ -30,6 +33,7 @@ export default function Navbar() {
             <DesktopDropdown title="UPDATES" menu={updatesMenu} />
 
             <NavLink href="/contact-us" label="CONTACT US" />
+            {/* <NavLink href="/food-ingredients" label="FOOD INGREDIENTS" /> */}
           </ul>
 
           <button
@@ -113,6 +117,12 @@ export default function Navbar() {
                 href="/contact-us"
                 close={setMobileMenu}
               />
+
+              {/* <MobileLink
+                label="FOOD INGREDIENTS"
+                href="/food-ingredients"
+                close={setMobileMenu}
+              /> */}
             </ul>
           </div>
         </div>
