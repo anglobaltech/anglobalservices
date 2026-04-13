@@ -33,7 +33,7 @@ export default function Navbar() {
             <DesktopDropdown title="UPDATES" menu={updatesMenu} />
 
             <NavLink href="/contact-us" label="CONTACT US" />
-            {/* <NavLink href="/food-ingredients" label="FOOD INGREDIENTS" /> */}
+            <NavLink href="/food-ingredients" label="FOOD INGREDIENTS" />
           </ul>
 
           <button
@@ -118,11 +118,11 @@ export default function Navbar() {
                 close={setMobileMenu}
               />
 
-              {/* <MobileLink
+              <MobileLink
                 label="FOOD INGREDIENTS"
                 href="/food-ingredients"
                 close={setMobileMenu}
-              /> */}
+              />
             </ul>
           </div>
         </div>

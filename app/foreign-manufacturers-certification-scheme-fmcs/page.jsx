@@ -98,7 +98,7 @@ export default function FMCSPage() {
         </h1>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
         <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
@@ -160,25 +160,7 @@ export default function FMCSPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-8 space-y-10">
-        <div>
-          <p className="text-gray-500 text-[15px] leading-6 text-justify">
-            For products such as PVC soles and heels, compliance with Indian
-            Standards involves strict adherence to prescribed material and
-            physical requirements. The resins must be compounded using suitable
-            plasticizers and stabilizers, and the finished surface should be
-            free from defects or blemishes. The size and thickness of soles and
-            heels must be mutually agreed upon between the purchaser and
-            supplier, while the hardness of the material is required to be
-            maintained between 65 and 75 IRHD as prescribed under the applicable
-            Indian Standard for footwear components, as notified under the
-            relevant QCO.. Meeting these specifications ensures durability,
-            safety, and consistent product quality in line with BIS standards.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-gray-50 pb-12">
+      <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl  font-bold text-gray-900 uppercase">
             Why BIS FMCS Certification is Mandatory for Imports into India?

@@ -10,7 +10,7 @@ const products = [
     badge: "Imported",
     badgeColor: "bg-blue-100 text-blue-800",
 
-    image: "/food-items/entc-protein.jpeg",
+    image: "/food-items/entc-proteinn.jpeg",
 
     tagline: "High Purity. Consistent Performance.",
 
@@ -18,14 +18,14 @@ const products = [
       "Whey Protein Concentrate 80 Instant by ENTC is a high-quality protein ingredient imported from Poland, designed for industrial and nutritional applications.",
 
     description:
-      "Whey Protein Concentrate 80% is obtained by removing non-protein components from whey through advanced physical separation techniques such as membrane filtration. The final product contains a minimum of 80% protein and offers excellent functional properties for food and nutrition applications.",
+      "Whey Protein Concentrate 80% is obtained by removing non-protein components from whey through advanced membrane filtration. The product is instantized for superior solubility and delivers consistent performance across food, nutrition, and industrial applications.",
 
     highlights: [
-      "Protein ≥ 80.18%",
+      "Protein ≥ 80.18% (Dry Matter)",
       "Fat content approx. 7.38%",
-      "Instantized powder form for better solubility",
-      "Produced using membrane filtration process",
-      "Suitable for industrial and nutritional applications",
+      "Excellent solubility (99.90%)",
+      "Instantized powder for easy mixing",
+      "Low microbial count & high safety standards",
     ],
 
     applications:
@@ -37,7 +37,10 @@ const products = [
       { label: "Form", value: "Powder" },
       { label: "Flavor", value: "Original" },
       { label: "Pack Size", value: "20 Kg Bag" },
+      { label: "Packaging", value: "White paper bag with poly liner" },
       { label: "Origin", value: "Poland" },
+      { label: "Solubility", value: "99.90%" },
+      { label: "Scorched Particles", value: "Disc A" },
       { label: "Age Group", value: "Adults" },
     ],
 
@@ -47,6 +50,15 @@ const products = [
       { label: "Market", value: "All India" },
     ],
 
+    manufacturer: {
+      name: "ENTC Dairy Solutions Sp. z o.o.",
+    },
+
+    consignee: {
+      name: "CHEMSTACK PRIVATE LIMITED",
+      address:
+        "8th Floor, R City Office Awfis, Lal Bahadur Shastri Marg, Navi Mumbai Municipal Corporation (Thane Zone-2), Maharashtra - 400086, India",
+    },
   },
 
   {
@@ -65,14 +77,14 @@ const products = [
       "Whey Protein Concentrate 80% by Valley Queen is a premium dairy protein imported from the USA, widely used in food and nutritional formulations.",
 
     description:
-      "This WPC 80 Instantized protein is manufactured by Valley Queen Cheese Factory, USA. It offers consistent quality, excellent solubility, and high protein content, making it ideal for commercial and industrial use.",
+      "This WPC 80 Instantized protein is manufactured by Valley Queen, USA. It delivers consistent batch quality, excellent solubility, and meets global microbiological and compositional standards for industrial and nutritional applications.",
 
     highlights: [
       "Protein ≥ 80%",
-      "Instantized for better mixing",
-      "Consistent batch quality",
-      "Suitable for large-scale applications",
-      "Imported from USA",
+      "Instantized for superior solubility",
+      "Low microbial count & safe for food use",
+      "Moisture ≤ 6.5% and Fat ≤ 8.0%",
+      "Imported from USA with consistent quality",
     ],
 
     applications:
@@ -84,143 +96,185 @@ const products = [
       { label: "Form", value: "Powder" },
       { label: "Pack Size", value: "20 Kg Bag" },
       { label: "Origin", value: "USA" },
+      { label: "Protein", value: "≥ 80%" },
+      { label: "Moisture", value: "≤ 6.5%" },
+      { label: "Fat", value: "≤ 8.0%" },
+      { label: "Scorched Particles", value: "A / B" },
     ],
 
-    trade: [{ label: "Market", value: "All India" }],
+    qualityStandards: [
+      { label: "Standard Plate Count", value: "≤ 20,000 cfu/g" },
+      { label: "Coliform", value: "< 10 cfu/g" },
+      { label: "E. coli", value: "< 1 cfu/g" },
+      { label: "Yeast & Mold", value: "≤ 50 cfu/g" },
+      { label: "Salmonella", value: "Negative / 375g" },
+    ],
 
+    manufacturer: {
+      name: "Valley Queen Cheese Factory",
+    },
+
+    trade: [{ label: "Market", value: "All India" }],
   },
 
- {
-  id: 3,
-  name: "Lactose (K-LAC)",
-  make: "Ba'emek Advanced Technologies Ltd.",
-  category: "Dairy Ingredient",
-  badge: "Imported",
-  badgeColor: "bg-green-100 text-green-800",
+  {
+    id: 3,
+    name: "Lactose (K-LAC)",
+    make: "Ba'emek Advanced Technologies Ltd.",
+    category: "Dairy Ingredient",
+    badge: "Imported",
+    badgeColor: "bg-green-100 text-green-800",
 
-  image: "/food-items/lactose.jpeg",
+    image: "/food-items/lactose.jpeg",
 
-  tagline: "High Purity. Reliable Performance.",
+    tagline: "High Purity. Reliable Performance.",
 
-  intro:
-    "K-LAC Lactose by Ba'emek is a high-quality dairy ingredient imported from Israel, widely used in food and pharmaceutical applications for its purity and consistency.",
+    intro:
+      "K-LAC Lactose by Ba'emek is a high-quality dairy ingredient imported from Israel, widely used in food and pharmaceutical applications for its purity and consistency.",
 
-  description:
-    "Lactose is a natural milk sugar obtained from whey and widely used across food, pharmaceutical, and nutraceutical industries. K-LAC Lactose is manufactured using advanced processing techniques to ensure high purity, uniform particle size, and excellent functional properties. Its mild sweetness and neutral taste make it an ideal ingredient for formulations requiring consistency and stability.",
+    description:
+      "K-LAC 2040 Lactose (200 Mesh) is a refined milk sugar produced from whey using advanced processing techniques. It offers high purity, uniform particle size, and excellent flowability, making it ideal for food, nutraceutical, and pharmaceutical applications.",
 
-  highlights: [
-    "High purity lactose suitable for food and pharma applications",
-    "Uniform particle size for consistent processing",
-    "Neutral taste with mild sweetness",
-    "Free-flowing powder for easy handling",
-    "Reliable quality with international standards",
-  ],
+    highlights: [
+      "Lactose ≥ 99.3% purity",
+      "Fine particle size (200 mesh) for uniform blending",
+      "Low moisture content for better stability",
+      "Free-flowing powder with consistent bulk density",
+      "Suitable for food and pharmaceutical applications",
+    ],
 
-  applications:
-    "Infant formula, pharmaceutical tablets, bakery products, confectionery, dairy formulations",
+    applications:
+      "Infant formula, pharmaceutical tablets, bakery products, confectionery, dairy formulations",
 
-  tags: ["Food Grade", "Pharma Grade", "Imported"],
+    tags: ["Food Grade", "Pharma Grade", "Imported"],
 
-  specs: [
-    { label: "Form", value: "Powder" },
-    { label: "Pack Size", value: "25 Kg Bag" },
-    { label: "Origin", value: "Israel" },
-    { label: "Allergen Info", value: "Contains Milk" },
-    { label: "Certification", value: "Chalav Yisrael" },
-  ],
+    specs: [
+      { label: "Form", value: "Powder" },
+      { label: "Pack Size", value: "25 Kg Bag" },
+      { label: "Origin", value: "Israel" },
+      { label: "Particle Size", value: "200 Mesh" },
+      { label: "Bulk Density", value: "0.74 g/ml" },
+      { label: "pH (5% Solution)", value: "5.85" },
+      { label: "Allergen Info", value: "Contains Milk" },
+    ],
 
-  trade: [
-    { label: "Market", value: "All India" },
-    { label: "Packaging", value: "25 Kg Industrial Bag" },
-  ],
+    qualityStandards: [
+      { label: "Total Plate Count", value: "<10 CFU/g" },
+      { label: "Yeast", value: "<10/g" },
+      { label: "Mould", value: "<10/g" },
+      { label: "Coliform", value: "<10 CFU/g" },
+      { label: "E. coli", value: "Negative" },
+      { label: "Salmonella", value: "Negative /25g" },
+      { label: "Listeria monocytogenes", value: "Negative /25g" },
+      { label: "Enterobacteriaceae", value: "Negative" },
+    ],
 
-},
+    trade: [
+      { label: "Market", value: "All India" },
+      { label: "Packaging", value: "25 Kg Industrial Bag" },
+    ],
+  },
 
- {
-  id: 4,
-  name: "Micellar Casein 85",
-  make: "Inleit",
-  category: "Slow-Release Protein",
-  badge: "Premium",
-  badgeColor: "bg-purple-100 text-purple-800",
-  image: "/food-items/micellar-casein.jpeg",
+  {
+    id: 4,
+    name: "Micellar Casein 85",
+    make: "Inleit",
+    category: "Slow-Release Protein",
+    badge: "Premium",
+    badgeColor: "bg-purple-100 text-purple-800",
 
-  tagline: "Sustained Release. Superior Nutrition.",
+    image: "/food-items/macellar-casein.jpeg",
 
-  intro:
-    "Micellar Casein 85 is a slow-digesting milk protein designed for prolonged amino acid release and improved muscle recovery.",
+    tagline: "Sustained Release. Superior Nutrition.",
 
-  description:
-    "Micellar Casein is produced through gentle filtration processes that preserve its natural protein structure. It digests slowly, making it ideal for sustained protein delivery in nutritional and functional food products.",
+    intro:
+      "InLeit MC85 Micellar Casein is a high-quality slow-digesting milk protein imported from Spain, designed for prolonged amino acid release and superior nutritional performance.",
 
-  highlights: [
-    "Protein ≥ 85%",
-    "Slow digestion for sustained release",
-    "Low lactose content",
-    "High satiety effect",
-    "Ideal for nighttime nutrition",
-  ],
+    description:
+      "Micellar Casein 85 is produced in Spain using gentle filtration processes that preserve its native protein structure. It offers high protein content, excellent solubility, and low fat levels, making it ideal for sustained protein delivery in nutritional and functional food applications.",
+    highlights: [
+      "Protein ≥ 86% (Dry Matter)",
+      "Slow digestion for sustained amino acid release",
+      "Low fat content (≤ 2.5%)",
+      "Excellent solubility and dispersibility",
+      "High microbiological safety standards",
+    ],
 
-  applications:
-    "Protein supplements, meal replacements, high-protein snacks, dairy formulations",
+    applications:
+      "Protein supplements, meal replacements, high-protein snacks, dairy formulations",
 
-  tags: ["Slow Release", "High Protein", "Premium"],
+    tags: ["Slow Release", "High Protein", "Premium"],
 
-},
+    specs: [
+      { label: "Form", value: "Powder" },
+      { label: "Protein (DM)", value: "86.34%" },
+      { label: "Protein (As Is)", value: "81.60%" },
+      { label: "Lactose", value: "5.43%" },
+      { label: "Fat", value: "0.77%" },
+      { label: "Moisture", value: "5.46%" },
+    ],
 
- {
-  id: 5,
-  name: "Makhana (Fox Nuts)",
-  category: "Natural Food Ingredient",
-  origin: "India",
+    qualityStandards: [
+      { label: "Total Plate Count", value: "<10 cfu/g" },
+      { label: "Enterobacteriaceae", value: "<10 cfu/g" },
+      { label: "Yeast & Mould", value: "<10 cfu/g" },
+      { label: "Staphylococcus aureus", value: "<10 cfu/g" },
+      { label: "Bacillus cereus", value: "<10 cfu/g" },
+      { label: "Clostridium", value: "<1 cfu/g" },
+      { label: "Salmonella", value: "Not Detected /25g" },
+      { label: "Listeria monocytogenes", value: "Not Detected /25g" },
+    ],
+  },
 
-  badge: "Natural",
-  badgeColor: "bg-green-100 text-green-800",
+  {
+    id: 5,
+    name: "Makhana",
+    category: "Natural Food Ingredient",
+    origin: "India",
 
-  image: "/food-items/makhana.webp",
+    badge: "Natural",
+    badgeColor: "bg-green-100 text-green-800",
 
-  tagline: "Natural. Nutritious. Versatile.",
+    image: "/food-items/makhana.webp",
 
-  intro:
-    "Premium quality Makhana (Fox Nuts) sourced from India, known for its light texture, high nutritional value, and wide applicability in both snack and processed food industries.",
+    tagline: "Natural. Nutritious. Versatile.",
 
-  description:
-    "Makhana, also known as fox nuts or lotus seeds, is a naturally derived food ingredient valued for its high protein content, low fat levels, and easy digestibility. It is carefully processed to retain its natural purity, crisp texture, and neutral taste. Suitable for both direct consumption and industrial food processing, Makhana is widely used in snacks, traditional sweets, and health-focused food products. Its clean-label profile and gluten-free nature make it highly suitable for modern nutritional applications.",
+    intro:
+      "Premium quality Makhana sourced from India, suitable for both direct consumption and industrial food processing applications.",
 
-  highlights: [
-    "Rich in plant-based protein",
-    "Low fat and low calorie content",
-    "Naturally gluten-free",
-    "Easy to digest and light on the stomach",
-    "Suitable for both retail and industrial applications",
-  ],
+    description:
+      "Makhana (fox nuts) is a natural plant-based ingredient widely used in both traditional and modern food processing. Known for its light texture, high nutritional value, and clean-label appeal, it serves as a versatile base for snacks, roasted products, powdered blends, and health-focused formulations. It can be used in raw, roasted, or processed forms depending on application requirements.",
 
-  applications:
-    "Healthy snacking, roasted snacks, packaged food products, traditional Indian sweets, nutritional blends, fasting foods",
+    highlights: [
+      "Rich in plant-based protein and minerals",
+      "Low fat and low calorie content",
+      "Naturally gluten-free and clean-label",
+      "Easy to process into roasted or powdered forms",
+      "Suitable for both retail and industrial applications",
+    ],
 
-  tags: ["Natural Product", "Gluten-Free", "Healthy Snack", "Food Grade"],
+    applications:
+      "Roasted snacks, flavored makhana products, traditional sweets, health foods, nutritional blends, fasting foods",
 
-  specs: [
-    { label: "Form", value: "Whole Seeds" },
-    { label: "Origin", value: "India" },
-    { label: "Shelf Life", value: "12 Months (approx.)" },
-    { label: "Storage", value: "Cool & Dry Place" },
-  ],
+    tags: ["Natural Product", "Gluten-Free", "Healthy Snack", "Food Grade"],
 
-  trade: [
-    { label: "Market", value: "All India" },
-    { label: "Packaging", value: "Bulk & Retail Available" },
-  ],
+    specs: [
+      { label: "Form", value: "Whole / Processed (Roasted)" },
+      { label: "Origin", value: "India" },
+      { label: "Storage", value: "Cool & Dry Place" },
+    ],
 
-},
-
+    trade: [
+      { label: "Market", value: "All India" },
+      { label: "Packaging", value: "Bulk & Custom Packaging Available" },
+    ],
+  },
 ];
-const placeholderIcons = ["🥛", "🍬", "🌾", "💪"];
 
-export default function ProductsPage() {
+export default function FoodIngredientsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="relative bg-gradient-to-br from-[#f8fbff] via-white to-[#eef6fb] border-b border-gray-200 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-[#e6f0ff] via-[#f5f9ff] to-[#e6f0ff] overflow-hidden">
         {/* Background glow */}
         <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#1a6fa8]/10 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-blue-300/20 rounded-full blur-3xl"></div>
@@ -232,36 +286,42 @@ export default function ProductsPage() {
           {/* Tag */}
           <p className="inline-flex items-center gap-2 text-xs font-semibold text-[#1a6fa8] uppercase tracking-widest bg-white border border-[#1a6fa8]/20 px-5 py-1.5 rounded-full shadow-sm mb-6">
             <span className="w-1 h-1 bg-[#1a6fa8] rounded-full"></span>
-            Food Grade Product Range
+            Food Ingredients & Bulk Supply
           </p>
 
           {/* Heading */}
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
-            Premium <span className="text-[#1a6fa8]">Food Ingredients</span> &
-            Natural Products
+            Bulk <span className="text-[#1a6fa8]">Food Ingredients</span> &
+            Nutritional Solutions
           </h1>
 
           {/* Description */}
-          <p className="text-gray-600 max-w-5xl mx-auto text-base md:text-md leading-relaxed">
-            High-quality food-grade ingredients and natural products designed
-            for{" "}
+          <p className="text-gray-600 max-w-5xl mx-auto text-base md:text-md leading-relaxed mt-3">
+            Supplying high-quality dairy proteins, food ingredients, and natural
+            products for{" "}
             <span className="text-gray-800 font-medium">
-              industrial, nutritional, and commercial
-            </span>{" "}
-            applications, ensuring consistency, purity, and reliable
-            performance.
+              manufacturers, food processors, and nutrition brands
+            </span>
+            . Our solutions ensure consistent quality, reliable sourcing, and
+            performance for large-scale applications.
           </p>
 
           {/* trust badges */}
-          <div className="flex justify-center gap-6 mt-5 text-xs text-gray-500 flex-wrap">
-            <span>✔ Food Grade</span>
-            <span>✔ Export Quality</span>
-            <span>✔ Trusted Sourcing</span>
+          <div className="flex justify-center gap-6 mt-6 text-xs text-gray-500 flex-wrap">
+            <span>✔ Food Grade Certified</span>
+            <span>✔ Export Quality Standards</span>
+            <span>✔ Trusted Global Sourcing</span>
+            <span>✔ Bulk Supply Capability</span>
+          </div>
+          <div className="mt-5 flex justify-center">
+            <span className="text-xs bg-green-50 text-green-800 border border-green-200 px-4 py-1.5 rounded-full font-medium shadow-sm">
+              FSSAI License No • 12726999000019
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8 space-y-10">
         {products.map((product, index) => (
           <div
             key={product.id}
@@ -281,8 +341,8 @@ export default function ProductsPage() {
                   <Image
                     src={product.image}
                     alt={product.name}
-                    width={280}
-                    height={220}
+                    width={240}
+                    height={180}
                     className="object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -294,7 +354,7 @@ export default function ProductsPage() {
                   {product.category}
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-1">
+                <h2 className=" text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-1">
                   {product.name}
                 </h2>
 
