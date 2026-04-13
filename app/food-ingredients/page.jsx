@@ -46,7 +46,6 @@ const products = [
 
     trade: [
       { label: "Minimum Order", value: "100 Kg" },
-      { label: "Delivery Time", value: "2 Weeks" },
       { label: "Market", value: "All India" },
     ],
 
@@ -114,7 +113,10 @@ const products = [
       name: "Valley Queen Cheese Factory",
     },
 
-    trade: [{ label: "Market", value: "All India" }],
+    trade: [
+      { label: "Market", value: "All India" },
+      { label: "Minimum Order", value: "100 Kg" },
+    ],
   },
 
   {
@@ -171,7 +173,7 @@ const products = [
 
     trade: [
       { label: "Market", value: "All India" },
-      { label: "Packaging", value: "25 Kg Industrial Bag" },
+      { label: "Minimum Order", value: "100 Kg" },
     ],
   },
 
@@ -207,6 +209,7 @@ const products = [
 
     specs: [
       { label: "Form", value: "Powder" },
+      { label: "Pack Size", value: "20 Kg Bag" },
       { label: "Protein (DM)", value: "86.34%" },
       { label: "Protein (As Is)", value: "81.60%" },
       { label: "Lactose", value: "5.43%" },
@@ -223,6 +226,10 @@ const products = [
       { label: "Clostridium", value: "<1 cfu/g" },
       { label: "Salmonella", value: "Not Detected /25g" },
       { label: "Listeria monocytogenes", value: "Not Detected /25g" },
+    ],
+    trade: [
+      { label: "Market", value: "All India" },
+      { label: "Minimum Order", value: "100 Kg" },
     ],
   },
 
@@ -267,6 +274,7 @@ const products = [
     trade: [
       { label: "Market", value: "All India" },
       { label: "Packaging", value: "Bulk & Custom Packaging Available" },
+      { label: "Minimum Order", value: "100 Kg" },
     ],
   },
 ];
