@@ -146,7 +146,7 @@ export default function Footer() {
               </p>
 
               <form
-                onSubmit={handleSubmit} 
+                onSubmit={handleSubmit}
                 className="grid grid-cols-1 md:grid-cols-2 gap-3"
               >
                 {/* Row 1 – Service */}
@@ -239,7 +239,12 @@ export default function Footer() {
                 href="tel:+917782069184"
                 className="flex items-start gap-3 group"
               >
-                <Image src="/call-image.png" alt="Call" width={18} height={18} />
+                <Image
+                  src="/call-image.png"
+                  alt="Call"
+                  width={18}
+                  height={18}
+                />
                 <span className="text-white group-hover:text-[#0072b1]">
                   +91 7782069184
                 </span>
@@ -250,7 +255,12 @@ export default function Footer() {
                 href="tel:+919958820184"
                 className="flex items-start gap-3 group"
               >
-                <Image src="/call-image.png" alt="Call" width={18} height={18} />
+                <Image
+                  src="/call-image.png"
+                  alt="Call"
+                  width={18}
+                  height={18}
+                />
                 <span className="text-white group-hover:text-[#0072b1]">
                   +91 9958820184
                 </span>
@@ -411,6 +421,17 @@ export default function Footer() {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 pb-8">
+        <div className="bg-[#2a2a2a] border border-[#333] rounded-lg p-5 md:p-6 text-xs md:text-sm text-gray-400 leading-relaxed text-center md:text-left shadow-inner">
+          <span className="font-semibold text-gray-200">Disclaimer:</span> AN
+          Global Services is a private consulting firm offering support for
+          certifications, registrations, and compliance (BIS, ISI, WPC, BEE,
+          MSME, Trademark, etc.), and is not affiliated with any government
+          authority. For the latest updates and official information, please
+          visit the Bureau of Indian Standards (BIS) official website.
         </div>
       </div>
 
