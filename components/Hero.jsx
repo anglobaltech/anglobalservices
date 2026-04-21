@@ -3,15 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
+import { isiProductsList } from "../datatable/isiProducts";
+import { useRouter } from "next/navigation";
 
 const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
   ssr: false,
 });
 
-const slides = ["/dash-image1.jpg", "/dash-image2.jpg", "/dash-image3.jpg"];
+const slides = ["/dash-image4.png", "/dash-image2.jpg", "/dash-image3.jpg"];
 
 export default function Hero() {
   const testimonials = useMemo(
@@ -97,6 +99,44 @@ export default function Hero() {
   const [error, setError] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [isTabActive, setIsTabActive] = useState(true);
+  const router = useRouter();
+  const searchRef = useRef(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchQuery(value);
+    if (value.trim().length > 0) {
+      const filtered = isiProductsList.filter(
+        (product) =>
+          product.name.toLowerCase().includes(value.toLowerCase()) ||
+          product.isNo.toLowerCase().includes(value.toLowerCase()),
+      );
+      setSearchResults(filtered);
+      setIsSearchOpen(true);
+    } else {
+      setSearchResults([]);
+      setIsSearchOpen(false);
+    }
+  };
+
+  const handleSearchSelect = (slug) => {
+    setSearchQuery("");
+    setIsSearchOpen(false);
+    router.push(`/isi-products/${slug}`);
+  };
 
   useEffect(() => {
     const handleVisibility = () => {
@@ -542,6 +582,56 @@ export default function Hero() {
             High-quality certified products supporting safety, compliance, and
             global standards across industries.
           </p>
+
+          <div className="w-full flex flex-col items-center justify-center mb-16 relative z-50">
+            <div className="relative w-full max-w-3xl" ref={searchRef}>
+              <div className="flex items-center w-full bg-white border-2 border-[#005f86] rounded-full overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  onFocus={() =>
+                    searchQuery.trim().length > 0 && setIsSearchOpen(true)
+                  }
+                  placeholder="Search product or IS no..."
+                  className="w-full pl-6 pr-6 py-2.5 text-base sm:text-lg text-gray-700 outline-none bg-transparent"
+                />
+                <button
+                  className="bg-[#005f86] text-white w-10 h-10 mr-1.5 rounded-full flex items-center justify-center shrink-0 hover:bg-[#004a69] transition-colors"
+                  aria-label="Search"
+                >
+                  <Search size={16} className="sm:w-4 sm:h-4" />
+                </button>
+              </div>
+
+              {isSearchOpen && (
+                <div className="absolute top-full left-0 right-0 mt-3 bg-white rounded-xl shadow-2xl border border-gray-100 max-h-80 overflow-y-auto z-[100]">
+                  {searchResults.length > 0 ? (
+                    <ul className="py-2">
+                      {searchResults.map((product, index) => (
+                        <li
+                          key={index}
+                          onClick={() => handleSearchSelect(product.slug)}
+                          className="px-6 py-3 hover:bg-blue-50 cursor-pointer border-b border-gray-50 last:border-b-0 transition-colors"
+                        >
+                          <span className="block text-base font-semibold text-gray-800 line-clamp-1">
+                            {product.name}
+                          </span>
+                          <span className="block text-sm text-[#005f86] mt-1 font-medium">
+                            {product.isNo}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div className="px-6 py-8 text-base text-gray-500 text-center">
+                      No products found matching "{searchQuery}"
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
 
           <InfiniteProducts />
         </div>
