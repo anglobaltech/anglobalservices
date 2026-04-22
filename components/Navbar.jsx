@@ -132,14 +132,24 @@ export default function Navbar() {
 }
 
 function DesktopDropdown({ title, menu }) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <li className="relative group">
+    <li
+      className="relative group"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       <span className="cursor-pointer flex items-center gap-1 hover:text-black transition-colors">
         {title}
         <ChevronDown size={14} />
       </span>
 
-      <div className="absolute left-0 top-full mt-3 bg-white shadow-xl rounded-lg p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+      <div
+        className={`absolute left-0 top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        {" "}
         <div className="flex gap-10">
           {menu.map((group, gIndex) => (
             <div key={`${title}-group-${gIndex}`} className="min-w-60">
@@ -157,6 +167,7 @@ function DesktopDropdown({ title, menu }) {
                         item.root ? `/${item.slug}` : `/services/${item.slug}`
                       }
                       className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
+                      onClick={() => setIsOpen(false)}
                     >
                       <FileText
                         size={16}
