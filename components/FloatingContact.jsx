@@ -9,12 +9,10 @@ export default function FloatingContact() {
 
   return (
     <>
-      <div className="fixed right-0 bottom-1/9 z-40 flex flex-col gap-3 items-center">
+      <div className="fixed right-0 top-[80%] -translate-y-1/2 z-50 flex flex-col gap-3 items-center pr-1">
         <button
           onClick={() => setOpen(true)}
-          className="fixed top-4/6 -translate-y-1/2 z-40
-         bg-[#0072b1] text-white px-2 py-1 rounded-lg
-          rotate-180  font-medium tracking-wide cursor-pointer"
+          className="bg-[#0072b1] text-white px-2 py-1 rounded-lg rotate-180 font-medium tracking-wide cursor-pointer shadow-sm hover:shadow-md transition-shadow"
           style={{ writingMode: "vertical-rl" }}
         >
           Contact Us
