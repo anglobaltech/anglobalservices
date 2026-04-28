@@ -574,8 +574,8 @@ export default function Hero() {
 
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-extrabold text-center text-black mb-4">
-            OUR PRODUCTS
+          <h2 className="text-3xl font-extrabold text-center text-black mb-4">
+             SEARCH PRODUCTS BY NAME OR IS NUMBER
           </h2>
 
           <p className="text-center text-gray-500 max-w-2xl mx-auto mb-12">
