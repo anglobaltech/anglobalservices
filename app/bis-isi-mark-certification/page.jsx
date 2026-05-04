@@ -1,7 +1,7 @@
-import IsiProductsTable from "@/components/IsiProductsTable";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import IsiProductsTable from "../../components/IsiProductsTable"; 
 
 export const revalidate = 86400;
 
@@ -784,8 +784,6 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <IsiProductsTable />
-
       <section className="bg-[#0f172a] py-12 ">
         <div className="max-w-6xl mx-auto px-4 text-white text-center">
           <h2 className="text-xl sm:text-3xl  font-bold mb-4">
@@ -1254,6 +1252,8 @@ export default function ISIPage() {
           </ul>
         </div>
       </section>
+
+      <IsiProductsTable />
     </main>
   );
 }

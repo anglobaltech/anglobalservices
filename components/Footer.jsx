@@ -113,7 +113,7 @@ export default function Footer() {
     <footer className="bg-[#222] text-gray-300">
       <section className="relative w-full overflow-hidden bg-gray-900">
         {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-linear-to-r from-gray-900 via-gray-800/70 to-gray-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800/70 to-gray-900" />
 
         {/* Soft Dark Glows */}
         <div className="absolute -top-20 -left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -146,7 +146,7 @@ export default function Footer() {
               </p>
 
               <form
-                onSubmit={handleSubmit}
+                onSubmit={handleSubmit} 
                 className="grid grid-cols-1 md:grid-cols-2 gap-3"
               >
                 {/* Row 1 – Service */}
@@ -220,7 +220,7 @@ export default function Footer() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <Image
@@ -239,12 +239,7 @@ export default function Footer() {
                 href="tel:+917782069184"
                 className="flex items-start gap-3 group"
               >
-                <Image
-                  src="/call-image.png"
-                  alt="Call"
-                  width={18}
-                  height={18}
-                />
+                <Image src="/call-image.png" alt="Call" width={18} height={18} />
                 <span className="text-white group-hover:text-[#0072b1]">
                   +91 7782069184
                 </span>
@@ -255,12 +250,7 @@ export default function Footer() {
                 href="tel:+919958820184"
                 className="flex items-start gap-3 group"
               >
-                <Image
-                  src="/call-image.png"
-                  alt="Call"
-                  width={18}
-                  height={18}
-                />
+                <Image src="/call-image.png" alt="Call" width={18} height={18} />
                 <span className="text-white group-hover:text-[#0072b1]">
                   +91 9958820184
                 </span>
@@ -405,7 +395,7 @@ export default function Footer() {
                 href="https://www.instagram.com/anglobalservices/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center text-gray-300 bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:border-transparent hover:text-white transition"
+                className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center text-gray-300 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:border-transparent hover:text-white transition"
               >
                 <FaInstagram size={16} />
               </a>
@@ -424,18 +414,15 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* --- NEW RESPONSIVE DISCLAIMER SECTION --- */}
       <div className="max-w-7xl mx-auto px-6 pb-8">
         <div className="bg-[#2a2a2a] border border-[#333] rounded-lg p-5 md:p-6 text-xs md:text-sm text-gray-400 leading-relaxed text-center md:text-left shadow-inner">
-          <span className="font-semibold text-gray-200">Disclaimer:</span> AN
-          Global Services is a private consulting firm offering support for
-          certifications, registrations, and compliance (BIS, ISI, WPC, BEE,
-          MSME, Trademark, etc.), and is not affiliated with any government
-          authority. For the latest updates and official information, please
-          visit the Bureau of Indian Standards (BIS) official website.
+          <span className="font-semibold text-gray-200">Disclaimer:</span> AN Global Services is a private consulting firm offering support for certifications, registrations, and compliance (BIS, ISI, WPC, BEE, MSME, Trademark, etc.), and is not affiliated with any government authority. For the latest updates and official information, please visit the Bureau of Indian Standards (BIS) official website.
         </div>
       </div>
+      {/* --------------------------------------- */}
 
-      <div className="border-t border-gray-700 py-2 text-center text-sm text-gray-400">
+      <div className="border-t border-gray-700 py-4 text-center text-sm text-gray-400">
         © 2026. A N GLOBAL SERVICES PVT. LTD. All Rights Reserved.
       </div>
     </footer>

@@ -132,10 +132,13 @@ export default function Navbar() {
 }
 
 function DesktopDropdown({ title, menu }) {
+  // NEW: Added state to track dropdown visibility programmatically
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <li
+    <li 
       className="relative group"
+      // NEW: Added mouse enter and leave events to control the state instead of purely using CSS
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
@@ -144,12 +147,12 @@ function DesktopDropdown({ title, menu }) {
         <ChevronDown size={14} />
       </span>
 
-      <div
+      {/* CHANGED: Replaced "group-hover:opacity-100 group-hover:visible" with dynamic classes based on `isOpen` state */}
+      <div 
         className={`absolute left-0 top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        {" "}
         <div className="flex gap-10">
           {menu.map((group, gIndex) => (
             <div key={`${title}-group-${gIndex}`} className="min-w-60">
@@ -167,6 +170,7 @@ function DesktopDropdown({ title, menu }) {
                         item.root ? `/${item.slug}` : `/services/${item.slug}`
                       }
                       className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
+                      // NEW: Added onClick handler to force the dropdown to close immediately after clicking a link
                       onClick={() => setIsOpen(false)}
                     >
                       <FileText
