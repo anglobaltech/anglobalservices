@@ -44,8 +44,8 @@ export default function GoldHallmarkingPage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
-          <div className="max-w-6xl mx-auto px-4">
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div className="max-w-6xl mx-auto px-4 text-center">
             <h1 className="text-white text-3xl md:text-3xl font-bold">
               BIS HALLMARKING HUID (GOLD & SILVER) SETUP & REGISTRATION SERVICES
             </h1>
