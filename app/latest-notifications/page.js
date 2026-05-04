@@ -38,7 +38,7 @@ export default function LatestNotificationsPage() {
   return (
     <div className="w-full bg-gray-50">
       {/* ===== HERO SECTION ===== */}
-      <div className="relative w-full h-[300px]">
+      <div className="relative w-full h-[250px]">
         <Image
           src="/service/isi/about.jpg"
           alt="Latest Notifications"
@@ -46,12 +46,12 @@ export default function LatestNotificationsPage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center">
-          <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-white text-4xl md:text-5xl font-bold">
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h1 className="text-white text-4xl uppercase font-bold">
               Latest Notifications
             </h1>
-            <p className="text-gray-200 mt-3 max-w-2xl">
+            <p className="text-gray-200 mt-3 max-w-2xl ">
               Stay updated with the latest BIS certification and Quality Control
               Order notifications.
             </p>

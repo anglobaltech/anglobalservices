@@ -72,7 +72,7 @@ const newsUpdates = [
 export default function NewsUpdatesPage() {
   return (
     <div className="w-full bg-white">
-      <div className="relative w-full h-75">
+      <div className="relative w-full h-60">
              <Image
                src="/service/isi/about.jpg"
                alt="Latest Notifications"
