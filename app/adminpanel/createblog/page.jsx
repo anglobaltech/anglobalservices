@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { collection, addDoc, updateDoc, doc, serverTimestamp, getDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc, serverTimestamp, getDoc, setDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db, storage } from "@/src/lib/firebase"; 
 import { useRouter, useSearchParams } from "next/navigation";
@@ -204,18 +204,21 @@ export default function CreateBlog() {
         setSuccessMsg("Blog updated successfully!");
       } else {
         blogData.createdAt = serverTimestamp();
-        await addDoc(collection(db, "blogs"), blogData);
+        // CHANGED: We now use setDoc and pass the 'slug' as the unique ID!
+        await setDoc(doc(db, "blogs", slug), blogData);
         setSuccessMsg("Blog published successfully!");
       }
       
       setTimeout(() => router.push("/adminpanel/blogs"), 2000); 
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      
     } catch (err) {
       console.error(err);
       setErrorMsg("Failed to publish. Check console for details.");
-    } finally {
-      setLoading(false);
+      setLoading(false); 
     }
+    
+    // REMOVED the 'finally { setLoading(false); }' block entirely
   };
 
   return (
@@ -260,29 +263,48 @@ export default function CreateBlog() {
         </div>
 
         {/* IMAGE SECTION */}
-        <div className="bg-white/85 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
-          <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
-            <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">2</span> 
-            Featured Hero Image
-          </h2>
-          <div>
-            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
-              Upload Image {existingHeroImage && "(Leave blank to keep existing)"}
-            </label>
-            <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
-              <div>
-                <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Cloudinary URL</label>
-                <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://res.cloudinary.com/..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+        <div className="mb-6">
+          <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
+            Hero Image {existingHeroImage && "(Leave blank to keep existing)"}
+          </label>
+          <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
+            
+            {/* --- NEW IMAGE PREVIEW BLOCK START --- */}
+            {(heroImageFile || heroImageUrlInput || existingHeroImage) && (
+              <div className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 flex items-center justify-center mb-2 group">
+                 <img 
+                   src={heroImageFile ? URL.createObjectURL(heroImageFile) : (heroImageUrlInput || existingHeroImage)} 
+                   alt="Hero Preview" 
+                   className="w-full h-full object-cover" 
+                 />
+                 <button 
+                   type="button"
+                   onClick={() => {
+                     setHeroImageFile(null);
+                     setHeroImageUrlInput("");
+                     setExistingHeroImage("");
+                   }}
+                   className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
+                   title="Remove Image"
+                 >
+                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                 </button>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="flex-1 border-t border-gray-200/80"></div>
-                <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">OR</span>
-                <div className="flex-1 border-t border-gray-200/80"></div>
-              </div>
-              <div>
-                <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File</label>
-                <input type="file" accept="image/*" onChange={(e) => { setHeroImageFile(e.target.files[0]); setHeroImageUrlInput(""); }} className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
-              </div>
+            )}
+            {/* --- NEW IMAGE PREVIEW BLOCK END --- */}
+
+            <div>
+              <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Cloudinary URL</label>
+              <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://res.cloudinary.com/..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex-1 border-t border-gray-200/80"></div>
+              <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">OR</span>
+              <div className="flex-1 border-t border-gray-200/80"></div>
+            </div>
+            <div>
+              <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File directly (Auto-Uploads to Cloudinary)</label>
+              <input type="file" accept="image/*" onChange={(e) => { setHeroImageFile(e.target.files[0]); setHeroImageUrlInput(""); } } className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
             </div>
           </div>
         </div>

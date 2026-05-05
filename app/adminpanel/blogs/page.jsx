@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 export default function BlogsList() {
   const [publishedBlogs, setPublishedBlogs] = useState([]);
   const [deleteModal, setDeleteModal] = useState({ show: false, id: null, title: "" });
+  const [searchQuery, setSearchQuery] = useState(""); // NEW: Search state
   const router = useRouter();
 
   useEffect(() => {
@@ -36,6 +37,16 @@ export default function BlogsList() {
     }
   };
 
+  // NEW: Filter logic for the search bar
+  const filteredBlogs = publishedBlogs.filter((blog) => {
+    const searchLower = searchQuery.toLowerCase();
+    return (
+      (blog.title && blog.title.toLowerCase().includes(searchLower)) ||
+      (blog.slug && blog.slug.toLowerCase().includes(searchLower)) ||
+      (blog.category && blog.category.toLowerCase().includes(searchLower))
+    );
+  });
+
   return (
     <>
       {deleteModal.show && (
@@ -61,23 +72,41 @@ export default function BlogsList() {
       )}
 
       <div className="max-w-5xl mx-auto py-12 px-5 sm:px-8 animate-fade-in">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-6">
           <div>
             <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Blog Pages</h2>
             <p className="text-sm text-gray-500 font-medium mt-1">Manage, edit, or delete your existing published blogs.</p>
           </div>
-          <button onClick={() => router.push("/adminpanel/createblog")} className="cursor-pointer bg-gradient-to-r from-[#0072b1] to-[#005f96] hover:from-[#005f96] hover:to-[#004a7a] text-white font-bold px-6 py-3 rounded-xl shadow-md transform hover:-translate-y-0.5 transition-all text-sm w-full sm:w-auto text-center">
+          <button onClick={() => router.push("/adminpanel/createblog")} className="cursor-pointer bg-gradient-to-r from-[#0072b1] to-[#005f96] hover:from-[#005f96] hover:to-[#004a7a] text-white font-bold px-6 py-3 rounded-xl shadow-md transform hover:-translate-y-0.5 transition-all text-sm w-full sm:w-auto text-center shrink-0">
             + Create New Blog
           </button>
+        </div>
+
+        {/* NEW: Search Bar UI */}
+        <div className="mb-8 relative">
+          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <input
+            type="text"
+            placeholder="Search blogs by title, slug, or category..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-11 pr-4 py-3.5 bg-white/80 backdrop-blur-xl border border-gray-200/80 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-800 placeholder-gray-400"
+          />
         </div>
 
         {publishedBlogs.length === 0 ? (
           <div className="text-center py-20 bg-white/60 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm">
              <p className="text-gray-500 font-bold text-lg">No blogs published yet.</p>
           </div>
+        ) : filteredBlogs.length === 0 ? (
+          <div className="text-center py-20 bg-white/60 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm">
+             <p className="text-gray-500 font-bold text-lg">No blogs match your search.</p>
+          </div>
         ) : (
           <div className="grid gap-4">
-            {publishedBlogs.map((blog) => (
+            {filteredBlogs.map((blog) => (
               <div key={blog.id} className="bg-white/85 backdrop-blur-2xl p-6 rounded-2xl shadow-sm border border-white/60 hover:border-[#0072b1]/30 hover:shadow-md transition-all flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 group">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
@@ -86,7 +115,7 @@ export default function BlogsList() {
                   <h3 className="text-lg font-bold text-gray-900 leading-tight">{blog.title}</h3>
                   <p className="text-xs font-semibold text-[#0072b1] mt-1 bg-[#0072b1]/10 inline-block px-2 py-0.5 rounded break-all">/{blog.slug}</p>
                 </div>
-                <div className="flex items-center gap-3 transition-all self-start sm:self-auto">
+                <div className="flex items-center gap-3 transition-all self-start sm:self-auto shrink-0">
                   <button onClick={() => router.push(`/adminpanel/createblog?id=${blog.id}`)} className="cursor-pointer bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
                     Edit Blog
                   </button>

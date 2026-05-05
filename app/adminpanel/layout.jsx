@@ -210,7 +210,7 @@ export default function AdminLayout({ children }) {
         <div className="relative z-10 max-w-md w-full bg-white/80 backdrop-blur-2xl p-8 sm:p-10 rounded-[2rem] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-white/60">
           <div className="text-center mb-10">
             <div className="mx-auto mb-6 flex items-center justify-center transform transition hover:scale-105 duration-300">
-               <Image src="/company-logo.png" alt="Company Logo" width={150} height={60} className="w-auto h-16 object-contain drop-shadow-md" priority />
+               <Image src="/logo.png" alt="Company Logo" width={150} height={60} className="w-auto h-16 object-contain drop-shadow-md" priority />
             </div>
             <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Admin Portal</h2>
             <p className="mt-3 text-sm text-gray-500 font-medium">Secure access to AN Global Services</p>
@@ -245,7 +245,7 @@ export default function AdminLayout({ children }) {
       {/* MOBILE HEADER (Visible only on small screens)        */}
       {/* -------------------------------------------------- */}
       <div className="md:hidden absolute top-0 left-0 w-full h-16 bg-white/90 backdrop-blur-xl border-b border-gray-200/50 z-[40] flex items-center justify-between px-5 shadow-sm">
-        <Image src="/company-logo.png" alt="Company Logo" width={100} height={35} className="w-auto h-8 object-contain" priority />
+        <Image src="/logo.png" alt="Company Logo" width={100} height={35} className="w-auto h-8 object-contain" priority />
         <button onClick={() => setIsMobileMenuOpen(true)} className="p-2 text-gray-600 bg-white rounded-lg shadow-sm border border-gray-200/80 focus:outline-none focus:ring-2 focus:ring-[#0072b1]/20">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
@@ -386,7 +386,7 @@ export default function AdminLayout({ children }) {
           </button>
           
           <div className="mb-4 flex items-center mt-1 md:mt-0">
-            <Image src="/company-logo.png" alt="Company Logo" width={120} height={45} className="w-auto h-10 object-contain drop-shadow-sm" priority />
+            <Image src="/logo.png" alt="Company Logo" width={120} height={45} className="w-auto h-10 object-contain drop-shadow-sm" priority />
           </div>
           <h1 className="text-xl font-extrabold text-gray-900 tracking-tight leading-tight">Workspace</h1>
           <p className="text-[11px] font-bold text-gray-400 mt-1 truncate">{user.email}</p>
@@ -435,7 +435,7 @@ export default function AdminLayout({ children }) {
       </div>
 
       {/* --- MAIN CONTENT AREA --- */}
-      <div className="flex-1 h-full overflow-y-auto relative z-10 scroll-smooth pt-16 md:pt-0 w-full">
+      <div className="flex-1 overflow-y-auto relative z-10 scroll-smooth pt-16 md:pt-0 w-full">
         {children}
       </div>
     </div>

@@ -870,6 +870,9 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { isiProductsList } from "../datatable/isiProducts"; // Adjust path if needed
 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/src/lib/firebase";
+
 const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
   ssr: false,
 });
@@ -885,6 +888,43 @@ export default function Hero() {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchRef = useRef(null);
+
+  const [allProducts, setAllProducts] = useState(isiProductsList);
+
+  useEffect(() => {
+    const fetchLiveProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "isi_products"));
+        const liveProducts = querySnapshot.docs.map(doc => {
+          const data = doc.data();
+          const title = data.title || "";
+          
+          let extractedIsNo = "N/A";
+          const isMatch = title.match(/IS\s*\d+(?:\s*(?:\(|:)?\s*Part\s*\d+\)?)?/i);
+          if (isMatch) extractedIsNo = isMatch[0].replace(/\(/g, ' : ').replace(/\)/g, '').replace(/\s+:\s+/g, ' : ');
+
+          let extractedName = title.replace(/^BIS ISI Certification\s+(?:for\s+)?/i, '').replace(/IS\s*\d+.*$/i, '').replace(/[-–—]+\s*$/, '').trim(); 
+
+          return {
+            isNo: extractedIsNo !== "N/A" ? extractedIsNo : "Custom",
+            name: extractedName || title,
+            slug: data.slug || doc.id, 
+          };
+        });
+
+        const liveSlugs = new Set(liveProducts.map(p => p.slug));
+        const filteredStatic = isiProductsList.filter(p => !liveSlugs.has(p.slug));
+
+        let combined = [...liveProducts, ...filteredStatic];
+        combined.sort((a, b) => a.name.trim().localeCompare(b.name.trim()));
+
+        setAllProducts(combined);
+      } catch (err) {
+        console.error("Failed to fetch live products:", err);
+      }
+    };
+    fetchLiveProducts();
+  }, []);
 
   const testimonials = useMemo(
     () => [
@@ -987,11 +1027,12 @@ export default function Hero() {
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchQuery(value);
+
     if (value.trim().length > 0) {
-      const filtered = isiProductsList.filter(
-        (product) =>
-          product.name.toLowerCase().includes(value.toLowerCase()) ||
-          product.isNo.toLowerCase().includes(value.toLowerCase())
+      // Now it filters from our new dynamic `allProducts` list
+      const filtered = allProducts.filter((product) =>
+        product.name.toLowerCase().includes(value.toLowerCase()) ||
+        product.isNo.toLowerCase().includes(value.toLowerCase())
       );
       setSearchResults(filtered);
       setIsSearchOpen(true);
