@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { isiProductsList } from "../datatable/isiProducts"; // Ensure this path is correct
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/src/lib/firebase"; 
+import { isiProductsList as staticProducts } from "../datatable/isiProducts"; 
 
 // Backup function just in case a 'slug' is missing in the data file
 const generateSlug = (text) => {
@@ -15,8 +17,70 @@ const generateSlug = (text) => {
 
 export default function IsiProductsTable() {
   const [searchQuery, setSearchQuery] = useState("");
+  // Start with static products so the table isn't empty while loading
+  const [allProducts, setAllProducts] = useState(staticProducts); 
+  const [loading, setLoading] = useState(true);
 
-  const filteredProducts = isiProductsList.filter((product) => {
+  useEffect(() => {
+    const fetchLiveProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "isi_products"));
+        
+        const liveProducts = querySnapshot.docs.map(doc => {
+          const data = doc.data();
+          const title = data.title || "";
+          
+          // 1. SMART EXTRACTION: Find IS Number
+          let extractedIsNo = "N/A";
+          const isMatch = title.match(/IS\s*\d+(?:\s*(?:\(|:)?\s*Part\s*\d+\)?)?/i);
+          if (isMatch) {
+            extractedIsNo = isMatch[0]
+              .replace(/\(/g, ' : ')
+              .replace(/\)/g, '')
+              .replace(/\s+:\s+/g, ' : ');
+          }
+
+          // 2. SMART EXTRACTION: Find Product Name
+          let extractedName = title;
+          extractedName = extractedName.replace(/^BIS ISI Certification\s+(?:for\s+)?/i, ''); 
+          extractedName = extractedName.replace(/IS\s*\d+.*$/i, ''); 
+          extractedName = extractedName.replace(/[-–—]+\s*$/, '').trim(); 
+
+          return {
+            isNo: extractedIsNo !== "N/A" ? extractedIsNo : "Custom",
+            name: extractedName || title, 
+            slug: data.slug || doc.id, 
+          };
+        });
+
+        // 3. Prevent Duplicates
+        const liveSlugs = new Set(liveProducts.map(p => p.slug));
+        const filteredStatic = staticProducts.filter(p => !liveSlugs.has(p.slug));
+
+        // 4. Combine both lists
+        let combined = [...liveProducts, ...filteredStatic];
+
+        // 5. CHANGED: Sort alphabetically (A to Z) by Product Name
+        combined.sort((a, b) => a.name.trim().localeCompare(b.name.trim()));
+
+        // 6. Re-assign the S.No. sequentially after sorting
+        combined = combined.map((prod, index) => ({
+          ...prod,
+          sNo: index + 1 
+        }));
+
+        setAllProducts(combined);
+      } catch (err) {
+        console.error("Failed to fetch live products for table:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLiveProducts();
+  }, []);
+
+  const filteredProducts = allProducts.filter((product) => {
     const query = searchQuery.toLowerCase();
     return (
       product.isNo.toLowerCase().includes(query) ||
@@ -58,7 +122,14 @@ export default function IsiProductsTable() {
         </div>
 
         {/* Scrollable Table */}
-        <div className="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden relative">
+          
+          {loading && (
+             <div className="absolute top-0 left-0 w-full h-1 bg-gray-100 z-20 overflow-hidden">
+               <div className="h-full bg-[#0072b1] animate-shimmer w-1/3"></div>
+             </div>
+          )}
+
           <div className="overflow-y-auto overflow-x-auto max-h-[600px] custom-scrollbar">
             <table className="w-full min-w-[700px] text-left border-collapse">
               <thead className="bg-[#0072b1] text-white sticky top-0 z-10 shadow-md">
@@ -73,7 +144,6 @@ export default function IsiProductsTable() {
               <tbody className="divide-y divide-gray-200">
                 {filteredProducts.length > 0 ? (
                   filteredProducts.map((product, index) => {
-                    // Uses exact folder name from datatable/isiProducts.js if provided
                     const finalSlug = product.slug ? product.slug : generateSlug(product.name);
                     
                     return (
@@ -91,7 +161,6 @@ export default function IsiProductsTable() {
                           {product.name}
                         </td>
                         <td className="p-4 text-sm text-center">
-                          {/* The Path is exactly /isi-products/[folder-name] */}
                           <Link 
                             href={`/isi-products/${finalSlug}`} 
                             prefetch={false}

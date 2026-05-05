@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { db } from "@/src/lib/firebase";
-import { collection, getDocs } from "firebase/firestore";
-import { blogs as staticBlogs } from "./blogData"; // Re-importing your old blogs
+import { collection, getDocs, query, orderBy } from "firebase/firestore"; // Added query and orderBy
+import { blogs as staticBlogs } from "./blogData";
 
 // Forces Next.js to fetch the live database so new blogs appear instantly!
 export const dynamic = "force-dynamic";
@@ -14,9 +14,10 @@ export const metadata = {
 };
 
 export default async function BlogsPage() {
-  // 1. Fetch new blogs directly from Firestore
+  // 1. Fetch new blogs from Firestore, ordered by newest first!
   const blogsRef = collection(db, "blogs");
-  const querySnapshot = await getDocs(blogsRef);
+  const q = query(blogsRef, orderBy("createdAt", "desc"));
+  const querySnapshot = await getDocs(q);
 
   // 2. Format the Firebase data
   const firebaseBlogs = querySnapshot.docs
@@ -24,7 +25,6 @@ export default async function BlogsPage() {
       const data = doc.data();
 
       // STRICT CHECK: If the blog doesn't have a title or slug, skip it! 
-      // This prevents empty "Untitled" ghost blogs from showing up.
       if (!data.title || !data.slug) return null;
 
       // Clean HTML tags from the intro to create a short text excerpt
@@ -52,18 +52,17 @@ export default async function BlogsPage() {
         category: data.category || "Updates",
       };
     })
-    .filter(Boolean); // This removes any of the skipped/empty blogs from the list
+    .filter(Boolean); // Removes skipped/empty blogs
 
-  // 3. Format the old static blogs so they match the structure
+  // 3. Format the old static blogs
   const formattedStaticBlogs = staticBlogs.map(blog => ({
     ...blog,
-    id: blog.slug, // Use their slug as the unique ID
-    slug: blog.slug.replace(/^\//, "") // Remove leading slash if it exists
+    id: blog.slug,
+    slug: blog.slug.replace(/^\//, "")
   }));
 
-  // 4. Combine both! Old blogs show first, followed by new Firebase blogs.
-  // (You can swap the order of these two variables if you want new ones first)
-  const allBlogs = [...formattedStaticBlogs, ...firebaseBlogs];
+  // 4. Combine both! CHANGED: New Firebase blogs show first, followed by older static blogs.
+  const allBlogs = [...firebaseBlogs, ...formattedStaticBlogs];
 
   return (
     <main className="w-full bg-gray-50">
