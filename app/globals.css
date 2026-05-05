@@ -138,3 +138,30 @@ body {
 body.ads-page .layout-item {
   display: none !important;
 }
+
+/* =========================================
+   PREMIUM RESPONSIVE SCROLLBARS
+   ========================================= */
+
+/* Make the overall scrollbar thinner */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Make the track completely transparent so it hides when not in use */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Style the actual scrolling thumb */
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4); /* Light gray with transparency */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Make it darker only when the user hovers over it */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.8); 
+}

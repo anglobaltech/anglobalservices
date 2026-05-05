@@ -1,5 +1,9 @@
+// src/lib/firebase.js
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage"; // <-- ADDED THIS FOR IMAGES
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -8,8 +12,18 @@ const firebaseConfig = {
   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
+// 1. Initialize Firebase App FIRST
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
+// 2. Initialize and Export Services (using the 'app' we just created)
 export const db = getFirestore(app);
+export const auth = getAuth(app); // <-- Moved down here so it works!
+export const storage = getStorage(app); // <-- ADDED THIS
+
+// 3. Initialize Analytics safely (Only runs on the client side, preventing SSR errors)
+export const analytics = typeof window !== "undefined" 
+  ? isSupported().then(yes => yes ? getAnalytics(app) : null) 
+  : null;
