@@ -9,16 +9,17 @@ export const dynamic = "force-dynamic";
 
 // --- SMART TEXT PARSER FUNCTION ---
 // Converts **text** to bold and [text](url) to blue hoverable links as HTML strings
+// --- SMART TEXT PARSER FUNCTION ---
 const parseSmartTextToHTML = (text) => {
   if (!text || typeof text !== "string") return "";
   
-  // 1. Convert Links: [text](url)
+  // 1. Convert Links: [text](url) -> Blue, no underline, underline on hover, OPENS IN SAME TAB
   let htmlText = text.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g, 
-    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#0072b1] font-semibold no-underline hover:underline hover:text-[#005f96] transition-all cursor-pointer">$1</a>'
+    '<a href="$2" class="text-[#0072b1] font-semibold no-underline hover:underline hover:text-[#005f96] transition-all cursor-pointer">$1</a>'
   );
   
-  // 2. Convert Bold: **text**
+  // 2. Convert Bold: **text** -> Bold
   htmlText = htmlText.replace(
     /\*\*([^*]+)\*\*/g, 
     '<strong class="font-bold text-gray-900">$1</strong>'
@@ -259,13 +260,27 @@ export default async function DynamicProductPage({ params }) {
           }
 
           // 4. FAQ SECTION
+          // FAQ SECTION
           if (section.type === "faq") {
             return (
               <div key={index} className="pt-4">
-                <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-                  {section.heading}
-                </h2>
-                <div className="mt-8 space-y-4">
+                {section.heading && (
+                  <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md mb-6 inline-block w-full">
+                    {section.heading}
+                  </h2>
+                )}
+                
+                {/* Render Multiple Intro Paragraphs */}
+                {section.intros && section.intros.length > 0 && (
+                  <div className="space-y-4 mb-6">
+                    {section.intros.map((intro, i) => (
+                      <p key={`intro-${i}`} className="text-gray-600 text-[15px] leading-6 text-justify" dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(intro) }} />
+                    ))}
+                  </div>
+                )}
+
+                {/* Render the Q&As */}
+                <div className="space-y-4">
                   {section.qas?.map((qa, i) => (
                     <div key={i} className="bg-white border border-gray-200 rounded-lg p-4">
                       <h3 className="font-semibold text-gray-900 mb-2">{i + 1}. {qa.q}</h3>
@@ -273,6 +288,15 @@ export default async function DynamicProductPage({ params }) {
                     </div>
                   ))}
                 </div>
+
+                {/* Render Multiple Outro Paragraphs */}
+                {section.outros && section.outros.length > 0 && (
+                  <div className="space-y-4 mt-6">
+                    {section.outros.map((outro, i) => (
+                      <p key={`outro-${i}`} className="text-gray-600 text-[15px] leading-6 text-justify" dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(outro) }} />
+                    ))}
+                  </div>
+                )}
               </div>
             );
           }

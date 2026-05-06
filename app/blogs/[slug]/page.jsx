@@ -10,13 +10,14 @@ export const dynamic = "force-dynamic";
 
 // --- SMART TEXT PARSER FUNCTION ---
 // Converts **text** to bold and [text](url) to blue hoverable links as HTML strings
+// --- SMART TEXT PARSER FUNCTION ---
 const parseSmartTextToHTML = (text) => {
   if (!text || typeof text !== "string") return "";
   
-  // 1. Convert Links: [text](url) -> Blue, no underline, underline on hover
+  // 1. Convert Links: [text](url) -> Blue, no underline, underline on hover, OPENS IN SAME TAB
   let htmlText = text.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g, 
-    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#0072b1] font-semibold no-underline hover:underline hover:text-[#005f96] transition-all cursor-pointer">$1</a>'
+    '<a href="$2" class="text-[#0072b1] font-semibold no-underline hover:underline hover:text-[#005f96] transition-all cursor-pointer">$1</a>'
   );
   
   // 2. Convert Bold: **text** -> Bold

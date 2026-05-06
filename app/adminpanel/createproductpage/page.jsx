@@ -61,6 +61,10 @@ export default function Editor() {
               if (sec.type === "text") {
                 return { ...sec, stepBlocks: sec.stepBlocks || [] };
               }
+              if (sec.type === "faq") {
+                // Safely add intros and outros arrays for older FAQ blocks
+                return { ...sec, intros: sec.intros || [], outros: sec.outros || [] };
+              }
               return sec;
             });
             setSections(migratedSections);
@@ -96,7 +100,12 @@ export default function Editor() {
     if (type === "text") { newSection.paragraphs = [""]; newSection.highlightBox = ""; newSection.stepBlocks = []; }
     if (type === "bullet") { newSection.bulletGroups = [{ intro: "", items: [""] }]; }
     if (type === "cards") { newSection.intro = ""; newSection.cards = [{ title: "", text: "" }]; }
-    if (type === "faq") { newSection.heading = "Frequently Asked Questions"; newSection.qas = [{ q: "", a: "" }]; }
+    if (type === "faq") { 
+      newSection.heading = "Frequently Asked Questions"; 
+      newSection.intros = [""]; // New array for paragraphs above FAQ
+      newSection.qas = [{ q: "", a: "" }]; 
+      newSection.outros = []; // New array for paragraphs below FAQ
+    }
     if (type === "table") { newSection.intro = ""; newSection.note = ""; newSection.rows = [{ sno: "1", particular: "", amount: "", remarks: "" }]; }
     if (type === "points_list") { newSection.points = [""]; }
 
@@ -124,6 +133,7 @@ export default function Editor() {
 
   const addNestedItem = (sectionIndex, arrayName, defaultObj) => {
     const updated = [...sections];
+    if (!updated[sectionIndex][arrayName]) updated[sectionIndex][arrayName] = [];
     updated[sectionIndex][arrayName].push(defaultObj);
     setSections(updated);
   };
@@ -285,7 +295,6 @@ export default function Editor() {
       {errorMsg && <div className="mb-8 p-4 bg-red-50/90 backdrop-blur-md border-l-4 border-red-500 text-red-700 font-semibold rounded-r-xl shadow-sm flex items-center gap-3"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>{errorMsg}</div>}
       {successMsg && <div className="mb-8 p-4 bg-green-50/90 backdrop-blur-md border-l-4 border-green-500 text-green-800 font-semibold rounded-r-xl shadow-sm flex items-center gap-3"><svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>{successMsg}</div>}
 
-      {/* NEW FORMATTING GUIDE */}
       <div className="mb-8 p-5 bg-[#0072b1]/5 border border-[#0072b1]/20 rounded-2xl">
         <h3 className="text-sm font-extrabold text-[#0072b1] uppercase tracking-wider mb-2 flex items-center gap-2">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -575,17 +584,44 @@ export default function Editor() {
 
                 {/* 5. FAQ BLOCK */}
                 {section.type === "faq" && (
-                  <div className="space-y-4">
-                    {section.qas.map((qa, qIdx) => (
-                      <div key={qIdx} className="flex items-start gap-3 p-5 bg-white/60 rounded-2xl border border-gray-100 shadow-sm border-l-4 border-l-[#0072b1]">
-                        <div className="flex-1 space-y-3">
-                          <input type="text" value={qa.q} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "q", e.target.value)} placeholder="Question (Auto-Indexed on live page)" className="w-full border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" />
-                          <textarea value={qa.a} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "a", e.target.value)} placeholder="Answer (Use **bold** and [link](url))" className="w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                  <div className="space-y-6">
+                    {/* Intros Area */}
+                    <div className="bg-white/50 p-4 rounded-xl border border-gray-200/50 space-y-3">
+                      <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Intro Paragraphs (Above FAQs)</label>
+                      {section.intros?.map((intro, iIdx) => (
+                        <div key={`intro-${iIdx}`} className="flex items-start gap-3">
+                          <textarea value={intro} onChange={(e) => updateNestedArray(sIdx, "intros", iIdx, null, e.target.value)} placeholder="Intro paragraph before questions" className="flex-1 w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                          <button type="button" onClick={() => removeNestedItem(sIdx, "intros", iIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                         </div>
-                        <button type="button" onClick={() => removeNestedItem(sIdx, "qas", qIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
-                      </div>
-                    ))}
-                    <button type="button" onClick={() => addNestedItem(sIdx, "qas", { q: "", a: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Q&A</button>
+                      ))}
+                      <button type="button" onClick={() => addNestedItem(sIdx, "intros", "")} className="cursor-pointer text-xs font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="leading-none">+</span> Add Intro Paragraph</button>
+                    </div>
+
+                    {/* Q&A Area */}
+                    <div className="space-y-4 border-l-4 border-l-[#0072b1] pl-4">
+                      {section.qas.map((qa, qIdx) => (
+                        <div key={qIdx} className="flex items-start gap-3 p-5 bg-white/60 rounded-2xl border border-gray-100 shadow-sm">
+                          <div className="flex-1 space-y-3">
+                            <input type="text" value={qa.q} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "q", e.target.value)} placeholder="Question (Auto-Indexed on live page)" className="w-full border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" />
+                            <textarea value={qa.a} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "a", e.target.value)} placeholder="Answer (Use **bold** and [link](url))" className="w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                          </div>
+                          <button type="button" onClick={() => removeNestedItem(sIdx, "qas", qIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
+                        </div>
+                      ))}
+                      <button type="button" onClick={() => addNestedItem(sIdx, "qas", { q: "", a: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Q&A</button>
+                    </div>
+
+                    {/* Outros Area */}
+                    <div className="bg-white/50 p-4 rounded-xl border border-gray-200/50 space-y-3">
+                      <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Outro Paragraphs (Below FAQs)</label>
+                      {section.outros?.map((outro, oIdx) => (
+                        <div key={`outro-${oIdx}`} className="flex items-start gap-3">
+                          <textarea value={outro} onChange={(e) => updateNestedArray(sIdx, "outros", oIdx, null, e.target.value)} placeholder="Outro paragraph after questions" className="flex-1 w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                          <button type="button" onClick={() => removeNestedItem(sIdx, "outros", oIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
+                        </div>
+                      ))}
+                      <button type="button" onClick={() => addNestedItem(sIdx, "outros", "")} className="cursor-pointer text-xs font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="leading-none">+</span> Add Outro Paragraph</button>
+                    </div>
                   </div>
                 )}
 
