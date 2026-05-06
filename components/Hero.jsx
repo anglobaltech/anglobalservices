@@ -1306,13 +1306,13 @@ export default function Hero() {
 
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 pt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div>
               <Image
                 src="/home-about.jpg"
                 alt="About AN Global Services"
-                width={480}
-                height={480}
+                width={450}
+                height={450}
                 className="rounded-2xl object-cover"
               />
             </div>
@@ -1341,8 +1341,8 @@ export default function Hero() {
       </section>
 
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <h2 className="text-4xl font-extrabold text-center text-black mb-12">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <h2 className="text-4xl font-extrabold text-center text-black mb-14">
             OUR SERVICES
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -1430,26 +1430,26 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-extrabold text-center text-black mb-4">
-            OUR PRODUCTS
+          <h2 className="text-4xl font-extrabold text-center uppercase text-black mb-4">
+            Search Any Product
           </h2>
-          <p className="text-center text-gray-500 max-w-2xl mx-auto mb-12">
+          <p className="text-center text-gray-500 max-w-2xl mx-auto mb-10">
             High-quality certified products supporting safety, compliance, and global standards across industries.
           </p>
 
           {/* MOVED SEARCH BAR SECTION TO 'OUR PRODUCTS' */}
           <div className="w-full flex flex-col items-center justify-center mb-16 relative z-50">
             <div className="relative w-full max-w-3xl" ref={searchRef}>
-              <div className="flex items-center w-full bg-white border-2 border-[#005f86] rounded-full overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center w-full bg-white border-2 border-[#005f86] rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={handleSearchChange}
                   onFocus={() => searchQuery.trim().length > 0 && setIsSearchOpen(true)}
-                  placeholder="Search product or IS no..."
-                  className="w-full pl-6 pr-4 py-3.5 sm:py-4 text-base sm:text-lg text-gray-700 outline-none bg-transparent"
+                  placeholder="Search Product By Name or IS Number"
+                  className="w-full pl-6 pr-4 py-3 text-base sm:text-lg text-gray-700 outline-none bg-transparent"
                 />
                 <button 
                   className="bg-[#005f86] text-white w-10 h-10 sm:w-12 sm:h-12 mr-1.5 rounded-full flex items-center justify-center shrink-0 hover:bg-[#004a69] transition-colors"
@@ -1759,7 +1759,7 @@ export default function Hero() {
               style={{ animationDelay: "0.5s" }}
             >
               <Link href="/contact-us">
-                <button className="group relative px-10 py-4 rounded-full text-lg font-bold bg-[#005f86] text-white hover:bg-[#005f8a] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 overflow-hidden">
+                <button className="group relative px-10 py-3 rounded-2xl text-lg font-bold bg-[#005f86] text-white hover:bg-[#005f8a] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 overflow-hidden">
                   <span className="absolute inset-0 w-0 bg-white opacity-10 group-hover:w-full transition-all duration-300" />
                   <span className="relative flex items-center gap-2 cursor-pointer">
                     Contact Us
