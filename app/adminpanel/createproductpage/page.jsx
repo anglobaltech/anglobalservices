@@ -3,31 +3,34 @@
 import { useState, useEffect } from "react";
 import { collection, addDoc, updateDoc, doc, serverTimestamp, getDoc, setDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { db, storage } from "@/src/lib/firebase"; 
+import { db, storage } from "@/src/lib/firebase";
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Editor() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const editingId = searchParams.get("id"); // Checks if we are editing an existing product
+  const editingId = searchParams.get("id");
 
   const [loading, setLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  
+
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [seoTitle, setSeoTitle] = useState("");
   const [seoDescription, setSeoDescription] = useState("");
-  const [seoKeywords, setSeoKeywords] = useState(""); 
+  const [seoKeywords, setSeoKeywords] = useState("");
   const [mainImageAlt, setMainImageAlt] = useState("");
-  
+
   const [heroImageFile, setHeroImageFile] = useState(null);
-  const [heroImageUrlInput, setHeroImageUrlInput] = useState(""); 
-  const [existingHeroImage, setExistingHeroImage] = useState(""); 
-  
+  const [heroImageUrlInput, setHeroImageUrlInput] = useState("");
+  const [existingHeroImage, setExistingHeroImage] = useState("");
+
   const [heroParagraphs, setHeroParagraphs] = useState([""]);
   const [sections, setSections] = useState([]);
+
+  const [dataTableProductName, setDataTableProductName] = useState("");
+  const [dataTableIsNumber, setDataTableIsNumber] = useState("");
 
   useEffect(() => {
     if (editingId) {
@@ -39,21 +42,24 @@ export default function Editor() {
             const product = { id: snap.id, ...snap.data() };
             setTitle(product.title || "");
             setSlug(product.slug || "");
+
+            setDataTableProductName(product.dataTableProductName || "");
+            setDataTableIsNumber(product.dataTableIsNumber || "");
+
             setSeoTitle(product.seo?.title || "");
             setSeoDescription(product.seo?.description || "");
             setSeoKeywords(product.seo?.keywords ? product.seo.keywords.join(", ") : "");
             setMainImageAlt(product.seo?.mainImageAlt || "");
             setExistingHeroImage(product.hero?.imageUrl || "");
             setHeroParagraphs(product.hero?.description?.length ? product.hero.description : [""]);
-            
-            // Smart Migration
+
             const loadedSections = product.sections || [];
             const migratedSections = loadedSections.map(sec => {
               if (sec.type === "bullet") {
                 return { ...sec, bulletGroups: sec.bulletGroups || [{ intro: sec.intro || "", items: sec.items || [""] }] };
               }
               if (sec.type === "text") {
-                return { ...sec, stepBlocks: sec.stepBlocks || [] }; 
+                return { ...sec, stepBlocks: sec.stepBlocks || [] };
               }
               return sec;
             });
@@ -87,13 +93,13 @@ export default function Editor() {
 
   const addSection = (type) => {
     const newSection = { type, heading: "" };
-    if (type === "text") { newSection.paragraphs = [""]; newSection.highlightBox = ""; newSection.stepBlocks = []; } 
+    if (type === "text") { newSection.paragraphs = [""]; newSection.highlightBox = ""; newSection.stepBlocks = []; }
     if (type === "bullet") { newSection.bulletGroups = [{ intro: "", items: [""] }]; }
     if (type === "cards") { newSection.intro = ""; newSection.cards = [{ title: "", text: "" }]; }
     if (type === "faq") { newSection.heading = "Frequently Asked Questions"; newSection.qas = [{ q: "", a: "" }]; }
     if (type === "table") { newSection.intro = ""; newSection.note = ""; newSection.rows = [{ sno: "1", particular: "", amount: "", remarks: "" }]; }
-    if (type === "points_list") { newSection.points = [""]; } 
-    
+    if (type === "points_list") { newSection.points = [""]; }
+
     setSections([...sections, newSection]);
   };
 
@@ -128,10 +134,9 @@ export default function Editor() {
     setSections(updated);
   };
 
-  // Text Section Step Blocks
   const addTextStepBlock = (sIdx) => {
     const updated = [...sections];
-    if(!updated[sIdx].stepBlocks) updated[sIdx].stepBlocks = [];
+    if (!updated[sIdx].stepBlocks) updated[sIdx].stepBlocks = [];
     updated[sIdx].stepBlocks.push({ stepHeading: "", stepItems: [""] });
     setSections(updated);
   };
@@ -161,7 +166,6 @@ export default function Editor() {
     setSections(updated);
   };
 
-  // Nested Bullet Groups
   const updateBulletGroup = (sIdx, gIdx, field, value) => {
     const updated = [...sections];
     updated[sIdx].bulletGroups[gIdx][field] = value;
@@ -184,7 +188,7 @@ export default function Editor() {
   };
   const addBulletGroup = (sIdx) => {
     const updated = [...sections];
-    if(!updated[sIdx].bulletGroups) updated[sIdx].bulletGroups = [];
+    if (!updated[sIdx].bulletGroups) updated[sIdx].bulletGroups = [];
     updated[sIdx].bulletGroups.push({ intro: "", items: [""] });
     setSections(updated);
   };
@@ -202,9 +206,9 @@ export default function Editor() {
 
     try {
       let finalImageUrl = existingHeroImage;
-      
+
       if (heroImageFile) {
-        const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME; 
+        const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
         const CLOUDINARY_UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
 
         if (CLOUDINARY_CLOUD_NAME && CLOUDINARY_UPLOAD_PRESET) {
@@ -217,11 +221,11 @@ export default function Editor() {
               method: "POST",
               body: formData,
             });
-            
+
             const data = await res.json();
-            
+
             if (data.secure_url) {
-              finalImageUrl = data.secure_url; 
+              finalImageUrl = data.secure_url;
             } else {
               throw new Error("Cloudinary upload failed. Falling back to Firebase.");
             }
@@ -244,6 +248,8 @@ export default function Editor() {
 
       const productData = {
         title, slug,
+        dataTableProductName,
+        dataTableIsNumber,
         seo: { title: seoTitle, description: seoDescription, keywords: keywordArray, mainImageAlt },
         hero: { imageUrl: finalImageUrl, description: heroParagraphs.filter((p) => p.trim() !== "") },
         sections,
@@ -255,21 +261,18 @@ export default function Editor() {
         setSuccessMsg("Product updated successfully!");
       } else {
         productData.createdAt = serverTimestamp();
-        // CHANGED: We now use setDoc and pass the 'slug' as the unique ID!
         await setDoc(doc(db, "isi_products", slug), productData);
         setSuccessMsg("Product published successfully to live website!");
       }
-      
-      setTimeout(() => router.push("/adminpanel/products"), 2000); 
+
+      setTimeout(() => router.push("/adminpanel/products"), 2000);
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
     } catch (err) {
       console.error(err);
       setErrorMsg("Failed to publish. Check console for details.");
-      setLoading(false); 
-    } 
-    
-    // REMOVED the 'finally { setLoading(false); }' block entirely
+      setLoading(false);
+    }
   };
 
   return (
@@ -282,14 +285,40 @@ export default function Editor() {
       {errorMsg && <div className="mb-8 p-4 bg-red-50/90 backdrop-blur-md border-l-4 border-red-500 text-red-700 font-semibold rounded-r-xl shadow-sm flex items-center gap-3"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>{errorMsg}</div>}
       {successMsg && <div className="mb-8 p-4 bg-green-50/90 backdrop-blur-md border-l-4 border-green-500 text-green-800 font-semibold rounded-r-xl shadow-sm flex items-center gap-3"><svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>{successMsg}</div>}
 
+      {/* NEW FORMATTING GUIDE */}
+      <div className="mb-8 p-5 bg-[#0072b1]/5 border border-[#0072b1]/20 rounded-2xl">
+        <h3 className="text-sm font-extrabold text-[#0072b1] uppercase tracking-wider mb-2 flex items-center gap-2">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Smart Text Formatting Guide
+        </h3>
+        <ul className="text-sm text-gray-700 space-y-2 font-medium">
+          <li>• <strong>To make text Bold:</strong> Wrap the text in double asterisks. Example: <code className="bg-white border border-gray-200 px-1.5 py-0.5 rounded text-[#0072b1]">**this text will be bold**</code></li>
+          <li>• <strong>To add a Blue Link:</strong> Use brackets for the text and parentheses for the URL. Example: <code className="bg-white border border-gray-200 px-1.5 py-0.5 rounded text-[#0072b1]">[Click Here](https://google.com)</code></li>
+        </ul>
+      </div>
+
       <form onSubmit={handlePublish} className="space-y-8 pb-20">
-        
+
         <div className="bg-white/85 backdrop-blur-2xl p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
           <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
-            <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">1</span> 
+            <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">1</span>
             Core Product Identity
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+
+          <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-gray-100">
+            <div>
+              <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">Data Table: Product Name</label>
+              <input type="text" value={dataTableProductName} onChange={(e) => setDataTableProductName(e.target.value)} placeholder="e.g., Domestic Electric Food Mixers" className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-sm font-medium text-gray-900 shadow-sm" />
+              <p className="text-[10px] text-gray-400 mt-1 ml-1 font-medium">This exact name will be displayed in the live Products Table.</p>
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">Data Table: IS Number</label>
+              <input type="text" value={dataTableIsNumber} onChange={(e) => setDataTableIsNumber(e.target.value)} placeholder="e.g., IS 4250" className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-sm font-medium text-gray-900 shadow-sm" />
+              <p className="text-[10px] text-gray-400 mt-1 ml-1 font-medium">This exact IS number will be displayed in the live Products Table.</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
             <div>
               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">Product Title (H1)</label>
               <input type="text" required value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g., BIS ISI Certification for Mixers" className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-sm font-medium text-gray-900 shadow-sm" />
@@ -306,7 +335,7 @@ export default function Editor() {
 
         <div className="bg-white/85 backdrop-blur-2xl p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
           <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
-            <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">2</span> 
+            <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">2</span>
             Enterprise SEO Settings
           </h2>
           <div className="space-y-6">
@@ -346,30 +375,28 @@ export default function Editor() {
                 Hero Image {existingHeroImage && "(Leave blank to keep existing)"}
               </label>
               <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
-                
-                {/* --- NEW IMAGE PREVIEW BLOCK START --- */}
+
                 {(heroImageFile || heroImageUrlInput || existingHeroImage) && (
                   <div className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 flex items-center justify-center mb-2 group">
-                     <img 
-                       src={heroImageFile ? URL.createObjectURL(heroImageFile) : (heroImageUrlInput || existingHeroImage)} 
-                       alt="Hero Preview" 
-                       className="w-full h-full object-cover" 
-                     />
-                     <button 
-                       type="button"
-                       onClick={() => {
-                         setHeroImageFile(null);
-                         setHeroImageUrlInput("");
-                         setExistingHeroImage("");
-                       }}
-                       className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
-                       title="Remove Image"
-                     >
-                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-                     </button>
+                    <img
+                      src={heroImageFile ? URL.createObjectURL(heroImageFile) : (heroImageUrlInput || existingHeroImage)}
+                      alt="Hero Preview"
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setHeroImageFile(null);
+                        setHeroImageUrlInput("");
+                        setExistingHeroImage("");
+                      }}
+                      className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
+                      title="Remove Image"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
                   </div>
                 )}
-                {/* --- NEW IMAGE PREVIEW BLOCK END --- */}
 
                 <div>
                   <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL (e.g., Cloudinary)</label>
@@ -382,16 +409,15 @@ export default function Editor() {
                 </div>
                 <div>
                   <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File directly (Auto-Uploads to Cloudinary)</label>
-                  <input type="file" accept="image/*" onChange={(e) => { setHeroImageFile(e.target.files[0]); setHeroImageUrlInput(""); } } className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
+                  <input type="file" accept="image/*" onChange={(e) => { setHeroImageFile(e.target.files[0]); setHeroImageUrlInput(""); }} className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
                 </div>
               </div>
             </div>
 
-            {/* Existing Paragraphs Block Stays Exactly The Same */}
             <div>
               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
                 Hero Description Paragraphs
-                <span className="text-[10px] font-bold bg-gray-100 text-gray-500 px-2 py-0.5 rounded ml-2 normal-case border border-gray-200/50">Tip: Wrap text in &lt;b&gt;word&lt;/b&gt; to bold</span>
+                <span className="text-[10px] font-bold bg-gray-100 text-[#0072b1] px-2 py-0.5 rounded ml-2 normal-case border border-blue-200/50">Tip: Use **bold** and [link](url)</span>
               </label>
               <div className="space-y-3 mb-3">
                 {heroParagraphs.map((p, idx) => (
@@ -410,10 +436,10 @@ export default function Editor() {
 
         <div className="bg-white/85 backdrop-blur-2xl p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
           <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
-            <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">4</span> 
+            <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">4</span>
             Page Content Builder
           </h2>
-          
+
           <div className="space-y-6">
             {sections.length === 0 && (
               <div className="text-center py-12 border-2 border-dashed border-gray-200/80 rounded-2xl bg-white/40">
@@ -428,7 +454,7 @@ export default function Editor() {
                 <div className="inline-block px-3 py-1.5 bg-gray-100/80 border border-gray-200/50 text-gray-700 text-xs font-extrabold rounded-lg uppercase tracking-wide mb-5 shadow-sm">
                   {section.type === 'points_list' ? 'Points List' : section.type} Block
                 </div>
-                
+
                 <input type="text" placeholder="Section Heading (H2)" value={section.heading} onChange={(e) => updateSection(sIdx, "heading", e.target.value)} className="w-full border-b-2 border-gray-200/80 bg-transparent py-2 mb-5 font-extrabold text-xl text-gray-900 focus:outline-none focus:border-[#0072b1] transition-colors placeholder-gray-400" />
 
                 {/* 1. TEXT BLOCK WITH EMBEDDED STEPS */}
@@ -436,12 +462,12 @@ export default function Editor() {
                   <div className="space-y-4">
                     {section.paragraphs.map((p, pIdx) => (
                       <div key={pIdx} className="flex items-start gap-3">
-                        <textarea rows="2" value={p} onChange={(e) => updateNestedArray(sIdx, "paragraphs", pIdx, null, e.target.value)} placeholder="Paragraph text" className="flex-1 w-full border border-gray-200/80 bg-white/80 rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-gray-900 shadow-sm"></textarea>
+                        <textarea rows="2" value={p} onChange={(e) => updateNestedArray(sIdx, "paragraphs", pIdx, null, e.target.value)} placeholder="Paragraph text (Use **bold** and [link](url))" className="flex-1 w-full border border-gray-200/80 bg-white/80 rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-gray-900 shadow-sm"></textarea>
                         <button type="button" onClick={() => removeNestedItem(sIdx, "paragraphs", pIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm" title="Remove Paragraph">&times;</button>
                       </div>
                     ))}
                     <button type="button" onClick={() => addNestedItem(sIdx, "paragraphs", "")} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Paragraph</button>
-                    
+
                     <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100 mt-6 shadow-sm">
                       <label className="block text-xs font-bold text-blue-800 mb-2 uppercase tracking-wider">Optional Highlighted Alert Box</label>
                       <textarea value={section.highlightBox || ""} onChange={(e) => updateSection(sIdx, "highlightBox", e.target.value)} placeholder="e.g. Estimated Timeline: The BIS process takes 30-45 days..." className="w-full border border-blue-200 bg-white/90 rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-blue-300 focus:border-blue-400 transition-all text-gray-900 shadow-sm" rows="2"></textarea>
@@ -449,19 +475,19 @@ export default function Editor() {
 
                     <div className="mt-8 pt-6 border-t border-gray-200/50">
                       <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Step Blocks (Rendered as numbered steps)</label>
-                      
+
                       {section.stepBlocks?.map((block, bIdx) => (
                         <div key={bIdx} className="p-5 bg-gray-50/50 rounded-2xl border border-gray-100 shadow-sm mb-4">
                           <div className="flex items-start gap-3 mb-4">
                             <input type="text" value={block.stepHeading} onChange={(e) => updateTextStepBlockHeading(sIdx, bIdx, e.target.value)} placeholder="Step Block Sub-Heading (e.g. Step-by-Step Certification Process)" className="flex-1 w-full border border-gray-200/80 rounded-xl p-3.5 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" />
                             <button type="button" onClick={() => removeTextStepBlock(sIdx, bIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                           </div>
-                          
+
                           <div className="space-y-3 pl-4 border-l-2 border-gray-200">
                             {block.stepItems.map((item, iIdx) => (
                               <div key={iIdx} className="flex items-start gap-3">
                                 <span className="text-gray-400 font-bold mt-2">{iIdx + 1}.</span>
-                                <textarea value={item} onChange={(e) => updateTextStepItem(sIdx, bIdx, iIdx, e.target.value)} placeholder="e.g., <b>Application Filing:</b> Submit application..." className="flex-1 w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                                <textarea value={item} onChange={(e) => updateTextStepItem(sIdx, bIdx, iIdx, e.target.value)} placeholder="e.g., **Application Filing:** Submit application..." className="flex-1 w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
                                 <button type="button" onClick={() => removeTextStepItem(sIdx, bIdx, iIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                               </div>
                             ))}
@@ -483,12 +509,12 @@ export default function Editor() {
                           <input type="text" value={group.intro} onChange={(e) => updateBulletGroup(sIdx, gIdx, "intro", e.target.value)} placeholder="Optional Sub-heading / Intro Text" className="flex-1 w-full border border-gray-200/80 bg-white rounded-xl p-3.5 text-sm font-extrabold focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm placeholder:font-medium placeholder:text-gray-400" />
                           <button type="button" onClick={() => removeBulletGroup(sIdx, gIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                         </div>
-                        
+
                         <div className="space-y-3">
                           {group.items.map((item, iIdx) => (
                             <div key={iIdx} className="flex items-center gap-3">
                               <span className="text-gray-400 text-xl font-bold drop-shadow-sm">•</span>
-                              <input type="text" value={item} onChange={(e) => updateBulletItem(sIdx, gIdx, iIdx, e.target.value)} placeholder="Bullet point text" className="flex-1 w-full border border-gray-200/80 bg-white rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm" />
+                              <input type="text" value={item} onChange={(e) => updateBulletItem(sIdx, gIdx, iIdx, e.target.value)} placeholder="Bullet point text (Use **bold** and [link](url))" className="flex-1 w-full border border-gray-200/80 bg-white rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm" />
                               <button type="button" onClick={() => removeBulletItem(sIdx, gIdx, iIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                             </div>
                           ))}
@@ -509,13 +535,13 @@ export default function Editor() {
                         <div key={cIdx} className="flex items-start gap-3 p-4 bg-white/60 rounded-2xl border border-gray-100 shadow-sm">
                           <div className="flex-1 flex flex-col md:flex-row gap-3">
                             <input type="text" value={card.title} onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "title", e.target.value)} placeholder="Card Title (Bold)" className="w-full md:w-1/3 border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" />
-                            <textarea value={card.text} onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "text", e.target.value)} placeholder="Card Description" className="w-full md:w-2/3 border border-gray-200/80 rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" rows="2"></textarea>
+                            <textarea value={card.text} onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "text", e.target.value)} placeholder="Card Description (Use **bold** and [link](url))" className="w-full md:w-2/3 border border-gray-200/80 rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" rows="2"></textarea>
                           </div>
                           <button type="button" onClick={() => removeNestedItem(sIdx, "cards", cIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                         </div>
                       ))}
                     </div>
-                    <button type="button" onClick={() => addNestedItem(sIdx, "cards", {title:"", text:""})} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Card</button>
+                    <button type="button" onClick={() => addNestedItem(sIdx, "cards", { title: "", text: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Card</button>
                   </div>
                 )}
 
@@ -525,10 +551,10 @@ export default function Editor() {
                     <textarea value={section.intro} onChange={(e) => updateSection(sIdx, "intro", e.target.value)} placeholder="Intro paragraph before table (optional)" className="w-full border border-gray-200/80 bg-white/80 rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-gray-900 shadow-sm" rows="2"></textarea>
                     <div className="bg-white/60 p-5 border border-gray-100 shadow-sm rounded-2xl space-y-3">
                       <div className="hidden md:flex gap-2 px-2 text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">
-                         <div className="w-16">S.No</div>
-                         <div className="w-1/3">Particular</div>
-                         <div className="w-1/4">Amount</div>
-                         <div className="w-1/3">Remarks</div>
+                        <div className="w-16">S.No</div>
+                        <div className="w-1/3">Particular</div>
+                        <div className="w-1/4">Amount</div>
+                        <div className="w-1/3">Remarks</div>
                       </div>
                       {section.rows.map((row, rIdx) => (
                         <div key={rIdx} className="flex items-start gap-2">
@@ -541,7 +567,7 @@ export default function Editor() {
                           <button type="button" onClick={() => { const updatedRows = [...section.rows]; updatedRows.splice(rIdx, 1); updateSection(sIdx, "rows", updatedRows); }} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-[42px] w-[42px] rounded-lg flex items-center justify-center font-bold transition-colors shadow-sm" title="Remove Row">&times;</button>
                         </div>
                       ))}
-                      <button type="button" onClick={() => addNestedItem(sIdx, "rows", {sno: String(section.rows.length + 1), particular:"", amount:"", remarks:""})} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] mt-4 block transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Table Row</button>
+                      <button type="button" onClick={() => addNestedItem(sIdx, "rows", { sno: String(section.rows.length + 1), particular: "", amount: "", remarks: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] mt-4 block transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Table Row</button>
                     </div>
                     <textarea value={section.note} onChange={(e) => updateSection(sIdx, "note", e.target.value)} placeholder="Important Note at bottom of table (optional)" className="w-full border border-gray-200/80 bg-white/80 rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-gray-900 shadow-sm" rows="2"></textarea>
                   </div>
@@ -554,12 +580,12 @@ export default function Editor() {
                       <div key={qIdx} className="flex items-start gap-3 p-5 bg-white/60 rounded-2xl border border-gray-100 shadow-sm border-l-4 border-l-[#0072b1]">
                         <div className="flex-1 space-y-3">
                           <input type="text" value={qa.q} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "q", e.target.value)} placeholder="Question (Auto-Indexed on live page)" className="w-full border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" />
-                          <textarea value={qa.a} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "a", e.target.value)} placeholder="Answer" className="w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                          <textarea value={qa.a} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "a", e.target.value)} placeholder="Answer (Use **bold** and [link](url))" className="w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
                         </div>
                         <button type="button" onClick={() => removeNestedItem(sIdx, "qas", qIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                       </div>
                     ))}
-                    <button type="button" onClick={() => addNestedItem(sIdx, "qas", {q:"", a:""})} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Q&A</button>
+                    <button type="button" onClick={() => addNestedItem(sIdx, "qas", { q: "", a: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Q&A</button>
                   </div>
                 )}
 

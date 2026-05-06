@@ -1,3 +1,4 @@
+// app/blogs/[slug]/page.jsx
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -6,6 +7,26 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 
 // Forces Next.js to fetch the live database so new blogs appear instantly!
 export const dynamic = "force-dynamic";
+
+// --- SMART TEXT PARSER FUNCTION ---
+// Converts **text** to bold and [text](url) to blue hoverable links as HTML strings
+const parseSmartTextToHTML = (text) => {
+  if (!text || typeof text !== "string") return "";
+  
+  // 1. Convert Links: [text](url) -> Blue, no underline, underline on hover
+  let htmlText = text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g, 
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#0072b1] font-semibold no-underline hover:underline hover:text-[#005f96] transition-all cursor-pointer">$1</a>'
+  );
+  
+  // 2. Convert Bold: **text** -> Bold
+  htmlText = htmlText.replace(
+    /\*\*([^*]+)\*\*/g, 
+    '<strong class="font-bold text-gray-900">$1</strong>'
+  );
+  
+  return htmlText;
+};
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
@@ -99,11 +120,11 @@ export default async function DynamicBlogPage({ params }) {
             {blog.title}
           </h1>
 
-          {/* CHANGED: Added dynamic styling for <b> and <a> tags typed by admins */}
+          {/* Intro Section with Smart Parsing */}
           {blog.intro && (
             <p 
-              className="mt-4 text-gray-700 text-center max-w-4xl mx-auto [&_b]:font-bold [&_strong]:font-bold [&_a]:text-blue-600 [&_a:hover]:text-blue-800 [&_a]:underline [&_i]:italic transition-colors"
-              dangerouslySetInnerHTML={{ __html: blog.intro }}
+              className="mt-4 text-gray-700 text-center max-w-4xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(blog.intro) }}
             />
           )}
         </div>
@@ -125,8 +146,7 @@ export default async function DynamicBlogPage({ params }) {
 
       {/* --- DYNAMIC CONTENT BLOCKS --- */}
       <section className="max-w-7xl mx-auto px-6 pb-12">
-        {/* CHANGED: Added dynamic styling so ANY block inside the article handles <b> and <a> perfectly */}
-        <article className="space-y-10 [&_b]:font-bold [&_strong]:font-bold [&_a]:text-blue-600 [&_a:hover]:text-blue-800 [&_a]:underline [&_i]:italic transition-colors">
+        <article className="space-y-10">
           {blog.sections?.map((section, index) => {
             
             // 1. STANDARD TEXT SECTION
@@ -143,7 +163,7 @@ export default async function DynamicBlogPage({ params }) {
                       <p 
                         key={i} 
                         className="text-gray-600 leading-8"
-                        dangerouslySetInnerHTML={{ __html: para }} 
+                        dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(para) }} 
                       />
                     ))}
                   </div>
@@ -167,7 +187,7 @@ export default async function DynamicBlogPage({ params }) {
                   {introArray.length > 0 && (
                     <div className="space-y-4 mb-4">
                       {introArray.map((intro, i) => (
-                        <p key={i} className="text-gray-600 leading-8" dangerouslySetInnerHTML={{ __html: intro }} />
+                        <p key={i} className="text-gray-600 leading-8" dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(intro) }} />
                       ))}
                     </div>
                   )}
@@ -175,11 +195,11 @@ export default async function DynamicBlogPage({ params }) {
                   {/* The List itself */}
                   {section.type === "bullet" ? (
                     <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-8 mb-4">
-                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: item }} />)}
+                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />)}
                     </ul>
                   ) : (
                     <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-8 mb-4">
-                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: item }} />)}
+                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />)}
                     </ol>
                   )}
 
@@ -187,7 +207,7 @@ export default async function DynamicBlogPage({ params }) {
                   {section.outros && section.outros.length > 0 && (
                     <div className="space-y-4 mt-4">
                       {section.outros.map((outro, i) => (
-                        <p key={i} className="text-gray-600 leading-8" dangerouslySetInnerHTML={{ __html: outro }} />
+                        <p key={i} className="text-gray-600 leading-8" dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(outro) }} />
                       ))}
                     </div>
                   )}
@@ -208,7 +228,7 @@ export default async function DynamicBlogPage({ params }) {
                     {section.qas?.map((qa, i) => (
                       <div key={i}>
                         <p className="font-semibold text-gray-800">{i + 1}. {qa.q}</p>
-                        <p className="mt-1" dangerouslySetInnerHTML={{ __html: qa.a }} />
+                        <p className="mt-1" dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(qa.a) }} />
                       </div>
                     ))}
                   </div>
@@ -221,8 +241,7 @@ export default async function DynamicBlogPage({ params }) {
               return (
                 <div key={index} className="mt-8 p-8 bg-blue-50 rounded-xl border border-blue-100">
                   {section.title && <h3 className="text-2xl font-bold text-gray-900">{section.title}</h3>}
-                  {/* The CTA description can also contain links and bold text now! */}
-                  {section.description && <p className="mt-3 text-gray-600" dangerouslySetInnerHTML={{ __html: section.description }} />}
+                  {section.description && <p className="mt-3 text-gray-600" dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(section.description) }} />}
                   
                   <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
                     {section.primaryLink && section.primaryText && (
