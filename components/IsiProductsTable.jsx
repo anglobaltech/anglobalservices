@@ -30,44 +30,38 @@ export default function IsiProductsTable() {
           const data = doc.data();
           const title = data.title || "";
           
-          // 1. SMART EXTRACTION: Find IS Number
-          let extractedIsNo = "N/A";
-          const isMatch = title.match(/IS\s*\d+(?:\s*(?:\(|:)?\s*Part\s*\d+\)?)?/i);
-          if (isMatch) {
-            extractedIsNo = isMatch[0]
-              .replace(/\(/g, ' : ')
-              .replace(/\)/g, '')
-              .replace(/\s+:\s+/g, ' : ');
+          // Use explicitly saved fields if they exist
+          let finalIsNo = data.dataTableIsNumber?.trim();
+          let finalName = data.dataTableProductName?.trim();
+
+          // Regex Fallback (in case of older products that weren't updated)
+          if (!finalIsNo || !finalName) {
+            let extractedIsNo = "N/A";
+            const isMatch = title.match(/IS\s*\d+(?:\s*(?:\(|:)?\s*Part\s*\d+\)?)?/i);
+            if (isMatch) extractedIsNo = isMatch[0].replace(/\(/g, ' : ').replace(/\)/g, '').replace(/\s+:\s+/g, ' : ');
+            
+            let extractedName = title.replace(/^BIS ISI Certification\s+(?:for\s+)?/i, '').replace(/IS\s*\d+.*$/i, '').replace(/[-–—]+\s*$/, '').trim(); 
+            
+            if (!finalIsNo) finalIsNo = extractedIsNo !== "N/A" ? extractedIsNo : "Custom";
+            if (!finalName) finalName = extractedName || title;
           }
 
-          // 2. SMART EXTRACTION: Find Product Name
-          let extractedName = title;
-          extractedName = extractedName.replace(/^BIS ISI Certification\s+(?:for\s+)?/i, ''); 
-          extractedName = extractedName.replace(/IS\s*\d+.*$/i, ''); 
-          extractedName = extractedName.replace(/[-–—]+\s*$/, '').trim(); 
-
           return {
-            isNo: extractedIsNo !== "N/A" ? extractedIsNo : "Custom",
-            name: extractedName || title, 
+            isNo: finalIsNo,
+            name: finalName,
             slug: data.slug || doc.id, 
           };
         });
 
-        // 3. Prevent Duplicates
+        // Prevent Duplicates
         const liveSlugs = new Set(liveProducts.map(p => p.slug));
         const filteredStatic = staticProducts.filter(p => !liveSlugs.has(p.slug));
 
-        // 4. Combine both lists
+        // Combine both lists
         let combined = [...liveProducts, ...filteredStatic];
 
-        // 5. CHANGED: Sort alphabetically (A to Z) by Product Name
+        // Sort alphabetically (A to Z) by Product Name
         combined.sort((a, b) => a.name.trim().localeCompare(b.name.trim()));
-
-        // 6. Re-assign the S.No. sequentially after sorting
-        combined = combined.map((prod, index) => ({
-          ...prod,
-          sNo: index + 1 
-        }));
 
         setAllProducts(combined);
       } catch (err) {
@@ -134,7 +128,6 @@ export default function IsiProductsTable() {
             <table className="w-full min-w-[700px] text-left border-collapse">
               <thead className="bg-[#0072b1] text-white sticky top-0 z-10 shadow-md">
                 <tr>
-                  <th className="p-4 font-semibold text-sm w-20 text-center">S.No.</th>
                   <th className="p-4 font-semibold text-sm w-48">IS Standard No.</th>
                   <th className="p-4 font-semibold text-sm">Product Name</th>
                   <th className="p-4 font-semibold text-sm w-32 text-center">Action</th>
@@ -151,9 +144,6 @@ export default function IsiProductsTable() {
                         key={index} 
                         className="hover:bg-blue-50 transition-colors duration-200"
                       >
-                        <td className="p-4 text-sm text-gray-700 text-center font-medium">
-                          {product.sNo}
-                        </td>
                         <td className="p-4 text-sm font-bold text-gray-900">
                           {product.isNo}
                         </td>
@@ -174,7 +164,8 @@ export default function IsiProductsTable() {
                   })
                 ) : (
                   <tr>
-                    <td colSpan="4" className="p-8 text-center text-gray-500 font-medium">
+                    {/* Updated colSpan from 4 to 3 since we removed the S.No. column */}
+                    <td colSpan="3" className="p-8 text-center text-gray-500 font-medium">
                       No products found matching &quot;{searchQuery}&quot;
                     </td>
                   </tr>
