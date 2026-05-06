@@ -891,38 +891,53 @@ export default function Hero() {
 
   const [allProducts, setAllProducts] = useState(isiProductsList);
 
+  // --- UPDATED FETCH LOGIC FOR SEARCH BAR ---
   useEffect(() => {
     const fetchLiveProducts = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "isi_products"));
+        
         const liveProducts = querySnapshot.docs.map(doc => {
           const data = doc.data();
           const title = data.title || "";
           
-          let extractedIsNo = "N/A";
-          const isMatch = title.match(/IS\s*\d+(?:\s*(?:\(|:)?\s*Part\s*\d+\)?)?/i);
-          if (isMatch) extractedIsNo = isMatch[0].replace(/\(/g, ' : ').replace(/\)/g, '').replace(/\s+:\s+/g, ' : ');
+          // 1. Check for the specific Admin Panel fields first!
+          let finalIsNo = data.dataTableIsNumber?.trim();
+          let finalName = data.dataTableProductName?.trim();
 
-          let extractedName = title.replace(/^BIS ISI Certification\s+(?:for\s+)?/i, '').replace(/IS\s*\d+.*$/i, '').replace(/[-–—]+\s*$/, '').trim(); 
+          // 2. Smart Regex Fallback (so older products don't break)
+          if (!finalIsNo || !finalName) {
+            let extractedIsNo = "N/A";
+            const isMatch = title.match(/IS\s*\d+(?:\s*(?:\(|:)?\s*Part\s*\d+\)?)?/i);
+            if (isMatch) extractedIsNo = isMatch[0].replace(/\(/g, ' : ').replace(/\)/g, '').replace(/\s+:\s+/g, ' : ');
+            
+            let extractedName = title.replace(/^BIS ISI Certification\s+(?:for\s+)?/i, '').replace(/IS\s*\d+.*$/i, '').replace(/[-–—]+\s*$/, '').trim(); 
+            
+            if (!finalIsNo) finalIsNo = extractedIsNo !== "N/A" ? extractedIsNo : "Custom";
+            if (!finalName) finalName = extractedName || title;
+          }
 
           return {
-            isNo: extractedIsNo !== "N/A" ? extractedIsNo : "Custom",
-            name: extractedName || title,
+            isNo: finalIsNo,
+            name: finalName,
             slug: data.slug || doc.id, 
           };
         });
 
+        // Prevent duplicates from static list
         const liveSlugs = new Set(liveProducts.map(p => p.slug));
         const filteredStatic = isiProductsList.filter(p => !liveSlugs.has(p.slug));
 
+        // Combine and sort alphabetically
         let combined = [...liveProducts, ...filteredStatic];
         combined.sort((a, b) => a.name.trim().localeCompare(b.name.trim()));
 
         setAllProducts(combined);
       } catch (err) {
-        console.error("Failed to fetch live products:", err);
+        console.error("Failed to fetch live products for hero search:", err);
       }
     };
+
     fetchLiveProducts();
   }, []);
 
