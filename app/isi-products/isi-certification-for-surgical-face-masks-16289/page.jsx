@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -27,8 +27,7 @@ export const metadata = {
   ],
 
   openGraph: {
-    title:
-      "ISI Mark Certification for Surgical Face Masks (IS 16289:2014)",
+    title: "ISI Mark Certification for Surgical Face Masks (IS 16289:2014)",
     description:
       "Apply for ISI Mark Certification for Surgical Face Masks under IS 16289:2014. Complete BIS assistance for testing, documentation, factory inspection, and license approval.",
     url: "https://www.anglobalservices.com/isi-products/isi-certification-for-surgical-face-masks-16289",
@@ -63,7 +62,7 @@ export default function SurgicalFaceMask() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-surgical-face-masks.png"
+              src="/isi-products/bis-isi-certification-surgical-face-masks.png"
               alt="BIS ISI Certification for Surgical Face Masks IS 16289"
               width={420}
               height={320}
@@ -82,7 +81,7 @@ export default function SurgicalFaceMask() {
               Surgical face masks play a critical role in protecting patients
               and healthcare professionals from the transmission of infections,
               microorganisms, and body fluids. In India, BIS ISI certification
-              is mandatory for surgical face masks to ensure consistent quality,
+              is apply for surgical face masks to ensure consistent quality,
               safety, and performance in medical and healthcare environments.
             </p>
 
@@ -130,7 +129,7 @@ export default function SurgicalFaceMask() {
             <li>(vi) Proper ear loops or ties and secure facial fit</li>
             <li>(vii) Non-toxic materials with no adverse skin reaction</li>
             <li>
-              (viii) Mandatory marking, labeling, batch identification, and ISI
+              (viii) marking, labeling, batch identification, and ISI
               Mark
             </li>
           </ul>
@@ -201,40 +200,35 @@ export default function SurgicalFaceMask() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing product
-              details, applicable Indian Standard (IS 16289:2014), factory
-              address, manufacturing process, machinery, and quality control
-              setup.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              16289:2014.
             </li>
 
             <li>
-              <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities for bacterial filtration efficiency (BFE), differential
-              pressure (breathability), synthetic blood penetration resistance,
-              microbial cleanliness, and visual inspection as prescribed under
-              IS 16289.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 16289:2014), factory address,
+              manufacturing process information, and quality control details.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify raw material sourcing, production
-              process, sterilization (if applicable), quality control systems,
-              marking practices, and compliance with the approved Scheme of
-              Inspection and Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, production process, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> Surgical mask samples
-              are drawn during inspection and tested in BIS-recognized
-              laboratories as per IS 16289:2014 requirements.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 16289:2014.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
+              <strong>Grant of BIS License:</strong> After successful inspection
               and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), authorizing the manufacturer to use the ISI Mark
-              on surgical face masks.
+              License (CM/L), allowing the manufacturer to use the ISI Mark on
+              surgical face masks.
             </li>
           </ol>
         </div>
@@ -416,11 +410,11 @@ export default function SurgicalFaceMask() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Legal Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Surgical face masks are regulated medical products in India. ISI
-              Mark certification under IS 16289:2014 is mandatory for lawful
+              Mark certification under IS 16289:2014 is required for lawful
               manufacturing, sale, or distribution in the Indian market.
             </p>
           </div>
@@ -483,12 +477,14 @@ export default function SurgicalFaceMask() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for surgical face masks?
+              1. Is BIS ISI certification required for surgical face masks?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Surgical face masks must comply with Indian Standard IS
-              16289:2014. BIS ISI Mark certification is mandatory before
-              manufacturing, selling, or distributing surgical masks in India.
+              Surgical face masks are covered under Indian Standard IS
+              16289:2014. Manufacturers may obtain BIS ISI Mark certification to
+              demonstrate compliance with Indian quality and safety standards
+              for surgical masks.
             </p>
           </div>
 

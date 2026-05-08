@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -62,7 +62,7 @@ export default function RespiratoryProtectiveDevices() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-protective-filtering-devices-masks.png"
+              src="/isi-products/bis-isi-certification-respiratory-protective-devices.png"
               alt="BIS ISI Certification for Respiratory Protective Devices Filtering Half Masks IS 9473"
               width={420}
               height={320}
@@ -80,11 +80,12 @@ export default function RespiratoryProtectiveDevices() {
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               Respiratory Protective Devices such as filtering half masks are
-              critical personal protective equipment (PPE) used to protect
+              important personal protective equipment (PPE) used to protect
               workers from harmful dust, fumes, mists, and aerosols in
-              industrial and occupational environments. In India, BIS ISI
-              certification is mandatory for these devices to ensure reliable
-              protection, safety, and performance.
+              industrial and occupational environments. BIS ISI certification
+              helps manufacturers demonstrate compliance with Indian quality,
+              safety, and performance standards applicable to respiratory
+              protective devices.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -129,9 +130,7 @@ export default function RespiratoryProtectiveDevices() {
             <li>(v) Mechanical strength and durability of mask body</li>
             <li>(vi) Adjustable nose clip and secure head harness system</li>
             <li>(vii) Use of non-toxic, skin-safe materials</li>
-            <li>
-              (viii) Mandatory marking, batch identification, and ISI Mark
-            </li>
+            <li>(viii) Marking, batch identification, and ISI Mark</li>
           </ul>
         </div>
 
@@ -195,31 +194,35 @@ export default function RespiratoryProtectiveDevices() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Apply via the Manak
-              Online portal with product details, IS 9473 reference, factory
-              address, manufacturing process, and QC setup.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              9473.
             </li>
 
             <li>
-              <strong>Testing Readiness:</strong> Ensure facilities for
-              filtration efficiency, breathing resistance, inward leakage, and
-              mechanical strength testing.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 9473), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> BIS officers verify
-              production controls, raw materials, testing equipment, and SIT
-              compliance.
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Testing:</strong> Samples are tested at
-              BIS-recognized laboratories as per IS 9473.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 9473.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon compliance, BIS grants
-              the Certification Marks License (CM/L) permitting ISI Mark usage.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on filtering half
+              masks and respiratory protective devices.
             </li>
           </ol>
         </div>
@@ -400,12 +403,14 @@ export default function RespiratoryProtectiveDevices() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Respiratory protective devices are regulated safety products in
-              India. ISI Mark certification under IS 9473 is mandatory for
-              lawful manufacturing, sale, or supply.
+              BIS ISI certification under IS 9473 helps manufacturers
+              demonstrate that respiratory protective devices comply with Indian
+              quality, safety, and performance standards for industrial and
+              occupational use.
             </p>
           </div>
 
@@ -464,14 +469,15 @@ export default function RespiratoryProtectiveDevices() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for filtering half masks?
+              1. Is BIS ISI certification required for filtering half masks?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Filtering half masks and respiratory protective devices must
-              comply with Indian Standard IS 9473. BIS ISI Mark certification is
-              mandatory as per applicable Quality Control Orders (QCOs) issued
-              by the Government of India before manufacturing or supplying them
-              in India.
+              Filtering half masks and respiratory protective devices are
+              covered under Indian Standard IS 9473. Manufacturers may obtain
+              BIS ISI certification to demonstrate compliance with Indian
+              quality, safety, and performance requirements applicable to
+              respiratory protective equipment.
             </p>
           </div>
 

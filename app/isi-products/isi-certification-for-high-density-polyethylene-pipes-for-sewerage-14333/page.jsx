@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -27,8 +27,7 @@ export const metadata = {
   ],
 
   openGraph: {
-    title:
-      "ISI Mark Certification for HDPE Pipes for Sewerage (IS 14333)",
+    title: "ISI Mark Certification for HDPE Pipes for Sewerage (IS 14333)",
     description:
       "Apply for ISI Mark Certification for HDPE Pipes for Sewerage under IS 14333:2022. Complete BIS assistance for testing, documentation, factory inspection, and license approval.",
     url: "https://www.anglobalservices.com/isi-products/isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333",
@@ -63,7 +62,7 @@ export default function HDPEPipesISI() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-high-density-polyethylene-pipes.png"
+              src="/isi-products/bis-isi-certification-hdpe-pipes.png"
               alt="BIS ISI Certification for HDPE Pipes for Sewerage IS 14333"
               width={420}
               height={320}
@@ -79,11 +78,13 @@ export default function HDPEPipesISI() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for High Density Polyethylene
-              (HDPE) Pipes used in sewerage and drainage systems as per Indian
-              Standard IS 14333:2022. This standard ensures that HDPE pipes meet
-              essential strength, durability, and performance requirements
-              necessary for long-term underground sewerage applications.
+              High Density Polyethylene (HDPE) pipes used in sewerage and
+              drainage systems are covered under Indian Standard IS 14333:2022.
+              This standard specifies the quality, strength, durability, and
+              performance requirements necessary for HDPE pipes used in
+              underground sewerage and drainage applications. Manufacturers may
+              obtain BIS ISI certification to demonstrate compliance with the
+              applicable Indian Standard.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -215,38 +216,35 @@ export default function HDPEPipesISI() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal with details of HDPE
-              pipes, applicable Indian Standard (IS 14333), factory address,
-              manufacturing process, machinery, and product range.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              14333:2022.
             </li>
 
             <li>
-              <strong>Testing & Quality Readiness:</strong> Ensure availability
-              of testing facilities for ring stiffness, impact resistance,
-              dimensional accuracy, leak-tightness, and material conformity as
-              specified under IS 14333.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 14333:2022), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> BIS officials conduct an
-              on-site inspection to verify raw material control, extrusion
-              process, quality control systems, marking practices, and
-              compliance with the approved Scheme of Inspection and Testing
-              (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> HDPE pipe samples are
-              drawn during inspection and tested in BIS-recognized laboratories
-              as per IS 14333:2022 requirements.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 14333:2022.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory
-              inspection and successful test results, BIS grants the
-              Certification Marks License (CM/L), authorizing the manufacturer
-              to use the ISI Mark on HDPE pipes for sewerage.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on HDPE pipes used
+              for sewerage and drainage applications.
             </li>
           </ol>
         </div>
@@ -397,8 +395,9 @@ export default function HDPEPipesISI() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Note:</strong> Product testing under IS 14333 is a
-              critical stage of the BIS ISI certification process. Costs may vary
-              depending on pipe size, ring stiffness class, and testing scope.
+              critical stage of the BIS ISI certification process. Costs may
+              vary depending on pipe size, ring stiffness class, and testing
+              scope.
             </p>
           </div>
         </div>
@@ -425,12 +424,13 @@ export default function HDPEPipesISI() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Regulatory Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              HDPE pipes used for sewerage and drainage applications are
-              regulated products in India. ISI Mark certification under IS 14333
-              is mandatory for lawful manufacturing, sale, supply, or import.
+              BIS ISI certification under IS 14333 helps manufacturers
+              demonstrate that HDPE pipes used for sewerage and drainage
+              applications comply with Indian quality and performance standards.
             </p>
           </div>
 
@@ -491,13 +491,15 @@ export default function HDPEPipesISI() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for HDPE pipes used for
+              1. Is BIS ISI certification required for HDPE pipes used for
               sewerage?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. HDPE pipes intended for sewerage and drainage applications
-              must comply with IS 14333:2022 and carry a valid ISI Mark before
-              being manufactured, supplied, or imported in India.
+              HDPE pipes used for sewerage and drainage applications are covered
+              under Indian Standard IS 14333:2022. Manufacturers may obtain BIS
+              ISI certification to demonstrate compliance with Indian quality
+              and performance requirements for sewerage and drainage systems.
             </p>
           </div>
 
