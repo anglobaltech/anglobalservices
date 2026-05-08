@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -63,7 +63,7 @@ export default function HDPEPIPESPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-hdpe-pipes.png"
+              src="/isi-products/bis-isi-certification-hdpe-pipes-water-supply.png"
               alt="BIS ISI Certification for HDPE Pipes for Potable Water Supplies IS 4984"
               width={420}
               height={320}
@@ -75,19 +75,18 @@ export default function HDPEPIPESPage() {
           <div>
             {/* Heading */}
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS ISI Certification for HDPE Pipes for Potable Water Supplies – IS
-              4984
+              BIS ISI Certification for HDPE Pipes for Potable Water Supplies –
+              IS 4984
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for High Density Polyethylene
-              (HDPE) pipes used for potable water supplies in India as per
-              Indian Standard IS 4984:1995. HDPE pipes play a crucial role in
-              drinking water distribution systems due to their superior
-              durability, flexibility, corrosion resistance, and chemical
-              stability. Without a valid BIS ISI license, manufacturers and
-              importers are not legally permitted to manufacture, import, or
-              sell HDPE pipes for potable water applications in India.
+              High Density Polyethylene (HDPE) pipes used for potable water
+              supplies are covered under Indian Standard IS 4984:1995. HDPE
+              pipes are widely used in drinking water distribution systems due
+              to their durability, flexibility, corrosion resistance, and
+              chemical stability. Manufacturers may obtain BIS ISI certification
+              to demonstrate compliance with Indian quality and performance
+              requirements applicable to potable water supply systems.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -141,9 +140,7 @@ export default function HDPEPIPESPage() {
             <li>
               (vii) Resistance to impact and environmental stress cracking
             </li>
-            <li>
-              (viii) Mandatory marking, traceability, and identification details
-            </li>
+            <li>(viii) Marking, traceability, and identification details</li>
           </ul>
         </div>
 
@@ -186,12 +183,12 @@ export default function HDPEPIPESPage() {
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          BIS ISI Mark certification is mandatory for High Density Polyethylene
-          (HDPE) pipes used for potable water supplies in India as per Indian
-          Standard IS 4984:1995. Manufacturers must comply with the BIS Product
-          Certification Scheme (Scheme I) to ensure that HDPE pipes meet
-          stringent quality, safety, and performance requirements before they
-          are manufactured, imported, or supplied in the Indian market.
+          BIS ISI Mark certification for High Density Polyethylene (HDPE) pipes
+          used for potable water supplies is available under Indian Standard IS
+          4984:1995. Manufacturers may follow the BIS Product Certification
+          Scheme (Scheme I) to demonstrate that HDPE pipes comply with
+          applicable quality, safety, and performance requirements for potable
+          water supply applications.
         </p>
 
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
@@ -212,37 +209,35 @@ export default function HDPEPIPESPage() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing HDPE pipe
-              details, applicable Indian Standard (IS 4984:1995), factory
-              address, manufacturing process, and machinery information.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              4984:1995.
             </li>
 
             <li>
-              <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities as prescribed under IS 4984:1995, including tests for
-              density, tensile strength, elongation at break, hydrostatic
-              pressure, impact resistance, and environmental stress cracking.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 4984:1995), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify manufacturing infrastructure, raw
-              material controls, in-house testing facilities, and compliance
-              with the Scheme of Inspection and Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> HDPE pipe samples are
-              drawn during inspection and tested in BIS-recognized laboratories
-              as per IS 4984:1995 requirements.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 4984:1995.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
-              and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), authorizing the use of the ISI Mark on HDPE pipes
-              for potable water supplies.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on HDPE pipes for
+              potable water supplies.
             </li>
           </ol>
         </div>
@@ -252,8 +247,8 @@ export default function HDPEPIPESPage() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS ISI License for HDPE Pipes for Potable Water
-            Supplies (IS 4984)
+            Requirements to Obtain BIS ISI License for HDPE Pipes for Potable
+            Water Supplies (IS 4984)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -315,8 +310,8 @@ export default function HDPEPIPESPage() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS ISI Certification for HDPE Pipes for Potable Water Supplies
-            (IS 4984)
+            Cost of BIS ISI Certification for HDPE Pipes for Potable Water
+            Supplies (IS 4984)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -396,11 +391,11 @@ export default function HDPEPIPESPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              4984:1995 is a critical stage in the BIS ISI certification process.
-              BIS may conduct a factory pre-assessment to evaluate readiness
-              prior to inspection. Charges mentioned above are indicative and
-              may vary depending on pipe diameter, pressure rating, and testing
-              scope.
+              4984:1995 is a critical stage in the BIS ISI certification
+              process. BIS may conduct a factory pre-assessment to evaluate
+              readiness prior to inspection. Charges mentioned above are
+              indicative and may vary depending on pipe diameter, pressure
+              rating, and testing scope.
             </p>
           </div>
         </div>
@@ -427,14 +422,13 @@ export default function HDPEPIPESPage() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              HDPE pipes used for potable water supply are regulated products in
-              India. ISI Mark certification under IS 4984:1995 is mandatory.
-              Manufacturers and importers can legally sell certified pipes,
-              while non-compliant products may face penalties, seizure, or
-              market bans.
+              BIS ISI certification under IS 4984:1995 helps manufacturers
+              demonstrate that HDPE pipes used for potable water supply comply
+              with Indian quality, safety, and performance standards.
             </p>
           </div>
 
@@ -497,13 +491,15 @@ export default function HDPEPIPESPage() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for HDPE pipes in India?
+              1. Is BIS ISI certification required for HDPE pipes in India?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. HDPE pipes used for potable water supply must comply with
-              Indian Standard IS 4984:1995. BIS ISI Mark certification is
-              mandatory before manufacturing, importing, or supplying these
-              pipes in India.
+              HDPE pipes used for potable water supply are covered under Indian
+              Standard IS 4984:1995. Manufacturers may obtain BIS ISI
+              certification to demonstrate compliance with Indian quality and
+              performance requirements applicable to potable water supply
+              systems.
             </p>
           </div>
 
@@ -534,10 +530,10 @@ export default function HDPEPIPESPage() {
               5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS ISI certification process generally takes around 30 days for
-              Indian manufacturers and up to 180 days for foreign manufacturers,
-              depending on inspection scheduling and laboratory testing
-              timelines.
+              The BIS ISI certification process generally takes around 30 days
+              for Indian manufacturers and up to 180 days for foreign
+              manufacturers, depending on inspection scheduling and laboratory
+              testing timelines.
             </p>
           </div>
 

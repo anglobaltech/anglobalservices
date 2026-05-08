@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -63,7 +63,7 @@ export default function UPVCPIPESPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-upvc-pipe.png"
+              src="/isi-products/bis-isi-certification-upvc-pipes-water-supply.png"
               alt="BIS ISI Certification for UPVC Pipes for Water Supplies IS 4985"
               width={420}
               height={320}
@@ -79,13 +79,13 @@ export default function UPVCPIPESPage() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for UPVC pipes used for water
-              supplies in India as per Indian Standard IS 4985:2021. In today’s
-              competitive Indian market, it is difficult to survive without
-              supplying standard quality and certified products. A valid BIS
-              license is essential for manufacturers and importers to legally
-              manufacture, import, and sell UPVC pipes for water supply
-              applications in India.
+              UPVC pipes used for water supply applications are covered under
+              Indian Standard IS 4985:2021. These pipes are widely used for
+              water distribution systems due to their durability, corrosion
+              resistance, and long service life. Manufacturers may obtain BIS
+              ISI certification to demonstrate compliance with Indian quality
+              and performance requirements applicable to UPVC pipes for water
+              supplies.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -131,9 +131,7 @@ export default function UPVCPIPESPage() {
             <li>(v) Hydrostatic pressure performance requirements</li>
             <li>(vi) Resistance to heat reversion and external impacts</li>
             <li>(vii) Opacity and material quality compliance</li>
-            <li>
-              (viii) Mandatory marking, traceability, and product identification
-            </li>
+            <li>(viii) Marking, traceability, and product identification</li>
           </ul>
         </div>
 
@@ -174,14 +172,12 @@ export default function UPVCPIPESPage() {
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          To obtain the BIS ISI Mark for UPVC pipes for water supplies under
-          Indian Standard IS 4985:2021, manufacturers must comply with the BIS
-          Product Certification Scheme (Scheme I). This certification ensures
-          that UPVC pipes meet mandatory requirements related to material
-          quality, pressure performance, and durability before they are
-          manufactured, imported, or supplied in the Indian market.
+          BIS ISI Mark certification for UPVC pipes used for water supplies is
+          available under Indian Standard IS 4985:2021. Manufacturers may follow
+          the BIS Product Certification Scheme (Scheme I) to demonstrate that
+          UPVC pipes comply with applicable quality, pressure performance, and
+          durability requirements for water supply applications.
         </p>
-
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
           <p className="text-gray-600 text-[15px] leading-6">
             <strong>Estimated Timeline:</strong> The BIS ISI certification
@@ -200,37 +196,35 @@ export default function UPVCPIPESPage() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing UPVC pipe
-              details, applicable Indian Standard (IS 4985:2021), factory
-              address, manufacturing process, and machinery information.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              4985:2021.
             </li>
 
             <li>
-              <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities as required under IS 4985:2021, including checks for
-              hydrostatic pressure, dimensional accuracy, reversion, opacity,
-              and impact resistance.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 4985:2021), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify manufacturing infrastructure, raw
-              material controls, quality control systems, and compliance with
-              the Scheme of Inspection and Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> UPVC pipe samples are
-              drawn during inspection and tested in BIS-recognized laboratories
-              as per IS 4985:2021 requirements.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 4985:2021.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
-              and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), authorizing the use of the ISI Mark on UPVC pipes
-              for water supplies.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on UPVC pipes for
+              water supplies.
             </li>
           </ol>
         </div>
@@ -240,8 +234,8 @@ export default function UPVCPIPESPage() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS ISI License for UPVC Pipes for Water Supplies
-            (IS 4985)
+            Requirements to Obtain BIS ISI License for UPVC Pipes for Water
+            Supplies (IS 4985)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -267,9 +261,9 @@ export default function UPVCPIPESPage() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS ISI certification for UPVC pipes for water supplies under
-            Product Certification Scheme-I, manufacturers are required to submit
-            documents broadly classified into the following categories:
+            To obtain BIS ISI certification for UPVC pipes for water supplies
+            under Product Certification Scheme-I, manufacturers are required to
+            submit documents broadly classified into the following categories:
           </p>
 
           <ul className="mt-4 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -379,10 +373,11 @@ export default function UPVCPIPESPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              4985:2021 is a critical stage in the BIS ISI certification process.
-              BIS may conduct a factory pre-assessment to evaluate readiness
-              prior to inspection. Charges mentioned above are indicative and
-              may vary depending on pipe class, diameter, and testing scope.
+              4985:2021 is a critical stage in the BIS ISI certification
+              process. BIS may conduct a factory pre-assessment to evaluate
+              readiness prior to inspection. Charges mentioned above are
+              indicative and may vary depending on pipe class, diameter, and
+              testing scope.
             </p>
           </div>
         </div>
@@ -409,14 +404,13 @@ export default function UPVCPIPESPage() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              UPVC pipes for water supply are regulated products in India, and
-              ISI Mark certification under IS 4985:2021 is mandatory.
-              Manufacturers and importers can legally sell certified pipes,
-              while non-compliant products may face penalties, seizure, or
-              restrictions.
+              BIS ISI certification under IS 4985:2021 helps manufacturers
+              demonstrate that UPVC pipes used for water supply applications
+              comply with Indian quality, safety, and performance standards.
             </p>
           </div>
 
@@ -481,13 +475,14 @@ export default function UPVCPIPESPage() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for UPVC pipes in India?
+              1. Is BIS ISI certification required for UPVC pipes in India?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. UPVC pipes for potable water supply must comply with Indian
-              Standard IS 4985:2021. BIS ISI Mark certification is mandatory
-              before manufacturing, importing, or supplying these pipes in
-              India.
+              UPVC pipes used for potable water supply are covered under Indian
+              Standard IS 4985:2021. Manufacturers may obtain BIS ISI
+              certification to demonstrate compliance with Indian quality and
+              performance requirements applicable to water supply systems.
             </p>
           </div>
 
