@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -28,8 +28,7 @@ export const metadata = {
   ],
 
   openGraph: {
-    title:
-      "ISI Mark Certification for Precast Concrete Pipes (IS 458:2021)",
+    title: "ISI Mark Certification for Precast Concrete Pipes (IS 458:2021)",
     description:
       "Apply for ISI Mark Certification for Precast Concrete Pipes with and without Reinforcement under IS 458:2021. Complete BIS assistance for testing, documentation, factory inspection, and license approval.",
     url: "https://www.anglobalservices.com/isi-products/isi-certification-precast-concrete-pipes-458",
@@ -63,7 +62,7 @@ export default function ConcretePipes() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-precast-concrete-pipes.png"
+              src="/isi-products/bis-isi-certification-precast-concrete-pipes.png"
               alt="BIS ISI Certification for Precast Concrete Pipes with and without Reinforcement IS 458"
               width={420}
               height={320}
@@ -79,12 +78,14 @@ export default function ConcretePipes() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for precast concrete pipes with
-              and without reinforcement used in drainage, sewerage, culverts,
-              and water supply infrastructure as per Indian Standard IS
-              458:2021. These pipes play a critical role in civil engineering
-              projects where strength, durability, and long-term performance are
-              essential.
+              Precast concrete pipes with and without reinforcement used in
+              drainage, sewerage, culverts, and water supply infrastructure are
+              covered under Indian Standard IS 458:2021. These pipes play an
+              important role in civil engineering and infrastructure projects
+              where strength, durability, and long-term performance are
+              essential. Manufacturers may obtain BIS ISI certification to
+              demonstrate compliance with Indian quality and performance
+              requirements applicable to precast concrete pipes.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -147,9 +148,7 @@ export default function ConcretePipes() {
               (vii) Dimensional tolerances, straightness, and surface finish
               criteria
             </li>
-            <li>
-              (viii) Mandatory marking, batch identification, and traceability
-            </li>
+            <li>(viii) Marking, batch identification, and traceability</li>
           </ul>
         </div>
 
@@ -218,40 +217,36 @@ export default function ConcretePipes() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing details
-              of precast concrete pipes, applicable Indian Standard (IS
-              458:2021), factory location, manufacturing process, machinery, and
-              product range.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 458:2021), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Testing & Quality Readiness:</strong> Ensure availability
-              of in-house or external testing facilities for raw material
-              testing, compressive strength of concrete, water absorption, load
-              test, crushing strength, and dimensional verification as
-              prescribed under IS 458:2021.
+              <strong>Product Testing Preparation:</strong> The manufacturer
+              must ensure testing arrangements for compressive strength,
+              crushing load, water absorption, dimensional accuracy, and other
+              performance requirements specified under IS 458:2021.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify manufacturing infrastructure,
-              batching and curing systems, reinforcement placement (if
-              applicable), quality control procedures, and compliance with the
-              Scheme of Inspection and Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> Precast concrete pipe
-              samples are drawn during inspection and tested in BIS-recognized
-              laboratories as per IS 458:2021 requirements.
+              <strong>Sample Testing:</strong> Product samples are collected
+              during inspection and tested in BIS-recognized laboratories
+              according to the requirements of IS 458:2021.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory
-              inspection and successful test results, BIS grants the
-              Certification Marks License (CM/L), authorizing the manufacturer
-              to use the ISI Mark on precast concrete pipes.
+              <strong>Grant of BIS License:</strong> After successful inspection
+              and satisfactory test results, BIS grants the Certification Marks
+              License (CM/L), allowing the manufacturer to affix the ISI Mark on
+              precast concrete pipes.
             </li>
           </ol>
         </div>
@@ -261,8 +256,8 @@ export default function ConcretePipes() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS ISI License for Precast Concrete Pipes (IS
-            458)
+            Requirements to Obtain BIS ISI License for Precast Concrete Pipes
+            (IS 458)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -293,8 +288,8 @@ export default function ConcretePipes() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS ISI certification for precast concrete pipes under Product
-            Certification Scheme-I, manufacturers are required to submit
+            To obtain BIS ISI certification for precast concrete pipes under
+            Product Certification Scheme-I, manufacturers are required to submit
             documents broadly classified into the following categories:
           </p>
 
@@ -405,8 +400,8 @@ export default function ConcretePipes() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing under IS 458:2021
-              is a critical component of the BIS ISI certification process. BIS may
-              conduct a factory pre-assessment to evaluate manufacturing and
+              is a critical component of the BIS ISI certification process. BIS
+              may conduct a factory pre-assessment to evaluate manufacturing and
               quality control readiness. Costs may vary based on pipe diameter,
               class, reinforcement, and laboratory testing requirements.
             </p>
@@ -436,13 +431,14 @@ export default function ConcretePipes() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Precast concrete pipes used for sewerage, stormwater drainage,
-              culverts, and underground water conveyance are regulated products.
-              ISI Mark certification under IS 458:2021 is mandatory for lawful
-              manufacture and supply in India.
+              BIS ISI certification under IS 458:2021 helps manufacturers
+              demonstrate that precast concrete pipes used for sewerage,
+              stormwater drainage, culverts, and underground water conveyance
+              comply with Indian quality and performance standards.
             </p>
           </div>
 
@@ -506,13 +502,15 @@ export default function ConcretePipes() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for precast concrete pipes?
+              1. Is BIS ISI certification required for precast concrete pipes?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Precast concrete pipes used for drainage, sewerage, culverts,
-              and water conveyance must comply with Indian Standard IS 458:2021.
-              BIS ISI Mark certification is mandatory before manufacturing or
-              supplying these pipes in India.
+              Precast concrete pipes used for drainage, sewerage, culverts, and
+              water conveyance applications are covered under Indian Standard IS
+              458:2021. Manufacturers may obtain BIS ISI certification to
+              demonstrate compliance with Indian quality and performance
+              requirements applicable to precast concrete pipes.
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -34,8 +34,7 @@ export const metadata = {
     description:
       "Apply for BIS ISI Mark Certification for Steel Wire Ropes for General Engineering Purposes under IS 2266:2002. End-to-end BIS support including documentation, product testing, factory inspection, and license approval.",
 
-    url:
-      "https://www.anglobalservices.com/isi-products/isi-certificate-steel-wire-ropes-for-general-engineering-purposes",
+    url: "https://www.anglobalservices.com/isi-products/isi-certificate-steel-wire-ropes-for-general-engineering-purposes",
 
     siteName: "AN Global Services",
     locale: "en_IN",
@@ -66,7 +65,7 @@ export default function SteelWireRope() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-steel-wire-ropes-is2266.png"
+              src="/isi-products/bis-isi-certification-steel-wire-rope.png"
               alt="BIS ISI Certification for Steel Wire Ropes IS 2266"
               width={420}
               height={320}
@@ -200,17 +199,16 @@ export default function SteelWireRope() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              2266:2002.
+            </li>
+
+            <li>
               <strong>Application Submission:</strong> The manufacturer submits
               the BIS application through the Manak Online portal with product
               details, applicable standard (IS 2266:2002), factory address, and
               manufacturing process information.
-            </li>
-
-            <li>
-              <strong>Product Testing Preparation:</strong> The manufacturer
-              must ensure appropriate testing arrangements for verifying
-              mechanical strength, construction quality, and performance
-              requirements specified under IS 2266:2002.
             </li>
 
             <li>
@@ -220,16 +218,15 @@ export default function SteelWireRope() {
             </li>
 
             <li>
-              <strong>Sample Testing:</strong> Product samples are collected
-              during inspection and tested at BIS-recognized laboratories
-              according to the requirements of IS 2266:2002.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 2266:2002.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
-              and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), allowing the manufacturer to affix the ISI mark on
-              steel wire ropes.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on steel wire ropes.
             </li>
           </ol>
         </div>
