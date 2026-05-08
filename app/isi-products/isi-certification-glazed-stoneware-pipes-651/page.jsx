@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -58,11 +58,11 @@ export const metadata = {
 export default function GlanzedStonewarePipes() {
   return (
     <main className="w-full bg-white">
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-10">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-glazed-stoneware-pipes.png"
+              src="/isi-products/bis-isi-certification-glazed-stoneware-pipes.png"
               alt="BIS ISI Certification for Glazed Stoneware Pipes and Fittings IS 651"
               width={420}
               height={320}
@@ -73,16 +73,18 @@ export default function GlanzedStonewarePipes() {
 
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS ISI Certification for Glazed Stoneware Pipes and Fittings – IS 651
+              BIS ISI Certification for Glazed Stoneware Pipes and Fittings – IS
+              651
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for glazed stoneware pipes and
-              fittings used in drainage and sewage systems as per Indian
-              Standard IS 651:2007. These products are widely used in
-              underground sewerage networks where high resistance to corrosion,
-              abrasion, and chemical attack is essential for long-term
-              performance.
+              Glazed stoneware pipes and fittings used in drainage and sewage
+              systems are covered under Indian Standard IS 651:2007. These
+              products are widely used in underground sewerage networks due to
+              their resistance to corrosion, abrasion, and chemical attack.
+              Manufacturers may obtain BIS ISI certification to demonstrate
+              compliance with Indian quality and performance requirements
+              applicable to drainage and sewage systems.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -131,9 +133,7 @@ export default function GlanzedStonewarePipes() {
               surface
             </li>
             <li>(vii) Joint performance and watertightness requirements</li>
-            <li>
-              (viii) Mandatory marking, batch identification, and traceability
-            </li>
+            <li>(viii) Marking, batch identification, and traceability</li>
           </ul>
         </div>
 
@@ -200,39 +200,35 @@ export default function GlanzedStonewarePipes() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing details
-              of glazed stoneware pipes and fittings, applicable Indian Standard
-              (IS 651:2007), factory address, manufacturing process, kiln
-              details, and product range.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              651:2007.
             </li>
 
             <li>
-              <strong>Testing & Quality Readiness:</strong> Ensure availability
-              of testing facilities for crushing strength, water absorption,
-              glaze uniformity, dimensional checks, straightness, and joint
-              performance as prescribed under IS 651:2007.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 651:2007), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify raw material handling, shaping and
-              firing process, glazing quality, quality control practices, and
-              compliance with the Scheme of Inspection and Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> Samples of glazed
-              stoneware pipes and fittings are drawn during inspection and
-              tested in BIS-recognized laboratories as per IS 651:2007
-              requirements.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 651:2007.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory
-              inspection and successful test results, BIS grants the
-              Certification Marks License (CM/L), authorizing the manufacturer
-              to use the ISI Mark on glazed stoneware pipes and fittings.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on glazed stoneware
+              pipes and fittings.
             </li>
           </ol>
         </div>
@@ -274,9 +270,10 @@ export default function GlanzedStonewarePipes() {
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS ISI certification for glazed stoneware pipes and fittings
-            under Product Certification Scheme-I, manufacturers are required to
-            submit documents broadly classified into the following categories:
+            To obtain BIS ISI certification for glazed stoneware pipes and
+            fittings under Product Certification Scheme-I, manufacturers are
+            required to submit documents broadly classified into the following
+            categories:
           </p>
 
           <ul className="mt-4 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -306,8 +303,8 @@ export default function GlanzedStonewarePipes() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS ISI Certification for Glazed Stoneware Pipes and Fittings
-            (IS 651)
+            Cost of BIS ISI Certification for Glazed Stoneware Pipes and
+            Fittings (IS 651)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
@@ -399,80 +396,79 @@ export default function GlanzedStonewarePipes() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         {/* Heading */}
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Benefits of Getting ISI Mark Certification for Precast Concrete Pipes
-          with and without Reinforcement (IS 458:2021)
+          Benefits of Getting ISI Mark Certification for Glazed Stoneware Pipes
+          and Fittings (IS 651:2007)
         </h2>
 
         {/* Intro */}
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-8">
-          Obtaining the ISI Mark for precast concrete pipes under Indian
-          Standard IS 458:2021 offers critical legal, technical, and commercial
-          advantages. ISI certification confirms that reinforced and
-          non-reinforced concrete pipes meet stringent Indian standards for
-          strength, durability, load performance, and long-term service life,
-          making them legally approved for use in drainage, sewerage, culverts,
-          and water infrastructure projects.
+          BIS ISI certification for glazed stoneware pipes and fittings under IS
+          651:2007 helps manufacturers demonstrate compliance with Indian
+          quality and performance standards applicable to drainage and sewerage
+          systems. Certification supports product reliability, durability, and
+          suitability for underground wastewater and gravity flow applications.
         </p>
 
         {/* Benefits List */}
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Precast concrete pipes used for sewerage, stormwater drainage,
-              culverts, and underground water conveyance are regulated products.
-              ISI Mark certification under IS 458:2021 is mandatory for lawful
-              manufacture and supply in India.
+              BIS ISI certification under IS 651:2007 helps manufacturers
+              demonstrate that glazed stoneware pipes and fittings comply with
+              Indian quality and performance requirements for drainage and
+              sewerage systems.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              2. Acceptance in Government & Infrastructure Projects
+              2. Resistance to Corrosion & Chemical Attack
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI-certified concrete pipes are widely accepted in municipal
-              works, smart city projects, highways, irrigation systems, and
-              public sector infrastructure. Certification simplifies approvals
-              in tenders and technical evaluations.
+              Glazed stoneware pipes are designed to withstand corrosive
+              wastewater conditions, chemical exposure, and abrasion, making
+              them suitable for underground sewerage applications.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              3. High Structural Strength & Durability
+              3. Improved Product Reliability
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Certified pipes are tested for compressive strength, crushing
-              load, water absorption, and dimensional accuracy, ensuring
-              superior load-bearing capacity and long service life under
-              underground conditions.
+              Certified products are evaluated for crushing strength, water
+              absorption, dimensional accuracy, and glazing quality to help
+              ensure consistent performance and durability.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              4. Enhanced Brand Credibility & Trust
+              4. Better Acceptance in Infrastructure Projects
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The ISI Mark builds confidence among engineers, consultants,
-              contractors, and government authorities. Certified concrete pipes
-              are recognized as compliant with national quality and safety
-              standards.
+              BIS ISI-certified glazed stoneware pipes and fittings are commonly
+              preferred in municipal drainage, sewerage, and civil
+              infrastructure projects.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              5. Competitive Advantage & Business Growth
+              5. Enhanced Brand Credibility
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI-certified precast concrete pipes gain preference in
-              large-scale infrastructure, EPC contracts, and government tenders,
-              enabling manufacturers to expand into high-value public and
-              private projects.
+              The ISI Mark helps build confidence among contractors, engineers,
+              consultants, and project authorities regarding product quality and
+              performance.
             </p>
           </div>
         </div>
@@ -481,76 +477,71 @@ export default function GlanzedStonewarePipes() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         {/* Heading */}
         <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-          Frequently Asked Questions (FAQs) – BIS ISI Certification for Precast
-          Concrete Pipes (IS 458:2021)
+          Frequently Asked Questions (FAQs) – BIS ISI Certification for Glazed
+          Stoneware Pipes and Fittings (IS 651:2007)
         </h2>
 
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for precast concrete pipes?
+              1. Is BIS ISI certification required for glazed stoneware pipes
+              and fittings?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Precast concrete pipes used for drainage, sewerage, culverts,
-              and water conveyance must comply with Indian Standard IS 458:2021.
-              BIS ISI Mark certification is mandatory before manufacturing or
-              supplying these pipes in India.
+              Glazed stoneware pipes and fittings used for drainage and sewerage
+              systems are covered under Indian Standard IS 651:2007.
+              Manufacturers may obtain BIS ISI certification to demonstrate
+              compliance with Indian quality and performance standards.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Which Indian Standard applies to precast concrete pipes?
+              2. Which Indian Standard applies to glazed stoneware pipes and
+              fittings?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Precast concrete pipes with and without reinforcement are governed
-              by Indian Standard IS 458:2021.
+              Glazed stoneware pipes and fittings for drainage and sewerage
+              applications are covered under Indian Standard IS 651:2007.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              3. Does IS 458 cover both reinforced and non-reinforced pipes?
+              3. What are the common applications of glazed stoneware pipes?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. IS 458:2021 covers both non-reinforced concrete pipes and
-              reinforced concrete pipes (RCC), classified based on diameter,
-              strength class, and load-bearing requirements.
+              These pipes are commonly used in underground sewerage systems,
+              wastewater drainage networks, municipal drainage, and gravity flow
+              applications.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What are the common applications of IS 458 pipes?
+              4. What tests are conducted under IS 651:2007?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              IS 458 pipes are widely used in sewerage systems, stormwater
-              drains, culverts, irrigation pipelines, and underground water
-              conveyance systems in urban and rural infrastructure.
+              Testing may include crushing strength, water absorption,
+              dimensional checks, straightness, glazing quality, and joint
+              performance tests as specified under IS 651:2007.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              6. What tests are conducted under IS 458:2021?
+              5. Why are glazed stoneware pipes preferred for sewerage
+              applications?
             </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Testing includes compressive strength of concrete, crushing load
-              test, water absorption, dimensional checks, reinforcement
-              placement verification (if applicable), and visual inspection.
-            </p>
-          </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              7. What are the consequences of supplying non-ISI certified
-              concrete pipes?
-            </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Supplying non-ISI certified precast concrete pipes for regulated
-              infrastructure applications may result in penalties, rejection in
-              government tenders, product seizure, and legal action under the
-              Bureau of Indian Standards Act, 2016.
+              Glazed stoneware pipes offer good resistance to corrosion,
+              abrasion, and chemical attack, making them suitable for long-term
+              underground drainage and sewerage systems.
             </p>
           </div>
         </div>
