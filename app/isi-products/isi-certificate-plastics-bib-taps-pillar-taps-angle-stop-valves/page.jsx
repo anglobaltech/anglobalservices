@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -64,7 +64,7 @@ export default function PlasticBibTapsISI() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-plastic-taps-angle-valves-9763.png"
+              src="/isi-products/bis-isi-certification-plstic-bib-taps-piller-taps-stop-valves.png"
               alt="BIS ISI Certification for Plastic Bib Taps Pillar Taps Angle and Stop Valves IS 9763"
               width={420}
               height={320}
@@ -194,8 +194,13 @@ export default function PlasticBibTapsISI() {
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
             Step-by-Step Certification Process
           </h3>
-
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
+            <li>
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              9763.
+            </li>
+
             <li>
               <strong>Application Submission:</strong> The manufacturer submits
               the BIS application through the Manak Online portal with product
@@ -204,28 +209,22 @@ export default function PlasticBibTapsISI() {
             </li>
 
             <li>
-              <strong>Product Testing Preparation:</strong> The manufacturer
-              must ensure testing arrangements for pressure resistance, leakage
-              prevention, durability, and operational performance.
-            </li>
-
-            <li>
               <strong>Factory Inspection:</strong> BIS officials conduct a
-              factory inspection to assess manufacturing facilities, quality
+              factory inspection to evaluate manufacturing facilities, quality
               control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Testing:</strong> Product samples are collected
-              during inspection and tested in BIS-recognized laboratories
-              according to the requirements of IS 9763.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 9763.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
-              and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), allowing the manufacturer to affix the ISI mark on
-              plastic plumbing taps and valves.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on plastic plumbing
+              taps and valves.
             </li>
           </ol>
         </div>

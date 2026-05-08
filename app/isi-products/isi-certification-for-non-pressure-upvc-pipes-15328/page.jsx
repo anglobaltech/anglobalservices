@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -63,7 +63,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-non-pressure-upvc-pipes.png"
+              src="/isi-products/bis-isi-certification-non-pressure-upvc-pipes.png"
               alt="BIS ISI Certification for Non-Pressure UPVC Pipes for Drainage and Sewerage IS 15328"
               width={420}
               height={320}
@@ -79,14 +79,14 @@ export default function NONPRESSUREUPVCPIPESPage() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for unplasticized non-pressure
-              Polyvinyl Chloride (PVC-U) pipes used in drainage and sewerage
-              systems in India as per Indian Standard IS 15328:2003. These pipes
-              are widely used for conveyance of domestic sewage, industrial
-              effluent, and surface water (other than potable water).
-              Manufacturers must ensure compliance with the applicable Indian
-              Standard to legally manufacture and supply these products in the
-              Indian market.
+              Unplasticized non-pressure Polyvinyl Chloride (PVC-U) pipes used
+              in drainage and sewerage systems are covered under Indian Standard
+              IS 15328:2003. These pipes are widely used for conveyance of
+              domestic sewage, industrial effluent, and surface water (other
+              than potable water). Manufacturers may obtain BIS ISI
+              certification to demonstrate compliance with the quality and
+              performance requirements specified under the applicable Indian
+              Standard.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -147,9 +147,7 @@ export default function NONPRESSUREUPVCPIPESPage() {
               (vii) Leak tightness under positive and negative pressure
               conditions
             </li>
-            <li>
-              (viii) Mandatory marking, traceability, and batch identification
-            </li>
+            <li>(viii) Marking, traceability, and batch identification</li>
           </ul>
         </div>
 
@@ -220,37 +218,35 @@ export default function NONPRESSUREUPVCPIPESPage() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing PVC-U
-              pipe details, applicable Indian Standard (IS 15328:2003), factory
-              address, manufacturing process, and machinery information.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              15328:2003.
             </li>
 
             <li>
-              <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities as required under IS 15328:2003, including tests for
-              ring stiffness, Vicat softening temperature, resistance to
-              external blows, and leak tightness.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 15328:2003), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify manufacturing infrastructure, raw
-              material controls, quality control systems, and compliance with
-              the Scheme of Inspection and Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> UPVC pipe samples are
-              drawn during inspection and tested in BIS-recognized laboratories
-              as per IS 15328:2003 requirements.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 15328:2003.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
-              and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), authorizing the use of the ISI Mark on
-              non-pressure UPVC pipes for drainage and sewerage systems.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on non-pressure UPVC
+              pipes for drainage and sewerage systems.
             </li>
           </ol>
         </div>
@@ -260,8 +256,8 @@ export default function NONPRESSUREUPVCPIPESPage() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS ISI License for Non-Pressure UPVC Pipes for
-            Drainage & Sewerage Systems (IS 15328)
+            Requirements to Obtain BIS ISI License for Non-Pressure UPVC Pipes
+            for Drainage & Sewerage Systems (IS 15328)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -284,16 +280,16 @@ export default function NONPRESSUREUPVCPIPESPage() {
             </li>
             <li>
               Strict adherence to the Scheme of Inspection and Testing (SIT) and
-              BIS ISI certification guidelines applicable to drainage and sewerage
-              pipes.
+              BIS ISI certification guidelines applicable to drainage and
+              sewerage pipes.
             </li>
           </ul>
         </div>
 
         <div>
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            To obtain BIS ISI certification for non-pressure UPVC pipes for drainage
-            and sewerage systems under Product Certification Scheme-I,
+            To obtain BIS ISI certification for non-pressure UPVC pipes for
+            drainage and sewerage systems under Product Certification Scheme-I,
             manufacturers are required to submit documents broadly classified
             into the following categories:
           </p>
@@ -324,15 +320,16 @@ export default function NONPRESSUREUPVCPIPESPage() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS ISI Certification for Non-Pressure UPVC Pipes for Drainage &
-            Sewerage Systems (IS 15328)
+            Cost of BIS ISI Certification for Non-Pressure UPVC Pipes for
+            Drainage & Sewerage Systems (IS 15328)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS ISI certification for non-pressure UPVC drainage and
-            sewerage pipes under Product Certification Scheme-I. All statutory
-            fees are payable directly to the Bureau of Indian Standards (BIS).
+            in obtaining BIS ISI certification for non-pressure UPVC drainage
+            and sewerage pipes under Product Certification Scheme-I. All
+            statutory fees are payable directly to the Bureau of Indian
+            Standards (BIS).
           </p>
 
           <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg">
@@ -405,11 +402,11 @@ export default function NONPRESSUREUPVCPIPESPage() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              15328:2003 is a critical stage in the BIS ISI certification process.
-              BIS may conduct a factory pre-assessment to evaluate readiness
-              prior to inspection. Charges mentioned above are indicative and
-              may vary depending on pipe size, stiffness class, and testing
-              scope.
+              15328:2003 is a critical stage in the BIS ISI certification
+              process. BIS may conduct a factory pre-assessment to evaluate
+              readiness prior to inspection. Charges mentioned above are
+              indicative and may vary depending on pipe size, stiffness class,
+              and testing scope.
             </p>
           </div>
         </div>
@@ -437,13 +434,13 @@ export default function NONPRESSUREUPVCPIPESPage() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1.Legal Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Non-pressure UPVC pipes used for drainage and sewerage
               applications are regulated products in India. ISI Mark
-              certification under IS 15328:2003 is mandatory, and non-compliant
-              products may face penalties, seizure, or rejection in projects.
+              certification under IS 15328:2003 , and non-compliant products may
+              face penalties, seizure, or rejection in projects.
             </p>
           </div>
 
@@ -506,14 +503,16 @@ export default function NONPRESSUREUPVCPIPESPage() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for UPVC drainage and sewerage
-              pipes?
+              1. Is BIS ISI certification required for UPVC drainage and
+              sewerage pipes?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Non-pressure UPVC pipes used for drainage and sewerage
-              systems must comply with Indian Standard IS 15328:2003. BIS ISI
-              Mark certification is mandatory before manufacturing or supplying
-              these pipes in India.
+              Non-pressure UPVC pipes used for drainage and sewerage systems are
+              covered under Indian Standard IS 15328:2003. Manufacturers may
+              obtain BIS ISI Mark certification to demonstrate compliance with
+              Indian quality and performance requirements for drainage and
+              sewerage applications.
             </p>
           </div>
 
