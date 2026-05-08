@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -63,7 +63,7 @@ export default function PVCFittingSockets() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-pvc-socket-fittings.png"
+              src="/isi-products/bis-isi-certification-injection-moulded-pvc-socket-fittings.png"
               alt="BIS ISI Certification for Injection Moulded PVC Socket Fittings IS 7834"
               width={420}
               height={320}
@@ -75,8 +75,8 @@ export default function PVCFittingSockets() {
           {/* Content */}
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS ISI Certification for Injection Moulded PVC Socket Fittings – IS
-              7834 (Parts 1 to 8):1987
+              BIS ISI Certification for Injection Moulded PVC Socket Fittings –
+              IS 7834 (Parts 1 to 8):1987
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -89,11 +89,11 @@ export default function PVCFittingSockets() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              To obtain BIS ISI certification and manufacture a standard quality
-              product, it is mandatory that the fittings strictly comply with
-              the relevant parts of IS 7834. Compliance ensures uniform
-              dimensions, reliable jointing, pressure resistance, and long-term
-              performance of water supply systems.
+              To obtain BIS ISI certification and manufacture quality products,
+              the fittings should comply with the relevant parts of IS 7834.
+              Compliance with the applicable Indian Standard helps ensure
+              uniform dimensions, reliable jointing, pressure resistance, and
+              long-term performance of water supply systems.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -316,11 +316,11 @@ export default function PVCFittingSockets() {
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
             BIS ISI Mark certification for Injection Moulded PVC Socket Fittings
-            under IS 7834 is mandatory for manufacturers intending to supply
-            fittings for potable water distribution systems in India. The
-            certification ensures that fittings used in solvent cement jointed
-            pipelines meet prescribed safety, performance, and durability
-            requirements.
+            under IS 7834 helps manufacturers demonstrate compliance with Indian
+            quality, safety, and performance standards applicable to fittings
+            used in potable water distribution systems. The certification
+            supports product reliability, durability, and suitability for
+            solvent cement jointed pipeline applications.
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
@@ -332,10 +332,10 @@ export default function PVCFittingSockets() {
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            The BIS ISI certification process validates manufacturing consistency,
-            quality control practices, and testing capability before permitting
-            the use of the ISI Mark on PVC socket fittings covered under IS
-            7834.
+            The BIS ISI certification process validates manufacturing
+            consistency, quality control practices, and testing capability
+            before permitting the use of the ISI Mark on PVC socket fittings
+            covered under IS 7834.
           </p>
         </div>
       </section>
@@ -372,41 +372,35 @@ export default function PVCFittingSockets() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Scope Definition:</strong> Identify the types of PVC
-              socket fittings, sizes, and pressure classes intended to be
-              covered under the BIS license as per IS 7834.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              7834.
             </li>
 
             <li>
-              <strong>Application Filing:</strong> Submit the BIS application
-              through the Manak Online portal along with product details,
-              factory information, manufacturing process flow, and quality
-              control arrangements.
-            </li>
-
-            <li>
-              <strong>Quality & Testing Readiness:</strong> Ensure in-house or
-              external testing arrangements are in place in accordance with the
-              approved Scheme of Inspection and Testing.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 7834), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
               <strong>Factory Inspection:</strong> BIS officials conduct a
-              factory visit to verify raw material control, moulding process,
-              inspection methods, marking practices, and record maintenance.
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Testing:</strong> Samples of PVC socket fittings
-              are drawn and tested in BIS-recognized laboratories as per
-              relevant parts of IS 7834.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 7834.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory
-              inspection and compliant test results, BIS grants the
-              Certification Marks License, permitting the use of the ISI Mark on
-              approved PVC socket fittings.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on PVC socket
+              fittings.
             </li>
           </ol>
         </div>
@@ -578,12 +572,13 @@ export default function PVCFittingSockets() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6">
-              ISI certification is mandatory for PVC socket fittings used in
-              water supply pipelines before they can be manufactured, sold, or
-              supplied in India.
+              BIS ISI certification helps manufacturers demonstrate that PVC
+              socket fittings used in water supply pipelines comply with Indian
+              quality, safety, and performance standards.
             </p>
           </div>
 
@@ -637,11 +632,14 @@ export default function PVCFittingSockets() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for PVC socket fittings?
+              1. Is BIS ISI certification required for PVC socket fittings?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6">
-              Yes. PVC socket fittings used for water supply applications must
-              comply with IS 7834 and carry a valid ISI Mark.
+              PVC socket fittings used for water supply applications are covered
+              under Indian Standard IS 7834. Manufacturers may obtain BIS ISI
+              certification to demonstrate compliance with Indian quality and
+              performance requirements for water supply pipeline fittings.
             </p>
           </div>
 

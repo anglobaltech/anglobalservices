@@ -63,7 +63,7 @@ export default function AdultDiaperISIPage() {
           {/* LEFT IMAGE */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-adult-diapers.png"
+              src="/isi-products/bis-isi-certification-disposable-adult-diapers.png"
               alt="BIS ISI Certification for Disposable Adult Diaper IS 17508"
               width={420}
               height={320}
@@ -136,7 +136,7 @@ export default function AdultDiaperISIPage() {
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
             The Government of India, in consultation with the Bureau of Indian
-            Standards (BIS), has introduced mandatory compliance requirements
+            Standards (BIS), has introduced compliance requirements
             for adult diapers to protect public health and ensure user safety.
             These requirements are notified under the provisions of the Bureau
             of Indian Standards Act, 2016, empowering BIS to regulate the
@@ -392,11 +392,11 @@ export default function AdultDiaperISIPage() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Legal Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Adult diapers are a regulated hygiene product in India, making ISI
-              Mark certification mandatory under applicable regulations.
+              Mark certification under applicable regulations.
               Certified manufacturers and importers can legally manufacture,
               import, and sell adult diapers, while non-compliant products may
               face penalties, market restrictions, or seizure.

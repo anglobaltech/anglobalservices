@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -63,7 +63,7 @@ export default function CPVCPipesIS15778() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-cpvc-potable-hot-cold-water-supply.png"
+              src="/isi-products/bis-isi-certification-potable-hot-cold-water-supplies.png"
               alt="BIS ISI Certification for CPVC Pipes for Potable Hot and Cold Water IS 15778"
               width={420}
               height={320}
@@ -75,8 +75,8 @@ export default function CPVCPipesIS15778() {
           {/* Content */}
           <div>
             <h1 className="inline-block bg-[#0072b1] text-white text-lg md:text-xl uppercase font-semibold px-6 py-2 rounded-md shadow-md mb-4">
-              BIS ISI Certification for CPVC Pipes for Potable Hot & Cold Water – IS
-              15778
+              BIS ISI Certification for CPVC Pipes for Potable Hot & Cold Water
+              – IS 15778
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -89,8 +89,8 @@ export default function CPVCPipesIS15778() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification for CPVC Pipes for Potable Hot and Cold Water
-              Distribution Supplies is governed by Indian Standard IS
+              BIS ISI certification for CPVC Pipes for Potable Hot and Cold
+              Water Distribution Supplies is governed by Indian Standard IS
               15778:2007. This standard defines requirements related to material
               composition, dimensions, physical and mechanical properties,
               hydrostatic pressure performance, and marking.
@@ -211,38 +211,34 @@ export default function CPVCPipesIS15778() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> File the BIS application
-              through the Manak Online portal by providing details of CPVC
-              pipes, applicable Indian Standard (IS 15778), factory address,
-              manufacturing process, machinery, and product range.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              15778.
             </li>
 
             <li>
-              <strong>Testing & Quality Readiness:</strong> Ensure availability
-              of testing facilities for dimensional checks, hydrostatic pressure
-              tests at ambient and elevated temperatures, impact resistance, and
-              material conformity as prescribed under IS 15778.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 15778), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> BIS officials conduct an
-              on-site inspection to verify raw material control, extrusion
-              process, quality control systems, marking practices, and
-              compliance with the approved Scheme of Inspection and Testing
-              (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> CPVC pipe samples are
-              drawn during inspection and tested in BIS-recognized laboratories
-              as per IS 15778 requirements.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 15778.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory
-              inspection and successful test results, BIS grants the
-              Certification Marks License (CM/L), authorizing the manufacturer
-              to use the ISI Mark on CPVC pipes.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on CPVC pipes.
             </li>
           </ol>
         </div>
@@ -394,8 +390,8 @@ export default function CPVCPipesIS15778() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Note:</strong> Product testing under IS 15778 is a
-              critical stage of the BIS ISI certification process. Costs may vary
-              depending on pipe size, pressure class, and testing scope.
+              critical stage of the BIS ISI certification process. Costs may
+              vary depending on pipe size, pressure class, and testing scope.
             </p>
           </div>
         </div>
@@ -422,12 +418,12 @@ export default function CPVCPipesIS15778() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Regulatory Compliance
+              1. Regulatory Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               CPVC pipes used for potable hot and cold water distribution are
               regulated products in India. ISI Mark certification under IS 15778
-              is mandatory for lawful manufacturing, sale, supply, or import.
+              is for lawful manufacturing, sale, supply, or import.
             </p>
           </div>
 
@@ -488,13 +484,13 @@ export default function CPVCPipesIS15778() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for CPVC pipes used for potable
-              water?
+              1. Is BIS ISI certification required for CPVC pipes used for
+              potable water?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. CPVC pipes intended for potable hot and cold water
-              distribution must comply with IS 15778 and carry a valid ISI Mark
-              before being manufactured, sold, or supplied in India.
+              BIS ISI certification for CPVC pipes under IS 15778 helps ensure
+              product quality, durability, and compliance with Indian standards
+              for potable water distribution systems.
             </p>
           </div>
 

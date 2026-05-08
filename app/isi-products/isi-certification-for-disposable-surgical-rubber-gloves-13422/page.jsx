@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -62,7 +62,7 @@ export default function DisposableSurgicalRubberGloves() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-disposable-surgical-rubber-gloves.png"
+              src="/isi-products/bis-isi-certification-disposable-surgical-rubber-gloves.png"
               alt="BIS ISI Certification for Disposable Surgical Rubber Gloves"
               width={420}
               height={320}
@@ -81,8 +81,9 @@ export default function DisposableSurgicalRubberGloves() {
               Disposable surgical rubber gloves are essential medical devices
               used to prevent cross-contamination and protect both healthcare
               professionals and patients during surgical and medical procedures.
-              In India, BIS ISI certification is mandatory for surgical gloves
-              to ensure safety, sterility, and consistent performance.
+              BIS ISI certification helps manufacturers demonstrate compliance
+              with Indian quality, safety, and performance standards applicable
+              to surgical gloves.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -128,9 +129,7 @@ export default function DisposableSurgicalRubberGloves() {
             <li>(v) Sterility assurance for surgical use</li>
             <li>(vi) Biocompatibility and non-toxicity to skin</li>
             <li>(vii) Resistance to tearing during surgical procedures</li>
-            <li>
-              (viii) Mandatory marking, batch identification, and ISI Mark
-            </li>
+            <li>(viii) Marking, batch identification, and ISI Mark</li>
           </ul>
         </div>
 
@@ -196,38 +195,35 @@ export default function DisposableSurgicalRubberGloves() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal with product details,
-              applicable Indian Standard for surgical gloves, factory address,
-              manufacturing process, and quality control setup.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard
+              for disposable surgical rubber gloves.
             </li>
 
             <li>
-              <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities for freedom from holes, tensile strength, elongation,
-              dimensions, sterility, and biocompatibility as prescribed under
-              the applicable BIS standard.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard for surgical gloves, factory address,
+              and manufacturing process information.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> BIS officials conduct an
-              on-site inspection to verify raw material control, dipping and
-              curing process, sterilization methods, in-house testing
-              facilities, and compliance with the Scheme of Inspection and
-              Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> Surgical glove
-              samples are drawn during inspection and tested in BIS-recognized
-              laboratories.
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the applicable Indian Standard requirements.
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory
-              inspection and successful test results, BIS grants the
-              Certification Marks License (CM/L), authorizing the manufacturer
-              to use the ISI Mark on surgical gloves.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on disposable
+              surgical rubber gloves.
             </li>
           </ol>
         </div>
@@ -406,12 +402,14 @@ export default function DisposableSurgicalRubberGloves() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Disposable surgical gloves are regulated medical devices in India.
-              ISI Mark certification is mandatory for lawful manufacturing,
-              sale, import, or supply of surgical gloves in the Indian market.
+              BIS ISI certification helps manufacturers demonstrate that
+              disposable surgical rubber gloves comply with Indian quality,
+              safety, and performance standards applicable to medical and
+              surgical use.
             </p>
           </div>
 
@@ -472,14 +470,15 @@ export default function DisposableSurgicalRubberGloves() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for disposable surgical
+              1. Is BIS ISI certification required for disposable surgical
               gloves?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Disposable surgical rubber gloves are regulated medical
-              devices in India. BIS ISI Mark certification is mandatory before
-              manufacturing, importing, selling, or supplying surgical gloves in
-              the Indian market.
+              Disposable surgical rubber gloves are covered under applicable
+              Indian Standards for medical and surgical use. Manufacturers may
+              obtain BIS ISI certification to demonstrate compliance with Indian
+              quality, safety, and performance requirements for surgical gloves.
             </p>
           </div>
 
