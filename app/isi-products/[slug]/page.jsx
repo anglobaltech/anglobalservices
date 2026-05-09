@@ -364,6 +364,19 @@ export default async function DynamicProductPage({ params }) {
 
           return null;
         })}
+
+        {/* --- GLOBAL IMPORTANT NOTE --- */}
+        {/* I am changing the code right here, placing this global note directly at the end of all the dynamic sections! */}
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 shadow-sm mt-8">
+          <h3 className="text-[16px] md:text-lg font-bold text-gray-900 mb-4 pb-3 border-b border-gray-200">
+            Important Note
+          </h3>
+          <p className="text-[15px] text-gray-600 leading-6 text-justify">
+            Certification requirements, fees, timelines, and regulatory provisions may change as per BIS notifications and applicable Quality Control Orders (QCOs).
+          </p>
+        </div>
+
+        
       </section>
 
     </main>
