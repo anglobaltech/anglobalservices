@@ -67,7 +67,7 @@ export default function WallPutty() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-wall-putty.png"
+              src="/isi-products/bis-isi-certification-for-wall-putty.png"
               alt="BIS ISI Certification for Wall Putty IS 17545"
               width={420}
               height={320}
@@ -106,7 +106,7 @@ export default function WallPutty() {
               for wall putty ensures that products comply with the requirements
               defined by the Bureau of Indian Standards (BIS). As per the
               Quality Control Order (QCO) issued by the Government of India,
-              obtaining ISI certification is mandatory for manufacturers to
+              obtaining ISI certification for manufacturers to
               legally produce, sell, and distribute wall putty in the Indian
               market.
             </p>
@@ -404,17 +404,7 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              2. Mandatory Legal Compliance
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI certification is mandatory under the Quality Control Order for
-              manufacturing and selling wall putty in India.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-1">
-              3. Increased Market Trust
+              2. Increased Market Trust
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               ISI-marked products build confidence among customers, builders,
@@ -424,7 +414,7 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              4. Better Market Acceptance
+              3. Better Market Acceptance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Certified products are widely accepted in construction and
@@ -434,7 +424,7 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              5. Competitive Advantage
+              4. Competitive Advantage
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Certification helps manufacturers stand out in a competitive
@@ -462,17 +452,7 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Is BIS certification mandatory for wall putty?
-            </h3>
-            <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes, BIS certification is mandatory under the Quality Control
-              Order issued by the Government of India.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 className="font-semibold text-gray-900 mb-2">
-              3. What parameters are tested for wall putty?
+              2. What parameters are tested for wall putty?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Tests include adhesion strength, setting time, whiteness, water
@@ -482,7 +462,7 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. How long does BIS certification take?
+              3. How long does BIS certification take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The certification process generally takes around 30 to 45 days
@@ -492,7 +472,7 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              5. Who can apply for BIS certification for wall putty?
+              4. Who can apply for BIS certification for wall putty?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Manufacturers, including Indian and foreign manufacturers, can

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -61,7 +61,7 @@ export default function SteelPipesWaterSupply() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-steel-pipes-water-sewage-supplyy.png"
+              src="/isi-products/bis-isi-certification-steel-pipes-water-sewage-supply.png"
               alt="BIS ISI Certification for Steel Pipes for Water and Sewage IS 3589"
               width={420}
               height={320}
@@ -76,12 +76,14 @@ export default function SteelPipesWaterSupply() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for steel pipes used for water
-              supply and sewage applications with outside diameters ranging from
-              168.3 mm to 2540 mm, as per Indian Standard IS 3589. These pipes
-              are widely used in water distribution systems, wastewater
-              management, industrial pipelines, and large-scale civil
-              infrastructure projects.
+              Steel pipes used for water supply and sewage applications with
+              outside diameters ranging from 168.3 mm to 2540 mm are covered
+              under Indian Standard IS 3589. These pipes are widely used in
+              water distribution systems, wastewater management, industrial
+              pipelines, and large-scale civil infrastructure projects.
+              Manufacturers may obtain BIS ISI certification to demonstrate
+              compliance with Indian quality and performance requirements
+              applicable to steel pipes for water and sewage applications.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -144,7 +146,7 @@ export default function SteelPipesWaterSupply() {
               (vii) Proper end finish, welding quality, and dimensional accuracy
             </li>
             <li>
-              (viii) Mandatory ISI marking, traceability, and batch
+              (viii) ISI marking, traceability, and batch
               identification
             </li>
           </ul>
@@ -157,9 +159,9 @@ export default function SteelPipesWaterSupply() {
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS ISI certification for steel pipes for water and sewage under IS 3589
-            is compulsory to ensure that pipes used in potable water supply and
-            sewage systems meet national quality and safety standards. These
+            BIS ISI certification for steel pipes for water and sewage under IS
+            3589 is compulsory to ensure that pipes used in potable water supply
+            and sewage systems meet national quality and safety standards. These
             pipes are designed to withstand high internal pressure, external
             loads, and harsh environmental conditions.
           </p>
@@ -189,14 +191,12 @@ export default function SteelPipesWaterSupply() {
         </h2>
 
         <p className="mt-6 text-gray-600 text-[15px] leading-6 text-justify mb-6">
-          To obtain the BIS ISI Mark for steel pipes used for water supply and
-          sewage applications under Indian Standard IS 3589, manufacturers and
-          importers must comply with the BIS Product Certification Scheme (BIS
-          Product Certification Scheme (Scheme-I)). This certification ensures
-          that steel pipes meet mandatory requirements related to material
-          quality, mechanical strength, dimensions, pressure performance, and
-          durability before being manufactured, supplied, or imported into the
-          Indian market.
+          BIS ISI Mark certification for steel pipes used for water supply and
+          sewage applications is available under Indian Standard IS 3589.
+          Manufacturers may follow the BIS Product Certification Scheme
+          (Scheme-I) to demonstrate that steel pipes comply with applicable
+          quality, mechanical strength, dimensional, pressure performance, and
+          durability requirements for water supply and sewage systems.
         </p>
 
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
@@ -216,43 +216,35 @@ export default function SteelPipesWaterSupply() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Product Identification:</strong> Identify steel pipes
-              intended for water and sewage applications within the outside
-              diameter range of 168.3 mm to 2540 mm.
+              <strong>Product Testing:</strong> The product must be tested in
+              BIS-approved laboratories as per the applicable Indian Standard IS
+              3589.
             </li>
 
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal with product details,
-              applicable Indian Standard (IS 3589), factory address,
-              manufacturing process, machinery, and production capacity.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 3589), factory address, and
+              manufacturing process information.
             </li>
 
             <li>
-              <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities for chemical analysis, tensile and yield strength,
-              elongation, hydrostatic pressure test, flattening and bending
-              tests, and dimensional verification as prescribed under IS 3589.
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, and testing infrastructure.
             </li>
 
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify raw material controls, welding
-              quality, corrosion protection methods, testing infrastructure, and
-              compliance with the Scheme of Inspection and Testing (SIT).
+              <strong>Sample Seal:</strong> Product samples are collected during
+              inspection and tested at BIS-recognized laboratories according to
+              the requirements of IS 3589.
             </li>
 
             <li>
-              <strong>Sample Drawing and Testing:</strong> Steel pipe samples
-              are drawn during inspection and tested in BIS-recognized
-              laboratories as per IS 3589 requirements.
-            </li>
-
-            <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory
-              inspection and successful test results, BIS grants the
-              Certification Marks License (CM/L), authorizing the use of the ISI
-              Mark on steel pipes for water and sewage.
+              <strong>Grant of BIS License:</strong> After successful
+              inspection, BIS grants the Certification Marks License (CM/L),
+              allowing the manufacturer to use the ISI Mark on steel pipes for
+              water and sewage applications.
             </li>
           </ol>
         </div>
@@ -406,10 +398,10 @@ export default function SteelPipesWaterSupply() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS 3589 is
-              a critical stage in the BIS ISI certification process. BIS may conduct
-              a factory pre-assessment to evaluate manufacturing and quality
-              control readiness. Charges may vary depending on pipe diameter,
-              grade, welding type, and testing scope.
+              a critical stage in the BIS ISI certification process. BIS may
+              conduct a factory pre-assessment to evaluate manufacturing and
+              quality control readiness. Charges may vary depending on pipe
+              diameter, grade, welding type, and testing scope.
             </p>
           </div>
         </div>
@@ -437,13 +429,14 @@ export default function SteelPipesWaterSupply() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Regulatory Compliance
+              1. Compliance with Indian Standards
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Steel pipes for water and sewage applications covered under IS
-              3589 are regulated products in India. ISI Mark certification is
-              mandatory for lawful manufacturing, supply, or import of these
-              pipes for municipal, industrial, and infrastructure use.
+              BIS ISI certification under IS 3589 helps manufacturers
+              demonstrate that steel pipes used for water supply and sewage
+              applications comply with Indian quality, safety, and performance
+              standards.
             </p>
           </div>
 
@@ -506,14 +499,16 @@ export default function SteelPipesWaterSupply() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for steel pipes used for water
-              and sewage?
+              1. Is BIS ISI certification required for steel pipes used for
+              water and sewage?
             </h3>
+
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes. Steel pipes intended for water supply and sewage applications
-              must comply with Indian Standard IS 3589. BIS ISI Mark
-              certification is mandatory before manufacturing, supplying, or
-              importing these pipes in India.
+              Steel pipes used for water supply and sewage applications are
+              covered under Indian Standard IS 3589. Manufacturers may obtain
+              BIS ISI certification to demonstrate compliance with Indian
+              quality and performance requirements applicable to steel pipes for
+              water and sewage systems.
             </p>
           </div>
 
