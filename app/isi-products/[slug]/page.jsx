@@ -364,6 +364,20 @@ export default async function DynamicProductPage({ params }) {
 
           return null;
         })}
+
+        {/* --- GLOBAL IMPORTANT NOTE --- */}
+        {/* I am changing the code right here, placing this global note directly at the end of all the dynamic sections! */}
+        <div className="mt-8 bg-blue-50 border-l-4 border-[#0072b1] rounded-r-xl p-4 md:p-5 shadow-sm flex items-start gap-3">
+          <svg className="w-6 h-6 text-[#0072b1] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p className="text-[15px] leading-6 text-justify text-gray-700">
+            <span className="font-bold text-[#0072b1] text-[16px] mr-1">Important Note:</span>
+            <span className="italic font-medium text-gray-700">Certification requirements, fees, timelines, and regulatory provisions may change as per BIS notifications and applicable Quality Control Orders (QCOs).</span>
+          </p>
+        </div>
+
+        
       </section>
 
     </main>
