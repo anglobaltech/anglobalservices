@@ -87,7 +87,7 @@ export default function ContactPage() {
 
         const next = current + 1;
 
-        newDocId = `AN${String(next).padStart(5, "0")}`;
+        newDocId = `ANG${String(next).padStart(5, "0")}`;
 
         transaction.set(counterRef, { current: next }, { merge: true });
 

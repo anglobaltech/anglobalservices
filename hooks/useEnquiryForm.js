@@ -39,7 +39,7 @@ export default function useEnquiryForm() {
         const current = snap.exists() ? snap.data().current || 0 : 0;
         const next = current + 1;
 
-        newDocId = `AN${String(next).padStart(5, "0")}`;
+        newDocId = `ANG${String(next).padStart(5, "0")}`;
 
         transaction.set(counterRef, { current: next }, { merge: true });
         transaction.set(doc(db, "enquiries", newDocId), {

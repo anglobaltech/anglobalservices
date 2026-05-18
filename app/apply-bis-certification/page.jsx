@@ -125,7 +125,7 @@ export default function BISLandingPage() {
         const current = snap.exists() ? snap.data().current || 0 : 0;
         const next = current + 1;
 
-        enquiryId = `AN${String(next).padStart(5, "0")}`;
+        enquiryId = `ANG${String(next).padStart(5, "0")}`;
 
         transaction.set(counterRef, { current: next }, { merge: true });
 
@@ -215,7 +215,7 @@ export default function BISLandingPage() {
         const current = snap.exists() ? snap.data().current || 0 : 0;
         const next = current + 1;
 
-        enquiryId = `AN${String(next).padStart(5, "0")}`;
+        enquiryId = `ANG${String(next).padStart(5, "0")}`;
 
         transaction.set(counterRef, { current: next }, { merge: true });
 
