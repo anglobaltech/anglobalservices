@@ -877,7 +877,7 @@ const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
   ssr: false,
 });
 
-const slides = ["/dash-image1.jpg", "/dash-image2.jpg", "/dash-image3.jpg"];
+const slides = ["/dash-image1-2.webp", "/dash-image2-2.webp", "/dash-image3-2.webp"];
 
 export default function Hero() {
   // ADDED ROUTER

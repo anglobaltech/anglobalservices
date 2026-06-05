@@ -112,7 +112,7 @@ export default function LeadPopup() {
 
         <div className="hidden md:block p-5 w-[62%] bg-gray-100">
           <img
-            src="/popup-image.png"
+            src="/popup-image-2.webp"
             alt="Popup Image "
             className="h-full w-full object-cover"
           />
