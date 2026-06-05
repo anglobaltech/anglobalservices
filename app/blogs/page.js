@@ -42,12 +42,21 @@ export default async function BlogsPage() {
         });
       }
 
+      // --- NEW FIX: FETCH NEW LISTING DETAILS WITH FALLBACKS ---
+      const finalTitle = data.listingHeading || data.title;
+      
+      const finalExcerpt = data.listingDescription
+        ? data.listingDescription.replace(/<[^>]+>/g, "") // Clean description text
+        : (data.seo?.description || cleanIntro);
+
+      const finalImage = data.listingImage || data.heroImage || "/home-about.jpg";
+
       return {
         id: doc.id,
         slug: data.slug?.replace(/^\//, ""), 
-        title: data.title,
-        excerpt: data.seo?.description || cleanIntro,
-        image: data.heroImage || "/home-about.jpg",
+        title: finalTitle, // Uses Listing Heading if filled, otherwise falls back to Title
+        excerpt: finalExcerpt, // Uses Listing Description if filled, otherwise falls back to SEO/Intro
+        image: finalImage, // Uses Listing Thumbnail if uploaded, otherwise falls back to Hero Image
         date: formattedDate,
         category: data.category || "Updates",
       };

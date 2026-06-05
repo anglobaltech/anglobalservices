@@ -51,7 +51,7 @@ export default function BISRegistrationForSolarPanelsPage() {
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/bis-registration-solar-panel.png"
+                src="/service/bis-registration-solar-panel-2.webp"
                 alt="BIS Certification"
                 width={420}
                 height={520}
