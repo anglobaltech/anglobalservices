@@ -383,4 +383,3 @@ export default async function DynamicProductPage({ params }) {
     </main>
   );
 }
-
