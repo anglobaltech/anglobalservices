@@ -217,39 +217,12 @@ export default function Editor() {
     try {
       let finalImageUrl = existingHeroImage;
 
+      // --- PURE FIREBASE UPLOAD LOGIC ---
       if (heroImageFile) {
-        const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-        const CLOUDINARY_UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
-
-        if (CLOUDINARY_CLOUD_NAME && CLOUDINARY_UPLOAD_PRESET) {
-          try {
-            const formData = new FormData();
-            formData.append("file", heroImageFile);
-            formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
-
-            const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`, {
-              method: "POST",
-              body: formData,
-            });
-
-            const data = await res.json();
-
-            if (data.secure_url) {
-              finalImageUrl = data.secure_url;
-            } else {
-              throw new Error("Cloudinary upload failed. Falling back to Firebase.");
-            }
-          } catch (err) {
-            console.error(err);
-            const imageRef = ref(storage, `isi_products/${Date.now()}_${heroImageFile.name}`);
-            const snapshot = await uploadBytes(imageRef, heroImageFile);
-            finalImageUrl = await getDownloadURL(snapshot.ref);
-          }
-        } else {
-          const imageRef = ref(storage, `isi_products/${Date.now()}_${heroImageFile.name}`);
-          const snapshot = await uploadBytes(imageRef, heroImageFile);
-          finalImageUrl = await getDownloadURL(snapshot.ref);
-        }
+        // Automatically creates the "isi_products_images" folder in Firebase Storage!
+        const imageRef = ref(storage, `isi_products_images/${Date.now()}_${heroImageFile.name}`);
+        const snapshot = await uploadBytes(imageRef, heroImageFile);
+        finalImageUrl = await getDownloadURL(snapshot.ref);
       } else if (heroImageUrlInput.trim() !== "") {
         finalImageUrl = heroImageUrlInput.trim();
       }
@@ -408,8 +381,8 @@ export default function Editor() {
                 )}
 
                 <div>
-                  <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL (e.g., Cloudinary)</label>
-                  <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://res.cloudinary.com/..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+                  <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL</label>
+                  <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="flex-1 border-t border-gray-200/80"></div>
@@ -417,7 +390,7 @@ export default function Editor() {
                   <div className="flex-1 border-t border-gray-200/80"></div>
                 </div>
                 <div>
-                  <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File directly (Auto-Uploads to Cloudinary)</label>
+                  <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File directly (Auto-Uploads to Firebase)</label>
                   <input type="file" accept="image/*" onChange={(e) => { setHeroImageFile(e.target.files[0]); setHeroImageUrlInput(""); }} className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
                 </div>
               </div>
