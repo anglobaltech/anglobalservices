@@ -667,59 +667,24 @@ export default function CreateBlog() {
     setSuccessMsg("");
 
     try {
-      const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME; 
-      const CLOUDINARY_UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
-
-      // 1. Process Hero Image
+      // 1. Process Hero Image (Native Firebase Upload)
       let finalImageUrl = existingHeroImage;
       if (heroImageFile) {
-        if (CLOUDINARY_CLOUD_NAME && CLOUDINARY_UPLOAD_PRESET) {
-          try {
-            const formData = new FormData();
-            formData.append("file", heroImageFile);
-            formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
-            const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`, { method: "POST", body: formData });
-            const data = await res.json();
-            if (data.secure_url) finalImageUrl = data.secure_url; 
-            else throw new Error("Cloudinary upload failed.");
-          } catch (err) {
-            console.error(err);
-            const imageRef = ref(storage, `blogs/${Date.now()}_${heroImageFile.name}`);
-            const snapshot = await uploadBytes(imageRef, heroImageFile);
-            finalImageUrl = await getDownloadURL(snapshot.ref);
-          }
-        } else {
-          const imageRef = ref(storage, `blogs/${Date.now()}_${heroImageFile.name}`);
-          const snapshot = await uploadBytes(imageRef, heroImageFile);
-          finalImageUrl = await getDownloadURL(snapshot.ref);
-        }
+        // Saves to blogs_images folder with a "hero_" prefix
+        const imageRef = ref(storage, `blogs_images/hero_${Date.now()}_${heroImageFile.name}`);
+        const snapshot = await uploadBytes(imageRef, heroImageFile);
+        finalImageUrl = await getDownloadURL(snapshot.ref);
       } else if (heroImageUrlInput.trim() !== "") {
         finalImageUrl = heroImageUrlInput.trim();
       }
 
-      // 2. Process Listing Thumbnail Image
+      // 2. Process Listing Thumbnail Image (Native Firebase Upload)
       let finalListingImageUrl = existingListingImage;
       if (listingImageFile) {
-        if (CLOUDINARY_CLOUD_NAME && CLOUDINARY_UPLOAD_PRESET) {
-          try {
-            const formData = new FormData();
-            formData.append("file", listingImageFile);
-            formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
-            const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`, { method: "POST", body: formData });
-            const data = await res.json();
-            if (data.secure_url) finalListingImageUrl = data.secure_url; 
-            else throw new Error("Cloudinary listing upload failed.");
-          } catch (err) {
-            console.error(err);
-            const imageRef = ref(storage, `blogs/listing_${Date.now()}_${listingImageFile.name}`);
-            const snapshot = await uploadBytes(imageRef, listingImageFile);
-            finalListingImageUrl = await getDownloadURL(snapshot.ref);
-          }
-        } else {
-          const imageRef = ref(storage, `blogs/listing_${Date.now()}_${listingImageFile.name}`);
-          const snapshot = await uploadBytes(imageRef, listingImageFile);
-          finalListingImageUrl = await getDownloadURL(snapshot.ref);
-        }
+        // Saves to blogs_images folder with a "listing_" prefix
+        const listingRef = ref(storage, `blogs_images/listing_${Date.now()}_${listingImageFile.name}`);
+        const snapshot = await uploadBytes(listingRef, listingImageFile);
+        finalListingImageUrl = await getDownloadURL(snapshot.ref);
       } else if (listingImageUrlInput.trim() !== "") {
         finalListingImageUrl = listingImageUrlInput.trim();
       }
@@ -864,8 +829,8 @@ export default function CreateBlog() {
                   </div>
                 )}
                 <div>
-                  <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Cloudinary URL</label>
-                  <input type="url" value={listingImageUrlInput} onChange={(e) => { setListingImageUrlInput(e.target.value); setListingImageFile(null); }} placeholder="https://res.cloudinary.com/..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+                  <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL</label>
+                  <input type="url" value={listingImageUrlInput} onChange={(e) => { setListingImageUrlInput(e.target.value); setListingImageFile(null); }} placeholder="https://..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="flex-1 border-t border-gray-200/80"></div>
@@ -917,8 +882,8 @@ export default function CreateBlog() {
               )}
 
               <div>
-                <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Cloudinary URL</label>
-                <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://res.cloudinary.com/..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+                <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL</label>
+                <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
               </div>
               <div className="flex items-center gap-4">
                 <div className="flex-1 border-t border-gray-200/80"></div>
