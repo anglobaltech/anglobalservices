@@ -166,7 +166,7 @@ export default function TermsAndConditions() {
           <div>
             <h2 className="section-title">12. Contact Information</h2>
             <p className="section-text">
-              <strong>AN Global Services Pvt. Ltd.</strong><br />
+              <strong>A N Global Services Private Limited</strong><br />
               S-63, 7th Floor, Urbtech NPX, Sector 153, Noida, Uttar Pradesh – 201310<br />
               📞 +91 7782069184<br />
               📧 info@anglobalservices.com
