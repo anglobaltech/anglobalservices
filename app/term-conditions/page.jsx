@@ -16,7 +16,7 @@ export default function TermsAndConditions() {
             TERMS & CONDITIONS
           </h1>
           <p className="mt-4 text-lg text-blue-100">
-            AN Global Services Pvt. Ltd.
+            A N Global Services Pvt. Ltd.
           </p>
         </div>
       </section>
