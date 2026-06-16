@@ -220,7 +220,7 @@ export default function AluminiumFoilFoodPackaging() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               verification, BIS grants the license to use the ISI mark.
             </li>
           </ol>
@@ -444,16 +444,6 @@ export default function AluminiumFoilFoodPackaging() {
             <p className="text-gray-600 text-[15px]">
               The process generally takes around 30–45 days depending on testing
               and inspection.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-300 rounded-lg p-4">
-            <h3 className="font-semibold mb-2">
-              5. Can uncertified foil be sold in India?
-            </h3>
-            <p className="text-gray-600 text-[15px]">
-              Products notified under BIS certification cannot be manufactured
-              or sold without approval.
             </p>
           </div>
         </div>

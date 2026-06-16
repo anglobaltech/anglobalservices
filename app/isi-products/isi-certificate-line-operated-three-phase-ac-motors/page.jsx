@@ -239,7 +239,7 @@ export default function LineOperatedThreePhaseACMotors() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
+              <strong>Grant of BIS ISI License:</strong> After successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), allowing the manufacturer to affix the ISI mark on
               three-phase AC motors.
@@ -252,7 +252,7 @@ export default function LineOperatedThreePhaseACMotors() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Three Phase AC Motors (IS
+            Requirements to Obtain BIS ISI License for Three Phase AC Motors (IS
             12615:2018)
           </h2>
 
@@ -405,7 +405,7 @@ export default function LineOperatedThreePhaseACMotors() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              12615:2018 is a crucial stage in the BIS certification process.
+              12615:2018 is a crucial stage in the BIS ISI certification process.
               BIS may evaluate the manufacturing infrastructure, quality control
               procedures, and testing capability of the manufacturer before
               granting the certification license.

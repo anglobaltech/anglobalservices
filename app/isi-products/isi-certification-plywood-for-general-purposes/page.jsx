@@ -268,7 +268,7 @@ export default function PlywoodForGeneralPurposes() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               verification, BIS grants the Certification Marks License (CM/L),
               allowing the manufacturer to use the ISI Mark on certified plywood
               products.
@@ -281,7 +281,7 @@ export default function PlywoodForGeneralPurposes() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Plywood for General Purposes
+            Requirements to Obtain BIS ISI License for Plywood for General Purposes
             (IS 303:1989)
           </h2>
 

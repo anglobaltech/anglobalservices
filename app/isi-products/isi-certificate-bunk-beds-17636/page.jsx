@@ -254,7 +254,7 @@ export default function BunkBeds() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-8">
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Bunk Beds (IS 17636:2022)
+            Requirements to Obtain BIS ISI License for Bunk Beds (IS 17636:2022)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">

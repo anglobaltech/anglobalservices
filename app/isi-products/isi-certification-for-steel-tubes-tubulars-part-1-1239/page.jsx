@@ -245,7 +245,7 @@ export default function SteepTubesISI() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
+              <strong>Grant of BIS ISI License:</strong> Upon successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), authorizing the use of the ISI Mark on steel
               tubes.
@@ -258,7 +258,7 @@ export default function SteepTubesISI() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Steel Tubes (IS 1239 Part 1)
+            Requirements to Obtain BIS ISI License for Steel Tubes (IS 1239 Part 1)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">

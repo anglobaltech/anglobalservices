@@ -103,7 +103,7 @@ export default function AluminiumAlloyTubesForIrrigation() {
                 BIS ISI Certification
               </Link>{" "}
               under IS 7092 (Part 2):1987 is mandatory. Manufacturers must
-              obtain BIS certification before manufacturing, selling, or
+              obtain BIS ISI certification before manufacturing, selling, or
               importing these tubes in India.
             </p>
           </div>
@@ -219,7 +219,7 @@ export default function AluminiumAlloyTubesForIrrigation() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Aluminium Alloy Extruded
+            Requirements to Obtain BIS ISI License for Aluminium Alloy Extruded
             Tubes (IS 7092 Part 2:1987)
           </h2>
 
@@ -460,7 +460,7 @@ export default function AluminiumAlloyTubesForIrrigation() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Is BIS certification mandatory for these tubes?
+              2. Is BIS ISI certification mandatory for these tubes?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes, BIS ISI certification is mandatory before manufacturing or
@@ -480,10 +480,10 @@ export default function AluminiumAlloyTubesForIrrigation() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What is the validity of BIS license?
+              4. What is the validity of BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally valid for one year and can be
+              The BIS ISI license is granted for one year and can be
               renewed.
             </p>
           </div>

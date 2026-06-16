@@ -536,7 +536,7 @@ export default function ISOPage() {
                 How long is ISO certification valid?
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                ISO certification is generally valid for
+                ISO certification is valid for
                 <strong> three years</strong>. During this period, annual
                 surveillance audits are conducted to ensure continued compliance
                 with the standard.

@@ -255,7 +255,7 @@ export default function StorageUnits() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Furniture – Storage Units (IS
+            Requirements to Obtain BIS ISI License for Furniture – Storage Units (IS
             17634:2022)
           </h2>
 
@@ -483,7 +483,7 @@ export default function StorageUnits() {
               4. What is the typical certification timeline?
             </h3>
             <p className="text-gray-600 text-[15px]">
-              The BIS certification process generally takes around 30–45 days,
+              The BIS ISI certification process generally takes around 30–45 days,
               subject to successful inspection and testing.
             </p>
           </div>

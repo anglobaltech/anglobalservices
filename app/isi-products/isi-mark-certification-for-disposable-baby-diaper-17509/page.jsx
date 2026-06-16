@@ -201,7 +201,7 @@ export default function MedicalProductsISIPage() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> If the test results conform
+              <strong>Grant of BIS ISI License:</strong> If the test results conform
               to IS 17509 and the factory audit is satisfactory, BIS grants the
               Certification Marks License (CM/L). The manufacturer is then
               authorized to use the ISI Mark on disposable baby diapers.
