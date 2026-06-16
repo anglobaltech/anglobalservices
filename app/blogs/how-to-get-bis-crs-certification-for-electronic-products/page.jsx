@@ -304,7 +304,7 @@ export default function BISISIPage() {
                   3. How long is BIS CRS Registration valid?
                 </p>
                 <p className="mt-1">
-                  CRS Registration is generally granted for two years and can be
+                  CRS Registration is granted for two years and can be
                   renewed subject to continued compliance with applicable
                   standards.
                 </p>

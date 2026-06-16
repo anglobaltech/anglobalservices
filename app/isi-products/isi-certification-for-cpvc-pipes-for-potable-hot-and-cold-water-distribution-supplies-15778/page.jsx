@@ -236,7 +236,7 @@ export default function CPVCPipesIS15778() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               inspection, BIS grants the Certification Marks License (CM/L),
               allowing the manufacturer to use the ISI Mark on CPVC pipes.
             </li>
@@ -248,7 +248,7 @@ export default function CPVCPipesIS15778() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for CPVC Pipes (IS 15778)
+            Requirements to Obtain BIS ISI License for CPVC Pipes (IS 15778)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">

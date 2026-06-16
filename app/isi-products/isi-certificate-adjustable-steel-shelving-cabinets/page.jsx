@@ -103,7 +103,7 @@ export default function SteelShelvingCabinet() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification under IS 3312:2021 confirms that steel
               shelving cabinets comply with Indian quality and safety standards.
-              Manufacturers must obtain a BIS license to affix the ISI mark on
+              Manufacturers must obtain a BIS ISI license to affix the ISI mark on
               their products before manufacturing, importing, or selling
               adjustable steel shelving cabinets in the Indian market.
             </p>
@@ -228,7 +228,7 @@ export default function SteelShelvingCabinet() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
+              <strong>Grant of BIS ISI License:</strong> After successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), allowing the manufacturer to affix the ISI mark on
               steel shelving cabinets.
@@ -241,7 +241,7 @@ export default function SteelShelvingCabinet() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Steel Shelving Cabinets
+            Requirements to Obtain BIS ISI License for Steel Shelving Cabinets
             (Adjustable Type) (IS 3312:2021)
           </h2>
 
@@ -507,7 +507,7 @@ export default function SteelShelvingCabinet() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for an initial period of one
+              The BIS ISI license is granted for an initial period of one
               year and can be renewed subject to continued compliance.
             </p>
           </div>

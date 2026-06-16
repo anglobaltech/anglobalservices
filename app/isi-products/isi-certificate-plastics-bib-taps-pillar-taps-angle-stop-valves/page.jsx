@@ -102,7 +102,7 @@ export default function PlasticBibTapsISI() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification under IS 9763 confirms that plastic plumbing
               fittings comply with Indian safety and quality standards.
-              Manufacturers must obtain a BIS license to affix the ISI mark
+              Manufacturers must obtain a BIS ISI license to affix the ISI mark
               before manufacturing, importing, or selling these plumbing
               fittings in the Indian market.
             </p>
@@ -221,7 +221,7 @@ export default function PlasticBibTapsISI() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               inspection, BIS grants the Certification Marks License (CM/L),
               allowing the manufacturer to use the ISI Mark on plastic plumbing
               taps and valves.
@@ -234,7 +234,7 @@ export default function PlasticBibTapsISI() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Plastic Bib Taps, Pillar
+            Requirements to Obtain BIS ISI License for Plastic Bib Taps, Pillar
             Taps, Angle & Stop Valves (IS 9763)
           </h2>
 
@@ -498,7 +498,7 @@ export default function PlasticBibTapsISI() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for an initial period of one
+              The BIS ISI license is granted for an initial period of one
               year and can be renewed subject to continued compliance with BIS
               requirements.
             </p>

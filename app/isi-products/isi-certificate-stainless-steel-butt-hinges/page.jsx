@@ -100,7 +100,7 @@ export default function SteelButtHinges() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification under IS 12817:2020 confirms that stainless
               steel butt hinges comply with Indian quality and safety standards.
-              Manufacturers must obtain a BIS license to affix the ISI mark
+              Manufacturers must obtain a BIS ISI license to affix the ISI mark
               before manufacturing, importing, or selling these hinges in the
               Indian market.
             </p>
@@ -159,7 +159,7 @@ export default function SteelButtHinges() {
             I) verifies that stainless steel butt hinges meet Indian quality
             standards. Manufacturers must demonstrate adequate manufacturing
             infrastructure, quality control procedures, and testing capability
-            before BIS grants the license to use the ISI mark.
+            before BIS grants the BIS ISI license to use the ISI mark.
           </p>
         </div>
       </section>
@@ -221,9 +221,8 @@ export default function SteelButtHinges() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
-              and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), allowing the manufacturer to affix the ISI mark on
+              <strong>Grant of BIS ISI License:</strong> After successful inspection
+              and satisfactory test results, BIS grants the BIS ISI License, allowing the manufacturer to affix the ISI mark on
               stainless steel butt hinges.
             </li>
           </ol>
@@ -234,7 +233,7 @@ export default function SteelButtHinges() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Stainless Steel Butt Hinges
+            Requirements to Obtain BIS ISI License for Stainless Steel Butt Hinges
             (IS 12817:2020)
           </h2>
 
@@ -499,7 +498,7 @@ export default function SteelButtHinges() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for an initial period of one
+              The BIS ISI license is granted for an initial period of one
               year and can be renewed subject to continued compliance with BIS
               requirements.
             </p>

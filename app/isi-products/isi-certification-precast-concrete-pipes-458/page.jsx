@@ -243,7 +243,7 @@ export default function ConcretePipes() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
+              <strong>Grant of BIS ISI License:</strong> After successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), allowing the manufacturer to affix the ISI Mark on
               precast concrete pipes.

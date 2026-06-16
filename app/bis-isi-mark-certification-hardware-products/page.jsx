@@ -554,7 +554,7 @@ export default function  HardwareISIPage() {
                 products?
               </strong>
               <p className="text-gray-600 mt-2 text-justify">
-                BIS ISI licenses are generally granted for one year and can be
+                BIS ISI licenses are granted for one year and can be
                 renewed annually, subject to compliance with BIS surveillance
                 requirements and payment of applicable renewal fees.
               </p>

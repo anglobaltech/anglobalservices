@@ -106,7 +106,7 @@ export default function AlluminiumAlloyBarsRodsSections() {
                 BIS ISI certification
               </Link>{" "}
               under IS 733:1983 is mandatory for these products, 
-              Manufacturers must obtain a BIS license to use the ISI mark before
+              Manufacturers must obtain a BISISI license to use the ISI mark before
               manufacturing, importing, or selling them in the Indian market.
               This certification ensures that the products meet prescribed
               quality, safety, and performance standards.
@@ -226,9 +226,8 @@ export default function AlluminiumAlloyBarsRodsSections() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
-              evaluation, BIS grants the Certification Marks License (CM/L),
-              allowing the use of the ISI mark on the product.
+              <strong>Grant of BIS ISI License:</strong> After successful
+              evaluation, BIS grants the BIS ISI License, allowing the use of the ISI mark on the product.
             </li>
           </ol>
         </div>
@@ -238,7 +237,7 @@ export default function AlluminiumAlloyBarsRodsSections() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Wrought Aluminium and
+            Requirements to Obtain BIS ISI License for Wrought Aluminium and
             Aluminium Alloy Bars, Rods and Sections (IS 733:1983)
           </h2>
 
@@ -495,7 +494,7 @@ export default function AlluminiumAlloyBarsRodsSections() {
               3. What is the validity of BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally valid for one year and can be
+              The BIS ISI license is valid for one year and can be
               renewed.
             </p>
           </div>

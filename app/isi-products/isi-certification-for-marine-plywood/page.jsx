@@ -206,7 +206,7 @@ export default function MarinePlywood() {
           </p>
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS certification verifies that manufacturers maintain proper
+            BIS ISI certification verifies that manufacturers maintain proper
             quality control systems, testing procedures, and production
             standards to ensure reliable performance of marine plywood products.
           </p>
@@ -490,7 +490,7 @@ export default function MarinePlywood() {
               1. Is BIS ISI certification mandatory for marine plywood?
             </h3>
             <p className="text-gray-600 text-[15px]">
-              Yes. Marine plywood must comply with BIS certification
+              Yes. Marine plywood must comply with BIS ISI certification
               requirements before it can be manufactured, imported, or sold in
               the Indian market.
             </p>

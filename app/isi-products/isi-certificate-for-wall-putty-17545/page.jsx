@@ -139,7 +139,7 @@ export default function WallPutty() {
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS certification for wall putty ensures that white cement-based
+            BIS ISI certification for wall putty ensures that white cement-based
             polymeric putty meets the quality standards specified under IS
             17545:2021. The certification process verifies product consistency,
             strength, durability, and safety for use on interior and exterior
@@ -176,7 +176,7 @@ export default function WallPutty() {
 
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
           <p className="text-gray-600 text-[15px] leading-6">
-            <strong>Estimated Timeline:</strong> The BIS certification process
+            <strong>Estimated Timeline:</strong> The BIS ISI certification process
             typically takes around <strong>30 to 45 days</strong>, depending on
             testing, inspection, and documentation review.
           </p>
@@ -224,7 +224,7 @@ export default function WallPutty() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Wall Putty (IS 17545:2021)
+            Requirements to Obtain BIS ISI License for Wall Putty (IS 17545:2021)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -370,7 +370,7 @@ export default function WallPutty() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              17545:2021 is a critical stage in the BIS certification process.
+              17545:2021 is a critical stage in the BIS ISI certification process.
               BIS evaluates product quality, manufacturing capability, and
               quality control systems before granting the certification license.
               (Note: Fees are subject to change as per BIS regulations.)
@@ -462,7 +462,7 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              3. How long does BIS certification take?
+              3. How long does BIS ISI certification take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The certification process generally takes around 30 to 45 days
@@ -472,11 +472,11 @@ export default function WallPutty() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. Who can apply for BIS certification for wall putty?
+              4. Who can apply for BIS ISI certification for wall putty?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Manufacturers, including Indian and foreign manufacturers, can
-              apply for BIS certification to sell wall putty in India.
+              apply for BIS ISI certification to sell wall putty in India.
             </p>
           </div>
         </div>

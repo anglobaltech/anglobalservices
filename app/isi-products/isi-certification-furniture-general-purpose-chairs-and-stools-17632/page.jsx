@@ -137,7 +137,7 @@ export default function GeneralChairStool() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS certification for General Purpose Chairs and Stools is
+              BIS ISI certification for General Purpose Chairs and Stools is
               governed by Indian Standard IS 17632:2022. This standard specifies
               minimum requirements related to structural stability, material
               quality, workmanship, and safety to ensure reliable performance
@@ -219,7 +219,7 @@ export default function GeneralChairStool() {
               href="/bis-isi-mark-certification-furniture-plywood"
               className="text-[#0072b1] font-medium hover:underline"
             >
-              BIS certification for furniture and plywood products
+              BIS ISI certification for furniture and plywood products
             </Link>
             .
           </p>
@@ -279,7 +279,7 @@ export default function GeneralChairStool() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful compliance,
+              <strong>Grant of BIS ISI License:</strong> Upon successful compliance,
               BIS grants the Certification Marks License (CM/L) permitting use
               of the ISI Mark on certified chairs and stools.
             </li>
@@ -291,7 +291,7 @@ export default function GeneralChairStool() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for General Purpose Chairs &
+            Requirements to Obtain BIS ISI License for General Purpose Chairs &
             Stools (IS 17632:2022)
           </h2>
 

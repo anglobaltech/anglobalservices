@@ -104,7 +104,7 @@ export default function AluminiumAlloySheetStrip() {
                 BIS ISI certification
               </Link>{" "}
               under IS 737:2008 is mandatory for these products. Manufacturers
-              must obtain a BIS license to use the ISI mark before
+              must obtain a BIS ISI license to use the ISI mark before
               manufacturing, importing, or selling them in the Indian market.
               This certification ensures compliance with prescribed quality and
               performance standards.
@@ -179,7 +179,7 @@ export default function AluminiumAlloySheetStrip() {
 
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
           <p className="text-gray-600 text-[15px] leading-6">
-            <strong>Estimated Timeline:</strong> The BIS certification process
+            <strong>Estimated Timeline:</strong> The BIS ISI certification process
             generally takes around <strong>30 to 45 days</strong> depending on
             inspection and testing timelines.
           </p>
@@ -214,7 +214,7 @@ export default function AluminiumAlloySheetStrip() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               compliance, BIS grants CM/L license to use ISI mark.
             </li>
           </ol>
@@ -225,7 +225,7 @@ export default function AluminiumAlloySheetStrip() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Wrought Aluminium and
+            Requirements to Obtain BIS ISI License for Wrought Aluminium and
             Aluminium Alloy Sheet and Strip (IS 737:2008)
           </h2>
 
@@ -375,7 +375,7 @@ export default function AluminiumAlloySheetStrip() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              737:2008 is mandatory before grant of license. BIS evaluates
+              737:2008 is mandatory before grant of BIS ISI license. BIS evaluates
               manufacturing capability, testing facilities, and quality control
               systems during certification. Fees are indicative and subject to
               change as per BIS guidelines
@@ -412,7 +412,7 @@ export default function AluminiumAlloySheetStrip() {
               2. Mandatory Market Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              BIS certification is mandatory for products covered under IS
+              BIS ISI certification is mandatory for products covered under IS
               737:2008 before sale in India.
             </p>
           </div>
@@ -489,10 +489,10 @@ export default function AluminiumAlloySheetStrip() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What is the validity of BIS license?
+              4. What is the validity of BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for one year and can be
+              The BIS ISI license is granted for one year and can be
               renewed.
             </p>
           </div>

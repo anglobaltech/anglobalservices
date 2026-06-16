@@ -229,7 +229,7 @@ export default function SafetyOfElectricToys() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful compliance,
+              <strong>Grant of BIS ISI License:</strong> Upon successful compliance,
               BIS grants the Certification Marks License (CM/L), allowing the
               use of the ISI mark on electric toys.
             </li>
@@ -241,7 +241,7 @@ export default function SafetyOfElectricToys() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Electric Toys (IS 15644:2006)
+            Requirements to Obtain BIS ISI License for Electric Toys (IS 15644:2006)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -392,7 +392,7 @@ export default function SafetyOfElectricToys() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              15644:2006 is a critical stage in the BIS certification process.
+              15644:2006 is a critical stage in the BIS ISI certification process.
               BIS evaluates safety compliance, manufacturing capability, and
               quality control systems before granting the certification license.
             </p>
@@ -504,7 +504,7 @@ export default function SafetyOfElectricToys() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. How long does BIS certification for electric toys take?
+              4. How long does BIS ISI certification for electric toys take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The BIS ISI certification process generally takes around 30 to 45

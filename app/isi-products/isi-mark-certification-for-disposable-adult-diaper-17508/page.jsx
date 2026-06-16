@@ -207,7 +207,7 @@ export default function AdultDiaperISIPage() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory test
+              <strong>Grant of BIS ISI License:</strong> Upon satisfactory test
               results and audit compliance, BIS grants the Certification Marks
               License (CM/L), authorizing the manufacturer to use the ISI Mark
               on adult diaper products.
