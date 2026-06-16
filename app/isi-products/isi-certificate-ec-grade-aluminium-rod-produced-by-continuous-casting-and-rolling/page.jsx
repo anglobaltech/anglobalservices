@@ -98,7 +98,7 @@ export default function ECGradeAluminiumRod() {
                 BIS ISI certification
               </Link>{" "}
               under IS 5484:2023 is mandatory for these products. Manufacturers
-              must obtain BIS certification before selling, importing, or
+              must obtain BIS ISI certification before selling, importing, or
               distributing EC grade aluminium rods in the Indian market.
             </p>
           </div>
@@ -210,7 +210,7 @@ export default function ECGradeAluminiumRod() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for EC Grade Aluminium Rod (IS
+            Requirements to Obtain BIS ISI License for EC Grade Aluminium Rod (IS
             5484:2023)
           </h2>
 
@@ -397,7 +397,7 @@ export default function ECGradeAluminiumRod() {
               2. Mandatory Regulatory Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              BIS certification is mandatory for products covered under IS
+              BIS ISI certification is mandatory for products covered under IS
               5484:2023 before sale in India.
             </p>
           </div>
@@ -473,10 +473,10 @@ export default function ECGradeAluminiumRod() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What is the validity of the BIS license?
+              4. What is the validity of the BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally valid for one year and can be renewed
+              The BIS ISI license is valid for one year and can be renewed
               upon compliance.
             </p>
           </div>

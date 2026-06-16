@@ -585,7 +585,7 @@ export default function ElectronicsISIPage() {
                 products?
               </strong>
               <p className="text-gray-600 mt-2 text-justify">
-                BIS ISI licenses are generally granted for a period of one year
+                BIS ISI licenses are granted for a period of one year
                 and can be renewed annually, subject to continued compliance
                 with BIS surveillance requirements and payment of applicable
                 renewal fees.

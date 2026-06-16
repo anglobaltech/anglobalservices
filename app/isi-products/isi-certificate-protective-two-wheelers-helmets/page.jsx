@@ -98,7 +98,7 @@ export default function ProtectiveHelmets() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification under IS 4151:2015 confirms that helmets
               comply with Indian safety standards and performance requirements.
-              Manufacturers must obtain a BIS license to affix the ISI mark
+              Manufacturers must obtain a BIS ISI license to affix the ISI mark
               before manufacturing, importing, or selling helmets in the Indian
               market.
             </p>
@@ -217,7 +217,7 @@ export default function ProtectiveHelmets() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
+              <strong>Grant of BIS ISI License:</strong> After successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), allowing the manufacturer to affix the ISI mark on
               helmets.
@@ -230,7 +230,7 @@ export default function ProtectiveHelmets() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Helmet for Riders of
+            Requirements to Obtain BIS ISI License for Helmet for Riders of
             Two-Wheeler Motor Vehicles (IS 4151:2015)
           </h2>
 
@@ -493,7 +493,7 @@ export default function ProtectiveHelmets() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for an initial period of one
+              The BIS ISI license is granted for an initial period of one
               year and can be renewed subject to continued compliance with BIS
               requirements.
             </p>

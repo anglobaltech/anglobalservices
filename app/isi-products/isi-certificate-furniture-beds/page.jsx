@@ -232,7 +232,7 @@ export default function FurnitureBeds() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-8">
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Furniture – Beds (IS
+            Requirements to Obtain BIS ISI License for Furniture – Beds (IS
             17635:2022)
           </h2>
 

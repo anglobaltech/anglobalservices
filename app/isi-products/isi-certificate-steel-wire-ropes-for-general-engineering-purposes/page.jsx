@@ -103,7 +103,7 @@ export default function SteelWireRope() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification under IS 2266:2002 confirms that steel wire
               ropes comply with the prescribed Indian safety and quality
-              standards. Manufacturers must obtain a BIS license to use the ISI
+              standards. Manufacturers must obtain a BIS ISI license to use the ISI
               mark on steel wire ropes before manufacturing, importing, or
               selling them in the Indian market.
             </p>
@@ -224,9 +224,8 @@ export default function SteelWireRope() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
-              inspection, BIS grants the Certification Marks License (CM/L),
-              allowing the manufacturer to use the ISI Mark on steel wire ropes.
+              <strong>Grant of BIS ISI License:</strong> After successful
+              inspection, BIS grants the BIS ISI License, allowing the manufacturer to use the ISI Mark on steel wire ropes.
             </li>
           </ol>
         </div>
@@ -236,7 +235,7 @@ export default function SteelWireRope() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Steel Wire Ropes for General
+            Requirements to Obtain BIS ISI License for Steel Wire Ropes for General
             Engineering Purposes (IS 2266:2002)
           </h2>
 
@@ -503,7 +502,7 @@ export default function SteelWireRope() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for an initial period of one
+              The BIS ISI license is granted for an initial period of one
               year and can be renewed subject to continued compliance with BIS
               requirements.
             </p>

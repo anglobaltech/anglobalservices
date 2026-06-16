@@ -223,7 +223,7 @@ export default function ISIMetalProductsPage() {
       <section className="w-full bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-10">
           <h2 className="text-xl font-bold uppercase text-gray-900">
-            Benefits of BIS Certification for Steel Products
+            Benefits of BIS ISI Certification for Steel Products
           </h2>
 
           <div className="w-full h-0.5 bg-gray-200 relative mb-6">
@@ -231,13 +231,13 @@ export default function ISIMetalProductsPage() {
           </div>
 
           <p className="text-gray-600 text-[15px] leading-6 text-justify mb-8">
-            BIS certification for steel products under the ISI Mark Scheme is a
+            BIS ISI certification for steel products under the ISI Mark Scheme is a
             mandatory regulatory requirement in India for several iron and steel
             materials notified by the Bureau of Indian Standards. Steel products
             used in construction, infrastructure, engineering, and manufacturing
             must comply with applicable Indian Standards to ensure safety,
             strength, and durability. Beyond regulatory compliance, BIS
-            certification provides significant commercial, quality, and market
+            ISI certification provides significant commercial, quality, and market
             advantages to manufacturers and importers.
           </p>
 
@@ -247,7 +247,7 @@ export default function ISIMetalProductsPage() {
                 1. Mandatory Legal Compliance and Market Authorization
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                BIS certification authorizes manufacturers and importers to
+                BIS ISI certification authorizes manufacturers and importers to
                 legally manufacture, sell, and distribute notified steel
                 products in India. Steel items such as TMT bars, structural
                 steel, pipes, and sheets cannot be marketed without a valid ISI
@@ -261,7 +261,7 @@ export default function ISIMetalProductsPage() {
                 2. Assured Strength, Safety, and Quality
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                BIS-certified steel products are tested in BIS-recognized
+                BIS ISI-certified steel products are tested in BIS-recognized
                 laboratories for chemical composition, mechanical strength,
                 ductility, and performance parameters as per Indian Standards.
                 Certification ensures consistent quality, structural safety, and
@@ -276,7 +276,7 @@ export default function ISIMetalProductsPage() {
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
                 Builders, contractors, engineers, and government authorities
-                strongly prefer BIS-certified steel due to guaranteed compliance
+                strongly prefer BIS ISI-certified steel due to guaranteed compliance
                 with national safety norms. The ISI Mark acts as proof of
                 authenticity and quality, helping eliminate substandard or
                 counterfeit steel products from critical construction and
@@ -291,7 +291,7 @@ export default function ISIMetalProductsPage() {
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
                 Many government tenders, public sector projects, and large
-                infrastructure developments mandate BIS certification for steel
+                infrastructure developments mandate BIS ISI certification for steel
                 products. ISI-marked steel gains preference in public
                 procurement, real estate development, EPC contracts, and
                 large-scale industrial projects.
@@ -303,7 +303,7 @@ export default function ISIMetalProductsPage() {
                 5. Reduced Legal, Financial, and Reputational Risk
               </h3>
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                BIS certification minimizes the risk of structural failures,
+                BIS ISI certification minimizes the risk of structural failures,
                 disputes, recalls, and legal liabilities arising from
                 poor-quality steel. Compliance with Indian Standards
                 demonstrates due diligence and strengthens brand credibility
@@ -412,7 +412,7 @@ export default function ISIMetalProductsPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div>
             <h2 className="text-xl font-bold text-gray-900 uppercase">
-              Process Of BIS Certification For Steel Products
+              Process Of BIS ISI Certification For Steel Products
             </h2>
 
             <div className=" h-0.5 w-full bg-gray-200 relative">

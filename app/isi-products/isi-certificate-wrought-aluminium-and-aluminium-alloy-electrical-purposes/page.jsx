@@ -113,7 +113,7 @@ export default function AluminiumElectricalProducts() {
               >
                 Quality Control Order (QCO).
               </Link>{" "} Manufacturers must obtain a
-              BIS license before manufacturing, importing, or selling these
+              BIS ISI license before manufacturing, importing, or selling these
               products in the Indian market.
             </p>
           </div>
@@ -221,7 +221,7 @@ export default function AluminiumElectricalProducts() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               compliance, BIS grants CM/L license to use ISI mark.
             </li>
           </ol>
@@ -232,7 +232,7 @@ export default function AluminiumElectricalProducts() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Wrought Aluminium and
+            Requirements to Obtain BIS ISI License for Wrought Aluminium and
             Aluminium Alloy Products for Electrical Applications (IS 5082:1998)
           </h2>
 
@@ -421,7 +421,7 @@ export default function AluminiumElectricalProducts() {
               2. Regulatory Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Products covered under applicable QCO must comply with BIS
+              Products covered under applicable QCO must comply with BIS ISI
               certification before being marketed in India.
             </p>
           </div>
@@ -498,10 +498,10 @@ export default function AluminiumElectricalProducts() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What is the validity of BIS license?
+              4. What is the validity of BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally valid for one year and can be
+              The BIS ISI license is valid for one year and can be
               renewed.
             </p>
           </div>

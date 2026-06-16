@@ -227,7 +227,7 @@ export default function AluminiumFoilPharmaceuticalPackaging() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful compliance,
+              <strong>Grant of BIS ISI License:</strong> Upon successful compliance,
               BIS grants the Certification Marks License (CM/L) allowing use of
               the ISI Mark.
             </li>
@@ -426,7 +426,7 @@ export default function AluminiumFoilPharmaceuticalPackaging() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-300 rounded-lg p-4">
             <h3 className="font-semibold mb-2">
-              1. Is BIS certification mandatory for aluminium foil used in
+              1. Is BIS ISI certification mandatory for aluminium foil used in
               pharmaceutical packaging?
             </h3>
             <p className="text-gray-600 text-[15px]">

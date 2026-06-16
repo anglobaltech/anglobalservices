@@ -89,7 +89,7 @@ export default function RespiratoryProtectiveDevices() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS certification for Respiratory Protective Devices is governed
+              BIS ISI certification for Respiratory Protective Devices is governed
               by Indian Standard IS 9473. This standard specifies requirements
               related to design, filtration efficiency, breathing resistance,
               leakage, and overall performance of filtering half masks.
@@ -219,7 +219,7 @@ export default function RespiratoryProtectiveDevices() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               inspection, BIS grants the Certification Marks License (CM/L),
               allowing the manufacturer to use the ISI Mark on filtering half
               masks and respiratory protective devices.
@@ -232,7 +232,7 @@ export default function RespiratoryProtectiveDevices() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Respiratory Protective
+            Requirements to Obtain BIS ISI License for Respiratory Protective
             Devices (Filtering Half Masks) – IS 9473
           </h2>
 

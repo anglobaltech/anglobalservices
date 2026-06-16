@@ -249,14 +249,14 @@ export default function PVCFittingSockets() {
           {/* Marking & BIS */}
           <div className="bg-[#f9fbff] border border-blue-200 rounded-xl p-6">
             <h3 className="text-[#0072b1] font-semibold text-lg mb-3">
-              Marking & BIS License Requirement
+              Marking & BIS ISI License Requirement
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Each fitting must be permanently marked with the manufacturer’s
               identification, size, and applicable pressure class. The scope of
-              the BIS license must clearly define the types of fittings, sizes,
+              the BIS ISI license must clearly define the types of fittings, sizes,
               and pressure ratings covered. The ISI Mark may be applied only
-              after obtaining a valid BIS license, which is granted following a
+              after obtaining a valid BIS ISI license, which is granted following a
               successful evaluation of manufacturing facilities, quality control
               systems, and testing capabilities by the Bureau of Indian
               Standards.
@@ -397,7 +397,7 @@ export default function PVCFittingSockets() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               inspection, BIS grants the Certification Marks License (CM/L),
               allowing the manufacturer to use the ISI Mark on PVC socket
               fittings.
@@ -410,7 +410,7 @@ export default function PVCFittingSockets() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for PVC Socket Fittings (IS 7834)
+            Requirements to Obtain BIS ISI License for PVC Socket Fittings (IS 7834)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">

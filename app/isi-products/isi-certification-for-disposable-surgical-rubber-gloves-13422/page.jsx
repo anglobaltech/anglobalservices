@@ -87,7 +87,7 @@ export default function DisposableSurgicalRubberGloves() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS certification for Disposable surgical rubber gloves are
+              BIS ISI certification for Disposable surgical rubber gloves are
               covered under Indian Standard IS 13422 that specify requirements
               related to material quality, tensile strength, freedom from holes,
               sterility, dimensions, and labeling. These standards ensure that
@@ -141,7 +141,7 @@ export default function DisposableSurgicalRubberGloves() {
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify">
-            BIS certification ensures that disposable surgical rubber gloves
+            BIS ISI certification ensures that disposable surgical rubber gloves
             meet stringent Indian quality and safety standards required for
             medical and surgical applications. These gloves are designed to act
             as a protective barrier against microorganisms, blood, and body
@@ -220,7 +220,7 @@ export default function DisposableSurgicalRubberGloves() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               inspection, BIS grants the Certification Marks License (CM/L),
               allowing the manufacturer to use the ISI Mark on disposable
               surgical rubber gloves.
@@ -233,7 +233,7 @@ export default function DisposableSurgicalRubberGloves() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Disposable Surgical Rubber
+            Requirements to Obtain BIS ISI License for Disposable Surgical Rubber
             Gloves
           </h2>
 
@@ -506,7 +506,7 @@ export default function DisposableSurgicalRubberGloves() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. What tests are conducted during BIS certification for surgical
+              4. What tests are conducted during BIS ISI certification for surgical
               gloves?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">

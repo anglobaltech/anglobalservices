@@ -103,7 +103,7 @@ export default function BottledWaterDispenserISI() {
               </Link>{" "}
               under IS 17681:2022 ensures that bottled water dispensers comply
               with Indian safety and quality standards. Manufacturers must
-              obtain a BIS license to affix the ISI mark before manufacturing,
+              obtain a BIS ISI license to affix the ISI mark before manufacturing,
               importing, or selling these products in the Indian market.
             </p>
           </div>
@@ -225,7 +225,7 @@ export default function BottledWaterDispenserISI() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful
+              <strong>Grant of BIS ISI License:</strong> After successful
               compliance, BIS grants the Certification Marks License (CM/L),
               allowing the use of the ISI mark on bottled water dispensers.
             </li>
@@ -237,7 +237,7 @@ export default function BottledWaterDispenserISI() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Bottled Water Dispensers (IS
+            Requirements to Obtain BIS ISI License for Bottled Water Dispensers (IS
             17681:2022)
           </h2>
 

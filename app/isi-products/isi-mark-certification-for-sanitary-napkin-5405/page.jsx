@@ -201,7 +201,7 @@ export default function MedicalProductsISIPage() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon satisfactory audit and
+              <strong>Grant of BIS ISI License:</strong> Upon satisfactory audit and
               conforming test results, BIS grants the Certification Marks
               License (CM/L), authorizing the manufacturer to use the ISI Mark
               on sanitary napkins.
@@ -214,7 +214,7 @@ export default function MedicalProductsISIPage() {
         {/* Requirements */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Disposable Sanitary Napkins
+            Requirements to Obtain BIS ISI License for Disposable Sanitary Napkins
             (IS 5405)
           </h2>
 
