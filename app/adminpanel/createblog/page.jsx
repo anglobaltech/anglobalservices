@@ -27,10 +27,17 @@
 //   const [seoKeywords, setSeoKeywords] = useState(""); 
 //   const [mainImageAlt, setMainImageAlt] = useState("");
   
-//   // Image
+//   // Hero Image
 //   const [heroImageFile, setHeroImageFile] = useState(null);
 //   const [heroImageUrlInput, setHeroImageUrlInput] = useState(""); 
 //   const [existingHeroImage, setExistingHeroImage] = useState(""); 
+
+//   // --- NEW: Listing Page Preview Fields ---
+//   const [listingHeading, setListingHeading] = useState("");
+//   const [listingDescription, setListingDescription] = useState("");
+//   const [listingImageFile, setListingImageFile] = useState(null);
+//   const [listingImageUrlInput, setListingImageUrlInput] = useState("");
+//   const [existingListingImage, setExistingListingImage] = useState("");
   
 //   // Dynamic Content Blocks
 //   const [sections, setSections] = useState([]);
@@ -53,6 +60,11 @@
 //             setSeoKeywords(blog.seo?.keywords ? blog.seo.keywords.join(", ") : "");
 //             setMainImageAlt(blog.seo?.mainImageAlt || "");
 //             setExistingHeroImage(blog.heroImage || "");
+
+//             // Fetch Listing Details
+//             setListingHeading(blog.listingHeading || "");
+//             setListingDescription(blog.listingDescription || "");
+//             setExistingListingImage(blog.listingImage || "");
             
 //             // Migrate older data formats to the new robust arrays
 //             let loadedSections = blog.sections || [];
@@ -104,7 +116,7 @@
 //     if (type === "bullet" || type === "numbered") { 
 //       newSection.intros = [""]; 
 //       newSection.items = [""]; 
-//       newSection.outros = []; // Start empty so they don't have to fill it out
+//       newSection.outros = []; 
 //     }
 //     if (type === "faq") { newSection.heading = "Frequently Asked Questions"; newSection.qas = [{ q: "", a: "" }]; }
 //     if (type === "cta") {
@@ -155,38 +167,26 @@
 //     setSuccessMsg("");
 
 //     try {
+//       // 1. Process Hero Image (Native Firebase Upload)
 //       let finalImageUrl = existingHeroImage;
-      
 //       if (heroImageFile) {
-//         const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME; 
-//         const CLOUDINARY_UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
-
-//         if (CLOUDINARY_CLOUD_NAME && CLOUDINARY_UPLOAD_PRESET) {
-//           try {
-//             const formData = new FormData();
-//             formData.append("file", heroImageFile);
-//             formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
-
-//             const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`, {
-//               method: "POST",
-//               body: formData,
-//             });
-//             const data = await res.json();
-//             if (data.secure_url) finalImageUrl = data.secure_url; 
-//             else throw new Error("Cloudinary upload failed.");
-//           } catch (err) {
-//             console.error(err);
-//             const imageRef = ref(storage, `blogs/${Date.now()}_${heroImageFile.name}`);
-//             const snapshot = await uploadBytes(imageRef, heroImageFile);
-//             finalImageUrl = await getDownloadURL(snapshot.ref);
-//           }
-//         } else {
-//           const imageRef = ref(storage, `blogs/${Date.now()}_${heroImageFile.name}`);
-//           const snapshot = await uploadBytes(imageRef, heroImageFile);
-//           finalImageUrl = await getDownloadURL(snapshot.ref);
-//         }
+//         // Saves to blogs_images folder with a "hero_" prefix
+//         const imageRef = ref(storage, `blogs_images/hero_${Date.now()}_${heroImageFile.name}`);
+//         const snapshot = await uploadBytes(imageRef, heroImageFile);
+//         finalImageUrl = await getDownloadURL(snapshot.ref);
 //       } else if (heroImageUrlInput.trim() !== "") {
 //         finalImageUrl = heroImageUrlInput.trim();
+//       }
+
+//       // 2. Process Listing Thumbnail Image (Native Firebase Upload)
+//       let finalListingImageUrl = existingListingImage;
+//       if (listingImageFile) {
+//         // Saves to blogs_images folder with a "listing_" prefix
+//         const listingRef = ref(storage, `blogs_images/listing_${Date.now()}_${listingImageFile.name}`);
+//         const snapshot = await uploadBytes(listingRef, listingImageFile);
+//         finalListingImageUrl = await getDownloadURL(snapshot.ref);
+//       } else if (listingImageUrlInput.trim() !== "") {
+//         finalListingImageUrl = listingImageUrlInput.trim();
 //       }
 
 //       const keywordArray = seoKeywords ? seoKeywords.split(',').map(k => k.trim()).filter(Boolean) : [];
@@ -195,6 +195,12 @@
 //         title, slug, category, intro,
 //         seo: { title: seoTitle, description: seoDescription, keywords: keywordArray, mainImageAlt },
 //         heroImage: finalImageUrl,
+        
+//         // Save the new Listing Details to the database!
+//         listingHeading,
+//         listingDescription,
+//         listingImage: finalListingImageUrl,
+
 //         sections,
 //         updatedAt: serverTimestamp(),
 //       };
@@ -248,7 +254,7 @@
 
 //       <form onSubmit={handlePublish} className="space-y-8 pb-20">
         
-//         {/* IDENTITY SECTION */}
+//         {/* SECTION 1: IDENTITY SECTION */}
 //         <div className="bg-white/85 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
 //           <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
 //             <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">1</span> 
@@ -277,56 +283,125 @@
 //           </div>
 //         </div>
 
-//         {/* IMAGE SECTION */}
-//         <div className="mb-6">
-//           <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
-//             Hero Image {existingHeroImage && "(Leave blank to keep existing)"}
-//           </label>
-//           <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
+//         {/* SECTION 2: LISTING PAGE PREVIEW (NEW) */}
+//         <div className="bg-white/85 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
+//           <h2 className="text-lg font-extrabold text-gray-900 mb-2 flex items-center gap-3">
+//             <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">2</span> 
+//             Listing Page Details (For "Our Blogs" Page)
+//           </h2>
+//           <p className="text-sm text-gray-500 mb-6 ml-11 font-medium">These details appear only on the main blogs list grid card.</p>
+          
+//           <div className="space-y-6">
+//             <div>
+//               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">Card Heading</label>
+//               <input type="text" value={listingHeading} onChange={(e) => setListingHeading(e.target.value)} placeholder="e.g. BIS ISI Mark Certification Guide" className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+//             </div>
+//             <div>
+//               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">Card Preview Description</label>
+//               <textarea rows="2" value={listingDescription} onChange={(e) => setListingDescription(e.target.value)} placeholder="A short 2-line summary to hook the reader..." className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm"></textarea>
+//             </div>
             
-//             {/* --- IMAGE PREVIEW BLOCK --- */}
-//             {(heroImageFile || heroImageUrlInput || existingHeroImage) && (
-//               <div className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 flex items-center justify-center mb-2 group">
-//                  <img 
-//                    src={heroImageFile ? URL.createObjectURL(heroImageFile) : (heroImageUrlInput || existingHeroImage)} 
-//                    alt="Hero Preview" 
-//                    className="w-full h-full object-cover" 
-//                  />
-//                  <button 
-//                    type="button"
-//                    onClick={() => {
-//                      setHeroImageFile(null);
-//                      setHeroImageUrlInput("");
-//                      setExistingHeroImage("");
-//                    }}
-//                    className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
-//                    title="Remove Image"
-//                  >
-//                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-//                  </button>
+//             {/* Listing Image Upload */}
+//             <div className="mt-4">
+//               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
+//                 Card Thumbnail Image {existingListingImage && "(Leave blank to keep existing)"}
+//               </label>
+//               <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
+//                 {(listingImageFile || listingImageUrlInput || existingListingImage) && (
+//                   <div className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 flex items-center justify-center mb-2 group">
+//                     <img 
+//                       src={listingImageFile ? URL.createObjectURL(listingImageFile) : (listingImageUrlInput || existingListingImage)} 
+//                       alt="Listing Preview" 
+//                       className="w-full h-full object-cover" 
+//                     />
+//                     <button 
+//                       type="button"
+//                       onClick={() => {
+//                         setListingImageFile(null);
+//                         setListingImageUrlInput("");
+//                         setExistingListingImage("");
+//                       }}
+//                       className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
+//                       title="Remove Image"
+//                     >
+//                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+//                     </button>
+//                   </div>
+//                 )}
+//                 <div>
+//                   <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL</label>
+//                   <input type="url" value={listingImageUrlInput} onChange={(e) => { setListingImageUrlInput(e.target.value); setListingImageFile(null); }} placeholder="https://..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+//                 </div>
+//                 <div className="flex items-center gap-4">
+//                   <div className="flex-1 border-t border-gray-200/80"></div>
+//                   <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">OR</span>
+//                   <div className="flex-1 border-t border-gray-200/80"></div>
+//                 </div>
+//                 <div>
+//                   <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File directly</label>
+//                   <input type="file" accept="image/*" onChange={(e) => { setListingImageFile(e.target.files[0]); setListingImageUrlInput(""); } } className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
+//                 </div>
 //               </div>
-//             )}
-
-//             <div>
-//               <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Cloudinary URL</label>
-//               <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://res.cloudinary.com/..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
-//             </div>
-//             <div className="flex items-center gap-4">
-//               <div className="flex-1 border-t border-gray-200/80"></div>
-//               <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">OR</span>
-//               <div className="flex-1 border-t border-gray-200/80"></div>
-//             </div>
-//             <div>
-//               <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File directly (Auto-Uploads to Cloudinary)</label>
-//               <input type="file" accept="image/*" onChange={(e) => { setHeroImageFile(e.target.files[0]); setHeroImageUrlInput(""); } } className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
 //             </div>
 //           </div>
 //         </div>
 
-//         {/* PAGE BUILDER */}
+//         {/* SECTION 3: HERO IMAGE SECTION */}
 //         <div className="bg-white/85 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
 //           <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
 //             <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">3</span> 
+//             Hero Image (Inside Blog)
+//           </h2>
+//           <div>
+//             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
+//               Hero Image {existingHeroImage && "(Leave blank to keep existing)"}
+//             </label>
+//             <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
+              
+//               {/* --- IMAGE PREVIEW BLOCK --- */}
+//               {(heroImageFile || heroImageUrlInput || existingHeroImage) && (
+//                 <div className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 flex items-center justify-center mb-2 group">
+//                   <img 
+//                     src={heroImageFile ? URL.createObjectURL(heroImageFile) : (heroImageUrlInput || existingHeroImage)} 
+//                     alt="Hero Preview" 
+//                     className="w-full h-full object-cover" 
+//                   />
+//                   <button 
+//                     type="button"
+//                     onClick={() => {
+//                       setHeroImageFile(null);
+//                       setHeroImageUrlInput("");
+//                       setExistingHeroImage("");
+//                     }}
+//                     className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
+//                     title="Remove Image"
+//                   >
+//                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+//                   </button>
+//                 </div>
+//               )}
+
+//               <div>
+//                 <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL</label>
+//                 <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+//               </div>
+//               <div className="flex items-center gap-4">
+//                 <div className="flex-1 border-t border-gray-200/80"></div>
+//                 <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">OR</span>
+//                 <div className="flex-1 border-t border-gray-200/80"></div>
+//               </div>
+//               <div>
+//                 <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 2: Upload File directly</label>
+//                 <input type="file" accept="image/*" onChange={(e) => { setHeroImageFile(e.target.files[0]); setHeroImageUrlInput(""); } } className="w-full border border-gray-200/80 bg-white rounded-xl p-2.5 text-sm font-medium text-gray-600 file:cursor-pointer file:mr-4 file:py-2.5 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-[#0072b1]/10 file:text-[#0072b1] hover:file:bg-[#0072b1]/20 transition-all cursor-pointer shadow-sm" />
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* SECTION 4: PAGE BUILDER */}
+//         <div className="bg-white/85 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
+//           <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
+//             <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">4</span> 
 //             Blog Content Builder
 //           </h2>
           
@@ -456,10 +531,10 @@
 //           </div>
 //         </div>
 
-//         {/* SEO META SECTION */}
+//         {/* SECTION 5: SEO META SECTION */}
 //         <div className="bg-white/85 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
 //           <h2 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
-//             <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">4</span> 
+//             <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">5</span> 
 //             SEO Settings
 //           </h2>
 //           <div className="space-y-6">
@@ -494,6 +569,30 @@
 //     </div>
 //   );
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -574,7 +673,8 @@ export default function CreateBlog() {
                   ...sec,
                   intros: sec.intros || (sec.intro ? [sec.intro] : [""]),
                   outros: sec.outros || [],
-                  items: sec.items || [""]
+                  // Migrating to new group array structure automatically
+                  bulletGroups: sec.bulletGroups || [{ subheading: "", items: sec.items || [""] }]
                 };
               }
               return sec;
@@ -615,7 +715,7 @@ export default function CreateBlog() {
     if (type === "text") { newSection.paragraphs = [""]; } 
     if (type === "bullet" || type === "numbered") { 
       newSection.intros = [""]; 
-      newSection.items = [""]; 
+      newSection.bulletGroups = [{ subheading: "", items: [""] }]; 
       newSection.outros = []; 
     }
     if (type === "faq") { newSection.heading = "Frequently Asked Questions"; newSection.qas = [{ q: "", a: "" }]; }
@@ -660,6 +760,26 @@ export default function CreateBlog() {
     setSections(updated);
   };
 
+  // List Group Modifiers
+  const updateBulletGroup = (sIdx, gIdx, field, value) => {
+    const updated = [...sections];
+    updated[sIdx].bulletGroups[gIdx][field] = value;
+    setSections(updated);
+  };
+
+  const removeBulletGroup = (sIdx, gIdx) => {
+    const updated = [...sections];
+    updated[sIdx].bulletGroups.splice(gIdx, 1);
+    setSections(updated);
+  };
+
+  const addBulletGroup = (sIdx) => {
+    const updated = [...sections];
+    if (!updated[sIdx].bulletGroups) updated[sIdx].bulletGroups = [];
+    updated[sIdx].bulletGroups.push({ subheading: "", items: [] });
+    setSections(updated);
+  };
+
   const handlePublish = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -670,7 +790,6 @@ export default function CreateBlog() {
       // 1. Process Hero Image (Native Firebase Upload)
       let finalImageUrl = existingHeroImage;
       if (heroImageFile) {
-        // Saves to blogs_images folder with a "hero_" prefix
         const imageRef = ref(storage, `blogs_images/hero_${Date.now()}_${heroImageFile.name}`);
         const snapshot = await uploadBytes(imageRef, heroImageFile);
         finalImageUrl = await getDownloadURL(snapshot.ref);
@@ -681,7 +800,6 @@ export default function CreateBlog() {
       // 2. Process Listing Thumbnail Image (Native Firebase Upload)
       let finalListingImageUrl = existingListingImage;
       if (listingImageFile) {
-        // Saves to blogs_images folder with a "listing_" prefix
         const listingRef = ref(storage, `blogs_images/listing_${Date.now()}_${listingImageFile.name}`);
         const snapshot = await uploadBytes(listingRef, listingImageFile);
         finalListingImageUrl = await getDownloadURL(snapshot.ref);
@@ -695,12 +813,9 @@ export default function CreateBlog() {
         title, slug, category, intro,
         seo: { title: seoTitle, description: seoDescription, keywords: keywordArray, mainImageAlt },
         heroImage: finalImageUrl,
-        
-        // Save the new Listing Details to the database!
         listingHeading,
         listingDescription,
         listingImage: finalListingImageUrl,
-
         sections,
         updatedAt: serverTimestamp(),
       };
@@ -734,7 +849,6 @@ export default function CreateBlog() {
       {errorMsg && <div className="mb-8 p-4 bg-red-50/90 backdrop-blur-md border-l-4 border-red-500 text-red-700 font-semibold rounded-r-xl shadow-sm flex items-center gap-3"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>{errorMsg}</div>}
       {successMsg && <div className="mb-8 p-4 bg-green-50/90 backdrop-blur-md border-l-4 border-green-500 text-green-800 font-semibold rounded-r-xl shadow-sm flex items-center gap-3"><svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>{successMsg}</div>}
 
-      {/* --- SMART TEXT FORMATTING GUIDE BLOCK --- */}
       <div className="mb-8 p-5 bg-[#0072b1]/5 border border-[#0072b1]/20 rounded-2xl shadow-sm"> 
         <h3 className="text-sm font-extrabold text-[#0072b1] uppercase tracking-wider mb-2 flex items-center gap-2"> 
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -768,8 +882,8 @@ export default function CreateBlog() {
             <div>
               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">URL Slug</label>
               <div className="flex gap-2">
-                <input type="text" required value={slug} disabled={!!editingId} onChange={(e) => setSlug(e.target.value)} placeholder="e.g. bis-registration-guide" className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm disabled:opacity-50" />
-                {!editingId && <button type="button" onClick={generateSlug} className="cursor-pointer bg-gray-800 hover:bg-gray-900 text-white px-5 rounded-xl text-sm font-bold transition-all shadow-md">Auto-Fill</button>}
+                <input type="text" required value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="e.g. bis-registration-guide" className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
+                <button type="button" onClick={generateSlug} className="cursor-pointer bg-gray-800 hover:bg-gray-900 text-white px-5 rounded-xl text-sm font-bold transition-all shadow-md">Auto-Fill</button>
               </div>
             </div>
           </div>
@@ -783,7 +897,7 @@ export default function CreateBlog() {
           </div>
         </div>
 
-        {/* SECTION 2: LISTING PAGE PREVIEW (NEW) */}
+        {/* SECTION 2: LISTING PAGE PREVIEW */}
         <div className="bg-white/85 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 hover:border-gray-200/50 transition-all duration-300">
           <h2 className="text-lg font-extrabold text-gray-900 mb-2 flex items-center gap-3">
             <span className="bg-[#0072b1]/10 text-[#0072b1] w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-sm border border-[#0072b1]/10">2</span> 
@@ -801,7 +915,6 @@ export default function CreateBlog() {
               <textarea rows="2" value={listingDescription} onChange={(e) => setListingDescription(e.target.value)} placeholder="A short 2-line summary to hook the reader..." className="w-full border border-gray-200/80 bg-white/60 rounded-xl p-3.5 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm"></textarea>
             </div>
             
-            {/* Listing Image Upload */}
             <div className="mt-4">
               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">
                 Card Thumbnail Image {existingListingImage && "(Leave blank to keep existing)"}
@@ -809,21 +922,8 @@ export default function CreateBlog() {
               <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
                 {(listingImageFile || listingImageUrlInput || existingListingImage) && (
                   <div className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 flex items-center justify-center mb-2 group">
-                    <img 
-                      src={listingImageFile ? URL.createObjectURL(listingImageFile) : (listingImageUrlInput || existingListingImage)} 
-                      alt="Listing Preview" 
-                      className="w-full h-full object-cover" 
-                    />
-                    <button 
-                      type="button"
-                      onClick={() => {
-                        setListingImageFile(null);
-                        setListingImageUrlInput("");
-                        setExistingListingImage("");
-                      }}
-                      className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
-                      title="Remove Image"
-                    >
+                    <img src={listingImageFile ? URL.createObjectURL(listingImageFile) : (listingImageUrlInput || existingListingImage)} alt="Listing Preview" className="w-full h-full object-cover" />
+                    <button type="button" onClick={() => { setListingImageFile(null); setListingImageUrlInput(""); setExistingListingImage(""); }} className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200" title="Remove Image">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
                   </div>
@@ -857,30 +957,14 @@ export default function CreateBlog() {
               Hero Image {existingHeroImage && "(Leave blank to keep existing)"}
             </label>
             <div className="flex flex-col gap-5 p-5 border border-gray-200/80 rounded-2xl bg-white/40 shadow-inner">
-              
-              {/* --- IMAGE PREVIEW BLOCK --- */}
               {(heroImageFile || heroImageUrlInput || existingHeroImage) && (
                 <div className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 flex items-center justify-center mb-2 group">
-                  <img 
-                    src={heroImageFile ? URL.createObjectURL(heroImageFile) : (heroImageUrlInput || existingHeroImage)} 
-                    alt="Hero Preview" 
-                    className="w-full h-full object-cover" 
-                  />
-                  <button 
-                    type="button"
-                    onClick={() => {
-                      setHeroImageFile(null);
-                      setHeroImageUrlInput("");
-                      setExistingHeroImage("");
-                    }}
-                    className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200"
-                    title="Remove Image"
-                  >
+                  <img src={heroImageFile ? URL.createObjectURL(heroImageFile) : (heroImageUrlInput || existingHeroImage)} alt="Hero Preview" className="w-full h-full object-cover" />
+                  <button type="button" onClick={() => { setHeroImageFile(null); setHeroImageUrlInput(""); setExistingHeroImage(""); }} className="absolute top-3 right-3 bg-white/90 hover:bg-red-50 text-gray-600 hover:text-red-600 p-2.5 rounded-full shadow-md transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer border border-transparent hover:border-red-200" title="Remove Image">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
                   </button>
                 </div>
               )}
-
               <div>
                 <label className="block text-xs font-extrabold text-gray-700 mb-2">Option 1: Paste Image URL</label>
                 <input type="url" value={heroImageUrlInput} onChange={(e) => { setHeroImageUrlInput(e.target.value); setHeroImageFile(null); }} placeholder="https://..." className="w-full border border-gray-200/80 bg-white rounded-xl p-3 focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-sm font-medium text-gray-900 shadow-sm" />
@@ -933,7 +1017,35 @@ export default function CreateBlog() {
                         <button type="button" onClick={() => removeNestedItem(sIdx, "paragraphs", pIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                       </div>
                     ))}
-                    <button type="button" onClick={() => addNestedItem(sIdx, "paragraphs", "")} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Paragraph</button>
+                    
+                    <button type="button" onClick={() => addNestedItem(sIdx, "paragraphs", "")} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Paragraph One by One</button>
+
+                    {/* NEW BULK ADD OPTION FOR TEXT */}
+                    <div className="mt-4 p-4 bg-gray-50 border border-dashed border-gray-200 rounded-xl">
+                      <label className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2">⚡ Bulk Paste: Add Multiple Paragraphs at Once</label>
+                      <textarea 
+                        rows="4" 
+                        placeholder="Paste your content here. Hit Enter twice to leave space between paragraphs..." 
+                        className="w-full border border-gray-200 bg-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm font-medium"
+                        id={`bulk-text-import-${sIdx}`}
+                      />
+                      <button 
+                        type="button" 
+                        onClick={() => {
+                          const textareaEl = document.getElementById(`bulk-text-import-${sIdx}`);
+                          if (textareaEl && textareaEl.value.trim()) {
+                            const parsedLines = textareaEl.value.split(/\n\n+/).filter(x => x.trim() !== "");
+                            const updatedSecs = [...sections];
+                            updatedSecs[sIdx].paragraphs = [...updatedSecs[sIdx].paragraphs.filter(p => p.trim() !== ""), ...parsedLines];
+                            setSections(updatedSecs);
+                            textareaEl.value = "";
+                          }
+                        }}
+                        className="mt-3 text-xs font-bold bg-[#0072b1] hover:bg-[#005f96] text-white px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
+                      >
+                        Process & Append Paragraphs
+                      </button>
+                    </div>
                   </div>
                 )}
 
@@ -952,17 +1064,85 @@ export default function CreateBlog() {
                       <button type="button" onClick={() => addNestedItem(sIdx, "intros", "")} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Intro Paragraph</button>
                     </div>
 
-                    {/* The List Items */}
-                    <div className="space-y-3 pl-2 sm:pl-4 border-l-2 border-blue-100">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block">List Items</label>
-                      {section.items?.map((item, iIdx) => (
-                        <div key={`item-${iIdx}`} className="flex items-center gap-3">
-                          <span className="text-gray-400 font-bold">{section.type === 'numbered' ? `${iIdx + 1}.` : '•'}</span>
-                          <input type="text" value={item} onChange={(e) => updateNestedArray(sIdx, "items", iIdx, null, e.target.value)} placeholder="List item (Supports **bold** and [links](url))" className="flex-1 w-full border border-gray-200/80 bg-white rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm" />
-                          <button type="button" onClick={() => removeNestedItem(sIdx, "items", iIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
+                    {/* The List Sub-Groups */}
+                    <div className="space-y-6 pl-2 sm:pl-4 border-l-2 border-blue-100">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block">List Items & Subheadings</label>
+                      
+                      {section.bulletGroups?.map((group, gIdx) => (
+                        <div key={gIdx} className="p-4 bg-gray-50/50 rounded-2xl border border-gray-100 shadow-sm relative">
+                           <div className="flex items-start gap-3 mb-4">
+                              <input type="text" value={group.subheading || ""} onChange={(e) => updateBulletGroup(sIdx, gIdx, "subheading", e.target.value)} placeholder="Sub-heading (Optional)" className="flex-1 w-full border border-gray-200/80 bg-white rounded-xl p-3.5 text-sm font-extrabold focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm placeholder:font-medium placeholder:text-gray-400" />
+                              <button type="button" onClick={() => removeBulletGroup(sIdx, gIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
+                           </div>
+
+                           {/* LOGIC SPLIT: Bullet vs Numbered */}
+                           {section.type === "bullet" ? (
+                             <div className="space-y-2 border border-dashed border-gray-200 p-4 rounded-xl bg-white/50">
+                                <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">⚡ Upload All Bullet Points At Once (One Point Per Line)</label>
+                                <textarea 
+                                  rows="5" 
+                                  value={group.items?.join("\n") || ""} 
+                                  onChange={(e) => {
+                                      const lines = e.target.value.split("\n");
+                                      const updatedSecs = [...sections];
+                                      updatedSecs[sIdx].bulletGroups[gIdx].items = lines;
+                                      setSections(updatedSecs);
+                                  }} 
+                                  placeholder="Bullet Point 1&#10;Bullet Point 2&#10;Bullet Point 3" 
+                                  className="w-full border border-gray-200/80 bg-white rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm" 
+                                />
+                             </div>
+                           ) : (
+                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                               {/* Numbered Option 1: One by One */}
+                               <div className="p-4 bg-white/50 border border-gray-200 rounded-2xl shadow-sm">
+                                  <span className="block text-xs font-extrabold text-gray-500 uppercase tracking-wider mb-3">Option 1: Add One by One</span>
+                                  <div className="space-y-3">
+                                    {group.items?.map((item, iIdx) => (
+                                      <div key={iIdx} className="flex items-center gap-3">
+                                        <span className="text-gray-400 font-bold">{iIdx + 1}.</span>
+                                        <input type="text" value={item} onChange={(e) => {
+                                            const updated = [...sections];
+                                            updated[sIdx].bulletGroups[gIdx].items[iIdx] = e.target.value;
+                                            setSections(updated);
+                                        }} placeholder="List item" className="flex-1 w-full border border-gray-200/80 bg-white rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm" />
+                                        <button type="button" onClick={() => {
+                                            const updated = [...sections];
+                                            updated[sIdx].bulletGroups[gIdx].items.splice(iIdx, 1);
+                                            setSections(updated);
+                                        }} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
+                                      </div>
+                                    ))}
+                                  </div>
+                                  <button type="button" onClick={() => {
+                                      const updated = [...sections];
+                                      if(!updated[sIdx].bulletGroups[gIdx].items) updated[sIdx].bulletGroups[gIdx].items = [];
+                                      updated[sIdx].bulletGroups[gIdx].items.push("");
+                                      setSections(updated);
+                                  }} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1 mt-3"><span className="text-lg leading-none">+</span> Add Point</button>
+                               </div>
+
+                               {/* Numbered Option 2: Bulk Add */}
+                               <div className="p-4 bg-gray-50/50 border border-dashed border-gray-200 rounded-2xl shadow-sm">
+                                  <span className="block text-xs font-extrabold text-gray-500 uppercase tracking-wider mb-3">Option 2: Add All at Once</span>
+                                  <textarea 
+                                    rows="6" 
+                                    value={group.items?.join("\n") || ""} 
+                                    onChange={(e) => {
+                                        const lines = e.target.value.split("\n");
+                                        const updated = [...sections];
+                                        updated[sIdx].bulletGroups[gIdx].items = lines;
+                                        setSections(updated);
+                                    }} 
+                                    placeholder="Type or paste points here...&#10;Press Enter to go to the next line." 
+                                    className="w-full border border-gray-200/80 bg-white rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm" 
+                                  />
+                               </div>
+                             </div>
+                           )}
                         </div>
                       ))}
-                      <button type="button" onClick={() => addNestedItem(sIdx, "items", "")} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add List Item</button>
+                      <button type="button" onClick={() => addBulletGroup(sIdx)} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Another Sub-heading Group</button>
                     </div>
 
                     {/* Multi-paragraph Outros */}

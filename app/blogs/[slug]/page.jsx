@@ -109,7 +109,7 @@ export default async function DynamicBlogPage({ params }) {
       )}
 
       {/* --- HERO TEXT SECTION --- */}
-      <section className="bg-gradient-to-r from-blue-50 to-white py-12">
+      <section className="bg-gradient-to-r from-blue-50 to-white py-8">
         <div className="max-w-7xl mx-auto px-6">
           {blog.category && (
             <span className="text-md font-semibold flex justify-center text-blue-700 uppercase tracking-wide text-center">
@@ -124,7 +124,7 @@ export default async function DynamicBlogPage({ params }) {
           {/* Intro Section with Smart Parsing */}
           {blog.intro && (
             <p 
-              className="mt-4 text-gray-700 text-center max-w-4xl mx-auto"
+              className="mt-4 text-gray-700 text-center max-w-6xl mx-auto"
               dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(blog.intro) }}
             />
           )}
@@ -132,7 +132,7 @@ export default async function DynamicBlogPage({ params }) {
       </section>
 
       {/* --- HERO IMAGE SECTION --- */}
-      <section className="max-w-7xl mx-auto px-6 pb-12">
+      <section className="max-w-7xl mx-auto px-6 py-10">
         <div className="relative w-full h-40 sm:h-64 md:h-80 lg:h-96 xl:h-[480px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
           <Image
             src={safeHeroImage}
