@@ -292,7 +292,7 @@ export default function BISISIPage() {
                   3. How long is the BIS ISI license valid?
                 </p>
                 <p className="mt-1">
-                  The ISI license is generally granted for an initial period of
+                  The ISI license is  granted for an initial period of
                   one year. It can be renewed subsequently based on continued
                   compliance with Indian Standards and satisfactory surveillance
                   by BIS.

@@ -86,7 +86,7 @@ export default function SurgicalFaceMask() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS certification for Surgical Face Masks is governed by Indian
+              BIS ISI certification for Surgical Face Masks is governed by Indian
               Standard IS 16289:2014. This standard specifies requirements
               related to design, construction, filtration efficiency,
               breathability, resistance to fluids, and microbial cleanliness of
@@ -225,7 +225,7 @@ export default function SurgicalFaceMask() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
+              <strong>Grant of BIS ISI License:</strong> After successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), allowing the manufacturer to use the ISI Mark on
               surgical face masks.
@@ -238,7 +238,7 @@ export default function SurgicalFaceMask() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Surgical Face Masks (IS
+            Requirements to Obtain BIS ISI License for Surgical Face Masks (IS
             16289)
           </h2>
 

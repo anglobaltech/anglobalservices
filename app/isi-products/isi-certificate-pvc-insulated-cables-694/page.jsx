@@ -96,7 +96,7 @@ export default function PVCInsulatedCables() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification under IS 694:2010 ensures that PVC insulated
               cables meet the prescribed safety, performance, and quality
-              requirements. Manufacturers must obtain a BIS license to use the
+              requirements. Manufacturers must obtain a BIS ISI license to use the
               ISI mark on their cables before selling or distributing them in
               the Indian market.
             </p>
@@ -218,7 +218,7 @@ export default function PVCInsulatedCables() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> If the factory inspection
+              <strong>Grant of BIS ISI License:</strong> If the factory inspection
               and test results meet the required standards, BIS grants the
               Certification Marks License (CM/L), allowing the manufacturer to
               affix the ISI mark on PVC insulated cables.
@@ -231,7 +231,7 @@ export default function PVCInsulatedCables() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for PVC Insulated Cables (IS
+            Requirements to Obtain BIS ISI License for PVC Insulated Cables (IS
             694:2010)
           </h2>
 
@@ -483,7 +483,7 @@ export default function PVCInsulatedCables() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for one year initially and
+              The BIS ISI license is granted for one year initially and
               can be renewed subject to continued compliance with BIS
               requirements.
             </p>

@@ -262,7 +262,7 @@ export default function WoodenTablesDesks() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful compliance,
+              <strong>Grant of BIS ISI License:</strong> Upon successful compliance,
               BIS grants the Certification Marks License (CM/L) allowing use of
               the ISI Mark.
             </li>
@@ -274,7 +274,7 @@ export default function WoodenTablesDesks() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Wooden Tables & Desks (IS
+            Requirements to Obtain BIS ISI License for Wooden Tables & Desks (IS
             17633:2022)
           </h2>
 

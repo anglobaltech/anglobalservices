@@ -101,7 +101,7 @@ export default function AluminiumWire() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify ">
               BIS ISI certification under IS 739:1992 confirms that aluminium
               wires comply with prescribed Indian safety and quality standards.
-              Manufacturers are required to obtain a BIS license to use the ISI
+              Manufacturers are required to obtain a BIS ISI license to use the ISI
               mark before manufacturing, importing, or selling these products in
               the Indian market.
             </p>
@@ -214,7 +214,7 @@ export default function AluminiumWire() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
+              <strong>Grant of BIS ISI License:</strong> Upon successful inspection
               and testing, BIS grants the Certification Marks License (CM/L),
               allowing use of the ISI mark.
             </li>
@@ -226,7 +226,7 @@ export default function AluminiumWire() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Wrought Aluminium and
+            Requirements to Obtain BIS ISI License for Wrought Aluminium and
             Aluminium Alloy Wire (IS 739:1992)
           </h2>
 

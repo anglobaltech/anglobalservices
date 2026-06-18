@@ -218,7 +218,7 @@ export default function ElectricCeilingFan() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
+              <strong>Grant of BIS ISI License:</strong> Upon successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), authorizing the use of the ISI Mark on electric
               ceiling fans.
@@ -231,7 +231,7 @@ export default function ElectricCeilingFan() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Electric Ceiling Fans (IS
+            Requirements to Obtain BIS ISI License for Electric Ceiling Fans (IS
             374)
           </h2>
 
@@ -498,7 +498,7 @@ export default function ElectricCeilingFan() {
               3. What is the validity of the BIS ISI license for ceiling fans?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license for electric ceiling fans is generally granted for
+              The BIS ISI license for electric ceiling fans is granted for
               one year initially and can be renewed periodically, subject to
               continued compliance and payment of applicable marking fees.
             </p>

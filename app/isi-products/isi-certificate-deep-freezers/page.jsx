@@ -98,7 +98,7 @@ export default function DeepFreezerISI() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification under IS 7872:2020 confirms that deep
               freezers comply with Indian safety and quality standards.
-              Manufacturers must obtain a BIS license to affix the ISI mark
+              Manufacturers must obtain a BIS ISI license to affix the ISI mark
               before manufacturing, importing, or selling deep freezers in the
               Indian market.
             </p>
@@ -215,7 +215,7 @@ export default function DeepFreezerISI() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> After successful inspection
+              <strong>Grant of BIS ISI License:</strong> After successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), allowing the manufacturer to affix the ISI mark on
               deep freezers.
@@ -228,7 +228,7 @@ export default function DeepFreezerISI() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Deep Freezers (IS 7872:2020)
+            Requirements to Obtain BIS ISI License for Deep Freezers (IS 7872:2020)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -489,7 +489,7 @@ export default function DeepFreezerISI() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for an initial period of one
+              The BIS ISI license is granted for an initial period of one
               year and can be renewed subject to continued compliance with BIS
               requirements.
             </p>
@@ -497,7 +497,7 @@ export default function DeepFreezerISI() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              4. How long does the BIS certification process take?
+              4. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               The BIS ISI certification process generally takes around 30 to 45

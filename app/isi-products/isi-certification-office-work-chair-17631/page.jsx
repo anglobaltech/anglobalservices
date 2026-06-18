@@ -86,7 +86,7 @@ export default function WorkChair() {
                         </p>
 
                         <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-                            BIS certification for Work Chairs is governed by Indian Standard
+                            BIS ISI certification for Work Chairs is governed by Indian Standard
                             IS 17631:2022. This standard specifies requirements related to safety,
                             strength, stability, durability, and ergonomic performance to ensure
                             long-term reliability under continuous usage conditions.
@@ -206,7 +206,7 @@ export default function WorkChair() {
                         </li>
 
                         <li>
-                            <strong>Grant of BIS License:</strong> Upon successful compliance, BIS
+                            <strong>Grant of BIS ISI License:</strong> Upon successful compliance, BIS
                             grants the Certification Marks License (CM/L) permitting use of the
                             ISI Mark on certified work chairs.
                         </li>
@@ -218,7 +218,7 @@ export default function WorkChair() {
                 {/* Requirements Section */}
                 <div>
                     <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-                        Requirements to Obtain BIS License for Furniture – Work Chairs (IS 17631:2022)
+                        Requirements to Obtain BIS ISI License for Furniture – Work Chairs (IS 17631:2022)
                     </h2>
 
                     <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">

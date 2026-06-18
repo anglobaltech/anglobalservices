@@ -219,7 +219,7 @@ export default function MedicalBedSheetsAndPillowCoversISIPage() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful
+              <strong>Grant of BIS ISI License:</strong> Upon successful
               verification, BIS grants the Certification Marks License (CM/L),
               allowing the use of the ISI mark on medical textile products.
             </li>

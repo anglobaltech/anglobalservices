@@ -217,7 +217,7 @@ export default function BayonetLampHolders() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> If inspection results and
+              <strong>Grant of BIS ISI License:</strong> If inspection results and
               test reports comply with the standard, BIS grants the
               Certification Marks License (CM/L), allowing the manufacturer to
               affix the ISI mark on bayonet lamp holders.
@@ -230,7 +230,7 @@ export default function BayonetLampHolders() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS License for Bayonet Lamp Holders (IS
+            Requirements to Obtain BIS ISI License for Bayonet Lamp Holders (IS
             1258:2005)
           </h2>
 
@@ -485,7 +485,7 @@ export default function BayonetLampHolders() {
               3. What is the validity of a BIS ISI license?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license is generally granted for an initial period of one
+              The BIS ISI license is granted for an initial period of one
               year and can be renewed subject to continued compliance.
             </p>
           </div>

@@ -270,7 +270,7 @@ export default function NABLAccreditationPage() {
               </li>
               <li>
                 Issuance of NABL Accreditation Certificate with QR code and
-                defined scope, generally valid for two years.
+                defined scope, valid for two years.
               </li>
             </ul>
           </div>
@@ -581,7 +581,7 @@ export default function NABLAccreditationPage() {
             <p>
               <strong>How long is the NABL certificate valid?</strong>
               <br />
-              NABL accreditation is generally valid for two years, subject to
+              NABL accreditation is valid for two years, subject to
               surveillance and compliance requirements.
             </p>
           </div>

@@ -83,7 +83,7 @@ export default function DomesticPressureCookers() {
               in India as per Indian Standard IS 2347:2017. In today’s
               competitive Indian market, it is difficult to sell or sustain products
               without meeting prescribed quality and safety standards. A valid
-              BIS license is essential for manufacturers and importers to
+              BIS ISI license is essential for manufacturers and importers to
               legally manufacture, import, and sell domestic pressure cookers in the Indian market.
             </p>
 
@@ -230,7 +230,7 @@ export default function DomesticPressureCookers() {
             </li>
 
             <li>
-              <strong>Grant of BIS License:</strong> Upon successful inspection
+              <strong>Grant of BIS ISI License:</strong> Upon successful inspection
               and satisfactory test results, BIS grants the Certification Marks
               License (CM/L), authorizing the use of the ISI Mark on domestic
               pressure cookers.
@@ -512,7 +512,7 @@ export default function DomesticPressureCookers() {
               cookers?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS license for domestic pressure cookers is usually granted
+              The BIS ISI license for domestic pressure cookers is usually granted
               for one year initially and can be renewed periodically, subject to
               ongoing compliance and payment of applicable marking fees.
             </p>
