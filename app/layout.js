@@ -13,9 +13,39 @@ import { Suspense } from "react";
 export const revalidate = 86400;
 
 export const metadata = {
-  title: "BIS Certification Consultants | ISI Mark, FMCS, CRS & Calibration",
+  metadataBase: new URL("https://www.anglobalservices.com"),
+
+  title: {
+    default:
+      "BIS Certification Consultants | ISI Mark, FMCS, CRS & Calibration",
+    template: "%s | AN Global Services",
+  },
+
   description:
     "AN Global Services offers BIS (ISI Mark) certification, CRS registration for electronics, FMCS certification, NABL certification, WPC approval, EPR registration, GEM registration, and calibration services with complete compliance support across India.",
+
+  applicationName: "AN Global Services",
+
+  alternates: {
+    canonical: "https://www.anglobalservices.com",
+  },
+
+  openGraph: {
+    title: "BIS Certification Consultants | ISI Mark, FMCS, CRS & Calibration",
+    description:
+      "AN Global Services offers BIS (ISI Mark) certification, CRS registration for electronics, FMCS certification, NABL certification, WPC approval, EPR registration, GEM registration, and calibration services.",
+    url: "https://www.anglobalservices.com",
+    siteName: "AN Global Services",
+    type: "website",
+    locale: "en_IN",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "BIS Certification Consultants | ISI Mark, FMCS, CRS & Calibration",
+    description:
+      "AN Global Services offers BIS, CRS, FMCS, NABL, WPC, EPR and calibration services across India.",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -30,12 +60,40 @@ export default function RootLayout({ children }) {
 
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
-  `}
+      gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
+    `}
+        </Script>
+
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "AN Global Services",
+            url: "https://www.anglobalservices.com",
+            alternateName: "AN Global Services",
+          })}
+        </Script>
+
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "AN Global Services",
+            alternateName: "AN Global Services",
+            url: "https://www.anglobalservices.com",
+          })}
         </Script>
       </head>
       <body className="antialiased">
