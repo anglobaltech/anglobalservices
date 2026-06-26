@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export const metadata = {
   title:
@@ -81,10 +81,11 @@ export default function DomesticPressureCookers() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
               BIS ISI certification is mandatory for domestic pressure cookers
               in India as per Indian Standard IS 2347:2017. In today’s
-              competitive Indian market, it is difficult to sell or sustain products
-              without meeting prescribed quality and safety standards. A valid
-              BIS ISI license is essential for manufacturers and importers to
-              legally manufacture, import, and sell domestic pressure cookers in the Indian market.
+              competitive Indian market, it is difficult to sell or sustain
+              products without meeting prescribed quality and safety standards.
+              A valid BIS ISI license is essential for manufacturers to legally
+              manufacture, and sell domestic pressure cookers in the Indian
+              market.
             </p>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
@@ -202,38 +203,32 @@ export default function DomesticPressureCookers() {
 
           <ol className="list-decimal pl-6 text-[15px] text-gray-600 space-y-3">
             <li>
-              <strong>Application Submission:</strong> Submit the BIS
-              application through the Manak Online portal by providing domestic
-              pressure cooker details, applicable Indian Standard (IS
-              2347:2017), factory address, manufacturing process, and machinery
-              details.
+              <strong>Product Testing:</strong> Domestic pressure cooker samples
+              must be tested in BIS-recognized laboratories as per the
+              requirements of Indian Standard IS 2347:2017.
             </li>
-
             <li>
-              <strong>Testing Readiness:</strong> Ensure availability of testing
-              facilities as specified under IS 2347:2017, including checks for
-              capacity, pressure safety, material quality, gasket performance,
-              and overall construction.
+              <strong>Application Submission:</strong> The manufacturer submits
+              the BIS application through the Manak Online portal with product
+              details, applicable standard (IS 2347:2017), factory address,
+              manufacturing process information, and quality control details.
             </li>
-
             <li>
-              <strong>Factory Inspection:</strong> A BIS officer conducts an
-              on-site inspection to verify manufacturing capability, quality
-              control systems, in-house testing arrangements, and compliance
-              with the Scheme of Inspection and Testing (SIT).
+              <strong>Factory Inspection:</strong> BIS officials conduct a
+              factory inspection to evaluate manufacturing facilities, quality
+              control systems, production processes, testing arrangements, and
+              compliance with the Scheme of Inspection and Testing (SIT).
             </li>
-
             <li>
-              <strong>Sample Drawing and Testing:</strong> Pressure cooker
-              samples are drawn during inspection and tested in BIS-recognized
-              laboratories as per IS 2347:2017 requirements.
+              <strong>Sample Seal:</strong> Pressure cooker samples are
+              collected during inspection and tested at BIS-recognized
+              laboratories according to the requirements of IS 2347:2017.
             </li>
-
             <li>
-              <strong>Grant of BIS ISI License:</strong> Upon successful inspection
-              and satisfactory test results, BIS grants the Certification Marks
-              License (CM/L), authorizing the use of the ISI Mark on domestic
-              pressure cookers.
+              <strong>Grant of BIS ISI License:</strong> After successful
+              inspection and satisfactory test results, BIS grants the
+              Certification Marks License (CM/L), allowing the manufacturer to
+              use the ISI Mark on domestic pressure cookers.
             </li>
           </ol>
         </div>
@@ -243,8 +238,8 @@ export default function DomesticPressureCookers() {
         {/* Requirements Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Requirements to Obtain BIS ISI License for Domestic Pressure Cookers (IS
-            2347)
+            Requirements to Obtain BIS ISI License for Domestic Pressure Cookers
+            (IS 2347)
           </h2>
 
           <ul className="mt-6 list-disc pl-6 text-[15px] text-gray-700 space-y-2">
@@ -302,13 +297,14 @@ export default function DomesticPressureCookers() {
         {/* Cost Section */}
         <div>
           <h2 className="bg-[#0072b1] text-white text-lg md:text-xl font-semibold px-6 py-2 rounded-md shadow-md">
-            Cost of BIS ISI Certification for Domestic Pressure Cookers (IS 2347)
+            Cost of BIS ISI Certification for Domestic Pressure Cookers (IS
+            2347)
           </h2>
 
           <p className="mt-5 text-gray-600 text-[15px] leading-6 text-justify mb-6">
             The following are indicative government and related charges involved
-            in obtaining BIS ISI certification for domestic pressure cookers under
-            Product Certification Scheme-I. All statutory fees are payable
+            in obtaining BIS ISI certification for domestic pressure cookers
+            under Product Certification Scheme-I. All statutory fees are payable
             directly to the Bureau of Indian Standards (BIS).
           </p>
 
@@ -382,7 +378,7 @@ export default function DomesticPressureCookers() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              2347:2017 is a crucial part of the BIS  certification process. BIS
+              2347:2017 is a crucial part of the BIS certification process. BIS
               may conduct a factory pre-assessment to evaluate readiness prior
               to inspection. Charges mentioned above are indicative and may vary
               depending on cooker type, capacity group, and testing scope.
@@ -417,9 +413,8 @@ export default function DomesticPressureCookers() {
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Domestic pressure cookers are notified products in India, and ISI
               Mark certification under IS 2347:2017 is mandatory. Manufacturers
-              and importers can legally sell certified pressure cookers, while
-              non-compliant products may face penalties, seizure, or prohibition
-              from sale.
+              can legally sell certified pressure cookers, while non-compliant
+              products may face penalties, seizure, or prohibition from sale.
             </p>
           </div>
 
@@ -464,10 +459,10 @@ export default function DomesticPressureCookers() {
               5. Competitive Advantage and Business Growth
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              ISI-certified pressure cookers stand out in a competitive Indian market.
-              Certification supports premium positioning, eligibility for
-              government and institutional procurement, and long-term business
-              growth.
+              ISI-certified pressure cookers stand out in a competitive Indian
+              market. Certification supports premium positioning, eligibility
+              for government and institutional procurement, and long-term
+              business growth.
             </p>
           </div>
         </div>
@@ -483,14 +478,14 @@ export default function DomesticPressureCookers() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for domestic pressure cookers in
-              India?
+              1. Is BIS ISI certification mandatory for domestic pressure
+              cookers in India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes. Domestic pressure cookers must comply with Indian Standard IS
               2347:2017. BIS ISI Mark certification is mandatory for
-              manufacturers and importers before selling or distributing
-              pressure cookers in the Indian market.
+              manufacturers before selling or distributing pressure cookers in
+              the Indian market.
             </p>
           </div>
 
@@ -512,9 +507,10 @@ export default function DomesticPressureCookers() {
               cookers?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS ISI license for domestic pressure cookers is usually granted
-              for one year initially and can be renewed periodically, subject to
-              ongoing compliance and payment of applicable marking fees.
+              The BIS ISI license for domestic pressure cookers is usually
+              granted for one year initially and can be renewed periodically,
+              subject to ongoing compliance and payment of applicable marking
+              fees.
             </p>
           </div>
 
@@ -523,10 +519,10 @@ export default function DomesticPressureCookers() {
               5. How long does the BIS ISI certification process take?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              The BIS ISI certification process typically takes around 30 days for
-              Indian manufacturers and up to 180 days for foreign manufacturers,
-              depending on documentation, product testing, and factory
-              inspection timelines.
+              The BIS ISI certification process typically takes around 30 days
+              for Indian manufacturers and up to 180 days for foreign
+              manufacturers, depending on documentation, product testing, and
+              factory inspection timelines.
             </p>
           </div>
 

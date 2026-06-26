@@ -65,7 +65,7 @@ export default function AlluminiumAlloyBarsRodsSections() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-aluminium-alloy-bars-rods-sections.png"
+              src="/isi-products/isi-certificate-aluminium-alloy-bars-rods-sections.webp"
               alt="BIS ISI Certification for Wrought Aluminium Bars Rods Sections IS 733"
               width={420}
               height={320}
@@ -105,7 +105,7 @@ export default function AlluminiumAlloyBarsRodsSections() {
               >
                 BIS ISI certification
               </Link>{" "}
-              under IS 733:1983 is mandatory for these products, 
+              under IS 733:1983 is required for these products, 
               Manufacturers must obtain a BISISI license to use the ISI mark before
               manufacturing, importing, or selling them in the Indian market.
               This certification ensures that the products meet prescribed
@@ -389,7 +389,7 @@ export default function AlluminiumAlloyBarsRodsSections() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              733:1983 is mandatory before grant of license. BIS evaluates
+              733:1983 is required before grant of license. BIS evaluates
               manufacturing capability, testing facilities, and quality control
               systems during certification.
             </p>
@@ -423,10 +423,10 @@ export default function AlluminiumAlloyBarsRodsSections() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              2. Mandatory Market Compliance
+              2. Required Market Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              BIS ISI certification is mandatory, and products may require
+              BIS ISI certification is required, and products may require
               certification if covered under mandatory BIS regulations.
             </p>
           </div>
@@ -481,10 +481,10 @@ export default function AlluminiumAlloyBarsRodsSections() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Are aluminium bars and rods BIS ISI certification mandatory?
+              2. Are aluminium bars and rods BIS ISI certification required?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes, BIS ISI certification is mandatory for products covered under
+              Yes, BIS ISI certification is required for products covered under
               IS 733:1983.
             </p>
           </div>
