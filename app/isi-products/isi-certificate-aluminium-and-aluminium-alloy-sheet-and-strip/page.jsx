@@ -64,7 +64,7 @@ export default function AluminiumAlloySheetStrip() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-aluminium-alloy-sheet-strip.png"
+              src="/isi-products/isi-certificate-aluminium-alloy-sheet-strip.webp"
               alt="BIS ISI Certification for Wrought Aluminium Sheet and Strip IS 737"
               width={420}
               height={320}
@@ -103,7 +103,7 @@ export default function AluminiumAlloySheetStrip() {
               >
                 BIS ISI certification
               </Link>{" "}
-              under IS 737:2008 is mandatory for these products. Manufacturers
+              under IS 737:2008 is required for these products. Manufacturers
               must obtain a BIS ISI license to use the ISI mark before
               manufacturing, importing, or selling them in the Indian market.
               This certification ensures compliance with prescribed quality and
@@ -375,7 +375,7 @@ export default function AluminiumAlloySheetStrip() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              737:2008 is mandatory before grant of BIS ISI license. BIS evaluates
+              737:2008 is required before grant of BIS ISI license. BIS evaluates
               manufacturing capability, testing facilities, and quality control
               systems during certification. Fees are indicative and subject to
               change as per BIS guidelines
@@ -409,10 +409,10 @@ export default function AluminiumAlloySheetStrip() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              2. Mandatory Market Compliance
+              2. Required Market Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              BIS ISI certification is mandatory for products covered under IS
+              BIS ISI certification is required for products covered under IS
               737:2008 before sale in India.
             </p>
           </div>
@@ -468,11 +468,11 @@ export default function AluminiumAlloySheetStrip() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Is BIS ISI certification mandatory for aluminium sheets and
+              2. Is BIS ISI certification required for aluminium sheets and
               strips?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes, BIS ISI certification is mandatory for products covered under
+              Yes, BIS ISI certification is required for products covered under
               IS 737:2008.
             </p>
           </div>

@@ -62,7 +62,7 @@ export default function SteepTubesISI() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-steel-tubes-tubulars.png"
+              src="/isi-products/isi-certificate-steel-tubes-tubulars-steel-fittings.webp"
               alt="BIS ISI Certification for Steel Tubes IS 1239 Part 1"
               width={420}
               height={320}
@@ -77,7 +77,7 @@ export default function SteepTubesISI() {
             </h1>
 
             <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
-              BIS ISI certification is mandatory for steel tubes, tubulars, and
+              BIS ISI certification is required for steel tubes, tubulars, and
               other wrought steel fittings classified under Part 1: Steel Tubes
               as per Indian Standard IS 1239 (Part 1):2014. These steel tubes
               are widely used in construction, infrastructure, manufacturing,
@@ -166,7 +166,7 @@ export default function SteepTubesISI() {
 
           <p className="mt-4 text-gray-600 text-[15px] leading-6 text-justify">
             As per the Quality Control Order issued by the Ministry of Steel on
-            5 February 2024, compliance with IS 1239 (Part 1):2014 is mandatory.
+            5 February 2024, compliance with IS 1239 (Part 1):2014.
             Manufacturers must obtain BIS ISI certification under the Product
             Certification Scheme (ISI Mark Scheme – Scheme I, Schedule II)
             before manufacturing, selling, or importing steel tubes in India.
@@ -430,12 +430,12 @@ export default function SteepTubesISI() {
         <div className="space-y-3">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-1">
-              1. Mandatory Legal Compliance
+              1. Legal Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Steel tubes covered under IS 1239 (Part 1):2014 are notified
               products under the Quality Control Order issued by the Ministry of
-              Steel. ISI Mark certification is mandatory for lawful
+              Steel. ISI Mark certification is required for lawful
               manufacturing, sale, or import of steel tubes in India.
             </p>
           </div>
@@ -499,11 +499,11 @@ export default function SteepTubesISI() {
         <div className="mt-8 space-y-4">
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              1. Is BIS ISI certification mandatory for steel tubes in India?
+              1. Is BIS ISI certification required for steel tubes in India?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
               Yes. Steel tubes covered under IS 1239 (Part 1):2014 must comply
-              with BIS requirements. ISI Mark certification is mandatory as per
+              with BIS requirements. ISI Mark certification is required as per
               the Quality Control Order issued by the Ministry of Steel.
             </p>
           </div>

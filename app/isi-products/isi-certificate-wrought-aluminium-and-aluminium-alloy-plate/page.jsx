@@ -64,7 +64,7 @@ export default function AluminiumAlloyPlate() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-aluminium-alloy-plate.png"
+              src="/isi-products/isi-certificate-aluminium-alloy-plates.webp"
               alt="BIS ISI Certification for Wrought Aluminium Plates IS 736"
               width={420}
               height={320}
@@ -103,7 +103,7 @@ export default function AluminiumAlloyPlate() {
               >
                 BIS ISI certification
               </Link>{" "}
-              under IS 736:1986 is mandatory for these products. Manufacturers
+              under IS 736:1986 is required for these products. Manufacturers
               must obtain a BIS ISI license to use the ISI mark before
               manufacturing, importing, or selling them in the Indian market.
               This certification ensures compliance with prescribed quality and
@@ -370,7 +370,7 @@ export default function AluminiumAlloyPlate() {
           <div className="mt-5 bg-white border border-gray-200 rounded-lg p-4">
             <p className="text-gray-600 text-[14px] leading-6">
               <strong>Important Note:</strong> Product testing as per IS
-              736:1986 is mandatory before grant of license. BIS evaluates
+              736:1986 is required before grant of license. BIS evaluates
               manufacturing capability, testing facilities, and quality control
               systems during certification. Fees are indicative and subject to
               change as per BIS guidelines.
@@ -407,7 +407,7 @@ export default function AluminiumAlloyPlate() {
               2. Mandatory Market Compliance
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              BIS ISI certification is mandatory for products covered under IS
+              BIS ISI certification is required for products covered under IS
               736:1986 before they can be marketed in India.
             </p>
           </div>
@@ -463,10 +463,10 @@ export default function AluminiumAlloyPlate() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <h3 className="font-semibold text-gray-900 mb-2">
-              2. Is BIS ISI certification mandatory for aluminium plates?
+              2. Is BIS ISI certification required for aluminium plates?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes, BIS ISI certification is mandatory for products covered under
+              Yes, BIS ISI certification is required for products covered under
               IS 736:1986.
             </p>
           </div>

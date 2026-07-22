@@ -65,7 +65,7 @@ export default function AluminiumWire() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-alluminium-allow-wire.png"
+              src="/isi-products/isi-certificate-aluminium-alloy-wire.webp"
               alt="BIS ISI Certification for Wrought Aluminium and Aluminium Alloy Wire IS 739"
               width={420}
               height={320}
@@ -422,10 +422,10 @@ export default function AluminiumWire() {
 
           <div className="bg-white border border-gray-300 rounded-lg p-4">
             <h3 className="font-semibold mb-2">
-              3. Is BIS ISI certification mandatory?
+              3. Is BIS ISI certification required?
             </h3>
             <p className="text-gray-600 text-[15px] leading-6 text-justify">
-              Yes, certification is mandatory as per applicable Quality Control
+              Yes, certification is required as per applicable Quality Control
               Orders (QCO).
             </p>
           </div>
