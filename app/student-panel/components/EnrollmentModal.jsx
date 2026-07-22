@@ -1,405 +1,54 @@
-// "use client";
-
-// import { useState } from "react";
-// import { X, CheckCircle2, Loader2 } from "lucide-react";
-
-// export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
-//   // Form State
-//   const [formData, setFormData] = useState({
-//     firstName: "",
-//     lastName: "",
-//     dob: "",
-//     organization: "",
-//     qualification: "",
-//     gender: "",
-//     mobile: "",
-//     whatsapp: "",
-//     email: "",
-//     address: "",
-//     city: "",
-//     state: "",
-//     country: "",
-//     postalCode: "",
-//     startDate: "",
-//     confirmAccurate: false,
-//     agreeTerms: false,
-//     consentComms: false,
-//   });
-
-//   // OTP States
-//   const [emailStatus, setEmailStatus] = useState("idle");
-//   const [mobileStatus, setMobileStatus] = useState("idle");
-//   const [emailOtp, setEmailOtp] = useState("");
-//   const [mobileOtp, setMobileOtp] = useState("");
-
-//   const [isSubmitting, setIsSubmitting] = useState(false);
-
-//   // If modal is not open, don't render anything
-//   if (!isOpen) return null;
-
-//   const handleChange = (e) => {
-//     const { name, value, type, checked } = e.target;
-//     setFormData((prev) => ({
-//       ...prev,
-//       [name]: type === "checkbox" ? checked : value,
-//     }));
-//   };
-
-//   const handleSendEmailOtp = async () => {
-//     if (!formData.email) {
-//       return showNotification("Please enter your email address first.", "error");
-//     }
-//     setEmailStatus("loading");
-//     setTimeout(() => {
-//       setEmailStatus("sent");
-//       showNotification("OTP sent successfully to your email!", "success");
-//     }, 1500);
-//   };
-
-//   const handleVerifyEmailOtp = async () => {
-//     if (!emailOtp) {
-//       return showNotification("Please enter the email OTP.", "error");
-//     }
-//     setEmailStatus("verified");
-//     showNotification("Email verified successfully!", "success");
-//   };
-
-//   const handleSendMobileOtp = async () => {
-//     if (!formData.mobile) {
-//       return showNotification("Please enter your mobile number first.", "error");
-//     }
-//     setMobileStatus("loading");
-//     setTimeout(() => {
-//       setMobileStatus("sent");
-//       showNotification("OTP sent successfully via SMS!", "success");
-//     }, 1500);
-//   };
-
-//   const handleVerifyMobileOtp = async () => {
-//     if (!mobileOtp) {
-//       return showNotification("Please enter the mobile OTP.", "error");
-//     }
-//     setMobileStatus("verified");
-//     showNotification("Mobile number verified successfully!", "success");
-//   };
-
-//   const handleSubmitEnrollment = async (e) => {
-//     e.preventDefault();
-    
-//     if (emailStatus !== "verified" || mobileStatus !== "verified") {
-//       return showNotification("Please verify both your Email and Mobile Number before submitting.", "error");
-//     }
-
-//     setIsSubmitting(true);
-
-//     try {
-//       // Connect to backend logic here
-//       setTimeout(() => {
-//         showNotification("Enrollment Successful! We will contact you on WhatsApp shortly.", "success");
-//         onClose(); // Close the modal on success
-//         setIsSubmitting(false);
-//       }, 2000);
-//     } catch (error) {
-//       showNotification("Something went wrong. Please try again.", "error");
-//       setIsSubmitting(false);
-//     }
-//   };
-
-//   return (
-//     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md p-4 transition-opacity">
-//       <div className="bg-white p-6 md:p-8 rounded-2xl max-w-4xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl animate-in zoom-in-95 duration-200">
-//         <button 
-//           onClick={onClose}
-//           className="absolute top-4 right-4 text-gray-400 hover:text-red-500 bg-gray-50 hover:bg-red-50 rounded-full p-2 transition-colors"
-//         >
-//           <X size={24} />
-//         </button>
-        
-//         <div className="border-b pb-4 mb-6">
-//           <h2 className="text-2xl md:text-3xl font-bold text-[#0075B6]">Training Enrollment Form</h2>
-//           <p className="text-gray-600 text-sm mt-2">Please fill in your details and verify your contact information to enroll.</p>
-//         </div>
-        
-//         <form onSubmit={handleSubmitEnrollment} className="space-y-8" autoComplete="off">
-          
-//           {/* --- 1. Personal & General Details --- */}
-//           <div>
-//             <h3 className="text-lg font-semibold bg-gray-50 border border-gray-200 px-4 py-2.5 rounded-lg mb-4 text-gray-800 shadow-sm">1. Personal Details</h3>
-//             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-2">
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">First Name *</label>
-//                 <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Second Name *</label>
-//                 <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Date of Birth *</label>
-//                 <input type="date" name="dob" value={formData.dob} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all text-gray-700" />
-//               </div>
-
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Gender *</label>
-//                 <select name="gender" value={formData.gender} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all bg-white">
-//                   <option value="">Select Gender</option>
-//                   <option value="Male">Male</option>
-//                   <option value="Female">Female</option>
-//                   <option value="Other">Other</option>
-//                 </select>
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Organization</label>
-//                 <input type="text" name="organization" value={formData.organization} onChange={handleChange} placeholder="Company or College" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Qualification *</label>
-//                 <input type="text" name="qualification" value={formData.qualification} onChange={handleChange} required placeholder="Highest Degree/Diploma" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* --- 2. Contact & OTP Verification --- */}
-//           <div>
-//             <h3 className="text-lg font-semibold bg-gray-50 border border-gray-200 px-4 py-2.5 rounded-lg mb-4 text-gray-800 shadow-sm">2. Contact Verification</h3>
-//             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5 px-2">
-              
-//               {/* Mobile Verification Block */}
-//               <div className={`p-5 rounded-xl border transition-all ${mobileStatus === "verified" ? "bg-green-50/50 border-green-200" : "bg-gray-50 border-gray-200 shadow-sm"}`}>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Mobile Number *</label>
-//                 <div className="flex gap-2">
-//                   <input 
-//                     type="tel" 
-//                     name="mobile" 
-//                     value={formData.mobile} 
-//                     onChange={handleChange} 
-//                     disabled={mobileStatus === "verified"}
-//                     required 
-//                     placeholder="10-digit mobile number"
-//                     className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none disabled:bg-gray-100 disabled:text-gray-500 transition-all" 
-//                   />
-//                   {mobileStatus !== "verified" && (
-//                     <button 
-//                       type="button" 
-//                       onClick={handleSendMobileOtp}
-//                       disabled={mobileStatus === "loading"}
-//                       className="bg-gray-800 text-white px-5 py-2.5 text-sm rounded-lg font-medium hover:bg-black whitespace-nowrap disabled:opacity-70 transition-colors shadow-sm"
-//                     >
-//                       {mobileStatus === "loading" ? <Loader2 size={18} className="animate-spin mx-auto" /> : mobileStatus === "sent" ? "Resend OTP" : "Get OTP"}
-//                     </button>
-//                   )}
-//                 </div>
-
-//                 {mobileStatus === "sent" && (
-//                   <div className="flex gap-2 mt-3 animate-in slide-in-from-top-2 fade-in duration-300">
-//                     <input 
-//                       type="text" 
-//                       placeholder="Enter SMS OTP" 
-//                       value={mobileOtp}
-//                       onChange={(e) => setMobileOtp(e.target.value)}
-//                       autoComplete="one-time-code"
-//                       className="w-full border border-blue-300 bg-white rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" 
-//                     />
-//                     <button 
-//                       type="button" 
-//                       onClick={handleVerifyMobileOtp}
-//                       className="bg-[#0075B6] text-white px-6 py-2.5 text-sm rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm"
-//                     >
-//                       Verify
-//                     </button>
-//                   </div>
-//                 )}
-//                 {mobileStatus === "verified" && (
-//                   <p className="text-green-700 text-sm font-semibold mt-3 flex items-center gap-1.5"><CheckCircle2 size={18} /> Mobile Verified successfully!</p>
-//                 )}
-//               </div>
-
-//               {/* Email Verification Block */}
-//               <div className={`p-5 rounded-xl border transition-all ${emailStatus === "verified" ? "bg-green-50/50 border-green-200" : "bg-gray-50 border-gray-200 shadow-sm"}`}>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Email Address *</label>
-//                 <div className="flex gap-2">
-//                   <input 
-//                     type="email" 
-//                     name="email" 
-//                     value={formData.email} 
-//                     onChange={handleChange} 
-//                     disabled={emailStatus === "verified"}
-//                     required 
-//                     placeholder="yourname@domain.com"
-//                     className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none disabled:bg-gray-100 disabled:text-gray-500 transition-all" 
-//                   />
-//                   {emailStatus !== "verified" && (
-//                     <button 
-//                       type="button" 
-//                       onClick={handleSendEmailOtp}
-//                       disabled={emailStatus === "loading"}
-//                       className="bg-gray-800 text-white px-5 py-2.5 text-sm rounded-lg font-medium hover:bg-black whitespace-nowrap disabled:opacity-70 transition-colors shadow-sm"
-//                     >
-//                       {emailStatus === "loading" ? <Loader2 size={18} className="animate-spin mx-auto" /> : emailStatus === "sent" ? "Resend OTP" : "Get OTP"}
-//                     </button>
-//                   )}
-//                 </div>
-
-//                 {emailStatus === "sent" && (
-//                   <div className="flex gap-2 mt-3 animate-in slide-in-from-top-2 fade-in duration-300">
-//                     <input 
-//                       type="text" 
-//                       placeholder="Enter Email OTP" 
-//                       value={emailOtp}
-//                       onChange={(e) => setEmailOtp(e.target.value)}
-//                       autoComplete="one-time-code"
-//                       className="w-full border border-blue-300 bg-white rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" 
-//                     />
-//                     <button 
-//                       type="button" 
-//                       onClick={handleVerifyEmailOtp}
-//                       className="bg-[#0075B6] text-white px-6 py-2.5 text-sm rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm"
-//                     >
-//                       Verify
-//                     </button>
-//                   </div>
-//                 )}
-//                 {emailStatus === "verified" && (
-//                   <p className="text-green-700 text-sm font-semibold mt-3 flex items-center gap-1.5"><CheckCircle2 size={18} /> Email Verified successfully!</p>
-//                 )}
-//               </div>
-
-//               <div className="md:col-span-2 mt-2">
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">WhatsApp Number *</label>
-//                 <input type="tel" name="whatsapp" value={formData.whatsapp} onChange={handleChange} required placeholder="Include country code if outside India" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none md:max-w-md transition-all" />
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* --- 3. Location & Availability --- */}
-//           <div>
-//             <h3 className="text-lg font-semibold bg-gray-50 border border-gray-200 px-4 py-2.5 rounded-lg mb-4 text-gray-800 shadow-sm">3. Address & Availability</h3>
-//             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-2">
-//               <div className="md:col-span-2">
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Full Address *</label>
-//                 <input type="text" name="address" value={formData.address} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">City *</label>
-//                 <input type="text" name="city" value={formData.city} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">State *</label>
-//                 <input type="text" name="state" value={formData.state} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//               </div>
-//               <div className="grid grid-cols-2 gap-3">
-//                 <div>
-//                   <label className="block text-sm font-medium text-gray-700 mb-1.5">Country *</label>
-//                   <input type="text" name="country" value={formData.country} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//                 </div>
-//                 <div>
-//                   <label className="block text-sm font-medium text-gray-700 mb-1.5">Postal Code *</label>
-//                   <input type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-//                 </div>
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Available Date to Start Training *</label>
-//                 <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none text-gray-700 transition-all" />
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* --- 4. Declarations --- */}
-//           <div className="bg-blue-50/70 p-6 rounded-xl border border-blue-100 shadow-inner">
-//             <h3 className="text-md font-bold text-[#0a192f] mb-4">Declarations</h3>
-//             <div className="space-y-4">
-//               <label className="flex items-start gap-3 cursor-pointer group">
-//                 <div className="relative flex items-start">
-//                   <input type="checkbox" name="confirmAccurate" checked={formData.confirmAccurate} onChange={handleChange} required className="peer mt-1 w-5 h-5 border-2 border-gray-300 rounded text-[#0075B6] focus:ring-[#0075B6] transition-all cursor-pointer" />
-//                 </div>
-//                 <span className="text-sm text-gray-700 font-medium group-hover:text-black transition-colors pt-1">I confirm that the information provided is accurate.</span>
-//               </label>
-//               <label className="flex items-start gap-3 cursor-pointer group">
-//                 <div className="relative flex items-start">
-//                   <input type="checkbox" name="agreeTerms" checked={formData.agreeTerms} onChange={handleChange} required className="peer mt-1 w-5 h-5 border-2 border-gray-300 rounded text-[#0075B6] focus:ring-[#0075B6] transition-all cursor-pointer" />
-//                 </div>
-//                 <span className="text-sm text-gray-700 font-medium group-hover:text-black transition-colors pt-1">I agree to the training terms and conditions.</span>
-//               </label>
-//               <label className="flex items-start gap-3 cursor-pointer group">
-//                 <div className="relative flex items-start">
-//                   <input type="checkbox" name="consentComms" checked={formData.consentComms} onChange={handleChange} required className="peer mt-1 w-5 h-5 border-2 border-gray-300 rounded text-[#0075B6] focus:ring-[#0075B6] transition-all cursor-pointer" />
-//                 </div>
-//                 <span className="text-sm text-gray-700 font-medium group-hover:text-black transition-colors pt-1">I consent to receive training-related communications.</span>
-//               </label>
-//             </div>
-//           </div>
-
-//           <div className="flex flex-col-reverse sm:flex-row justify-end gap-3 pt-6 border-t border-gray-200">
-//             <button 
-//               type="button"
-//               onClick={onClose}
-//               className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 font-medium transition-colors"
-//             >
-//               Cancel
-//             </button>
-//             <button 
-//               type="submit" 
-//               disabled={isSubmitting || emailStatus !== "verified" || mobileStatus !== "verified"}
-//               className="w-full sm:w-auto px-8 py-3 bg-[#0075B6] hover:bg-blue-700 text-white rounded-lg font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30"
-//             >
-//               {isSubmitting ? <><Loader2 size={18} className="animate-spin" /> Enrolling...</> : "Submit Enrollment"}
-//             </button>
-//           </div>
-
-//         </form>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { X, CheckCircle2, Loader2 } from "lucide-react";
+import { X, CheckCircle2, Loader2, User, Phone, Mail, MapPin, Calendar, Award, MessageCircle } from "lucide-react";
 import { auth } from "@/src/lib/firebase";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import Link from "next/link";
+
+// ── Default empty form ──
+const EMPTY_FORM = {
+  firstName: "",
+  middleName: "",
+  lastName: "",
+  dob: "",
+  organization: "",
+  qualification: "",
+  gender: "",
+  mobile: "",
+  whatsapp: "",
+  email: "",
+  address: "",
+  city: "",
+  state: "",
+  country: "",
+  postalCode: "",
+  startDate: "",
+  confirmAccurate: false,
+  agreeTerms: false,
+  consentComms: false,
+};
 
 export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    dob: "",
-    organization: "",
-    qualification: "",
-    gender: "",
-    mobile: "",
-    whatsapp: "",
-    email: "",
-    address: "",
-    city: "",
-    state: "",
-    country: "",
-    postalCode: "",
-    startDate: "",
-    confirmAccurate: false,
-    agreeTerms: false,
-    consentComms: false,
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
 
   // Email OTP
-  const [emailStatus, setEmailStatus]         = useState("idle");
-  const [emailOtp, setEmailOtp]               = useState("");
-  const [emailHash, setEmailHash]             = useState("");
-  const [emailExpiresAt, setEmailExpiresAt]   = useState(null);
+  const [emailStatus, setEmailStatus]       = useState("idle");
+  const [emailOtp, setEmailOtp]             = useState("");
+  const [emailHash, setEmailHash]           = useState("");
+  const [emailExpiresAt, setEmailExpiresAt] = useState(null);
 
   // Mobile OTP
-  const [mobileStatus, setMobileStatus]       = useState("idle");
-  const [mobileOtp, setMobileOtp]             = useState("");
-  const confirmationResultRef                 = useRef(null);
-  const recaptchaVerifierRef                  = useRef(null);
-  const recaptchaContainerRef                 = useRef(null); // ref to the div element
+  const [mobileStatus, setMobileStatus]     = useState("idle");
+  const [mobileOtp, setMobileOtp]           = useState("");
+  const confirmationResultRef               = useRef(null);
+  const recaptchaVerifierRef                = useRef(null);
+  const recaptchaContainerRef               = useRef(null);
 
-  const [isSubmitting, setIsSubmitting]       = useState(false);
+  // UI States
+  const [isSubmitting, setIsSubmitting]     = useState(false);
+  const [showSuccess, setShowSuccess]       = useState(false);
+  const [successStudentId, setSuccessStudentId] = useState("");
 
   // ── Safely destroy reCAPTCHA ──
   const destroyRecaptcha = () => {
@@ -410,37 +59,39 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
   };
 
   // ── Initialize invisible reCAPTCHA once modal opens ──
-  // We mount it into a real <div ref> so it's always in the DOM
   useEffect(() => {
     if (!isOpen) return;
-
-    // Wait one tick for the DOM div to be available
     const t = setTimeout(() => {
       if (recaptchaContainerRef.current && !recaptchaVerifierRef.current) {
         try {
           recaptchaVerifierRef.current = new RecaptchaVerifier(
             auth,
-            recaptchaContainerRef.current, // ← pass the actual DOM element, not an id string
+            recaptchaContainerRef.current,
             { size: "invisible" }
           );
-          // Pre-render so it's ready instantly when user clicks Get OTP
           recaptchaVerifierRef.current.render();
         } catch (err) {
           console.error("reCAPTCHA init error:", err);
         }
       }
     }, 500);
-
     return () => clearTimeout(t);
   }, [isOpen]);
 
-  // ── Cleanup on modal close ──
+  // ── Full reset when modal closes ──
   useEffect(() => {
     if (!isOpen) {
       destroyRecaptcha();
       setMobileStatus("idle");
       setMobileOtp("");
+      setEmailStatus("idle");
+      setEmailOtp("");
+      setEmailHash("");
+      setEmailExpiresAt(null);
       confirmationResultRef.current = null;
+      setShowSuccess(false);
+      setSuccessStudentId("");
+      setFormData(EMPTY_FORM); // ← reset form to empty on close
     }
   }, [isOpen]);
 
@@ -454,54 +105,49 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
     }));
   };
 
+  // ── Mobile: max 10 digits ──
+  const handleMobileChange = (e) => {
+    const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+    setFormData((prev) => ({ ...prev, mobile: digits }));
+  };
+
+  // ── Pincode: max 6 digits ──
+  const handlePostalChange = (e) => {
+    const digits = e.target.value.replace(/\D/g, "").slice(0, 6);
+    setFormData((prev) => ({ ...prev, postalCode: digits }));
+  };
+
   // ══════════════════════════════════════════
   //  MOBILE OTP — Send
   // ══════════════════════════════════════════
   const handleSendMobileOtp = async () => {
     const rawMobile = formData.mobile.trim();
-    if (!rawMobile) {
-      return showNotification("Please enter your mobile number first.", "error");
-    }
+    if (!rawMobile) return showNotification("Please enter your mobile number first.", "error");
+    if (rawMobile.length !== 10) return showNotification("Please enter a valid 10-digit mobile number.", "error");
 
-    const phone = rawMobile.startsWith("+") ? rawMobile : `+91${rawMobile}`;
+    const phone = `+91${rawMobile}`;
     setMobileStatus("loading");
 
     try {
-      // If verifier was cleared or never set, create a fresh one
       if (!recaptchaVerifierRef.current) {
         recaptchaVerifierRef.current = new RecaptchaVerifier(
-          auth,
-          recaptchaContainerRef.current,
-          { size: "invisible" }
+          auth, recaptchaContainerRef.current, { size: "invisible" }
         );
         await recaptchaVerifierRef.current.render();
       }
-
-      const confirmationResult = await signInWithPhoneNumber(
-        auth,
-        phone,
-        recaptchaVerifierRef.current
-      );
-
+      const confirmationResult = await signInWithPhoneNumber(auth, phone, recaptchaVerifierRef.current);
       confirmationResultRef.current = confirmationResult;
       setMobileStatus("sent");
       showNotification("OTP sent to your mobile number!", "success");
-
     } catch (err) {
       console.error("Firebase Phone Auth error:", err);
-      // Reset verifier on failure so next attempt gets a fresh one
       destroyRecaptcha();
       setMobileStatus("idle");
-
       const msg =
-        err.code === "auth/invalid-phone-number"
-          ? "Invalid phone number. Please use format: +919876543210"
-          : err.code === "auth/too-many-requests"
-          ? "Too many attempts. Please wait a few minutes and try again."
-          : err.code === "auth/invalid-app-credential"
-          ? "Domain not authorized. Please contact support."
-          : `Failed to send OTP: ${err.code || err.message}`;
-
+        err.code === "auth/invalid-phone-number" ? "Invalid phone number." :
+        err.code === "auth/too-many-requests" ? "Too many attempts. Please wait and try again." :
+        err.code === "auth/invalid-app-credential" ? "Domain not authorized. Please contact support." :
+        `Failed to send OTP: ${err.code || err.message}`;
       showNotification(msg, "error");
     }
   };
@@ -514,13 +160,10 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
     setMobileStatus("idle");
     setMobileOtp("");
     confirmationResultRef.current = null;
-    // Re-init verifier then send
     setTimeout(async () => {
       try {
         recaptchaVerifierRef.current = new RecaptchaVerifier(
-          auth,
-          recaptchaContainerRef.current,
-          { size: "invisible" }
+          auth, recaptchaContainerRef.current, { size: "invisible" }
         );
         await recaptchaVerifierRef.current.render();
         handleSendMobileOtp();
@@ -535,12 +178,8 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
   //  MOBILE OTP — Verify
   // ══════════════════════════════════════════
   const handleVerifyMobileOtp = async () => {
-    if (!mobileOtp.trim()) {
-      return showNotification("Please enter the OTP sent to your mobile.", "error");
-    }
-    if (!confirmationResultRef.current) {
-      return showNotification("Session expired. Please request OTP again.", "error");
-    }
+    if (!mobileOtp.trim()) return showNotification("Please enter the OTP sent to your mobile.", "error");
+    if (!confirmationResultRef.current) return showNotification("Session expired. Please request OTP again.", "error");
     setMobileStatus("verifying");
     try {
       await confirmationResultRef.current.confirm(mobileOtp.trim());
@@ -550,11 +189,9 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
       console.error("Firebase confirm OTP error:", err);
       setMobileStatus("sent");
       const msg =
-        err.code === "auth/code-expired"
-          ? "OTP expired. Please request a new one."
-          : err.code === "auth/invalid-verification-code"
-          ? "Incorrect OTP. Please check and try again."
-          : "Verification failed. Please try again.";
+        err.code === "auth/code-expired" ? "OTP expired. Please request a new one." :
+        err.code === "auth/invalid-verification-code" ? "Incorrect OTP. Please check and try again." :
+        "Verification failed. Please try again.";
       showNotification(msg, "error");
     }
   };
@@ -563,9 +200,7 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
   //  EMAIL OTP — Send
   // ══════════════════════════════════════════
   const handleSendEmailOtp = async () => {
-    if (!formData.email) {
-      return showNotification("Please enter your email address first.", "error");
-    }
+    if (!formData.email) return showNotification("Please enter your email address first.", "error");
     setEmailStatus("loading");
     setEmailOtp("");
     try {
@@ -594,20 +229,13 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
   //  EMAIL OTP — Verify
   // ══════════════════════════════════════════
   const handleVerifyEmailOtp = async () => {
-    if (!emailOtp.trim()) {
-      return showNotification("Please enter the OTP sent to your email.", "error");
-    }
+    if (!emailOtp.trim()) return showNotification("Please enter the OTP sent to your email.", "error");
     setEmailStatus("verifying");
     try {
       const res = await fetch("/api/auth/verify-email-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: formData.email,
-          otp: emailOtp.trim(),
-          hash: emailHash,
-          expiresAt: emailExpiresAt,
-        }),
+        body: JSON.stringify({ email: formData.email, otp: emailOtp.trim(), hash: emailHash, expiresAt: emailExpiresAt }),
       });
       const data = await res.json();
       if (!res.ok || data.error) {
@@ -629,10 +257,7 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
   const handleSubmitEnrollment = async (e) => {
     e.preventDefault();
     if (emailStatus !== "verified" || mobileStatus !== "verified") {
-      return showNotification(
-        "Please verify both Email and Mobile Number before submitting.",
-        "error"
-      );
+      return showNotification("Please verify both Email and Mobile Number before submitting.", "error");
     }
     setIsSubmitting(true);
     try {
@@ -643,14 +268,17 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
       });
       const data = await res.json();
       if (!res.ok || data.error) {
-        showNotification(data.error || "Submission failed. Please try again.", "error");
+        // ── Duplicate check — show special notification ──
+        if (data.duplicate) {
+          showNotification(data.error, "error");
+        } else {
+          showNotification(data.error || "Submission failed. Please try again.", "error");
+        }
         return;
       }
-      showNotification(
-        "Enrollment Successful! We will contact you on WhatsApp shortly.",
-        "success"
-      );
-      onClose();
+      // ── Success — show popup ──
+      setSuccessStudentId(data.studentId);
+      setShowSuccess(true);
     } catch (err) {
       console.error("Enrollment submit error:", err);
       showNotification("Network error. Please try again.", "error");
@@ -659,305 +287,408 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
     }
   };
 
+  // ── Handle success popup close ──
+  const handleSuccessClose = () => {
+    setShowSuccess(false);
+    onClose(); // closes modal and resets form via useEffect
+  };
+
+  // ── Input classes ──
+  const inputCls = "w-full border border-gray-200 rounded-xl px-4 py-3 focus:border-[#0075B6] focus:ring-2 focus:ring-[#0075B6]/20 outline-none transition-all bg-white text-gray-800 placeholder:text-gray-400 text-sm";
+  const labelCls = "block text-sm font-semibold text-gray-700 mb-1.5";
+  const sectionHeadCls = "flex items-center gap-3 mb-5";
+
   // ══════════════════════════════════════════
   //  RENDER
   // ══════════════════════════════════════════
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md p-4">
-
-      {/*
-        ── Invisible reCAPTCHA container ──
-        Must be a <div>, always in the DOM while modal is open,
-        outside the scrollable area. Zero size — user never sees it.
-      */}
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-3 sm:p-4"
+      // ── Prevent background page scroll when touching overlay ──
+      onWheel={(e) => e.stopPropagation()}
+    >
+      {/* Invisible reCAPTCHA anchor — zero size, always in DOM */}
       <div
         ref={recaptchaContainerRef}
-        style={{ position: "absolute", bottom: 0, left: 0, width: 0, height: 0, overflow: "hidden" }}
+        style={{ position: "fixed", bottom: 0, left: 0, width: 0, height: 0, overflow: "hidden", zIndex: -1 }}
       />
 
-      <div className="bg-white p-6 md:p-8 rounded-2xl max-w-4xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl animate-in zoom-in-95 duration-200">
+      {/* ════════════════════════════════════
+          SUCCESS POPUP
+      ════════════════════════════════════ */}
+      {showSuccess && (
+        <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 text-center animate-in zoom-in-95 duration-300">
+            {/* Green circle with checkmark */}
+            <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 size={52} className="text-green-500" strokeWidth={1.5} />
+            </div>
 
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-red-500 bg-gray-50 hover:bg-red-50 rounded-full p-2 transition-colors"
-        >
-          <X size={24} />
-        </button>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Enrollment Successful!</h2>
+            <p className="text-gray-500 text-sm mb-4">Your enrollment has been submitted successfully.</p>
 
-        <div className="border-b pb-4 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0075B6]">Training Enrollment Form</h2>
-          <p className="text-gray-600 text-sm mt-2">
-            Please fill in your details and verify your contact information to enroll.
-          </p>
+            {/* Student ID badge */}
+            <div className="bg-[#0075B6]/10 border border-[#0075B6]/20 rounded-2xl px-6 py-4 mb-6 inline-block w-full">
+              <p className="text-xs text-[#0075B6] font-semibold uppercase tracking-wider mb-1">Your Student ID</p>
+              <p className="text-3xl font-extrabold text-[#0075B6]">{successStudentId}</p>
+              <p className="text-xs text-gray-500 mt-1">Please save this for future reference</p>
+            </div>
+
+            <p className="text-gray-600 text-sm mb-8 leading-relaxed">
+              Our team will contact you shortly on your WhatsApp number to confirm your training schedule.
+            </p>
+
+            {/* Two buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/contact-us"
+                onClick={handleSuccessClose}
+                className="flex-1 flex items-center justify-center gap-2 bg-[#0075B6] hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer shadow-md shadow-blue-500/20"
+              >
+                <MessageCircle size={18} />
+                Contact Us
+              </Link>
+              <button
+                type="button"
+                onClick={handleSuccessClose}
+                className="flex-1 flex items-center justify-center gap-2 border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer"
+              >
+                <X size={18} />
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ════════════════════════════════════
+          MAIN MODAL
+      ════════════════════════════════════ */}
+      <div className="bg-white rounded-3xl w-full max-w-4xl relative shadow-2xl flex flex-col"
+        style={{ maxHeight: "92vh" }}
+      >
+        {/* ── Sticky Header ── */}
+        <div className="flex items-center justify-between px-6 md:px-8 py-5 border-b border-gray-100 shrink-0 bg-gradient-to-r from-[#0075B6] to-blue-700 rounded-t-3xl">
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold text-white">Training Enrollment Form</h2>
+            <p className="text-blue-100 text-xs mt-0.5">Fill in your details to enroll in our free training program</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="text-white/70 hover:text-white hover:bg-white/20 rounded-full p-2 transition-all cursor-pointer shrink-0"
+          >
+            <X size={22} />
+          </button>
         </div>
 
-        <form onSubmit={handleSubmitEnrollment} className="space-y-8" autoComplete="off">
+        {/* Progress indicator */}
+        <div className="flex px-6 md:px-8 py-3 gap-2 bg-blue-50/50 border-b border-gray-100 shrink-0">
+          {["Personal Details", "Contact Verification", "Address", "Declarations"].map((step, i) => (
+            <div key={i} className="flex items-center gap-1.5 flex-1">
+              <div className="w-5 h-5 rounded-full bg-[#0075B6] flex items-center justify-center shrink-0">
+                <span className="text-white text-[10px] font-bold">{i + 1}</span>
+              </div>
+              <span className="text-[10px] font-medium text-gray-500 hidden sm:block truncate">{step}</span>
+              {i < 3 && <div className="h-px bg-gray-200 flex-1 hidden sm:block" />}
+            </div>
+          ))}
+        </div>
 
-          {/* ─── 1. Personal Details ─── */}
-          <div>
-            <h3 className="text-lg font-semibold bg-gray-50 border border-gray-200 px-4 py-2.5 rounded-lg mb-4 text-gray-800 shadow-sm">
-              1. Personal Details
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-2">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">First Name *</label>
-                <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
+        {/* ── Scrollable Form Body — ONLY this div scrolls ── */}
+        <div
+          className="overflow-y-auto flex-1 px-6 md:px-8 py-6"
+          style={{ overscrollBehavior: "contain" }}
+        >
+          <form onSubmit={handleSubmitEnrollment} className="space-y-8" autoComplete="off">
+
+            {/* ══════════════ 1. PERSONAL DETAILS ══════════════ */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 md:p-6">
+              <div className={sectionHeadCls}>
+                <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                  <User size={18} className="text-[#0075B6]" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-gray-900">Personal Details</h3>
+                  <p className="text-xs text-gray-400">Fields marked * are required</p>
+                </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Second Name *</label>
-                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Date of Birth *</label>
-                <input type="date" name="dob" value={formData.dob} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all text-gray-700" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Gender *</label>
-                <select name="gender" value={formData.gender} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all bg-white">
-                  <option value="">Select Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Organization</label>
-                <input type="text" name="organization" value={formData.organization} onChange={handleChange} placeholder="Company or College" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Qualification *</label>
-                <input type="text" name="qualification" value={formData.qualification} onChange={handleChange} required placeholder="Highest Degree/Diploma" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label className={labelCls}>First Name *</label>
+                  <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required placeholder="Enter first name" className={inputCls} />
+                </div>
+                <div>
+                  <label className={labelCls}>Middle Name <span className="text-gray-400 font-normal text-xs">(optional)</span></label>
+                  <input type="text" name="middleName" value={formData.middleName} onChange={handleChange} placeholder="Enter middle name" className={inputCls} />
+                </div>
+                <div>
+                  <label className={labelCls}>Last Name *</label>
+                  <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required placeholder="Enter last name" className={inputCls} />
+                </div>
+                <div>
+                  <label className={labelCls}>Date of Birth *</label>
+                  <input type="date" name="dob" value={formData.dob} onChange={handleChange} required className={inputCls + " text-gray-700"} />
+                </div>
+                <div>
+                  <label className={labelCls}>Gender *</label>
+                  <select name="gender" value={formData.gender} onChange={handleChange} required className={inputCls}>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label className={labelCls}>Qualification *</label>
+                  <input type="text" name="qualification" value={formData.qualification} onChange={handleChange} required placeholder="Highest Degree/Diploma" className={inputCls} />
+                </div>
+                <div className="md:col-span-3">
+                  <label className={labelCls}>Organization <span className="text-gray-400 font-normal text-xs">(optional)</span></label>
+                  <input type="text" name="organization" value={formData.organization} onChange={handleChange} placeholder="Company or College name" className={inputCls} />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* ─── 2. Contact Verification ─── */}
-          <div>
-            <h3 className="text-lg font-semibold bg-gray-50 border border-gray-200 px-4 py-2.5 rounded-lg mb-4 text-gray-800 shadow-sm">
-              2. Contact Verification
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5 px-2">
-
-              {/* ── Mobile Block ── */}
-              <div className={`p-5 rounded-xl border transition-all ${
-                mobileStatus === "verified" ? "bg-green-50/50 border-green-200" : "bg-gray-50 border-gray-200 shadow-sm"
-              }`}>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Mobile Number *</label>
-                <div className="flex gap-2">
-                  <input
-                    type="tel"
-                    name="mobile"
-                    value={formData.mobile}
-                    onChange={handleChange}
-                    disabled={mobileStatus !== "idle"}
-                    required
-                    placeholder="+91XXXXXXXXXX"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none disabled:bg-gray-100 disabled:text-gray-500 transition-all"
-                  />
-                  {mobileStatus === "idle" && (
-                    <button
-                      type="button"
-                      onClick={handleSendMobileOtp}
-                      className="bg-gray-800 text-white px-5 py-2.5 text-sm rounded-lg font-medium hover:bg-black whitespace-nowrap transition-colors shadow-sm"
-                    >
-                      Get OTP
-                    </button>
-                  )}
-                  {mobileStatus === "loading" && (
-                    <div className="flex items-center justify-center px-4 bg-gray-100 rounded-lg border border-gray-200">
-                      <Loader2 size={22} className="animate-spin text-[#0075B6]" />
-                    </div>
-                  )}
+            {/* ══════════════ 2. CONTACT VERIFICATION ══════════════ */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 md:p-6">
+              <div className={sectionHeadCls}>
+                <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                  <Phone size={18} className="text-[#0075B6]" />
                 </div>
+                <div>
+                  <h3 className="text-base font-bold text-gray-900">Contact Verification</h3>
+                  <p className="text-xs text-gray-400">Verify your mobile and email via OTP</p>
+                </div>
+              </div>
 
-                {(mobileStatus === "sent" || mobileStatus === "verifying") && (
-                  <div className="mt-3 animate-in slide-in-from-top-2 fade-in duration-300">
-                    <p className="text-xs text-green-700 font-medium mb-2">✓ OTP sent. Enter it below:</p>
-                    <div className="flex gap-2">
-                      <input
-                        type="text"
-                        inputMode="numeric"
-                        maxLength={6}
-                        placeholder="Enter 6-digit OTP"
-                        value={mobileOtp}
-                        onChange={(e) => setMobileOtp(e.target.value.replace(/\D/g, ""))}
-                        autoComplete="one-time-code"
-                        className="w-full border border-blue-300 bg-white rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all font-mono text-lg tracking-widest"
-                      />
-                      <button
-                        type="button"
-                        onClick={handleVerifyMobileOtp}
-                        disabled={mobileStatus === "verifying"}
-                        className="bg-[#0075B6] text-white px-6 py-2.5 text-sm rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm disabled:opacity-70"
-                      >
-                        {mobileStatus === "verifying"
-                          ? <Loader2 size={18} className="animate-spin mx-auto" />
-                          : "Verify"}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                {/* Mobile */}
+                <div className={`rounded-2xl border p-4 transition-all ${
+                  mobileStatus === "verified" ? "border-green-300 bg-green-50/40" : "border-gray-200 bg-gray-50/50"
+                }`}>
+                  <label className={labelCls}>Mobile Number * <span className="text-gray-400 font-normal text-xs">(10 digits)</span></label>
+                  <div className="flex gap-2">
+                    <div className="flex items-center bg-gray-100 border border-gray-200 rounded-xl px-3 text-gray-600 text-sm font-medium shrink-0">
+                      +91
+                    </div>
+                    <input
+                      type="tel"
+                      name="mobile"
+                      value={formData.mobile}
+                      onChange={handleMobileChange}
+                      disabled={mobileStatus !== "idle"}
+                      required
+                      placeholder="XXXXXXXXXX"
+                      maxLength={10}
+                      inputMode="numeric"
+                      className={inputCls + " disabled:bg-gray-100 disabled:text-gray-400"}
+                    />
+                    {mobileStatus === "idle" && (
+                      <button type="button" onClick={handleSendMobileOtp}
+                        className="bg-gray-900 hover:bg-black text-white px-4 py-2.5 text-sm rounded-xl font-semibold whitespace-nowrap transition-all cursor-pointer shadow-sm shrink-0">
+                        Get OTP
+                      </button>
+                    )}
+                    {mobileStatus === "loading" && (
+                      <div className="flex items-center justify-center px-4 bg-gray-100 rounded-xl border border-gray-200 shrink-0">
+                        <Loader2 size={20} className="animate-spin text-[#0075B6]" />
+                      </div>
+                    )}
+                  </div>
+
+                  {(mobileStatus === "sent" || mobileStatus === "verifying") && (
+                    <div className="mt-3 animate-in slide-in-from-top-2 fade-in duration-300">
+                      <p className="text-xs text-green-700 font-semibold mb-2 flex items-center gap-1">
+                        <CheckCircle2 size={13} /> OTP sent successfully. Enter below:
+                      </p>
+                      <div className="flex gap-2">
+                        <input
+                          type="text" inputMode="numeric" maxLength={6}
+                          placeholder="• • • • • •"
+                          value={mobileOtp}
+                          onChange={(e) => setMobileOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                          autoComplete="one-time-code"
+                          className={inputCls + " font-mono text-xl tracking-[0.5em] text-center"}
+                        />
+                        <button type="button" onClick={handleVerifyMobileOtp}
+                          disabled={mobileStatus === "verifying"}
+                          className="bg-[#0075B6] hover:bg-blue-700 text-white px-5 py-2.5 text-sm rounded-xl font-semibold transition-all cursor-pointer shadow-sm disabled:opacity-60 shrink-0">
+                          {mobileStatus === "verifying" ? <Loader2 size={16} className="animate-spin" /> : "Verify"}
+                        </button>
+                      </div>
+                      <button type="button" onClick={handleResendMobileOtp}
+                        className="text-xs text-[#0075B6] hover:text-blue-800 underline mt-2 cursor-pointer transition-colors">
+                        Resend OTP
                       </button>
                     </div>
-                    <button
-                      type="button"
-                      onClick={handleResendMobileOtp}
-                      className="text-xs text-[#0075B6] underline mt-2 hover:text-blue-800 transition-colors"
-                    >
-                      Resend OTP
-                    </button>
-                  </div>
-                )}
-
-                {mobileStatus === "verified" && (
-                  <p className="text-green-700 text-sm font-semibold mt-3 flex items-center gap-1.5">
-                    <CheckCircle2 size={18} /> Mobile Verified successfully!
-                  </p>
-                )}
-              </div>
-
-              {/* ── Email Block ── */}
-              <div className={`p-5 rounded-xl border transition-all ${
-                emailStatus === "verified" ? "bg-green-50/50 border-green-200" : "bg-gray-50 border-gray-200 shadow-sm"
-              }`}>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Email Address *</label>
-                <div className="flex gap-2">
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    disabled={emailStatus === "verified"}
-                    required
-                    placeholder="yourname@domain.com"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none disabled:bg-gray-100 disabled:text-gray-500 transition-all"
-                  />
-                  {emailStatus !== "verified" && (
-                    <button
-                      type="button"
-                      onClick={handleSendEmailOtp}
-                      disabled={emailStatus === "loading"}
-                      className="bg-gray-800 text-white px-5 py-2.5 text-sm rounded-lg font-medium hover:bg-black whitespace-nowrap disabled:opacity-70 transition-colors shadow-sm"
-                    >
-                      {emailStatus === "loading"
-                        ? <Loader2 size={18} className="animate-spin mx-auto" />
-                        : emailStatus === "sent" || emailStatus === "verifying"
-                        ? "Resend"
-                        : "Get OTP"}
-                    </button>
+                  )}
+                  {mobileStatus === "verified" && (
+                    <div className="mt-3 flex items-center gap-2 text-green-700 text-sm font-semibold">
+                      <CheckCircle2 size={17} /> Mobile Verified!
+                    </div>
                   )}
                 </div>
 
-                {(emailStatus === "sent" || emailStatus === "verifying") && (
-                  <div className="flex gap-2 mt-3 animate-in slide-in-from-top-2 fade-in duration-300">
+                {/* Email */}
+                <div className={`rounded-2xl border p-4 transition-all ${
+                  emailStatus === "verified" ? "border-green-300 bg-green-50/40" : "border-gray-200 bg-gray-50/50"
+                }`}>
+                  <label className={labelCls}>Email Address *</label>
+                  <div className="flex gap-2">
                     <input
-                      type="text"
-                      inputMode="numeric"
-                      maxLength={6}
-                      placeholder="Enter 6-digit OTP"
-                      value={emailOtp}
-                      onChange={(e) => setEmailOtp(e.target.value.replace(/\D/g, ""))}
-                      autoComplete="one-time-code"
-                      className="w-full border border-blue-300 bg-white rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all font-mono text-lg tracking-widest"
+                      type="email" name="email" value={formData.email}
+                      onChange={handleChange} disabled={emailStatus === "verified"}
+                      required placeholder="yourname@domain.com"
+                      className={inputCls + " disabled:bg-gray-100 disabled:text-gray-400"}
                     />
-                    <button
-                      type="button"
-                      onClick={handleVerifyEmailOtp}
-                      disabled={emailStatus === "verifying"}
-                      className="bg-[#0075B6] text-white px-6 py-2.5 text-sm rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm disabled:opacity-70"
-                    >
-                      {emailStatus === "verifying"
-                        ? <Loader2 size={18} className="animate-spin mx-auto" />
-                        : "Verify"}
-                    </button>
+                    {emailStatus !== "verified" && (
+                      <button type="button" onClick={handleSendEmailOtp}
+                        disabled={emailStatus === "loading"}
+                        className="bg-gray-900 hover:bg-black text-white px-4 py-2.5 text-sm rounded-xl font-semibold whitespace-nowrap disabled:opacity-60 transition-all cursor-pointer shadow-sm shrink-0">
+                        {emailStatus === "loading" ? <Loader2 size={16} className="animate-spin" /> :
+                         emailStatus === "sent" || emailStatus === "verifying" ? "Resend" : "Get OTP"}
+                      </button>
+                    )}
                   </div>
-                )}
 
-                {emailStatus === "verified" && (
-                  <p className="text-green-700 text-sm font-semibold mt-3 flex items-center gap-1.5">
-                    <CheckCircle2 size={18} /> Email Verified successfully!
-                  </p>
-                )}
-              </div>
+                  {(emailStatus === "sent" || emailStatus === "verifying") && (
+                    <div className="mt-3 animate-in slide-in-from-top-2 fade-in duration-300">
+                      <p className="text-xs text-green-700 font-semibold mb-2 flex items-center gap-1">
+                        <CheckCircle2 size={13} /> OTP sent to your email. Enter below:
+                      </p>
+                      <div className="flex gap-2">
+                        <input
+                          type="text" inputMode="numeric" maxLength={6}
+                          placeholder="• • • • • •"
+                          value={emailOtp}
+                          onChange={(e) => setEmailOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                          autoComplete="one-time-code"
+                          className={inputCls + " font-mono text-xl tracking-[0.5em] text-center"}
+                        />
+                        <button type="button" onClick={handleVerifyEmailOtp}
+                          disabled={emailStatus === "verifying"}
+                          className="bg-[#0075B6] hover:bg-blue-700 text-white px-5 py-2.5 text-sm rounded-xl font-semibold transition-all cursor-pointer shadow-sm disabled:opacity-60 shrink-0">
+                          {emailStatus === "verifying" ? <Loader2 size={16} className="animate-spin" /> : "Verify"}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                  {emailStatus === "verified" && (
+                    <div className="mt-3 flex items-center gap-2 text-green-700 text-sm font-semibold">
+                      <CheckCircle2 size={17} /> Email Verified!
+                    </div>
+                  )}
+                </div>
 
-              <div className="md:col-span-2 mt-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">WhatsApp Number *</label>
-                <input type="tel" name="whatsapp" value={formData.whatsapp} onChange={handleChange} required placeholder="Include country code if outside India" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none md:max-w-md transition-all" />
+                {/* WhatsApp */}
+                <div className="md:col-span-2">
+                  <label className={labelCls}>WhatsApp Number *</label>
+                  <div className="flex gap-2 md:max-w-sm">
+                    <div className="flex items-center bg-gray-100 border border-gray-200 rounded-xl px-3 text-gray-600 text-sm font-medium shrink-0">
+                      +91
+                    </div>
+                    <input type="tel" name="whatsapp" value={formData.whatsapp}
+                      onChange={(e) => setFormData(p => ({ ...p, whatsapp: e.target.value.replace(/\D/g,"").slice(0,10) }))}
+                      required placeholder="WhatsApp number"
+                      maxLength={10} inputMode="numeric"
+                      className={inputCls} />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* ─── 3. Address & Availability ─── */}
-          <div>
-            <h3 className="text-lg font-semibold bg-gray-50 border border-gray-200 px-4 py-2.5 rounded-lg mb-4 text-gray-800 shadow-sm">
-              3. Address & Availability
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-2">
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Full Address *</label>
-                <input type="text" name="address" value={formData.address} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">City *</label>
-                <input type="text" name="city" value={formData.city} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">State *</label>
-                <input type="text" name="state" value={formData.state} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Country *</label>
-                  <input type="text" name="country" value={formData.country} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
+            {/* ══════════════ 3. ADDRESS & AVAILABILITY ══════════════ */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 md:p-6">
+              <div className={sectionHeadCls}>
+                <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-[#0075B6]" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Postal Code *</label>
-                  <input type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none transition-all" />
+                  <h3 className="text-base font-bold text-gray-900">Address & Availability</h3>
+                  <p className="text-xs text-gray-400">Your location and preferred start date</p>
                 </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Available Date to Start Training *</label>
-                <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:border-[#0075B6] focus:ring-1 focus:ring-[#0075B6] outline-none text-gray-700 transition-all" />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="md:col-span-2">
+                  <label className={labelCls}>Full Address *</label>
+                  <input type="text" name="address" value={formData.address} onChange={handleChange} required placeholder="House No., Street, Area" className={inputCls} />
+                </div>
+                <div>
+                  <label className={labelCls}>City *</label>
+                  <input type="text" name="city" value={formData.city} onChange={handleChange} required placeholder="Your city" className={inputCls} />
+                </div>
+                <div>
+                  <label className={labelCls}>State *</label>
+                  <input type="text" name="state" value={formData.state} onChange={handleChange} required placeholder="Your state" className={inputCls} />
+                </div>
+                <div>
+                  <label className={labelCls}>Country *</label>
+                  <input type="text" name="country" value={formData.country} onChange={handleChange} required placeholder="Your country" className={inputCls} />
+                </div>
+                <div>
+                  <label className={labelCls}>Postal Code * <span className="text-gray-400 font-normal text-xs">(6 digits)</span></label>
+                  <input type="text" name="postalCode" value={formData.postalCode}
+                    onChange={handlePostalChange}
+                    required placeholder="6-digit PIN code"
+                    maxLength={6} inputMode="numeric"
+                    className={inputCls} />
+                </div>
+                <div className="md:col-span-2">
+                  <label className={labelCls}>Available Date to Start Training *</label>
+                  <div className="flex items-center gap-2 md:max-w-xs">
+                    <Calendar size={16} className="text-gray-400 shrink-0" />
+                    <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} required className={inputCls + " text-gray-700"} />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* ─── 4. Declarations ─── */}
-          <div className="bg-blue-50/70 p-6 rounded-xl border border-blue-100 shadow-inner">
-            <h3 className="text-md font-bold text-[#0a192f] mb-4">Declarations</h3>
-            <div className="space-y-4">
-              <label className="flex items-start gap-3 cursor-pointer group">
-                <input type="checkbox" name="confirmAccurate" checked={formData.confirmAccurate} onChange={handleChange} required className="peer mt-1 w-5 h-5 border-2 border-gray-300 rounded text-[#0075B6] focus:ring-[#0075B6] cursor-pointer" />
-                <span className="text-sm text-gray-700 font-medium group-hover:text-black transition-colors pt-1">I confirm that the information provided is accurate.</span>
-              </label>
-              <label className="flex items-start gap-3 cursor-pointer group">
-                <input type="checkbox" name="agreeTerms" checked={formData.agreeTerms} onChange={handleChange} required className="peer mt-1 w-5 h-5 border-2 border-gray-300 rounded text-[#0075B6] focus:ring-[#0075B6] cursor-pointer" />
-                <span className="text-sm text-gray-700 font-medium group-hover:text-black transition-colors pt-1">I agree to the training terms and conditions.</span>
-              </label>
-              <label className="flex items-start gap-3 cursor-pointer group">
-                <input type="checkbox" name="consentComms" checked={formData.consentComms} onChange={handleChange} required className="peer mt-1 w-5 h-5 border-2 border-gray-300 rounded text-[#0075B6] focus:ring-[#0075B6] cursor-pointer" />
-                <span className="text-sm text-gray-700 font-medium group-hover:text-black transition-colors pt-1">I consent to receive training-related communications.</span>
-              </label>
+            {/* ══════════════ 4. DECLARATIONS ══════════════ */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/50 rounded-2xl border border-blue-100 p-5 md:p-6">
+              <div className={sectionHeadCls}>
+                <div className="w-9 h-9 rounded-xl bg-[#0075B6]/10 flex items-center justify-center shrink-0">
+                  <Award size={18} className="text-[#0075B6]" />
+                </div>
+                <h3 className="text-base font-bold text-gray-900">Declarations</h3>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { name: "confirmAccurate", text: "I confirm that the information provided above is accurate and complete." },
+                  { name: "agreeTerms",      text: "I agree to the training terms and conditions of AN Global Services." },
+                  { name: "consentComms",    text: "I consent to receive training-related communications via email and WhatsApp." },
+                ].map(({ name, text }) => (
+                  <label key={name} className="flex items-start gap-3 cursor-pointer group">
+                    <div className="relative mt-0.5 shrink-0">
+                      <input type="checkbox" name={name}
+                        checked={formData[name]} onChange={handleChange} required
+                        className="w-5 h-5 rounded border-2 border-gray-300 text-[#0075B6] focus:ring-[#0075B6] cursor-pointer accent-[#0075B6]" />
+                    </div>
+                    <span className="text-sm text-gray-700 group-hover:text-gray-900 transition-colors leading-relaxed">{text}</span>
+                  </label>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* ─── Submit ─── */}
-          <div className="flex flex-col-reverse sm:flex-row justify-end gap-3 pt-6 border-t border-gray-200">
-            <button
-              type="button"
-              onClick={onClose}
-              className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 font-medium transition-colors"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              disabled={isSubmitting || emailStatus !== "verified" || mobileStatus !== "verified"}
-              className="w-full sm:w-auto px-8 py-3 bg-[#0075B6] hover:bg-blue-700 text-white rounded-lg font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30"
-            >
-              {isSubmitting
-                ? <><Loader2 size={18} className="animate-spin" /> Enrolling...</>
-                : "Submit Enrollment"}
-            </button>
-          </div>
+            {/* ══════════════ SUBMIT ROW ══════════════ */}
+            <div className="flex flex-col-reverse sm:flex-row justify-end gap-3 pt-2 pb-2">
+              <button type="button" onClick={onClose}
+                className="w-full sm:w-auto px-6 py-3 border-2 border-gray-200 rounded-xl text-gray-600 hover:bg-gray-50 hover:border-gray-300 font-semibold transition-all cursor-pointer">
+                Cancel
+              </button>
+              <button type="submit"
+                disabled={isSubmitting || emailStatus !== "verified" || mobileStatus !== "verified"}
+                className="w-full sm:w-auto px-8 py-3 bg-[#0075B6] hover:bg-blue-700 text-white rounded-xl font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 cursor-pointer">
+                {isSubmitting
+                  ? <><Loader2 size={18} className="animate-spin" /> Submitting...</>
+                  : <><Award size={18} /> Submit Enrollment</>}
+              </button>
+            </div>
 
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
