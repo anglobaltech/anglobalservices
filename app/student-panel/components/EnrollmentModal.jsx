@@ -2,8 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { X, CheckCircle2, Loader2, User, Phone, Mail, MapPin, Calendar, Award, MessageCircle } from "lucide-react";
-import { auth } from "@/src/lib/firebase";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import Link from "next/link";
 
 // ── Default empty form ──
@@ -15,7 +13,6 @@ const EMPTY_FORM = {
   organization: "",
   qualification: "",
   gender: "",
-  mobile: "",
   whatsapp: "",
   email: "",
   address: "",
@@ -38,57 +35,18 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
   const [emailHash, setEmailHash]           = useState("");
   const [emailExpiresAt, setEmailExpiresAt] = useState(null);
 
-  // Mobile OTP
-  const [mobileStatus, setMobileStatus]     = useState("idle");
-  const [mobileOtp, setMobileOtp]           = useState("");
-  const confirmationResultRef               = useRef(null);
-  const recaptchaVerifierRef                = useRef(null);
-  const recaptchaContainerRef               = useRef(null);
-
   // UI States
   const [isSubmitting, setIsSubmitting]     = useState(false);
   const [showSuccess, setShowSuccess]       = useState(false);
   const [successStudentId, setSuccessStudentId] = useState("");
 
-  // ── Safely destroy reCAPTCHA ──
-  const destroyRecaptcha = () => {
-    if (recaptchaVerifierRef.current) {
-      try { recaptchaVerifierRef.current.clear(); } catch (_) {}
-      recaptchaVerifierRef.current = null;
-    }
-  };
-
-  // ── Initialize invisible reCAPTCHA once modal opens ──
-  useEffect(() => {
-    if (!isOpen) return;
-    const t = setTimeout(() => {
-      if (recaptchaContainerRef.current && !recaptchaVerifierRef.current) {
-        try {
-          recaptchaVerifierRef.current = new RecaptchaVerifier(
-            auth,
-            recaptchaContainerRef.current,
-            { size: "invisible" }
-          );
-          recaptchaVerifierRef.current.render();
-        } catch (err) {
-          console.error("reCAPTCHA init error:", err);
-        }
-      }
-    }, 500);
-    return () => clearTimeout(t);
-  }, [isOpen]);
-
   // ── Full reset when modal closes ──
   useEffect(() => {
     if (!isOpen) {
-      destroyRecaptcha();
-      setMobileStatus("idle");
-      setMobileOtp("");
       setEmailStatus("idle");
       setEmailOtp("");
       setEmailHash("");
       setEmailExpiresAt(null);
-      confirmationResultRef.current = null;
       setShowSuccess(false);
       setSuccessStudentId("");
       setFormData(EMPTY_FORM); // ← reset form to empty on close
@@ -105,95 +63,10 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
     }));
   };
 
-  // ── Mobile: max 10 digits ──
-  const handleMobileChange = (e) => {
-    const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
-    setFormData((prev) => ({ ...prev, mobile: digits }));
-  };
-
   // ── Pincode: max 6 digits ──
   const handlePostalChange = (e) => {
     const digits = e.target.value.replace(/\D/g, "").slice(0, 6);
     setFormData((prev) => ({ ...prev, postalCode: digits }));
-  };
-
-  // ══════════════════════════════════════════
-  //  MOBILE OTP — Send
-  // ══════════════════════════════════════════
-  const handleSendMobileOtp = async () => {
-    const rawMobile = formData.mobile.trim();
-    if (!rawMobile) return showNotification("Please enter your mobile number first.", "error");
-    if (rawMobile.length !== 10) return showNotification("Please enter a valid 10-digit mobile number.", "error");
-
-    const phone = `+91${rawMobile}`;
-    setMobileStatus("loading");
-
-    try {
-      if (!recaptchaVerifierRef.current) {
-        recaptchaVerifierRef.current = new RecaptchaVerifier(
-          auth, recaptchaContainerRef.current, { size: "invisible" }
-        );
-        await recaptchaVerifierRef.current.render();
-      }
-      const confirmationResult = await signInWithPhoneNumber(auth, phone, recaptchaVerifierRef.current);
-      confirmationResultRef.current = confirmationResult;
-      setMobileStatus("sent");
-      showNotification("OTP sent to your mobile number!", "success");
-    } catch (err) {
-      console.error("Firebase Phone Auth error:", err);
-      destroyRecaptcha();
-      setMobileStatus("idle");
-      const msg =
-        err.code === "auth/invalid-phone-number" ? "Invalid phone number." :
-        err.code === "auth/too-many-requests" ? "Too many attempts. Please wait and try again." :
-        err.code === "auth/invalid-app-credential" ? "Domain not authorized. Please contact support." :
-        `Failed to send OTP: ${err.code || err.message}`;
-      showNotification(msg, "error");
-    }
-  };
-
-  // ══════════════════════════════════════════
-  //  MOBILE OTP — Resend
-  // ══════════════════════════════════════════
-  const handleResendMobileOtp = () => {
-    destroyRecaptcha();
-    setMobileStatus("idle");
-    setMobileOtp("");
-    confirmationResultRef.current = null;
-    setTimeout(async () => {
-      try {
-        recaptchaVerifierRef.current = new RecaptchaVerifier(
-          auth, recaptchaContainerRef.current, { size: "invisible" }
-        );
-        await recaptchaVerifierRef.current.render();
-        handleSendMobileOtp();
-      } catch (err) {
-        console.error("Resend reCAPTCHA init error:", err);
-        showNotification("Failed to resend OTP. Please refresh and try again.", "error");
-      }
-    }, 300);
-  };
-
-  // ══════════════════════════════════════════
-  //  MOBILE OTP — Verify
-  // ══════════════════════════════════════════
-  const handleVerifyMobileOtp = async () => {
-    if (!mobileOtp.trim()) return showNotification("Please enter the OTP sent to your mobile.", "error");
-    if (!confirmationResultRef.current) return showNotification("Session expired. Please request OTP again.", "error");
-    setMobileStatus("verifying");
-    try {
-      await confirmationResultRef.current.confirm(mobileOtp.trim());
-      setMobileStatus("verified");
-      showNotification("Mobile number verified successfully!", "success");
-    } catch (err) {
-      console.error("Firebase confirm OTP error:", err);
-      setMobileStatus("sent");
-      const msg =
-        err.code === "auth/code-expired" ? "OTP expired. Please request a new one." :
-        err.code === "auth/invalid-verification-code" ? "Incorrect OTP. Please check and try again." :
-        "Verification failed. Please try again.";
-      showNotification(msg, "error");
-    }
   };
 
   // ══════════════════════════════════════════
@@ -256,8 +129,8 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
   // ══════════════════════════════════════════
   const handleSubmitEnrollment = async (e) => {
     e.preventDefault();
-    if (emailStatus !== "verified" || mobileStatus !== "verified") {
-      return showNotification("Please verify both Email and Mobile Number before submitting.", "error");
+    if (emailStatus !== "verified") {
+      return showNotification("Please verify Email before submitting.", "error");
     }
     setIsSubmitting(true);
     try {
@@ -307,12 +180,6 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
       // ── Prevent background page scroll when touching overlay ──
       onWheel={(e) => e.stopPropagation()}
     >
-      {/* Invisible reCAPTCHA anchor — zero size, always in DOM */}
-      <div
-        ref={recaptchaContainerRef}
-        style={{ position: "fixed", bottom: 0, left: 0, width: 0, height: 0, overflow: "hidden", zIndex: -1 }}
-      />
-
       {/* ════════════════════════════════════
           SUCCESS POPUP
       ════════════════════════════════════ */}
@@ -433,7 +300,7 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
                 <div>
                   <label className={labelCls}>Gender *</label>
                   <select name="gender" value={formData.gender} onChange={handleChange} required className={inputCls}>
-                    <option value="">Select Gender</option>
+                    <option value="" disabled>Select Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
@@ -458,78 +325,11 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-gray-900">Contact Verification</h3>
-                  <p className="text-xs text-gray-400">Verify your mobile and email via OTP</p>
+                  <p className="text-xs text-gray-400">Verify your email via OTP</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-                {/* Mobile */}
-                <div className={`rounded-2xl border p-4 transition-all ${
-                  mobileStatus === "verified" ? "border-green-300 bg-green-50/40" : "border-gray-200 bg-gray-50/50"
-                }`}>
-                  <label className={labelCls}>Mobile Number * <span className="text-gray-400 font-normal text-xs">(10 digits)</span></label>
-                  <div className="flex gap-2">
-                    <div className="flex items-center bg-gray-100 border border-gray-200 rounded-xl px-3 text-gray-600 text-sm font-medium shrink-0">
-                      +91
-                    </div>
-                    <input
-                      type="tel"
-                      name="mobile"
-                      value={formData.mobile}
-                      onChange={handleMobileChange}
-                      disabled={mobileStatus !== "idle"}
-                      required
-                      placeholder="XXXXXXXXXX"
-                      maxLength={10}
-                      inputMode="numeric"
-                      className={inputCls + " disabled:bg-gray-100 disabled:text-gray-400"}
-                    />
-                    {mobileStatus === "idle" && (
-                      <button type="button" onClick={handleSendMobileOtp}
-                        className="bg-gray-900 hover:bg-black text-white px-4 py-2.5 text-sm rounded-xl font-semibold whitespace-nowrap transition-all cursor-pointer shadow-sm shrink-0">
-                        Get OTP
-                      </button>
-                    )}
-                    {mobileStatus === "loading" && (
-                      <div className="flex items-center justify-center px-4 bg-gray-100 rounded-xl border border-gray-200 shrink-0">
-                        <Loader2 size={20} className="animate-spin text-[#0075B6]" />
-                      </div>
-                    )}
-                  </div>
-
-                  {(mobileStatus === "sent" || mobileStatus === "verifying") && (
-                    <div className="mt-3 animate-in slide-in-from-top-2 fade-in duration-300">
-                      <p className="text-xs text-green-700 font-semibold mb-2 flex items-center gap-1">
-                        <CheckCircle2 size={13} /> OTP sent successfully. Enter below:
-                      </p>
-                      <div className="flex gap-2">
-                        <input
-                          type="text" inputMode="numeric" maxLength={6}
-                          placeholder="• • • • • •"
-                          value={mobileOtp}
-                          onChange={(e) => setMobileOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
-                          autoComplete="one-time-code"
-                          className={inputCls + " font-mono text-xl tracking-[0.5em] text-center"}
-                        />
-                        <button type="button" onClick={handleVerifyMobileOtp}
-                          disabled={mobileStatus === "verifying"}
-                          className="bg-[#0075B6] hover:bg-blue-700 text-white px-5 py-2.5 text-sm rounded-xl font-semibold transition-all cursor-pointer shadow-sm disabled:opacity-60 shrink-0">
-                          {mobileStatus === "verifying" ? <Loader2 size={16} className="animate-spin" /> : "Verify"}
-                        </button>
-                      </div>
-                      <button type="button" onClick={handleResendMobileOtp}
-                        className="text-xs text-[#0075B6] hover:text-blue-800 underline mt-2 cursor-pointer transition-colors">
-                        Resend OTP
-                      </button>
-                    </div>
-                  )}
-                  {mobileStatus === "verified" && (
-                    <div className="mt-3 flex items-center gap-2 text-green-700 text-sm font-semibold">
-                      <CheckCircle2 size={17} /> Mobile Verified!
-                    </div>
-                  )}
-                </div>
 
                 {/* Email */}
                 <div className={`rounded-2xl border p-4 transition-all ${
@@ -583,9 +383,9 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
                 </div>
 
                 {/* WhatsApp */}
-                <div className="md:col-span-2">
+                <div>
                   <label className={labelCls}>WhatsApp Number *</label>
-                  <div className="flex gap-2 md:max-w-sm">
+                  <div className="flex gap-2">
                     <div className="flex items-center bg-gray-100 border border-gray-200 rounded-xl px-3 text-gray-600 text-sm font-medium shrink-0">
                       +91
                     </div>
@@ -640,7 +440,15 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
                   <label className={labelCls}>Available Date to Start Training *</label>
                   <div className="flex items-center gap-2 md:max-w-xs">
                     <Calendar size={16} className="text-gray-400 shrink-0" />
-                    <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} required className={inputCls + " text-gray-700"} />
+                    <input 
+                      type="date" 
+                      name="startDate" 
+                      value={formData.startDate} 
+                      onChange={handleChange} 
+                      required 
+                      min={new Date().toISOString().split('T')[0]}
+                      className={inputCls + " text-gray-700 cursor-pointer"} 
+                    />
                   </div>
                 </div>
               </div>
@@ -679,7 +487,7 @@ export default function EnrollmentModal({ isOpen, onClose, showNotification }) {
                 Cancel
               </button>
               <button type="submit"
-                disabled={isSubmitting || emailStatus !== "verified" || mobileStatus !== "verified"}
+                disabled={isSubmitting || emailStatus !== "verified"}
                 className="w-full sm:w-auto px-8 py-3 bg-[#0075B6] hover:bg-blue-700 text-white rounded-xl font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 cursor-pointer">
                 {isSubmitting
                   ? <><Loader2 size={18} className="animate-spin" /> Submitting...</>
