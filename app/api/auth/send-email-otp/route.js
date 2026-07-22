@@ -7,6 +7,15 @@ export async function POST(req) {
     const { email } = await req.json();
     const otp = Math.floor(100000 + Math.random() * 900000).toString(); // 6 digits
 
+    // Validate that environment variables exist
+    if (!process.env.SECRET_KEY || !process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error("Missing required environment variables (SECRET_KEY, EMAIL_USER, EMAIL_PASS). Please add them to your live server.");
+      return NextResponse.json(
+        { error: "Server misconfiguration. Missing environment variables." },
+        { status: 500 }
+      );
+    }
+
     // Generate a hash using the SECRET_KEY from your .env.local
     const expiresAt = Date.now() + 10 * 60 * 1000; // Valid for 10 minutes
     const dataString = `${email}.${otp}.${expiresAt}`;
