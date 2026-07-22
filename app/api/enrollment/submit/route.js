@@ -216,21 +216,9 @@ export async function POST(req) {
     const adminDb = await getAdminDb();
 
     // ══════════════════════════════════════════════════
-    //  1. DUPLICATE CHECK — mobile & email
+    //  1. DUPLICATE CHECK — email
     // ══════════════════════════════════════════════════
     const studentsRef = adminDb.collection("student details");
-
-    const mobileSnap = await studentsRef
-      .where("mobile", "==", formData.mobile.trim())
-      .limit(1)
-      .get();
-
-    if (!mobileSnap.empty) {
-      return NextResponse.json(
-        { error: "This mobile number is already registered. Please use a different number.", duplicate: true },
-        { status: 409 }
-      );
-    }
 
     const emailSnap = await studentsRef
       .where("email", "==", formData.email.trim().toLowerCase())
@@ -267,7 +255,6 @@ export async function POST(req) {
         gender:       formData.gender,
         organization: formData.organization || "",
         qualification:formData.qualification,
-        mobile:       formData.mobile.trim(),
         whatsapp:     formData.whatsapp.trim(),
         email:        formData.email.trim().toLowerCase(),
         address:      formData.address,
@@ -313,8 +300,7 @@ export async function POST(req) {
 
           <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
             <tr><td colspan="2" style="padding:0 0 10px;font-size:13px;font-weight:700;color:#0075B6;text-transform:uppercase;letter-spacing:0.05em;border-bottom:2px solid #e2e8f0;">Contact Details</td></tr>
-            <tr><td style="padding:8px 0;color:#64748b;font-size:13px;width:40%;">Mobile</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">+91${formData.mobile}</td></tr>
-            <tr><td style="padding:8px 0;color:#64748b;font-size:13px;">WhatsApp</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">+91${formData.whatsapp}</td></tr>
+            <tr><td style="padding:8px 0;color:#64748b;font-size:13px;width:40%;">WhatsApp</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">+91${formData.whatsapp}</td></tr>
             <tr><td style="padding:8px 0;color:#64748b;font-size:13px;">Email</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">${formData.email}</td></tr>
           </table>
 
@@ -362,7 +348,6 @@ export async function POST(req) {
 
           <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
             <tr><td style="padding:8px 0;color:#64748b;font-size:13px;width:40%;">Name</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">${fullName}</td></tr>
-            <tr><td style="padding:8px 0;color:#64748b;font-size:13px;">Mobile</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">+91${formData.mobile}</td></tr>
             <tr><td style="padding:8px 0;color:#64748b;font-size:13px;">WhatsApp</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">+91${formData.whatsapp}</td></tr>
             <tr><td style="padding:8px 0;color:#64748b;font-size:13px;">Start Date</td><td style="padding:8px 0;color:#1e293b;font-size:13px;font-weight:600;">${formatDate(formData.startDate)}</td></tr>
           </table>

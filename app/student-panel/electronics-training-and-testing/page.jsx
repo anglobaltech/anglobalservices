@@ -195,7 +195,7 @@ export default function ElectronicsTrainingTestingPage() {
             <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
               <button
                 onClick={() => setShowEnrollModal(true)}
-                className="bg-[#0075B6] hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold transition-colors shadow-lg cursor-pointer"
+                className="bg-[#0075B6] hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold cursor-pointer hover:scale-105 transition-all shadow-lg"
               >
                 Enroll for Free
               </button>
@@ -451,7 +451,7 @@ export default function ElectronicsTrainingTestingPage() {
             </p>
             <button
               onClick={() => setShowEnrollModal(true)}
-              className="bg-white text-[#0075B6] hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-colors shadow-xl hover:shadow-2xl cursor-pointer hover:scale-105"
+              className="bg-white text-[#0075B6] hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl cursor-pointer hover:scale-105 transition-all"
             >
               Enroll for Free Now
             </button>
