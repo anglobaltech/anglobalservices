@@ -4,6 +4,51 @@ import Image from "next/image";
 const products = [
   {
     id: 1,
+    name: "Makhana",
+    category: "Natural Food Ingredient",
+    origin: "India",
+
+    badge: "Natural",
+    badgeColor: "bg-green-100 text-green-800",
+
+    image: "/food-items/makhana.webp",
+
+    tagline: "Natural. Nutritious. Versatile.",
+
+    intro:
+      "Premium quality Makhana sourced from India, suitable for both direct consumption and industrial food processing applications.",
+
+    description:
+      "Makhana (fox nuts) is a natural plant-based ingredient widely used in both traditional and modern food processing. Known for its light texture, high nutritional value, and clean-label appeal, it serves as a versatile base for snacks, roasted products, powdered blends, and health-focused formulations. It can be used in raw, roasted, or processed forms depending on application requirements.",
+
+    highlights: [
+      "Rich in plant-based protein and minerals",
+      "Low fat and low calorie content",
+      "Naturally gluten-free and clean-label",
+      "Easy to process into roasted or powdered forms",
+      "Suitable for both retail and industrial applications",
+    ],
+
+    applications:
+      "Roasted snacks, flavored makhana products, traditional sweets, health foods, nutritional blends, fasting foods",
+
+    tags: ["Natural Product", "Gluten-Free", "Healthy Snack", "Food Grade"],
+
+    specs: [
+      { label: "Form", value: "Whole / Processed (Roasted)" },
+      { label: "Origin", value: "India" },
+      { label: "Storage", value: "Cool & Dry Place" },
+    ],
+
+    trade: [
+      { label: "Market", value: "All India" },
+      { label: "Packaging", value: "Bulk & Custom Packaging Available" },
+      { label: "Minimum Order", value: "100 Kg" },
+    ],
+  },
+
+  {
+    id: 2,
     name: "Whey Protein Concentrate 80 Instant (ENTC)",
     make: "ENTC Dairy Solutions",
     category: "Protein Supplement",
@@ -61,7 +106,7 @@ const products = [
   },
 
   {
-    id: 2,
+    id: 3,
     name: "Whey Protein Concentrate 80 Instant (Valley Queen)",
     make: "Valley Queen",
     category: "Protein Supplement",
@@ -120,7 +165,7 @@ const products = [
   },
 
   {
-    id: 3,
+    id: 4,
     name: "Lactose (K-LAC)",
     make: "Ba'emek Advanced Technologies Ltd.",
     category: "Dairy Ingredient",
@@ -178,7 +223,7 @@ const products = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: "Micellar Casein 85",
     make: "Inleit",
     category: "Slow-Release Protein",
@@ -234,46 +279,210 @@ const products = [
   },
 
   {
-    id: 5,
-    name: "Makhana",
-    category: "Natural Food Ingredient",
-    origin: "India",
+    id: 6,
+    name: "Sunpro Instant Protein Concentrate Instant WPC 80",
+    make: "Saputo Dairy Australia Pty Ltd",
+    category: "Protein Supplement",
+    badge: "Imported",
+    badgeColor: "bg-blue-100 text-blue-800",
 
-    badge: "Natural",
-    badgeColor: "bg-green-100 text-green-800",
+    image: "/food-items/sunpro-whey-protein-concentrate-wpc-80.webp",
 
-    image: "/food-items/makhana.webp",
-
-    tagline: "Natural. Nutritious. Versatile.",
+    tagline: "Premium Australian Whey Protein.",
 
     intro:
-      "Premium quality Makhana sourced from India, suitable for both direct consumption and industrial food processing applications.",
+      "Sunpro Instant Protein Concentrate WPC 80 by Saputo Dairy Australia is a premium dairy protein imported from Australia, available for immediate supply.",
 
     description:
-      "Makhana (fox nuts) is a natural plant-based ingredient widely used in both traditional and modern food processing. Known for its light texture, high nutritional value, and clean-label appeal, it serves as a versatile base for snacks, roasted products, powdered blends, and health-focused formulations. It can be used in raw, roasted, or processed forms depending on application requirements.",
+      "This WPC 80 Instantized protein is manufactured by Saputo Dairy Australia. It delivers consistent batch quality and meets global microbiological and compositional standards for industrial and nutritional applications. Previous batch COA is available for quality reference. The latest batch COA, batch details, and packing photos will be shared before dispatch.",
 
     highlights: [
-      "Rich in plant-based protein and minerals",
-      "Low fat and low calorie content",
-      "Naturally gluten-free and clean-label",
-      "Easy to process into roasted or powdered forms",
-      "Suitable for both retail and industrial applications",
+      "Protein (Dry Basis) ≥ 80.0%",
+      "Fat ≤ 8.0% and Moisture ≤ 6.0%",
+      "Imported from Australia with consistent quality",
     ],
 
     applications:
-      "Roasted snacks, flavored makhana products, traditional sweets, health foods, nutritional blends, fasting foods",
+      "Food processing, protein blends, beverages, bakery, nutritional products",
 
-    tags: ["Natural Product", "Gluten-Free", "Healthy Snack", "Food Grade"],
+    tags: ["Imported", "Australia Origin", "Food Grade"],
 
     specs: [
-      { label: "Form", value: "Whole / Processed (Roasted)" },
-      { label: "Origin", value: "India" },
-      { label: "Storage", value: "Cool & Dry Place" },
+      { label: "Form", value: "Powder" },
+      { label: "Origin", value: "Australia" },
+      { label: "Protein (Dry Basis)", value: "≥ 80.0%" },
+      { label: "Fat", value: "≤ 8.0%" },
+      { label: "Moisture", value: "≤ 6.0%" },
     ],
+
+    manufacturer: {
+      name: "Saputo Dairy Australia Pty Ltd",
+    },
+
+    trade: [
+      { label: "Minimum Order", value: "100 Kg" },
+      { label: "Market", value: "All India" },
+    ],
+  },
+
+  {
+    id: 7,
+    name: "Mullins Whey Lactose 200 Mesh",
+    make: "Mullins Whey Inc.",
+    category: "Dairy Ingredient",
+    badge: "USA Import",
+    badgeColor: "bg-green-100 text-green-800",
+
+    image: "/food-items/mullins-whey-lactose.webp",
+
+    tagline: "High Purity. Reliable Performance.",
+
+    intro:
+      "Mullins Whey Lactose 200 Mesh is a high-quality dairy ingredient imported from the USA, widely used in food and pharmaceutical applications.",
+
+    description:
+      "This refined milk sugar offers high purity (Lactose ≥ 99.40%), uniform particle size (200 mesh), and excellent flowability, making it ideal for food, nutraceutical, and pharmaceutical applications. Manufactured by Mullins Whey Inc., USA. Previous batch COA is available for quality reference.",
+
+    highlights: [
+      "Lactose ≥ 99.40% purity",
+      "Fine particle size (200 mesh)",
+      "Imported from USA with reliable consistency",
+    ],
+
+    applications:
+      "Infant formula, pharmaceutical tablets, bakery products, confectionery, dairy formulations",
+
+    tags: ["Food Grade", "Pharma Grade", "Imported"],
+
+    specs: [
+      { label: "Form", value: "Powder" },
+      { label: "Origin", value: "USA" },
+      { label: "Particle Size", value: "200 Mesh" },
+      { label: "Lactose", value: "≥ 99.40%" },
+      { label: "pH", value: "4.5 - 7.0" },
+    ],
+
+    qualityStandards: [
+      { label: "Total Moisture", value: "4.5% - 5.5%" },
+      { label: "Ash", value: "0.2% max" },
+      { label: "Protein Nx6.38 As Is", value: "0.2% max" },
+    ],
+
+    manufacturer: {
+      name: "Mullins Whey Inc., USA",
+    },
+
+    trade: [
+      { label: "Minimum Order", value: "100 Kg" },
+      { label: "Market", value: "All India" },
+    ],
+  },
+
+  {
+    id: 8,
+    name: "L-Carnitine Base",
+    make: "Hubei Grand Life Science & Technology Co., Ltd.",
+    category: "Nutraceutical Ingredient",
+    badge: "Imported",
+    badgeColor: "bg-purple-100 text-purple-800",
+
+    image: "/food-items/l-carnitine-base.webp",
+
+    tagline: "Fat Metabolism & Energy Support.",
+
+    intro:
+      "L-carnitine base is a bioactive form of L-carnitine widely used in nutraceutical and health supplement formulations for fat metabolism, energy production, and performance support.",
+
+    description:
+      "At YNP Ingredients Pvt. Ltd., a trusted B2B supplier and importer of L-carnitine base in India, the product is sourced from certified manufacturers in China to ensure high purity, consistent quality, and reliable supply. It is supplied in bulk with a standard 25 kg pack size. Previous batch COA is available for quality reference.",
+
+    highlights: [
+      "Assay: 97.0% ~ 103.0%",
+      "Supports fat metabolism and energy production",
+      "Enhances exercise performance and recovery",
+    ],
+
+    applications:
+      "L-carnitine powder supplements, sports nutrition products, fat metabolism blends, nutraceutical formulations",
+
+    tags: ["Nutraceutical", "Sports Nutrition", "Imported"],
+
+    specs: [
+      { label: "Form", value: "White Crystalline Powder" },
+      { label: "Pack Size", value: "25 Kg Bulk" },
+      { label: "Origin", value: "China" },
+      { label: "Assay", value: "97.0% ~ 103.0%" },
+      { label: "pH", value: "5.5 - 9.5" },
+    ],
+
+    qualityStandards: [
+      { label: "Water", value: "≤ 4.0%" },
+      { label: "Residue on Ignition", value: "≤ 0.5%" },
+      { label: "Heavy Metals", value: "≤ 20ppm" },
+    ],
+
+    manufacturer: {
+      name: "Hubei Grand Life Science & Technology Co., Ltd.",
+    },
+
+    trade: [
+      { label: "Minimum Order", value: "100 Kg" },
+      { label: "Market", value: "All India" },
+    ],
+  },
+
+  {
+    id: 9,
+    name: "L-Glutamine",
+    make: "Xinjiang Fufeng Biotechnologies Co., Ltd.",
+    category: "Amino Acid",
+    badge: "Imported",
+    badgeColor: "bg-orange-100 text-orange-800",
+
+    image: "/food-items/l-glutamine.webp",
+
+    tagline: "Muscle Recovery & Gut Health.",
+
+    intro:
+      "L-glutamine is a conditionally essential amino acid widely used in nutraceutical and sports nutrition formulations for muscle recovery, gut health, and immune support.",
+
+    description:
+      "At YNP Ingredients Pvt. Ltd., a trusted B2B supplier and importer of L-glutamine in India, the product is sourced from certified manufacturers in China to ensure high purity, consistent quality, and reliable supply. Supplied in drum packaging with complete FSSAI-compliant documentation.",
+
+    highlights: [
+      "Assay: 98.5% - 101.5%",
+      "Supports muscle recovery after intense exercise",
+      "Aids in gut health and digestive support",
+      "Contributes to immune system function",
+      "High purity L-glutamine for consistent formulation results",
+    ],
+
+    applications:
+      "L-glutamine powder supplements, recovery and wellness blends, sports nutrition products, gut health formulations, nutraceutical formulations",
+
+    tags: ["Nutraceutical", "Amino Acid", "Imported"],
+
+    specs: [
+      { label: "Form", value: "White Crystals / Crystalline Powder" },
+      { label: "Pack Size", value: "25 Kg Bulk" },
+      { label: "Origin", value: "China" },
+      { label: "Assay", value: "98.5% - 101.5%" },
+      { label: "Specific Rotation", value: "+6.3° ~ +7.3°" },
+    ],
+
+    qualityStandards: [
+      { label: "Loss on Drying", value: "≤ 0.3%" },
+      { label: "Residue on Ignition", value: "≤ 0.3%" },
+      { label: "Heavy Metals", value: "≤ 15 mg/kg" },
+    ],
+
+    manufacturer: {
+      name: "Xinjiang Fufeng Biotechnologies Co., Ltd.",
+    },
 
     trade: [
       { label: "Market", value: "All India" },
-      { label: "Packaging", value: "Bulk & Custom Packaging Available" },
+      { label: "Packaging", value: "Bulk 25 Kg" },
       { label: "Minimum Order", value: "100 Kg" },
     ],
   },
