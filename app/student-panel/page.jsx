@@ -94,7 +94,7 @@ export default function StudentPanelPage() {
 
       {/* ================= HERO SECTION ================= */}
       <section 
-        className="relative w-full h-[calc(100vh-70px)] flex items-center justify-center bg-cover bg-center"
+        className="relative w-full min-h-[calc(100vh-70px)] py-28 md:py-20 flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('/student-panel/student-panel-1.webp')" }}
       >
         <div className="absolute inset-0 bg-black/70"></div>
@@ -119,7 +119,7 @@ export default function StudentPanelPage() {
               </Link>
               <button 
                 onClick={() => setShowEnrollModal(true)}
-                className="bg-transparent border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-md font-medium transition-all"
+                className="bg-transparent border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-md font-medium cursor-pointer hover:scale-105 transition-all"
               >
                 Enroll Now
               </button>
@@ -275,7 +275,7 @@ export default function StudentPanelPage() {
           </p>
           <button 
             onClick={() => setShowEnrollModal(true)}
-            className="bg-white text-[#0075B6] hover:bg-gray-100 px-8 py-3 rounded-full font-bold text-lg transition-colors shadow-lg"
+            className="bg-white text-[#0075B6] hover:bg-gray-100 px-8 py-3 rounded-full font-bold text-lg shadow-lg cursor-pointer hover:scale-105 transition-all"
           >
             Enroll for Free Now
           </button>

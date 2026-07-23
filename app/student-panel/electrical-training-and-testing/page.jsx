@@ -162,17 +162,19 @@ export default function ElectricalTrainingTestingPage() {
       </div>
 
       {/* ═══════════ 1. HERO BANNER ═══════════ */}
-      <section className="relative w-full h-[calc(100vh-30px)] overflow-hidden">
-        <Image
-          src="/student-panel/electrical-training-testing-page/Electrical-Training-Testing-1.webp"
-          alt="Electrical Training and Testing Services — Free Laboratory Course by AN Global Services"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/75" />
+      <section className="relative w-full min-h-[calc(100vh-30px)] flex items-center justify-center py-28 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/student-panel/electrical-training-testing-page/Electrical-Training-Testing-1.webp"
+            alt="Electrical Training and Testing Services — Free Laboratory Course by AN Global Services"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/75" />
+        </div>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-16">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 w-full">
           <LazySection>
             <p className="text-[#60B5F0] font-bold text-sm sm:text-base md:text-lg tracking-widest uppercase mb-4 drop-shadow-lg">
               ★ Free Student Training Program ★
@@ -195,7 +197,7 @@ export default function ElectricalTrainingTestingPage() {
             <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
               <button
                 onClick={() => setShowEnrollModal(true)}
-                className="bg-[#0075B6] hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold transition-colors shadow-lg cursor-pointer"
+                className="bg-[#0075B6] hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold cursor-pointer hover:scale-105 transition-all shadow-lg"
               >
                 Enroll for Free
               </button>
@@ -451,7 +453,7 @@ export default function ElectricalTrainingTestingPage() {
             </p>
             <button
               onClick={() => setShowEnrollModal(true)}
-              className="bg-white text-[#0075B6] hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-colors shadow-xl hover:shadow-2xl cursor-pointer hover:scale-105"
+              className="bg-white text-[#0075B6] hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl cursor-pointer hover:scale-105 transition-all"
             >
               Enroll for Free Now
             </button>
