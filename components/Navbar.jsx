@@ -289,7 +289,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-3">
           
           {/* CHANGED: Switched to justify-between to anchor HOME on the far-left and STUDENT PANEL on the far-right symmetrically */}
-          <ul className="hidden md:flex items-center justify-between text-white text-[11px] lg:text-xs xl:text-sm font-semibold w-full">
+          <ul className="hidden lg:flex items-center justify-between text-white text-[10px] xl:text-sm font-semibold w-full">
             <NavLink href="/" label="HOME" />
             <NavLink href="/aboutus" label="ABOUT US" />
 
@@ -310,7 +310,7 @@ export default function Navbar() {
           </ul>
 
           <button
-            className="md:hidden text-white ml-auto"
+            className="lg:hidden text-white ml-auto cursor-pointer"
             onClick={() => setMobileMenu(true)}
           >
             <Menu size={26} />
@@ -320,7 +320,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer configurations (Unchanged) */}
       {mobileMenu && (
-        <div className="fixed inset-0 z-50 md:hidden">
+        <div className="fixed inset-0 z-50 lg:hidden">
           <div
             className="absolute inset-0 bg-black/40"
             onClick={() => setMobileMenu(false)}
