@@ -309,6 +309,7 @@ const products = [
 
     specs: [
       { label: "Form", value: "Powder" },
+      { label: "Pack Size", value: "20 Kg Bag" },
       { label: "Origin", value: "Australia" },
       { label: "Protein (Dry Basis)", value: "≥ 80.0%" },
       { label: "Fat", value: "≤ 8.0%" },
@@ -356,6 +357,7 @@ const products = [
 
     specs: [
       { label: "Form", value: "Powder" },
+      { label: "Pack Size", value: "25 Kg Bag" },
       { label: "Origin", value: "USA" },
       { label: "Particle Size", value: "200 Mesh" },
       { label: "Lactose", value: "≥ 99.40%" },
@@ -409,7 +411,7 @@ const products = [
 
     specs: [
       { label: "Form", value: "White Crystalline Powder" },
-      { label: "Pack Size", value: "25 Kg Bulk" },
+      { label: "Pack Size", value: "25 Kg Box" },
       { label: "Origin", value: "China" },
       { label: "Assay", value: "97.0% ~ 103.0%" },
       { label: "pH", value: "5.5 - 9.5" },
@@ -464,7 +466,7 @@ const products = [
 
     specs: [
       { label: "Form", value: "White Crystals / Crystalline Powder" },
-      { label: "Pack Size", value: "25 Kg Bulk" },
+      { label: "Pack Size", value: "25 Kg Box" },
       { label: "Origin", value: "China" },
       { label: "Assay", value: "98.5% - 101.5%" },
       { label: "Specific Rotation", value: "+6.3° ~ +7.3°" },
@@ -482,7 +484,6 @@ const products = [
 
     trade: [
       { label: "Market", value: "All India" },
-      { label: "Packaging", value: "Bulk 25 Kg" },
       { label: "Minimum Order", value: "100 Kg" },
     ],
   },
