@@ -93,6 +93,11 @@ export const servicesMenu = [
         slug: "fssai-registration-services",
         root: true,
       },
+      {
+        name: "CALIBRATION SERVICE",
+        slug: "calibration-certificate",
+        root: true,
+      },
     ],
   },
 ];

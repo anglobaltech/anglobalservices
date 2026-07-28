@@ -208,6 +208,7 @@ export default function LeadPopup() {
   // 2. Read the current URL path
   const pathname = usePathname();
   const isStudentPanel = pathname?.startsWith("/student-panel");
+  const isItServicesPage = pathname?.startsWith("/it-services-and-solutions");
 
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -221,15 +222,15 @@ export default function LeadPopup() {
   });
 
   useEffect(() => {
-    // 3. Stop the 10-second timer from even running if on the student panel
-    if (isStudentPanel) return;
+    // 3. Stop the 10-second timer from even running if on the student panel or IT services
+    if (isStudentPanel || isItServicesPage) return;
 
     const firstTimer = setTimeout(() => {
       setShow(true);
     }, 10000);
 
     return () => clearTimeout(firstTimer);
-  }, [isStudentPanel]);
+  }, [pathname]);
 
   const closePopup = () => {
     setShow(false);
@@ -305,8 +306,8 @@ export default function LeadPopup() {
     }
   };
 
-  // 4. Return null (hide completely) if on the student panel or if show is false
-  if (isStudentPanel || !show) return null;
+  // 4. Return null (hide completely) if on the student panel, IT services, or if show is false
+  if (isStudentPanel || isItServicesPage || !show) return null;
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/10 pointer-events-none">
