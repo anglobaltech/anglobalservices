@@ -63,7 +63,7 @@ export default function JewelleryRegistrationPage() {
                 height={520}
                 className="w-full h-auto object-cover"
                 priority
-              />
+              /> 
             </div>
           </div>
 
