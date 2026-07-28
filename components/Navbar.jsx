@@ -295,7 +295,7 @@ export default function Navbar() {
 
             <DesktopDropdown title="SERVICES" menu={servicesMenu} />
             <DesktopDropdown
-              title="TESTING & CALIBRATION SERVICES"
+              title="TESTINGS"
               menu={testingMenu}
             />
             <DesktopDropdown
@@ -306,6 +306,7 @@ export default function Navbar() {
 
             <NavLink href="/contact-us" label="CONTACT US" />
             <NavLink href="/food-ingredients" label="FOOD INGREDIENTS" />
+            <NavLink href="/it-services-and-solutions" label="IT SERVICES" />
             <NavLink href="/student-panel" label="STUDENT PANEL" />
           </ul>
 
@@ -353,7 +354,7 @@ export default function Navbar() {
               />
 
               <MobileAccordion
-                title="TESTING SERVICES"
+                title="TESTINGS"
                 menu={testingMenu}
                 active={activeMobile}
                 setActive={setActiveMobile}
@@ -385,6 +386,12 @@ export default function Navbar() {
               <MobileLink
                 label="FOOD INGREDIENTS"
                 href="/food-ingredients"
+                close={setMobileMenu}
+              />
+
+              <MobileLink
+                label="IT SERVICES"
+                href="/it-services-and-solutions"
                 close={setMobileMenu}
               />
 
