@@ -382,6 +382,63 @@ const products = [
 
   {
     id: 8,
+    name: "Whey Protein Concentrate 80% Instantized",
+    make: "Saputo Ingredients",
+    category: "Protein Supplement",
+    badge: "Imported",
+    badgeColor: "bg-blue-100 text-blue-800",
+
+    image: "/food-items/saputo-whey-protein.webp",
+
+    tagline: "Premium Quality. Superior Solubility.",
+
+    intro:
+      "Saputo Whey Protein Concentrate 80% Instantized is a premium quality dairy protein, offering excellent solubility and consistent performance for various nutritional applications.",
+
+    description:
+      "Manufactured by Saputo Dairy Australia, this WPC 80 is instantized for easy mixing and superior solubility. It features a high protein content (min 80% on dry matter basis) and is suitable for sports nutrition, dairy blends, and food processing applications. The product is Kosher and Halal certified, ensuring the highest standards of quality and safety.",
+
+    highlights: [
+      "Protein (Dry Matter) ≥ 80.0%",
+      "Instantized for excellent solubility",
+      "Low fat and carbohydrate content",
+      "Kosher and Halal certified",
+      "Imported premium quality dairy protein",
+    ],
+
+    applications:
+      "Sports nutrition, protein supplements, dairy blends, bakery products, and food processing",
+
+    tags: ["Imported", "Halal", "Kosher", "Food Grade"],
+
+    specs: [
+      { label: "Form", value: "Powder" },
+      { label: "Pack Size", value: "15 Kg" },
+      { label: "Origin", value: "Australia" },
+      { label: "Protein (Dry Matter)", value: "≥ 80.0%" },
+      { label: "Fat", value: "2.0% Min" },
+      { label: "Carbohydrate", value: "2.0% Min" },
+    ],
+
+    qualityStandards: [
+      { label: "Standard Plate Count", value: "≤ 30,000 CFU/g" },
+      { label: "Coliforms", value: "Absent" },
+      { label: "Yeast & Mould", value: "≤ 50 CFU/g" },
+      { label: "Salmonella", value: "Not Detected" },
+    ],
+
+    manufacturer: {
+      name: "Saputo Dairy Australia Pty Ltd",
+    },
+
+    trade: [
+      { label: "Minimum Order", value: "100 Kg" },
+      { label: "Market", value: "All India" },
+    ],
+  },
+
+  {
+    id: 9,
     name: "L-Carnitine Base",
     make: "Hubei Grand Life Science & Technology Co., Ltd.",
     category: "Nutraceutical Ingredient",
@@ -434,7 +491,7 @@ const products = [
   },
 
   {
-    id: 9,
+    id: 10,
     name: "L-Glutamine",
     make: "Xinjiang Fufeng Biotechnologies Co., Ltd.",
     category: "Amino Acid",
