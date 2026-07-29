@@ -72,16 +72,6 @@ export async function POST(req) {
       );
     }
 
-    const captchaRes = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
-      },
-    );
 
     if (token && token !== "no-captcha") {
       const captchaRes = await fetch(
