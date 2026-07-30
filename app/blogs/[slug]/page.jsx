@@ -194,15 +194,32 @@ export default async function DynamicBlogPage({ params }) {
                   )}
 
                   {/* The List itself */}
-                  {section.type === "bullet" ? (
-                    <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-8 mb-4">
-                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />)}
-                    </ul>
-                  ) : (
-                    <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-8 mb-4">
-                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />)}
-                    </ol>
-                  )}
+                  {(() => {
+                    const groups = section.bulletGroups && section.bulletGroups.length > 0 
+                      ? section.bulletGroups 
+                      : [{ subheading: "", items: section.items || [] }];
+                    
+                    return groups.map((group, gIdx) => (
+                      <div key={gIdx} className="mb-4">
+                        {group.subheading && (
+                          <h3 className="font-semibold text-gray-800 mb-2 mt-2">{group.subheading}</h3>
+                        )}
+                        {section.type === "bullet" ? (
+                          <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-8">
+                            {group.items?.filter(item => item && item.trim() !== "").map((item, i) => (
+                              <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />
+                            ))}
+                          </ul>
+                        ) : (
+                          <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-8">
+                            {group.items?.filter(item => item && item.trim() !== "").map((item, i) => (
+                              <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />
+                            ))}
+                          </ol>
+                        )}
+                      </div>
+                    ));
+                  })()}
 
                   {/* Outros after list */}
                   {section.outros && section.outros.length > 0 && (

@@ -209,6 +209,7 @@ export default function LeadPopup() {
   const pathname = usePathname();
   const isStudentPanel = pathname?.startsWith("/student-panel");
   const isItServicesPage = pathname?.startsWith("/it-services-and-solutions");
+  const isFoodIngredientsPage = pathname?.startsWith("/food-ingredients");
 
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -222,15 +223,15 @@ export default function LeadPopup() {
   });
 
   useEffect(() => {
-    // 3. Stop the 10-second timer from even running if on the student panel or IT services
-    if (isStudentPanel || isItServicesPage) return;
+    // 3. Stop the 10-second timer from even running if on these specific pages
+    if (isStudentPanel || isItServicesPage || isFoodIngredientsPage) return;
 
     const firstTimer = setTimeout(() => {
       setShow(true);
     }, 10000);
 
     return () => clearTimeout(firstTimer);
-  }, [pathname]);
+  }, [pathname, isStudentPanel, isItServicesPage, isFoodIngredientsPage]);
 
   const closePopup = () => {
     setShow(false);
@@ -306,8 +307,8 @@ export default function LeadPopup() {
     }
   };
 
-  // 4. Return null (hide completely) if on the student panel, IT services, or if show is false
-  if (isStudentPanel || isItServicesPage || !show) return null;
+  // 4. Return null (hide completely) if on the student panel, IT services, food ingredients, or if show is false
+  if (isStudentPanel || isItServicesPage || isFoodIngredientsPage || !show) return null;
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/10 pointer-events-none">
