@@ -277,6 +277,17 @@ import { servicesMenu } from "@/data/services";
 import { testingMenu } from "@/data/testing";
 import { equipmentMenu } from "@/data/equipment";
 import { updatesMenu } from "@/data/updates";
+import { foodIngredients } from "@/data/foodIngredients";
+
+const foodMenu = [
+  {
+    items: foodIngredients.map(item => ({
+      name: item.name,
+      slug: `food-ingredients/${item.slug}`,
+      root: true
+    }))
+  }
+];
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -305,7 +316,7 @@ export default function Navbar() {
             <DesktopDropdown title="UPDATES" menu={updatesMenu} />
 
             <NavLink href="/contact-us" label="CONTACT US" />
-            <NavLink href="/food-ingredients" label="FOOD INGREDIENTS" />
+            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" />
             <NavLink href="/it-services-and-solutions" label="IT SERVICES" />
             <NavLink href="/student-panel" label="STUDENT PANEL" />
           </ul>
@@ -383,9 +394,11 @@ export default function Navbar() {
                 close={setMobileMenu}
               />
 
-              <MobileLink
-                label="FOOD INGREDIENTS"
-                href="/food-ingredients"
+              <MobileAccordion
+                title="FOOD INGREDIENTS"
+                menu={foodMenu}
+                active={activeMobile}
+                setActive={setActiveMobile}
                 close={setMobileMenu}
               />
 
@@ -408,7 +421,7 @@ export default function Navbar() {
   );
 }
 
-function DesktopDropdown({ title, menu }) {
+function DesktopDropdown({ title, menu, href }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -417,10 +430,17 @@ function DesktopDropdown({ title, menu }) {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <span className="cursor-pointer flex items-center gap-1 hover:text-black transition-colors whitespace-nowrap">
-        {title}
-        <ChevronDown size={14} className="shrink-0" />
-      </span>
+      {href ? (
+        <Link href={href} className="cursor-pointer flex items-center gap-1 hover:text-black transition-colors whitespace-nowrap">
+          {title}
+          <ChevronDown size={14} className="shrink-0" />
+        </Link>
+      ) : (
+        <span className="cursor-pointer flex items-center gap-1 hover:text-black transition-colors whitespace-nowrap">
+          {title}
+          <ChevronDown size={14} className="shrink-0" />
+        </span>
+      )}
 
       <div 
         className={`absolute left-0 top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 ${

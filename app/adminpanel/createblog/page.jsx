@@ -476,32 +476,14 @@ export default function CreateBlog() {
                               <button type="button" onClick={() => removeBulletGroup(sIdx, gIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                            </div>
 
-                           {/* LOGIC SPLIT: Bullet vs Numbered */}
-                           {section.type === "bullet" ? (
-                             <div className="space-y-2 border border-dashed border-gray-200 p-4 rounded-xl bg-white/50">
-                                <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">⚡ Upload All Bullet Points At Once (One Point Per Line)</label>
-                                <textarea 
-                                  rows="5" 
-                                  value={group.items?.join("\n") || ""} 
-                                  onChange={(e) => {
-                                      const lines = e.target.value.split("\n");
-                                      const updatedSecs = [...sections];
-                                      updatedSecs[sIdx].bulletGroups[gIdx].items = lines;
-                                      setSections(updatedSecs);
-                                  }} 
-                                  placeholder="Bullet Point 1&#10;Bullet Point 2&#10;Bullet Point 3" 
-                                  className="w-full border border-gray-200/80 bg-white rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all text-gray-900 shadow-sm" 
-                                />
-                             </div>
-                           ) : (
                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                               {/* Numbered Option 1: One by One */}
+                               {/* Option 1: One by One */}
                                <div className="p-4 bg-white/50 border border-gray-200 rounded-2xl shadow-sm">
                                   <span className="block text-xs font-extrabold text-gray-500 uppercase tracking-wider mb-3">Option 1: Add One by One</span>
                                   <div className="space-y-3">
                                     {group.items?.map((item, iIdx) => (
                                       <div key={iIdx} className="flex items-center gap-3">
-                                        <span className="text-gray-400 font-bold">{iIdx + 1}.</span>
+                                        <span className="text-gray-400 font-bold">{section.type === 'numbered' ? (iIdx + 1) + '.' : '•'}</span>
                                         <input type="text" value={item} onChange={(e) => {
                                             const updated = [...sections];
                                             updated[sIdx].bulletGroups[gIdx].items[iIdx] = e.target.value;
@@ -523,7 +505,7 @@ export default function CreateBlog() {
                                   }} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1 mt-3"><span className="text-lg leading-none">+</span> Add Point</button>
                                </div>
 
-                               {/* Numbered Option 2: Bulk Add */}
+                               {/* Option 2: Bulk Add */}
                                <div className="p-4 bg-gray-50/50 border border-dashed border-gray-200 rounded-2xl shadow-sm">
                                   <span className="block text-xs font-extrabold text-gray-500 uppercase tracking-wider mb-3">Option 2: Add All at Once</span>
                                   <textarea 
@@ -540,7 +522,6 @@ export default function CreateBlog() {
                                   />
                                </div>
                              </div>
-                           )}
                         </div>
                       ))}
                       <button type="button" onClick={() => addBulletGroup(sIdx)} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Another Sub-heading Group</button>
