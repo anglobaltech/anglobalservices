@@ -96,12 +96,12 @@ export default async function BlogsPage() {
               href={`/blogs/${blog.slug}`}
               className="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden flex flex-col group cursor-pointer block"
             >
-              <div className="relative h-60 w-full shrink-0 overflow-hidden">
+              <div className="relative h-52 sm:h-60 w-full shrink-0 overflow-hidden bg-gray-50 flex items-center justify-center border-b border-gray-100">
                 <Image
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain group-hover:scale-105 transition-transform duration-500"
                   unoptimized // Crucial for Firebase images
                 />
               </div>

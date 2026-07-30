@@ -132,13 +132,13 @@ export default async function DynamicBlogPage({ params }) {
       </section>
 
       {/* --- HERO IMAGE SECTION --- */}
-      <section className="max-w-7xl mx-auto px-6 py-10">
-        <div className="relative w-full h-40 sm:h-64 md:h-80 lg:h-96 xl:h-[480px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+      <section className="max-w-7xl mx-auto px-6 py-6 md:py-10">
+        <div className="relative w-full aspect-video max-h-[480px] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 flex items-center justify-center">
           <Image
             src={safeHeroImage}
             alt={blog.seo?.mainImageAlt || blog.title}
             fill
-            className="object-cover"
+            className="object-contain"
             priority
             unoptimized
           />
