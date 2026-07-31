@@ -756,7 +756,7 @@ export default function ITServicesPage() {
                           alt={project.title}
                           width={800}
                           height={450}
-                          className="w-full h-auto block object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-auto block object-cover group-hover:scale-[1.02] transition-transform duration-500"
                         />
                       ) : (
                         <>
