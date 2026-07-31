@@ -697,34 +697,7 @@ export default function ITServicesPage() {
                   desc: "A complete corporate website with service pages, SEO optimization, lead generation forms, and a student training panel.",
                   tech: ["Next.js", "Tailwind CSS", "MongoDB"],
                   color: "from-blue-500 to-cyan-500",
-                },
-                {
-                  title: "Student Training Portal",
-                  category: "Web Application",
-                  desc: "A multi-section student training and enrollment portal with email OTP verification, enrollment forms, and admin dashboard.",
-                  tech: ["React", "Node.js", "MongoDB"],
-                  color: "from-purple-500 to-pink-500",
-                },
-                {
-                  title: "Business Lead CRM",
-                  category: "CRM Development",
-                  desc: "A custom CRM for managing business leads, tracking sales pipelines, automated follow-ups, and generating detailed reports.",
-                  tech: ["Node.js", "PostgreSQL", "REST API"],
-                  color: "from-green-500 to-emerald-500",
-                },
-                {
-                  title: "Nirvana Nuts",
-                  category: "E-Commerce Website",
-                  desc: "A premium e-commerce platform for healthy snacks, selling various flavors of makhana and bulk whey protein, featuring a seamless shopping experience.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
-                  color: "from-amber-500 to-orange-500",
-                },
-                {
-                  title: "Lumora India",
-                  category: "Brand Website",
-                  desc: "A sophisticated brand website for a premium feminine hygiene provider, showcasing rash-free sanitary pads and women's health solutions.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
-                  color: "from-pink-500 to-rose-500",
+                  url: "https://www.anglobalservices.com/",
                 },
                 {
                   title: "India Laser",
@@ -732,32 +705,95 @@ export default function ITServicesPage() {
                   desc: "A robust corporate website for a leading manufacturer of industrial laser machines, featuring an extensive catalog of cutting and testing equipment.",
                   tech: ["Next.js", "Tailwind CSS", "React"],
                   color: "from-blue-700 to-blue-500",
+                  url: "https://www.indialaser.in/",
                 },
-              ].map((project, i) => (
-                <div
-                  key={i}
-                  className="group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300"
-                >
-                  {/* Gradient Header */}
-                  <div className={`h-40 bg-gradient-to-br ${project.color} flex items-center justify-center relative`}>
-                    <div className="absolute inset-0 bg-black/10" />
-                    <div className="relative text-center px-4">
-                      <p className="text-white/80 text-xs font-semibold uppercase tracking-wider mb-1">{project.category}</p>
-                      <h4 className="text-xl font-bold text-white">{project.title}</h4>
+                {
+                  title: "Business Lead CRM",
+                  category: "CRM Development",
+                  desc: "A custom CRM for managing business leads, tracking sales pipelines, automated follow-ups, and generating detailed reports.",
+                  tech: ["Node.js", "PostgreSQL", "REST API"],
+                  color: "from-green-500 to-emerald-500",
+                  isModal: true,
+                },
+                {
+                  title: "Nirvana Nuts",
+                  category: "E-Commerce Website",
+                  desc: "A premium e-commerce platform for healthy snacks, selling various flavors of makhana and bulk whey protein, featuring a seamless shopping experience.",
+                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  color: "from-amber-500 to-orange-500",
+                  url: "https://www.nirvananuts.in/",
+                },
+                {
+                  title: "Lumora India",
+                  category: "Brand Website",
+                  desc: "A sophisticated brand website for a premium feminine hygiene provider, showcasing rash-free sanitary pads and women's health solutions.",
+                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  color: "from-pink-500 to-rose-500",
+                  url: "https://www.lumoraindia.com/",
+                },
+                {
+                  title: "Minu Quality Testing Laboratory Pvt. Ltd.",
+                  category: "Corporate Website",
+                  desc: "A professional corporate website for an independent material testing laboratory offering reliable testing services for construction, industrial, and manufacturing materials.",
+                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  color: "from-gray-700 to-gray-900",
+                  url: "https://www.mqtlab.com/",
+                },
+              ].map((project, i) => {
+                const CardContent = (
+                  <>
+                    {/* Gradient Header */}
+                    <div className={`h-40 bg-gradient-to-br ${project.color} flex items-center justify-center relative`}>
+                      <div className="absolute inset-0 bg-black/10" />
+                      <div className="relative text-center px-4">
+                        <p className="text-white/80 text-xs font-semibold uppercase tracking-wider mb-1">{project.category}</p>
+                        <h4 className="text-xl font-bold text-white">{project.title}</h4>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Card Body */}
-                  <div className="p-6">
-                    <p className="text-gray-600 text-sm leading-relaxed mb-5">{project.desc}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((t, j) => (
-                        <span key={j} className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{t}</span>
-                      ))}
+                    {/* Card Body */}
+                    <div className="p-6 flex flex-col flex-grow">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">{project.desc}</p>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tech.map((t, j) => (
+                          <span key={j} className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{t}</span>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center text-[#0075B6] font-semibold text-sm group-hover:text-blue-700 transition-colors mt-auto pt-4 border-t border-gray-100">
+                        {project.isModal ? "Request a Demo" : "View Website"}
+                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </>
+                );
+
+                if (project.isModal) {
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => setShowConsultationModal(true)}
+                      className="text-left w-full h-full flex flex-col group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      {CardContent}
+                    </button>
+                  );
+                }
+
+                return (
+                  <a
+                    key={i}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col h-full group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300"
+                  >
+                    {CardContent}
+                  </a>
+                );
+              })}
             </div>
 
             <div className="text-center mt-12">
