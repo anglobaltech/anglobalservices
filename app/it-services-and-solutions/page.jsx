@@ -233,7 +233,7 @@ export default function ITServicesPage() {
       />
 
       {/* ═══════════ 1. HERO BANNER — LEFT ALIGNED ═══════════ */}
-      <section className="relative w-full min-h-screen flex flex-col justify-start pt-16 md:pt-28 overflow-hidden">
+      <section className="relative w-full min-h-[70vh] lg:min-h-[80vh] flex flex-col justify-center py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/it-services-and-solutions/it-services-solutions-1.png"
@@ -695,66 +695,84 @@ export default function ITServicesPage() {
                   title: "AN Global Services Website",
                   category: "Corporate Website",
                   desc: "A complete corporate website with service pages, SEO optimization, lead generation forms, and a student training panel.",
-                  tech: ["Next.js", "Tailwind CSS", "MongoDB"],
+                  tech: ["Next.js", "Tailwind CSS", "MongoDB", "+ More"],
                   color: "from-blue-500 to-cyan-500",
                   url: "https://www.anglobalservices.com/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-anglobalservices-card.webp",
                 },
                 {
                   title: "India Laser",
                   category: "Corporate Website",
                   desc: "A robust corporate website for a leading manufacturer of industrial laser machines, featuring an extensive catalog of cutting and testing equipment.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
                   color: "from-blue-700 to-blue-500",
                   url: "https://www.indialaser.in/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-indialaser-card.webp",
                 },
                 {
                   title: "Business Lead CRM",
                   category: "CRM Development",
                   desc: "A custom CRM for managing business leads, tracking sales pipelines, automated follow-ups, and generating detailed reports.",
-                  tech: ["Node.js", "PostgreSQL", "REST API"],
+                  tech: ["Node.js", "PostgreSQL", "REST API", "+ More"],
                   color: "from-green-500 to-emerald-500",
                   isModal: true,
+                  image: "/it-services-and-solutions/it-services-and-solutions-crmservices-card.webp",
                 },
                 {
                   title: "Nirvana Nuts",
                   category: "E-Commerce Website",
                   desc: "A premium e-commerce platform for healthy snacks, selling various flavors of makhana and bulk whey protein, featuring a seamless shopping experience.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
                   color: "from-amber-500 to-orange-500",
                   url: "https://www.nirvananuts.in/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-nirvananuts-card.webp",
                 },
                 {
                   title: "Lumora India",
                   category: "Brand Website",
                   desc: "A sophisticated brand website for a premium feminine hygiene provider, showcasing rash-free sanitary pads and women's health solutions.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
                   color: "from-pink-500 to-rose-500",
                   url: "https://www.lumoraindia.com/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-lumoraindia-card.webp",
                 },
                 {
                   title: "Minu Quality Testing Laboratory Pvt. Ltd.",
                   category: "Corporate Website",
-                  desc: "A professional corporate website for an independent material testing laboratory offering reliable testing services for construction, industrial, and manufacturing materials.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  desc: "A professional corporate website for an independent material testing laboratory offering reliable testing services for various industrial materials.",
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
                   color: "from-gray-700 to-gray-900",
                   url: "https://www.mqtlab.com/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-mqtl-card.webp",
                 },
               ].map((project, i) => {
                 const CardContent = (
                   <>
-                    {/* Gradient Header */}
-                    <div className={`h-40 bg-gradient-to-br ${project.color} flex items-center justify-center relative`}>
-                      <div className="absolute inset-0 bg-black/10" />
-                      <div className="relative text-center px-4">
-                        <p className="text-white/80 text-xs font-semibold uppercase tracking-wider mb-1">{project.category}</p>
-                        <h4 className="text-xl font-bold text-white">{project.title}</h4>
-                      </div>
+                    {/* Header */}
+                    <div className={`w-full relative overflow-hidden ${project.image ? 'border-b border-gray-100' : `h-40 flex items-center justify-center bg-gradient-to-br ${project.color}`}`}>
+                      {project.image ? (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={800}
+                          height={450}
+                          className="w-full h-auto block object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <>
+                          <div className="absolute inset-0 bg-black/10 transition-colors" />
+                          <div className="relative text-center px-4">
+                            <p className="text-white/90 text-xs font-semibold uppercase tracking-wider mb-1">{project.category}</p>
+                            <h4 className="text-xl font-bold text-white">{project.title}</h4>
+                          </div>
+                        </>
+                      )}
                     </div>
 
                     {/* Card Body */}
-                    <div className="p-6 flex flex-col flex-grow">
-                      <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">{project.desc}</p>
-                      <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">{project.desc}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {project.tech.map((t, j) => (
                           <span key={j} className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{t}</span>
                         ))}
