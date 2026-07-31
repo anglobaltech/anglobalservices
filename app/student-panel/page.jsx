@@ -94,7 +94,7 @@ export default function StudentPanelPage() {
 
       {/* ================= HERO SECTION ================= */}
       <section 
-        className="relative w-full min-h-[calc(100vh-70px)] py-28 md:py-20 flex items-center justify-center bg-cover bg-center"
+        className="relative w-full min-h-[70vh] lg:min-h-[80vh] flex flex-col justify-center py-20 md:py-28 bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: "url('/student-panel/student-panel-1.webp')" }}
       >
         <div className="absolute inset-0 bg-black/70"></div>
