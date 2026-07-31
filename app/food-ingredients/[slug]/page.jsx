@@ -144,10 +144,10 @@ export default async function ProductPage({ params }) {
         {/* ═══════════ 2. MAIN CONTENT & SIDEBAR ═══════════ */}
         <section className="py-16 md:py-24 flex-grow relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row gap-12 lg:gap-16 relative">
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 relative items-start">
               
               {/* Left Column: Premium Content Blocks */}
-              <div className="md:w-2/3 space-y-16">
+              <div className="w-full lg:w-2/3 space-y-12 lg:space-y-16">
                 
                 {/* Overview */}
                 <LazySection>
@@ -188,7 +188,7 @@ export default async function ProductPage({ params }) {
 
                 {/* Advanced SEO Content Sections */}
                 {(product.benefits || product.manufacturingProcess) && (
-                  <LazySection className="space-y-16">
+                  <LazySection className="space-y-12 lg:space-y-16">
                     
                     {product.benefits && product.benefits.length > 0 && (
                       <div>
@@ -287,9 +287,9 @@ export default async function ProductPage({ params }) {
               </div>
 
               {/* Right Column: Premium Sticky Sidebar */}
-              <div className="md:w-1/3 md:sticky md:top-28 md:self-start md:h-fit relative" id="quote-form">
+              <div className="w-full lg:w-1/3 lg:sticky lg:top-28 relative" id="quote-form">
                 <div className="w-full">
-                  <LazySection className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-2xl relative overflow-hidden group">
+                  <LazySection className="bg-white rounded-[2rem] p-6 lg:p-8 border border-gray-100 shadow-2xl relative overflow-hidden group">
                     <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#0075B6] to-[#60B5F0]" />
                     
                     <h3 className="text-2xl font-extrabold text-[#0a192f] mb-3">Contact Us</h3>
@@ -312,7 +312,7 @@ export default async function ProductPage({ params }) {
                       </div>
                       <div className="overflow-hidden">
                         <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Email Us</p>
-                        <span className="text-gray-900 font-extrabold group-hover/link:text-[#0075B6] transition-colors text-base sm:text-lg truncate block">info@anglobalservices.com</span>
+                        <span className="text-gray-900 font-extrabold group-hover/link:text-[#0075B6] transition-colors text-base sm:text-lg break-all">info@anglobalservices.com</span>
                       </div>
                     </a>
 
