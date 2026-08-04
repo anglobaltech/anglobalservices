@@ -269,7 +269,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown, FileText } from "lucide-react";
 
@@ -292,6 +292,17 @@ const foodMenu = [
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [activeMobile, setActiveMobile] = useState(null);
+
+  useEffect(() => {
+    const handleOpen = () => {
+      if (window.innerWidth < 1024) {
+        setMobileMenu(true);
+        setActiveMobile("SERVICES");
+      }
+    };
+    window.addEventListener('open-services-dropdown', handleOpen);
+    return () => window.removeEventListener('open-services-dropdown', handleOpen);
+  }, []);
 
   return (
     <nav className="bg-[#0075B6] relative z-50 w-full">
@@ -423,6 +434,14 @@ export default function Navbar() {
 
 function DesktopDropdown({ title, menu, href }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (title === "SERVICES") {
+      const handleOpen = () => setIsOpen(true);
+      window.addEventListener('open-services-dropdown', handleOpen);
+      return () => window.removeEventListener('open-services-dropdown', handleOpen);
+    }
+  }, [title]);
 
   return (
     <li 
