@@ -101,7 +101,7 @@ export default async function BlogsPage() {
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain group-hover:scale-[1.02] transition-transform duration-500"
                   unoptimized // Crucial for Firebase images
                 />
               </div>
