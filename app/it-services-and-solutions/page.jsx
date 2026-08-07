@@ -233,7 +233,7 @@ export default function ITServicesPage() {
       />
 
       {/* ═══════════ 1. HERO BANNER — LEFT ALIGNED ═══════════ */}
-      <section className="relative w-full min-h-screen flex flex-col justify-start pt-16 md:pt-28 overflow-hidden">
+      <section className="relative w-full min-h-[70vh] lg:min-h-[80vh] flex flex-col justify-center py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/it-services-and-solutions/it-services-solutions-1.png"
@@ -242,7 +242,7 @@ export default function ITServicesPage() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30" />
+          <div className="absolute inset-0 bg-black/70 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/90 sm:via-black/70 sm:to-black/30" />
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -352,7 +352,7 @@ export default function ITServicesPage() {
       </section>
 
       {/* ═══════════ 4. WEBSITE DEVELOPMENT — DEEP DIVE (BG IMAGE) ═══════════ */}
-      <section id="web-development" className="relative py-16 md:py-28 overflow-hidden">
+      <section id="web-development" className="relative py-10 md:py-14 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/it-services-and-solutions/it-services-solutions-website-service-section-7.png"
@@ -360,33 +360,33 @@ export default function ITServicesPage() {
             fill
             className="object-cover object-left"
           />
-          {/* Reduced white overlay so background image shows better and is less washed out */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/45 to-transparent" />
+          {/* Stronger white overlay on mobile for text readability */}
+          <div className="absolute inset-0 bg-white/90 md:bg-transparent md:bg-gradient-to-r md:from-white/90 md:via-white/60 md:to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <LazySection>
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-[#003f80] text-base font-black mb-5 w-max border border-[#0075B6]/50 shadow-md">
-                <Globe size={18} /> Website Development Services
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-[#003f80] text-sm font-black mb-4 w-max border border-[#0075B6]/50 shadow-md">
+                <Globe size={16} /> Website Development Services
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-5 leading-tight drop-shadow-sm">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-4 leading-tight drop-shadow-sm">
                 Websites Built to Rank, <br className="hidden md:block" />Convert, and Scale
               </h2>
-              <p className="text-black text-lg md:text-xl leading-relaxed mb-4 font-black">
+              <p className="text-black text-base md:text-lg leading-relaxed mb-3 font-black">
                 Your website is the first impression your business makes. We engineer robust, conversion-focused digital platforms that capture leads, showcase your brand authority, and consistently outperform competitors in search engine rankings.
               </p>
-              <p className="text-black text-base md:text-lg leading-relaxed mb-8 font-bold">
+              <p className="text-black text-sm md:text-base leading-relaxed mb-6 font-bold text-gray-800">
                 Whether you need a corporate website, an e-commerce store, a SaaS platform, or a custom web application — our team delivers pixel-perfect designs backed by rock-solid code and measurable performance metrics.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                 {webDevFeatures.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-white/95 backdrop-blur-sm rounded-lg p-3.5 border border-gray-300 shadow-md">
-                    <CheckCircle2 className="text-[#0075B6] shrink-0 mt-0.5" size={20} />
+                  <div key={i} className="flex items-start gap-3 bg-white/95 backdrop-blur-sm rounded-lg p-3 border border-gray-300 shadow-sm hover:shadow-md transition-shadow">
+                    <CheckCircle2 className="text-[#0075B6] shrink-0 mt-0.5" size={18} />
                     <div>
-                      <span className="text-black font-black text-base">{item.title}</span>
-                      <p className="text-gray-900 text-sm leading-relaxed mt-0.5 font-bold">{item.desc}</p>
+                      <span className="text-black font-black text-sm">{item.title}</span>
+                      <p className="text-gray-900 text-xs leading-relaxed mt-0.5 font-bold">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -406,7 +406,7 @@ export default function ITServicesPage() {
       </section>
 
       {/* ═══════════ 4B. TYPES OF WEBSITES WE BUILD ═══════════ */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-12 md:py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <LazySection>
             <div className="text-center mb-12">
@@ -444,7 +444,7 @@ export default function ITServicesPage() {
         </div>
       </section>
       {/* ═══════════ 6. CRM DEVELOPMENT — DEEP DIVE (BG IMAGE) ═══════════ */}
-      <section id="crm-development" className="relative py-16 md:py-28 overflow-hidden">
+      <section id="crm-development" className="relative py-10 md:py-14 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/it-services-and-solutions/it-services-solutions-crm-service-section-6.png?v=2"
@@ -452,33 +452,33 @@ export default function ITServicesPage() {
             fill
             className="object-cover object-left"
           />
-          {/* Reduced white overlay so background image shows better and is less washed out */}
-          <div className="absolute inset-0 bg-gradient-to-l from-white/75 via-white/45 to-transparent" />
+          {/* Stronger white overlay on mobile for text readability */}
+          <div className="absolute inset-0 bg-white/90 md:bg-transparent md:bg-gradient-to-l md:from-white/90 md:via-white/60 md:to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <LazySection>
             <div className="max-w-2xl ml-auto">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-[#003f80] text-base font-black mb-5 w-max border border-[#0075B6]/50 shadow-md">
-                <Database size={18} /> CRM Development Services
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-[#003f80] text-sm font-black mb-4 w-max border border-[#0075B6]/50 shadow-md">
+                <Database size={16} /> CRM Development Services
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-5 leading-tight drop-shadow-sm">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-4 leading-tight drop-shadow-sm">
                 Stop Losing Leads. <br className="hidden md:block" />Start Closing Deals Faster.
               </h2>
-              <p className="text-black text-lg md:text-xl leading-relaxed mb-4 font-black">
+              <p className="text-black text-base md:text-lg leading-relaxed mb-3 font-black">
                 Spreadsheets and generic software are costing you revenue. Our custom CRM solutions are built from scratch to match your exact sales process — so your team spends less time on data entry and more time closing deals.
               </p>
-              <p className="text-black text-base md:text-lg leading-relaxed mb-8 font-bold">
+              <p className="text-black text-sm md:text-base leading-relaxed mb-6 font-bold text-gray-800">
                 From lead capture and pipeline management to automated follow-ups and real-time reporting dashboards — we build CRM systems that give your business the operational edge it needs to outpace the competition.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                 {crmFeatures.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-white/95 backdrop-blur-sm rounded-lg p-3.5 border border-gray-300 shadow-md">
-                    <CheckCircle2 className="text-[#0075B6] shrink-0 mt-0.5" size={20} />
+                  <div key={i} className="flex items-start gap-3 bg-white/95 backdrop-blur-sm rounded-lg p-3 border border-gray-300 shadow-sm hover:shadow-md transition-shadow">
+                    <CheckCircle2 className="text-[#0075B6] shrink-0 mt-0.5" size={18} />
                     <div>
-                      <span className="text-black font-black text-base">{item.title}</span>
-                      <p className="text-gray-900 text-sm leading-relaxed mt-0.5 font-bold">{item.desc}</p>
+                      <span className="text-black font-black text-sm">{item.title}</span>
+                      <p className="text-gray-900 text-xs leading-relaxed mt-0.5 font-bold">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -498,7 +498,7 @@ export default function ITServicesPage() {
       </section>
 
       {/* ═══════════ 6B. WHAT A CUSTOM CRM CAN DO FOR YOUR BUSINESS ═══════════ */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-12 md:py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <LazySection>
             <div className="text-center mb-12">
@@ -536,7 +536,7 @@ export default function ITServicesPage() {
         </div>
       </section>
       {/* ═══════════ 7. WHY PARTNER WITH US ═══════════ */}
-      <section className="py-16 md:py-28 bg-[#0f2243] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-[#0f2243] relative overflow-hidden">
         {/* Ambient glow blobs - softened for a lighter but premium feel */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl" />
@@ -544,23 +544,23 @@ export default function ITServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <LazySection>
             {/* Centered heading */}
-            <div className="text-center mb-14">
-              <span className="inline-block bg-[#0075B6]/20 border border-[#0075B6]/30 text-[#60B5F0] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+            <div className="text-center mb-10">
+              <span className="inline-block bg-[#0075B6]/20 border border-[#0075B6]/30 text-[#60B5F0] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-3">
                 Why Choose Us
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Partner With AN Global Services?
               </h2>
-              <div className="w-20 h-1 bg-[#0075B6] mx-auto mb-6" />
+              <div className="w-20 h-1 bg-[#0075B6] mx-auto mb-4" />
               <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
                 When you partner with us, you get a technology team that understands business outcomes—not just code.
               </p>
             </div>
 
             {/* Layout: image left, 2x3 feature grid right */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               {/* Image — fixed height, premium frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[500px] ring-1 ring-white/10 w-full">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[440px] ring-1 ring-white/10 w-full">
                 <Image
                   src="/it-services-and-solutions/it-services-solutions-growth-result-section-4.png?v=3"
                   alt="Why Choose AN Global Services for IT Solutions — Proven Results and Business Growth"
@@ -571,15 +571,15 @@ export default function ITServicesPage() {
               </div>
 
               {/* 2x3 Feature grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {whyChooseUs.map((item, i) => {
                   const Icon = item.icon;
                   return (
-                    <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-[#0075B6]/40 hover:-translate-y-1 transition-all duration-300 group">
-                      <div className="bg-[#0075B6]/20 w-10 h-10 rounded-xl flex items-center justify-center text-[#60B5F0] mb-3 group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300">
+                    <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 hover:border-[#0075B6]/40 hover:-translate-y-1 transition-all duration-300 group">
+                      <div className="bg-[#0075B6]/20 w-10 h-10 rounded-xl flex items-center justify-center text-[#60B5F0] mb-2 group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300">
                         <Icon size={20} strokeWidth={1.5} />
                       </div>
-                      <h4 className="text-white font-bold text-sm mb-1.5">{item.title}</h4>
+                      <h4 className="text-white font-bold text-sm mb-1">{item.title}</h4>
                       <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
                     </div>
                   );
@@ -634,7 +634,7 @@ export default function ITServicesPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f]/96 via-[#0a192f]/80 to-[#0a192f]/50" />
+          <div className="absolute inset-0 bg-[#0a192f]/90 md:bg-transparent md:bg-gradient-to-r md:from-[#0a192f]/96 md:via-[#0a192f]/80 md:to-[#0a192f]/40" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -695,69 +695,123 @@ export default function ITServicesPage() {
                   title: "AN Global Services Website",
                   category: "Corporate Website",
                   desc: "A complete corporate website with service pages, SEO optimization, lead generation forms, and a student training panel.",
-                  tech: ["Next.js", "Tailwind CSS", "MongoDB"],
+                  tech: ["Next.js", "Tailwind CSS", "MongoDB", "+ More"],
                   color: "from-blue-500 to-cyan-500",
-                },
-                {
-                  title: "Student Training Portal",
-                  category: "Web Application",
-                  desc: "A multi-section student training and enrollment portal with email OTP verification, enrollment forms, and admin dashboard.",
-                  tech: ["React", "Node.js", "MongoDB"],
-                  color: "from-purple-500 to-pink-500",
-                },
-                {
-                  title: "Business Lead CRM",
-                  category: "CRM Development",
-                  desc: "A custom CRM for managing business leads, tracking sales pipelines, automated follow-ups, and generating detailed reports.",
-                  tech: ["Node.js", "PostgreSQL", "REST API"],
-                  color: "from-green-500 to-emerald-500",
-                },
-                {
-                  title: "Nirvana Nuts",
-                  category: "E-Commerce Website",
-                  desc: "A premium e-commerce platform for healthy snacks, selling various flavors of makhana and bulk whey protein, featuring a seamless shopping experience.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
-                  color: "from-amber-500 to-orange-500",
-                },
-                {
-                  title: "Lumora India",
-                  category: "Brand Website",
-                  desc: "A sophisticated brand website for a premium feminine hygiene provider, showcasing rash-free sanitary pads and women's health solutions.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
-                  color: "from-pink-500 to-rose-500",
+                  url: "https://www.anglobalservices.com/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-anglobalservices-card.webp",
                 },
                 {
                   title: "India Laser",
                   category: "Corporate Website",
                   desc: "A robust corporate website for a leading manufacturer of industrial laser machines, featuring an extensive catalog of cutting and testing equipment.",
-                  tech: ["Next.js", "Tailwind CSS", "React"],
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
                   color: "from-blue-700 to-blue-500",
+                  url: "https://www.indialaser.in/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-indialaser-card.webp",
                 },
-              ].map((project, i) => (
-                <div
-                  key={i}
-                  className="group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300"
-                >
-                  {/* Gradient Header */}
-                  <div className={`h-40 bg-gradient-to-br ${project.color} flex items-center justify-center relative`}>
-                    <div className="absolute inset-0 bg-black/10" />
-                    <div className="relative text-center px-4">
-                      <p className="text-white/80 text-xs font-semibold uppercase tracking-wider mb-1">{project.category}</p>
-                      <h4 className="text-xl font-bold text-white">{project.title}</h4>
+                {
+                  title: "Business Lead CRM",
+                  category: "CRM Development",
+                  desc: "A custom CRM for managing business leads, tracking sales pipelines, automated follow-ups, and generating detailed reports.",
+                  tech: ["Node.js", "PostgreSQL", "REST API", "+ More"],
+                  color: "from-green-500 to-emerald-500",
+                  isModal: true,
+                  image: "/it-services-and-solutions/it-services-and-solutions-crmservices-card.webp",
+                },
+                {
+                  title: "Nirvana Nuts",
+                  category: "E-Commerce Website",
+                  desc: "A premium e-commerce platform for healthy snacks, selling various flavors of makhana and bulk whey protein, featuring a seamless shopping experience.",
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
+                  color: "from-amber-500 to-orange-500",
+                  url: "https://www.nirvananuts.in/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-nirvananuts-card.webp",
+                },
+                {
+                  title: "Lumora India",
+                  category: "Brand Website",
+                  desc: "A sophisticated brand website for a premium feminine hygiene provider, showcasing rash-free sanitary pads and women's health solutions.",
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
+                  color: "from-pink-500 to-rose-500",
+                  url: "https://www.lumoraindia.com/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-lumoraindia-card.webp",
+                },
+                {
+                  title: "Minu Quality Testing Laboratory Pvt. Ltd.",
+                  category: "Corporate Website",
+                  desc: "A professional corporate website for an independent material testing laboratory offering reliable testing services for various industrial materials.",
+                  tech: ["Next.js", "Tailwind CSS", "React", "+ More"],
+                  color: "from-gray-700 to-gray-900",
+                  url: "https://www.mqtlab.com/",
+                  image: "/it-services-and-solutions/it-services-and-solutions-mqtl-card.webp",
+                },
+              ].map((project, i) => {
+                const CardContent = (
+                  <>
+                    {/* Header */}
+                    <div className={`w-full relative overflow-hidden ${project.image ? 'border-b border-gray-100' : `h-40 flex items-center justify-center bg-gradient-to-br ${project.color}`}`}>
+                      {project.image ? (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={800}
+                          height={450}
+                          className="w-full h-auto block object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                        />
+                      ) : (
+                        <>
+                          <div className="absolute inset-0 bg-black/10 transition-colors" />
+                          <div className="relative text-center px-4">
+                            <p className="text-white/90 text-xs font-semibold uppercase tracking-wider mb-1">{project.category}</p>
+                            <h4 className="text-xl font-bold text-white">{project.title}</h4>
+                          </div>
+                        </>
+                      )}
                     </div>
-                  </div>
 
-                  {/* Card Body */}
-                  <div className="p-6">
-                    <p className="text-gray-600 text-sm leading-relaxed mb-5">{project.desc}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((t, j) => (
-                        <span key={j} className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{t}</span>
-                      ))}
+                    {/* Card Body */}
+                    <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">{project.desc}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tech.map((t, j) => (
+                          <span key={j} className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{t}</span>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center text-[#0075B6] font-semibold text-sm group-hover:text-blue-700 transition-colors mt-auto pt-4 border-t border-gray-100">
+                        {project.isModal ? "Request a Demo" : "View Website"}
+                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </>
+                );
+
+                if (project.isModal) {
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => setShowConsultationModal(true)}
+                      className="text-left w-full h-full flex flex-col group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      {CardContent}
+                    </button>
+                  );
+                }
+
+                return (
+                  <a
+                    key={i}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col h-full group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300"
+                  >
+                    {CardContent}
+                  </a>
+                );
+              })}
             </div>
 
             <div className="text-center mt-12">

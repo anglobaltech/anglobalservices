@@ -17,6 +17,59 @@ const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
 
 const slides = ["/dash-image1-2.webp", "/dash-image2-2.webp", "/dash-image3-2.webp"];
 
+const heroSlidesData = [
+  {
+    image: "/dash-image-bis-isi-certification-1.webp",
+    headingMain: "BIS, ISI & FMCS Certification",
+    headingSub: "CRS & Approval Services",
+    containerClass: "w-full sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl",
+    paragraph: (
+      <>
+        Get certified today! India's leading consultants for <span className="font-bold text-yellow-400">BIS Registration</span>, <span className="font-bold text-yellow-400">ISI Mark</span>, <span className="font-bold text-yellow-400">FMCS Certification</span>, and <span className="font-bold text-yellow-400">CRS Approval</span>. We ensure 100% compliance, safety, and rapid market entry for domestic and foreign manufacturers.
+      </>
+    )
+  },
+  {
+    image: "/dash-image-hallmarking-2.webp",
+    headingMain: "BIS Gold & Silver Hallmarking",
+    headingSub: "Center Setup & Registration",
+    exploreLink: "https://www.anglobalservices.com/hallmarking",
+    containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[42%] xl:w-[40%] xl:max-w-lg",
+    paragraph: (
+      <>
+        Launch your own <span className="font-bold text-yellow-400">Assaying & Hallmarking Center</span> with India's top consultants. We provide end-to-end setup, <span className="font-bold text-yellow-400">BIS Registration</span>, NABL accreditation, and advanced testing equipment for 100% genuine Gold & Silver testing.
+      </>
+    )
+  },
+  {
+    image: "/dash-image-food-ingredients-3.webp",
+    headingMain: "Premium Food Ingredients",
+    headingSub: "Global Import & Export Solutions",
+    exploreLink: "https://www.anglobalservices.com/food-ingredients",
+    containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[45%] xl:w-[45%] xl:max-w-xl",
+    paragraph: (
+      <>
+        Source top-tier natural food ingredients like <span className="font-bold text-yellow-400">Whey Protein</span> and <span className="font-bold text-yellow-400">Premium Phool Makhana</span> for your FMCG business. We provide 100% clean-label, high-quality bulk supplies with guaranteed international compliance and seamless global logistics.
+      </>
+    )
+  },
+  {
+    image: "/dash-image-it-services-4.webp",
+    headingMain: "Custom IT Solutions",
+    headingSub: "Software & Digital Transformation",
+    exploreLink: "https://www.anglobalservices.com/it-services-and-solutions",
+    containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[45%] xl:w-[45%] xl:max-w-xl",
+    paragraph: (
+      <>
+        Accelerate your business with cutting-edge technology. From <span className="font-bold text-yellow-400">Web Development</span> and <span className="font-bold text-yellow-400">Custom CRM Development</span>, to tailored mobile apps, we deliver robust digital solutions to fuel modern enterprise growth.
+      </>
+    )
+  }
+];
+
+const extendedHeroSlides = [...heroSlidesData, heroSlidesData[0]];
+
+
 export default function Hero() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
@@ -148,6 +201,35 @@ export default function Hero() {
   const [success, setSuccess] = useState(false);
   const [current, setCurrent] = useState(0);
   const [enableTransition, setEnableTransition] = useState(true);
+
+  const [heroSlide, setHeroSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
+
+  useEffect(() => {
+    if (isButtonHovered) return;
+    const interval = setInterval(() => {
+      setHeroSlide((prev) => prev + 1);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [isButtonHovered]);
+
+  useEffect(() => {
+    if (heroSlide === heroSlidesData.length) {
+      const timeoutId = setTimeout(() => {
+        setIsTransitioning(false);
+        setHeroSlide(0);
+      }, 1000);
+      return () => clearTimeout(timeoutId);
+    } else {
+      if (!isTransitioning) {
+        const timeoutId = setTimeout(() => {
+          setIsTransitioning(true);
+        }, 50);
+        return () => clearTimeout(timeoutId);
+      }
+    }
+  }, [heroSlide, isTransitioning]);
   const sliderRef = useRef(null);
   const totalSlides = testimonials.length + 1;
   const clientsRef = useRef(null);
@@ -427,47 +509,127 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative w-full bg-white m-0 p-0">
-        <div
-          className="
-            relative w-full
-            h-[152px]
-            sm:h-[230px]
-            md:h-[320px]
-            lg:h-[420px]
-            xl:h-[580px]
-            overflow-hidden
-          "
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full bg-[#051c35] overflow-hidden">
+        <div 
+          className={`flex w-full ${isTransitioning ? "transition-transform duration-1000 ease-in-out" : ""}`}
+          style={{ transform: `translateX(-${heroSlide * 100}%)` }}
         >
-          {slides.map((src, index) => (
-            <Image
-              key={index}
-              src={src}
-              alt={`Hero Slide ${index + 1}`}
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className={`
-                transition-opacity duration-700 ease-in-out
-                ${index === current ? "opacity-100" : "opacity-0"}
-                object-contain object-center
-              `}
-            />
+          {extendedHeroSlides.map((slide, idx) => (
+            <div key={idx} className="w-full shrink-0 relative">
+              <div className="grid grid-cols-1 grid-rows-1 w-full max-w-[2000px] mx-auto">
+                
+                {/* IMAGE LAYER */}
+                <div className="col-start-1 row-start-1 w-full relative flex items-start">
+                  <img 
+                    src={slide.image} 
+                    alt={slide.headingMain} 
+                    className="w-full h-full object-cover object-left sm:h-auto sm:object-contain block min-h-[380px] sm:min-h-0" 
+                  />
+                  {/* Subtle overlay to enhance text contrast over the graphic */}
+                  <div className="absolute inset-0 bg-black/10"></div>
+                </div>
+
+                {/* TEXT CONTENT LAYER */}
+                <div className="col-start-1 row-start-1 relative z-10 w-full flex items-center">
+                  <div className="w-full max-w-7xl mx-auto px-2 py-4 sm:py-1 md:px-4 md:py-2 xl:py-6 sm:px-6 lg:px-8">
+                    <div className={slide.containerClass || "w-[55%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
+                      <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-2xl lg:text-[28px] xl:text-[38px] font-extrabold text-white md:leading-tight mb-3 sm:mb-1 md:mb-2 xl:mb-4 drop-shadow-lg tracking-tight">
+                        <span className="whitespace-normal sm:whitespace-nowrap">{slide.headingMain}</span> <br className="hidden sm:block" />
+                        <span className="text-[#0075B6] drop-shadow-md bg-white/95 px-2 md:px-2 xl:px-3 py-1 md:py-1 rounded md:rounded-lg inline-block mt-2 sm:mt-1 md:mt-1 xl:mt-2 text-[12px] sm:text-[10px] md:text-sm lg:text-[18px] xl:text-[28px] whitespace-normal sm:whitespace-nowrap">
+                          {slide.headingSub}
+                        </span>
+                      </h1>
+
+                      <p className="text-white font-medium text-[12px] sm:text-[8px] md:text-[10px] lg:text-xs xl:text-base mb-5 sm:mb-3 md:mb-4 xl:mb-8 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md bg-black/20 p-3 sm:p-2 md:p-2 xl:p-3 rounded md:rounded-lg backdrop-blur-sm inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
+                        {slide.paragraph}
+                      </p>
+
+                      <div 
+                        className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 xl:gap-4 mb-4 sm:mb-2 md:mb-4 xl:mb-8"
+                        onMouseEnter={() => setIsButtonHovered(true)}
+                        onMouseLeave={() => setIsButtonHovered(false)}
+                      >
+                        <Link
+                          href="/contact-us"
+                          className="bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 xl:px-8 xl:py-3 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs xl:text-base"
+                        >
+                          Contact Us
+                        </Link>
+                        {slide.exploreLink ? (
+                          <Link
+                            href={slide.exploreLink}
+                            className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 xl:px-8 md:py-1.5 xl:py-3 rounded md:rounded-md font-semibold transition-all shadow-lg text-[12px] sm:text-[9px] md:text-xs xl:text-base backdrop-blur-sm cursor-pointer"
+                          >
+                            Explore Services
+                          </Link>
+                        ) : (
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              window.dispatchEvent(new CustomEvent('open-services-dropdown'));
+                              window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 xl:px-8 md:py-1.5 xl:py-3 rounded md:rounded-md font-semibold transition-all shadow-lg text-[14px] sm:text-[9px] md:text-xs xl:text-base backdrop-blur-sm cursor-pointer"
+                          >
+                            Explore Services
+                          </button>
+                        )}
+                      </div>
+
+                      <div className="border border-white/20 bg-white/10 backdrop-blur-md p-4 sm:p-2 md:p-3 xl:p-6 rounded md:rounded-xl shadow-xl w-full md:w-[100%] xl:max-w-2xl">
+                        <h3 className="text-[#00c3ff] text-[12px] sm:text-[10px] md:text-sm xl:text-xl font-bold mb-2 sm:mb-1 md:mb-1 xl:mb-2">
+                          A N Global Services Private Limited
+                        </h3>
+                        <p className="text-gray-200 text-[10px] sm:text-[8px] md:text-[10px] xl:text-sm leading-relaxed sm:leading-snug md:leading-relaxed mb-3 sm:mb-2 md:mb-3 xl:mb-6">
+                          A complete industrial solution provider. We help manufacturers meet quality, safety, and compliance standards with complete confidence.
+                        </p>
+                        
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 xl:gap-8">
+                          <div className="flex items-center gap-2 md:gap-2">
+                            <div className="bg-white/10 p-1 md:p-1.5 rounded-full">
+                              <svg className="w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 text-[#00c3ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                              </svg>
+                            </div>
+                            <span className="text-gray-200 text-[10px] sm:text-[8px] md:text-[10px] xl:text-sm">info@anglobalservices.com</span>
+                          </div>
+                          
+                          <div className="flex items-center gap-2 md:gap-2">
+                            <div className="bg-white/10 p-1 md:p-1.5 rounded-full">
+                              <svg className="w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 text-[#00c3ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                              </svg>
+                            </div>
+                            <span className="text-gray-200 text-[10px] sm:text-[8px] md:text-[10px] xl:text-sm">+91 7782069184</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* DOTS */}
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          {slides.map((_, i) => (
-            <button
-              onClick={() => setCurrent(i)}
-              key={i}
-              className={`w-3
-                h-3 rounded-full cursor-pointer ${
-                  i === current ? "bg-blue-600" : "bg-gray-300"
+        {/* DOTS (Optional, but good for UX) */}
+        <div className="absolute bottom-1 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 md:gap-2 z-20">
+          {heroSlidesData.map((_, i) => {
+            const isActive = i === (heroSlide % heroSlidesData.length);
+            return (
+              <button
+                key={i}
+                onClick={() => {
+                  setIsTransitioning(true);
+                  setHeroSlide(i);
+                }}
+                className={`w-1.5 h-1.5 md:w-3 md:h-3 rounded-full cursor-pointer transition-all ${
+                  isActive ? "bg-white w-3 md:w-6" : "bg-white/50"
                 }`}
-            />
-          ))}
+              />
+            );
+          })}
         </div>
       </section>
 

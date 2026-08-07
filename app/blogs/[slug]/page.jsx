@@ -132,13 +132,13 @@ export default async function DynamicBlogPage({ params }) {
       </section>
 
       {/* --- HERO IMAGE SECTION --- */}
-      <section className="max-w-7xl mx-auto px-6 py-10">
-        <div className="relative w-full h-40 sm:h-64 md:h-80 lg:h-96 xl:h-[480px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+      <section className="max-w-7xl mx-auto px-6 py-6 md:py-10">
+        <div className="relative w-full aspect-video max-h-[480px] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 flex items-center justify-center">
           <Image
             src={safeHeroImage}
             alt={blog.seo?.mainImageAlt || blog.title}
             fill
-            className="object-cover"
+            className="object-contain"
             priority
             unoptimized
           />
@@ -194,15 +194,32 @@ export default async function DynamicBlogPage({ params }) {
                   )}
 
                   {/* The List itself */}
-                  {section.type === "bullet" ? (
-                    <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-8 mb-4">
-                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />)}
-                    </ul>
-                  ) : (
-                    <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-8 mb-4">
-                      {section.items?.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />)}
-                    </ol>
-                  )}
+                  {(() => {
+                    const groups = section.bulletGroups && section.bulletGroups.length > 0 
+                      ? section.bulletGroups 
+                      : [{ subheading: "", items: section.items || [] }];
+                    
+                    return groups.map((group, gIdx) => (
+                      <div key={gIdx} className="mb-4">
+                        {group.subheading && (
+                          <h3 className="font-semibold text-gray-800 mb-2 mt-2">{group.subheading}</h3>
+                        )}
+                        {section.type === "bullet" ? (
+                          <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-8">
+                            {group.items?.filter(item => item && item.trim() !== "").map((item, i) => (
+                              <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />
+                            ))}
+                          </ul>
+                        ) : (
+                          <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-8">
+                            {group.items?.filter(item => item && item.trim() !== "").map((item, i) => (
+                              <li key={i} dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(item) }} />
+                            ))}
+                          </ol>
+                        )}
+                      </div>
+                    ));
+                  })()}
 
                   {/* Outros after list */}
                   {section.outros && section.outros.length > 0 && (

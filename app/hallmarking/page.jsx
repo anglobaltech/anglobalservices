@@ -58,7 +58,7 @@ export default function GoldHallmarkingPage() {
           <div className="flex flex-col gap-6">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/bis-hallmarking-huid-setup.png"
+                src="/service/bis-hallmarking-huid-setup-2.webp"
                 alt="Gold Hallmarking Services"
                 width={420}
                 height={520}

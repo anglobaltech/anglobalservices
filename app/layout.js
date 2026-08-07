@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
           <TopBar />
         </div>
 
-        <div className="layout-item sticky top-0 z-50 bg-white">
+        <div className="layout-item bg-white relative z-50">
           <Header />
         </div>
 

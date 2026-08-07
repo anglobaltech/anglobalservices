@@ -460,6 +460,7 @@ export default function Footer() {
   // 2. Read the current URL path
   const pathname = usePathname();
   const isStudentPanel = pathname?.startsWith("/student-panel");
+  const isFoodIngredients = pathname?.startsWith("/food-ingredients");
 
   const [formData, setFormData] = useState({
     service: "",
@@ -557,7 +558,7 @@ export default function Footer() {
     <footer className="bg-[#222] text-gray-300">
       
       {/* 3. Conditionally render the Consultation Call section */}
-      {!isStudentPanel && (
+      {!isStudentPanel && !isFoodIngredients && (
         <section className="relative w-full overflow-hidden bg-gray-900">
           {/* Subtle Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800/70 to-gray-900" />
@@ -782,18 +783,30 @@ export default function Footer() {
 
             <div className="grid grid-cols-2 gap-y-3 text-sm">
               <span>India</span>
-              <span>Mexico</span>
+              <span>USA</span>
               <span>South Africa</span>
-              <span>China</span>
+              <span>United Kingdom</span>
               <span>Nepal</span>
-              <span>Thailand</span>
+              <span>Germany</span>
               <span>Hongkong</span>
-              <span>Japan</span>
+              <span>Canada</span>
               <span>Singapore</span>
-              <span>Italy</span>
+              <span>Australia</span>
               <span>Greece</span>
+              <span>UAE</span>
+              <span>China</span>
+              <span>France</span>
+              <span>Japan</span>
+              <span>Brazil</span>
               <span>South Korea</span>
+              <span>Mexico</span>
+              <span>Thailand</span>
+              <span>Italy</span>
             </div>
+            
+            <p className="mt-5 text-sm text-blue-200/80 italic font-medium">
+              * And delivering to clients globally all over the world.
+            </p>
           </div>
 
           <div>
