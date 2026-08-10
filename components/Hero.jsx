@@ -634,15 +634,15 @@ export default function Hero() {
       </section>
 
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 pt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+        <div className="max-w-7xl mx-auto px-6 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <Image
-                src="/home-about.jpg"
+                src="/about-anglobalservices.webp"
                 alt="About AN Global Services"
-                width={450}
-                height={450}
-                className="rounded-2xl object-cover"
+                width={500}
+                height={380}
+                className="rounded-2xl object-cover w-full h-auto"
               />
             </div>
             <div>
