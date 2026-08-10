@@ -345,7 +345,7 @@ export default function Navbar() {
             <DesktopDropdown title="UPDATES" menu={updatesMenu} />
 
             <NavLink href="/contact-us" label="CONTACT US" />
-            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" />
+            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" align="right" />
             <NavLink href="/it-services-and-solutions" label="IT SERVICES" />
             <NavLink href="/student-panel" label="STUDENT PANEL" />
           </ul>
@@ -450,7 +450,7 @@ export default function Navbar() {
   );
 }
 
-function DesktopDropdown({ title, menu, href }) {
+function DesktopDropdown({ title, menu, href, align = "left" }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -480,7 +480,7 @@ function DesktopDropdown({ title, menu, href }) {
       )}
 
       <div 
-        className={`absolute left-0 top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 ${
+        className={`absolute ${align === "right" ? "right-0" : "left-0"} top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 z-50 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -488,7 +488,7 @@ function DesktopDropdown({ title, menu, href }) {
           {menu.map((group, gIndex) => (
             <div key={`${title}-group-${gIndex}`} className="min-w-60">
               {group.title && (
-                <h4 className="mb-3 text-gray-800 font-semibold text-sm border-b pb-2 whitespace-nowrap">
+                <h4 className="mb-3 text-gray-800 font-semibold text-sm border-b pb-2 whitespace-nowrap uppercase">
                   {group.title}
                 </h4>
               )}
@@ -501,11 +501,11 @@ function DesktopDropdown({ title, menu, href }) {
                         <div className="flex items-center justify-between gap-3 text-gray-700 hover:text-[#0075B6] cursor-pointer">
                           <div className="flex items-start gap-3">
                             <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                            <span className="leading-6">{item.name}</span>
+                            <span className="leading-6 uppercase">{item.name}</span>
                           </div>
                           <ChevronRight size={14} className="opacity-70" />
                         </div>
-                        <div className="absolute left-full top-0 ml-2 w-64 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-xl rounded-lg p-4 transition-all duration-200 z-50">
+                        <div className={`absolute ${align === "right" ? "left-[50%] top-full" : "left-full ml-2 top-0"} w-72 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
                           <ul className="space-y-3">
                             {item.subItems.map((sub, sIdx) => (
                               <li key={sIdx}>
@@ -515,7 +515,7 @@ function DesktopDropdown({ title, menu, href }) {
                                   onClick={() => setIsOpen(false)}
                                 >
                                   <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                                  <span className="leading-6">{sub.name}</span>
+                                  <span className="leading-6 uppercase">{sub.name}</span>
                                 </Link>
                               </li>
                             ))}
@@ -535,7 +535,7 @@ function DesktopDropdown({ title, menu, href }) {
                           strokeWidth={1.75}
                           className="mt-0.5 text-[#0075B6] shrink-0"
                         />
-                        <span className="leading-6">{item.name}</span>
+                        <span className="leading-6 uppercase">{item.name}</span>
                       </Link>
                     )}
                   </li>
@@ -559,10 +559,10 @@ function MobileNestedAccordion({ item, close }) {
         onClick={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}
       >
         <div className="flex items-start gap-2">
-          <FileText size={14} />
-          <span>{item.name}</span>
+          <FileText size={14} className="shrink-0 mt-0.5" />
+          <span className="uppercase text-left leading-tight">{item.name}</span>
         </div>
-        <ChevronDown size={14} className={`transition ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown size={14} className={`transition shrink-0 ${isOpen ? "rotate-180" : ""}`} />
       </button>
       
       {isOpen && (
@@ -574,8 +574,8 @@ function MobileNestedAccordion({ item, close }) {
                 onClick={() => close(false)}
                 className="flex items-start gap-2 text-xs text-gray-300 hover:text-white"
               >
-                <FileText size={14} />
-                <span>{sub.name}</span>
+                <FileText size={14} className="shrink-0 mt-0.5" />
+                <span className="uppercase text-left leading-tight">{sub.name}</span>
               </Link>
             </li>
           ))}
@@ -622,8 +622,8 @@ function MobileAccordion({ title, menu, active, setActive, close }) {
                         onClick={() => close(false)}
                         className="flex items-start gap-2 text-xs text-gray-200"
                       >
-                        <FileText size={14} />
-                        <span>{item.name}</span>
+                        <FileText size={14} className="shrink-0 mt-0.5" />
+                        <span className="uppercase text-left leading-tight">{item.name}</span>
                       </Link>
                     )}
                   </li>
