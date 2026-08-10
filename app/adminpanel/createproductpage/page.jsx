@@ -636,7 +636,10 @@ export default function Editor() {
                     <textarea value={section.intro} onChange={(e) => updateSection(sIdx, "intro", e.target.value)} placeholder="Optional intro text before cards" className="w-full border border-gray-200/80 bg-white/80 rounded-xl p-3.5 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-gray-900 shadow-sm" rows="2"></textarea>
                     <div className="space-y-4">
                       {section.cards.map((card, cIdx) => (
-                        <div key={cIdx} className="flex items-start gap-3 p-4 bg-white/60 rounded-2xl border border-gray-100 shadow-sm">
+                        <div key={cIdx} className="flex items-start gap-3 p-4 bg-white/60 rounded-2xl border border-gray-100 shadow-sm relative">
+                          <div className="flex items-center justify-center shrink-0 w-8 h-8 rounded-full bg-[#0072b1]/10 text-[#0072b1] font-extrabold text-sm border border-[#0072b1]/20 mt-1">
+                            {cIdx + 1}
+                          </div>
                           <div className="flex-1 flex flex-col md:flex-row gap-3">
                             <input type="text" value={card.title} onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "title", e.target.value)} placeholder="Card Title (Bold)" className="w-full md:w-1/3 border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" />
                             <textarea value={card.text} onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "text", e.target.value)} placeholder="Card Description (Use **bold** and [link](url))" className="w-full md:w-2/3 border border-gray-200/80 rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" rows="2"></textarea>
