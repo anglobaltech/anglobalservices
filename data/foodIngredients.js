@@ -52,7 +52,7 @@ export const foodIngredients = [
         "value": "100 Kg"
       }
     ],
-    "slug": "makhana-india",
+    "slug": "makhana",
     "seoTitle": "Buy Bulk Makhana  | Premium Natural Food Ingredient Supplier India",
     "seoDescription": "Premium quality Makhana sourced from India, suitable for both direct consumption and industrial food processing applications. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -188,7 +188,7 @@ export const foodIngredients = [
       "name": "CHEMSTACK PRIVATE LIMITED",
       "address": "8th Floor, R City Office Awfis, Lal Bahadur Shastri Marg, Navi Mumbai Municipal Corporation (Thane Zone-2), Maharashtra - 400086, India"
     },
-    "slug": "whey-protein-concentrate-80-instant-entc-entc-dairy-solutions-poland",
+    "slug": "whey-protein-concentrate-80-instant-entc",
     "seoTitle": "Buy Bulk Whey Protein Concentrate 80 Instant (ENTC) by ENTC Dairy Solutions | Premium Protein Supplement Supplier India",
     "seoDescription": "Whey Protein Concentrate 80 Instant by ENTC is a high-quality protein ingredient imported from Poland, designed for industrial and nutritional applications. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -334,7 +334,7 @@ export const foodIngredients = [
         "value": "100 Kg"
       }
     ],
-    "slug": "whey-protein-concentrate-80-instant-valley-queen-valley-queen-usa",
+    "slug": "whey-protein-concentrate-80-instant-valley-queen",
     "seoTitle": "Buy Bulk Whey Protein Concentrate 80 Instant (Valley Queen) by Valley Queen | Premium Protein Supplement Supplier India",
     "seoDescription": "Whey Protein Concentrate 80% by Valley Queen is a premium dairy protein imported from the USA, widely used in food and nutritional formulations. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -484,7 +484,7 @@ export const foodIngredients = [
         "value": "100 Kg"
       }
     ],
-    "slug": "lactose-k-lac-ba-emek-advanced-technologies-ltd-israel",
+    "slug": "lactose-k-lac",
     "seoTitle": "Buy Bulk Lactose (K-LAC) by Ba'emek Advanced Technologies Ltd. | Premium Dairy Ingredient Supplier India",
     "seoDescription": "K-LAC Lactose by Ba'emek is a high-quality dairy ingredient imported from Israel, widely used in food and pharmaceutical applications for its purity and consistency. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -634,7 +634,7 @@ export const foodIngredients = [
         "value": "100 Kg"
       }
     ],
-    "slug": "micellar-casein-85-inleit",
+    "slug": "micellar-casein-85",
     "seoTitle": "Buy Bulk Micellar Casein 85 by Inleit | Premium Slow-Release Protein Supplier India",
     "seoDescription": "InLeit MC85 Micellar Casein is a high-quality slow-digesting milk protein imported from Spain, designed for prolonged amino acid release and superior nutritional performance. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -751,7 +751,7 @@ export const foodIngredients = [
         "value": "All India"
       }
     ],
-    "slug": "sunpro-instant-protein-concentrate-instant-wpc-80-saputo-dairy-australia-pty-ltd-australia",
+    "slug": "sunpro-instant-protein-concentrate-instant-wpc-80",
     "seoTitle": "Buy Bulk Sunpro Instant Protein Concentrate Instant WPC 80 by Saputo Dairy Australia Pty Ltd | Premium Protein Supplement Supplier India",
     "seoDescription": "Sunpro Instant Protein Concentrate WPC 80 by Saputo Dairy Australia is a premium dairy protein imported from Australia, available for immediate supply. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -878,7 +878,7 @@ export const foodIngredients = [
         "value": "All India"
       }
     ],
-    "slug": "mullins-whey-lactose-200-mesh-mullins-whey-inc-usa",
+    "slug": "mullins-whey-lactose-200-mesh",
     "seoTitle": "Buy Bulk Mullins Whey Lactose 200 Mesh by Mullins Whey Inc. | Premium Dairy Ingredient Supplier India",
     "seoDescription": "Mullins Whey Lactose 200 Mesh is a high-quality dairy ingredient imported from the USA, widely used in food and pharmaceutical applications. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -1001,7 +1001,7 @@ export const foodIngredients = [
         "value": "All India"
       }
     ],
-    "slug": "l-carnitine-base-hubei-grand-life-science-technology-co-ltd-china",
+    "slug": "l-carnitine-base",
     "seoTitle": "Buy Bulk L-Carnitine Base by Hubei Grand Life Science & Technology Co., Ltd. | Premium Nutraceutical Ingredient Supplier India",
     "seoDescription": "L-carnitine base is a bioactive form of L-carnitine widely used in nutraceutical and health supplement formulations for fat metabolism, energy production, and performance support. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
@@ -1126,7 +1126,7 @@ export const foodIngredients = [
         "value": "100 Kg"
       }
     ],
-    "slug": "l-glutamine-xinjiang-fufeng-biotechnologies-co-ltd-china",
+    "slug": "l-glutamine",
     "seoTitle": "Buy Bulk L-Glutamine by Xinjiang Fufeng Biotechnologies Co., Ltd. | Premium Amino Acid Supplier India",
     "seoDescription": "L-glutamine is a conditionally essential amino acid widely used in nutraceutical and sports nutrition formulations for muscle recovery, gut health, and immune support. Top-rated bulk supplier for manufacturing and commercial food processing in India.",
     "nutritionalProfile": [
