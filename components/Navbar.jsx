@@ -302,7 +302,12 @@ const foodMenu = [
       },
       { name: "Micellar Casein 85", slug: "food-ingredients/micellar-casein-85", root: true },
       { name: "L-Carnitine Base", slug: "food-ingredients/l-carnitine-base", root: true },
-      { name: "L-Glutamine", slug: "food-ingredients/l-glutamine", root: true }
+      { name: "L-Glutamine", slug: "food-ingredients/l-glutamine", root: true },
+      { name: "Potassium Sorbate", slug: "food-ingredients/potassium-sorbate", root: true },
+      { name: "Vital Wheat Gluten", slug: "food-ingredients/vital-wheat-gluten", root: true },
+      { name: "Pea Protein (80%)", slug: "food-ingredients/pea-protein-80", root: true },
+      { name: "Isolated Soy Protein", slug: "food-ingredients/isolated-soy-protein", root: true },
+      { name: "Creatine Monohydrate", slug: "food-ingredients/creatine-monohydrate", root: true }
     ]
   }
 ];

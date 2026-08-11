@@ -93,7 +93,7 @@ export default async function ProductPage({ params }) {
             </nav>
 
             <LazySection className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-              <div className="w-full md:w-1/2">
+              <div className={`w-full ${product.image ? 'md:w-1/2' : 'md:max-w-4xl'}`}>
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-[#60B5F0] text-xs font-bold tracking-widest uppercase mb-6 shadow-xl">
                   ★ {product.badge || product.category}
                 </div>
@@ -123,20 +123,22 @@ export default async function ProductPage({ params }) {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/2 flex justify-center">
-                <div className="relative p-8 group">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#0075B6]/20 to-transparent rounded-[3rem] -z-10 blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
-                  <div className="bg-white/5 backdrop-blur-sm p-10 rounded-[2.5rem] border border-white/10 shadow-2xl flex items-center justify-center min-h-[400px]">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      width={400}
-                      height={400}
-                      className="object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 ease-out"
-                    />
+              {product.image && (
+                <div className="w-full md:w-1/2 flex justify-center">
+                  <div className="relative p-8 group">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#0075B6]/20 to-transparent rounded-[3rem] -z-10 blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
+                    <div className="bg-white/5 backdrop-blur-sm p-10 rounded-[2.5rem] border border-white/10 shadow-2xl flex items-center justify-center min-h-[400px]">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={400}
+                        height={400}
+                        className="object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 ease-out"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </LazySection>
           </div>
         </section>
