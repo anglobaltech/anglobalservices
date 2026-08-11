@@ -250,7 +250,7 @@ export default async function DynamicProductPage({ params }) {
                 <div className="space-y-3 mt-6">
                   {section.cards?.map((card, i) => (
                     <div key={i} className="bg-white border border-gray-200 rounded-lg p-4">
-                      <h3 className="font-semibold text-gray-900 mb-1">{card.title}</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">{i + 1}. {card.title}</h3>
                       <p className="text-gray-600 text-[15px] leading-6 text-justify" dangerouslySetInnerHTML={{ __html: parseSmartTextToHTML(card.text) }} />
                     </div>
                   ))}
