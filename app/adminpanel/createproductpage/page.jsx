@@ -11,6 +11,61 @@ export default function Editor() {
   const searchParams = useSearchParams();
   const editingId = searchParams.get("id");
 
+  const [showExitWarning, setShowExitWarning] = useState(false);
+  const [targetUrl, setTargetUrl] = useState("");
+
+  useEffect(() => {
+    window.history.pushState(null, null, window.location.pathname);
+
+    const handlePopState = (e) => {
+      window.history.pushState(null, null, window.location.pathname);
+      setTargetUrl("back");
+      setShowExitWarning(true);
+    };
+
+    const handleBeforeUnload = (e) => {
+      e.preventDefault();
+      e.returnValue = "";
+    };
+
+    const handleClick = (e) => {
+      const target = e.target.closest("a");
+      if (target && target.href && !target.hasAttribute("target")) {
+        try {
+          const targetPath = new URL(target.href).pathname;
+          if (targetPath !== window.location.pathname) {
+            e.preventDefault();
+            setTargetUrl(target.href);
+            setShowExitWarning(true);
+          }
+        } catch (err) {}
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    document.addEventListener("click", handleClick, true);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      document.removeEventListener("click", handleClick, true);
+    };
+  }, []);
+
+  const confirmExit = () => {
+    setShowExitWarning(false);
+    if (targetUrl === "back") {
+      window.history.go(-2);
+    } else if (targetUrl) {
+      window.location.href = targetUrl;
+    }
+  };
+
+  const cancelExit = () => {
+    setShowExitWarning(false);
+  };
+
   const [loading, setLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
@@ -257,6 +312,30 @@ export default function Editor() {
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-8 animate-fade-in">
+      {showExitWarning && (
+        <div className="fixed inset-0 z-[100000] bg-gray-900/40 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center border border-white/60">
+            <div className="w-16 h-16 bg-red-100 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Unsaved Changes!</h3>
+            <p className="text-gray-600 mb-6 font-medium text-sm">
+              You are about to leave this page. All your unsaved progress will be permanently lost. Are you sure you want to go back?
+            </p>
+            <div className="flex gap-3">
+              <button onClick={cancelExit} className="flex-1 px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl font-bold transition-colors">
+                Cancel
+              </button>
+              <button onClick={confirmExit} className="flex-1 px-4 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-bold transition-colors shadow-lg shadow-red-500/30">
+                Yes, Leave
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="mb-8">
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">{editingId ? "Edit Product" : "Create New Product"}</h2>
         <p className="text-sm text-gray-500 font-medium mt-1">{editingId ? "Update existing sections and publish." : "Fill out the content blocks below to generate a new page."}</p>
@@ -767,7 +846,7 @@ export default function Editor() {
               <button type="button" onClick={() => addSection("text")} className="cursor-pointer bg-white border border-gray-200/80 shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:border-[#0072b1]/50 hover:text-[#0072b1] text-gray-700 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:shadow-md transform hover:-translate-y-0.5">+ Text Section</button>
               <button type="button" onClick={() => addSection("bullet")} className="cursor-pointer bg-white border border-gray-200/80 shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:border-[#0072b1]/50 hover:text-[#0072b1] text-gray-700 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:shadow-md transform hover:-translate-y-0.5">+ Bullet List</button>
               <button type="button" onClick={() => addSection("points_list")} className="cursor-pointer bg-white border border-gray-200/80 shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:border-[#0072b1]/50 hover:text-[#0072b1] text-gray-700 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:shadow-md transform hover:-translate-y-0.5">+ Points List</button>
-              <button type="button" onClick={() => addSection("cards")} className="cursor-pointer bg-white border border-gray-200/80 shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:border-[#0072b1]/50 hover:text-[#0072b1] text-gray-700 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:shadow-md transform hover:-translate-y-0.5">+ Cards Grid</button>
+              <button type="button" onClick={() => addSection("cards")} className="cursor-pointer bg-white border border-gray-200/80 shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:border-[#0072b1]/50 hover:text-[#0072b1] text-gray-700 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:shadow-md transform hover:-translate-y-0.5">+ Benefit Card</button>
               <button type="button" onClick={() => addSection("table")} className="cursor-pointer bg-white border border-gray-200/80 shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:border-[#0072b1]/50 hover:text-[#0072b1] text-gray-700 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:shadow-md transform hover:-translate-y-0.5">+ Pricing Table</button>
               <button type="button" onClick={() => addSection("faq")} className="cursor-pointer bg-white border border-gray-200/80 shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:border-[#0072b1]/50 hover:text-[#0072b1] text-gray-700 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:shadow-md transform hover:-translate-y-0.5">+ FAQ Section</button>
             </div>

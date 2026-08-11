@@ -97,11 +97,20 @@ const nextConfig = {
         destination: "/bis-isi-certification-metal-products",
         permanent: true, 
       },
-       {
+      {
         source: "/testing_gold",
         destination: "/gold-testing",
         permanent: true, 
       },
+      { source: "/food-ingredients/makhana-india", destination: "/food-ingredients/makhana", permanent: true },
+      { source: "/food-ingredients/whey-protein-concentrate-80-instant-entc-entc-dairy-solutions-poland", destination: "/food-ingredients/whey-protein-concentrate-80-instant-entc", permanent: true },
+      { source: "/food-ingredients/whey-protein-concentrate-80-instant-valley-queen-valley-queen-usa", destination: "/food-ingredients/whey-protein-concentrate-80-instant-valley-queen", permanent: true },
+      { source: "/food-ingredients/lactose-k-lac-ba-emek-advanced-technologies-ltd-israel", destination: "/food-ingredients/lactose-k-lac", permanent: true },
+      { source: "/food-ingredients/micellar-casein-85-inleit", destination: "/food-ingredients/micellar-casein-85", permanent: true },
+      { source: "/food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80-saputo-dairy-australia-pty-ltd-australia", destination: "/food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80", permanent: true },
+      { source: "/food-ingredients/mullins-whey-lactose-200-mesh-mullins-whey-inc-usa", destination: "/food-ingredients/mullins-whey-lactose-200-mesh", permanent: true },
+      { source: "/food-ingredients/l-carnitine-base-hubei-grand-life-science-technology-co-ltd-china", destination: "/food-ingredients/l-carnitine-base", permanent: true },
+      { source: "/food-ingredients/l-glutamine-xinjiang-fufeng-biotechnologies-co-ltd-china", destination: "/food-ingredients/l-glutamine", permanent: true }
     ];
   },
 };

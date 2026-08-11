@@ -271,7 +271,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, FileText } from "lucide-react";
+import { Menu, X, ChevronDown, FileText, ChevronRight } from "lucide-react";
 
 import { servicesMenu } from "@/data/services";
 import { testingMenu } from "@/data/testing";
@@ -281,11 +281,29 @@ import { foodIngredients } from "@/data/foodIngredients";
 
 const foodMenu = [
   {
-    items: foodIngredients.map(item => ({
-      name: item.name,
-      slug: `food-ingredients/${item.slug}`,
-      root: true
-    }))
+    items: [
+      { name: "Makhana", slug: "food-ingredients/makhana", root: true },
+      {
+        name: "Whey Proteins",
+        isSubMenu: true,
+        subItems: [
+          { name: "Whey Protein Concentrate 80 Instant (ENTC)", slug: "food-ingredients/whey-protein-concentrate-80-instant-entc", root: true },
+          { name: "Whey Protein Concentrate 80 Instant (Valley Queen)", slug: "food-ingredients/whey-protein-concentrate-80-instant-valley-queen", root: true },
+          { name: "Sunpro Instant Protein Concentrate Instant WPC 80", slug: "food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80", root: true }
+        ]
+      },
+      {
+        name: "Lactose",
+        isSubMenu: true,
+        subItems: [
+          { name: "Lactose (K-LAC)", slug: "food-ingredients/lactose-k-lac", root: true },
+          { name: "Mullins Whey Lactose 200 Mesh", slug: "food-ingredients/mullins-whey-lactose-200-mesh", root: true }
+        ]
+      },
+      { name: "Micellar Casein 85", slug: "food-ingredients/micellar-casein-85", root: true },
+      { name: "L-Carnitine Base", slug: "food-ingredients/l-carnitine-base", root: true },
+      { name: "L-Glutamine", slug: "food-ingredients/l-glutamine", root: true }
+    ]
   }
 ];
 
@@ -327,7 +345,7 @@ export default function Navbar() {
             <DesktopDropdown title="UPDATES" menu={updatesMenu} />
 
             <NavLink href="/contact-us" label="CONTACT US" />
-            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" />
+            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" align="right" />
             <NavLink href="/it-services-and-solutions" label="IT SERVICES" />
             <NavLink href="/student-panel" label="STUDENT PANEL" />
           </ul>
@@ -432,7 +450,7 @@ export default function Navbar() {
   );
 }
 
-function DesktopDropdown({ title, menu, href }) {
+function DesktopDropdown({ title, menu, href, align = "left" }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -462,7 +480,7 @@ function DesktopDropdown({ title, menu, href }) {
       )}
 
       <div 
-        className={`absolute left-0 top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 ${
+        className={`absolute ${align === "right" ? "right-0" : "left-0"} top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 z-50 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -470,28 +488,56 @@ function DesktopDropdown({ title, menu, href }) {
           {menu.map((group, gIndex) => (
             <div key={`${title}-group-${gIndex}`} className="min-w-60">
               {group.title && (
-                <h4 className="mb-3 text-gray-800 font-semibold text-sm border-b pb-2 whitespace-nowrap">
+                <h4 className="mb-3 text-gray-800 font-semibold text-sm border-b pb-2 whitespace-nowrap uppercase">
                   {group.title}
                 </h4>
               )}
 
               <ul className="space-y-3 text-sm font-normal">
                 {group.items.map((item, iIndex) => (
-                  <li key={`${item.slug}-${iIndex}`}>
-                    <Link
-                      href={
-                        item.root ? `/${item.slug}` : `/services/${item.slug}`
-                      }
-                      className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <FileText
-                        size={16}
-                        strokeWidth={1.75}
-                        className="mt-0.5 text-[#0075B6] shrink-0"
-                      />
-                      <span className="leading-6">{item.name}</span>
-                    </Link>
+                  <li key={`${item.slug || item.name}-${iIndex}`} className={item.isSubMenu ? "relative group/sub" : ""}>
+                    {item.isSubMenu ? (
+                      <>
+                        <div className="flex items-center justify-between gap-3 text-gray-700 hover:text-[#0075B6] cursor-pointer">
+                          <div className="flex items-start gap-3">
+                            <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                            <span className="leading-6 uppercase">{item.name}</span>
+                          </div>
+                          <ChevronRight size={14} className="opacity-70" />
+                        </div>
+                        <div className={`absolute ${align === "right" ? "left-[50%] top-full" : "left-full ml-2 top-0"} w-72 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
+                          <ul className="space-y-3">
+                            {item.subItems.map((sub, sIdx) => (
+                              <li key={sIdx}>
+                                <Link
+                                  href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
+                                  className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                                  <span className="leading-6 uppercase">{sub.name}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </>
+                    ) : (
+                      <Link
+                        href={
+                          item.root ? `/${item.slug}` : `/services/${item.slug}`
+                        }
+                        className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <FileText
+                          size={16}
+                          strokeWidth={1.75}
+                          className="mt-0.5 text-[#0075B6] shrink-0"
+                        />
+                        <span className="leading-6 uppercase">{item.name}</span>
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -500,6 +546,42 @@ function DesktopDropdown({ title, menu, href }) {
         </div>
       </div>
     </li>
+  );
+}
+
+function MobileNestedAccordion({ item, close }) {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <div className="space-y-3">
+      <button 
+        className="w-full flex items-center justify-between text-xs text-gray-200 cursor-pointer"
+        onClick={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}
+      >
+        <div className="flex items-start gap-2">
+          <FileText size={14} className="shrink-0 mt-0.5" />
+          <span className="uppercase text-left leading-tight">{item.name}</span>
+        </div>
+        <ChevronDown size={14} className={`transition shrink-0 ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+      
+      {isOpen && (
+        <ul className="pl-5 space-y-3 mt-3 border-l border-white/10 ml-2">
+          {item.subItems.map((sub, sIdx) => (
+            <li key={sIdx}>
+              <Link
+                href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
+                onClick={() => close(false)}
+                className="flex items-start gap-2 text-xs text-gray-300 hover:text-white"
+              >
+                <FileText size={14} className="shrink-0 mt-0.5" />
+                <span className="uppercase text-left leading-tight">{sub.name}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
@@ -527,19 +609,23 @@ function MobileAccordion({ title, menu, active, setActive, close }) {
                 <p className="text-xs text-gray-300 mb-2">{group.title}</p>
               )}
 
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {group.items.map((item, iIndex) => (
-                  <li key={`${item.slug}-m-${iIndex}`}>
-                    <Link
-                      href={
-                        item.root ? `/${item.slug}` : `/services/${item.slug}`
-                      }
-                      onClick={() => close(false)}
-                      className="flex items-start gap-2 text-xs text-gray-200"
-                    >
-                      <FileText size={14} />
-                      <span>{item.name}</span>
-                    </Link>
+                  <li key={`${item.slug || item.name}-m-${iIndex}`}>
+                    {item.isSubMenu ? (
+                      <MobileNestedAccordion item={item} close={close} />
+                    ) : (
+                      <Link
+                        href={
+                          item.root ? `/${item.slug}` : `/services/${item.slug}`
+                        }
+                        onClick={() => close(false)}
+                        className="flex items-start gap-2 text-xs text-gray-200"
+                      >
+                        <FileText size={14} className="shrink-0 mt-0.5" />
+                        <span className="uppercase text-left leading-tight">{item.name}</span>
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
