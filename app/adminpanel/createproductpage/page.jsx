@@ -87,6 +87,12 @@ export default function Editor() {
   const [dataTableProductName, setDataTableProductName] = useState("");
   const [dataTableIsNumber, setDataTableIsNumber] = useState("");
 
+  const [openCardBulkImportIdx, setOpenCardBulkImportIdx] = useState(null);
+  const [openCardSingleImportIdx, setOpenCardSingleImportIdx] = useState(null);
+
+  const [openFaqBulkImportIdx, setOpenFaqBulkImportIdx] = useState(null);
+  const [openFaqSingleImportIdx, setOpenFaqSingleImportIdx] = useState(null);
+
   useEffect(() => {
     if (editingId) {
       const fetchProduct = async () => {
@@ -717,14 +723,136 @@ export default function Editor() {
                       {section.cards.map((card, cIdx) => (
                         <div key={cIdx} className="flex items-start gap-3 p-4 bg-white/60 rounded-2xl border border-gray-100 shadow-sm">
                           <div className="flex-1 flex flex-col md:flex-row gap-3">
-                            <input type="text" value={card.title} onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "title", e.target.value)} placeholder="Card Title (Bold)" className="w-full md:w-1/3 border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" />
+                            <input 
+                              type="text" 
+                              value={card.title} 
+                              onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "title", e.target.value)} 
+                              onPaste={(e) => {
+                                const pastedData = e.clipboardData.getData('text');
+                                if (!pastedData || !pastedData.includes('\n')) return;
+                                
+                                e.preventDefault();
+                                const blocks = pastedData.split(/\n\s*\n/).filter(b => b.trim());
+                                const updatedSecs = [...sections];
+                                
+                                // Process the first block into the current card
+                                const firstLines = blocks[0].split('\n').map(l => l.trim()).filter(Boolean);
+                                updatedSecs[sIdx].cards[cIdx].title = firstLines[0] || "";
+                                updatedSecs[sIdx].cards[cIdx].text = firstLines.slice(1).join('\n') || "";
+                                
+                                // If there are multiple blocks, generate new cards automatically
+                                if (blocks.length > 1) {
+                                  const newCards = blocks.slice(1).map(block => {
+                                    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+                                    return {
+                                      title: lines[0] || "",
+                                      text: lines.slice(1).join('\n') || ""
+                                    };
+                                  }).filter(c => c.title || c.text);
+                                  updatedSecs[sIdx].cards.splice(cIdx + 1, 0, ...newCards);
+                                }
+                                setSections(updatedSecs);
+                              }}
+                              placeholder="Card Title (Paste here to auto-fill description!)" 
+                              className="w-full md:w-1/3 border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" 
+                            />
                             <textarea value={card.text} onChange={(e) => updateNestedArray(sIdx, "cards", cIdx, "text", e.target.value)} placeholder="Card Description (Use **bold** and [link](url))" className="w-full md:w-2/3 border border-gray-200/80 rounded-xl p-3 text-sm font-medium focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] transition-all bg-white text-gray-900 shadow-sm" rows="2"></textarea>
                           </div>
                           <button type="button" onClick={() => removeNestedItem(sIdx, "cards", cIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                         </div>
                       ))}
                     </div>
-                    <button type="button" onClick={() => addNestedItem(sIdx, "cards", { title: "", text: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Card</button>
+                    <div className="flex items-center gap-6 mt-2">
+                      <button type="button" onClick={() => addNestedItem(sIdx, "cards", { title: "", text: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Empty Card</button>
+                      <button 
+                        type="button" 
+                        onClick={() => {
+                          setOpenCardSingleImportIdx(openCardSingleImportIdx === sIdx ? null : sIdx);
+                          setOpenCardBulkImportIdx(null);
+                        }}
+                        className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"
+                      >
+                        <span className="text-lg leading-none">+</span> Add One Card (Paste)
+                      </button>
+                      <button 
+                        type="button" 
+                        onClick={() => {
+                          setOpenCardBulkImportIdx(openCardBulkImportIdx === sIdx ? null : sIdx);
+                          setOpenCardSingleImportIdx(null);
+                        }} 
+                        className="cursor-pointer text-sm font-bold text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1"
+                      >
+                        ⚡ Bulk Import Cards
+                      </button>
+                    </div>
+
+                    {openCardSingleImportIdx === sIdx && (
+                      <div className="bg-gray-50/80 p-5 rounded-2xl border border-gray-100 mt-4 shadow-inner">
+                        <label className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2">+ Paste Single Card (Title on line 1, Description below)</label>
+                        <textarea
+                          rows="3"
+                          placeholder="Example:&#10;My Great Title&#10;This is the description for my great title..."
+                          className="w-full border border-gray-200 bg-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm font-medium"
+                          id={`single-card-import-${sIdx}`}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const textareaEl = document.getElementById(`single-card-import-${sIdx}`);
+                            if (textareaEl && textareaEl.value.trim()) {
+                              const lines = textareaEl.value.trim().split('\n').map(l => l.trim()).filter(Boolean);
+                              if (lines.length > 0) {
+                                const newCard = { title: lines[0], text: lines.slice(1).join('\n') };
+                                const updatedSecs = [...sections];
+                                updatedSecs[sIdx].cards.push(newCard);
+                                setSections(updatedSecs);
+                                textareaEl.value = "";
+                                setOpenCardSingleImportIdx(null);
+                              }
+                            }
+                          }}
+                          className="mt-3 text-xs font-bold bg-[#0072b1] hover:bg-[#005f96] text-white px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
+                        >
+                          Process & Append Card
+                        </button>
+                      </div>
+                    )}
+
+                    {openCardBulkImportIdx === sIdx && (
+                      <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100 mt-4 shadow-inner">
+                        <label className="block text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">⚡ Bulk Paste: Add Multiple Cards at Once</label>
+                        <textarea
+                          rows="6"
+                          placeholder="Paste your content here. Hit Enter twice (leave an empty line) to separate cards...&#10;&#10;1. First Title&#10;First description...&#10;&#10;2. Second Title&#10;Second description..."
+                          className="w-full border border-blue-200 bg-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-blue-300 focus:border-blue-400 text-gray-900 shadow-sm font-medium"
+                          id={`bulk-card-import-${sIdx}`}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const textareaEl = document.getElementById(`bulk-card-import-${sIdx}`);
+                            if (textareaEl && textareaEl.value.trim()) {
+                              const blocks = textareaEl.value.split(/\n\s*\n/).filter(b => b.trim());
+                              const newCards = blocks.map(block => {
+                                const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+                                return { title: lines[0] || "", text: lines.slice(1).join('\n') || "" };
+                              }).filter(c => c.title || c.text);
+                              
+                              if (newCards.length > 0) {
+                                const updatedSecs = [...sections];
+                                updatedSecs[sIdx].cards = [...updatedSecs[sIdx].cards, ...newCards];
+                                setSections(updatedSecs);
+                                textareaEl.value = "";
+                                setOpenCardBulkImportIdx(null);
+                              }
+                            }
+                          }}
+                          className="mt-3 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
+                        >
+                          Process & Append Cards
+                        </button>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -774,13 +902,136 @@ export default function Editor() {
                       {section.qas.map((qa, qIdx) => (
                         <div key={qIdx} className="flex items-start gap-3 p-5 bg-white/60 rounded-2xl border border-gray-100 shadow-sm">
                           <div className="flex-1 space-y-3">
-                            <input type="text" value={qa.q} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "q", e.target.value)} placeholder="Question (Auto-Indexed on live page)" className="w-full border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" />
+                            <input 
+                              type="text" 
+                              value={qa.q} 
+                              onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "q", e.target.value)} 
+                              onPaste={(e) => {
+                                const pastedData = e.clipboardData.getData('text');
+                                if (!pastedData || !pastedData.includes('\n')) return;
+                                
+                                e.preventDefault();
+                                const blocks = pastedData.split(/\n\s*\n/).filter(b => b.trim());
+                                const updatedSecs = [...sections];
+                                
+                                // Process the first block into the current QA
+                                const firstLines = blocks[0].split('\n').map(l => l.trim()).filter(Boolean);
+                                updatedSecs[sIdx].qas[qIdx].q = firstLines[0] || "";
+                                updatedSecs[sIdx].qas[qIdx].a = firstLines.slice(1).join('\n') || "";
+                                
+                                // Generate new QAs if multiple blocks
+                                if (blocks.length > 1) {
+                                  const newQas = blocks.slice(1).map(block => {
+                                    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+                                    return {
+                                      q: lines[0] || "",
+                                      a: lines.slice(1).join('\n') || ""
+                                    };
+                                  }).filter(c => c.q || c.a);
+                                  updatedSecs[sIdx].qas.splice(qIdx + 1, 0, ...newQas);
+                                }
+                                setSections(updatedSecs);
+                              }}
+                              placeholder="Question (Paste here to auto-fill answer!)" 
+                              className="w-full border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" 
+                            />
                             <textarea value={qa.a} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "a", e.target.value)} placeholder="Answer (Use **bold** and [link](url))" className="w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
                           </div>
                           <button type="button" onClick={() => removeNestedItem(sIdx, "qas", qIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                         </div>
                       ))}
-                      <button type="button" onClick={() => addNestedItem(sIdx, "qas", { q: "", a: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Q&A</button>
+                      
+                      <div className="flex items-center gap-6 mt-2">
+                        <button type="button" onClick={() => addNestedItem(sIdx, "qas", { q: "", a: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Empty Q&A</button>
+                        <button 
+                          type="button" 
+                          onClick={() => {
+                            setOpenFaqSingleImportIdx(openFaqSingleImportIdx === sIdx ? null : sIdx);
+                            setOpenFaqBulkImportIdx(null);
+                          }}
+                          className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"
+                        >
+                          <span className="text-lg leading-none">+</span> Add One FAQ (Paste)
+                        </button>
+                        <button 
+                          type="button" 
+                          onClick={() => {
+                            setOpenFaqBulkImportIdx(openFaqBulkImportIdx === sIdx ? null : sIdx);
+                            setOpenFaqSingleImportIdx(null);
+                          }} 
+                          className="cursor-pointer text-sm font-bold text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1"
+                        >
+                          ⚡ Bulk Import FAQs
+                        </button>
+                      </div>
+
+                      {openFaqSingleImportIdx === sIdx && (
+                        <div className="bg-gray-50/80 p-5 rounded-2xl border border-gray-100 mt-4 shadow-inner">
+                          <label className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2">+ Paste Single FAQ (Question on line 1, Answer below)</label>
+                          <textarea
+                            rows="3"
+                            placeholder="Example:&#10;What is this product?&#10;This product is exactly what you need for your project."
+                            className="w-full border border-gray-200 bg-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm font-medium"
+                            id={`single-faq-import-${sIdx}`}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const textareaEl = document.getElementById(`single-faq-import-${sIdx}`);
+                              if (textareaEl && textareaEl.value.trim()) {
+                                const lines = textareaEl.value.trim().split('\n').map(l => l.trim()).filter(Boolean);
+                                if (lines.length > 0) {
+                                  const newQa = { q: lines[0], a: lines.slice(1).join('\n') };
+                                  const updatedSecs = [...sections];
+                                  updatedSecs[sIdx].qas.push(newQa);
+                                  setSections(updatedSecs);
+                                  textareaEl.value = "";
+                                  setOpenFaqSingleImportIdx(null);
+                                }
+                              }
+                            }}
+                            className="mt-3 text-xs font-bold bg-[#0072b1] hover:bg-[#005f96] text-white px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
+                          >
+                            Process & Append FAQ
+                          </button>
+                        </div>
+                      )}
+
+                      {openFaqBulkImportIdx === sIdx && (
+                        <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100 mt-4 shadow-inner">
+                          <label className="block text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">⚡ Bulk Paste: Add Multiple FAQs at Once</label>
+                          <textarea
+                            rows="6"
+                            placeholder="Paste your content here. Hit Enter twice (leave an empty line) to separate FAQs...&#10;&#10;1. First Question?&#10;First answer here...&#10;&#10;2. Second Question?&#10;Second answer here..."
+                            className="w-full border border-blue-200 bg-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-blue-300 focus:border-blue-400 text-gray-900 shadow-sm font-medium"
+                            id={`bulk-faq-import-${sIdx}`}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const textareaEl = document.getElementById(`bulk-faq-import-${sIdx}`);
+                              if (textareaEl && textareaEl.value.trim()) {
+                                const blocks = textareaEl.value.split(/\n\s*\n/).filter(b => b.trim());
+                                const newQas = blocks.map(block => {
+                                  const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+                                  return { q: lines[0] || "", a: lines.slice(1).join('\n') || "" };
+                                }).filter(c => c.q || c.a);
+                                
+                                if (newQas.length > 0) {
+                                  const updatedSecs = [...sections];
+                                  updatedSecs[sIdx].qas = [...updatedSecs[sIdx].qas, ...newQas];
+                                  setSections(updatedSecs);
+                                  textareaEl.value = "";
+                                  setOpenFaqBulkImportIdx(null);
+                                }
+                              }
+                            }}
+                            className="mt-3 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
+                          >
+                            Process & Append FAQs
+                          </button>
+                        </div>
+                      )}
                     </div>
 
                     <div className="bg-white/50 p-4 rounded-xl border border-gray-200/50 space-y-3">
