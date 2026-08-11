@@ -1177,5 +1177,367 @@ export const foodIngredients = [
         "answer": "Yes, its highly uniform crystalline structure and non-hygroscopic nature make it exceptionally well-suited for automated dry powder blending in sports nutrition manufacturing."
       }
     ]
+  },
+  {
+    "id": 10,
+    "name": "Potassium Sorbate",
+    "make": "Henan EME Technology Co., Ltd.",
+    "category": "Preservatives",
+    "badge": "Imported",
+    "badgeColor": "bg-green-100 text-green-800",
+    "image": "",
+    "tagline": "Premium Food Preservative & Antimicrobial Agent.",
+    "intro": "Potassium Sorbate is a highly effective food preservative widely used in the food and beverage industry to inhibit the growth of mold, yeast, and fungi, extending product shelf life.",
+    "description": "Sourced from Henan EME Technology Co., Ltd. (China), our high-quality Potassium Sorbate is supplied in 25 kg bags with pallets, ensuring reliable bulk supply for large-scale manufacturing.\n\nAs a highly soluble, white granular powder, it is recognized globally for its exceptional stability (Assay 99.0-101.0%) and safety profile. Formulating with our premium Potassium Sorbate provides a highly effective method to protect the integrity, taste, and freshness of commercial baked goods, beverages, dairy products, and processed meats against microbial spoilage.",
+    "highlights": [
+      "Assay: 99.0% - 101.0%",
+      "Excellent heat stability (no discoloration at 105℃ for 90min)",
+      "Effectively inhibits mold, yeast, and fungi",
+      "Extends shelf life without altering taste or smell",
+      "Highly soluble white granular powder"
+    ],
+    "applications": "Commercial baked goods, beverages, dairy products, processed meats, wine, syrups, and various other commercial food formulations.",
+    "tags": [
+      "Preservative",
+      "Food Additive",
+      "Imported"
+    ],
+    "specs": [
+      { "label": "Form", "value": "White Granular" },
+      { "label": "Pack Size", "value": "25 Kg Bag with pallets" },
+      { "label": "Origin", "value": "China" },
+      { "label": "Assay by Titration", "value": "99.0% - 101.0%" },
+      { "label": "Melting Range", "value": "133-135℃" },
+      { "label": "pH-Value (10% water solution)", "value": "8.5 - 10.5" },
+      { "label": "Loss on Drying (105°C, 3 hrs)", "value": "≤ 1.0 %" }
+    ],
+    "trade": [
+      { "label": "Minimum Order", "value": "25 Kg" },
+      { "label": "Market", "value": "All India" }
+    ],
+    "slug": "potassium-sorbate",
+    "seoTitle": "Buy Bulk Potassium Sorbate by Henan EME Technology | Premium Preservative Supplier India",
+    "seoDescription": "Potassium Sorbate is a highly effective food preservative used in food and beverages to inhibit mold and yeast. Top-rated bulk supplier for manufacturing in India.",
+    "nutritionalProfile": [
+      { "label": "Assay by Titration", "value": "99.0% - 101.0%" },
+      { "label": "Loss on Drying", "value": "≤ 1.0%" },
+      { "label": "Acidity (as Sorbic Acid)", "value": "≤ 1.0%" },
+      { "label": "Alkalinity (as K2CO3)", "value": "≤ 1.0%" }
+    ],
+    "benefits": [
+      "Broad Spectrum Antimicrobial: Highly effective against yeasts and molds, preventing spoilage.",
+      "Flavor Neutrality: Does not impart any noticeable taste or odor to the finished food product.",
+      "High Solubility: Easily dissolves in water, making it extremely convenient for liquid formulations and beverages.",
+      "Heat Stability: Retains its preservative properties and exhibits no discoloration even during standard heat processing (up to 105℃)."
+    ],
+    "manufacturingProcess": "Produced by Henan EME Technology Co., Ltd., this Potassium Sorbate is synthesized through a highly controlled neutralization reaction between sorbic acid and potassium hydroxide. The resulting solution is rigorously purified to remove any heavy metals or impurities, ensuring full compliance with international food safety standards.\n\nThe purified solution undergoes advanced crystallization and drying processes, specifically optimized to produce a uniform, free-flowing white granular powder. This granular form reduces dust during handling in manufacturing environments and enhances solubility. The final product is rigorously tested for assay purity, moisture content, and heavy metals before being securely packed in 25 kg bags and palletized for safe global transit.",
+    "faqs": [
+      {
+        "question": "What is the primary use of Potassium Sorbate?",
+        "answer": "It is primarily used as a food preservative to inhibit the growth of mold, yeast, and certain bacteria, significantly extending the shelf life of food and beverage products."
+      },
+      {
+        "question": "Is the product in powder or granular form?",
+        "answer": "This specific premium batch is supplied in a white granular form, which is highly preferred for minimizing dust and improving solubility during commercial mixing."
+      },
+      {
+        "question": "Does Potassium Sorbate affect the taste of food?",
+        "answer": "No, when used at recommended commercial concentrations, it is completely flavorless and odorless, preserving the original sensory qualities of the product."
+      },
+      {
+        "question": "What is the standard packaging?",
+        "answer": "It is supplied in heavy-duty 25 kg bags stacked on pallets, perfectly suited for industrial manufacturing."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Vital Wheat Gluten",
+    "make": "Guanxian Xinrui Industrial Co., Ltd.",
+    "category": "Nutrient Additives",
+    "badge": "Imported",
+    "badgeColor": "bg-amber-100 text-amber-800",
+    "image": "",
+    "tagline": "High-Protein Dough Conditioner & Binder.",
+    "intro": "Vital Wheat Gluten is a premium natural protein derived from wheat flour, highly valued in the baking and food processing industries for its exceptional elasticity, water absorption, and binding properties.",
+    "description": "Sourced directly from Guanxian Xinrui Industrial Co., Ltd. in Shandong, China, our Vital Wheat Gluten is a light yellow, free-flowing powder with a high protein content exceeding 82%. It is supplied in 25 kg bags, ideal for bulk commercial use.\n\nWith an outstanding water absorption rate of over 150%, it significantly improves dough strength, elasticity, and shelf life in baked goods. Beyond baking, it serves as an essential, highly effective vegetarian protein binder in meat substitutes, noodles, and pet food formulations.",
+    "highlights": [
+      "High Protein Content: Min. 82.0%",
+      "Excellent Water Absorption: Min. 150%",
+      "Improves dough elasticity and volume",
+      "Perfect vegan binder for meat alternatives",
+      "Fine light yellow powder (95% passes 80 mesh)"
+    ],
+    "applications": "Commercial baking (bread, buns, pastries), pasta and noodles, vegetarian meat substitutes, processed meats, and pet food formulations.",
+    "tags": [
+      "Protein",
+      "Baking Additive",
+      "Imported"
+    ],
+    "specs": [
+      { "label": "Form", "value": "Light Yellow Powder" },
+      { "label": "Pack Size", "value": "25 Kg Bag" },
+      { "label": "Origin", "value": "Shandong, China" },
+      { "label": "Protein Content", "value": "Min. 82% (Dry Basis)" },
+      { "label": "Water Absorption", "value": "Min. 150%" },
+      { "label": "Moisture", "value": "Max. 8.0%" },
+      { "label": "Ash", "value": "Max. 1.0%" }
+    ],
+    "trade": [
+      { "label": "Minimum Order", "value": "25 Kg" },
+      { "label": "Market", "value": "All India" }
+    ],
+    "slug": "vital-wheat-gluten",
+    "seoTitle": "Buy Bulk Vital Wheat Gluten by Guanxian Xinrui | Premium Baking Additive Supplier India",
+    "seoDescription": "Vital Wheat Gluten is a high-protein baking additive and binder used in commercial baking and meat alternatives. Top-rated bulk supplier in India.",
+    "nutritionalProfile": [
+      { "label": "Protein (N x 6.25)", "value": "Min. 82.0%" },
+      { "label": "Fat", "value": "Max. 2.0%" },
+      { "label": "Moisture", "value": "Max. 8.0%" },
+      { "label": "Ash", "value": "Max. 1.0%" }
+    ],
+    "benefits": [
+      "Dough Enhancement: Dramatically improves the viscoelastic properties of dough, leading to better gas retention and a softer, fluffier crumb texture in bread.",
+      "High Protein Source: Provides a concentrated source of highly digestible plant-based protein, ideal for enriching vegan and vegetarian products.",
+      "Structural Binder: Acts as a crucial structural binding agent in extruded snacks, noodles, and meat analogs (like seitan).",
+      "Extended Shelf Life: Helps retain moisture within baked goods, naturally extending freshness and shelf life."
+    ],
+    "manufacturingProcess": "Produced by Guanxian Xinrui Industrial Co., Ltd. in China, this Vital Wheat Gluten is extracted from premium quality wheat flour. The manufacturing process utilizes an advanced, continuous water-washing technique to naturally separate the gluten protein complex from the wheat starch.\n\nOnce separated, the wet gluten is rapidly dried using a highly controlled flash-drying process. This low-temperature drying ensures that the native proteins are not denatured, perfectly preserving their vital elasticity and water-absorption capabilities. The dried gluten is then finely milled so that over 95% passes through an 80-mesh sieve, resulting in a smooth, highly soluble light yellow powder. The final product undergoes strict microbiological and heavy metal testing before being securely packed in 25 kg bags and stored in cool, dry conditions for global export.",
+    "faqs": [
+      {
+        "question": "What exactly is Vital Wheat Gluten?",
+        "answer": "It is the natural protein found in wheat, extracted by washing wheat flour with water until all the starch dissolves, leaving behind the highly elastic gluten."
+      },
+      {
+        "question": "What is its protein content?",
+        "answer": "Our premium batch guarantees a minimum protein content of 82% (on a dry basis)."
+      },
+      {
+        "question": "Is it suitable for vegan meat alternatives?",
+        "answer": "Yes, it is the primary ingredient in seitan and is widely used across the plant-based meat industry due to its incredible meat-like texture and binding ability."
+      },
+      {
+        "question": "How does it improve baking?",
+        "answer": "Adding a small percentage to regular flour significantly increases dough strength, resulting in higher bread volume, better texture, and extended shelf life."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Pea Protein (80%)",
+    "make": "Shandong Jindu Talin Foods Co., Ltd.",
+    "category": "Plant Protein",
+    "badge": "Imported",
+    "badgeColor": "bg-green-100 text-green-800",
+    "image": "",
+    "tagline": "Premium Vegan Protein Source.",
+    "intro": "Pea Protein (80%) is a highly digestible, plant-based protein isolate widely used in sports nutrition, vegan foods, and health supplements.",
+    "description": "Sourced from Shandong Jindu Talin Foods Co., Ltd. in China, our premium Pea Protein (80%) offers a clean, neutral taste and excellent nutritional profile. Supplied in 20 kg bags, it is highly sought after by commercial manufacturers formulating vegan and hypoallergenic products.\n\nBoasting a high protein content of over 80% on a dry basis, it provides a complete amino acid profile rich in BCAAs. It is the perfect foundational ingredient for plant-based meat alternatives, vegan protein powders, and fortified baked goods, offering superior solubility and texture.",
+    "highlights": [
+      "High Protein Content: 80% (Dry Basis)",
+      "100% Vegan & Hypoallergenic",
+      "Low Fat (≤ 3.0%) & Moisture (≤ 10%)",
+      "Excellent solubility and neutral flavor",
+      "Ideal for plant-based meat analogs and shakes"
+    ],
+    "applications": "Vegan protein powders, plant-based meat alternatives, protein bars, fortified baked goods, and sports nutrition supplements.",
+    "tags": [
+      "Protein",
+      "Vegan",
+      "Imported"
+    ],
+    "specs": [
+      { "label": "Form", "value": "Powder" },
+      { "label": "Pack Size", "value": "20 Kg Bag" },
+      { "label": "Origin", "value": "Shandong, China" },
+      { "label": "Protein (Dry Basis)", "value": "80±2%" },
+      { "label": "Moisture", "value": "≤ 10.0%" },
+      { "label": "Fat (Dry Basis)", "value": "≤ 3.0%" },
+      { "label": "pH Value", "value": "6.0 - 8.0" }
+    ],
+    "trade": [
+      { "label": "Minimum Order", "value": "20 Kg" },
+      { "label": "Market", "value": "All India" }
+    ],
+    "slug": "pea-protein-80",
+    "seoTitle": "Buy Bulk Pea Protein 80% by Shandong Jindu Talin | Vegan Protein Supplier India",
+    "seoDescription": "Premium Pea Protein (80%) isolate for vegan sports nutrition and plant-based foods. Top-rated bulk supplier from Shandong Jindu Talin Foods, available in India.",
+    "nutritionalProfile": [
+      { "label": "Protein (Dry Basis)", "value": "80±2%" },
+      { "label": "Fat (Dry Basis)", "value": "≤ 3.0%" },
+      { "label": "Moisture", "value": "≤ 10.0%" },
+      { "label": "Ash (Dry Basis)", "value": "≤ 8.0%" }
+    ],
+    "benefits": [
+      "Muscle Growth & Repair: Rich in Branched-Chain Amino Acids (BCAAs), particularly Arginine, to support muscle synthesis and athletic recovery.",
+      "Allergen-Free: Completely free from dairy, soy, and gluten, making it universally safe for consumers with strict dietary restrictions.",
+      "Clean Label: Easily incorporated into formulations without imparting strong off-flavors, maintaining the product's intended taste profile.",
+      "Sustainable Source: Plant-based extraction processes have a significantly lower environmental impact compared to animal-based proteins."
+    ],
+    "manufacturingProcess": "Produced by Shandong Jindu Talin Foods Co., Ltd., this Pea Protein isolate is derived from high-quality, non-GMO yellow peas. The manufacturing process utilizes an advanced, chemical-free wet-extraction method to isolate the natural protein from the pea starch and fiber.\n\nThe extracted protein solution undergoes a gentle, low-temperature spray-drying process to preserve its native amino acid structure and high digestibility. This highly controlled process results in a fine, easily dispersible powder with a neutral flavor and smooth mouthfeel. Throughout production, the product is rigorously tested to ensure the protein content meets the 80% specification, along with stringent microbiological and heavy metal quality checks. Finally, it is securely packaged in 20 kg bags for optimal stability during commercial storage and global transit.",
+    "faqs": [
+      {
+        "question": "What is Pea Protein (80%)?",
+        "answer": "It is a highly concentrated plant protein extracted from yellow peas, delivering 80% protein content by weight (on a dry basis)."
+      },
+      {
+        "question": "Does it contain any common allergens?",
+        "answer": "No, pea protein is naturally free from dairy, soy, gluten, and nuts, making it one of the most hypoallergenic protein sources available."
+      },
+      {
+        "question": "How is the taste profile?",
+        "answer": "This premium grade from Shandong Jindu Talin Foods has been carefully processed to have a very neutral flavor and smooth texture, avoiding the 'earthy' taste common in lower-grade plant proteins."
+      },
+      {
+        "question": "What formulations use this ingredient?",
+        "answer": "It is heavily used in ready-to-mix vegan protein shakes, protein bars, plant-based burgers (as a meat analog), and fortified non-dairy beverages."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Isolated Soy Protein",
+    "make": "Shandong Kawah Oils Co., Ltd.",
+    "category": "Plant Protein",
+    "badge": "Imported",
+    "badgeColor": "bg-yellow-100 text-yellow-800",
+    "image": "",
+    "tagline": "High-Purity NON-GMO Vegan Protein.",
+    "intro": "Isolated Soy Protein is a highly refined, premium plant-based protein extracted from NON-GMO soybeans, renowned for its exceptional protein density and functional binding properties.",
+    "description": "Sourced from Shandong Kawah Oils Co., Ltd. (Xinrui Group) in China, our premium Isolated Soy Protein is derived strictly from NON-GMO soybeans. Supplied in 20 kg multi-wall, poly-lined paper bags, this light yellow powder is a staple ingredient for large-scale food processors and nutrition brands.\n\nWith an outstanding crude protein content exceeding 90% on a dry basis, it provides unmatched nutritional fortification. Beyond its nutritional value, it possesses excellent emulsification, water-binding, and gel-forming capabilities, making it an essential structural component in processed meats, vegan alternatives, and protein shakes.",
+    "highlights": [
+      "Ultra-High Protein: Min. 90% (Dry Basis)",
+      "Strictly NON-GMO Soybean Source",
+      "Low Fat (≤ 1.0%) and Ash (≤ 6.0%)",
+      "Excellent emulsification and gelation",
+      "Fine powder (95% passes 100 mesh)"
+    ],
+    "applications": "Processed meats (sausages, deli meats), vegan meat alternatives, protein bars, ready-to-mix nutrition shakes, and dairy replacements.",
+    "tags": [
+      "Protein",
+      "Vegan",
+      "NON-GMO",
+      "Imported"
+    ],
+    "specs": [
+      { "label": "Form", "value": "Light Yellow Powder" },
+      { "label": "Pack Size", "value": "20 Kg Bag" },
+      { "label": "Origin", "value": "Shandong, China" },
+      { "label": "Crude Protein", "value": "Min. 90% (Dry Basis)" },
+      { "label": "Moisture", "value": "Max. 7.0%" },
+      { "label": "Fat", "value": "Max. 1.0%" },
+      { "label": "Mesh Size", "value": "Min. 95% pass 100 mesh" }
+    ],
+    "trade": [
+      { "label": "Minimum Order", "value": "20 Kg" },
+      { "label": "Market", "value": "All India" }
+    ],
+    "slug": "isolated-soy-protein",
+    "seoTitle": "Buy Bulk NON-GMO Isolated Soy Protein | Shandong Kawah Oils Supplier India",
+    "seoDescription": "Premium 90% Isolated Soy Protein for processed meats and vegan foods. Sourced from NON-GMO soybeans. Top-rated bulk supplier in India.",
+    "nutritionalProfile": [
+      { "label": "Crude Protein (N x 6.25)", "value": "Min. 90.0%" },
+      { "label": "Fat", "value": "Max. 1.0%" },
+      { "label": "Moisture", "value": "Max. 7.0%" },
+      { "label": "Ash", "value": "Max. 6.0%" }
+    ],
+    "benefits": [
+      "Functional Binding: Acts as a powerful emulsifier and water-binder, dramatically improving the texture, juiciness, and yield of processed meat products like sausages.",
+      "Complete Amino Acid Profile: Provides a high-quality, highly digestible plant protein that contains all essential amino acids necessary for human nutrition.",
+      "Clean Label Assurance: Manufactured strictly from NON-GMO soybeans, allowing brands to cater to health-conscious and label-scrutinizing consumers.",
+      "Cholesterol-Free: A heart-healthy, zero-cholesterol alternative to animal-based proteins for cardiovascular wellness."
+    ],
+    "manufacturingProcess": "Produced by Shandong Kawah Oils Co., Ltd. (part of the Xinrui Group), this premium isolate begins with the rigorous selection of high-quality, NON-GMO soybeans. The beans are first de-hulled and defatted to produce soy flakes. \n\nThese flakes undergo a highly controlled aqueous extraction process to separate the soluble protein from the insoluble carbohydrates and fiber. The purified protein solution is then precipitated, washed, and neutralized before being spray-dried at carefully monitored temperatures. This ensures the protein retains its functional properties (like emulsification and gelation) without denaturation. The resulting ultra-fine, light yellow powder easily passes through a 100-mesh sieve and undergoes strict microbiological testing before being sealed in 20 kg poly-lined paper bags to protect against moisture during global transit.",
+    "faqs": [
+      {
+        "question": "What is Isolated Soy Protein?",
+        "answer": "It is the most highly refined form of soy protein, processed to remove nearly all fats and carbohydrates, resulting in a product that is at least 90% pure protein."
+      },
+      {
+        "question": "Is this product GMO-free?",
+        "answer": "Yes, this specific batch from Shandong Kawah Oils is certified to be manufactured entirely from NON-GMO soybeans."
+      },
+      {
+        "question": "Why is it used in processed meats?",
+        "answer": "Because of its incredible water-binding and emulsifying properties, it helps meat products retain moisture and fat during cooking, improving juiciness and reducing shrinkage."
+      },
+      {
+        "question": "What is the standard packaging?",
+        "answer": "It is supplied in heavy-duty 20 kg multi-wall paper bags with a protective poly inner lining to ensure absolute freshness and prevent moisture ingress."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Creatine Monohydrate",
+    "make": "Chengxin Yongan Chemical Co., Ltd.",
+    "category": "Sports Nutrition",
+    "badge": "Imported",
+    "badgeColor": "bg-blue-100 text-blue-800",
+    "image": "",
+    "tagline": "Ultra-Pure 200 Mesh Performance Enhancer.",
+    "intro": "Creatine Monohydrate is a highly researched, extremely pure sports nutrition supplement proven to increase power output, muscle endurance, and cellular hydration.",
+    "description": "Manufactured by Inner Mongolia Chengxin Yongan Chemical Co., Ltd. in China, our Creatine Monohydrate is an ultra-pure, 200 mesh fine powder designed for premium sports nutrition brands. It offers a flawless 100% assay on a dry basis, guaranteeing maximum potency and efficacy.\n\nWith exceptionally low impurity profiles (Creatinine at just 24ppm and Dicyandiamide at 21ppm), this raw material ensures rapid absorption and complete safety. Its ultra-fine particle size and excellent flowability (Bulk density 500g/L) make it the perfect foundational ingredient for high-end pre-workouts, mass gainers, and pure creatine supplements.",
+    "highlights": [
+      "Ultra-Pure: 100.0% Assay (Dry Basis)",
+      "Ultra-Fine: 200 Mesh (rapid absorption)",
+      "Extremely Low Impurities (Creatinine: 24ppm)",
+      "Excellent flowability for manufacturing",
+      "Manufactured to strict USP guidelines"
+    ],
+    "applications": "Pure creatine powders, pre-workout formulas, intra-workout cellular hydration mixes, and muscle-building mass gainers.",
+    "tags": [
+      "Sports Nutrition",
+      "Creatine",
+      "Performance",
+      "Imported"
+    ],
+    "specs": [
+      { "label": "Form", "value": "White Powder" },
+      { "label": "Particle Size", "value": "200 Mesh (80% pass)" },
+      { "label": "Origin", "value": "Inner Mongolia, China" },
+      { "label": "Assay (Dry Basis)", "value": "100.0%" },
+      { "label": "Loss on Drying", "value": "11.1%" },
+      { "label": "Creatinine", "value": "≤ 100 ppm" },
+      { "label": "Dicyandiamide", "value": "≤ 50 ppm" }
+    ],
+    "trade": [
+      { "label": "Minimum Order", "value": "25 Kg" },
+      { "label": "Market", "value": "All India" }
+    ],
+    "slug": "creatine-monohydrate",
+    "seoTitle": "Buy Bulk Creatine Monohydrate 200 Mesh | Chengxin Yongan Supplier India",
+    "seoDescription": "Ultra-pure 200 mesh Creatine Monohydrate (100% Assay) for sports nutrition brands. Sourced from Chengxin Yongan Chemical. Top bulk supplier in India.",
+    "nutritionalProfile": [
+      { "label": "Assay (Dry Basis)", "value": "100.0%" },
+      { "label": "Creatinine", "value": "24 ppm" },
+      { "label": "Dicyandiamide", "value": "21 ppm" },
+      { "label": "Heavy Metals", "value": "≤ 10 ppm" }
+    ],
+    "benefits": [
+      "Explosive Power Output: Rapidly replenishes ATP stores in muscle cells, allowing for increased strength and power during high-intensity exercise.",
+      "Cellular Hydration: Pulls water into muscle cells, promoting a state of cellular hyper-hydration that triggers protein synthesis and muscle growth.",
+      "Rapid Absorption: The ultra-fine 200 mesh particle size ensures complete solubility in liquids and rapid absorption through the gastrointestinal tract.",
+      "Unmatched Purity: Tested strictly against USP standards with virtually undetectable levels of unwanted byproducts like Dihydrotriazine."
+    ],
+    "manufacturingProcess": "Manufactured by Inner Mongolia Chengxin Yongan Chemical Co., Ltd., this high-grade Creatine Monohydrate is synthesized through the carefully controlled reaction of Sarcosine and Cyanamide. \n\nFollowing synthesis, the raw creatine undergoes an intense, multi-stage crystallization and purification process to aggressively strip away synthesis byproducts like Dicyandiamide and Creatinine, ensuring levels stay far below the strict USP limits. The highly purified crystals are then micronized down to an ultra-fine 200 mesh particle size. This micronization process dramatically increases the surface area of the powder, ensuring perfect solubility and preventing the 'gritty' texture often associated with lower-quality creatine. Finally, it undergoes rigorous infrared spectroscopy testing (USP<197K>) and microbiological screening before packaging.",
+    "faqs": [
+      {
+        "question": "What is the purity of this Creatine Monohydrate?",
+        "answer": "This product boasts a 100.0% Assay on a dry basis, representing the highest possible purity standard available in commercial sports nutrition."
+      },
+      {
+        "question": "What does '200 Mesh' mean?",
+        "answer": "Mesh size refers to how fine the powder is. 200 Mesh is considered 'micronized', meaning it is extremely fine, dissolves instantly in water, and leaves no gritty residue."
+      },
+      {
+        "question": "Are the impurity levels safe?",
+        "answer": "Yes, it is exceptionally safe. Toxic byproducts like Dicyandiamide are tested at just 21ppm (well below the 50ppm limit), and Heavy Metals are strictly controlled to under 10ppm."
+      },
+      {
+        "question": "Is this suitable for vegan formulations?",
+        "answer": "Absolutely. Creatine Monohydrate is synthetically produced from raw chemical precursors and contains zero animal products or byproducts."
+      }
+    ]
   }
 ];

@@ -54,48 +54,72 @@ export default function FoodIngredientsPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8 space-y-10">
-        {products.map((product, index) => (
-          <div
-            key={product.id}
-            className="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
-          >
-            {/* TOP SECTION */}
-            <div className="flex flex-col md:flex-row">
-              {/* LEFT — IMAGE */}
-              <div
-                className={`md:w-[32%] relative bg-gradient-to-br ${product.gradient} flex items-center justify-center`}
-                style={{ minHeight: "320px" }}
-              >
-                {/* glass overlay */}
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-[2px]" />
+        {products.map((product, index) => {
+          const fallback = { bg: "from-blue-50 via-sky-50 to-blue-100/50", text: "text-blue-500", border: "border-blue-200/50" };
+          const hasImage = !!product.image;
 
-                <div className="relative w-full h-full flex items-center justify-center z-10">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    width={240}
-                    height={180}
-                    className="object-contain hover:scale-105 transition-transform duration-300"
-                  />
+          return (
+            <div
+              key={product.id}
+              className={`rounded-3xl border border-white/40 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${hasImage ? 'bg-white' : `bg-gradient-to-r ${fallback.bg}`}`}
+            >
+              {/* TOP SECTION */}
+              <div className="flex flex-col md:flex-row h-full relative">
+                {/* Optional glass overlay for the entire card if no image */}
+                {!hasImage && <div className="absolute inset-0 bg-white/30 backdrop-blur-[1px] pointer-events-none" />}
+
+                {/* LEFT — VISUAL (Image or Premium Fallback) */}
+                <div
+                  className={`md:w-[32%] relative flex items-center justify-center overflow-hidden group ${hasImage ? `bg-gradient-to-br ${product.gradient || 'from-gray-50 to-gray-100'}` : ''}`}
+                  style={{ minHeight: "320px" }}
+                >
+                  {hasImage ? (
+                    <>
+                      <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]" />
+                      <div className="relative w-full h-full flex items-center justify-center z-10">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          width={240}
+                          height={180}
+                          className="object-contain hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 opacity-10 mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '16px 16px' }}></div>
+                      <div className="absolute -top-12 -right-12 w-40 h-40 bg-white/60 rounded-full blur-2xl"></div>
+                      <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-black/5 rounded-full blur-2xl"></div>
+                      <div className="relative z-10 flex flex-col items-center justify-center text-center p-8 w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                        <h3 className={`${fallback.text} text-3xl sm:text-4xl font-black tracking-tighter drop-shadow-sm leading-tight px-4`}>
+                          {product.name}
+                        </h3>
+                        <div className={`w-12 h-1.5 mt-6 rounded-full ${fallback.text.replace('text-', 'bg-')} opacity-40 shadow-sm`}></div>
+                      </div>
+                    </>
+                  )}
                 </div>
-              </div>
 
-              {/* RIGHT — DETAILS */}
-              <div className="md:w-[68%] p-7 md:p-10 flex flex-col justify-center border-l border-gray-100">
-                <p className="text-xs text-gray-400 uppercase tracking-widest font-semibold mb-1">
-                  {product.category}
-                </p>
+                {/* RIGHT — DETAILS */}
+                <div className={`md:w-[68%] p-7 md:p-10 flex flex-col justify-center relative z-10 border-l ${hasImage ? 'border-gray-100' : 'border-white/40'}`}>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">
+                    {product.category}
+                  </p>
 
-                <h2 className=" text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-1">
-                  {product.name}
-                </h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-1">
+                    {product.name}
+                  </h2>
 
-                <p className="text-sm font-semibold text-[#1a6fa8] mb-4">
+                  <p className="text-sm font-semibold text-[#1a6fa8] mb-4">
                   {product.tagline}
                 </p>
 
                 <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-2xl">
                   {product.intro}
+                  <Link href={`/food-ingredients/${product.slug}`} className="inline-flex items-center gap-1 text-[#1a6fa8] bg-[#eaf4fb] px-2 py-0.5 rounded-md ml-1.5 font-bold hover:bg-[#d5eaf7] hover:text-[#114b73] transition-colors whitespace-nowrap">
+                    Read more <span>&rarr;</span>
+                  </Link>
                 </p>
 
                 {/* CTA */}
@@ -114,133 +138,10 @@ export default function FoodIngredientsPage() {
               </div>
             </div>
 
-            {/* BOTTOM SECTION */}
-            <div className="border-t border-gray-100 px-7 md:px-10 py-10 bg-gray-50/40">
-              {/* ABOUT */}
-              <div className="mb-10">
-                <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
-                  About This Product
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed max-w-7xl">
-                  {product.description}
-                </p>
-              </div>
 
-              {/* GRID */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                {/* LEFT SIDE */}
-                <div className="flex flex-col gap-8">
-                  {/* HIGHLIGHTS */}
-                  <div>
-                    <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-4">
-                      Key Highlights
-                    </h3>
-
-                    <ul className="space-y-3">
-                      {product.highlights.map((point, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-3 text-sm text-gray-700 bg-white rounded-lg px-3 py-2 shadow-sm"
-                        >
-                          <span className="mt-0.5 w-5 h-5 shrink-0 rounded-full bg-[#eaf4fb] flex items-center justify-center">
-                            <svg
-                              className="w-3 h-3 text-[#1a6fa8]"
-                              fill="none"
-                              viewBox="0 0 10 10"
-                            >
-                              <path
-                                d="M2 5l2.5 2.5L8 3"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </span>
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* SPECIFICATIONS */}
-                  {product.specs && (
-                    <div>
-                      <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
-                        Specifications
-                      </h3>
-
-                      <div className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm space-y-2 text-sm">
-                        {product.specs.map((item, i) => (
-                          <div key={i} className="flex justify-between">
-                            <span className="text-gray-500">{item.label}</span>
-                            <span className="font-medium text-gray-800">
-                              {item.value}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* RIGHT SIDE */}
-                <div className="flex flex-col gap-6">
-                  {/* APPLICATIONS */}
-                  <div>
-                    <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
-                      Applications
-                    </h3>
-
-                    <div className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
-                      <p className="text-sm text-gray-700 leading-relaxed">
-                        {product.applications}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* TRADE INFO */}
-                  {product.trade && (
-                    <div>
-                      <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
-                        Trade Information
-                      </h3>
-
-                      <div className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm space-y-2 text-sm">
-                        {product.trade.map((item, i) => (
-                          <div key={i} className="flex justify-between">
-                            <span className="text-gray-500">{item.label}</span>
-                            <span className="font-medium text-gray-800">
-                              {item.value}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* TAGS */}
-                  <div>
-                    <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
-                      Certifications & Grade
-                    </h3>
-
-                    <div className="flex flex-wrap gap-2">
-                      {product.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs px-3 py-1.5 bg-[#eaf4fb] text-[#1a6fa8] rounded-full font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
