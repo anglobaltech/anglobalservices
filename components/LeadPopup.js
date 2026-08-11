@@ -281,7 +281,7 @@ export default function LeadPopup() {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          service: formData.service,
+          industry: formData.service,
           source: "website",
         }),
       });
