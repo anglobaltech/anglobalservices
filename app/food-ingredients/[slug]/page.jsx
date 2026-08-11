@@ -179,7 +179,7 @@ export default async function ProductPage({ params }) {
                   {product.applications && (
                     <div className="mt-8">
                       <h3 className="text-xl font-bold text-[#0a192f] mb-3 flex items-center gap-2">
-                        <Activity className="text-[#0075B6]" size={22} /> Applications
+                        <Activity className="text-[#0075B6]" size={22} /> Common Uses
                       </h3>
                       <p className="text-gray-700 text-lg leading-relaxed">
                         {product.applications}
