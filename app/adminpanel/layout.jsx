@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image"; 
 import { collection, addDoc, serverTimestamp, query, where, getDocs, deleteDoc, doc, orderBy } from "firebase/firestore";
-import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { initializeApp, getApps } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword as createSecondaryUser, signOut as signOutSecondary } from "firebase/auth";
 import { db, auth } from "@/src/lib/firebase"; 
@@ -16,6 +16,7 @@ export default function AdminLayout({ children }) {
   const [authLoading, setAuthLoading] = useState(true);
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState("");
 
   const [showAdminModal, setShowAdminModal] = useState(false);
@@ -65,6 +66,7 @@ export default function AdminLayout({ children }) {
     setAuthLoading(true);
     setLoginError("");
     try {
+      await setPersistence(auth, browserSessionPersistence);
       await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
     } catch (err) {
       setLoginError("Invalid email or password.");
@@ -222,7 +224,28 @@ export default function AdminLayout({ children }) {
             </div>
             <div>
               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1">Password</label>
-              <input type="password" required value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} className="w-full px-4 py-3.5 rounded-xl border border-gray-200/80 bg-white/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-sm font-medium shadow-sm" placeholder="••••••••" />
+              <div className="relative">
+                <input 
+                  type={showPassword ? "text" : "password"} 
+                  required 
+                  value={loginPassword} 
+                  onChange={(e) => setLoginPassword(e.target.value)} 
+                  onPaste={(e) => e.preventDefault()}
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200/80 bg-white/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] focus:bg-white transition-all text-sm font-medium shadow-sm pr-12" 
+                  placeholder="••••••••" 
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 flex items-center pr-4 text-gray-500 hover:text-[#0072b1] transition-colors"
+                >
+                  {showPassword ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22"/></svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  )}
+                </button>
+              </div>
             </div>
             {loginError && <p className="text-red-500 text-sm font-semibold text-center bg-red-50 py-3 rounded-xl border border-red-100">{loginError}</p>}
             <button type="submit" className="w-full flex justify-center py-4 px-4 rounded-xl text-white bg-gradient-to-r from-[#0072b1] to-[#005f96] hover:from-[#005f96] hover:to-[#004a7a] font-bold text-sm shadow-lg shadow-[#0072b1]/20 hover:shadow-[#0072b1]/40 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none border border-[#005f96]/50 cursor-pointer">
