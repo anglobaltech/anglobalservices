@@ -500,12 +500,6 @@ export default function Footer() {
     setError("");
 
     try {
-      const captchaRes = await fetch("/api/verify-captcha", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token: captchaToken }),
-      });
-
       let enquiryId = "";
       const counterRef = doc(db, "counters", "enquiries");
 
@@ -520,11 +514,10 @@ export default function Footer() {
 
         transaction.set(doc(db, "enquiries", enquiryId), {
           enquiryId,
-          service: formData.service,
+          industry: formData.service,
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
-
           source: "website",
           status: "new",
           createdAt: serverTimestamp(),
@@ -536,8 +529,12 @@ export default function Footer() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           enquiryId,
-          ...formData,
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          industry: formData.service,
           source: "website",
+          token: captchaToken,
         }),
       });
 
