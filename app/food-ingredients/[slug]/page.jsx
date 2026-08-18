@@ -204,14 +204,14 @@ export default async function ProductPage({ params }) {
                             const desc = splitIdx !== -1 ? benefit.substring(splitIdx + 1).trim() : '';
                             
                             return (
-                              <div key={idx} className="flex flex-col justify-center bg-white border border-gray-100 rounded-xl px-4 py-3 hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300 group h-full">
-                                <div className="flex items-center gap-3 mb-1">
-                                  <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-50 text-[#0075B6] group-hover:scale-110 transition-transform duration-300 shrink-0">
-                                    <ShieldCheck size={16} />
+                              <div key={idx} className="flex flex-col justify-center bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-[#0075B6]/30 hover:-translate-y-1 transition-all duration-300 group h-full">
+                                <div className="flex items-center gap-4 mb-3">
+                                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-50 text-[#0075B6] group-hover:scale-110 transition-transform duration-300 shrink-0">
+                                    <ShieldCheck size={24} />
                                   </div>
-                                  <h4 className="text-sm font-bold text-[#0a192f]">{title}</h4>
+                                  <h4 className="text-lg font-bold text-[#0a192f] leading-snug">{title}</h4>
                                 </div>
-                                {desc && <p className="text-gray-600 text-xs leading-relaxed ml-11">{desc}</p>}
+                                {desc && <p className="text-gray-600 text-base leading-relaxed ml-16">{desc}</p>}
                               </div>
                             );
                           })}
