@@ -64,6 +64,27 @@ const heroSlidesData = [
         Accelerate your business with cutting-edge technology. From <span className="font-bold text-yellow-400">Web Development</span> and <span className="font-bold text-yellow-400">Custom CRM Development</span>, to tailored mobile apps, we deliver robust digital solutions to fuel modern enterprise growth.
       </>
     )
+  },
+  {
+    image: "/dash-image-solar-panel-and-lab-setup-services-5.webp",
+    headingMain: (
+      <>
+        <span className="whitespace-nowrap">Solar Panel Manufacturing</span> <br className="hidden sm:block" />
+        And Laboratory Setup
+      </>
+    ),
+    wrapHeading: true,
+    headingSub: "Complete Testing & Plant Solutions",
+    customButtons: [
+      { text: "Solar Panel", link: "https://www.anglobalservices.com/solar-panel-plant-setup" },
+      { text: "Lab Setup", link: "https://www.anglobalservices.com/lab_servces" }
+    ],
+    containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[42%] lg:-mt-4 xl:w-[45%] xl:-mt-8 xl:max-w-[560px]",
+    paragraph: (
+      <>
+        Empower your business with complete <span className="font-bold text-yellow-400">Solar Panel Plant Setup</span> and state-of-the-art <span className="font-bold text-yellow-400">In-House Lab Facilities</span>. We provide end-to-end consultancy, advanced equipment procurement, and strict compliance for certified production.
+      </>
+    )
   }
 ];
 
@@ -534,32 +555,47 @@ export default function Hero() {
                 <div className="col-start-1 row-start-1 relative z-10 w-full flex items-center">
                   <div className="w-full max-w-7xl mx-auto px-2 py-4 sm:py-1 md:px-4 md:py-2 xl:py-6 sm:px-6 lg:px-8">
                     <div className={slide.containerClass || "w-[55%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
-                      <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-2xl lg:text-[28px] xl:text-[38px] font-extrabold text-white md:leading-tight mb-3 sm:mb-1 md:mb-2 xl:mb-4 drop-shadow-lg tracking-tight">
-                        <span className="whitespace-normal sm:whitespace-nowrap">{slide.headingMain}</span> <br className="hidden sm:block" />
-                        <span className="text-[#0075B6] drop-shadow-md bg-white/95 px-2 md:px-2 xl:px-3 py-1 md:py-1 rounded md:rounded-lg inline-block mt-2 sm:mt-1 md:mt-1 xl:mt-2 text-[12px] sm:text-[10px] md:text-sm lg:text-[18px] xl:text-[28px] whitespace-normal sm:whitespace-nowrap">
+                      <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[32px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-3 sm:mb-1 md:mb-2 lg:mb-4 xl:mb-6 drop-shadow-lg tracking-tight">
+                        <span className={`whitespace-normal ${slide.wrapHeading ? "" : "sm:whitespace-nowrap"}`}>{slide.headingMain}</span> <br className="hidden sm:block" />
+                        <span className="text-[#0075B6] drop-shadow-md bg-white/95 px-2 md:px-2 lg:px-3 xl:px-5 py-1 md:py-1 lg:py-1.5 xl:py-2 rounded md:rounded-lg inline-block mt-2 sm:mt-1 md:mt-1 lg:mt-2 xl:mt-4 text-[12px] sm:text-[10px] md:text-sm lg:text-[20px] xl:text-[32px] whitespace-normal sm:whitespace-nowrap">
                           {slide.headingSub}
                         </span>
                       </h1>
 
-                      <p className="text-white font-medium text-[12px] sm:text-[8px] md:text-[10px] lg:text-xs xl:text-base mb-5 sm:mb-3 md:mb-4 xl:mb-8 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md bg-black/20 p-3 sm:p-2 md:p-2 xl:p-3 rounded md:rounded-lg backdrop-blur-sm inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
+                      <p className="text-white font-medium text-[12px] sm:text-[8px] md:text-[10px] lg:text-[14px] xl:text-[18px] mb-5 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-10 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md bg-black/20 p-3 sm:p-2 md:p-2 lg:p-4 xl:px-6 xl:py-5 rounded md:rounded-lg backdrop-blur-sm inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
                         {slide.paragraph}
                       </p>
 
                       <div 
-                        className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 xl:gap-4 mb-4 sm:mb-2 md:mb-4 xl:mb-8"
+                        className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-4 xl:gap-6 mb-4 sm:mb-2 md:mb-4 lg:mb-6 xl:mb-10"
                         onMouseEnter={() => setIsButtonHovered(true)}
                         onMouseLeave={() => setIsButtonHovered(false)}
                       >
                         <Link
                           href="/contact-us"
-                          className="bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 xl:px-8 xl:py-3 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs xl:text-base"
+                          className={slide.customButtons ? 
+                            "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[13px] xl:text-[15px]"
+                            : "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-5 lg:py-2.5 xl:px-8 xl:py-4 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[14px] xl:text-[18px]"
+                          }
                         >
                           Contact Us
                         </Link>
-                        {slide.exploreLink ? (
+                        {slide.customButtons ? (
+                          <>
+                            {slide.customButtons.map((btn, btnIdx) => (
+                              <Link
+                                key={btnIdx}
+                                href={btn.link}
+                                className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded md:rounded-md font-semibold transition-all shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[13px] xl:text-[15px] backdrop-blur-sm cursor-pointer whitespace-nowrap"
+                              >
+                                {btn.text}
+                              </Link>
+                            ))}
+                          </>
+                        ) : slide.exploreLink ? (
                           <Link
                             href={slide.exploreLink}
-                            className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 xl:px-8 md:py-1.5 xl:py-3 rounded md:rounded-md font-semibold transition-all shadow-lg text-[12px] sm:text-[9px] md:text-xs xl:text-base backdrop-blur-sm cursor-pointer"
+                            className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-5 lg:py-2.5 xl:px-8 xl:py-4 rounded md:rounded-md font-semibold transition-all shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[14px] xl:text-[18px] backdrop-blur-sm cursor-pointer"
                           >
                             Explore Services
                           </Link>
@@ -570,7 +606,7 @@ export default function Hero() {
                               window.dispatchEvent(new CustomEvent('open-services-dropdown'));
                               window.scrollTo({ top: 0, behavior: 'smooth' });
                             }}
-                            className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 xl:px-8 md:py-1.5 xl:py-3 rounded md:rounded-md font-semibold transition-all shadow-lg text-[14px] sm:text-[9px] md:text-xs xl:text-base backdrop-blur-sm cursor-pointer"
+                            className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-5 lg:py-2.5 xl:px-8 xl:py-4 rounded md:rounded-md font-semibold transition-all shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[14px] xl:text-[18px] backdrop-blur-sm cursor-pointer"
                           >
                             Explore Services
                           </button>

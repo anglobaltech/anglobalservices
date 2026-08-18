@@ -1,59 +1,78 @@
 import Link from "next/link";
 import Image from "next/image";
+import ExploreFoodDropdownButton from "@/components/ExploreFoodDropdownButton";
 
 import { foodIngredients as products } from "@/data/foodIngredients";
 
 export default function FoodIngredientsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="relative bg-gradient-to-br from-[#e6f0ff] via-[#f5f9ff] to-[#e6f0ff] overflow-hidden">
-        {/* Background glow */}
-        <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#1a6fa8]/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-blue-300/20 rounded-full blur-3xl"></div>
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full bg-[#051c35] overflow-hidden">
+        <div className="flex w-full">
+          <div className="w-full shrink-0 relative">
+            <div className="grid grid-cols-1 grid-rows-1 w-full max-w-[2000px] mx-auto">
 
-        {/* subtle grid pattern */}
-        <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#1a6fa8_1px,transparent_1px)] [background-size:20px_20px]"></div>
+              {/* IMAGE LAYER */}
+              <div className="col-start-1 row-start-1 w-full relative flex items-start">
+                <img
+                  src="/food-items/dash-image-food-ingredients-1.webp"
+                  alt="Food Ingredients & Bulk Supply"
+                  className="w-full h-full object-cover object-left sm:h-auto sm:object-contain block min-h-[450px] sm:min-h-0"
+                />
+                <div className="absolute inset-0 bg-black/10"></div>
+              </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center relative z-10">
-          {/* Tag */}
-          <p className="inline-flex items-center gap-2 text-xs font-semibold text-[#1a6fa8] uppercase tracking-widest bg-white border border-[#1a6fa8]/20 px-5 py-1.5 rounded-full shadow-sm mb-6">
-            <span className="w-1 h-1 bg-[#1a6fa8] rounded-full"></span>
-            Food Ingredients & Bulk Supply
-          </p>
+              {/* TEXT CONTENT LAYER */}
+              <div className="col-start-1 row-start-1 relative z-10 w-full flex items-center">
+                <div className="w-full max-w-7xl mx-auto px-4 py-8 sm:py-1 md:px-4 md:py-1 xl:py-6 lg:px-8">
+                  <div className="w-full sm:w-[50%] md:w-[38%] lg:w-[35%] lg:-mt-8 xl:mt-0 xl:w-[40%] 2xl:w-[35%] xl:max-w-[650px] 2xl:max-w-[800px]">
+                    <h1 className="text-[26px] leading-tight sm:text-[14px] md:text-[18px] lg:text-[24px] xl:text-[42px] font-black text-[#0a192f] md:leading-tight mb-3 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-6 tracking-tight">
+                      <span className="whitespace-normal sm:whitespace-nowrap">Bulk Food Ingredients &</span> <br className="hidden sm:block" />
+                      <span className="text-[#0075B6] drop-shadow-sm bg-white/95 px-2 md:px-2 xl:px-4 py-1 md:py-1 xl:py-2 rounded md:rounded-lg inline-block mt-2 sm:mt-0.5 md:mt-1 lg:mt-1 xl:mt-3 text-[14px] sm:text-[9px] md:text-[11px] lg:text-[16px] xl:text-[30px] whitespace-normal sm:whitespace-nowrap border border-[#0075B6]/10">
+                        Nutritional Solutions
+                      </span>
+                    </h1>
 
-          {/* Heading */}
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
-            Bulk <span className="text-[#1a6fa8]">Food Ingredients</span> &
-            Nutritional Solutions
-          </h1>
+                    <p className="text-[#112340] font-bold text-[13px] sm:text-[7.5px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-5 sm:mb-1.5 md:mb-3 lg:mb-3 xl:mb-10 leading-relaxed sm:leading-tight md:leading-snug lg:leading-relaxed bg-white/70 border border-white/50 p-3 sm:p-1.5 md:p-2 lg:p-2 xl:px-6 xl:py-5 rounded-xl md:rounded-lg backdrop-blur-md shadow-sm inline-block w-full">
+                      Supplying high-quality dairy proteins, food ingredients, and natural products for <span className="font-extrabold text-[#0075B6]">manufacturers, food processors, and nutrition brands</span>. Our solutions ensure consistent quality, reliable sourcing, and performance for large-scale applications.
+                    </p>
 
-          {/* Description */}
-          <p className="text-gray-600 max-w-5xl mx-auto text-base md:text-md leading-relaxed mt-3">
-            Supplying high-quality dairy proteins, food ingredients, and natural
-            products for{" "}
-            <span className="text-gray-800 font-medium">
-              manufacturers, food processors, and nutrition brands
-            </span>
-            . Our solutions ensure consistent quality, reliable sourcing, and
-            performance for large-scale applications.
-          </p>
+                    <div className="flex flex-row flex-nowrap items-center gap-2 sm:gap-1 md:gap-2 lg:gap-3 xl:gap-6 mb-4 sm:mb-1.5 md:mb-3 lg:mb-3 xl:mb-10 overflow-visible">
+                      <Link
+                        href="/contact-us"
+                        className="bg-[#0a192f] hover:bg-[#112340] text-white px-4 py-2 sm:px-1 sm:py-0.5 md:px-3 md:py-1.5 lg:px-4 lg:py-2 xl:px-8 xl:py-4 rounded md:rounded-md font-bold transition-colors shadow-lg text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] whitespace-nowrap"
+                      >
+                        Contact Us
+                      </Link>
+                      <ExploreFoodDropdownButton
+                        className="bg-white text-[#0075B6] border-2 border-[#0075B6] hover:bg-[#0075B6] hover:text-white px-4 py-1.5 sm:px-1 sm:py-0 md:px-3 md:py-1 lg:px-4 lg:py-2 xl:px-8 xl:py-3.5 rounded md:rounded-md font-bold transition-all shadow-lg text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] cursor-pointer whitespace-nowrap"
+                      >
+                        Explore Products
+                      </ExploreFoodDropdownButton>
+                    </div>
 
-          {/* trust badges */}
-          <div className="flex justify-center gap-6 mt-6 text-xs text-gray-500 flex-wrap">
-            <span>✔ Food Grade Certified</span>
-            <span>✔ Export Quality Standards</span>
-            <span>✔ Trusted Global Sourcing</span>
-            <span>✔ Bulk Supply Capability</span>
-          </div>
-          <div className="mt-5 flex justify-center">
-            <span className="text-xs bg-green-50 text-green-800 border border-green-200 px-4 py-1.5 rounded-full font-medium shadow-sm">
-              FSSAI License No • 12726999000019
-            </span>
+                    <div className="flex flex-col gap-2 md:gap-1 lg:gap-2 xl:gap-4">
+                      <div className="flex flex-wrap gap-2 sm:gap-1 md:gap-2 lg:gap-2 xl:gap-5 text-[10px] sm:text-[7px] md:text-[8.5px] lg:text-[12px] xl:text-[16px] text-[#0a192f] font-extrabold">
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Food Grade Certified</span>
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Export Quality</span>
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Trusted Sourcing</span>
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Bulk Supply</span>
+                      </div>
+
+                      <div className="inline-block self-start bg-green-100/90 border border-green-300 text-green-900 px-3 py-1.5 md:px-2 md:py-1 lg:px-3 lg:py-1.5 xl:px-5 xl:py-3 rounded-lg text-[10px] sm:text-[7px] md:text-[8.5px] lg:text-[11px] xl:text-[16px] font-extrabold backdrop-blur-md mt-1 sm:mt-0 lg:mt-1 xl:mt-4 shadow-sm">
+                        FSSAI License No • 12726999000019
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8 space-y-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8 space-y-10" id="products-section">
         {products.map((product, index) => {
           const fallback = { bg: "from-blue-50 via-sky-50 to-blue-100/50", text: "text-blue-500", border: "border-blue-200/50" };
           const hasImage = !!product.image;
@@ -112,34 +131,34 @@ export default function FoodIngredientsPage() {
                   </h2>
 
                   <p className="text-sm font-semibold text-[#1a6fa8] mb-4">
-                  {product.tagline}
-                </p>
+                    {product.tagline}
+                  </p>
 
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-2xl">
-                  {product.intro}
-                  <Link href={`/food-ingredients/${product.slug}`} className="inline-flex items-center gap-1 text-[#1a6fa8] bg-[#eaf4fb] px-2 py-0.5 rounded-md ml-1.5 font-bold hover:bg-[#d5eaf7] hover:text-[#114b73] transition-colors whitespace-nowrap">
-                    Read more <span>&rarr;</span>
-                  </Link>
-                </p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-2xl">
+                    {product.intro}
+                    <Link href={`/food-ingredients/${product.slug}`} className="inline-flex items-center gap-1 text-[#1a6fa8] bg-[#eaf4fb] px-2 py-0.5 rounded-md ml-1.5 font-bold hover:bg-[#d5eaf7] hover:text-[#114b73] transition-colors whitespace-nowrap">
+                      Read more <span>&rarr;</span>
+                    </Link>
+                  </p>
 
-                {/* CTA */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2">
-                  <Link href={`/food-ingredients/${product.slug}`}>
-                    <button className="px-6 py-2.5 sm:px-8 sm:py-3 bg-[#1a6fa8] cursor-pointer hover:bg-[#155d8c] text-white text-sm sm:text-base font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-200 w-full sm:w-auto">
-                      View Details & Enquire
-                    </button>
-                  </Link>
+                  {/* CTA */}
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2">
+                    <Link href={`/food-ingredients/${product.slug}`}>
+                      <button className="px-6 py-2.5 sm:px-8 sm:py-3 bg-[#1a6fa8] cursor-pointer hover:bg-[#155d8c] text-white text-sm sm:text-base font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-200 w-full sm:w-auto">
+                        View Details & Enquire
+                      </button>
+                    </Link>
 
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-700 font-medium">
-                    {product.make && <span>Make: {product.make}</span>}
-                    {product.origin && <span>Origin: {product.origin}</span>}
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-700 font-medium">
+                      {product.make && <span>Make: {product.make}</span>}
+                      {product.origin && <span>Origin: {product.origin}</span>}
+                    </div>
                   </div>
                 </div>
               </div>
+
+
             </div>
-
-
-          </div>
           );
         })}
       </div>
