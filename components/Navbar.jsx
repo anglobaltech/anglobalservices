@@ -269,7 +269,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown, FileText, ChevronRight } from "lucide-react";
 
@@ -317,14 +317,25 @@ export default function Navbar() {
   const [activeMobile, setActiveMobile] = useState(null);
 
   useEffect(() => {
-    const handleOpen = () => {
+    const handleOpenServices = () => {
       if (window.innerWidth < 1024) {
         setMobileMenu(true);
         setActiveMobile("SERVICES");
       }
     };
-    window.addEventListener('open-services-dropdown', handleOpen);
-    return () => window.removeEventListener('open-services-dropdown', handleOpen);
+    const handleOpenFood = () => {
+      if (window.innerWidth < 1024) {
+        setMobileMenu(true);
+        setActiveMobile("FOOD INGREDIENTS");
+      }
+    };
+    window.addEventListener('open-services-dropdown', handleOpenServices);
+    window.addEventListener('open-food-dropdown', handleOpenFood);
+    
+    return () => {
+      window.removeEventListener('open-services-dropdown', handleOpenServices);
+      window.removeEventListener('open-food-dropdown', handleOpenFood);
+    };
   }, []);
 
   return (
@@ -457,6 +468,7 @@ export default function Navbar() {
 
 function DesktopDropdown({ title, menu, href, align = "left" }) {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     if (title === "SERVICES") {
@@ -464,10 +476,32 @@ function DesktopDropdown({ title, menu, href, align = "left" }) {
       window.addEventListener('open-services-dropdown', handleOpen);
       return () => window.removeEventListener('open-services-dropdown', handleOpen);
     }
+    if (title === "FOOD INGREDIENTS") {
+      const handleOpen = () => setIsOpen(true);
+      window.addEventListener('open-food-dropdown', handleOpen);
+      return () => window.removeEventListener('open-food-dropdown', handleOpen);
+    }
   }, [title]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    const timer = setTimeout(() => {
+      document.addEventListener('click', handleClickOutside);
+    }, 10);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <li 
+      ref={dropdownRef}
       className="relative group"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
