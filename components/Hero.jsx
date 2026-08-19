@@ -556,7 +556,7 @@ export default function Hero() {
                   <div className="w-full max-w-7xl mx-auto px-2 py-4 sm:py-1 md:px-4 md:py-2 xl:py-6 sm:px-6 lg:px-8">
                     <div className={slide.containerClass || "w-[55%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
                       <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[32px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-3 sm:mb-1 md:mb-2 lg:mb-4 xl:mb-6 drop-shadow-lg tracking-tight">
-                        <span className={`whitespace-normal ${slide.wrapHeading ? "" : "sm:whitespace-nowrap"}`}>{slide.headingMain}</span> <br className="hidden sm:block" />
+                        <span className={`whitespace-normal ${slide.wrapHeading ? "" : "sm:whitespace-nowrap"}`}>{slide.headingMain}</span> <br className="block" />
                         <span className="text-[#0075B6] drop-shadow-md bg-white/95 px-2 md:px-2 lg:px-3 xl:px-5 py-1 md:py-1 lg:py-1.5 xl:py-2 rounded md:rounded-lg inline-block mt-2 sm:mt-1 md:mt-1 lg:mt-2 xl:mt-4 text-[12px] sm:text-[10px] md:text-sm lg:text-[20px] xl:text-[32px] whitespace-normal sm:whitespace-nowrap">
                           {slide.headingSub}
                         </span>
