@@ -26,41 +26,41 @@ export default function FoodIngredientsPage() {
               {/* TEXT CONTENT LAYER */}
               <div className="col-start-1 row-start-1 relative z-10 w-full flex items-center">
                 <div className="w-full max-w-7xl mx-auto px-4 py-8 sm:py-1 md:px-4 md:py-1 xl:py-6 lg:px-8">
-                  <div className="w-full sm:w-[50%] md:w-[38%] lg:w-[35%] lg:-mt-8 xl:mt-0 xl:w-[40%] 2xl:w-[35%] xl:max-w-[650px] 2xl:max-w-[800px]">
-                    <h1 className="text-[26px] leading-tight sm:text-[14px] md:text-[18px] lg:text-[24px] xl:text-[42px] font-black text-[#0a192f] md:leading-tight mb-3 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-6 tracking-tight">
+                  <div className="w-full sm:w-[50%] md:w-[38%] lg:w-[35%] lg:-mt-8 xl:-mt-8 2xl:mt-0 xl:w-[40%] 2xl:w-[35%] xl:max-w-[650px] 2xl:max-w-[800px]">
+                    <h1 className="text-[26px] leading-tight sm:text-[14px] md:text-[18px] lg:text-[24px] xl:text-[36px] 2xl:text-[42px] font-black text-[#0a192f] md:leading-tight mb-3 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-4 2xl:mb-6 tracking-tight">
                       <span className="whitespace-normal sm:whitespace-nowrap">Bulk Food Ingredients &</span> <br className="hidden sm:block" />
-                      <span className="text-[#0075B6] drop-shadow-sm bg-white/95 px-2 md:px-2 xl:px-4 py-1 md:py-1 xl:py-2 rounded md:rounded-lg inline-block mt-2 sm:mt-0.5 md:mt-1 lg:mt-1 xl:mt-3 text-[14px] sm:text-[9px] md:text-[11px] lg:text-[16px] xl:text-[30px] whitespace-normal sm:whitespace-nowrap border border-[#0075B6]/10">
+                      <span className="text-[#0075B6] drop-shadow-sm bg-white/95 px-2 md:px-2 xl:px-3 2xl:px-4 py-1 md:py-1 xl:py-1.5 2xl:py-2 rounded md:rounded-lg inline-block mt-2 sm:mt-0.5 md:mt-1 lg:mt-1 xl:mt-2 2xl:mt-3 text-[14px] sm:text-[9px] md:text-[11px] lg:text-[16px] xl:text-[24px] 2xl:text-[30px] whitespace-normal sm:whitespace-nowrap border border-[#0075B6]/10">
                         Nutritional Solutions
                       </span>
                     </h1>
 
-                    <p className="text-[#112340] font-bold text-[13px] sm:text-[7.5px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-5 sm:mb-1.5 md:mb-3 lg:mb-3 xl:mb-10 leading-relaxed sm:leading-tight md:leading-snug lg:leading-relaxed bg-white/70 border border-white/50 p-3 sm:p-1.5 md:p-2 lg:p-2 xl:px-6 xl:py-5 rounded-xl md:rounded-lg backdrop-blur-md shadow-sm inline-block w-full">
+                    <p className="text-[#112340] font-bold text-[13px] sm:text-[7.5px] md:text-[10px] lg:text-[13px] xl:text-[15px] 2xl:text-[18px] mb-5 sm:mb-1.5 md:mb-3 lg:mb-3 xl:mb-6 2xl:mb-10 leading-relaxed sm:leading-tight md:leading-snug lg:leading-relaxed bg-white/70 border border-white/50 p-3 sm:p-1.5 md:p-2 lg:p-2 xl:px-4 xl:py-3 2xl:px-6 2xl:py-5 rounded-xl md:rounded-lg backdrop-blur-md shadow-sm inline-block w-full">
                       Supplying high-quality dairy proteins, food ingredients, and natural products for <span className="font-extrabold text-[#0075B6]">manufacturers, food processors, and nutrition brands</span>. Our solutions ensure consistent quality, reliable sourcing, and performance for large-scale applications.
                     </p>
 
-                    <div className="flex flex-row flex-nowrap items-center gap-2 sm:gap-1 md:gap-2 lg:gap-3 xl:gap-6 mb-4 sm:mb-1.5 md:mb-3 lg:mb-3 xl:mb-10 overflow-visible">
+                    <div className="flex flex-row flex-nowrap items-center gap-2 sm:gap-1 md:gap-2 lg:gap-3 xl:gap-4 2xl:gap-6 mb-4 sm:mb-1.5 md:mb-3 lg:mb-3 xl:mb-6 2xl:mb-10 overflow-visible">
                       <Link
                         href="/contact-us"
-                        className="bg-[#0a192f] hover:bg-[#112340] text-white px-4 py-2 sm:px-1 sm:py-0.5 md:px-3 md:py-1.5 lg:px-4 lg:py-2 xl:px-8 xl:py-4 rounded md:rounded-md font-bold transition-colors shadow-lg text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] whitespace-nowrap"
+                        className="bg-[#0a192f] hover:bg-[#112340] text-white px-4 py-2 sm:px-1 sm:py-0.5 md:px-3 md:py-1.5 lg:px-4 lg:py-2 xl:px-6 xl:py-3 2xl:px-8 2xl:py-4 rounded md:rounded-md font-bold transition-colors shadow-lg text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[16px] 2xl:text-[18px] whitespace-nowrap"
                       >
                         Contact Us
                       </Link>
                       <ExploreFoodDropdownButton
-                        className="bg-white text-[#0075B6] border-2 border-[#0075B6] hover:bg-[#0075B6] hover:text-white px-4 py-1.5 sm:px-1 sm:py-0 md:px-3 md:py-1 lg:px-4 lg:py-2 xl:px-8 xl:py-3.5 rounded md:rounded-md font-bold transition-all shadow-lg text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] cursor-pointer whitespace-nowrap"
+                        className="bg-white text-[#0075B6] border-2 border-[#0075B6] hover:bg-[#0075B6] hover:text-white px-4 py-1.5 sm:px-1 sm:py-0 md:px-3 md:py-1 lg:px-4 lg:py-2 xl:px-6 xl:py-2.5 2xl:px-8 2xl:py-3.5 rounded md:rounded-md font-bold transition-all shadow-lg text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[16px] 2xl:text-[18px] cursor-pointer whitespace-nowrap"
                       >
                         Explore Products
                       </ExploreFoodDropdownButton>
                     </div>
 
-                    <div className="flex flex-col gap-2 md:gap-1 lg:gap-2 xl:gap-4">
-                      <div className="flex flex-wrap gap-2 sm:gap-1 md:gap-2 lg:gap-2 xl:gap-5 text-[10px] sm:text-[7px] md:text-[8.5px] lg:text-[12px] xl:text-[16px] text-[#0a192f] font-extrabold">
-                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Food Grade Certified</span>
-                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Export Quality</span>
-                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Trusted Sourcing</span>
-                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[20px] leading-none mt-[-1px]">✔</span> Bulk Supply</span>
+                    <div className="flex flex-col gap-2 md:gap-1 lg:gap-2 xl:gap-3 2xl:gap-4">
+                      <div className="flex flex-wrap gap-2 sm:gap-1 md:gap-2 lg:gap-2 xl:gap-4 2xl:gap-5 text-[10px] sm:text-[7px] md:text-[8.5px] lg:text-[12px] xl:text-[14px] 2xl:text-[16px] text-[#0a192f] font-extrabold">
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] leading-none mt-[-1px]">✔</span> Food Grade Certified</span>
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] leading-none mt-[-1px]">✔</span> Export Quality</span>
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] leading-none mt-[-1px]">✔</span> Trusted Sourcing</span>
+                        <span className="flex items-center gap-0.5"><span className="text-[#0075B6] text-sm md:text-[10px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] leading-none mt-[-1px]">✔</span> Bulk Supply</span>
                       </div>
 
-                      <div className="inline-block self-start bg-green-100/90 border border-green-300 text-green-900 px-3 py-1.5 md:px-2 md:py-1 lg:px-3 lg:py-1.5 xl:px-5 xl:py-3 rounded-lg text-[10px] sm:text-[7px] md:text-[8.5px] lg:text-[11px] xl:text-[16px] font-extrabold backdrop-blur-md mt-1 sm:mt-0 lg:mt-1 xl:mt-4 shadow-sm">
+                      <div className="inline-block self-start bg-green-100/90 border border-green-300 text-green-900 px-3 py-1.5 md:px-2 md:py-1 lg:px-3 lg:py-1.5 xl:px-4 xl:py-2 2xl:px-5 2xl:py-3 rounded-lg text-[10px] sm:text-[7px] md:text-[8.5px] lg:text-[11px] xl:text-[14px] 2xl:text-[16px] font-extrabold backdrop-blur-md mt-1 sm:mt-0 lg:mt-1 xl:mt-2 2xl:mt-4 shadow-sm">
                         FSSAI License No • 12726999000019
                       </div>
                     </div>
