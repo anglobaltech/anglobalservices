@@ -287,13 +287,32 @@ export default function Editor() {
 
       const keywordArray = seoKeywords ? seoKeywords.split(',').map(k => k.trim()).filter(Boolean) : [];
 
+      // Smart Auto-Numbering for Benefit Cards
+      // Automatically add "1.", "2.", etc. to cards ONLY if they don't already start with a number.
+      const processedSections = sections.map((section) => {
+        if (section.type === "cards" && Array.isArray(section.cards)) {
+          return {
+            ...section,
+            cards: section.cards.map((card, idx) => {
+              // Regex matches any digit(s) followed by optional space and a period (e.g., "1.", "1. ", "01.")
+              const alreadyNumbered = /^\d+\s*\./.test(card.title.trim());
+              return {
+                ...card,
+                title: alreadyNumbered ? card.title : `${idx + 1}. ${card.title}`
+              };
+            })
+          };
+        }
+        return section;
+      });
+
       const productData = {
         title, slug,
         dataTableProductName,
         dataTableIsNumber,
         seo: { title: seoTitle, description: seoDescription, keywords: keywordArray, mainImageAlt },
         hero: { imageUrl: finalImageUrl, description: heroParagraphs.filter((p) => p.trim() !== "") },
-        sections,
+        sections: processedSections,
         updatedAt: serverTimestamp(),
       };
 
