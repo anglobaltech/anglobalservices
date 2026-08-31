@@ -6,7 +6,7 @@ import { X, CheckCircle2, Loader2, User, Mail, Smartphone, MessageSquare, Briefc
 import { doc, runTransaction, serverTimestamp } from "firebase/firestore";
 import { db } from "@/src/lib/firebase";
 
-export default function BulkPricingModal({ isOpen, onClose, productName }) {
+export default function BulkPricingModal({ isOpen, onClose, productName, category = "Food Ingredients" }) {
   const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function BulkPricingModal({ isOpen, onClose, productName }) {
       let newDocId = "";
       const fullName = `${formData.firstName} ${formData.lastName}`.trim();
 
-      const formattedService = `Food Ingredients - ${productName} (${formData.quantity})`;
+      const formattedService = `${category} - ${productName} (${formData.quantity})`;
 
       await runTransaction(db, async (transaction) => {
         const snap = await transaction.get(counterRef);
@@ -81,7 +81,7 @@ export default function BulkPricingModal({ isOpen, onClose, productName }) {
           projectDetails: formData.message,
           createdAt: serverTimestamp(),
           status: "new",
-          source: "Food Ingredients Quote",
+          source: `${category} Quote`,
         });
       });
 
@@ -97,7 +97,7 @@ export default function BulkPricingModal({ isOpen, onClose, productName }) {
           phone: formData.phone,
           service: formattedService,
           comment: formData.message,
-          source: "Food Ingredients Quote",
+          source: `${category} Quote`,
         }),
       });
 

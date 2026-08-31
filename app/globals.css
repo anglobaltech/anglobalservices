@@ -20,13 +20,14 @@
 }
 
 body {
-  
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   scrollbar-width: none;
 }
@@ -40,6 +41,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -51,6 +53,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -62,6 +65,7 @@ body {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
   }
+
   to {
     stroke-dasharray: 300;
     stroke-dashoffset: 0;
@@ -72,6 +76,7 @@ body {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
@@ -89,6 +94,7 @@ body {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -103,13 +109,16 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .label {
   @apply block text-gray-700 font-semibold mb-1;
 }
+
 .input {
   @apply w-full px-3 py-1.5 border border-gray-300 rounded-md focus:outline-none focus:ring;
 }
@@ -119,6 +128,7 @@ body {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -156,12 +166,13 @@ body.ads-page .layout-item {
 
 /* Style the actual scrolling thumb */
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.4); /* Light gray with transparency */
+  background: rgba(156, 163, 175, 0.4);
+  /* Light gray with transparency */
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 /* Make it darker only when the user hovers over it */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(107, 114, 128, 0.8); 
+  background: rgba(107, 114, 128, 0.8);
 }
