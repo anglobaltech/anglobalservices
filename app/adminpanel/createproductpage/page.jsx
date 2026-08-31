@@ -173,7 +173,7 @@ export default function Editor() {
       newSection.rows = [
         { sno: "1", particular: "Application Fee", amount: "₹1,000", remarks: "Payable to BIS" },
         { sno: "2", particular: "Inspection / Audit Fee", amount: "₹7,000", remarks: "Payable to BIS" },
-        { sno: "3", particular: "Product Testing Fee", amount: "As applicable", remarks: "Depends on laboratory testing scope for chemical and physical parameters" },
+        { sno: "3", particular: "Product Testing Fee", amount: "As applicable", remarks: "" },
         { sno: "4", particular: "Marking Fee", amount: "As per actual", remarks: "Based on BIS fee structure" }
       ]; 
     }
