@@ -312,6 +312,16 @@ const foodMenu = [
   }
 ];
 
+const importExportMenu = [
+  {
+    items: [
+      { name: "Sanitary Napkins", slug: "import-export/sanitary-napkins", root: true },
+      { name: "Baby Diaper", slug: "import-export/baby-diaper", root: true },
+      { name: "Adult Diaper", slug: "import-export/adult-diaper", root: true }
+    ]
+  }
+];
+
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [activeMobile, setActiveMobile] = useState(null);
@@ -341,21 +351,22 @@ export default function Navbar() {
   return (
     <nav className="bg-[#0075B6] relative z-50 w-full">
       {/* Container constraints matching your primary layout rules */}
-      <div className="max-w-[1450px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1450px] mx-auto px-2 sm:px-4 lg:px-2 xl:px-6">
         <div className="flex items-center justify-between py-3">
           
           {/* CHANGED: Switched to justify-between to anchor HOME on the far-left and STUDENT PANEL on the far-right symmetrically */}
-          <ul className="hidden lg:flex items-center justify-between text-white text-[10px] xl:text-sm font-semibold w-full">
+          <ul className="hidden lg:flex items-center justify-between text-white text-[9px] xl:text-[12px] 2xl:text-sm font-semibold w-full">
             <NavLink href="/" label="HOME" />
             <NavLink href="/aboutus" label="ABOUT US" />
 
             <DesktopDropdown title="SERVICES" menu={servicesMenu} />
+            <DesktopDropdown title="IMPORTED PRODUCTS" menu={importExportMenu} />
             <DesktopDropdown
               title="TESTINGS"
               menu={testingMenu}
             />
             <DesktopDropdown
-              title="EQUIPMENTS & PRODUCTS"
+              title="EQUIPMENTS & MACHINERY"
               menu={equipmentMenu}
             />
             <DesktopDropdown title="UPDATES" menu={updatesMenu} />
@@ -410,6 +421,14 @@ export default function Navbar() {
               />
 
               <MobileAccordion
+                title="IMPORTED PRODUCTS"
+                menu={importExportMenu}
+                active={activeMobile}
+                setActive={setActiveMobile}
+                close={setMobileMenu}
+              />
+
+              <MobileAccordion
                 title="TESTINGS"
                 menu={testingMenu}
                 active={activeMobile}
@@ -418,7 +437,7 @@ export default function Navbar() {
               />
 
               <MobileAccordion
-                title="EQUIPMENTS & PRODUCTS"
+                title="EQUIPMENTS & MACHINERY"
                 menu={equipmentMenu}
                 active={activeMobile}
                 setActive={setActiveMobile}

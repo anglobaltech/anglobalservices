@@ -158,6 +158,18 @@ export default async function ProductPage({ params }) {
                     {product.description}
                   </p>
 
+                  {product.secondaryImage && (
+                    <div className="w-full mb-10 rounded-3xl overflow-hidden shadow-xl border border-gray-100/50 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center p-6 group">
+                      <Image 
+                        src={product.secondaryImage}
+                        alt={`${product.name} overview image`}
+                        width={800}
+                        height={500}
+                        className="w-full max-h-[450px] object-contain group-hover:scale-[1.02] transition-transform duration-700 drop-shadow-md"
+                      />
+                    </div>
+                  )}
+
                   {product.highlights && product.highlights.length > 0 && (
                     <div className="mb-10">
                       <h3 className="text-xl font-bold text-[#0a192f] mb-6 flex items-center gap-3">
@@ -320,16 +332,16 @@ export default async function ProductPage({ params }) {
 
                     <BusinessHours />
 
-                    <a href="https://maps.google.com/?q=UNIT+NO.+S-63,+8th+FLOOR,+URBTECH+NPX,+PLOT+NO.+C-1,+SECTOR+153,+Gautam+Budh+Nagar,+Uttar+Pradesh,+201310" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group/link">
+                    <a href="https://maps.google.com/?q=S-63,+7th+Floor,+Urbtech+NPX,+Noida,+Sector-153,+Uttar+Pradesh,+INDIA,+201310" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group/link">
                       <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#0075B6] group-hover/link:bg-[#0075B6] group-hover/link:text-white transition-colors shadow-sm shrink-0">
                         <MapPin size={20} />
                       </div>
                       <div>
                         <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Address</p>
                         <span className="text-gray-900 font-extrabold group-hover/link:text-[#0075B6] transition-colors text-sm sm:text-base block leading-snug break-words">
-                          UNIT NO. S-63, 8th FLOOR, URBTECH NPX,<br />
-                          PLOT NO. C-1, SECTOR 153,<br />
-                          Gautam Budh Nagar, UP 201310
+                          S-63, 7th Floor, Urbtech NPX,<br />
+                          Noida, Sector-153, Uttar Pradesh<br />
+                          INDIA, Pin - 201310
                         </span>
                       </div>
                     </a>

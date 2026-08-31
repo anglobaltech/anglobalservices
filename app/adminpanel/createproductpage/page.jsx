@@ -166,7 +166,17 @@ export default function Editor() {
       newSection.qas = [{ q: "", a: "" }];
       newSection.outros = [];
     }
-    if (type === "table") { newSection.intro = ""; newSection.note = ""; newSection.rows = [{ sno: "1", particular: "", amount: "", remarks: "" }]; }
+    if (type === "table") { 
+      newSection.heading = "";
+      newSection.intro = ""; 
+      newSection.note = ""; 
+      newSection.rows = [
+        { sno: "1", particular: "Application Fee", amount: "₹1,000", remarks: "Payable to BIS" },
+        { sno: "2", particular: "Inspection / Audit Fee", amount: "₹7,000", remarks: "Payable to BIS" },
+        { sno: "3", particular: "Product Testing Fee", amount: "As applicable", remarks: "Depends on laboratory testing scope for chemical and physical parameters" },
+        { sno: "4", particular: "Marking Fee", amount: "As per actual", remarks: "Based on BIS fee structure" }
+      ]; 
+    }
     if (type === "points_list") { newSection.points = [""]; }
 
     setSections([...sections, newSection]);

@@ -97,6 +97,10 @@ export default function CreateBlog() {
   // Dynamic Content Blocks
   const [sections, setSections] = useState([]);
 
+  // Bulk Import States for FAQ
+  const [openFaqBulkImportIdx, setOpenFaqBulkImportIdx] = useState(null);
+  const [openFaqSingleImportIdx, setOpenFaqSingleImportIdx] = useState(null);
+
   useEffect(() => {
     if (editingId) {
       const fetchBlog = async () => {
@@ -622,17 +626,142 @@ export default function CreateBlog() {
 
                 {/* FAQ BLOCK */}
                 {section.type === "faq" && (
-                  <div className="space-y-4">
-                    {section.qas?.map((qa, qIdx) => (
-                      <div key={qIdx} className="flex flex-col sm:flex-row items-start gap-3 p-4 bg-white/60 rounded-2xl border border-gray-100 shadow-sm border-l-4 border-l-[#0072b1]">
-                        <div className="flex-1 w-full space-y-3">
-                          <input type="text" value={qa.q} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "q", e.target.value)} placeholder="Question" className="w-full border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" />
-                          <textarea value={qa.a} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "a", e.target.value)} placeholder="Answer (Supports **bold** and [links](url))" className="w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                  <div className="space-y-6">
+                    <div className="bg-white/50 p-4 rounded-xl border border-gray-200/50 space-y-3">
+                      <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Intro Paragraphs (Above FAQs)</label>
+                      {section.intros?.map((intro, iIdx) => (
+                        <div key={`intro-${iIdx}`} className="flex items-start gap-3">
+                          <textarea value={intro} onChange={(e) => updateNestedArray(sIdx, "intros", iIdx, null, e.target.value)} placeholder="Intro paragraph before questions" className="flex-1 w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                          <button type="button" onClick={() => removeNestedItem(sIdx, "intros", iIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
                         </div>
-                        <button type="button" onClick={() => removeNestedItem(sIdx, "qas", qIdx)} className="self-end sm:self-start shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
+                      ))}
+                      <button type="button" onClick={() => addNestedItem(sIdx, "intros", "")} className="cursor-pointer text-xs font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="leading-none">+</span> Add Intro Paragraph</button>
+                    </div>
+
+                    <div className="pl-4 border-l-4 border-[#0072b1]">
+                      {section.qas?.map((qa, qIdx) => (
+                        <div key={qIdx} className="flex flex-col sm:flex-row items-start gap-3 p-4 bg-white/60 rounded-2xl border border-gray-100 shadow-sm mb-4 relative group">
+                          <div className="flex-1 w-full space-y-3">
+                            <input type="text" value={qa.q} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "q", e.target.value)} placeholder="Question (Paste here to auto-fill answer!)" onPaste={(e) => {
+                              const pastedData = e.clipboardData.getData('text');
+                              if (pastedData && pastedData.includes('\n')) {
+                                const lines = pastedData.trim().split('\n').map(l => l.trim()).filter(Boolean);
+                                if (lines.length > 1) {
+                                  e.preventDefault();
+                                  updateNestedArray(sIdx, "qas", qIdx, "q", lines[0]);
+                                  updateNestedArray(sIdx, "qas", qIdx, "a", lines.slice(1).join('\n'));
+                                }
+                              }
+                            }} className="w-full border border-gray-200/80 rounded-xl p-3 font-extrabold text-sm bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" />
+                            <textarea value={qa.a} onChange={(e) => updateNestedArray(sIdx, "qas", qIdx, "a", e.target.value)} placeholder="Answer (Use **bold** and [link](url))" className="w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="3"></textarea>
+                          </div>
+                          <button type="button" onClick={() => removeNestedItem(sIdx, "qas", qIdx)} className="absolute top-2 right-2 sm:relative sm:top-0 sm:right-0 shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm opacity-100 sm:opacity-0 sm:group-hover:opacity-100">&times;</button>
+                        </div>
+                      ))}
+
+                      <div className="flex items-center gap-6 mt-2">
+                        <button type="button" onClick={() => addNestedItem(sIdx, "qas", { q: "", a: "" })} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Empty Q&A</button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setOpenFaqSingleImportIdx(openFaqSingleImportIdx === sIdx ? null : sIdx);
+                            setOpenFaqBulkImportIdx(null);
+                          }}
+                          className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"
+                        >
+                          <span className="text-lg leading-none">+</span> Add One FAQ (Paste)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setOpenFaqBulkImportIdx(openFaqBulkImportIdx === sIdx ? null : sIdx);
+                            setOpenFaqSingleImportIdx(null);
+                          }}
+                          className="cursor-pointer text-sm font-bold text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1"
+                        >
+                          ⚡ Bulk Import FAQs
+                        </button>
                       </div>
-                    ))}
-                    <button type="button" onClick={() => addNestedItem(sIdx, "qas", {q:"", a:""})} className="cursor-pointer text-sm font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="text-lg leading-none">+</span> Add Q&A</button>
+
+                      {openFaqSingleImportIdx === sIdx && (
+                        <div className="bg-gray-50/80 p-5 rounded-2xl border border-gray-100 mt-4 shadow-inner">
+                          <label className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2">+ Paste Single FAQ (Question on line 1, Answer below)</label>
+                          <textarea
+                            rows="3"
+                            placeholder="Example:&#10;What is this product?&#10;This product is exactly what you need for your project."
+                            className="w-full border border-gray-200 bg-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm font-medium"
+                            id={`single-faq-import-${sIdx}`}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const textareaEl = document.getElementById(`single-faq-import-${sIdx}`);
+                              if (textareaEl && textareaEl.value.trim()) {
+                                const lines = textareaEl.value.trim().split('\n').map(l => l.trim()).filter(Boolean);
+                                if (lines.length > 0) {
+                                  const newQa = { q: lines[0], a: lines.slice(1).join('\n') };
+                                  const updatedSecs = [...sections];
+                                  updatedSecs[sIdx].qas.push(newQa);
+                                  setSections(updatedSecs);
+                                  textareaEl.value = "";
+                                  setOpenFaqSingleImportIdx(null);
+                                }
+                              }
+                            }}
+                            className="mt-3 text-xs font-bold bg-[#0072b1] hover:bg-[#005f96] text-white px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
+                          >
+                            Process & Append FAQ
+                          </button>
+                        </div>
+                      )}
+
+                      {openFaqBulkImportIdx === sIdx && (
+                        <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100 mt-4 shadow-inner">
+                          <label className="block text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">⚡ Bulk Paste: Add Multiple FAQs at Once</label>
+                          <textarea
+                            rows="6"
+                            placeholder="Paste your content here. Hit Enter twice (leave an empty line) to separate FAQs...&#10;&#10;1. First Question?&#10;First answer here...&#10;&#10;2. Second Question?&#10;Second answer here..."
+                            className="w-full border border-blue-200 bg-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-blue-300 focus:border-blue-400 text-gray-900 shadow-sm font-medium"
+                            id={`bulk-faq-import-${sIdx}`}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const textareaEl = document.getElementById(`bulk-faq-import-${sIdx}`);
+                              if (textareaEl && textareaEl.value.trim()) {
+                                const blocks = textareaEl.value.split(/\n\s*\n/).filter(b => b.trim());
+                                const newQas = blocks.map(block => {
+                                  const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+                                  return { q: lines[0] || "", a: lines.slice(1).join('\n') || "" };
+                                }).filter(c => c.q || c.a);
+
+                                if (newQas.length > 0) {
+                                  const updatedSecs = [...sections];
+                                  updatedSecs[sIdx].qas = [...updatedSecs[sIdx].qas, ...newQas];
+                                  setSections(updatedSecs);
+                                  textareaEl.value = "";
+                                  setOpenFaqBulkImportIdx(null);
+                                }
+                              }
+                            }}
+                            className="mt-3 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
+                          >
+                            Process & Append FAQs
+                          </button>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="bg-white/50 p-4 rounded-xl border border-gray-200/50 space-y-3">
+                      <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Outro Paragraphs (Below FAQs)</label>
+                      {section.outros?.map((outro, oIdx) => (
+                        <div key={`outro-${oIdx}`} className="flex items-start gap-3">
+                          <textarea value={outro} onChange={(e) => updateNestedArray(sIdx, "outros", oIdx, null, e.target.value)} placeholder="Outro paragraph after questions" className="flex-1 w-full border border-gray-200/80 rounded-xl p-3 text-sm font-medium bg-white focus:ring-2 focus:ring-[#0072b1]/20 focus:border-[#0072b1] text-gray-900 shadow-sm" rows="2"></textarea>
+                          <button type="button" onClick={() => removeNestedItem(sIdx, "outros", oIdx)} className="shrink-0 cursor-pointer text-gray-400 hover:text-red-500 bg-white hover:bg-red-50 border border-gray-200/80 hover:border-red-200 h-10 w-10 mt-1 rounded-xl flex items-center justify-center font-bold transition-colors shadow-sm">&times;</button>
+                        </div>
+                      ))}
+                      <button type="button" onClick={() => addNestedItem(sIdx, "outros", "")} className="cursor-pointer text-xs font-bold text-[#0072b1] hover:text-[#005f96] transition-colors flex items-center gap-1"><span className="leading-none">+</span> Add Outro Paragraph</button>
+                    </div>
                   </div>
                 )}
 
