@@ -698,6 +698,7 @@ export const foodIngredients = [
     "badge": "Imported",
     "badgeColor": "bg-blue-100 text-blue-800",
     "image": "/food-items/sunpro-whey-protein-concentrate-wpc-80.webp",
+    "secondaryImage": "/food-items/saputo-whey-protein.webp",
     "tagline": "Premium Australian Whey Protein.",
     "intro": "Sunpro Instant Protein Concentrate WPC 80 by Saputo Dairy Australia is a premium dairy protein imported from Australia, available for immediate supply.",
     "description": "This WPC 80 Instantized protein is manufactured by Saputo Dairy Australia. It delivers consistent batch quality and meets global microbiological and compositional standards for industrial and nutritional applications. Previous batch COA is available for quality reference. The latest batch COA, batch details, and packing photos will be shared before dispatch.\n\nSourced directly from the lush, pasture-based dairy farms of Australia, Sunpro WPC 80 is a highly sought-after functional protein ingredient for the global sports nutrition and FMCG sectors. As consumer demand for clean-label, grass-fed dairy protein continues to skyrocket, formulating your products with Australian-imported Sunpro guarantees a massive competitive edge. Recognized for its exceptionally rich flavor profile, superior amino acid retention, and brilliant cold-water dispersibility, it serves as the ultimate bioavailable raw material for commercial mass gainers, premium protein powders, and fortified clinical nutrition blends.",

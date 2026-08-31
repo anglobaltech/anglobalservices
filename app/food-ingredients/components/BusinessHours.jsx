@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Clock } from "lucide-react";
 
-export default function BusinessHours() {
+export default function BusinessHours({ theme = "blue" }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -35,9 +35,11 @@ export default function BusinessHours() {
     return () => clearInterval(interval);
   }, []);
 
+  const isPink = theme === "pink";
+
   return (
     <div className="flex items-start gap-4 group/link">
-      <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#0075B6] group-hover/link:bg-[#0075B6] group-hover/link:text-white transition-colors shadow-sm shrink-0">
+      <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-sm shrink-0 ${isPink ? "bg-pink-50 text-pink-600 group-hover/link:bg-pink-600 group-hover/link:text-white" : "bg-blue-50 text-[#0075B6] group-hover/link:bg-[#0075B6] group-hover/link:text-white"}`}>
         <Clock size={20} />
       </div>
       <div>
@@ -47,8 +49,8 @@ export default function BusinessHours() {
           </p>
           <span className={`w-2.5 h-2.5 rounded-full ${isOpen ? "bg-green-500" : "bg-red-500"}`}></span>
         </div>
-        <span className="text-gray-900 font-extrabold group-hover/link:text-[#0075B6] transition-colors text-sm sm:text-base block">Mon-Sat: 09:30 AM - 06:30 PM</span>
-        <span className="text-gray-900 font-extrabold group-hover/link:text-[#0075B6] transition-colors text-sm sm:text-base block">Sun: Closed</span>
+        <span className={`text-gray-900 font-extrabold transition-colors text-sm sm:text-base block ${isPink ? "group-hover/link:text-pink-600" : "group-hover/link:text-[#0075B6]"}`}>Mon-Sat: 09:30 AM - 06:30 PM</span>
+        <span className={`text-gray-900 font-extrabold transition-colors text-sm sm:text-base block ${isPink ? "group-hover/link:text-pink-600" : "group-hover/link:text-[#0075B6]"}`}>Sun: Closed</span>
       </div>
     </div>
   );
