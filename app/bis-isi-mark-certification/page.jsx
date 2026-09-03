@@ -194,20 +194,20 @@ export default function ISIPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div className="md:col-span-1">
+      <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 xl:grid-cols-2 gap-10">
+        <div className="xl:col-span-1">
           <div className="rounded-xl overflow-hidden shadow-md">
             <Image
-              src="/service/isi/isi-certificate.png"
+              src="/service/isi/isi-certificate-2.webp"
               alt="ISI Mark Certificate in India"
-              width={500}
-              height={500}
-              className="w-full h-auto"
+              width={800}
+              height={800}
+              className="w-full h-auto object-contain"
             />
           </div>
         </div>
 
-        <div className="md:col-span-2">
+        <div className="xl:col-span-1">
           <h2 className="text-2xl font-bold mb-4 border-b uppercase">
             What is BIS ISI Certificate in India?
           </h2>
@@ -234,10 +234,7 @@ export default function ISIPage() {
             </p>
 
             <p>
-              AN Global Services is an established ISI Certificate service
-              provider for both Indian and international manufacturers. We
-              assist in managing the complete process required to obtain ISI
-              Certificate for mandatory as well as optional products.
+              AN Global Services is an established ISI Certificate service provider for both Indian and international manufacturers. We assist in managing the complete process required to obtain ISI Certificate for mandatory as well as optional products.
             </p>
           </div>
         </div>

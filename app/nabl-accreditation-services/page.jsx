@@ -69,16 +69,16 @@ export default function NABLAccreditationPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
           {/* Left Image + CTA */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 xl:col-span-1">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/nabl/nabl-2.png"
+                src="/service/nabl/nabl-3.webp"
                 alt="NABL Accreditation Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
@@ -95,7 +95,7 @@ export default function NABLAccreditationPage() {
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 xl:col-span-1">
             <div className="space-y-1">
               <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
               <div className="w-full h-0.5 bg-gray-200 relative mb-3">
