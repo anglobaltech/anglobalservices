@@ -30,21 +30,21 @@ export default function BEERegistrationPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col gap-6 xl:col-span-1">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/bee-registration-services.jpg"
+                src="/service/bee-registration-services-2.webp"
                 alt="BEE Registration Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-8 ">
+          <div className="flex flex-col gap-8 xl:col-span-1">
             <div>
               <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
               <div className="w-full h-0.5 bg-gray-200 relative mb-6">
@@ -70,41 +70,31 @@ export default function BEERegistrationPage() {
                 delivery mechanisms and give energy efficiency leadership in all
                 sectors of the country.
               </p>
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify pb-5">
                 The manufacturer is required to apply for Bureau of Energy
                 Efficiency Registration in India as well as complete the product
                 testing & documentation required by the BEE to get the item
                 qualified with Star Rating (a higher BEE Star Rating means
                 higher energy saving). Role of BEE and Star Labelling Scheme
               </p>
+              <p className="text-gray-500 text-[15px] leading-6 text-justify pb-5">
+                The Bureau of Energy Efficiency works with specified customers,
+                agencies, and other businesses to carry out the assignment assigned
+                to it under the Energy Conservation Act, as well as identify and
+                utilize existing resources and infrastructure. This Act has both
+                legislative and promotional provisions. The Hon'ble Minister of
+                Power launched a star marking scheme in May 2006 in order to make
+                electrical appliances more energy-efficient.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-6 space-y-10">
-        <div>
-          {/* <h2 className="text-xl md:text-xl font-semibold text-gray-900 ">
-            Is It Compulsory to Obtain BIS Certification For Solar Panels?
-          </h2> */}
-          {/* <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-            <span className="absolute left-0 top-0 h-0.5 w-150 bg-[#0072b1]"></span>
-          </div> */}
-
-          <p className="text-gray-500 text-[15px] leading-7 text-justify pb-3">
-            The Bureau of Energy Efficiency works with specified customers,
-            agencies, and other businesses to carry out the assignment assigned
-            to it under the Energy Conservation Act, as well as identify and
-            utilize existing resources and infrastructure. This Act has both
-            legislative and promotional provisions. The Hon'ble Minister of
-            Power launched a star marking scheme in May 2006 in order to make
-            electrical appliances more energy-efficient. A total of 29 products
-            are safeguarded by this initiative in the province, of which ten are
-            covered by the mandatory framework & 19 by the voluntary scheme.
-            Under the Star Labelling Scheme of the BEE, only the importer,
-            trader, or manufacturer can apply for the license.
-          </p>
-        </div>
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-4 pb-10">
+        <p className="text-gray-500 text-[15px] leading-7 text-justify">
+          A total of 29 products are safeguarded by this initiative in the province, of which ten are covered by the mandatory framework & 19 by the voluntary scheme. Under the Star Labelling Scheme of the BEE, only the importer, trader, or manufacturer can apply for the license.
+        </p>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-10">
