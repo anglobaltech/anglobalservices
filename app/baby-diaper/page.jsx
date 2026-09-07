@@ -6,25 +6,25 @@ import BusinessHours from "@/app/food-ingredients/components/BusinessHours";
 import { CheckCircle2, ShieldCheck, Activity, Zap, Factory, MessageCircle, ChevronRight, Droplets, Leaf, Phone, Mail, MapPin, Truck, Globe } from "lucide-react";
 
 export const metadata = {
-  title: "Imported Baby Diapers | Bulk Supplier India | Premium Quality",
-  description: "Looking for premium baby diapers? We import ultra-absorbent, rash-free baby diapers from Nepal and supply in bulk all over India. Request wholesale pricing today.",
-  keywords: "Baby diapers bulk supplier, imported baby diapers India, Nepal imported baby diapers, wholesale baby hygiene, rash free diapers, ultra absorbent diapers wholesale",
+  title: "genuine baby Diapers | Bulk Supplier India | Premium Quality",
+  description: "Looking for premium baby diapers? We import ultra-absorbent, rash-free baby diapers from trusted manufacturers and supply in bulk all over India. Request wholesale pricing today.",
+  keywords: "Baby diapers bulk supplier, genuine baby diapers India, Genuine premium baby diapers, wholesale baby hygiene, rash free diapers, ultra absorbent diapers wholesale",
 };
 
 export default function BabyDiapersPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "Premium Imported Baby Diapers",
+    name: "Premium genuine baby Diapers",
     image: "https://www.anglobalservices.com/logo.png",
-    description: "Premium ultra-absorbent, rash-free baby diapers imported from Nepal. Available for bulk supply across India.",
+    description: "Premium ultra-absorbent, rash-free baby diapers Sourced from Trusted ISI Manufacturers. Available for bulk supply across India.",
     brand: {
       "@type": "Brand",
-      name: "Imported from Nepal",
+      name: "Sourced from Trusted ISI Manufacturers",
     },
     offers: {
       "@type": "Offer",
-      url: "https://www.anglobalservices.com/import-export/baby-diaper",
+      url: "https://www.anglobalservices.com/baby-diaper",
       priceCurrency: "INR",
       price: "0",
       availability: "https://schema.org/InStock",
@@ -37,8 +37,8 @@ export default function BabyDiapersPage() {
 
   const faqs = [
     {
-      question: "Are these premium imported baby diapers manufactured in Nepal?",
-      answer: "Yes, our baby diapers are manufactured in cutting-edge facilities in Nepal using automated Japanese machinery. We act as the exclusive bulk importer and wholesale distributor across India."
+      question: "Are these premium genuine baby diapers manufactured of trusted manufacturers?",
+      answer: "Yes, our baby diapers are manufactured in cutting-edge facilities of trusted manufacturers using automated Japanese machinery. We act as the exclusive bulk importer and wholesale distributor across India."
     },
     {
       question: "What makes your wholesale baby diapers safe and rash-free?",
@@ -46,7 +46,7 @@ export default function BabyDiapersPage() {
     },
     {
       question: "Can I order baby diapers in bulk for my pharmacy or retail distribution network?",
-      answer: "Absolutely. We specialize in B2B bulk supply of imported baby diapers. We cater to the large-scale requirements of supermarket chains, pharmacies, and institutional wholesale buyers all over India with unbeatable pricing."
+      answer: "Absolutely. We specialize in B2B bulk supply of genuine baby diapers. We cater to the large-scale requirements of supermarket chains, pharmacies, and institutional wholesale buyers all over India with unbeatable pricing."
     },
     {
       question: "Do these baby diapers provide overnight leak-proof protection?",
@@ -54,13 +54,13 @@ export default function BabyDiapersPage() {
     },
     {
       question: "Do you offer private label (OEM) services for baby diapers?",
-      answer: "Yes, in addition to bulk wholesale supply, we offer private label (OEM) manufacturing. You can launch your own brand of premium imported baby diapers leveraging our world-class manufacturing partners in Nepal and our seamless Pan-India logistics."
+      answer: "Yes, in addition to bulk wholesale supply, we offer private label (OEM) manufacturing. You can launch your own brand of premium genuine baby diapers leveraging our world-class manufacturing partners of trusted manufacturers and our seamless Pan-India logistics."
     }
   ];
 
   const specs = [
     { label: "Product Type", value: "Premium Pant-style & Tape-style Baby Diapers" },
-    { label: "Origin", value: "Imported (Nepal)" },
+    { label: "Origin", value: "Trusted Global Sourcing" },
     { label: "Top Sheet Material", value: "Hypoallergenic Soft Cotton-feel Non-woven" },
     { label: "Absorbent Core", value: "High-grade SAP (Super Absorbent Polymer) + Fluff Pulp" },
     { label: "Backsheet", value: "Breathable Cloth-like Film with Wetness Indicator" },
@@ -83,50 +83,66 @@ export default function BabyDiapersPage() {
       <div className="min-h-screen bg-gray-50 flex flex-col">
         
         {/* HERO BANNER (Full Width, Left Aligned, Beautiful Background) */}
-        <section className="relative w-full bg-[#0a192f] min-h-[75vh] py-12 md:py-16 overflow-hidden flex flex-col justify-center text-left">
-          {/* Beautiful overlay & pattern */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0a192f] via-[#112240] to-blue-900/40 opacity-90" />
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
-            {/* Glowing orbs for aesthetics */}
-            <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-500/20 blur-[120px]" />
-            <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-cyan-500/20 blur-[100px]" />
-          </div>
+        <section className="relative w-full bg-[#051c35] overflow-hidden">
+        <div className="grid grid-cols-1 grid-rows-1 w-full max-w-[2000px] mx-auto min-h-[550px] sm:min-h-[400px] md:min-h-[450px] lg:min-h-[500px] xl:h-[calc(100vh-170px)] xl:min-h-[600px] 2xl:min-h-[700px]">
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start w-full">
-            <LazySection className="flex flex-col items-start w-full md:w-2/3 lg:w-1/2">
-              <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 text-sm font-bold tracking-widest uppercase mb-6 sm:mb-8 shadow-2xl">
-                ★ Imported from Nepal
-              </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-8 drop-shadow-2xl">
-                Premium Baby Diapers
-              </h1>
-              <p className="text-blue-300 text-2xl md:text-3xl font-semibold mb-8">
-                Bulk Wholesale Supply Across India
-              </p>
-              <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl">
-                Experience the ultimate standard in baby care. We are the leading distributors of ultra-absorbent, highly comfortable, and 100% rash-free baby diapers imported directly from state-of-the-art manufacturing facilities in Nepal.
-              </p>
-
-              <div className="flex flex-wrap justify-start gap-6 mb-12">
-                <div className="flex items-center gap-2 text-gray-200 bg-white/5 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                  <CheckCircle2 className="text-blue-400" size={20} />
-                  <span className="font-medium">Ultra-Absorbent</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-200 bg-white/5 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                  <CheckCircle2 className="text-blue-400" size={20} />
-                  <span className="font-medium">Rash-Free</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-200 bg-white/5 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                  <CheckCircle2 className="text-blue-400" size={20} />
-                  <span className="font-medium">Bulk Supply</span>
-                </div>
-              </div>
-
-              <RequestPricingButton productName="Baby Diapers (Imported)" category="Imported Products" theme="blue" />
-            </LazySection>
+          {/* IMAGE LAYER */}
+          <div className="col-start-1 row-start-1 w-full h-full relative flex items-start bg-[#051c35]">
+            <img 
+              src="/service/trading-products/dash-image-for-trading-products-baby-diapers.png"
+              alt="Premium Baby Diapers"
+              className="w-full h-full object-cover object-left sm:object-right-bottom block"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#051c35]/95 via-[#051c35]/60 to-transparent lg:via-[#051c35]/30"></div>
           </div>
-        </section>
+
+          {/* TEXT CONTENT LAYER */}
+          <div className="col-start-1 row-start-1 relative z-10 w-full h-full flex items-center">
+            <div className="w-full max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-6 lg:py-10 xl:py-12 2xl:py-16">
+              <div className="w-full sm:w-[45%] md:w-[45%] lg:w-[42%] xl:w-[48%] 2xl:w-[45%]">
+                <LazySection className="flex flex-col items-start w-full">
+                  
+                  <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 px-3 py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-1.5 xl:px-6 xl:py-2.5 2xl:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 text-[10px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-xs 2xl:text-sm font-bold tracking-widest uppercase mb-4 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-6 shadow-2xl">
+                    ★ Sourced from Trusted ISI Manufacturers
+                  </div>
+                  
+                  <h1 className="text-3xl sm:text-[22px] md:text-3xl lg:text-[28px] xl:text-[3.5rem] 2xl:text-6xl font-extrabold text-white leading-tight mb-2 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-5 drop-shadow-lg tracking-tight">
+                    Premium Baby Diapers
+                  </h1>
+                  
+                  <p className="text-blue-300 text-sm sm:text-[11px] md:text-sm lg:text-[13px] xl:text-xl 2xl:text-2xl font-semibold mb-4 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-8">
+                    Bulk Wholesale Supply Across India
+                  </p>
+                  
+                  <p className="text-gray-100 text-xs sm:text-[9px] md:text-[10px] lg:text-[11px] xl:text-base 2xl:text-lg font-medium leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md bg-black/30 p-4 sm:p-2 md:p-3 lg:p-3 xl:p-6 rounded-lg backdrop-blur-sm inline-block w-full mb-6 sm:mb-3 md:mb-4 lg:mb-5 xl:mb-10 border border-white/10">
+                    Experience the ultimate standard in baby care with our <strong>genuine premium baby diapers</strong>. As a leading <strong>bulk supplier in India</strong>, we distribute ultra-absorbent, highly comfortable, and 100% <strong>rash-free baby diapers</strong> sourced directly from state-of-the-art facilities of trusted manufacturers.
+                  </p>
+
+                  <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-1 md:gap-2 lg:gap-2 xl:gap-4 mb-6 sm:mb-3 md:mb-4 lg:mb-5 xl:mb-10">
+                    <div className="flex items-center gap-1 sm:gap-2 text-gray-200 bg-white/10 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 lg:px-3 lg:py-1.5 xl:px-5 xl:py-3 rounded-md sm:rounded-lg backdrop-blur-sm border border-white/10 shadow-lg">
+                      <CheckCircle2 className="w-4 h-4 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-blue-400" />
+                      <span className="font-medium text-[10px] sm:text-[9px] md:text-xs lg:text-[10px] xl:text-sm 2xl:text-base">Ultra-Absorbent</span>
+                    </div>
+                    <div className="flex items-center gap-1 sm:gap-2 text-gray-200 bg-white/10 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 lg:px-3 lg:py-1.5 xl:px-5 xl:py-3 rounded-md sm:rounded-lg backdrop-blur-sm border border-white/10 shadow-lg">
+                      <CheckCircle2 className="w-4 h-4 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-blue-400" />
+                      <span className="font-medium text-[10px] sm:text-[9px] md:text-xs lg:text-[10px] xl:text-sm 2xl:text-base">Rash-Free</span>
+                    </div>
+                    <div className="flex items-center gap-1 sm:gap-2 text-gray-200 bg-white/10 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 lg:px-3 lg:py-1.5 xl:px-5 xl:py-3 rounded-md sm:rounded-lg backdrop-blur-sm border border-white/10 shadow-lg">
+                      <CheckCircle2 className="w-4 h-4 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-blue-400" />
+                      <span className="font-medium text-[10px] sm:text-[9px] md:text-xs lg:text-[10px] xl:text-sm 2xl:text-base">Bulk Supply</span>
+                    </div>
+                  </div>
+
+                  <div className="scale-90 origin-left sm:scale-75 md:scale-90 lg:scale-90 xl:scale-110 2xl:scale-125 transition-transform">
+                    <RequestPricingButton productName="Baby Diapers (Imported)" category="Imported Products" theme="blue" />
+                  </div>
+                  
+                </LazySection>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
         {/* DETAILS SECTION */}
         <section className="py-16 lg:py-24 bg-white relative flex-grow">
@@ -140,9 +156,9 @@ export default function BabyDiapersPage() {
                 <LazySection>
                   <h2 className="text-3xl font-extrabold text-[#0a192f] mb-6 border-b-4 border-blue-600 pb-2 inline-block">Product Overview</h2>
                   <p className="text-gray-600 text-lg leading-relaxed mb-8 whitespace-pre-line">
-                    As consumer demand for superior baby hygiene products skyrockets in India, providing a reliable, comfortable, and safe solution is paramount. Our premium baby diapers are imported exclusively from Nepal, manufactured using advanced Japanese machinery and high-grade raw materials to ensure maximum fluid retention.
+                    As consumer demand for superior baby hygiene products skyrockets in India, providing a reliable, comfortable, and safe solution is paramount. Our premium baby diapers are sourced exclusively from trusted manufacturers, manufactured using advanced Japanese machinery and high-grade raw materials to ensure maximum fluid retention.
                     <br/><br/>
-                    Designed to cater to the modern infant's active lifestyle, these diapers feature a breathable backsheet, a hypoallergenic cotton-like top layer, and a unique 3D leak-guard technology. By sourcing directly from Nepal, we bridge the gap for high-end international quality at highly competitive wholesale rates, making it highly lucrative for Indian distributors, retail chains, and institutional buyers.
+                    Designed to cater to the modern infant's active lifestyle, these diapers feature a breathable backsheet, a hypoallergenic cotton-like top layer, and a unique 3D leak-guard technology. By sourcing directly from trusted manufacturers, we bridge the gap for high-end international quality at highly competitive wholesale rates, making it highly lucrative for Indian distributors, retail chains, and institutional buyers.
                     <br/><br/>
                     Furthermore, our robust pan-India logistics network ensures consistent, on-time delivery for all bulk orders, regardless of volume. We provide rigorous quality assurance on every shipment, empowering your business to confidently meet retail demands with a product that guarantees absolute customer satisfaction and repeat sales.
                   </p>
@@ -156,7 +172,7 @@ export default function BabyDiapersPage() {
                         <CheckCircle2 className="text-green-500 shrink-0 mt-1" size={24} />
                         <div>
                           <h4 className="font-bold text-gray-800 mb-1">Direct Import</h4>
-                          <span className="text-gray-600 leading-relaxed text-sm">Sourced directly from top-tier facilities in Nepal.</span>
+                          <span className="text-gray-600 leading-relaxed text-sm">Sourced directly from top-tier facilities of trusted manufacturers.</span>
                         </div>
                       </div>
                       <div className="flex items-start gap-4 bg-white rounded-xl px-5 py-4 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-600/20 transition-all h-full">
@@ -236,7 +252,7 @@ export default function BabyDiapersPage() {
                 <LazySection>
                   <h2 className="text-3xl font-extrabold text-[#0a192f] mb-8 border-b-4 border-blue-600 pb-2 inline-block">Our Manufacturing Process</h2>
                   <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                    Our baby diapers are produced in cutting-edge facilities in Nepal, adhering to strict international hygiene and quality control standards. The process utilizes fully automated Japanese machinery to ensure zero human touch during assembly and packaging.
+                    Our baby diapers are produced in cutting-edge facilities of trusted manufacturers, adhering to strict international hygiene and quality control standards. The process utilizes fully automated Japanese machinery to ensure zero human touch during assembly and packaging.
                   </p>
                   
                   <div className="bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 border border-gray-100">
@@ -297,11 +313,11 @@ export default function BabyDiapersPage() {
                         <div className="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-[#0075B6]">
                           <Truck size={30} />
                         </div>
-                        <h2 className="text-3xl font-extrabold text-[#0a192f]">Imported from Nepal, Delivered All Over India</h2>
+                        <h2 className="text-3xl font-extrabold text-[#0a192f]">Sourced from Trusted ISI Manufacturers, Delivered All Over India</h2>
                       </div>
                       
                       <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                        Our strategic import framework allows us to directly source from the most advanced manufacturing plants in Nepal and distribute seamlessly across all Indian states. By bypassing multiple middlemen, we offer unmatched wholesale rates.
+                        Our strategic import framework allows us to directly source from the most advanced manufacturing plants of trusted manufacturers and distribute seamlessly across all Indian states. By bypassing multiple middlemen, we offer unmatched wholesale rates.
                       </p>
                       
                       <ul className="space-y-4">
