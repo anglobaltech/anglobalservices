@@ -271,7 +271,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, FileText, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, FileText, ChevronRight, ShoppingCart } from "lucide-react";
 
 import { servicesMenu } from "@/data/services";
 import { testingMenu } from "@/data/testing";
@@ -311,17 +311,6 @@ const foodMenu = [
     ]
   }
 ];
-
-const importExportMenu = [
-  {
-    items: [
-      { name: "Sanitary Napkins", slug: "import-export/sanitary-napkins", root: true },
-      { name: "Baby Diaper", slug: "import-export/baby-diaper", root: true },
-      { name: "Adult Diaper", slug: "import-export/adult-diaper", root: true }
-    ]
-  }
-];
-
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [activeMobile, setActiveMobile] = useState(null);
@@ -359,8 +348,8 @@ export default function Navbar() {
             <NavLink href="/" label="HOME" />
             <NavLink href="/aboutus" label="ABOUT US" />
 
-            <DesktopDropdown title="SERVICES" menu={servicesMenu} />
-            <DesktopDropdown title="IMPORTED PRODUCTS" menu={importExportMenu} />
+            <DesktopDropdown title="SERVICES" menu={servicesMenu} isPrimary={true} />
+
             <DesktopDropdown
               title="TESTINGS"
               menu={testingMenu}
@@ -415,14 +404,6 @@ export default function Navbar() {
               <MobileAccordion
                 title="SERVICES"
                 menu={servicesMenu}
-                active={activeMobile}
-                setActive={setActiveMobile}
-                close={setMobileMenu}
-              />
-
-              <MobileAccordion
-                title="IMPORTED PRODUCTS"
-                menu={importExportMenu}
                 active={activeMobile}
                 setActive={setActiveMobile}
                 close={setMobileMenu}
@@ -558,7 +539,11 @@ function DesktopDropdown({ title, menu, href, align = "left" }) {
                       <>
                         <div className="flex items-center justify-between gap-3 text-gray-700 hover:text-[#0075B6] cursor-pointer">
                           <div className="flex items-start gap-3">
-                            <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                            {item.icon === "ShoppingCart" ? (
+                              <ShoppingCart size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                            ) : (
+                              <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                            )}
                             <span className="leading-6 uppercase">{item.name}</span>
                           </div>
                           <ChevronRight size={14} className="opacity-70" />
@@ -572,7 +557,11 @@ function DesktopDropdown({ title, menu, href, align = "left" }) {
                                   className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
                                   onClick={() => setIsOpen(false)}
                                 >
-                                  <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                                  {sub.icon === "ShoppingCart" ? (
+                                    <ShoppingCart size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                                  ) : (
+                                    <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
+                                  )}
                                   <span className="leading-6 uppercase">{sub.name}</span>
                                 </Link>
                               </li>
@@ -617,7 +606,11 @@ function MobileNestedAccordion({ item, close }) {
         onClick={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}
       >
         <div className="flex items-start gap-2">
-          <FileText size={14} className="shrink-0 mt-0.5" />
+          {item.icon === "ShoppingCart" ? (
+            <ShoppingCart size={14} className="shrink-0 mt-0.5" />
+          ) : (
+            <FileText size={14} className="shrink-0 mt-0.5" />
+          )}
           <span className="uppercase text-left leading-tight">{item.name}</span>
         </div>
         <ChevronDown size={14} className={`transition shrink-0 ${isOpen ? "rotate-180" : ""}`} />
@@ -632,7 +625,11 @@ function MobileNestedAccordion({ item, close }) {
                 onClick={() => close(false)}
                 className="flex items-start gap-2 text-xs text-gray-300 hover:text-white"
               >
-                <FileText size={14} className="shrink-0 mt-0.5" />
+                {sub.icon === "ShoppingCart" ? (
+                  <ShoppingCart size={14} className="shrink-0 mt-0.5" />
+                ) : (
+                  <FileText size={14} className="shrink-0 mt-0.5" />
+                )}
                 <span className="uppercase text-left leading-tight">{sub.name}</span>
               </Link>
             </li>
@@ -648,8 +645,7 @@ function MobileAccordion({ title, menu, active, setActive, close }) {
 
   return (
     <li className="border-b border-white/10">
-      <button
-        className="w-full flex items-center justify-between px-4 py-3"
+      <button className="w-full flex items-center justify-between px-4 py-3"
         onClick={() => setActive(open ? null : title)}
       >
         {title}

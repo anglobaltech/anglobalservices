@@ -98,6 +98,16 @@ export const servicesMenu = [
         slug: "calibration-certificate",
         root: true,
       },
+      {
+        name: "Trading Product",
+        isSubMenu: true,
+        icon: "ShoppingCart",
+        subItems: [
+          { name: "Sanitary Napkins", slug: "sanitary-napkins", root: true, icon: "ShoppingCart" },
+          { name: "Baby Diaper", slug: "baby-diaper", root: true, icon: "ShoppingCart" },
+          { name: "Adult Diaper", slug: "adult-diaper", root: true, icon: "ShoppingCart" },
+        ],
+      },
     ],
   },
 ];
