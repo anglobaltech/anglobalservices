@@ -54,60 +54,62 @@ export default function EPRPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
-              <Image
-                src="/service/epr-registration.png"
-                alt="EPR Registration Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </div>
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-1 lg:grid-cols-[450px_1fr] xl:grid-cols-[550px_1fr] gap-10 lg:gap-14 items-center">
+        <div className="w-full">
+          <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
+            <Image
+              src="/service/epr-registration-2.webp"
+              alt="EPR Registration Services"
+              width={800}
+              height={800}
+              className="w-full h-auto object-contain"
+              priority
+            />
           </div>
+        </div>
 
-          <div className="flex flex-col gap-8">
-            <div>
-              <h2 className="text-xl font-bold text-gray-900 uppercase">
-                What is EPR Registration?
-              </h2>
+        <div className="flex flex-col gap-8 w-full">
+          <div>
+            <h2 className="text-xl font-bold text-gray-900 uppercase">
+              What is EPR Registration?
+            </h2>
 
-              <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-                <span className="absolute left-0 top-0 h-0.5 w-75 bg-[#0072b1]" />
-              </div>
-
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
-                EPR registration is an official authorization that reflects a
-                business’s commitment to environmental sustainability. Under
-                this system, manufacturers, importers, and brand owners are made
-                responsible for the collection, recycling, and environmentally
-                sound disposal of waste generated from their products at the end
-                of their lifecycle. EPR registration is mandatory for PIBOs
-                operating in India and is obtained by applying through the CPCB
-                EPR portal.
-              </p>
-
-              <p className="text-gray-500 text-[15px] leading-6 text-justify mt-4">
-                Products commonly covered under EPR compliance include
-                electrical and electronic equipment (EEE) regulated under the
-                E-Waste (Management) Rules, 2016; plastic products and packaging
-                materials regulated under the Plastic Waste Management Rules,
-                2016; and batteries and accumulators governed by applicable
-                battery management regulations.
-              </p>
-
-              <p className="text-gray-500 text-[15px] leading-6 text-justify mt-4">
-                With proper documentation, recycling arrangements, and
-                compliance planning, EPR registration helps businesses meet
-                their legal obligations while contributing to sustainable waste
-                management practices. AN Global Services provides end-to-end
-                assistance to help clients obtain EPR registration smoothly and
-                without compliance stress.
-              </p>
+            <div className="w-full h-0.5 bg-gray-200 relative mb-4">
+              <span className="absolute left-0 top-0 h-0.5 w-75 bg-[#0072b1]" />
             </div>
+
+            <p className="text-gray-500 text-[15px] leading-6 text-justify">
+              EPR registration is an official authorization that reflects a
+              business’s commitment to environmental sustainability. Under
+              this system, manufacturers, importers, and brand owners are made
+              responsible for the collection, recycling, and environmentally
+              sound disposal of waste generated from their products at the end
+              of their lifecycle. EPR registration is mandatory for PIBOs
+              operating in India and is obtained by applying through the CPCB
+              EPR portal.
+            </p>
+
+            <p className="text-gray-500 text-[15px] leading-6 text-justify mt-4">
+              Products commonly covered under EPR compliance include
+              electrical and electronic equipment (EEE) regulated under the
+              E-Waste (Management) Rules, 2016; plastic products and packaging
+              materials regulated under the Plastic Waste Management Rules,
+              2016; and batteries and accumulators governed by applicable
+              battery management regulations.
+            </p>
+
+            <p className="text-gray-500 text-[15px] leading-6 text-justify mt-4">
+              With proper documentation, recycling arrangements, and
+              compliance planning, EPR registration helps businesses meet
+              their legal obligations while contributing to sustainable waste
+              management practices. AN Global Services provides end-to-end
+              assistance to help clients obtain EPR registration smoothly and
+              without compliance stress.
+            </p>
+
+            <p className="text-gray-500 text-[15px] leading-6 text-justify mt-4">
+              EPR registration supports businesses in maintaining regulatory compliance through responsible waste management, recycling, and disposal practices. It strengthens environmental responsibility while helping manufacturers, importers, and brand owners manage EPR obligations efficiently under applicable Indian waste management regulations.
+            </p>
           </div>
         </div>
       </section>

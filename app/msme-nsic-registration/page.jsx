@@ -53,29 +53,28 @@ export default function MSMENSICRegistrationPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
-              <Image
-                src="/service/msme-nsic-registration (1).png"
-                alt="BIS Certification"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </div>
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 grid grid-cols-1 lg:grid-cols-[450px_1fr] xl:grid-cols-[550px_1fr] gap-10 lg:gap-14 items-center">
+        <div className="w-full">
+          <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
+            <Image
+              src="/service/msme-nsic-registration-2.webp"
+              alt="MSME NSIC Registration Services"
+              width={800}
+              height={800}
+              className="w-full h-auto object-contain"
+              priority
+            />
           </div>
+        </div>
 
-          <div className="flex flex-col gap-8 ">
-            <div className="">
-              <h2 className="text-xl font-bold text-gray-900">
-                MSME NSIC REGISTRATION SERVICES
-              </h2>
-              <div className="w-full h-0.5 bg-gray-200 relative mb-4">
-                <span className="absolute left-0 top-0 h-0.5 w-95 bg-[#0072b1]" />
-              </div>
+        <div className="flex flex-col gap-8 w-full">
+          <div>
+            <h2 className="text-xl font-bold text-gray-900">
+              MSME NSIC REGISTRATION SERVICES
+            </h2>
+            <div className="w-full h-0.5 bg-gray-200 relative mb-4">
+              <span className="absolute left-0 top-0 h-0.5 w-95 bg-[#0072b1]" />
+            </div>
 
               <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
                 MSME and NSIC registrations are important government initiatives
@@ -115,7 +114,6 @@ export default function MSMENSICRegistrationPage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* How to Register for NSIC */}
