@@ -77,7 +77,7 @@ const heroSlidesData = [
     headingSub: "Complete Testing & Plant Solutions",
     customButtons: [
       { text: "Solar Panel", link: "https://www.anglobalservices.com/solar-panel-plant-setup" },
-      { text: "Lab Setup", link: "https://www.anglobalservices.com/lab_servces" }
+      { text: "Lab Setup", link: "https://www.anglobalservices.com/laboratory-equipment-and-setup-services" }
     ],
     containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[42%] lg:-mt-4 xl:w-[45%] xl:-mt-8 xl:max-w-[560px]",
     paragraph: (
@@ -750,7 +750,7 @@ export default function Hero() {
               { img: "/services/msme.jpg", link: "/msme-nsic-registration" },
               {
                 img: "/services/lab-equipment-setup.png",
-                link: "/lab_servces",
+                link: "/laboratory-equipment-and-setup-services",
               },
               {
                 img: "/services/solar.jpg",

@@ -348,7 +348,8 @@ export default function Navbar() {
             <NavLink href="/" label="HOME" />
             <NavLink href="/aboutus" label="ABOUT US" />
 
-            <DesktopDropdown title="SERVICES" menu={servicesMenu} isPrimary={true} />
+            {/* <DesktopDropdown title="SERVICES" menu={servicesMenu} isPrimary={true} /> */}
+            <DesktopDropdown title="SERVICES" menu={servicesMenu} />
 
             <DesktopDropdown
               title="TESTINGS"
@@ -466,7 +467,7 @@ export default function Navbar() {
   );
 }
 
-function DesktopDropdown({ title, menu, href, align = "left" }) {
+function DesktopDropdown({ title, menu, href, align = "left", isPrimary }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -499,6 +500,24 @@ function DesktopDropdown({ title, menu, href, align = "left" }) {
     };
   }, [isOpen]);
 
+  const buttonContent = (
+    <>
+      {isPrimary && (
+        <span className="relative flex h-2.5 w-2.5 mr-1.5 mt-0.5">
+          <span className="absolute inline-flex h-full w-full rounded-full bg-[#0075B6] opacity-100 animate-[ping_0.8s_cubic-bezier(0,0,0.2,1)_infinite]"></span>
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#0075B6] shadow-[0_0_6px_#0075B6]"></span>
+        </span>
+      )}
+      <span className="flex items-center gap-1">
+        {title}
+        <ChevronDown size={14} className="shrink-0" />
+      </span>
+    </>
+  );
+
+  const primaryClasses = "bg-white text-[#004e7a] px-4 py-1.5 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5";
+  const defaultClasses = "hover:text-black";
+
   return (
     <li 
       ref={dropdownRef}
@@ -507,14 +526,12 @@ function DesktopDropdown({ title, menu, href, align = "left" }) {
       onMouseLeave={() => setIsOpen(false)}
     >
       {href ? (
-        <Link href={href} className="cursor-pointer flex items-center gap-1 hover:text-black transition-colors whitespace-nowrap">
-          {title}
-          <ChevronDown size={14} className="shrink-0" />
+        <Link href={href} className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${isPrimary ? primaryClasses : defaultClasses}`}>
+          {buttonContent}
         </Link>
       ) : (
-        <span className="cursor-pointer flex items-center gap-1 hover:text-black transition-colors whitespace-nowrap">
-          {title}
-          <ChevronDown size={14} className="shrink-0" />
+        <span className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${isPrimary ? primaryClasses : defaultClasses}`}>
+          {buttonContent}
         </span>
       )}
 

@@ -110,7 +110,8 @@ const nextConfig = {
       { source: "/food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80-saputo-dairy-australia-pty-ltd-australia", destination: "/food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80", permanent: true },
       { source: "/food-ingredients/mullins-whey-lactose-200-mesh-mullins-whey-inc-usa", destination: "/food-ingredients/mullins-whey-lactose-200-mesh", permanent: true },
       { source: "/food-ingredients/l-carnitine-base-hubei-grand-life-science-technology-co-ltd-china", destination: "/food-ingredients/l-carnitine-base", permanent: true },
-      { source: "/food-ingredients/l-glutamine-xinjiang-fufeng-biotechnologies-co-ltd-china", destination: "/food-ingredients/l-glutamine", permanent: true }
+      { source: "/food-ingredients/l-glutamine-xinjiang-fufeng-biotechnologies-co-ltd-china", destination: "/food-ingredients/l-glutamine", permanent: true },
+      { source: "/lab_servces", destination: "/laboratory-equipment-and-setup-services", permanent: true }
     ];
   },
 };
