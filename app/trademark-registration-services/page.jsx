@@ -49,22 +49,22 @@ export default function TrademarkPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12">
+        <div className="grid grid-cols-1 xl:grid-cols-[450px_1fr] gap-10 xl:gap-12 items-start">
+          <div className="w-full max-w-[450px] mx-auto xl:max-w-none xl:col-span-1">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/trademark-registration (1).png"
+                src="/service/trademark-registration-services-2.webp"
                 alt="Trademark Registration Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-5 ">
+          <div className="flex flex-col gap-5 xl:col-span-1">
             {/* Trademark Registration Services */}
             <div className="">
               <h2 className="text-lg md:text-xl font-bold text-gray-900 uppercase leading-snug md:leading-normal">
@@ -120,7 +120,7 @@ export default function TrademarkPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12 space-y-6">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 pb-12 space-y-6">
         <div>
           <h2 className="text-lg md:text-xl font-bold text-gray-900 uppercase leading-snug md:leading-normal">
             Benefits of Trademark Registration

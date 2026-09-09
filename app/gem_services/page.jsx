@@ -30,21 +30,21 @@ export default function GemServices() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-[450px_1fr] gap-10 xl:gap-12 items-start">
+          <div className="w-full max-w-[450px] mx-auto xl:max-w-none xl:col-span-1">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/gem-registration.png"
+                src="/service/government-e-marketplace-GeM-services-2.webp"
                 alt="GeM Registration Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 xl:col-span-1">
             <div>
               <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
               <div className="w-full h-0.5 bg-gray-200 relative mb-3">
@@ -108,7 +108,7 @@ export default function GemServices() {
         </div>
       </section>
 
-      <section className="bg-gray-50 pb-12">
+      <section className="bg-gray-50 pt-12 pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-xl font-bold text-gray-900 uppercase tracking-wide">
             Process of GeM Registration

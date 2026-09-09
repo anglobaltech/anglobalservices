@@ -28,8 +28,8 @@ export default function LaboratoryServices() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-1 lg:grid-cols-[450px_1fr] xl:grid-cols-[550px_1fr] gap-10 lg:gap-14 items-center">
-        <div className="w-full">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-1 xl:grid-cols-2 gap-10 lg:gap-14 items-start">
+        <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
           <div className="rounded-xl overflow-hidden shadow-md bg-white">
             <Image
               src="/service/laboratory-equipment-and-setup-services-2.webp"
@@ -42,7 +42,7 @@ export default function LaboratoryServices() {
           </div>
         </div>
 
-        <div className="w-full">
+        <div className="xl:col-span-1">
           <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
           <div className="w-full h-0.5 bg-gray-200 relative mb-3">
             <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
