@@ -54,8 +54,8 @@ export default function EPRPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-1 lg:grid-cols-[450px_1fr] xl:grid-cols-[550px_1fr] gap-10 lg:gap-14 items-center">
-        <div className="w-full">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-1 xl:grid-cols-2 gap-10 lg:gap-14 items-start">
+        <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
           <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
             <Image
               src="/service/epr-registration-2.webp"
@@ -68,7 +68,7 @@ export default function EPRPage() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-8 w-full">
+        <div className="flex flex-col gap-8 xl:col-span-1">
           <div>
             <h2 className="text-xl font-bold text-gray-900 uppercase">
               What is EPR Registration?
