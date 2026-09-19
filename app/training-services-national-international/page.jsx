@@ -12,37 +12,37 @@ export default function TrainingPage() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="Training Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               QUALITY MANAGEMENT AND TRAINING PROGRAM
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
             <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
-                src="/service/tranning-program.png"
+                src="/service/quality-management-and-training-program-2.webp"
                 alt="Training Program"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-5 ">
+          <div className="flex flex-col gap-5 xl:col-span-1">
             <div>
               <h2 className="text-xl font-bold text-gray-900">
                 TRAINING & CERTIFICATION IN QUALITY MANAGEMENT
@@ -90,10 +90,7 @@ export default function TrainingPage() {
               </p>
 
               <p className="text-gray-600 text-[15px] leading-6 text-justify">
-                With a team of qualified and experienced professionals, AN
-                Global Services supports organizations in building competence,
-                ensuring regulatory compliance, and taking their quality and
-                environmental management systems to the next level.
+                With a team of qualified and experienced professionals, AN Global Services supports organizations in building competence, ensuring regulatory compliance, and taking quality management systems to the next level. Our training programs support the practical implementation of ISO standards across industries, empowering teams to strengthen internal capabilities and achieve consistent business performance.
               </p>
             </div>
           </div>

@@ -7,7 +7,8 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-import { Phone, Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Send, CheckCircle2, MessageCircle } from "lucide-react";
+import BusinessHours from "@/app/food-ingredients/components/BusinessHours";
 import { useState } from "react";
 import { db } from "@/src/lib/firebase";
 
@@ -153,86 +154,53 @@ export default function ContactPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
-          <div className="bg-white rounded-lg p-6  shadow-md border border-gray-100 h-fit">
-            <h3 className="text-xl font-bold text-gray-900 mb-1">
-              Get In Touch
-            </h3>
-            <p className="text-gray-500 text-sm mb-8">
-              We'd love to hear from you
-            </p>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-[#0072b1]/10 rounded-lg group-hover:bg-[#0072b1] transition-colors">
-                  <a
-                    href="tel:+917782069184"
-                    className="group inline-flex"
-                    aria-label="Call us"
-                  >
-                    <Phone
-                      className="text-[#0072b1] group-hover:text-white transition-colors"
-                      size={20}
-                    />
-                  </a>
+          <div className="bg-white rounded-[2rem] p-6 lg:p-8 border border-gray-100 shadow-2xl relative overflow-hidden group h-fit">
+            <div className="absolute top-0 left-0 w-full h-2 bg-[#0072b1]" />
+            
+            <h3 className="text-2xl font-extrabold text-[#0a192f] mb-3">Contact Us</h3>
+            <p className="text-gray-500 mb-8 font-medium">Have questions or need a custom quote? Reach out to our experts directly.</p>
+            
+            <div className="space-y-5">
+              <a href="tel:+917782069184" className="flex items-center gap-4 group/link">
+                <div className="w-12 h-12 rounded-full bg-[#0072b1]/10 flex items-center justify-center text-[#0072b1] group-hover/link:bg-[#0072b1] group-hover/link:text-white transition-colors shadow-sm shrink-0">
+                  <Phone size={20} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+917782069184"
-                    className="text-gray-900 font-medium hover:text-[#0072b1] transition-colors"
-                  >
-                    +91 77820 69184
-                  </a>
+                  <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Call Us</p>
+                  <span className="text-gray-900 font-extrabold group-hover/link:text-[#0072b1] transition-colors text-lg">+91 7782069184</span>
                 </div>
-              </div>
+              </a>
+              
+              <a href="mailto:info@anglobalservices.com" className="flex items-center gap-4 group/link">
+                <div className="w-12 h-12 rounded-full bg-[#0072b1]/10 flex items-center justify-center text-[#0072b1] group-hover/link:bg-[#0072b1] group-hover/link:text-white transition-colors shadow-sm shrink-0">
+                  <Mail size={20} />
+                </div>
+                <div className="overflow-hidden">
+                  <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Email Us</p>
+                  <span className="text-gray-900 font-extrabold group-hover/link:text-[#0072b1] transition-colors text-base sm:text-lg break-all">info@anglobalservices.com</span>
+                </div>
+              </a>
 
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-[#0072b1]/10 rounded-lg group-hover:bg-[#0072b1] transition-colors">
-                  <a
-                    href="mailto:info@anglobalservices.com"
-                    className="group inline-flex"
-                    aria-label="Email us"
-                  >
-                    <Mail
-                      className="text-[#0072b1] group-hover:text-white transition-colors"
-                      size={20}
-                    />
-                  </a>
+              <BusinessHours theme="blue" />
+
+              <a href="https://maps.google.com/?q=S-63,+7th+Floor,+Urbtech+NPX,+Noida,+Sector-153,+Uttar+Pradesh,+INDIA,+201310" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group/link">
+                <div className="w-12 h-12 rounded-full bg-[#0072b1]/10 flex items-center justify-center text-[#0072b1] group-hover/link:bg-[#0072b1] group-hover/link:text-white transition-colors shadow-sm shrink-0">
+                  <MapPin size={20} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">
-                    Email
-                  </p>
-                  <a
-                    href="mailto:info@anglobalservices.com"
-                    className="text-gray-900 font-medium hover:text-[#0072b1] transition-colors break-all"
-                  >
-                    info@anglobalservices.com
-                  </a>
+                  <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Address</p>
+                  <span className="text-gray-900 font-extrabold group-hover/link:text-[#0072b1] transition-colors text-sm sm:text-base block leading-snug break-words">
+                    S-63, 7th Floor, Urbtech NPX,<br />
+                    Noida, Sector-153, Uttar Pradesh<br />
+                    INDIA, Pin - 201310
+                  </span>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-[#0072b1]/10 rounded-lg group-hover:bg-[#0072b1] transition-colors mt-1">
-                  <MapPin
-                    className="text-[#0072b1] group-hover:text-white transition-colors"
-                    size={20}
-                  />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">
-                    Address
-                  </p>
-                  <p className="text-gray-900 font-medium leading-relaxed">
-                    S-63, 7th Floor, Urbtech NPX,
-                    <br />
-                    Sector 153, Noida,
-                    <br />
-                    Uttar Pradesh, INDIA – 201310
-                  </p>
-                </div>
+              <div className="pt-6 mt-4 border-t border-gray-100">
+                <a href="https://wa.me/917782069184" target="_blank" rel="noopener noreferrer" className="w-full bg-[#0072b1] hover:bg-[#005a8d] text-white font-bold text-lg py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all flex justify-center items-center gap-3 cursor-pointer">
+                  <MessageCircle size={20} className="fill-current" /> Chat with us
+                </a>
               </div>
             </div>
           </div>

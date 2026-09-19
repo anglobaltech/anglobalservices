@@ -5,15 +5,15 @@ export default function BISBoltsNutsFastenersPage() {
     <div className="w-full bg-white">
       <div className="relative w-full h-80">
         <Image
-          src="/service/isi/about.jpg" 
+          src="/service/pages-of-services-dash-1.webp" 
           alt="BIS Certification of Bolts, Nuts and Fasteners"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#83959d] flex items-center">
-          <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-white text-3xl md:text-4xl font-bold uppercase">
+        <div className="absolute inset-0 bg-[#83959d] flex items-center justify-center">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold uppercase tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               BIS Certification of Bolts, Nuts and Fasteners
             </h1>
           </div>

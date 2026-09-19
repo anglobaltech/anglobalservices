@@ -42,15 +42,15 @@ export default function ISOPage() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="ISO Certification Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               ISO CERTIFICATION SERVICES
             </h1>
           </div>
@@ -58,15 +58,15 @@ export default function ISOPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 ">
-        <div className="grid grid-cols-1 xl:grid-cols-[450px_1fr] gap-10 xl:gap-12 items-start">
-          <div className="w-full max-w-[450px] mx-auto xl:max-w-none xl:col-span-1">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
                 src="/service/iso-certification-services-2.webp"
                 alt="ISO Certification Services"
-                width={450}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
@@ -79,7 +79,7 @@ export default function ISOPage() {
                 <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]" />
               </div>
 
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
+              <p className="text-gray-500 text-[15px] leading-6 text-justify pb-4">
                 ISO Certification is an internationally recognized standard that
                 ensures an organization’s products, services, and management
                 systems meet quality, safety, efficiency, and regulatory
@@ -87,6 +87,10 @@ export default function ISOPage() {
                 enhance customer satisfaction, and build global credibility. ISO
                 certification is applicable to organizations of all sizes and
                 across all industries.
+              </p>
+
+              <p className="text-gray-500 text-[15px] leading-6 text-justify">
+                ISO certification in India helps businesses establish standardized processes, strengthen quality management systems, and demonstrate their commitment to consistent performance and regulatory compliance. By implementing relevant ISO standards, organizations can improve business operations, increase market opportunities, and build stronger relationships with customers, suppliers, and stakeholders.
               </p>
             </div>
 
@@ -113,6 +117,12 @@ export default function ISOPage() {
                 <li>Reduces operational risks and process inefficiencies.</li>
                 <li>
                   Improves chances of winning government and corporate tenders.
+                </li>
+                <li>
+                  Supports continuous improvement and better organizational performance.
+                </li>
+                <li>
+                  Strengthens brand reputation and creates new business opportunities.
                 </li>
               </ul>
             </div>

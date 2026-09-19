@@ -42,6 +42,7 @@ export const servicesMenu = [
         root: true,
       },
 
+
       {
         name: " BIS JEWELLERY REGISTRATION SERVICES",
         slug: "jewellery-registration",
@@ -96,6 +97,11 @@ export const servicesMenu = [
       {
         name: "CALIBRATION SERVICE",
         slug: "calibration-certificate",
+        root: true,
+      },
+      {
+        name: "CCTV AND IP CAMERA MANUFACTURING PLANT SETUP",
+        slug: "cctv-and-ip-camera-manufacturing-plant-setup",
         root: true,
       },
       {

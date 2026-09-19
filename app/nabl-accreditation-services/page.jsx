@@ -55,15 +55,11 @@ export default function NABLAccreditationPage() {
 
       <section
         className="relative w-full h-55 md:h-70 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/service/isi/about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        style={{ backgroundImage: "url('/service/pages-of-services-dash-1.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-[#0a3d62]/40" />
 
-        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center uppercase px-4 leading-snug">
+        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-extrabold text-center uppercase px-4 leading-snug tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
           NABL Certification & Accreditation Services for Laboratories
         </h1>
       </section>

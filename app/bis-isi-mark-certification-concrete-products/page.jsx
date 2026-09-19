@@ -105,14 +105,10 @@ export default function ConcreteISIPage() {
     <main className="w-full bg-white">
       <section
         className="relative w-full h-60 md:h-72 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/service/isi/about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        style={{ backgroundImage: "url('/service/pages-of-services-dash-1.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <div className="absolute inset-0 bg-black/50" />
-        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4">
+        <div className="absolute inset-0 bg-[#0a3d62]/40" />
+        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-extrabold text-center px-4 tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
           BIS ISI MARK CERTIFICATION FOR CONCRETE PRODUCTS
         </h1>
       </section>

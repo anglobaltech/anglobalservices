@@ -19,7 +19,7 @@ const slides = ["/dash-image1-2.webp", "/dash-image2-2.webp", "/dash-image3-2.we
 
 const heroSlidesData = [
   {
-    image: "/dash-image-bis-isi-certification-1.webp",
+    image: "/dash-image-bis-isi-certification-1-1.webp",
     headingMain: "BIS, ISI & FMCS Certification",
     headingSub: "CRS & Approval Services",
     containerClass: "w-full sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl",
@@ -90,6 +90,128 @@ const heroSlidesData = [
 
 const extendedHeroSlides = [...heroSlidesData, heroSlidesData[0]];
 
+// IMPORTANT: This component MUST be defined outside Hero() so React keeps a stable
+// reference. If defined inside Hero, every Hero re-render (from slide/testimonial
+// intervals) creates a new function identity, causing React to unmount+remount
+// this component and reset the animation.
+function InfiniteProductsV2() {
+  const trackRef = useRef(null);
+  const itemRef = useRef(null);
+  const isPausedRef = useRef(false);
+  
+  const setHover = (val) => {
+    isPausedRef.current = val;
+  };
+
+  const products = [
+    "/products/product-7.webp",
+    "/products/product-8.webp",
+    "/products/product-9.webp",
+    "/products/product-10.webp",
+    "/products/product-11.webp",
+    "/products/product-12.webp",
+    "/products/product-13.webp",
+    "/products/product-14.webp",
+    "/products/product-15.webp",
+    "/products/product-16.webp",
+    "/products/product-17.webp",
+    "/products/product-18.webp",
+    "/products/product-19.webp",
+    "/products/product-20.webp",
+    "/products/product-21.webp",
+    "/products/product-22.webp",
+    "/products/product-23.webp",
+    "/products/product-24.webp",
+    "/products/product-25.webp",
+  ];
+
+  const items = [...products, ...products];
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let x = 0;
+    let raf;
+    let cancelled = false;
+    const speed = 0.8
+
+    const animate = () => {
+      if (cancelled || !track || !itemRef.current) return;
+      
+      if (!isPausedRef.current) {
+        const itemWidth = itemRef.current.offsetWidth;
+        const halfWidth = itemWidth * products.length;
+
+        x -= speed;
+
+        if (x <= -halfWidth) {
+          x += halfWidth;
+        }
+        track.style.transform = `translate3d(${x}px,0,0)`;
+      }
+      raf = requestAnimationFrame(animate);
+    };
+
+    // Preload every image into browser memory before starting animation
+    const preloadPromises = products.map((src) => {
+      return new Promise((resolve) => {
+        const img = new window.Image();
+        img.src = src;
+        if (img.complete) {
+          resolve();
+        } else {
+          img.onload = resolve;
+          img.onerror = resolve; // Don't block on broken images
+        }
+      });
+    });
+
+    Promise.all(preloadPromises).then(() => {
+      if (!cancelled) {
+        raf = requestAnimationFrame(animate);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  return (
+    <div className="relative w-full overflow-hidden py-10 bg-gray-50">
+      <div
+        ref={trackRef}
+        className="flex flex-nowrap w-max will-change-transform"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        {items.map((img, index) => (
+          <div
+            key={index}
+            ref={index === 0 ? itemRef : null}
+            className="pr-8 shrink-0"
+          >
+            <div className="w-56 sm:w-64 lg:w-72 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex items-center justify-center">
+              <div className="relative w-full h-48 sm:h-56 lg:h-60">
+                <img
+                  src={img}
+                  alt="Product"
+                  loading="eager"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-linear-to-r from-gray-50 to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-linear-to-l from-gray-50 to-transparent" />
+    </div>
+  );
+}
 
 export default function Hero() {
   const router = useRouter();
@@ -160,18 +282,24 @@ export default function Hero() {
 
   const clientsLogos = useMemo(
     () => [
-      "/clients/spago.jpg",
-      "/clients/sga.jpg",
-      "/clients/nhf.jpg",
-      "/clients/mtras.jpg",
-      "/clients/kse.jpg",
-      "/clients/kowa.jpg",
-      "/clients/jasmine.jpg",
-      "/clients/health.jpg",
-      "/clients/force.jpg",
-      "/clients/fire-guard.jpg",
-      "/clients/birat.jpg",
-      "/clients/10.jpg",
+      "/clients/birat-healthcare-industries.webp",
+      "/clients/cogni.webp",
+      "/clients/fire-guard-industries.webp",
+      "/clients/force.webp",
+      "/clients/gabion-technologies-india-ltd.webp",
+      "/clients/health-and-hygiene-products-pvt-ltd.webp",
+      "/clients/hero-electric-vechiles-pvt-ltd.webp",
+      "/clients/jasmine-hygiene-products-limited.webp",
+      "/clients/kowa.webp",
+      "/clients/kse.webp",
+      "/clients/logo_126013.webp",
+      "/clients/mitras.webp",
+      "/clients/msme.webp",
+      "/clients/nhf.webp",
+      "/clients/nsa-limited.webp",
+      "/clients/safe-guard.webp",
+      "/clients/spago.webp",
+      "/clients/yamanaka-advanced-materials-inc.webp",
     ],
     [],
   );
@@ -252,21 +380,10 @@ export default function Hero() {
     }
   }, [heroSlide, isTransitioning]);
   const sliderRef = useRef(null);
-  const totalSlides = testimonials.length + 1;
   const clientsRef = useRef(null);
   const [clientsPaused, setClientsPaused] = useState(false);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [visibleCards, setVisibleCards] = useState(3);
-
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 7000);
-    return () => clearInterval(interval);
-  }, [isPaused, testimonials.length]);
 
   const clientItems = useMemo(
     () => [...clientsLogos, ...clientsLogos],
@@ -327,20 +444,7 @@ export default function Hero() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setVisibleCards(1);
-      } else if (window.innerWidth < 1024) {
-        setVisibleCards(2);
-      } else {
-        setVisibleCards(3);
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -412,7 +516,7 @@ export default function Hero() {
     if (!track) return;
 
     let rafId;
-    const speed = 0.4;
+    const speed = 0.8;
 
     const animate = () => {
       clientsX.current -= speed;
@@ -427,32 +531,29 @@ export default function Hero() {
     return () => cancelAnimationFrame(rafId);
   }, [clientsPaused, isTabActive]);
 
-  const maxIndex = testimonials.length - visibleCards; // Single interval tracking loop
+  const testimonialsRef = useRef(null);
+  const testimonialsX = useRef(0);
 
   useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [isPaused, maxIndex]);
+    if (isPaused || !isTabActive) return;
+    const track = testimonialsRef.current;
+    if (!track) return;
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
+    let rafId;
+    const speed = 0.8;
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
-  };
+    const animate = () => {
+      testimonialsX.current -= speed;
+      if (Math.abs(testimonialsX.current) >= track.scrollWidth / 2) {
+        testimonialsX.current = 0;
+      }
+      track.style.transform = `translate3d(${testimonialsX.current}px, 0,0)`;
+      rafId = requestAnimationFrame(animate);
+    };
 
-  useEffect(() => {
-    if (currentIndex === totalSlides) {
-      requestAnimationFrame(() => {
-        setEnableTransition(false);
-        setCurrentIndex(0);
-      });
-    }
-  }, [currentIndex, totalSlides]);
+    rafId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafId);
+  }, [isPaused, isTabActive]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -461,91 +562,24 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  function InfiniteProducts() {
-    const trackRef = useRef(null);
-    const products = [
-      "/products/product1.jpg",
-      "/products/product2.jpg",
-      "/products/product3.jpg",
-      "/products/product4.jpg",
-      "/products/product5.jpg",
-      "/products/product6.jpg",
-    ];
-
-    const items = [...products, ...products];
-
-    useEffect(() => {
-      const track = trackRef.current;
-      if (!track) return;
-
-      let x = 0;
-      let raf;
-      const speed = 0.18;
-
-      const animate = () => {
-        x -= speed;
-        if (x <= -track.scrollWidth / 2) {
-          x += track.scrollWidth / 2;
-        }
-        track.style.transform = `translate3d(${x}px,0,0)`;
-        raf = requestAnimationFrame(animate);
-      };
-
-      raf = requestAnimationFrame(animate);
-      return () => cancelAnimationFrame(raf);
-    }, []);
-
-    return (
-      <div className="relative w-full overflow-hidden py-10 bg-gray-50">
-        <div ref={trackRef} className="flex gap-8 w-max will-change-transform">
-          {items.map((img, index) => (
-            <div
-              key={index}
-              className="
-                shrink-0
-                w-55 sm:w-65 lg:w-75
-                bg-white rounded-2xl
-                shadow-md hover:shadow-xl
-                transition-shadow duration-300
-                flex items-center justify-center
-                p-6
-              "
-            >
-              <div className="relative w-full h-40">
-                <Image
-                  src={img}
-                  alt="Product"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-linear-to-r from-gray-50 to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-linear-to-l from-gray-50 to-transparent" />
-      </div>
-    );
-  }
-
   return (
     <>
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full bg-[#051c35] overflow-hidden">
-        <div 
+        <div
           className={`flex w-full ${isTransitioning ? "transition-transform duration-1000 ease-in-out" : ""}`}
           style={{ transform: `translateX(-${heroSlide * 100}%)` }}
         >
           {extendedHeroSlides.map((slide, idx) => (
             <div key={idx} className="w-full shrink-0 relative">
               <div className="grid grid-cols-1 grid-rows-1 w-full max-w-[2000px] mx-auto">
-                
+
                 {/* IMAGE LAYER */}
                 <div className="col-start-1 row-start-1 w-full relative flex items-start">
-                  <img 
-                    src={slide.image} 
-                    alt={slide.headingMain} 
-                    className="w-full h-full object-cover object-left sm:h-auto sm:object-contain block min-h-[380px] sm:min-h-0" 
+                  <img
+                    src={slide.image}
+                    alt={slide.headingMain}
+                    className="w-full h-full object-cover object-left sm:h-auto sm:object-contain block min-h-[380px] sm:min-h-0"
                   />
                   {/* Subtle overlay to enhance text contrast over the graphic */}
                   <div className="absolute inset-0 bg-black/10"></div>
@@ -566,14 +600,14 @@ export default function Hero() {
                         {slide.paragraph}
                       </p>
 
-                      <div 
+                      <div
                         className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-4 xl:gap-6 mb-4 sm:mb-2 md:mb-4 lg:mb-6 xl:mb-10"
                         onMouseEnter={() => setIsButtonHovered(true)}
                         onMouseLeave={() => setIsButtonHovered(false)}
                       >
                         <Link
                           href="/contact-us"
-                          className={slide.customButtons ? 
+                          className={slide.customButtons ?
                             "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[13px] xl:text-[15px]"
                             : "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1.5 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-5 lg:py-2.5 xl:px-8 xl:py-4 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[14px] xl:text-[18px]"
                           }
@@ -620,7 +654,7 @@ export default function Hero() {
                         <p className="text-gray-200 text-[10px] sm:text-[8px] md:text-[10px] xl:text-sm leading-relaxed sm:leading-snug md:leading-relaxed mb-3 sm:mb-2 md:mb-3 xl:mb-6">
                           A complete industrial solution provider. We help manufacturers meet quality, safety, and compliance standards with complete confidence.
                         </p>
-                        
+
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 xl:gap-8">
                           <a href="mailto:info@anglobalservices.com" className="flex items-center gap-2 md:gap-2 group cursor-pointer relative z-20">
                             <div className="bg-white/10 group-hover:bg-[#00c3ff]/20 p-1 md:p-1.5 rounded-full transition-colors">
@@ -630,7 +664,7 @@ export default function Hero() {
                             </div>
                             <span className="text-gray-200 group-hover:text-white transition-colors text-[10px] sm:text-[8px] md:text-[10px] xl:text-sm">info@anglobalservices.com</span>
                           </a>
-                          
+
                           <a href="tel:+917782069184" className="flex items-center gap-2 md:gap-2 group cursor-pointer relative z-20">
                             <div className="bg-white/10 group-hover:bg-[#00c3ff]/20 p-1 md:p-1.5 rounded-full transition-colors">
                               <svg className="w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 text-[#00c3ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -660,9 +694,8 @@ export default function Hero() {
                   setIsTransitioning(true);
                   setHeroSlide(i);
                 }}
-                className={`w-1.5 h-1.5 md:w-3 md:h-3 rounded-full cursor-pointer transition-all ${
-                  isActive ? "bg-white w-3 md:w-6" : "bg-white/50"
-                }`}
+                className={`w-1.5 h-1.5 md:w-3 md:h-3 rounded-full cursor-pointer transition-all ${isActive ? "bg-white w-3 md:w-6" : "bg-white/50"
+                  }`}
               />
             );
           })}
@@ -764,29 +797,31 @@ export default function Hero() {
               <Link
                 key={index}
                 href={item.link}
-                className="group border-3 border-[#0077A8] rounded-xl overflow-hidden relative"
+                className="group p-[2.5px] rounded-xl bg-gradient-to-br from-[#0a3d62] via-[#0072b1] to-[#48cae4] overflow-hidden relative transition-all duration-300 shadow-sm hover:shadow-md block"
               >
-                {item.isISI && (
-                  <span className="sr-only">
-                    ISI Certification & BIS Certification Services in India
-                  </span>
-                )}
-                <div className="relative w-full h-45">
-                  <Image
-                    src={item.img}
-                    alt={
-                      item.isISI
-                        ? "ISI Certification & BIS Certification Services in India"
-                        : "Service"
-                    }
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
-                  <span className="bg-[#0e8fc7] text-white text-sm font-semibold px-4 py-2 rounded-md shadow">
-                    View Details
-                  </span>
+                <div className="bg-white rounded-[9px] h-full w-full relative overflow-hidden">
+                  {item.isISI && (
+                    <span className="sr-only">
+                      ISI Certification & BIS Certification Services in India
+                    </span>
+                  )}
+                  <div className="relative w-full h-45">
+                    <Image
+                      src={item.img}
+                      alt={
+                        item.isISI
+                          ? "ISI Certification & BIS Certification Services in India"
+                          : "Service"
+                      }
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+                    <span className="bg-[#0e8fc7] text-white text-sm font-semibold px-4 py-2 rounded-md shadow">
+                      View Details
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -812,15 +847,17 @@ export default function Hero() {
           <h2 className="text-4xl font-extrabold text-center uppercase text-black mb-4">
             Search Any Product
           </h2>
-          <p className="text-center text-gray-500 max-w-2xl mx-auto mb-10">
-            High-quality certified products supporting safety, compliance, and
-            global standards across industries.
+          <p className="text-center text-[#005f86] font-medium tracking-wide max-w-2xl mx-auto mb-10">
+            High-quality certified products supporting safety, compliance, and global standards across industries.
           </p>
 
           {/* MOVED SEARCH BAR SECTION TO 'OUR PRODUCTS' */}
           <div className="w-full flex flex-col items-center justify-center mb-16 relative z-50">
             <div className="relative w-full max-w-3xl" ref={searchRef}>
-              <div className="flex items-center w-full bg-white border-2 border-[#005f86] rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center w-full bg-white border border-gray-400 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus-within:shadow-[0_8px_30px_rgb(0,95,134,0.15)] focus-within:border-[#005f86] transition-all duration-300 group p-1.5 sm:p-2">
+                <div className="pl-3 sm:pl-4 pr-1 sm:pr-2 hidden sm:block shrink-0">
+                  <Search className="h-5 w-5 sm:h-6 sm:w-6 text-gray-500 group-focus-within:text-[#005f86] transition-colors" />
+                </div>
                 <input
                   type="text"
                   value={searchQuery}
@@ -828,14 +865,20 @@ export default function Hero() {
                   onFocus={() =>
                     searchQuery.trim().length > 0 && setIsSearchOpen(true)
                   }
-                  placeholder="Search Product By Name or IS Number"
-                  className="w-full pl-6 pr-4 py-3 text-base sm:text-lg text-gray-700 outline-none bg-transparent"
+                  placeholder="Search Product By Name or IS Number..."
+                  className="w-full pl-4 sm:pl-2 pr-2 sm:pr-4 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg text-gray-800 placeholder-gray-500 outline-none bg-transparent min-w-0"
                 />
                 <button
-                  className="bg-[#005f86] text-white w-10 h-10 sm:w-12 sm:h-12 mr-1.5 rounded-full flex items-center justify-center shrink-0 hover:bg-[#004a69] transition-colors"
+                  className="bg-gradient-to-r from-[#0a3d62] to-[#0072b1] hover:shadow-lg text-white px-5 sm:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-bold transition-all duration-300 hidden sm:block whitespace-nowrap cursor-pointer shrink-0 text-sm sm:text-base"
                   aria-label="Search"
                 >
-                  <Search size={22} className="sm:w-6 sm:h-6" />
+                  Search
+                </button>
+                <button
+                  className="bg-gradient-to-r from-[#0a3d62] to-[#0072b1] text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 sm:hidden shadow-md"
+                  aria-label="Search"
+                >
+                  <Search size={18} />
                 </button>
               </div>
 
@@ -869,7 +912,7 @@ export default function Hero() {
           </div>
           {/* END MOVED SEARCH BAR SECTION */}
 
-          <InfiniteProducts />
+          <InfiniteProductsV2 />
         </div>
       </section>
 
@@ -961,19 +1004,23 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="w-full bg-white pt-10 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-4">
-            <h2 className="text-4xl font-extrabold text-black mb-3">
+      <section className="w-full bg-[#f8fbff] py-14 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#004e98] mb-4 uppercase tracking-wide">
               OUR CLIENTS
             </h2>
-            <div className="w-24 h-1 bg-[#2f4f8f] mx-auto rounded-full" />
+            <div className="flex items-center justify-center max-w-lg mx-auto">
+              <div className="h-px bg-gray-300 flex-grow" />
+              <div className="w-24 h-1.5 bg-[#0072b1] rounded-full mx-2 shadow-sm" />
+              <div className="h-px bg-gray-300 flex-grow" />
+            </div>
           </div>
 
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden mb-12 py-4">
             <div
               ref={clientsRef}
-              className="flex gap-8 w-max py-10 will-change-transform"
+              className="flex gap-6 w-max will-change-transform items-center px-4"
               onMouseEnter={() => setClientsPaused(true)}
               onMouseLeave={() => setClientsPaused(false)}
             >
@@ -981,25 +1028,34 @@ export default function Hero() {
                 <div
                   key={index}
                   className="
-                    w-45 sm:w-55 md:w-60 pb-5
-                    h-25 sm:h-27.5 md:h-30
-                    bg-gray-50 rounded-xl
-                    shadow-sm hover:shadow-lg
+                    w-52 sm:w-60 md:w-72 
+                    h-32 sm:h-36 md:h-40
+                    bg-white rounded-xl
+                    border border-gray-100
+                    shadow-sm hover:shadow-md
                     transition-all duration-300
                     flex items-center justify-center
-                    shrink-0
+                    shrink-0 p-2 sm:p-3
                   "
                 >
                   <Image
                     src={logo}
                     alt="Client Logo"
-                    width={180}
-                    height={80}
-                    className="object-contain"
+                    width={220}
+                    height={140}
+                    className="object-contain max-h-full max-w-full mix-blend-multiply"
                   />
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-4">
+            <div className="h-px bg-gray-300 w-16 md:w-32" />
+            <p className="bg-[#eaf3ff] text-[#004e98] px-4 py-1.5 rounded-full font-semibold tracking-[0.2em] text-xs md:text-sm uppercase text-center shadow-sm">
+              TRUSTED BY INDUSTRY LEADERS
+            </p>
+            <div className="h-px bg-gray-300 w-16 md:w-32" />
           </div>
         </div>
       </section>
@@ -1018,21 +1074,6 @@ export default function Hero() {
           </div>
 
           <div className="relative group">
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevSlide}
-              className="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 transition-all shadow-xl"
-            >
-              <ChevronLeft className="text-white" />
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 transition-all shadow-xl"
-            >
-              <ChevronRight className="text-white" />
-            </button>
-
             {/* Slider Wrapper */}
             <div
               className="overflow-hidden"
@@ -1040,20 +1081,13 @@ export default function Hero() {
               onMouseLeave={() => setIsPaused(false)}
             >
               <div
-                className="flex transition-transform duration-700 ease-in-out"
-                style={{
-                  transform: `translateX(-${
-                    currentIndex *
-                    (typeof window !== "undefined" && window.innerWidth < 768
-                      ? 100
-                      : 33.333)
-                  }%)`,
-                }}
+                ref={testimonialsRef}
+                className="flex flex-nowrap w-max will-change-transform pb-8"
               >
-                {/* We map the testimonials + the first 3 again to fill the empty space at the end */}
-                {[...testimonials, ...testimonials.slice(0, 3)].map(
+                {/* We map the testimonials twice for an infinite seamless loop */}
+                {[...testimonials, ...testimonials].map(
                   (t, index) => (
-                    <div key={index} className="w-full md:w-1/3 px-4 shrink-0">
+                    <div key={index} className="w-[320px] sm:w-[380px] md:w-[420px] px-4 shrink-0">
                       <div className="group cursor-pointer relative mt-12 bg-white rounded-[2rem] p-6 pt-12 shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-center min-h-[320px]">
                         {/* Floating Google Icon - Slightly smaller */}
                         <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white rounded-full p-1 shadow-xl border-[5px] border-[#0a1120] flex items-center justify-center z-10">

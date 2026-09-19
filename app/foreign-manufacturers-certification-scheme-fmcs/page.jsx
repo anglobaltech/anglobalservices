@@ -83,43 +83,41 @@ export default function FMCSPage() {
         />
       </Head>
       <section
-        className="relative w-full h-55 md:h-65 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/service/isi/about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative w-full h-65 md:h-68 flex items-center justify-center"
+        style={{ backgroundImage: "url('/service/pages-of-services-dash-1.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <div className="absolute inset-0 bg-[#0a3d62]/30" />
+        <div className="absolute inset-0 bg-[#0a3d62]/40" />
 
-        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 uppercase leading-snug">
+        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-extrabold text-center px-4 uppercase leading-snug tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
           BIS FMCS Certification in India for Foreign Manufacturers (FMCS
           Registration & ISI Mark)
         </h1>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
-                src="/service/bis-fmcs-certificate.png"
+                src="/service/bis-isi-mark-for-fmcs-certificate-3.webp"
                 alt="BIS FMCS Certification in India for Foreign Manufacturers ISI Mark"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-6">
             <div>
-              <h2 className="text-xl font-bold uppercase text-gray-900 ">
+              <h2 className="text-xl font-bold uppercase text-gray-900 leading-snug md:leading-normal">
                 BIS Mark under Foreign Manufacturers Certification Scheme (FMCS)
               </h2>
-              <div className="w-full h-0.5 bg-[#0072b1]  mb-2" />
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
+              <div className="w-full h-0.5 bg-gray-200 relative mb-4">
+                <span className="absolute left-0 top-0 h-0.5 w-80 bg-[#0072b1]" />
+              </div>
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
                 BIS FMCS Certification in India (Foreign Manufacturers
                 Certification Scheme) is a mandatory compliance requirement for
                 foreign manufacturers who want to export products to India. The
@@ -138,10 +136,8 @@ export default function FMCSPage() {
                 the use of the ISI Mark on products that conform to applicable
                 Indian Standards.
               </p>
-            </div>
 
-            <div>
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
                 FMCS is the overseas extension of the ISI Certification Scheme
                 under Scheme-I, applicable to manufacturers located outside
                 India, as it ensures uniform compliance across both foreign and
@@ -151,7 +147,7 @@ export default function FMCSPage() {
                 manufacturers are required to appoint an Authorized Indian
                 Representative (AIR) who acts as a local point of contact for
                 BIS and is responsible for regulatory coordination and legal
-                compliance. AN Global Services provides end-to-end assistance in
+                compliance. <strong className="text-[#0072b1]">AN Global Services</strong> provides end-to-end assistance in
                 FMCS certification, including AIR support and liaison with BIS
                 authorities.
               </p>

@@ -691,14 +691,129 @@ export const foodIngredients = [
     ]
   },
   {
+    "id": 16,
+    "name": "Saputo Whey Protein Concentrate 80% Instantized",
+    "make": "Saputo Cheese USA Inc.",
+    "category": "Protein Supplement",
+    "badge": "USA Import",
+    "badgeColor": "bg-blue-100 text-blue-800",
+    "image": "/food-items/saputo-whey-protein.webp",
+    "secondaryImage": "/food-items/saputo-whey-protein-2.webp",
+    "tagline": "Premium USA Sourced Whey Protein.",
+    "intro": "Saputo Whey Protein Concentrate 80% Instantized is a top-tier dairy protein manufactured in the USA, designed for superior solubility and excellent nutritional profile.",
+    "description": "Manufactured by Saputo Cheese USA Inc. in Tulare, California, this premium Instantized Whey Protein Concentrate (WPC 80) is highly sought after by commercial food and sports nutrition manufacturers across India. With a guaranteed minimum protein content of 80% on a dry matter basis, it provides the essential building blocks for high-quality protein powders, nutritional bars, and clinical health supplements. \n\nThe instantization process utilizing trace amounts of soy lecithin guarantees rapid and completely clump-free dispersion, drastically improving the blending and consumer experience. Certified Kosher and Halal, Saputo WPC 80 is a highly versatile and clean-label ingredient. Supplied in original 15 Kg (33.1 LBS) multi-wall kraft bags directly imported from the USA, this high-performance whey protein serves as a highly reliable, bioavailable, and rapidly digesting protein source for advanced formulations.",
+    "highlights": [
+      "Protein (Dry Matter) ≥ 80.0%",
+      "Fat ≥ 2.0% and Carbohydrate ≥ 2.0%",
+      "Imported directly from the USA (Saputo Cheese USA Inc.)"
+    ],
+    "applications": "Sports nutrition, protein blends, clinical nutrition, beverages, health supplements",
+    "tags": [
+      "Imported",
+      "USA Origin",
+      "Food Grade",
+      "Kosher",
+      "Halal"
+    ],
+    "specs": [
+      {
+        "label": "Form",
+        "value": "Powder"
+      },
+      {
+        "label": "Pack Size",
+        "value": "15 Kg / 33.1 LBS Bag"
+      },
+      {
+        "label": "Origin",
+        "value": "USA (California)"
+      },
+      {
+        "label": "Protein (Dry Matter)",
+        "value": "≥ 80.0%"
+      },
+      {
+        "label": "Fat",
+        "value": "≥ 2.0%"
+      },
+      {
+        "label": "Carbohydrate",
+        "value": "≥ 2.0%"
+      },
+      {
+        "label": "Crude Fibre",
+        "value": "≤ 0.0%"
+      }
+    ],
+    "manufacturer": {
+      "name": "Saputo Cheese USA Inc."
+    },
+    "trade": [
+      {
+        "label": "Minimum Order",
+        "value": "100 Kg"
+      },
+      {
+        "label": "Market",
+        "value": "All India"
+      }
+    ],
+    "slug": "saputo-whey-protein-concentrate-80-instantized",
+    "seoTitle": "Buy Saputo Whey Protein Concentrate 80% Instantized | Premium USA Imported WPC 80 Supplier in India",
+    "seoDescription": "Saputo Whey Protein Concentrate 80% Instantized, manufactured by Saputo Cheese USA Inc. Premium USA-imported WPC 80 for sports nutrition. Top bulk supplier in India.",
+    "nutritionalProfile": [
+      {
+        "label": "Protein (Dry Matter)",
+        "value": "≥ 80.0%"
+      },
+      {
+        "label": "Fat",
+        "value": "≥ 2.0%"
+      },
+      {
+        "label": "Carbohydrate",
+        "value": "≥ 2.0%"
+      },
+      {
+        "label": "Crude Fibre",
+        "value": "≤ 0.0%"
+      }
+    ],
+    "benefits": [
+      "Premium USA Dairy: Sourced directly from Saputo Cheese USA Inc., representing the highest standard of American dairy manufacturing.",
+      "Instantized Formula: Enhanced with soy lecithin to ensure instant, clump-free mixing in cold liquids and automated blending.",
+      "High Biological Value: Contains an excellent amino acid profile that rapidly accelerates muscle recovery and protein synthesis.",
+      "Clean-Label & Compliant: Fully Kosher and Halal certified, meeting strict international and domestic regulatory standards.",
+      "Versatile Commercial Use: Perfectly suited for mass gainers, premium whey blends, nutritional bars, and clinical health formulations."
+    ],
+    "manufacturingProcess": "Saputo WPC 80 Instantized is expertly produced at Saputo's advanced plant in Tulare, California. The process begins with fresh, high-quality sweet cheese whey, which undergoes rigorous low-temperature ultrafiltration to carefully concentrate the valuable whey proteins while removing excess lactose and minerals.\n\nThe resulting concentrated protein liquid is delicately spray-dried in commercial chambers specifically calibrated to preserve the structural integrity of the sensitive whey microfractions. During this advanced drying phase, trace amounts of soy lecithin are meticulously applied in an agglomeration process. This critical instantization step massively improves the powder's flowability, bulk density, and cold-water dispersibility, ensuring a premium consumer mixing experience.\n\nFinally, the product is packaged in high-grade 15 Kg multi-wall kraft paper bags, engineered to completely prevent moisture ingress and safeguard against contamination during trans-global shipping. Saputo’s strict quality control protocols ensure maximum compliance with global food safety standards.",
+    "faqs": [
+      {
+        "question": "Is Saputo WPC 80 imported directly from the USA?",
+        "answer": "Yes, this highly premium whey protein concentrate is manufactured by Saputo Cheese USA Inc. and directly imported into India under strict FSSAI compliance."
+      },
+      {
+        "question": "What does 'Instantized' mean for my formulations?",
+        "answer": "The instantization process (using soy lecithin) ensures that the powder disperses and dissolves rapidly in liquids without forming clumps, making it absolutely perfect for ready-to-mix sports supplements."
+      },
+      {
+        "question": "Does this product have international certifications?",
+        "answer": "Yes, Saputo WPC 80 is both Kosher (KD) and Halal certified, ensuring broad consumer acceptability and strict manufacturing compliance."
+      },
+      {
+        "question": "What is the commercial bulk packaging size?",
+        "answer": "It is supplied in its original 15 Kg (33.1 LBS) multi-wall kraft paper bag, providing optimal protection during shipping and long-term storage."
+      }
+    ]
+  },
+  {
     "id": 6,
-    "name": "Sunpro Instant Protein Concentrate\nInstant WPC 80",
+    "name": "Sunpro Instant Protein Concentrate WPC 80",
     "make": "Saputo Dairy Australia Pty Ltd",
     "category": "Protein Supplement",
     "badge": "Imported",
     "badgeColor": "bg-blue-100 text-blue-800",
     "image": "/food-items/sunpro-whey-protein-concentrate-wpc-80.webp",
-    "secondaryImage": "/food-items/saputo-whey-protein.webp",
     "tagline": "Premium Australian Whey Protein.",
     "intro": "Sunpro Instant Protein Concentrate WPC 80 by Saputo Dairy Australia is a premium dairy protein imported from Australia, available for immediate supply.",
     "description": "This WPC 80 Instantized protein is manufactured by Saputo Dairy Australia. It delivers consistent batch quality and meets global microbiological and compositional standards for industrial and nutritional applications. Previous batch COA is available for quality reference. The latest batch COA, batch details, and packing photos will be shared before dispatch.\n\nSourced directly from the lush, pasture-based dairy farms of Australia, Sunpro WPC 80 is a highly sought-after functional protein ingredient for the global sports nutrition and FMCG sectors. As consumer demand for clean-label, grass-fed dairy protein continues to skyrocket, formulating your products with Australian-imported Sunpro guarantees a massive competitive edge. Recognized for its exceptionally rich flavor profile, superior amino acid retention, and brilliant cold-water dispersibility, it serves as the ultimate bioavailable raw material for commercial mass gainers, premium protein powders, and fortified clinical nutrition blends.",
@@ -1186,7 +1301,7 @@ export const foodIngredients = [
     "category": "Preservatives",
     "badge": "Imported",
     "badgeColor": "bg-green-100 text-green-800",
-    "image": "",
+    "image": "/food-items/potassium-sorbate.webp",
     "tagline": "Premium Food Preservative & Antimicrobial Agent.",
     "intro": "Potassium Sorbate is a highly effective food preservative widely used in the food and beverage industry to inhibit the growth of mold, yeast, and fungi, extending product shelf life.",
     "description": "Sourced from Henan EME Technology Co., Ltd. (China), our high-quality Potassium Sorbate is supplied in 25 kg bags with pallets, ensuring reliable bulk supply for large-scale manufacturing.\n\nAs a highly soluble, white granular powder, it is recognized globally for its exceptional stability (Assay 99.0-101.0%) and safety profile. Formulating with our premium Potassium Sorbate provides a highly effective method to protect the integrity, taste, and freshness of commercial baked goods, beverages, dairy products, and processed meats against microbial spoilage.",
@@ -1258,7 +1373,7 @@ export const foodIngredients = [
     "category": "Nutrient Additives",
     "badge": "Imported",
     "badgeColor": "bg-amber-100 text-amber-800",
-    "image": "",
+    "image": "/food-items/vital-wheat-gluten.webp",
     "tagline": "High-Protein Dough Conditioner & Binder.",
     "intro": "Vital Wheat Gluten is a premium natural protein derived from wheat flour, highly valued in the baking and food processing industries for its exceptional elasticity, water absorption, and binding properties.",
     "description": "Sourced directly from Guanxian Xinrui Industrial Co., Ltd. in Shandong, China, our Vital Wheat Gluten is a light yellow, free-flowing powder with a high protein content exceeding 82%. It is supplied in 25 kg bags, ideal for bulk commercial use.\n\nWith an outstanding water absorption rate of over 150%, it significantly improves dough strength, elasticity, and shelf life in baked goods. Beyond baking, it serves as an essential, highly effective vegetarian protein binder in meat substitutes, noodles, and pet food formulations.",
@@ -1330,7 +1445,7 @@ export const foodIngredients = [
     "category": "Plant Protein",
     "badge": "Imported",
     "badgeColor": "bg-green-100 text-green-800",
-    "image": "",
+    "image": "/food-items/pea-protein-80.webp",
     "tagline": "Premium Vegan Protein Source.",
     "intro": "Pea Protein (80%) is a highly digestible, plant-based protein isolate widely used in sports nutrition, vegan foods, and health supplements.",
     "description": "Sourced from Shandong Jindu Talin Foods Co., Ltd. in China, our premium Pea Protein (80%) offers a clean, neutral taste and excellent nutritional profile. Supplied in 20 kg bags, it is highly sought after by commercial manufacturers formulating vegan and hypoallergenic products.\n\nBoasting a high protein content of over 80% on a dry basis, it provides a complete amino acid profile rich in BCAAs. It is the perfect foundational ingredient for plant-based meat alternatives, vegan protein powders, and fortified baked goods, offering superior solubility and texture.",
@@ -1402,7 +1517,7 @@ export const foodIngredients = [
     "category": "Plant Protein",
     "badge": "Imported",
     "badgeColor": "bg-yellow-100 text-yellow-800",
-    "image": "",
+    "image": "/food-items/isolated-soy-protein.webp",
     "tagline": "High-Purity NON-GMO Vegan Protein.",
     "intro": "Isolated Soy Protein is a highly refined, premium plant-based protein extracted from NON-GMO soybeans, renowned for its exceptional protein density and functional binding properties.",
     "description": "Sourced from Shandong Kawah Oils Co., Ltd. (Xinrui Group) in China, our premium Isolated Soy Protein is derived strictly from NON-GMO soybeans. Supplied in 20 kg multi-wall, poly-lined paper bags, this light yellow powder is a staple ingredient for large-scale food processors and nutrition brands.\n\nWith an outstanding crude protein content exceeding 90% on a dry basis, it provides unmatched nutritional fortification. Beyond its nutritional value, it possesses excellent emulsification, water-binding, and gel-forming capabilities, making it an essential structural component in processed meats, vegan alternatives, and protein shakes.",
@@ -1475,7 +1590,7 @@ export const foodIngredients = [
     "category": "Sports Nutrition",
     "badge": "Imported",
     "badgeColor": "bg-blue-100 text-blue-800",
-    "image": "",
+    "image": "/food-items/creatine-monohydrate.webp",
     "tagline": "Ultra-Pure 200 Mesh Performance Enhancer.",
     "intro": "Creatine Monohydrate is a highly researched, extremely pure sports nutrition supplement proven to increase power output, muscle endurance, and cellular hydration.",
     "description": "Manufactured by Inner Mongolia Chengxin Yongan Chemical Co., Ltd. in China, our Creatine Monohydrate is an ultra-pure, 200 mesh fine powder designed for premium sports nutrition brands. It offers a flawless 100% assay on a dry basis, guaranteeing maximum potency and efficacy.\n\nWith exceptionally low impurity profiles (Creatinine at just 24ppm and Dicyandiamide at 21ppm), this raw material ensures rapid absorption and complete safety. Its ultra-fine particle size and excellent flowability (Bulk density 500g/L) make it the perfect foundational ingredient for high-end pre-workouts, mass gainers, and pure creatine supplements.",

@@ -13,24 +13,24 @@ export default function LaboratoryServices() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="BIS ISI Certification Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               LABORATORY EQUIPMENT AND SETUP
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-1 xl:grid-cols-2 gap-10 lg:gap-14 items-start">
-        <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
-          <div className="rounded-xl overflow-hidden shadow-md bg-white">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div className="w-full max-w-[550px] mx-auto xl:w-[604px] xl:max-w-none xl:float-left xl:mr-14 xl:mb-6">
+          <div className="rounded-xl overflow-hidden shadow-md bg-white mb-10 xl:mb-0">
             <Image
               src="/service/laboratory-equipment-and-setup-services-2.webp"
               alt="Laboratory Equipment and Setup Services"
@@ -42,10 +42,12 @@ export default function LaboratoryServices() {
           </div>
         </div>
 
-        <div className="xl:col-span-1">
-          <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
-          <div className="w-full h-0.5 bg-gray-200 relative mb-3">
-            <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
+        <div className="block">
+          <div className="flow-root">
+            <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
+            <div className="w-full h-0.5 bg-gray-200 relative mb-3">
+              <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
+            </div>
           </div>
           <div className="space-y-5 text-gray-500 leading-7 text-[15px] text-justify">
             <p>
@@ -82,18 +84,17 @@ export default function LaboratoryServices() {
               manufacturers who intend to set up the processing unit, to obtain
               the ISI mark from Bureau of India Standards.
             </p>
+
+            <p className="pt-2">
+              Unless the inspection is done by the staff, tests carried out by an independent lab and
+              official confirmation and license number are obtained, the unit can't commence commercial
+              production such Lab should be equipped to carry out all physical,
+              chemical and micro biological tests prescribed as per IS: 3025, and
+              has to be conducted by expert chemist/micro biologist.
+            </p>
           </div>
         </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-4 pb-12">
-        <p className="text-gray-500 text-[15px] leading-7 text-justify">
-          Unless the inspection is done by the staff, tests carried out by an independent lab and
-          official confirmation and license number are obtained, the unit can't commence commercial
-          production such Lab should be equipped to carry out all physical,
-          chemical and micro biological tests prescribed as per IS: 3025, and
-          has to be conducted by expert chemist/micro biologist.
-        </p>
+        <div className="clear-both"></div>
       </section>
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-10">
         <div className="mb-10">

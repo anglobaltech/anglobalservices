@@ -40,18 +40,18 @@ export default function LatestNotificationsPage() {
       {/* ===== HERO SECTION ===== */}
       <div className="relative w-full h-[250px]">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="Latest Notifications"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-          <div className="max-w-7xl mx-auto px-6 text-center">
-            <h1 className="text-white text-4xl uppercase font-bold">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-white text-4xl uppercase font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               Latest Notifications
             </h1>
-            <p className="text-gray-200 mt-3 max-w-2xl ">
+            <p className="mt-3 max-w-2xl text-white text-lg md:text-xl font-medium mt-3 drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               Stay updated with the latest BIS certification and Quality Control
               Order notifications.
             </p>
