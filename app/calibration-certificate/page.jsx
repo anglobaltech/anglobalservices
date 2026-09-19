@@ -68,29 +68,25 @@ export default function CalibrationCertificatePage() {
         }}
       />
       <section
-        className="relative h-70 md:h-70 flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/service/isi/about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative h-65 md:h-68 flex items-center justify-center"
+        style={{ backgroundImage: "url('/service/pages-of-services-dash-1.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <h1 className="relative z-10 text-white text-3xl md:text-4xl font-bold tracking-wide text-center px-4">
+        <div className="absolute inset-0 bg-[#0a3d62]/40" />
+        <h1 className="relative z-10 text-white text-3xl md:text-4xl font-extrabold tracking-wide text-center px-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
           CALIBRATION CERTIFICATE 
         </h1>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
-                src="/service/calibration-certificate-services.png"
+                src="/service/calibration-certificate-services-2.webp"
                 alt="NABL Calibration Certificate Services in India for ISO 17025 compliance"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
@@ -141,6 +137,10 @@ export default function CalibrationCertificatePage() {
                 </li>
                 <li>Is suitable for its intended measurement application</li>
               </ul>
+
+              <p className="text-gray-500 text-[15px] leading-6 text-justify pt-4">
+                Partnering with <strong className="text-[#0072b1]">AN Global Services</strong> ensures your measuring instruments meet stringent regulatory requirements. We deliver highly accurate, NABL-traceable calibration certificates that empower your business to confidently pass quality audits, maintain compliance, and optimize operational efficiency.
+              </p>
             </div>
           </div>
         </div>

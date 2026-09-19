@@ -223,19 +223,19 @@ export default function LeadPopup() {
   });
 
   useEffect(() => {
-    // 3. Stop the 10-second timer from even running if on these specific pages
+    // 3. Stop the 30-second timer from even running if on these specific pages
     if (isStudentPanel || isItServicesPage || isFoodIngredientsPage) return;
 
     const firstTimer = setTimeout(() => {
       setShow(true);
-    }, 10000);
+    }, 120000); // 2 minutes
 
     return () => clearTimeout(firstTimer);
   }, [pathname, isStudentPanel, isItServicesPage, isFoodIngredientsPage]);
 
   const closePopup = () => {
     setShow(false);
-    setTimeout(() => setShow(true), 70000);
+    setTimeout(() => setShow(true), 300000); // 5 minutes
   };
 
   const handleChange = (e) => {

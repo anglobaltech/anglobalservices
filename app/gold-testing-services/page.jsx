@@ -29,7 +29,7 @@ export const metadata = {
       "Gold Testing Services | XRF, Fire Assay & BIS Hallmark Verification",
     description:
       "Expert gold testing services for jewellery and bullion including XRF analysis, fire assay testing, karat verification, and BIS hallmark (HUID) validation.",
-    url: "https://www.anglobalservices.com/gold-testing",
+    url: "https://www.anglobalservices.com/gold-testing-services",
     siteName: "AN Global Services",
     locale: "en_IN",
     type: "website",
@@ -48,7 +48,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.anglobalservices.com/gold-testing",
+    canonical: "https://www.anglobalservices.com/gold-testing-services",
   },
 };
 export default function BISGoldTesting() {
@@ -57,15 +57,15 @@ export default function BISGoldTesting() {
       {/* HERO SECTION */}
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="Gold Testing Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               GOLD TESTING SERVICES
             </h1>
           </div>
@@ -73,26 +73,29 @@ export default function BISGoldTesting() {
       </section>
 
       {/* INTRO SECTION */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
-            <Image
-              src="/service/bis-gold-testing.png"
-              alt="BIS Gold Testing Process"
-              width={420}
-              height={520}
-              className="w-full h-auto object-cover"
-              priority
-            />
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-16 pb-6 md:pb-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
+              <Image
+                src="/testings/gold-testing-services-1.webp"
+                alt="Gold Testing Services"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col gap-0">
-            <h2 className="text-xl font-bold text-gray-900 uppercase">
-              Gold Testing & Purity Analysis
-            </h2>
-            <div className="w-88 h-0.5 bg-[#0072b1]" />
+          <div className="flex flex-col gap-4">
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 uppercase">
+                Gold Testing & Purity Analysis
+              </h2>
+              <div className="w-88 h-0.5 bg-[#0072b1] mt-2 mb-4" />
 
-            <p className="text-gray-600 text-[15px] leading-7 text-justify py-4">
+              <p className="text-gray-600 text-[15px] leading-7 text-justify pb-5">
               Gold testing is the process of determining the purity,
               composition, and authenticity of gold articles such as jewellery,
               coins, bullion, and other gold-based products. It plays a crucial
@@ -105,7 +108,7 @@ export default function BISGoldTesting() {
               exact proportion of pure gold present in the item.
             </p>
 
-            <p className="text-gray-600 text-[15px] leading-7 text-justify">
+            <p className="text-gray-600 text-[15px] leading-7 text-justify pb-5">
               In India, gold jewellery is regulated under the BIS (Bureau of
               Indian Standards) hallmarking system, which certifies purity
               levels such as 24K (999), 23K (958), 22K (916), 20K (833), 18K
@@ -118,6 +121,13 @@ export default function BISGoldTesting() {
               system enhances transparency and builds trust in the gold
               jewellery market.
             </p>
+
+            <p className="text-gray-600 text-[15px] leading-7 text-justify">
+              Our advanced laboratory facilities utilize state-of-the-art XRF technology 
+              and precise assaying methods to deliver highly accurate, non-destructive 
+              purity results in minutes, ensuring exact valuation and complete compliance.
+            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -125,11 +135,13 @@ export default function BISGoldTesting() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-10 space-y-8">
         {/* INTRO */}
         <div>
-          <h2 className="text-xl font-bold text-gray-900 uppercase">
-            Gold Testing Services – Complete Guide to Purity Analysis &
-            Verification
-          </h2>
-          <div className="w-65 md:w-205 h-0.5 bg-[#0072b1] mb-6" />
+          <div className="inline-block">
+            <h2 className="text-xl font-bold text-gray-900 uppercase">
+              Gold Testing Services – Complete Guide to Purity Analysis &
+              Verification
+            </h2>
+            <div className="w-full h-0.5 bg-[#0072b1] mb-6 mt-2" />
+          </div>
 
           <p className="text-gray-600 text-[15px] leading-7 text-justify mb-4">
             Gold testing is a scientific and standardized process used to

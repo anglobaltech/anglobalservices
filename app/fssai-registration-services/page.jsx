@@ -45,15 +45,15 @@ export default function FSSAIPage() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="FSSAI Registration Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               FSSAI REGISTRATION SERVICES
             </h1>
           </div>
@@ -61,15 +61,15 @@ export default function FSSAIPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 ">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
-                src="/service/fssai-registration-services.png"
+                src="/service/fssai-registration-services-2.webp"
                 alt="FSSAI Registration Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
@@ -104,15 +104,19 @@ export default function FSSAIPage() {
                 premises further boosts customer confidence and transparency.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-7 text-justify">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-4">
                 The FSSAI registration process is simple and mostly online.
                 Based on the size and turnover of the food business, applicants
                 may require Basic Registration, State License, or Central
                 License. With proper document verification and accurate
                 application filing, FSSAI registration can be completed quickly,
                 allowing businesses to operate legally and expand without
-                compliance risks.Timely registration and renewal also help avoid
-                penalties, business disruptions, and legal complications.
+                compliance risks. Timely registration and renewal also help
+                avoid penalties, business disruptions, and legal complications.
+              </p>
+
+              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+                Partnering with AN Global Services for your online FSSAI registration ensures seamless compliance and fast processing. Whether applying for a new food license or FSSAI renewal, our expert consultants provide end-to-end support to keep your food business legally secure and fully operational.
               </p>
             </div>
           </div>

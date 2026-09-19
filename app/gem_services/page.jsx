@@ -14,15 +14,15 @@ export default function GemServices() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="GEM Registration Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               GEM REGISTRATION SERVICES
             </h1>
           </div>
@@ -30,9 +30,9 @@ export default function GemServices() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 xl:grid-cols-[450px_1fr] gap-10 xl:gap-12 items-start">
-          <div className="w-full max-w-[450px] mx-auto xl:max-w-none xl:col-span-1">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
                 src="/service/government-e-marketplace-GeM-services-2.webp"
                 alt="GeM Registration Services"
@@ -101,6 +101,12 @@ export default function GemServices() {
                 <li>
                   Flexible and dynamic pricing based on market demand and
                   competition.
+                </li>
+                <li>
+                  Increased business visibility to secure government orders via GeM.
+                </li>
+                <li>
+                  Simplified digital procurement with transparent order tracking.
                 </li>
               </ul>
             </div>

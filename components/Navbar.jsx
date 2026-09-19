@@ -271,6 +271,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, FileText, ChevronRight, ShoppingCart } from "lucide-react";
 
 import { servicesMenu } from "@/data/services";
@@ -289,6 +290,7 @@ const foodMenu = [
         subItems: [
           { name: "Whey Protein Concentrate 80 Instant (ENTC)", slug: "food-ingredients/whey-protein-concentrate-80-instant-entc", root: true },
           { name: "Whey Protein Concentrate 80 Instant (Valley Queen)", slug: "food-ingredients/whey-protein-concentrate-80-instant-valley-queen", root: true },
+          { name: "Saputo Whey Protein Concentrate 80% Instantized", slug: "food-ingredients/saputo-whey-protein-concentrate-80-instantized", root: true },
           { name: "Sunpro Instant Protein Concentrate Instant WPC 80", slug: "food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80", root: true }
         ]
       },
@@ -314,6 +316,7 @@ const foodMenu = [
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [activeMobile, setActiveMobile] = useState(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleOpenServices = () => {
@@ -345,26 +348,26 @@ export default function Navbar() {
           
           {/* CHANGED: Switched to justify-between to anchor HOME on the far-left and STUDENT PANEL on the far-right symmetrically */}
           <ul className="hidden lg:flex items-center justify-between text-white text-[9px] xl:text-[12px] 2xl:text-sm font-semibold w-full">
-            <NavLink href="/" label="HOME" />
-            <NavLink href="/aboutus" label="ABOUT US" />
+            <NavLink href="/" label="HOME" pathname={pathname} />
+            <NavLink href="/aboutus" label="ABOUT US" pathname={pathname} />
 
-            {/* <DesktopDropdown title="SERVICES" menu={servicesMenu} isPrimary={true} /> */}
-            <DesktopDropdown title="SERVICES" menu={servicesMenu} />
-
+            <DesktopDropdown title="SERVICES" menu={servicesMenu} isPrimary={true} pathname={pathname} />
             <DesktopDropdown
               title="TESTINGS"
               menu={testingMenu}
+              pathname={pathname}
             />
             <DesktopDropdown
               title="EQUIPMENTS & MACHINERY"
               menu={equipmentMenu}
+              pathname={pathname}
             />
-            <DesktopDropdown title="UPDATES" menu={updatesMenu} />
+            <DesktopDropdown title="UPDATES" menu={updatesMenu} pathname={pathname} />
 
-            <NavLink href="/contact-us" label="CONTACT US" />
-            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" align="right" />
-            <NavLink href="/it-services-and-solutions" label="IT SERVICES" />
-            <NavLink href="/student-panel" label="STUDENT PANEL" />
+            <NavLink href="/contact-us" label="CONTACT US" pathname={pathname} />
+            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" align="right" pathname={pathname} isFeatured={true} />
+            <NavLink href="/it-services-and-solutions" label="IT SERVICES" pathname={pathname} />
+            <NavLink href="/student-panel" label="STUDENT PANEL" pathname={pathname} />
           </ul>
 
           <button
@@ -395,11 +398,12 @@ export default function Navbar() {
             </div>
 
             <ul className="text-sm font-semibold">
-              <MobileLink label="HOME" href="/" close={setMobileMenu} />
+              <MobileLink label="HOME" href="/" close={setMobileMenu} pathname={pathname} />
               <MobileLink
                 label="ABOUT US"
                 href="/aboutus"
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileAccordion
@@ -408,6 +412,7 @@ export default function Navbar() {
                 active={activeMobile}
                 setActive={setActiveMobile}
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileAccordion
@@ -416,6 +421,7 @@ export default function Navbar() {
                 active={activeMobile}
                 setActive={setActiveMobile}
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileAccordion
@@ -424,6 +430,7 @@ export default function Navbar() {
                 active={activeMobile}
                 setActive={setActiveMobile}
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileAccordion
@@ -432,12 +439,14 @@ export default function Navbar() {
                 active={activeMobile}
                 setActive={setActiveMobile}
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileLink
                 label="CONTACT US"
                 href="/contact-us"
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileAccordion
@@ -446,18 +455,21 @@ export default function Navbar() {
                 active={activeMobile}
                 setActive={setActiveMobile}
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileLink
                 label="IT SERVICES"
                 href="/it-services-and-solutions"
                 close={setMobileMenu}
+                pathname={pathname}
               />
 
               <MobileLink
                 label="STUDENT PANEL"
                 href="/student-panel"
                 close={setMobileMenu}
+                pathname={pathname}
               />
             </ul>
           </div>
@@ -467,7 +479,22 @@ export default function Navbar() {
   );
 }
 
-function DesktopDropdown({ title, menu, href, align = "left", isPrimary }) {
+function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatured, pathname }) {
+  // Check if any child page in this dropdown is currently active
+  const isChildActive = menu.some((group) =>
+    group.items.some((item) => {
+      const itemPath = item.root ? `/${item.slug}` : `/services/${item.slug}`;
+      if (pathname === itemPath) return true;
+      // Check sub-menu items too
+      if (item.isSubMenu && item.subItems) {
+        return item.subItems.some((sub) => {
+          const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
+          return pathname === subPath;
+        });
+      }
+      return false;
+    })
+  );
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -508,7 +535,13 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary }) {
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#0075B6] shadow-[0_0_6px_#0075B6]"></span>
         </span>
       )}
-      <span className="flex items-center gap-1">
+      {isFeatured && (
+        <span className="relative flex h-2 w-2 mr-1.5 mt-0.5">
+          <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_5px_#ffffff]"></span>
+        </span>
+      )}
+      <span className="flex items-center gap-1 relative z-10">
         {title}
         <ChevronDown size={14} className="shrink-0" />
       </span>
@@ -516,7 +549,12 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary }) {
   );
 
   const primaryClasses = "bg-white text-[#004e7a] px-4 py-1.5 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5";
+  const featuredClasses = "bg-white/10 backdrop-blur-md border border-white/50 text-white px-5 py-1.5 rounded-full font-bold shadow-sm hover:bg-white/20 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:-translate-y-0.5 transition-all duration-300";
   const defaultClasses = "hover:text-black";
+  const activeIndicator = isChildActive ? "border-b-2 border-white pb-1 text-yellow-300" : "";
+  
+  const currentButtonClass = isPrimary ? primaryClasses : isFeatured ? featuredClasses : defaultClasses;
+  const currentIndicator = (!isPrimary && !isFeatured) ? activeIndicator : "";
 
   return (
     <li 
@@ -526,11 +564,11 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary }) {
       onMouseLeave={() => setIsOpen(false)}
     >
       {href ? (
-        <Link href={href} className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${isPrimary ? primaryClasses : defaultClasses}`}>
+        <Link href={href} className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${currentButtonClass} ${currentIndicator}`}>
           {buttonContent}
         </Link>
       ) : (
-        <span className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${isPrimary ? primaryClasses : defaultClasses}`}>
+        <span className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${currentButtonClass} ${currentIndicator}`}>
           {buttonContent}
         </span>
       )}
@@ -657,12 +695,25 @@ function MobileNestedAccordion({ item, close }) {
   );
 }
 
-function MobileAccordion({ title, menu, active, setActive, close }) {
+function MobileAccordion({ title, menu, active, setActive, close, pathname }) {
+  const isChildActive = menu.some((group) =>
+    group.items.some((item) => {
+      const itemPath = item.root ? `/${item.slug}` : `/services/${item.slug}`;
+      if (pathname === itemPath) return true;
+      if (item.isSubMenu && item.subItems) {
+        return item.subItems.some((sub) => {
+          const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
+          return pathname === subPath;
+        });
+      }
+      return false;
+    })
+  );
   const open = active === title;
 
   return (
     <li className="border-b border-white/10">
-      <button className="w-full flex items-center justify-between px-4 py-3"
+      <button className={`w-full flex items-center justify-between px-4 py-3 ${isChildActive ? "bg-[#0075B6]/40 text-yellow-300 border-l-4 border-yellow-300" : ""}`}
         onClick={() => setActive(open ? null : title)}
       >
         {title}
@@ -708,23 +759,25 @@ function MobileAccordion({ title, menu, active, setActive, close }) {
   );
 }
 
-function NavLink({ href, label }) {
+function NavLink({ href, label, pathname }) {
+  const isActive = href === "/" ? pathname === "/" : pathname?.startsWith(href);
   return (
     <li>
-      <Link href={href} className="hover:text-black whitespace-nowrap">
+      <Link href={href} className={`hover:text-black whitespace-nowrap transition-all duration-200 ${isActive ? "border-b-2 border-white pb-1 text-yellow-300" : ""}`}>
         {label}
       </Link>
     </li>
   );
 }
 
-function MobileLink({ href, label, close }) {
+function MobileLink({ href, label, close, pathname }) {
+  const isActive = href === "/" ? pathname === "/" : pathname?.startsWith(href);
   return (
     <li className="border-b border-white/10">
       <Link
         href={href}
         onClick={() => close(false)}
-        className="block px-4 py-3"
+        className={`block px-4 py-3 ${isActive ? "bg-[#0075B6]/40 text-yellow-300 border-l-4 border-yellow-300" : ""}`}
       >
         {label}
       </Link>

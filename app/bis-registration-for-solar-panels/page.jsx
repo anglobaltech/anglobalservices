@@ -31,45 +31,45 @@ export default function BISRegistrationForSolarPanelsPage() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="BIS ISI Certification Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               SOLAR PANEL BIS REGISTRATION
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-16 pb-6 md:pb-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
                 src="/service/bis-registration-solar-panel-2.webp"
                 alt="BIS Certification"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
             <div>
               <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
 
-              <div className="w-full h-0.5 bg-gray-200 relative mb-4">
+              <div className="w-full h-0.5 bg-gray-200 relative mb-3">
                 <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
               </div>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 Solar panels are energy-generating devices that capture sunlight
                 and convert it into electricity through the photovoltaic effect.
                 A solar (photovoltaic) panel is made up of multiple solar cells
@@ -78,7 +78,7 @@ export default function BISRegistrationForSolarPanelsPage() {
                 industrial use.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 To strengthen quality control and promote domestic
                 manufacturing, the Ministry of New & Renewable Energy (MNRE)
                 introduced the Compulsory Registration Scheme (CRS) for solar
@@ -88,7 +88,7 @@ export default function BISRegistrationForSolarPanelsPage() {
                 self-reliance in the renewable energy sector.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 On August 30, 2017, MNRE officially notified mandatory
                 certification requirements for solar photovoltaic products.
                 Under this framework, BIS certification became essential to
@@ -96,13 +96,13 @@ export default function BISRegistrationForSolarPanelsPage() {
                 electrical safety, performance, and long-term durability.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 MNRE has also advised financial institutions and funding
                 agencies to prefer BIS-certified solar products while approving
                 or financing solar projects. As a result, BIS certification is
                 no longer just a regulatory formality but a key requirement for
                 manufacturers aiming to build trust, secure funding, and access
-                large-scale solar projects.
+                large-scale solar projects. Partnering with <strong className="text-[#0072b1]">AN Global Services</strong> ensures your registration is handled flawlessly, providing you with swift approvals and a major competitive advantage in the market. We provide end-to-end guidance, from meticulous documentation and laboratory testing coordination to the final grant of your BIS license.
               </p>
             </div>
           </div>

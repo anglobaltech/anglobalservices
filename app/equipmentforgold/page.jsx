@@ -11,15 +11,15 @@ export default function GoldTestingEquipmentPage() {
     <main className="bg-white">
       <section className="relative w-full h-64 md:h-72">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="Gold Testing Laboratory Equipment"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/55 flex items-center">
-          <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-white text-3xl md:text-4xl font-bold leading-tight">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold leading-tight tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               GOLD TESTING EQUIPMENT FOR BIS HALLMARKING LAB
             </h1>
           </div>

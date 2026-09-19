@@ -133,7 +133,7 @@ export default async function DynamicBlogPage({ params }) {
 
       {/* --- HERO IMAGE SECTION --- */}
       <section className="max-w-7xl mx-auto px-6 py-6 md:py-10">
-        <div className="relative w-full aspect-video max-h-[480px] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 flex items-center justify-center">
+        <div className="relative w-full aspect-video max-h-[480px] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white flex items-center justify-center">
           <Image
             src={safeHeroImage}
             alt={blog.seo?.mainImageAlt || blog.title}

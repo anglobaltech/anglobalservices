@@ -30,47 +30,47 @@ export default function SolarPage() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="Solar Plant Setup Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               SOLAR PLANT SETUP & TESTING SERVICES
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-16 pb-6 md:pb-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
-                src="/service/solar-panel-plant-setup.png"
+                src="/service/bis-certificate-for-solar-panel-plant-setup-2.webp"
                 alt="Solar Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
             <div>
               <h2 className="text-xl font-bold text-gray-900 uppercase">
                 Introduction to Solar Panel Plant Setup Services
               </h2>
 
-              <div className="w-full h-0.5 bg-gray-200 relative mb-6">
-                <span className="absolute left-0 top-0 h-0.5 w-40 md:w-147 bg-[#0072b1]" />
+              <div className="w-full h-0.5 bg-gray-200 relative mb-3">
+                <span className="absolute left-0 top-0 h-0.5 w-60 md:w-80 bg-[#0072b1]" />
               </div>
 
-              <p className="text-gray-500 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 Our Solar Panel Plant Setup Services provide a complete
                 end-to-end solution covering engineering, procurement,
                 construction, testing, and commissioning of solar power plants.
@@ -80,7 +80,7 @@ export default function SolarPage() {
                 and ground-mounted projects.
               </p>
 
-              <p className="text-gray-500 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 From detailed site assessment and feasibility studies to module
                 mounting, DC and AC cabling, earthing, inverter installation,
                 and SCADA integration, we manage every stage of the project in
@@ -88,7 +88,7 @@ export default function SolarPage() {
                 ensuring smooth execution and grid readiness.
               </p>
 
-              <p className="text-gray-500 text-[15px] leading-6 text-justify">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 Post-installation, we carry out comprehensive testing and
                 commissioning activities including insulation resistance
                 testing, polarity and continuity checks, IV curve analysis,
@@ -96,6 +96,10 @@ export default function SolarPage() {
                 approach ensures safe grid synchronization, optimal energy
                 generation, and long-term operational reliability of the solar
                 plant.
+              </p>
+
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
+                Partnering with <strong className="text-[#0072b1]">AN Global Services</strong> ensures your solar plant is built to exact specifications, securing all necessary regulatory approvals quickly and efficiently. Our dedicated team of experts provides continuous support from the initial blueprint stage right through to final grid connection, guaranteeing a seamless, hassle-free certification process. By prioritizing quality control and stringent safety measures, we help you maximize your return on investment and achieve long-term sustainability goals.
               </p>
             </div>
           </div>

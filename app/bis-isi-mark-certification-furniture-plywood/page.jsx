@@ -101,15 +101,11 @@ export default function FurnitureISI() {
   return (
     <main className="w-full bg-white">
       <section
-        className="relative h-70 md:h-70 flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/service/isi/about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative h-65 md:h-68 flex items-center justify-center"
+        style={{ backgroundImage: "url('/service/pages-of-services-dash-1.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <h1 className="relative z-10 text-white text-3xl md:text-4xl font-bold uppercase tracking-wide text-center px-4">
+        <div className="absolute inset-0 bg-[#0a3d62]/40" />
+        <h1 className="relative z-10 text-white text-3xl md:text-4xl font-extrabold uppercase tracking-wide text-center px-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
           BIS ISI Certification For Furniture & Plywood Products
         </h1>
       </section>

@@ -32,45 +32,45 @@ export default function WPCCertificationServicesPage() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="WPC Certification Services"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               WPC CERTIFICATE SERVICES
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-16 pb-6 md:pb-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
-                src="/service/wpc-registration-services.png"
-                alt=" WPC Certification Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                src="/service/wpc-registration-services-2.webp"
+                alt="WPC Certification Services"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             <div>
-              <h2 className="text-xl font-bold uppercase text-gray-900">
+              <h2 className="text-xl font-bold uppercase text-gray-900 leading-snug md:leading-normal">
                 What is WPC Certification?
               </h2>
               <div className="w-full h-0.5 bg-gray-200 relative mb-3">
-                <span className="absolute left-0 top-0 h-0.5 w-75 bg-[#0072b1]" />
+                <span className="absolute left-0 top-0 h-0.5 w-60 bg-[#0072b1]" />
               </div>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 WPC Certification is a mandatory legal approval required for all
                 wireless and radio frequency (RF) based products operating in
                 India. It is issued by the Wireless Planning & Coordination
@@ -81,20 +81,20 @@ export default function WPCCertificationServicesPage() {
                 sold, or used in the Indian market.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify mt-3">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 WPC certification can be considered the Indian equivalent of
                 international approvals such as FCC (USA) or CE (Europe).
                 Without valid WPC approval, wireless products are not permitted
-                for commercial distribution or operation in India.
+                for commercial distribution or operation in India. Partnering with <strong className="text-[#0072b1]">AN Global Services</strong> ensures your certification process is fast, transparent, and completely compliant with Indian telecommunication regulations.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold uppercase text-gray-900">
+              <h2 className="text-xl font-bold uppercase text-gray-900 leading-snug md:leading-normal">
                 Core Types of WPC Approvals
               </h2>
               <div className="w-full h-0.5 bg-gray-200 relative mb-3">
-                <span className="absolute left-0 top-0 h-0.5 w-87 bg-[#0072b1]" />
+                <span className="absolute left-0 top-0 h-0.5 w-70 bg-[#0072b1]" />
               </div>
 
               <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
@@ -103,18 +103,18 @@ export default function WPCCertificationServicesPage() {
                 commonly required approvals include:
               </p>
 
-              <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-1 pb-5">
+              <ul className="list-disc pl-6 text-[15px] text-gray-600 space-y-2 pb-2">
                 <li>
-                  ETA (Equipment Type Approval): Mandatory for devices operating
+                  <strong>ETA (Equipment Type Approval):</strong> Mandatory for devices operating
                   in de-licensed frequency bands such as 2.4 GHz and 5 GHz
                   (Wi-Fi, Bluetooth).
                 </li>
                 <li>
-                  Import License:Required to legally import wireless equipment
+                  <strong>Import License:</strong> Required to legally import wireless equipment
                   into India for commercial sale.
                 </li>
                 <li>
-                  DPL / NDPL: Dealer or Non-Dealer Possession License for
+                  <strong>DPL / NDPL:</strong> Dealer or Non-Dealer Possession License for
                   entities selling, distributing, or using radio equipment.
                 </li>
               </ul>

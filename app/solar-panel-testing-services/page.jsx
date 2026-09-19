@@ -14,41 +14,39 @@ export default function TestingSolarPanelPage() {
     <main className="w-full bg-white">
       <section
         className="relative w-full h-60 md:h-65 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/service/isi/about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        style={{ backgroundImage: "url('/service/pages-of-services-dash-1.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <div className="absolute inset-0 bg-[#0a3d62]/70" />
+        <div className="absolute inset-0 bg-[#0a3d62]/40" />
 
-        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 leading-snug">
+        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-extrabold text-center px-4 leading-snug tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
           TESTING SOLAR PANEL
         </h1>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-16 pb-6 md:pb-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
-                src="/service/solar-panel-testing.png"
-                alt="BIS Certification"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                src="/testings/solar-panel-testing-services-1.webp"
+                alt="Solar Panel Testing Services"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-12">
-            <div className="pt-5">
+          <div className="flex flex-col gap-4">
+            <div>
+            <div className="inline-block">
               <h2 className="text-xl font-bold text-gray-900">
-                How to Test Solar Panels - Accurately Measuring Solar Panel
+                How to Test Solar Panels - Accurately Measuring Solar Panel <br />
                 Output
               </h2>
-              <div className="w-170 h-0.5 bg-[#0072b1] mt-2 mb-4" />
+              <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-4" />
+            </div>
 
               <p className="text-gray-500 text-[15px] leading-7 text-justify pb-5">
                 Taking the time to test your solar panels is one of the best
@@ -59,24 +57,39 @@ export default function TestingSolarPanelPage() {
                 solar panels on a fairly regular basis.
               </p>
 
-              <p className="text-gray-500 text-[15px] leading-7 text-justify">
+              <p className="text-gray-500 text-[15px] leading-7 text-justify pb-5">
                 If you would like to know how to test solar panels, you have
                 come to the right place! We will explain how you would go about
                 measuring both solar panel amperage and current. We will also
                 explain how you can use a multimeter to test the voltage of your
-                solar panels
+                solar panels. Accurate diagnostics at this stage help you identify 
+                underperforming modules, ensuring your commercial or residential 
+                solar array achieves maximum energy yield and long-term financial returns.
+              </p>
+
+              <p className="text-gray-500 text-[15px] leading-7 text-justify">
+                Furthermore, precise solar panel testing is critical for securing mandatory 
+                BIS certification in India. Whether you are a domestic manufacturer or an 
+                international importer, comprehensive testing ensures your modules meet strict 
+                quality, durability, and safety standards. Accurate laboratory evaluations not 
+                only guarantee compliance but also build consumer trust by confirming that 
+                your solar panels will perform reliably under extreme weather conditions over 
+                their projected lifespan.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-8 space-y-10">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-8 space-y-12">
+        {/* IMPORTANCE */}
         <div>
-          <h2 className="text-xl md:text-xl font-semibold text-gray-900">
-            Why is it Important to Test Your Solar Panels?
-          </h2>
-          <div className="w-110 h-0.5 bg-[#0072b1] mt-2 mb-6 " />
+          <div className="inline-block">
+            <h2 className="text-xl md:text-xl font-semibold text-gray-900">
+              Why is it Important to Test Your Solar Panels?
+            </h2>
+            <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          </div>
 
           <p className="text-gray-500 text-[15px] leading-7 text-justify pb-5">
             The power rating of a solar panel is given by the manufacturer and
@@ -111,10 +124,12 @@ export default function TestingSolarPanelPage() {
         </div>
 
         <div>
-          <h2 className="text-xl md:text-xl font-semibold text-gray-900">
-            How to Test Solar Panel Output
-          </h2>
-          <div className="w-76 h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          <div className="inline-block">
+            <h2 className="text-xl md:text-xl font-semibold text-gray-900">
+              How to Test Solar Panel Output
+            </h2>
+            <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          </div>
 
           <p className="text-gray-500 text-[15px] leading-7 text-justify">
             Test your solar panels, you will need to perform a fairly simple
@@ -126,10 +141,12 @@ export default function TestingSolarPanelPage() {
         </div>
 
         <div>
-          <h2 className="text-xl md:text-xl font-semibold text-gray-900">
-            Start by Noting the Power Rating:
-          </h2>
-          <div className="w-80 h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          <div className="inline-block">
+            <h2 className="text-xl md:text-xl font-semibold text-gray-900">
+              Start by Noting the Power Rating:
+            </h2>
+            <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          </div>
 
           <p className="text-gray-500 text-[15px] leading-7 text-justify">
             One of the first things you will want to take note of is the actual
@@ -160,10 +177,12 @@ export default function TestingSolarPanelPage() {
         </div>
 
         <div>
-          <h2 className="text-xl md:text-xl font-semibold text-gray-900">
-            Measure the Solar Panel Amperage:
-          </h2>
-          <div className="w-85 h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          <div className="inline-block">
+            <h2 className="text-xl md:text-xl font-semibold text-gray-900">
+              Measure the Solar Panel Amperage:
+            </h2>
+            <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          </div>
 
           <p className="text-gray-500 text-[15px] leading-8 text-justify">
             To measure the amperage of your solar panel, you will need to use
@@ -181,10 +200,12 @@ export default function TestingSolarPanelPage() {
         </div>
 
         <div>
-          <h2 className="text-xl md:text-xl font-semibold text-gray-900">
-            Measure the Solar Panel Current:
-          </h2>
-          <div className="w-80 h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          <div className="inline-block">
+            <h2 className="text-xl md:text-xl font-semibold text-gray-900">
+              Measure the Solar Panel Current:
+            </h2>
+            <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          </div>
 
           <p className="text-gray-500 text-[15px] leading-8 text-justify">
             To measure the current, you can use a multimeter. Again, these
@@ -201,10 +222,12 @@ export default function TestingSolarPanelPage() {
         </div>
 
         <div>
-          <h2 className="text-xl md:text-xl font-semibold text-gray-900">
-            Calculating Solar Panel Output:
-          </h2>
-          <div className="w-75 h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          <div className="inline-block">
+            <h2 className="text-xl md:text-xl font-semibold text-gray-900">
+              Calculating Solar Panel Output:
+            </h2>
+            <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-6" />
+          </div>
 
           <p className="text-gray-500 text-[15px] leading-8 text-justify">
             As mentioned above, you will now want to make a quick calculation to
@@ -229,6 +252,50 @@ export default function TestingSolarPanelPage() {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl font-bold text-gray-900">
+            Frequently Asked Questions (FAQs)
+          </h2>
+        </div>
+
+        <div className="max-w-6xl mx-auto space-y-3">
+          {[
+            {
+              q: "Why is it important to test solar panels?",
+              a: "Testing ensures your panels are operating at their specified capacity, helping you optimize energy output, detect defects, and ensure long-term ROI on your solar investment.",
+            },
+            {
+              q: "Can I test my solar panels myself?",
+              a: "Yes, basic output testing can be done using a multimeter to measure voltage and amperage. However, comprehensive diagnostics like EL imaging require professional laboratory equipment.",
+            },
+            {
+              q: "How often should solar panels be tested?",
+              a: "It is recommended to test your system at least once a year, or whenever you notice an unexplained drop in your daily energy production.",
+            },
+            {
+              q: "Does weather affect solar panel testing?",
+              a: "Yes. For the most accurate baseline readings, you should test your panels under direct sunlight during peak sun hours on a clear day.",
+            },
+          ].map((item, i) => (
+            <details
+              key={i}
+              className="group bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-5 cursor-pointer"
+            >
+              <summary className="flex justify-between items-center font-medium text-gray-900 text-[16px]">
+                {item.q}
+                <span className="text-[#0072b1] text-xl group-open:rotate-45 transition">
+                  +
+                </span>
+              </summary>
+
+              <p className="mt-3 text-gray-600 text-[15px] leading-7">
+                {item.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
