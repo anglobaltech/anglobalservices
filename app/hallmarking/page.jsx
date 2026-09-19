@@ -421,7 +421,7 @@ export default function GoldHallmarkingPage() {
                     Hallmarking Fee
                   </td>
                   <td className="border border-gray-200 px-4 py-3 text-gray-600">
-                    ₹45.00 + GST
+                    ₹75.00 + GST
                   </td>
                   <td className="border border-gray-200 px-4 py-3 text-gray-600">
                     Standard rate for per piece gold items

@@ -235,7 +235,7 @@ export default function LeadPopup() {
 
   const closePopup = () => {
     setShow(false);
-    setTimeout(() => setShow(true), 300000); // 5 minutes
+    setTimeout(() => setShow(true), 420000); // 7 minutes
   };
 
   const handleChange = (e) => {
