@@ -40,17 +40,13 @@ export default function ChemicalsPetrochemicalsPage() {
   return (
     <main className="w-full bg-white">
       <section
-        className="relative w-full h-55 md:h-65 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/service/isi/about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative w-full h-65 md:h-68 flex items-center justify-center"
+        style={{ backgroundImage: "url('/service/pages-of-services-dash-1.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0a3d62]/70" />
+        <div className="absolute inset-0 bg-[#0a3d62]/40" />
 
-        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-bold text-center px-4 leading-snug">
+        <h1 className="relative z-10 text-white text-2xl md:text-4xl font-extrabold text-center px-4 leading-snug tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
           BIS Certification for Chemicals & Petrochemicals
         </h1>
       </section>
@@ -73,7 +69,7 @@ export default function ChemicalsPetrochemicalsPage() {
 
           <div className="flex flex-col gap-12">
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+              <h1 className="text-xl md:text-2xl font-bold text-gray-900 drop-shadow-lg tracking-wide">
                 Laboratory Equipment & Setup
               </h1>
               <div className="w-full h-0.5 bg-[#0072b1] mt-2 mb-4 " />

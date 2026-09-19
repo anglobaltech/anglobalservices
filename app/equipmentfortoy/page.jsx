@@ -98,14 +98,14 @@ export default function ToysTestingEquipment() {
       <section className="bg-linear-to-r from-gray-700 to-gray-600 text-white">
         <div className="relative w-full h-75">
           <Image
-            src="/service/isi/about.jpg"
+            src="/service/pages-of-services-dash-1.webp"
             alt="Latest Notifications"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 flex items-center">
-            <div className="max-w-7xl mx-auto px-6">
-              <h1 className="text-white text-4xl font-bold">
+          <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
+            <div className="max-w-7xl mx-auto">
+              <h1 className="text-white text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
                 TOYS TESTING & INSPECTION EQUIPMENT
               </h1>
             </div>

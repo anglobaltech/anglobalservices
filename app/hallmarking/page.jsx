@@ -38,43 +38,43 @@ export default function GoldHallmarkingPage() {
     <main className="w-full">
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="Gold Hallmarking BIS"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4 text-center">
-            <h1 className="text-white text-3xl md:text-3xl font-bold">
+            <h1 className="text-white text-3xl md:text-3xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               BIS HALLMARKING HUID (GOLD & SILVER) SETUP & REGISTRATION SERVICES
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="flex flex-col gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg bg-white">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-16 pb-6 md:pb-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="w-full max-w-[550px] mx-auto xl:max-w-none xl:col-span-1">
+            <div className="relative rounded-xl overflow-hidden shadow-md bg-white">
               <Image
                 src="/service/bis-hallmarking-huid-setup-2.webp"
                 alt="Gold Hallmarking Services"
-                width={420}
-                height={520}
-                className="w-full h-auto object-cover"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
             <div>
               <h2 className="text-xl font-bold text-gray-900">INTRODUCTION</h2>
-              <div className="w-full h-0.5 bg-gray-200 relative mb-6">
+              <div className="w-full h-0.5 bg-gray-200 relative mb-3">
                 <span className="absolute left-0 top-0 h-0.5 w-40 bg-[#0072b1]"></span>
               </div>
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 BIS Hallmarking is a crucial requirement for ensuring purity,
                 quality, and transparency in gold and silver jewellery. With the
                 introduction of the mandatory 6-digit HUID (Hallmark Unique
@@ -82,7 +82,7 @@ export default function GoldHallmarkingPage() {
                 operate legally and build customer trust.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 With the mandatory implementation of the 6-digit HUID (Hallmark
                 Unique Identification) system, adherence to BIS hallmarking
                 requirements has become essential for jewellers. BIS hallmarking
@@ -90,7 +90,7 @@ export default function GoldHallmarkingPage() {
                 confidence in precious metal jewellery.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-5">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 AN Global Services offer comprehensive support for the
                 establishment of Silver Hallmarking HUID Centre as well as BIS
                 Jeweller Registration, ensuring compliance with the latest
@@ -98,12 +98,16 @@ export default function GoldHallmarkingPage() {
                 Standards.
               </p>
 
-              <p className="text-gray-600 text-[15px] leading-6 text-justify">
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
                 Our services cover the complete process, including facility
                 planning, technical setup, documentation, coordination for
                 inspections, and licensing assistance, helping your jewellery
                 business remain compliant, transparent, and operationally
-                efficient.
+                efficient. Partnering with <strong className="text-[#0072b1]">AN Global Services</strong> ensures a fast, error-free setup, providing you with complete regulatory peace of mind from start to finish.
+              </p>
+
+              <p className="text-gray-600 text-[15px] leading-6 text-justify pb-2">
+                Whether you are establishing a new Assaying and Hallmarking Centre from the ground up or upgrading an existing facility to meet the latest HUID mandates, our expert consultants will guide you through every critical stage. We ensure your testing laboratory is equipped, calibrated, and officially recognized without unnecessary bureaucratic delays, enabling you to deliver certified purity to the market seamlessly.
               </p>
             </div>
           </div>
@@ -417,7 +421,7 @@ export default function GoldHallmarkingPage() {
                     Hallmarking Fee
                   </td>
                   <td className="border border-gray-200 px-4 py-3 text-gray-600">
-                    ₹45.00 + GST
+                    ₹75.00 + GST
                   </td>
                   <td className="border border-gray-200 px-4 py-3 text-gray-600">
                     Standard rate for per piece gold items

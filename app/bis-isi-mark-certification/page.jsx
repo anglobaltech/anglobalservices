@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import IsiProductsTable from "../../components/IsiProductsTable"; 
+import IsiProductsTable from "../../components/IsiProductsTable";
 
 export const revalidate = 86400;
 
@@ -174,19 +174,19 @@ export default function ISIPage() {
 
       <section className="relative w-full h-65 md:h-68">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="BIS ISI Certification Service"
           fill
           priority
-          className="object-cover "
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4 text-center">
-            <h1 className="text-white text-3xl  font-bold uppercase tracking-wide">
+            <h1 className="text-white text-3xl font-extrabold uppercase tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               ISI Certificate Process, Cost, Documents & Consultant Services
             </h1>
- 
-            <p className="text-gray-300 mt-4 text-md  max-w-3xl mx-auto leading-relaxed">
+
+            <p className="mt-4 text-md max-w-3xl mx-auto leading-relaxed text-white text-lg md:text-xl font-medium mt-3 drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               Expert ISI Certificate & BIS Certificate Consultants in India for
               manufacturers, importers & brand owners.
             </p>
@@ -770,7 +770,7 @@ export default function ISIPage() {
               />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                 Electrical & Electronics Products
+                  Electrical & Electronics Products
                 </h3>
                 <p className="text-sm text-gray-500">
                   Mandatory ISI marking for electronic & IT products.

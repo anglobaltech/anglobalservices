@@ -11,15 +11,15 @@ export default function FootwearTestingEquipmentPage() {
     <main className="w-full">
       <section className="relative w-full h-64 md:h-72">
         <Image
-          src="/service/isi/about.jpg"
+          src="/service/pages-of-services-dash-1.webp"
           alt="Footwear Testing Laboratory"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center">
+        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold">
+            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
               FOOTWEAR TESTING EQUIPMENT (BIS COMPLIANCE)
             </h1>
           </div>

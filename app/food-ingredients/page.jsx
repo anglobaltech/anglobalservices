@@ -89,19 +89,22 @@ export default function FoodIngredientsPage() {
 
                 {/* LEFT — VISUAL (Image or Premium Fallback) */}
                 <div
-                  className={`md:w-[32%] relative flex items-center justify-center overflow-hidden group ${hasImage ? `bg-gradient-to-br ${product.gradient || 'from-gray-50 to-gray-100'}` : ''}`}
+                  className={`md:w-[32%] relative flex items-center justify-center overflow-hidden group ${hasImage ? `bg-gradient-to-br ${product.gradient || fallback.bg}` : ''}`}
                   style={{ minHeight: "320px" }}
                 >
                   {hasImage ? (
                     <>
-                      <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]" />
-                      <div className="relative w-full h-full flex items-center justify-center z-10">
+                      <div className="absolute inset-0 opacity-10 mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '16px 16px' }}></div>
+                      <div className="absolute -top-12 -right-12 w-40 h-40 bg-white/60 rounded-full blur-2xl"></div>
+                      <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-black/5 rounded-full blur-2xl"></div>
+                      <div className="absolute inset-0 bg-white/20 backdrop-blur-[1px]" />
+                      <div className="relative w-full h-full flex items-center justify-center z-10 p-6">
                         <Image
                           src={product.image}
                           alt={product.name}
                           width={240}
-                          height={180}
-                          className="object-contain hover:scale-105 transition-transform duration-300"
+                          height={240}
+                          className="object-contain hover:scale-105 transition-transform duration-300 drop-shadow-xl"
                         />
                       </div>
                     </>

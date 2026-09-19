@@ -72,16 +72,16 @@ const newsUpdates = [
 export default function NewsUpdatesPage() {
   return (
     <div className="w-full bg-white">
-      <div className="relative w-full h-60">
+      <div className="relative w-full h-65 md:h-68">
              <Image
-               src="/service/isi/about.jpg"
+               src="/service/pages-of-services-dash-1.webp"
                alt="Latest Notifications"
                fill
                className="object-cover"
              />
-             <div className="absolute inset-0 bg-black/40 flex items-center">
-               <div className="max-w-7xl mx-auto px-6">
-                 <h1 className="text-white text-4xl font-bold">
+             <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center">
+               <div className="max-w-7xl mx-auto">
+                 <h1 className="text-white text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
                     NEWS & REGULATORY UPDATE
                  </h1>
                </div>

@@ -77,12 +77,12 @@ export default async function ProductPage({ params }) {
       <div className="min-h-screen bg-gray-50 flex flex-col">
         
         {/* ═══════════ 1. HERO BANNER ═══════════ */}
-        <section className="relative w-full bg-[#0a192f] pt-8 pb-16 overflow-hidden">
+        <section className="relative w-full bg-[#0a192f] pt-8 pb-8 lg:pb-16 overflow-hidden min-h-[calc(100vh-140px)] flex flex-col justify-center">
           <div className="absolute inset-0 z-0 opacity-20">
             <div className="absolute inset-0 bg-gradient-to-br from-[#0075B6]/30 via-transparent to-transparent" />
           </div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-400 mb-8 sm:mb-10 flex items-center gap-1.5 sm:gap-2 flex-wrap" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -97,7 +97,7 @@ export default async function ProductPage({ params }) {
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-[#60B5F0] text-xs font-bold tracking-widest uppercase mb-6 shadow-xl">
                   ★ {product.badge || product.category}
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg whitespace-pre-line">
+                <h1 className={`text-3xl md:text-4xl ${product.name.length > 25 ? 'lg:text-4xl xl:text-5xl' : 'lg:text-5xl xl:text-6xl'} font-extrabold text-white leading-tight mb-6 drop-shadow-lg whitespace-pre-line`}>
                   {product.name}
                 </h1>
                 <p className="text-[#60B5F0] text-xl md:text-2xl font-semibold mb-6">

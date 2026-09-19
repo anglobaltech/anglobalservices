@@ -17,6 +17,7 @@ import {
   Briefcase,
   FileCheck,
   Globe,
+  Calendar,
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -79,43 +80,88 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { number: "10000+", label: "Clients Served" },
-    { number: "8+", label: "Years Experience" },
-    { number: "500+", label: "Certifications" },
-    { number: "99%", label: "Success Rate" },
+    { number: "10000+", label: "Clients Served", icon: <Users size={34} strokeWidth={1.5} /> },
+    { number: "8+", label: "Years Experience", icon: <Calendar size={34} strokeWidth={1.5} /> },
+    { number: "500+", label: "Certifications", icon: <Award size={34} strokeWidth={1.5} /> },
+    { number: "99%", label: "Success Rate", icon: <TrendingUp size={34} strokeWidth={1.5} /> },
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden text-white">
-        <div className="absolute inset-0 bg-linear-to-r from-[#004f7c] via-[#006da8] to-[#0075B6]"></div>
-        <div className="absolute inset-0 bg-black/20"></div>
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-20">
-          <div className="text-center">
-            <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
-              About AN Global Services
-            </h1>
-            <p className="text-md md:text-xl text-white/90 max-w-3xl mx-auto">
-              Your Trusted Partner in Industrial Certification & Compliance
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* Hero & Stats Section */}
+      <div
+        className="relative overflow-hidden text-white"
+        style={{
+          backgroundImage: "url('/about-us-dash-2.webp')",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#020617]/30"></div>
+        
+        <div className="relative z-10">
+          {/* Header Content */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-28 md:pb-20 flex flex-col items-center">
+            
+            {/* Top decorative line */}
+            <div className="flex items-center justify-center gap-1 mb-6">
+              <div className="h-[1px] w-8 bg-cyan-400/50"></div>
+              <div className="h-[2px] w-12 bg-cyan-400"></div>
+              <div className="h-[1px] w-8 bg-cyan-400/50"></div>
+            </div>
 
-      {/* Stats Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#0075B6] mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-500 font-medium">{stat.label}</div>
+            <div className="text-center">
+              <h1 className="text-3xl md:text-[50px] font-bold mb-4 tracking-tight text-white">
+                About <span className="text-[#38bdf8]">AN Global Services</span>
+              </h1>
+              <p className="text-md md:text-[18px] text-gray-300 max-w-3xl mx-auto font-normal tracking-wide">
+                Your Trusted Partner in Industrial Certification & Compliance
+              </p>
+            </div>
+
+            {/* Bottom decorative line */}
+            <div className="flex items-center justify-center gap-1 mt-6">
+              <div className="h-[1px] w-8 bg-cyan-400/50"></div>
+              <div className="h-[2px] w-12 bg-cyan-400"></div>
+              <div className="h-[1px] w-8 bg-cyan-400/50"></div>
+            </div>
+
+          </div>
+
+          {/* Stats Section */}
+          <div className="pb-20 md:pb-28">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                {stats.map((stat, index) => (
+                  <div 
+                    key={index} 
+                    className="flex flex-col items-center justify-center bg-[#072445]/60 backdrop-blur-md rounded-xl py-8 px-4 border border-[#1e466b] shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative overflow-hidden group hover:bg-[#0c3158]/80 transition-all duration-300"
+                  >
+                    {/* Glowing bottom edge */}
+                    <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#38bdf8] shadow-[0_-5px_20px_rgba(56,189,248,0.7)] opacity-90"></div>
+                    
+                    {/* Glowing top corners effect (optional subtlety) */}
+                    <div className="absolute top-0 left-0 w-24 h-24 bg-[#38bdf8]/10 blur-3xl rounded-full"></div>
+
+                    {/* Icon */}
+                    <div className="text-[#38bdf8] mb-4 drop-shadow-[0_0_8px_rgba(56,189,248,0.3)]">
+                      {stat.icon}
+                    </div>
+
+                    {/* Number */}
+                    <div className="text-3xl md:text-[34px] font-bold text-white mb-2 leading-none">
+                      {stat.number}
+                    </div>
+
+                    {/* Label */}
+                    <div className="text-[#94a3b8] font-semibold uppercase tracking-[0.15em] text-[9px] md:text-[10px]">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
@@ -180,33 +226,62 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="bg-[#2f4f8f] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div 
+        className="py-24 relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/about-us-3.webp')",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              OUR VALUES
+            
+            {/* Header Badge */}
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-[2px] w-12 bg-[#0075B6]/30"></div>
+              <div className="inline-block bg-[#0075B6] text-white px-5 py-2 rounded-full text-sm font-bold tracking-widest shadow-md">
+                OUR VALUES
+              </div>
+              <div className="h-[2px] w-12 bg-[#0075B6]/30"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              What Makes Us Different
+
+            <h2 className="text-4xl md:text-[44px] font-extrabold text-[#0f172a] mb-4">
+              What Makes Us <span className="text-[#0075B6]">Different</span>
             </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto font-medium">
               Core principles that drive our commitment to excellence
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="bg-white rounded-2xl p-8 pt-12 text-center hover:shadow-[0_20px_40px_-15px_rgba(0,117,182,0.2)] transition-all duration-300 hover:-translate-y-2 relative overflow-hidden border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group"
               >
-                <div className="inline-block p-4 bg-[#0075B6]/10 rounded-full text-[#0075B6] mb-6">
-                  {value.icon}
+                {/* Corner Number */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-[#f0f7ff] flex justify-center items-center text-[#0075B6] font-bold text-lg transition-colors duration-300 group-hover:bg-[#0075B6] group-hover:text-white"
+                     style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}>
+                  <span className="translate-x-3 -translate-y-3">0{index + 1}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+
+                {/* Concentric Icon */}
+                <div className="flex justify-center mb-8 relative">
+                  <div className="w-28 h-28 rounded-full bg-[#f0f7ff] flex items-center justify-center relative">
+                    <div className="w-24 h-24 rounded-full border border-[#dbeafe] flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-linear-to-b from-[#008ce6] to-[#005ea3] flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                        {React.cloneElement(value.icon, { className: "w-8 h-8 text-white", strokeWidth: 2 })}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {value.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed">{value.desc}</p>
+                <p className="text-gray-500 leading-relaxed text-[15px]">{value.desc}</p>
               </div>
             ))}
           </div>
