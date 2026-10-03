@@ -1,24 +1,19 @@
 export const metadata = {
-  title: "IT Services & Solutions | #1 Website & Custom CRM Development Company",
+  title: "Custom CRM Software & Enterprise Web Development Agency | AN Global",
   description:
-    "Top-rated IT services and solutions company in India. We specialize in custom website development, enterprise CRM software, e-commerce platforms, and SEO optimization. Get a free consultation today!",
+    "Looking for a custom CRM software or enterprise web development company? AN Global builds scalable React/Node.js web apps and automated CRM systems to accelerate B2B growth. Get a free consultation.",
   keywords: [
-    "IT services and solutions",
-    "website development company in India",
-    "custom CRM development services",
-    "custom CRM software company",
-    "website development services",
-    "web design agency India",
-    "custom web development company",
-    "enterprise CRM solutions for business",
-    "IT consulting services India",
-    "responsive website design company",
-    "e-commerce website development",
-    "CRM software development company",
-    "SEO optimized website development",
-    "web application development services",
-    "AN Global Services IT solutions",
-    "best website design and CRM company",
+    "Custom CRM Software Development Company",
+    "Enterprise Web Application Development",
+    "Hire Dedicated Web Developers India",
+    "Sales Pipeline Automation Software",
+    "Cloud-based CRM Architecture",
+    "Custom API Integration Services",
+    "Healthcare CRM Development",
+    "E-commerce Web Development Agency",
+    "Real Estate CRM Software Solutions",
+    "React Next.js Web Application",
+    "Custom B2B Web Development"
   ],
   robots: {
     index: true,
@@ -36,9 +31,9 @@ export const metadata = {
     canonical: "https://www.anglobalservices.com/it-services-and-solutions",
   },
   openGraph: {
-    title: "IT Services & Solutions | Website & Custom CRM Development Company",
+    title: "Custom CRM Software & Enterprise Web Development Agency | AN Global",
     description:
-      "Top-rated IT services and solutions company in India. We build high-performance websites, custom CRM software, and scalable digital products for business growth.",
+      "Looking for a custom CRM software or enterprise web development company? AN Global builds scalable React/Node.js web apps and automated CRM systems to accelerate B2B growth.",
     url: "https://www.anglobalservices.com/it-services-and-solutions",
     siteName: "AN Global Services",
     type: "website",
@@ -48,15 +43,15 @@ export const metadata = {
         url: "https://www.anglobalservices.com/it-services-and-solutions/it-services-solutions-1.png",
         width: 1200,
         height: 630,
-        alt: "AN Global Services - IT Services & Solutions Company",
+        alt: "AN Global Services - Custom CRM & Enterprise Web Development Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IT Services & Solutions | Website & Custom CRM Development Company",
+    title: "Custom CRM Software & Enterprise Web Development Agency | AN Global",
     description:
-      "Top-rated IT services and solutions company in India. We build high-performance websites, custom CRM software, and scalable digital products for business growth.",
+      "Top-tier enterprise web application and custom CRM software development agency.",
     images: ["https://www.anglobalservices.com/it-services-and-solutions/it-services-solutions-1.png"],
   },
 };

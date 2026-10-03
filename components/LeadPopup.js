@@ -228,14 +228,14 @@ export default function LeadPopup() {
 
     const firstTimer = setTimeout(() => {
       setShow(true);
-    }, 120000); // 2 minutes
+    }, 12000); // 12 seconds
 
     return () => clearTimeout(firstTimer);
   }, [pathname, isStudentPanel, isItServicesPage, isFoodIngredientsPage]);
 
   const closePopup = () => {
     setShow(false);
-    setTimeout(() => setShow(true), 420000); // 7 minutes
+    setTimeout(() => setShow(true), 90000); // 90 seconds
   };
 
   const handleChange = (e) => {

@@ -67,7 +67,7 @@ export default function MedicalBedSheetsAndPillowCoversISIPage() {
           {/* LEFT IMAGE */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-medical-bedsheets-pillow-covers.png"
+              src="/isi-products/bis-isi-certification-for-medical-textiles-bedsheet-and-pillow-cover-is-17630.webp"
               alt="BIS ISI Certification for Medical Textiles Bedsheets and Pillow Covers"
               width={420}
               height={320}

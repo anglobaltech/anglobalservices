@@ -62,7 +62,7 @@ export default function WorkChair() {
                     {/* Image */}
                     <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
                         <Image
-                            src="/isi-products/isi-certification-work-chairs.png"
+                            src="/isi-products/bis-isi-certification-for-work-chairs-is-17631.webp"
                             alt="BIS ISI Certification for Furniture Work Chairs IS 17631"
                             width={420}
                             height={320}

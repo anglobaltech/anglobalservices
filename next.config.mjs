@@ -87,6 +87,16 @@ const nextConfig = {
         destination: "/isi-products/isi-certification-office-work-chair-17631",
         permanent: true, 
       },
+      {
+        source: "/isi-products/isi-mark-certification-for-disposable-baby-diaper-17509",
+        destination: "/isi-products/bis-isi-certification-disposable-baby-diaper-is-17509",
+        permanent: true,
+      },
+      {
+        source: "/isi-products/isi-certificate-aluminium-and-aluminium-alloy-bare-foil-for-food-packaging",
+        destination: "/isi-products/bis-isi-certification-aluminium-alloy-bare-foil-food-packaging-is-15392",
+        permanent: true,
+      },
        {
         source: "/bis-isi-mark-certification-electronics-products",
         destination: "/bis-isi-mark-certification-electrical-electronics-products",

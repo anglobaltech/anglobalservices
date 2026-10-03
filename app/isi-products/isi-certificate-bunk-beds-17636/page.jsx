@@ -56,7 +56,7 @@ export default function BunkBeds() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certification-furniture-bunk-beds-17636.png"
+              src="/isi-products/bis-isi-certification-for-bunk-beds-is-17636.webp"
               alt="BIS ISI Certification for Bunk Beds IS 17636:2022"
               width={420}
               height={320}
