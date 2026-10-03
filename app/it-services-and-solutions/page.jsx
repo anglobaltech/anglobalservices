@@ -41,16 +41,16 @@ function LazySection({ children, className = "" }) {
 
 const serviceCards = [
   {
-    title: "Website Development",
-    desc: "We build fast, secure, and responsive websites designed to engage your audience and convert visitors into loyal customers. From corporate websites to complex web applications — every project is crafted for results.",
+    title: "Custom Website & Web App Development",
+    desc: "We build fast, secure, and highly responsive web applications designed to engage your audience and convert visitors into loyal customers. From corporate websites to complex web applications — every project is crafted for results.",
     icon: MonitorSmartphone,
     bg: "bg-blue-50",
     iconColor: "text-blue-600",
     border: "border-blue-100",
   },
   {
-    title: "CRM Development",
-    desc: "Custom CRM solutions tailored to your unique business workflows. Automate repetitive tasks, track every lead, and manage customer relationships effortlessly with a scalable, intelligent CRM architecture.",
+    title: "Enterprise CRM Software Solutions",
+    desc: "Scalable custom CRM software tailored to your complex enterprise workflows. Automate repetitive tasks, track every lead, and manage customer relationships effortlessly with a scalable, intelligent CRM architecture.",
     icon: Database,
     bg: "bg-green-50",
     iconColor: "text-green-600",
@@ -107,7 +107,7 @@ const statsData = [
 
 const faqs = [
   {
-    question: "How much does a custom website or CRM cost?",
+    question: "How much does a custom enterprise CRM or web application cost?",
     answer: "The cost depends on the complexity, features, and scale of your project. A basic corporate website typically starts from ₹30,000, while a custom CRM can range from ₹1,50,000 to ₹10,00,000+ depending on workflows and integrations. We provide a detailed quote after a free discovery call — no hidden charges, no surprises."
   },
   {
@@ -115,7 +115,7 @@ const faqs = [
     answer: "Yes. We offer comprehensive monthly support and maintenance packages that cover security updates, performance monitoring, content changes, bug fixes, and feature enhancements. Our team ensures your website or CRM stays secure, fast, and up-to-date long after launch."
   },
   {
-    question: "How long does it take to develop a custom CRM?",
+    question: "How long does it take to develop a custom CRM software solution?",
     answer: "A custom CRM typically takes 8 to 24 weeks depending on the number of modules, integrations, user roles, and data migration requirements. We break the project into agile sprints with regular demos, so you start seeing working features within the first 2–3 weeks."
   },
   {
@@ -146,12 +146,12 @@ const schemaData = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "name": "AN Global Services — IT Services and Solutions",
+      "name": "Custom Enterprise CRM & Website Development Services — AN Global Services",
       "image": "https://www.anglobalservices.com/it-services-and-solutions/it-services-solutions-1.png",
       "url": "https://www.anglobalservices.com/it-services-and-solutions",
       "telephone": "+917782069184",
       "priceRange": "₹₹",
-      "description": "Professional website development and custom CRM development services by AN Global Services. We build responsive, SEO-optimized websites and scalable CRM solutions that drive business growth.",
+      "description": "Top-rated B2B Web Development & Custom CRM Software Agency. We build high-performance, SEO-optimized web applications, scalable cloud architecture, and sales automation systems tailored for growth.",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -167,7 +167,7 @@ const schemaData = {
       "areaServed": "India",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "IT Services",
+        "name": "Custom Web & CRM Solutions",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -232,8 +232,8 @@ export default function ITServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      {/* ═══════════ 1. HERO BANNER — LEFT ALIGNED ═══════════ */}
-      <section className="relative w-full min-h-[70vh] lg:min-h-[80vh] flex flex-col justify-center py-20 md:py-28 overflow-hidden">
+      {/* ═══════════ 1. HERO BANNER — LEFT ALIGNED WITH FLOATING STATS ═══════════ */}
+      <section className="relative w-full min-h-[calc(100vh-140px)] lg:min-h-[calc(100vh-140px)] flex flex-col justify-center py-6 md:py-8 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/it-services-and-solutions/it-services-solutions-1.png"
@@ -242,25 +242,25 @@ export default function ITServicesPage() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/70 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/90 sm:via-black/70 sm:to-black/30" />
+          <div className="absolute inset-0 bg-[#041029]/80 sm:bg-transparent sm:bg-gradient-to-r sm:from-[#041029] sm:via-[#041029]/80 sm:to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col h-full justify-center">
           <LazySection>
-            <div className="max-w-3xl">
-              <p className="text-[#60B5F0] font-bold text-sm sm:text-base md:text-lg tracking-widest uppercase mb-4 drop-shadow-lg">
+            <div className="max-w-3xl mb-4 lg:mb-6">
+              <p className="text-[#60B5F0] font-bold text-sm sm:text-base md:text-lg tracking-widest uppercase mb-2 drop-shadow-lg">
                 ★ Enterprise IT Solutions ★
               </p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                High-Performance <br className="hidden sm:block" />IT Services & Solutions
+              <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-3 drop-shadow-lg">
+                Enterprise Web Application & <br className="hidden sm:block" />Custom CRM Software Development
               </h1>
-              <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed mb-8">
-                Stop losing customers to slow websites and disconnected tools. We build blazing-fast, SEO-optimized websites and custom CRM systems that turn visitors into paying customers and chaos into streamlined operations. As a leading IT solutions company in India, we deliver scalable digital products tailored to your exact business needs. Leverage top-tier technology to automate workflows, capture high-quality leads, and accelerate your overall growth.
+              <p className="text-white font-medium text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed mb-2 drop-shadow-md">
+                Stop losing revenue to slow loading times and disconnected legacy tools. We architect blazing-fast, SEO-optimized React/Node.js web applications and scalable cloud-based custom CRM systems. As a top-tier B2B software development agency, we deliver full-stack solutions tailored for Healthcare, Real Estate, E-commerce, and EdTech. Leverage our expertise in sales pipeline automation and robust API integrations to exponentially scale your operations.
               </p>
 
-              <div className="flex flex-wrap items-start gap-3 text-sm text-white/80 mb-10">
+              <div className="flex flex-wrap items-start gap-3 text-sm text-white/90 mb-4">
                 {["Website Development", "Custom CRM Development"].map((tag, i) => (
-                  <span key={i} className="bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium">
+                  <span key={i} className="bg-black/40 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold shadow-md">
                     {tag}
                   </span>
                 ))}
@@ -269,33 +269,33 @@ export default function ITServicesPage() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-4">
                 <button
                   onClick={() => setShowConsultationModal(true)}
-                  className="bg-[#0075B6] hover:bg-blue-700 text-white px-8 py-3.5 rounded-md font-semibold cursor-pointer hover:scale-105 transition-all shadow-lg w-full sm:w-auto text-center"
+                  className="bg-[#0075B6] hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold cursor-pointer hover:scale-105 transition-all shadow-lg w-full sm:w-auto text-center"
                 >
                   Request a Free Consultation
                 </button>
                 <a
                   href="#services"
-                  className="border border-white/60 text-white hover:bg-white hover:text-black px-8 py-3.5 rounded-md font-medium transition-all cursor-pointer w-full sm:w-auto text-center flex items-center justify-center"
+                  className="border border-white/60 text-white hover:bg-white hover:text-black px-8 py-3 rounded-md font-medium transition-all cursor-pointer w-full sm:w-auto text-center flex items-center justify-center"
                 >
                   Explore Services
                 </a>
               </div>
             </div>
-          </LazySection>
-        </div>
-      </section>
 
-      {/* ═══════════ 2. TRUST BAR / STATS ═══════════ */}
-      <section className="bg-[#0a192f] py-10 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {statsData.map((stat, i) => (
-              <div key={i}>
-                <p className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#60B5F0] mb-1">{stat.number}</p>
-                <p className="text-gray-400 text-sm font-medium uppercase tracking-wide">{stat.label}</p>
+            {/* Stats Bar (Pill Card) */}
+            <div className="self-start w-full md:w-auto">
+              <div className="bg-[#041029]/90 rounded-3xl lg:rounded-full p-5 md:p-6 lg:py-4 lg:px-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#23589b] inline-block backdrop-blur-md w-full lg:w-auto">
+                <div className="grid grid-cols-2 gap-y-6 sm:gap-y-0 gap-x-4 md:gap-x-6 lg:flex lg:items-center divide-y sm:divide-y-0 divide-[#4d86c4]/40 lg:divide-x lg:divide-[#4d86c4]">
+                  {statsData.map((stat, i) => (
+                    <div key={i} className="flex flex-col items-center justify-center lg:px-6 text-center py-3 sm:py-0">
+                      <p className="text-2xl sm:text-3xl md:text-[32px] font-extrabold text-[#60B5F0] mb-1 drop-shadow-md leading-none">{stat.number}</p>
+                      <p className="text-white text-[11px] sm:text-xs font-medium uppercase tracking-wide mt-1">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          </LazySection>
         </div>
       </section>
 

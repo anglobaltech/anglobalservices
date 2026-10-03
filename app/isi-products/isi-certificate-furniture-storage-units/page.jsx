@@ -103,7 +103,7 @@ export default function StorageUnits() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-furniture-storage-units.png"
+              src="/isi-products/bis-isi-certification-for-storage-units-is-17634.webp"
               alt="BIS ISI Certification for Furniture Storage Units IS 17634:2022"
               width={420}
               height={320}

@@ -109,7 +109,7 @@ export default function WoodenTablesDesks() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-tables-desks-is17633.png"
+              src="/isi-products/bis-isi-certification-for-tables-and-desks-is-17633.webp"
               alt="BIS ISI Certification for Wooden Tables and Desks IS 17633"
               width={420}
               height={320}

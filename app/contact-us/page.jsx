@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import {
   collection,
   doc,
@@ -140,14 +141,21 @@ export default function ContactPage() {
 
   return (
     <div className="w-full bg-[#f7f9fc] min-h-screen">
-      <div className="relative h-50 sm:h-55 md:h-65 bg-linear-to-r from-[#0072b1] to-[#004e7a]">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center h-full text-center">
-          <h1 className="text-white text-2xl items sm:text-3xl md:text-4xl font-bold tracking-tight mb-3">
-            CONTACT US
+      <div className="relative h-64 md:h-72 w-full overflow-hidden">
+        <Image 
+          src="/contact-us-1.webp" 
+          alt="Contact AN Global Services - Top Certification & Compliance Consultants in India" 
+          fill 
+          priority 
+          className="object-cover object-bottom" 
+        />
+        <div className="absolute inset-0 bg-[#004e7a]/40"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center h-full text-center z-10 py-12">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+            Contact AN Global Services
           </h1>
-          <p className="text-white/90 text-base sm:text-lg max-w-2xl">
-            We're here to help. Reach out to our compliance experts today.
+          <p className="text-white/95 text-base sm:text-lg md:text-xl max-w-3xl drop-shadow-md font-medium leading-relaxed">
+            India's Leading Consultants for <strong>BIS Registration, ISI Mark, & FMCS Certification</strong>. <br className="hidden sm:block" /> Connect with our industry experts today for 100% assured compliance and rapid market entry.
           </p>
         </div>
       </div>
