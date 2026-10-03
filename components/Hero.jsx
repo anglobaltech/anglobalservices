@@ -79,7 +79,7 @@ const heroSlidesData = [
       { text: "Solar Panel", link: "https://www.anglobalservices.com/solar-panel-plant-setup" },
       { text: "Lab Setup", link: "https://www.anglobalservices.com/laboratory-equipment-and-setup-services" }
     ],
-    containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[42%] lg:-mt-4 xl:w-[45%] xl:-mt-8 xl:max-w-[560px]",
+    containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[42%] xl:w-[45%] xl:max-w-[560px]",
     paragraph: (
       <>
         Empower your business with complete <span className="font-bold text-yellow-400">Solar Panel Plant Setup</span> and state-of-the-art <span className="font-bold text-yellow-400">In-House Lab Facilities</span>. We provide end-to-end consultancy, advanced equipment procurement, and strict compliance for certified production.
@@ -584,7 +584,7 @@ export default function Hero() {
           style={{ transform: `translateX(-${heroSlide * 100}%)` }}
         >
           {extendedHeroSlides.map((slide, idx) => (
-            <div key={idx} className="w-full shrink-0 relative h-[470px] sm:h-[358px] md:h-[358px] lg:h-[460px] xl:h-[calc(100vh-190px)] xl:min-h-[500px] xl:max-h-[800px]">
+            <div key={idx} className="w-full shrink-0 relative h-[520px] sm:h-[420px] md:h-[420px] lg:h-[550px] xl:h-[620px]">
 
               {/* IMAGE - absolute, fills container perfectly */}
               <img
@@ -596,22 +596,22 @@ export default function Hero() {
               <div className="absolute inset-0 bg-black/10 z-[1]"></div>
 
               {/* TEXT CONTENT LAYER - absolute, overlays on image */}
-              <div className="absolute inset-0 z-10 w-full flex items-start sm:items-center overflow-hidden pt-1.5 sm:pt-0">
-                <div className="w-full max-w-7xl mx-auto px-3 py-8 sm:py-1 md:px-4 md:py-2 xl:py-6 sm:px-6 lg:px-8">
-                  <div className={slide.containerClass || "w-[90%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
-                    <h1 className="text-[19px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[28px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-1.5 sm:mb-1 md:mb-2 lg:mb-3 xl:mb-6 drop-shadow-lg tracking-tight">
+              <div className="absolute inset-0 z-10 w-full flex items-start pt-1.5 sm:pt-6 md:pt-6 lg:pt-8 xl:pt-6">
+                <div className="w-full max-w-7xl mx-auto px-3 pr-12 sm:px-6 md:px-4 lg:px-8">
+                  <div className={slide.containerClass || "w-[95%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
+                    <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[28px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-1.5 sm:mb-1 md:mb-2 lg:mb-3 xl:mb-6 drop-shadow-lg tracking-tight">
                       <span className={`whitespace-normal ${slide.wrapHeading ? "" : "sm:whitespace-nowrap"}`}>{slide.headingMain}</span> <br className="block" />
                       <span className="text-[#0075B6] drop-shadow-md bg-white/95 px-2 md:px-2 lg:px-3 xl:px-5 py-0.5 md:py-1 lg:py-1.5 xl:py-2 rounded md:rounded-lg inline-block mt-1 sm:mt-1 md:mt-1 lg:mt-2 xl:mt-4 text-[11px] sm:text-[10px] md:text-sm lg:text-[18px] xl:text-[32px] whitespace-normal sm:whitespace-nowrap">
                         {slide.headingSub}
                       </span>
                     </h1>
 
-                    <p className="text-white font-medium text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-10 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
+                    <p className="text-white font-medium text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
                       {slide.paragraph}
                     </p>
 
                     <div
-                      className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-3 xl:gap-6 mb-2.5 sm:mb-2 md:mb-4 lg:mb-4 xl:mb-10"
+                      className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-3 xl:gap-6 mb-2.5 sm:mb-2 md:mb-4 lg:mb-4 xl:mb-5"
                       onMouseEnter={() => setIsButtonHovered(true)}
                       onMouseLeave={() => setIsButtonHovered(false)}
                     >
@@ -657,11 +657,11 @@ export default function Hero() {
                       )}
                     </div>
 
-                    <div className="bg-black/30 p-2.5 sm:p-2 md:p-3 lg:p-3 xl:p-6 rounded-lg md:rounded-xl shadow-xl w-full md:w-[100%] xl:max-w-2xl">
+                    <div className="bg-black/30 p-2.5 sm:p-2 md:p-3 lg:p-3 xl:p-4 rounded-lg md:rounded-xl shadow-xl w-full md:w-[100%] xl:max-w-2xl">
                       <h3 className="text-[#00c3ff] text-[13px] sm:text-[10px] md:text-sm lg:text-sm xl:text-xl font-bold mb-1 sm:mb-1 md:mb-1 xl:mb-2">
                         A N Global Services Private Limited
                       </h3>
-                      <p className="text-gray-200 text-[11px] sm:text-[8px] md:text-[10px] lg:text-[11px] xl:text-sm leading-snug sm:leading-snug md:leading-relaxed mb-2 sm:mb-2 md:mb-3 xl:mb-6">
+                      <p className="text-gray-200 text-[11px] sm:text-[8px] md:text-[10px] lg:text-[11px] xl:text-sm leading-snug sm:leading-snug md:leading-relaxed mb-2 sm:mb-2 md:mb-3 xl:mb-2">
                         A complete industrial solution provider. We help manufacturers meet quality, safety, and compliance standards with complete confidence.
                       </p>
 
