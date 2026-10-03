@@ -64,7 +64,7 @@ export default function BottledWaterDispenserISI() {
         <div className="grid grid-cols-1 lg:grid-cols-[480px_1fr] gap-12 items-start">
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-bottled-water-dispensers.png"
+              src="/isi-products/bis-isi-certification-for-bottled-water-dispensers-is-17681.webp"
               alt="BIS ISI Certification for Bottled Water Dispensers IS 17681"
               width={420}
               height={320}

@@ -2,10 +2,7 @@
 
 export const isiProductsList = [
     { sNo: 1, isNo: "IS 3312", name: "Adjustable Steel Shelving Cabinets", slug: "isi-certificate-adjustable-steel-shelving-cabinets" },
-    { sNo: 2, isNo: "IS 7092 : Part 2", name: "Aluminium Alloy Extruded Tubes for Irrigation", slug: "isi-certificate-aluminium-alloy-extruded-tubes-for-irrigation-purposes" },
     { sNo: 3, isNo: "IS 7092 : Part 1", name: "Aluminium Alloy Welded Tubes for Irrigation", slug: "isi-certificate-aluminium-alloy-tubes-for-irrigation-purposes-welded-tubes" },
-    { sNo: 4, isNo: "IS 15392", name: "Aluminium Bare Foil for Food Packaging", slug: "isi-certificate-aluminium-and-aluminium-alloy-bare-foil-for-food-packaging" },
-    { sNo: 5, isNo: "IS 16011", name: "Aluminium Foil for Pharmaceutical Packaging", slug: "isi-certificate-aluminium-and-aluminium-alloy-foil-for-pharmaceutical-packaging" },
     { sNo: 6, isNo: "IS 737", name: "Aluminium Sheet and Strip", slug: "isi-certificate-aluminium-and-aluminium-alloy-sheet-and-strip" },
     { sNo: 7, isNo: "IS 1258", name: "Bayonet Lamp Holders", slug: "isi-certificate-bayonet-lamp-holders-1258" },
     { sNo: 8, isNo: "IS 17681", name: "Bottled Water Dispensers", slug: "isi-certificate-bottled-water-dispensers" },
@@ -28,7 +25,6 @@ export const isiProductsList = [
     { sNo: 25, isNo: "IS 2082", name: "Electric Water Heaters", slug: "isi-certificate-stationary-storage-type-electric-water-heaters" },
     { sNo: 26, isNo: "IS 2266", name: "Steel Wire Ropes", slug: "isi-certificate-steel-wire-ropes-for-general-engineering-purposes" },
     { sNo: 27, isNo: "IS 733", name: "Wrought Aluminium Bars and Rods", slug: "isi-certificate-wrought-aluminium-and-aluminium-alloy-bars-rods" },
-    { sNo: 28, isNo: "IS 5082", name: "Wrought Aluminium for Electrical Purposes", slug: "isi-certificate-wrought-aluminium-and-aluminium-alloy-electrical-purposes" },
     { sNo: 29, isNo: "IS 736", name: "Wrought Aluminium Plates", slug: "isi-certificate-wrought-aluminium-and-aluminium-alloy-plate" },
     { sNo: 30, isNo: "IS 739", name: "Wrought Aluminium Wires", slug: "isi-certificate-wrought-aluminum-and-aluminum-alloys-wire-for-general-engineering-purposes" },
     { sNo: 31, isNo: "IS 14333", name: "HDPE Pipes for Sewerage", slug: "isi-certification-for-high-density-polyethylene-pipes-for-sewerage-14333" },
@@ -49,7 +45,6 @@ export const isiProductsList = [
     { sNo: 46, isNo: "IS 303", name: "General Purpose Plywood", slug: "isi-certification-plywood-for-general-purposes" },
     { sNo: 47, isNo: "IS 458", name: "Precast Concrete Pipes", slug: "isi-certification-precast-concrete-pipes-458" },
     { sNo: 48, isNo: "IS 17508", name: "Disposable Adult Diapers", slug: "isi-mark-certification-for-disposable-adult-diaper-17508" },
-    { sNo: 49, isNo: "IS 17509", name: "Disposable Baby Diapers", slug: "isi-mark-certification-for-disposable-baby-diaper-17509" },
     { sNo: 50, isNo: "IS 5405", name: "Sanitary Napkins", slug: "isi-mark-certification-for-sanitary-napkin-5405" },
     { sNo: 51, isNo: "IS 15778", name: "CPVC Pipes for Hot and Cold Water", slug: "isi-certification-for-cpvc-pipes-for-potable-hot-and-cold-water-distribution-supplies-15778" },
     { sNo: 52, isNo: "IS 13422", name: "Disposable Surgical Rubber Gloves", slug: "isi-certification-for-disposable-surgical-rubber-gloves-13422" },

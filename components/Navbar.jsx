@@ -360,6 +360,7 @@ export default function Navbar() {
             <DesktopDropdown
               title="EQUIPMENTS & MACHINERY"
               menu={equipmentMenu}
+              align="right"
               pathname={pathname}
             />
             <DesktopDropdown title="UPDATES" menu={updatesMenu} pathname={pathname} />

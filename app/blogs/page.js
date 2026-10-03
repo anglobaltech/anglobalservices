@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { db } from "@/src/lib/firebase";
-import { collection, getDocs, query, orderBy } from "firebase/firestore"; 
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { blogs as staticBlogs } from "./blogData";
 import BlogList from "./BlogList";
 
@@ -43,7 +44,7 @@ export default async function BlogsPage() {
 
       // --- NEW FIX: FETCH NEW LISTING DETAILS WITH FALLBACKS ---
       const finalTitle = data.listingHeading || data.title;
-      
+
       const finalExcerpt = data.listingDescription
         ? data.listingDescription.replace(/<[^>]+>/g, "") // Clean description text
         : (data.seo?.description || cleanIntro);
@@ -52,7 +53,7 @@ export default async function BlogsPage() {
 
       return {
         id: doc.id,
-        slug: data.slug?.replace(/^\//, ""), 
+        slug: data.slug?.replace(/^\//, ""),
         title: finalTitle, // Uses Listing Heading if filled, otherwise falls back to Title
         excerpt: finalExcerpt, // Uses Listing Description if filled, otherwise falls back to SEO/Intro
         image: finalImage, // Uses Listing Thumbnail if uploaded, otherwise falls back to Hero Image
@@ -75,15 +76,23 @@ export default async function BlogsPage() {
   return (
     <main className="w-full bg-gray-50 min-h-screen">
       {/* Premium Header */}
-      <section className="relative bg-gradient-to-br from-[#0a3d62] to-[#0072b1] py-20 overflow-hidden">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <Image
+          src="/our-blogs.webp"
+          alt="Our Blogs Background"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0a3d62]/30"></div>
         <div className="relative max-w-7xl mx-auto px-6 text-center z-10">
           {/* Main Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-md">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
             Our Blogs
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-6 text-blue-100 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
+          <p className="mt-6 text-white max-w-2xl mx-auto text-lg md:text-xl font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
             Expert Insights, Compliance Updates, and Industry Guidance tailored for modern businesses.
           </p>
         </div>

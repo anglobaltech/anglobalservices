@@ -112,7 +112,7 @@ export default function GeneralChairStool() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-wooden-general-chairs-stools.png"
+              src="/isi-products/bis-isi-certification-for-general-purpose-chairs-and-stools-is-17632.webp"
               alt="BIS ISI Certification for General Purpose Chairs and Stools IS 17632"
               width={420}
               height={320}

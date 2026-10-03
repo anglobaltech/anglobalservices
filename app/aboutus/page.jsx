@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import AboutServicesTabs from "@/components/AboutServicesTabs";
 export const metadata = {
   title:
     "About AN Global Services | Trusted Certification & Compliance Consultancy",
@@ -18,6 +19,10 @@ import {
   FileCheck,
   Globe,
   Calendar,
+  Handshake,
+  ShieldCheck,
+  Medal,
+  UserCheck,
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -166,27 +171,49 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <div className="absolute   bg-[#0075B6] opacity-10 rounded-xl"></div>
+      {/* Premium Who We Are Section */}
+      <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-24 overflow-hidden bg-white">
+        
+        {/* Abstract Background Shapes */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50/60 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-blue-50/60 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/3"></div>
+        
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          
+          {/* Left Column: Image Container */}
+          <div className="order-2 lg:order-1 relative mt-10 lg:mt-0 px-4 md:px-0">
+            
+            {/* Dot Grid Pattern */}
+            <div className="absolute -top-12 -left-4 w-40 h-40 bg-[radial-gradient(#93c5fd_2px,transparent_2px)] [background-size:16px_16px] opacity-60 -z-20"></div>
+
+            {/* Main Image Container */}
+            <div className="relative rounded-xl shadow-xl w-full overflow-hidden">
               <img
                 src="/about-us1.jpeg"
                 alt="Professional Team"
-                className="relative rounded-xl shadow-xl w-full"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
 
-          <div className="order-1 lg:order-2">
-            <div className="inline-block bg-[#0075B6]/10 text-[#0075B6] px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              WHO WE ARE
+          {/* Right Column: Text Content */}
+          <div className="order-1 lg:order-2 z-10 pt-8 lg:pt-0">
+            
+            {/* Header Badge */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="inline-block bg-blue-50 text-[#0075B6] px-4 py-1.5 rounded-full text-sm font-bold tracking-widest">
+                WHO WE ARE
+              </div>
+              <div className="h-[2px] w-12 bg-gray-200"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Leading Consulting Firm
+            
+            {/* Main Heading */}
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-[#0a192f] leading-[1.1]">
+              Leading <span className="text-[#0075B6]">Consulting Firm</span>
             </h2>
-            <div className="space-y-4 text-gray-700 text-md leading-relaxed">
+            
+            {/* Paragraphs */}
+            <div className="space-y-6 text-gray-600 text-[15px] leading-relaxed">
               <p>
                 <span className="font-bold text-[#0075B6]">
                   AN Global Services
@@ -212,17 +239,54 @@ export default function AboutPage() {
                 high-quality products to the customer.
               </p>
             </div>
-            <div className="mt-8 flex gap-4">
-              <div className="flex items-center gap-2 text-[#0075B6]">
-                <CheckCircle className="w-6 h-6" />
-                <span className="font-semibold">ISO Certified</span>
-              </div>
-              <div className="flex items-center gap-2 text-[#0075B6]">
-                <CheckCircle className="w-6 h-6" />
-                <span className="font-semibold">NABL Certified Trainer</span>
-              </div>
-            </div>
           </div>
+        </div>
+
+        {/* 4 Bottom Features (Full Width) */}
+        <div className="max-w-7xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 pt-10 border-t border-gray-100 relative px-4 md:px-0">
+          
+          {/* Feature 1 */}
+          <div className="flex flex-col items-center text-center relative px-2">
+            <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#0075B6] mb-4">
+              <ShieldCheck className="w-7 h-7 stroke-[1.5]" />
+            </div>
+            <h4 className="font-bold text-gray-900 text-[14px]">ISO Certified</h4>
+            <p className="text-[12px] text-gray-500 font-medium mt-1">Quality & Trust</p>
+            {/* Vertical Divider */}
+            <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gray-200"></div>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="flex flex-col items-center text-center relative px-2">
+            <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#0075B6] mb-4">
+              <UserCheck className="w-7 h-7 stroke-[1.5]" />
+            </div>
+            <h4 className="font-bold text-gray-900 text-[14px]">NABL Certified</h4>
+            <p className="text-[12px] text-gray-500 font-medium mt-1">Accredited Support</p>
+            {/* Vertical Divider */}
+            <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gray-200"></div>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="flex flex-col items-center text-center relative px-2">
+            <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#0075B6] mb-4">
+              <Award className="w-7 h-7 stroke-[1.5]" />
+            </div>
+            <h4 className="font-bold text-gray-900 text-[14px]">Experienced Team</h4>
+            <p className="text-[12px] text-gray-500 font-medium mt-1">Industry Experts</p>
+            {/* Vertical Divider */}
+            <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gray-200"></div>
+          </div>
+
+          {/* Feature 4 */}
+          <div className="flex flex-col items-center text-center px-2">
+            <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#0075B6] mb-4">
+              <Handshake className="w-7 h-7 stroke-[1.5]" />
+            </div>
+            <h4 className="font-bold text-gray-900 text-[14px]">Client Focused</h4>
+            <p className="text-[12px] text-gray-500 font-medium mt-1">Long Term Partnership</p>
+          </div>
+
         </div>
       </div>
 
@@ -287,6 +351,9 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      {/* Our Services Interactive Tabs */}
+      <AboutServicesTabs />
+
       <div className="relative py-20 bg-white">
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-gray-200 to-transparent"></div>
 

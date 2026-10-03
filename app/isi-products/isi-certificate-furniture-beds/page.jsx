@@ -57,7 +57,7 @@ export default function FurnitureBeds() {
           {/* Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200">
             <Image
-              src="/isi-products/isi-certificate-furniture-beds-17635.png"
+              src="/isi-products/bis-isi-certification-for-beds-is-17635.webp"
               alt="BIS ISI Certification for Furniture Beds IS 17635"
               width={420}
               height={320}
