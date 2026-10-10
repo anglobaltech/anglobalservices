@@ -618,8 +618,8 @@ export default function Hero() {
                       <Link
                         href="/contact-us"
                         className={slide.customButtons ?
-                          "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[13px] xl:text-[15px]"
-                          : "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-5 lg:py-2.5 xl:px-8 xl:py-4 rounded md:rounded-md font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[14px] xl:text-[18px]"
+                          "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded md:rounded-lg font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[13px] xl:text-[15px]"
+                          : "bg-[#0075B6] hover:bg-blue-700 text-white px-3 py-1 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-5 lg:py-2.5 xl:px-8 xl:py-4 rounded md:rounded-lg font-medium transition-colors shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[14px] xl:text-[18px]"
                         }
                       >
                         Contact Us
@@ -630,7 +630,7 @@ export default function Hero() {
                             <Link
                               key={btnIdx}
                               href={btn.link}
-                              className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded md:rounded-md font-semibold transition-all shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[13px] xl:text-[15px] cursor-pointer whitespace-nowrap"
+                              className="bg-white/95 text-[#0075B6] hover:bg-white hover:text-blue-800 px-3 py-1 sm:px-1.5 sm:py-0.5 md:px-4 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded md:rounded-lg font-semibold transition-all shadow-lg text-[12px] sm:text-[9px] md:text-xs lg:text-[13px] xl:text-[15px] cursor-pointer whitespace-nowrap"
                             >
                               {btn.text}
                             </Link>
@@ -771,7 +771,7 @@ export default function Hero() {
       </section>
 
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 pb-16">
           <h2 className="text-4xl font-extrabold text-center text-black mb-14">
             OUR SERVICES
           </h2>

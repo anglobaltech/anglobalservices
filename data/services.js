@@ -20,6 +20,11 @@ export const servicesMenu = [
         slug: "iso-certification-services",
         root: true,
       },
+      {
+        name: "CALIBRATION SERVICE",
+        slug: "calibration-certificate",
+        root: true,
+      },
     ],
   },
   {
@@ -92,11 +97,6 @@ export const servicesMenu = [
       {
         name: "FSSAI REGISTRATION SERVICES",
         slug: "fssai-registration-services",
-        root: true,
-      },
-      {
-        name: "CALIBRATION SERVICE",
-        slug: "calibration-certificate",
         root: true,
       },
       {
