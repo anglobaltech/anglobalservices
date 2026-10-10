@@ -602,7 +602,7 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                 </div>
               ) : null}
 
-              <ul className="space-y-1 text-sm font-normal">
+              <ul className="space-y-4 text-sm font-normal">
                 {group.items.map((item, iIndex) => (
                   <li key={`${item.slug || item.name}-${iIndex}`} className={item.isSubMenu ? "relative group/sub" : ""}>
                     {item.isSubMenu ? (
@@ -616,12 +616,12 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                                 <FileText size={14} strokeWidth={2} />
                               )}
                             </div>
-                            <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{item.name}</span>
+                            <span className="leading-snug text-[13px] font-normal uppercase transition-colors duration-300">{item.name}</span>
                           </div>
                           <ChevronRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
                         </div>
                         <div className={`absolute ${align === "right" ? "left-[50%] top-full" : `left-full ml-2 ${iIndex === group.items.length - 1 ? 'bottom-0' : 'top-0'}`} w-72 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
-                          <ul className="space-y-1">
+                          <ul className="space-y-4">
                             {item.subItems.map((sub, sIdx) => (
                               <li key={sIdx} className={sub.isSubMenu ? "relative group/sub2" : ""}>
                                 {sub.isSubMenu ? (
@@ -635,12 +635,12 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                                             <FileText size={14} strokeWidth={2} />
                                           )}
                                         </div>
-                                        <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{sub.name}</span>
+                                        <span className="leading-snug text-[13px] font-normal uppercase transition-colors duration-300">{sub.name}</span>
                                       </div>
                                       <ChevronRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
                                     </div>
                                     <div className={`absolute ${align === "right" ? "left-[50%] top-full" : `left-full ml-2 ${sIdx === item.subItems.length - 1 ? 'bottom-0' : 'top-0'}`} w-72 opacity-0 invisible group-hover/sub2:opacity-100 group-hover/sub2:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
-                                      <ul className="space-y-1">
+                                      <ul className="space-y-4">
                                         {sub.subItems.map((sub2, s2Idx) => (
                                           <li key={s2Idx}>
                                             <Link
@@ -657,7 +657,7 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                                                       <FileText size={14} strokeWidth={2} />
                                                     )}
                                                   </div>
-                                                  <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{sub2.name}</span>
+                                                  <span className="leading-snug text-[13px] font-normal uppercase transition-colors duration-300">{sub2.name}</span>
                                                 </div>
                                                 <ArrowUpRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
                                               </div>
@@ -682,7 +682,7 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                                               <FileText size={14} strokeWidth={2} />
                                             )}
                                           </div>
-                                          <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{sub.name}</span>
+                                          <span className="leading-snug text-[13px] font-normal uppercase transition-colors duration-300">{sub.name}</span>
                                         </div>
                                         <ArrowUpRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
                                       </div>
@@ -708,7 +708,7 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                                 <FileText size={14} strokeWidth={2} />
                               )}
                             </div>
-                            <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{item.name}</span>
+                            <span className="leading-snug text-[13px] font-normal uppercase transition-colors duration-300">{item.name}</span>
                           </div>
                           <ArrowUpRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
                         </div>
