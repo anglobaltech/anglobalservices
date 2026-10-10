@@ -136,7 +136,7 @@
 //   const [isOpen, setIsOpen] = useState(false);
 
 //   return (
-//     <li 
+//     <li
 //       className="relative group"
 //       // NEW: Added mouse enter and leave events to control the state instead of purely using CSS
 //       onMouseEnter={() => setIsOpen(true)}
@@ -148,7 +148,7 @@
 //       </span>
 
 //       {/* CHANGED: Replaced "group-hover:opacity-100 group-hover:visible" with dynamic classes based on `isOpen` state */}
-//       <div 
+//       <div
 //         className={`absolute left-0 top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 ${
 //           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
 //         }`}
@@ -162,7 +162,7 @@
 //                 </h4>
 //               )}
 
-//               <ul className="space-y-3 text-sm font-normal">
+//               <ul className="space-y-3 text-sm font-medium">
 //                 {group.items.map((item, iIndex) => (
 //                   <li key={`${item.slug}-${iIndex}`}>
 //                     <Link
@@ -208,7 +208,7 @@
 //       </button>
 
 //       {open && (
-//         <div className="bg-[#2b3945] px-4 py-3 space-y-4">
+//         <div className="bg-[#2b3945] px-4 py-3 space-y-2">
 //           {menu.map((group, gIndex) => (
 //             <div key={`${title}-mobile-${gIndex}`}>
 //               {group.title && (
@@ -263,16 +263,20 @@
 //   );
 // }
 
-
-
-
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, FileText, ChevronRight, ShoppingCart } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  FileText,
+  ChevronRight,
+  ArrowUpRight,
+  ShoppingCart,
+} from "lucide-react";
 
 import { servicesMenu } from "@/data/services";
 import { testingMenu } from "@/data/testing";
@@ -288,30 +292,82 @@ const foodMenu = [
         name: "Whey Proteins",
         isSubMenu: true,
         subItems: [
-          { name: "Whey Protein Concentrate 80 Instant (ENTC)", slug: "food-ingredients/whey-protein-concentrate-80-instant-entc", root: true },
-          { name: "Whey Protein Concentrate 80 Instant (Valley Queen)", slug: "food-ingredients/whey-protein-concentrate-80-instant-valley-queen", root: true },
-          { name: "Saputo Whey Protein Concentrate 80% Instantized", slug: "food-ingredients/saputo-whey-protein-concentrate-80-instantized", root: true },
-          { name: "Sunpro Instant Protein Concentrate Instant WPC 80", slug: "food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80", root: true }
-        ]
+          {
+            name: "Whey Protein Concentrate 80 Instant (ENTC)",
+            slug: "food-ingredients/whey-protein-concentrate-80-instant-entc",
+            root: true,
+          },
+          {
+            name: "Whey Protein Concentrate 80 Instant (Valley Queen)",
+            slug: "food-ingredients/whey-protein-concentrate-80-instant-valley-queen",
+            root: true,
+          },
+          {
+            name: "Saputo Whey Protein Concentrate 80% Instantized",
+            slug: "food-ingredients/saputo-whey-protein-concentrate-80-instantized",
+            root: true,
+          },
+          {
+            name: "Sunpro Instant Protein Concentrate Instant WPC 80",
+            slug: "food-ingredients/sunpro-instant-protein-concentrate-instant-wpc-80",
+            root: true,
+          },
+        ],
       },
       {
         name: "Lactose",
         isSubMenu: true,
         subItems: [
-          { name: "Lactose (K-LAC)", slug: "food-ingredients/lactose-k-lac", root: true },
-          { name: "Mullins Whey Lactose 200 Mesh", slug: "food-ingredients/mullins-whey-lactose-200-mesh", root: true }
-        ]
+          {
+            name: "Lactose (K-LAC)",
+            slug: "food-ingredients/lactose-k-lac",
+            root: true,
+          },
+          {
+            name: "Mullins Whey Lactose 200 Mesh",
+            slug: "food-ingredients/mullins-whey-lactose-200-mesh",
+            root: true,
+          },
+        ],
       },
-      { name: "Micellar Casein 85", slug: "food-ingredients/micellar-casein-85", root: true },
-      { name: "L-Carnitine Base", slug: "food-ingredients/l-carnitine-base", root: true },
+      {
+        name: "Micellar Casein 85",
+        slug: "food-ingredients/micellar-casein-85",
+        root: true,
+      },
+      {
+        name: "L-Carnitine Base",
+        slug: "food-ingredients/l-carnitine-base",
+        root: true,
+      },
       { name: "L-Glutamine", slug: "food-ingredients/l-glutamine", root: true },
-      { name: "Potassium Sorbate", slug: "food-ingredients/potassium-sorbate", root: true },
-      { name: "Vital Wheat Gluten", slug: "food-ingredients/vital-wheat-gluten", root: true },
-      { name: "Pea Protein (80%)", slug: "food-ingredients/pea-protein-80", root: true },
-      { name: "Isolated Soy Protein", slug: "food-ingredients/isolated-soy-protein", root: true },
-      { name: "Creatine Monohydrate", slug: "food-ingredients/creatine-monohydrate", root: true }
-    ]
-  }
+      {
+        name: "Potassium Sorbate",
+        slug: "food-ingredients/potassium-sorbate",
+        root: true,
+      },
+      {
+        name: "Vital Wheat Gluten",
+        slug: "food-ingredients/vital-wheat-gluten",
+        root: true,
+      },
+      {
+        name: "Pea Protein (80%)",
+        slug: "food-ingredients/pea-protein-80",
+        root: true,
+      },
+      {
+        name: "Isolated Soy Protein",
+        slug: "food-ingredients/isolated-soy-protein",
+        root: true,
+      },
+      {
+        name: "Creatine Monohydrate",
+        slug: "food-ingredients/creatine-monohydrate",
+        root: true,
+      },
+    ],
+  },
 ];
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -331,12 +387,12 @@ export default function Navbar() {
         setActiveMobile("FOOD INGREDIENTS");
       }
     };
-    window.addEventListener('open-services-dropdown', handleOpenServices);
-    window.addEventListener('open-food-dropdown', handleOpenFood);
-    
+    window.addEventListener("open-services-dropdown", handleOpenServices);
+    window.addEventListener("open-food-dropdown", handleOpenFood);
+
     return () => {
-      window.removeEventListener('open-services-dropdown', handleOpenServices);
-      window.removeEventListener('open-food-dropdown', handleOpenFood);
+      window.removeEventListener("open-services-dropdown", handleOpenServices);
+      window.removeEventListener("open-food-dropdown", handleOpenFood);
     };
   }, []);
 
@@ -345,13 +401,17 @@ export default function Navbar() {
       {/* Container constraints matching your primary layout rules */}
       <div className="max-w-[1450px] mx-auto px-2 sm:px-4 lg:px-2 xl:px-6">
         <div className="flex items-center justify-between py-3">
-          
           {/* CHANGED: Switched to justify-between to anchor HOME on the far-left and STUDENT PANEL on the far-right symmetrically */}
           <ul className="hidden lg:flex items-center justify-between text-white text-[9px] xl:text-[12px] 2xl:text-sm font-semibold w-full">
             <NavLink href="/" label="HOME" pathname={pathname} />
             <NavLink href="/aboutus" label="ABOUT US" pathname={pathname} />
 
-            <DesktopDropdown title="SERVICES" menu={servicesMenu} isPrimary={true} pathname={pathname} />
+            <DesktopDropdown
+              title="SERVICES"
+              menu={servicesMenu}
+              isPrimary={true}
+              pathname={pathname}
+            />
             <DesktopDropdown
               title="TESTINGS"
               menu={testingMenu}
@@ -363,12 +423,35 @@ export default function Navbar() {
               align="right"
               pathname={pathname}
             />
-            <DesktopDropdown title="UPDATES" menu={updatesMenu} pathname={pathname} />
 
-            <NavLink href="/contact-us" label="CONTACT US" pathname={pathname} />
-            <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" align="right" pathname={pathname} isFeatured={true} />
-            <NavLink href="/it-services-and-solutions" label="IT SERVICES" pathname={pathname} />
-            <NavLink href="/student-panel" label="STUDENT PANEL" pathname={pathname} />
+            <DesktopDropdown
+              title="FOOD INGREDIENTS"
+              menu={foodMenu}
+              href="/food-ingredients"
+              align="right"
+              pathname={pathname}
+              isFeatured={true}
+            />
+            <NavLink
+              href="/it-services-and-solutions"
+              label="IT SERVICES"
+              pathname={pathname}
+            />
+            <NavLink
+              href="/student-panel"
+              label="STUDENT PANEL"
+              pathname={pathname}
+            />
+            <DesktopDropdown
+              title="UPDATES"
+              menu={updatesMenu}
+              pathname={pathname}
+            />
+            <NavLink
+              href="/contact-us"
+              label="CONTACT US"
+              pathname={pathname}
+            />
           </ul>
 
           <button
@@ -399,7 +482,12 @@ export default function Navbar() {
             </div>
 
             <ul className="text-sm font-semibold">
-              <MobileLink label="HOME" href="/" close={setMobileMenu} pathname={pathname} />
+              <MobileLink
+                label="HOME"
+                href="/"
+                close={setMobileMenu}
+                pathname={pathname}
+              />
               <MobileLink
                 label="ABOUT US"
                 href="/aboutus"
@@ -435,22 +523,6 @@ export default function Navbar() {
               />
 
               <MobileAccordion
-                title="UPDATES"
-                menu={updatesMenu}
-                active={activeMobile}
-                setActive={setActiveMobile}
-                close={setMobileMenu}
-                pathname={pathname}
-              />
-
-              <MobileLink
-                label="CONTACT US"
-                href="/contact-us"
-                close={setMobileMenu}
-                pathname={pathname}
-              />
-
-              <MobileAccordion
                 title="FOOD INGREDIENTS"
                 menu={foodMenu}
                 active={activeMobile}
@@ -472,6 +544,21 @@ export default function Navbar() {
                 close={setMobileMenu}
                 pathname={pathname}
               />
+              <MobileAccordion
+                title="UPDATES"
+                menu={updatesMenu}
+                active={activeMobile}
+                setActive={setActiveMobile}
+                close={setMobileMenu}
+                pathname={pathname}
+              />
+
+              <MobileLink
+                label="CONTACT US"
+                href="/contact-us"
+                close={setMobileMenu}
+                pathname={pathname}
+              />
             </ul>
           </div>
         </div>
@@ -480,7 +567,15 @@ export default function Navbar() {
   );
 }
 
-function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatured, pathname }) {
+function DesktopDropdown({
+  title,
+  menu,
+  href,
+  align = "left",
+  isPrimary,
+  isFeatured,
+  pathname,
+}) {
   // Check if any child page in this dropdown is currently active
   const isChildActive = menu.some((group) =>
     group.items.some((item) => {
@@ -489,12 +584,20 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
       // Check sub-menu items too
       if (item.isSubMenu && item.subItems) {
         return item.subItems.some((sub) => {
+          if (sub.isSubMenu && sub.subItems) {
+            return sub.subItems.some((sub2) => {
+              const sub2Path = sub2.root
+                ? `/${sub2.slug}`
+                : `/services/${sub2.slug}`;
+              return pathname === sub2Path;
+            });
+          }
           const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
           return pathname === subPath;
         });
       }
       return false;
-    })
+    }),
   );
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -502,13 +605,14 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
   useEffect(() => {
     if (title === "SERVICES") {
       const handleOpen = () => setIsOpen(true);
-      window.addEventListener('open-services-dropdown', handleOpen);
-      return () => window.removeEventListener('open-services-dropdown', handleOpen);
+      window.addEventListener("open-services-dropdown", handleOpen);
+      return () =>
+        window.removeEventListener("open-services-dropdown", handleOpen);
     }
     if (title === "FOOD INGREDIENTS") {
       const handleOpen = () => setIsOpen(true);
-      window.addEventListener('open-food-dropdown', handleOpen);
-      return () => window.removeEventListener('open-food-dropdown', handleOpen);
+      window.addEventListener("open-food-dropdown", handleOpen);
+      return () => window.removeEventListener("open-food-dropdown", handleOpen);
     }
   }, [title]);
 
@@ -520,11 +624,11 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
       }
     };
     const timer = setTimeout(() => {
-      document.addEventListener('click', handleClickOutside);
+      document.addEventListener("click", handleClickOutside);
     }, 10);
     return () => {
       clearTimeout(timer);
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [isOpen]);
 
@@ -549,77 +653,217 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
     </>
   );
 
-  const primaryClasses = "bg-white text-[#004e7a] px-4 py-1.5 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5";
-  const featuredClasses = "bg-white/10 backdrop-blur-md border border-white/50 text-white px-5 py-1.5 rounded-full font-bold shadow-sm hover:bg-white/20 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:-translate-y-0.5 transition-all duration-300";
+  const primaryClasses =
+    "bg-white text-[#004e7a] px-4 py-1.5 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5";
+  const featuredClasses =
+    "bg-white/10 backdrop-blur-md border border-white/50 text-white px-5 py-1.5 rounded-full font-bold shadow-sm hover:bg-white/20 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:-translate-y-0.5 transition-all duration-300";
   const defaultClasses = "hover:text-black";
-  const activeIndicator = isChildActive ? "border-b-2 border-white pb-1 text-yellow-300" : "";
-  
-  const currentButtonClass = isPrimary ? primaryClasses : isFeatured ? featuredClasses : defaultClasses;
-  const currentIndicator = (!isPrimary && !isFeatured) ? activeIndicator : "";
+  const activeIndicator = isChildActive
+    ? "border-b-2 border-white pb-1 text-yellow-300"
+    : "";
+
+  const currentButtonClass = isPrimary
+    ? primaryClasses
+    : isFeatured
+      ? featuredClasses
+      : defaultClasses;
+  const currentIndicator = !isPrimary && !isFeatured ? activeIndicator : "";
 
   return (
-    <li 
+    <li
       ref={dropdownRef}
       className="relative group"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
       {href ? (
-        <Link href={href} className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${currentButtonClass} ${currentIndicator}`}>
+        <Link
+          href={href}
+          className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${currentButtonClass} ${currentIndicator}`}
+        >
           {buttonContent}
         </Link>
       ) : (
-        <span className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${currentButtonClass} ${currentIndicator}`}>
+        <span
+          className={`cursor-pointer flex items-center gap-1 transition-all duration-300 whitespace-nowrap ${currentButtonClass} ${currentIndicator}`}
+        >
           {buttonContent}
         </span>
       )}
 
-      <div 
-        className={`absolute ${align === "right" ? "right-0" : "left-0"} top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 z-50 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+      <div
+        className={`absolute ${align === "right" ? "right-0" : "left-0"} top-full mt-3 bg-white shadow-[0_20px_40px_-15px_rgba(0,78,122,0.15)] ring-1 ring-slate-100 rounded-2xl p-7 transition-all duration-300 z-50 ${
+          isOpen
+            ? "opacity-100 visible translate-y-0"
+            : "opacity-0 invisible -translate-y-2"
         }`}
       >
         <div className="flex gap-10">
           {menu.map((group, gIndex) => (
             <div key={`${title}-group-${gIndex}`} className="min-w-60">
-              {group.title && (
-                <h4 className="mb-3 text-gray-800 font-semibold text-sm border-b pb-2 whitespace-nowrap uppercase">
-                  {group.title}
-                </h4>
-              )}
+              {group.title ? (
+                <div className="relative mb-5 bg-gradient-to-r from-blue-50 via-blue-50/50 to-transparent py-2 px-3 border-l-[3px] border-[#0075B6] rounded-r-lg">
+                  <h4 className="text-[#004e7a] font-bold text-[13px] tracking-widest uppercase">
+                    {group.title}
+                  </h4>
+                </div>
+              ) : menu.some((g) => g.title) ? (
+                <div className="relative mb-5 py-2 px-3 border-l-[3px] border-transparent pointer-events-none opacity-0 select-none">
+                  <h4 className="font-extrabold text-[13px] tracking-widest uppercase">
+                    SPACER
+                  </h4>
+                </div>
+              ) : null}
 
-              <ul className="space-y-3 text-sm font-normal">
+              <ul className="space-y-2 text-sm font-medium">
                 {group.items.map((item, iIndex) => (
-                  <li key={`${item.slug || item.name}-${iIndex}`} className={item.isSubMenu ? "relative group/sub" : ""}>
+                  <li
+                    key={`${item.slug || item.name}-${iIndex}`}
+                    className={item.isSubMenu ? "relative group/sub" : ""}
+                  >
                     {item.isSubMenu ? (
                       <>
-                        <div className="flex items-center justify-between gap-3 text-gray-700 hover:text-[#0075B6] cursor-pointer">
-                          <div className="flex items-start gap-3">
-                            {item.icon === "ShoppingCart" ? (
-                              <ShoppingCart size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                            ) : (
-                              <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                            )}
-                            <span className="leading-6 uppercase">{item.name}</span>
+                        <div className="group flex items-center justify-between gap-2 text-slate-800 hover:text-[#004e7a] cursor-pointer py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                          <div className="flex items-center gap-2">
+                            <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                              {item.icon === "ShoppingCart" ? (
+                                <ShoppingCart size={14} strokeWidth={2} />
+                              ) : (
+                                <FileText size={14} strokeWidth={2} />
+                              )}
+                            </div>
+                            <span className="leading-snug text-[13px] font-bold uppercase transition-colors duration-300">
+                              {item.name}
+                            </span>
                           </div>
-                          <ChevronRight size={14} className="opacity-70" />
+                          <ChevronRight
+                            size={18}
+                            strokeWidth={2.5}
+                            className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0"
+                          />
                         </div>
-                        <div className={`absolute ${align === "right" ? "left-[50%] top-full" : "left-full ml-2 top-0"} w-72 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
-                          <ul className="space-y-3">
+                        <div
+                          className={`absolute ${align === "right" ? "left-[50%] top-full" : `left-full ml-2 ${iIndex === group.items.length - 1 ? "bottom-0" : "top-0"}`} w-72 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}
+                        >
+                          <ul className="space-y-2">
                             {item.subItems.map((sub, sIdx) => (
-                              <li key={sIdx}>
-                                <Link
-                                  href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
-                                  className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  {sub.icon === "ShoppingCart" ? (
-                                    <ShoppingCart size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                                  ) : (
-                                    <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                                  )}
-                                  <span className="leading-6 uppercase">{sub.name}</span>
-                                </Link>
+                              <li
+                                key={sIdx}
+                                className={
+                                  sub.isSubMenu ? "relative group/sub2" : ""
+                                }
+                              >
+                                {sub.isSubMenu ? (
+                                  <>
+                                    <div className="group flex items-center justify-between gap-2 text-slate-800 hover:text-[#004e7a] cursor-pointer py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                                      <div className="flex items-center gap-2.5">
+                                        <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                                          {sub.icon === "ShoppingCart" ? (
+                                            <ShoppingCart
+                                              size={14}
+                                              strokeWidth={2}
+                                            />
+                                          ) : (
+                                            <FileText
+                                              size={14}
+                                              strokeWidth={2}
+                                            />
+                                          )}
+                                        </div>
+                                        <span className="leading-snug text-[13px] font-bold uppercase transition-colors duration-300">
+                                          {sub.name}
+                                        </span>
+                                      </div>
+                                      <ChevronRight
+                                        size={18}
+                                        strokeWidth={2.5}
+                                        className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0"
+                                      />
+                                    </div>
+                                    <div
+                                      className={`absolute ${align === "right" ? "left-[50%] top-full" : `left-full ml-2 ${sIdx === item.subItems.length - 1 ? "bottom-0" : "top-0"}`} w-72 opacity-0 invisible group-hover/sub2:opacity-100 group-hover/sub2:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}
+                                    >
+                                      <ul className="space-y-2">
+                                        {sub.subItems.map((sub2, s2Idx) => (
+                                          <li key={s2Idx}>
+                                            <Link
+                                              href={
+                                                sub2.root
+                                                  ? `/${sub2.slug}`
+                                                  : `/services/${sub2.slug}`
+                                              }
+                                              onClick={() => setIsOpen(false)}
+                                              className="block w-full"
+                                            >
+                                              <div className="group flex items-center justify-between gap-2 text-slate-800 hover:text-[#004e7a] py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out w-full">
+                                                <div className="flex items-center gap-2.5">
+                                                  <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                                                    {sub2.icon ===
+                                                    "ShoppingCart" ? (
+                                                      <ShoppingCart
+                                                        size={14}
+                                                        strokeWidth={2}
+                                                      />
+                                                    ) : (
+                                                      <FileText
+                                                        size={14}
+                                                        strokeWidth={2}
+                                                      />
+                                                    )}
+                                                  </div>
+                                                  <span className="leading-snug text-[13px] font-medium uppercase transition-colors duration-300">
+                                                    {sub2.name}
+                                                  </span>
+                                                </div>
+                                                <ArrowUpRight
+                                                  size={18}
+                                                  strokeWidth={2.5}
+                                                  className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0"
+                                                />
+                                              </div>
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  </>
+                                ) : (
+                                  <Link
+                                    href={
+                                      sub.root
+                                        ? `/${sub.slug}`
+                                        : `/services/${sub.slug}`
+                                    }
+                                    onClick={() => setIsOpen(false)}
+                                    className="block w-full"
+                                  >
+                                    <div className="group flex items-center justify-between gap-2 text-slate-800 hover:text-[#004e7a] py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                                      <div className="flex items-center gap-2.5">
+                                        <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                                          {sub.icon === "ShoppingCart" ? (
+                                            <ShoppingCart
+                                              size={14}
+                                              strokeWidth={2}
+                                            />
+                                          ) : (
+                                            <FileText
+                                              size={14}
+                                              strokeWidth={2}
+                                            />
+                                          )}
+                                        </div>
+                                        <span className="leading-snug text-[13px] font-medium uppercase transition-colors duration-300">
+                                          {sub.name}
+                                        </span>
+                                      </div>
+                                      <ArrowUpRight
+                                        size={18}
+                                        strokeWidth={2.5}
+                                        className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0"
+                                      />
+                                    </div>
+                                  </Link>
+                                )}
                               </li>
                             ))}
                           </ul>
@@ -630,15 +874,28 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                         href={
                           item.root ? `/${item.slug}` : `/services/${item.slug}`
                         }
-                        className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
                         onClick={() => setIsOpen(false)}
+                        className="block w-full"
                       >
-                        <FileText
-                          size={16}
-                          strokeWidth={1.75}
-                          className="mt-0.5 text-[#0075B6] shrink-0"
-                        />
-                        <span className="leading-6 uppercase">{item.name}</span>
+                        <div className="group flex items-center justify-between gap-2 text-slate-800 hover:text-[#004e7a] py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                          <div className="flex items-center gap-2.5">
+                            <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                              {item.icon === "ShoppingCart" ? (
+                                <ShoppingCart size={14} strokeWidth={2} />
+                              ) : (
+                                <FileText size={14} strokeWidth={2} />
+                              )}
+                            </div>
+                            <span className="leading-snug text-[13px] font-medium uppercase transition-colors duration-300">
+                              {item.name}
+                            </span>
+                          </div>
+                          <ArrowUpRight
+                            size={18}
+                            strokeWidth={2.5}
+                            className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0"
+                          />
+                        </div>
                       </Link>
                     )}
                   </li>
@@ -654,12 +911,15 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
 
 function MobileNestedAccordion({ item, close }) {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <div className="space-y-3">
-      <button 
+      <button
         className="w-full flex items-center justify-between text-xs text-gray-200 cursor-pointer"
-        onClick={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}
+        onClick={(e) => {
+          e.preventDefault();
+          setIsOpen(!isOpen);
+        }}
       >
         <div className="flex items-start gap-2">
           {item.icon === "ShoppingCart" ? (
@@ -669,25 +929,34 @@ function MobileNestedAccordion({ item, close }) {
           )}
           <span className="uppercase text-left leading-tight">{item.name}</span>
         </div>
-        <ChevronDown size={14} className={`transition shrink-0 ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown
+          size={14}
+          className={`transition shrink-0 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
-      
+
       {isOpen && (
         <ul className="pl-5 space-y-3 mt-3 border-l border-white/10 ml-2">
           {item.subItems.map((sub, sIdx) => (
             <li key={sIdx}>
-              <Link
-                href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
-                onClick={() => close(false)}
-                className="flex items-start gap-2 text-xs text-gray-300 hover:text-white"
-              >
-                {sub.icon === "ShoppingCart" ? (
-                  <ShoppingCart size={14} className="shrink-0 mt-0.5" />
-                ) : (
-                  <FileText size={14} className="shrink-0 mt-0.5" />
-                )}
-                <span className="uppercase text-left leading-tight">{sub.name}</span>
-              </Link>
+              {sub.isSubMenu ? (
+                <MobileNestedAccordion item={sub} close={close} />
+              ) : (
+                <Link
+                  href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
+                  onClick={() => close(false)}
+                  className="flex items-start gap-2 text-xs text-gray-300 hover:text-white"
+                >
+                  {sub.icon === "ShoppingCart" ? (
+                    <ShoppingCart size={14} className="shrink-0 mt-0.5" />
+                  ) : (
+                    <FileText size={14} className="shrink-0 mt-0.5" />
+                  )}
+                  <span className="uppercase text-left leading-tight">
+                    {sub.name}
+                  </span>
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -703,18 +972,27 @@ function MobileAccordion({ title, menu, active, setActive, close, pathname }) {
       if (pathname === itemPath) return true;
       if (item.isSubMenu && item.subItems) {
         return item.subItems.some((sub) => {
+          if (sub.isSubMenu && sub.subItems) {
+            return sub.subItems.some((sub2) => {
+              const sub2Path = sub2.root
+                ? `/${sub2.slug}`
+                : `/services/${sub2.slug}`;
+              return pathname === sub2Path;
+            });
+          }
           const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
           return pathname === subPath;
         });
       }
       return false;
-    })
+    }),
   );
   const open = active === title;
 
   return (
     <li className="border-b border-white/10">
-      <button className={`w-full flex items-center justify-between px-4 py-3 ${isChildActive ? "bg-[#0075B6]/40 text-yellow-300 border-l-4 border-yellow-300" : ""}`}
+      <button
+        className={`w-full flex items-center justify-between px-4 py-3 ${isChildActive ? "bg-[#0075B6]/40 text-yellow-300 border-l-4 border-yellow-300" : ""}`}
         onClick={() => setActive(open ? null : title)}
       >
         {title}
@@ -725,7 +1003,7 @@ function MobileAccordion({ title, menu, active, setActive, close, pathname }) {
       </button>
 
       {open && (
-        <div className="bg-[#2b3945] px-4 py-3 space-y-4">
+        <div className="bg-[#2b3945] px-4 py-3 space-y-2">
           {menu.map((group, gIndex) => (
             <div key={`${title}-mobile-${gIndex}`}>
               {group.title && (
@@ -746,7 +1024,9 @@ function MobileAccordion({ title, menu, active, setActive, close, pathname }) {
                         className="flex items-start gap-2 text-xs text-gray-200"
                       >
                         <FileText size={14} className="shrink-0 mt-0.5" />
-                        <span className="uppercase text-left leading-tight">{item.name}</span>
+                        <span className="uppercase text-left leading-tight">
+                          {item.name}
+                        </span>
                       </Link>
                     )}
                   </li>
@@ -764,7 +1044,10 @@ function NavLink({ href, label, pathname }) {
   const isActive = href === "/" ? pathname === "/" : pathname?.startsWith(href);
   return (
     <li>
-      <Link href={href} className={`hover:text-black whitespace-nowrap transition-all duration-200 ${isActive ? "border-b-2 border-white pb-1 text-yellow-300" : ""}`}>
+      <Link
+        href={href}
+        className={`hover:text-black whitespace-nowrap transition-all duration-200 ${isActive ? "border-b-2 border-white pb-1 text-yellow-300" : ""}`}
+      >
         {label}
       </Link>
     </li>

@@ -8,13 +8,22 @@ export const metadata = {
     "Premium Biomedical Waste Pulsation Vacuum Sterilizers featuring advanced PLC controls, deep steam penetration, and SS304/316L construction. Complete setup and installation by AN Global Services.",
   keywords: [
     "Biomedical Waste Pulsation Vacuum Sterilizer",
+    "Biomedical Waste Autoclave",
+    "Biomedical Autoclave",
+    "Bio Waste Sterilizer",
     "Medical Waste Sterilizer",
     "Pulse Vacuum Autoclave",
+    "Vacuum Autoclave",
     "Hospital Waste Autoclave",
+    "Hospital Sterilizer Machine",
+    "Waste Autoclave",
     "Biomedical Waste Treatment",
     "Pulsation Vacuum Sterilization",
+    "Pulse Vacuum Sterilizer",
     "Industrial Autoclave for Hospitals",
     "Infectious Waste Sterilizer",
+    "Steam Sterilizer for Medical Waste",
+    "Biomedical Waste Machine",
     "Medical Waste Management Equipment",
     "AN Global Services sterilizer setup",
     "Medical Autoclave Installation",
@@ -48,6 +57,9 @@ export default function BiomedicalWasteSterilizerPage() {
               },
               "offers": {
                 "@type": "Offer",
+                "url": "https://www.anglobalservices.com/contact-us",
+                "priceCurrency": "INR",
+                "price": "0",
                 "availability": "https://schema.org/InStock",
                 "seller": {
                   "@type": "Organization",
@@ -240,8 +252,8 @@ export default function BiomedicalWasteSterilizerPage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🔬
+                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  01
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Key Functionalities</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -256,8 +268,8 @@ export default function BiomedicalWasteSterilizerPage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🛡️
+                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  02
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Unmatched Safety</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -272,8 +284,8 @@ export default function BiomedicalWasteSterilizerPage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-purple-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  📈
+                <div className="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  03
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Core Advantages</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">

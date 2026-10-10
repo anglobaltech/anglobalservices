@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import LeadPopup from "@/components/LeadPopup";
+// import ChatBot from "@/components/ChatBot";
 import Script from "next/script";
 import Analytics from "@/components/Analytics";
 import { Suspense } from "react";
@@ -120,6 +121,7 @@ export default function RootLayout({ children }) {
         </div>
 
         <FloatingContact />
+        {/* <ChatBot /> */}
 
         <div className="layout-item">
           <Footer />

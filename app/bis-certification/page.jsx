@@ -150,20 +150,20 @@ export default function BISPage() {
       </section>
 
       {/* What is BIS Certification */}
-      <section className="max-w-7xl mx-auto px-4 pt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div className="md:col-span-1">
+      <section className="max-w-7xl mx-auto px-4 pt-10 grid grid-cols-1 xl:grid-cols-2 gap-10">
+        <div className="xl:col-span-1">
           <div className="rounded-xl overflow-hidden shadow-md">
             <Image
               src="/service/bis-certification.jpeg"
               alt="BIS Certificate in India"
-              width={500}
-              height={500}
+              width={800}
+              height={800}
               className="w-full h-auto"
             />
           </div>
         </div>
 
-        <div className="md:col-span-2">
+        <div className="xl:col-span-1">
           <h2 className="text-xl font-bold mb-4 border-b uppercase">
             What is BIS Certification in India?
           </h2>
@@ -192,21 +192,21 @@ export default function BISPage() {
               and plants, promoting environmental protection, preventing unfair
               trade practices, and safeguarding national security.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* BIS Background */}
-      <section className="w-full bg-white">
-        <div className="max-w-7xl mx-auto px-4 pb-10">
-          <div className="space-y-6 text-gray-500 text-[15px] leading-7">
-            <p className="pt-4">
+            <p>
               BIS was empowered by law in 1986 to offer a voluntary product
               certification scheme to manufacturers. Under this scheme,
               manufacturers who are confident that their product meets Indian
               Standards may apply for a BIS licence to use the Standard Mark on
               their product as a recognised symbol of quality compliance.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Info Full Width */}
+      <section className="w-full bg-white pt-6">
+        <div className="max-w-7xl mx-auto px-4 pb-10">
+          <div className="space-y-6 text-gray-500 text-[15px] leading-7">
             <p>
               For products covered under mandatory certification, manufacturers
               and importers are not permitted to manufacture, import, store, or

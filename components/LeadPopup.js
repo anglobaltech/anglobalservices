@@ -204,8 +204,9 @@ import { usePathname } from "next/navigation"; // 1. Added this import
 import { doc, runTransaction, serverTimestamp } from "firebase/firestore";
 import { db } from "@/src/lib/firebase";
 
+import { FaUser, FaEnvelope, FaPhoneAlt, FaCommentDots, FaArrowRight } from "react-icons/fa";
+
 export default function LeadPopup() {
-  // 2. Read the current URL path
   const pathname = usePathname();
   const isStudentPanel = pathname?.startsWith("/student-panel");
   const isItServicesPage = pathname?.startsWith("/it-services-and-solutions");
@@ -214,6 +215,7 @@ export default function LeadPopup() {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [scale, setScale] = useState(1);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -223,19 +225,40 @@ export default function LeadPopup() {
   });
 
   useEffect(() => {
-    // 3. Stop the 30-second timer from even running if on these specific pages
     if (isStudentPanel || isItServicesPage || isFoodIngredientsPage) return;
 
     const firstTimer = setTimeout(() => {
+      // Do not interrupt the user if they are currently chatting with the bot
+      if (document.getElementById('chatbot-window')) return;
       setShow(true);
-    }, 12000); // 12 seconds
+    }, 10000);
 
     return () => clearTimeout(firstTimer);
   }, [pathname, isStudentPanel, isItServicesPage, isFoodIngredientsPage]);
 
+  useEffect(() => {
+    const updateScale = () => {
+      if (typeof window !== "undefined") {
+        const winWidth = window.innerWidth;
+        if (winWidth < 1000) {
+          setScale(Math.min(1, (winWidth - 32) / 980));
+        } else {
+          setScale(1);
+        }
+      }
+    };
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
   const closePopup = () => {
     setShow(false);
-    setTimeout(() => setShow(true), 90000); // 90 seconds
+    setTimeout(() => {
+      // Do not interrupt the user if they are currently chatting with the bot
+      if (document.getElementById('chatbot-window')) return;
+      setShow(true);
+    }, 60000);
   };
 
   const handleChange = (e) => {
@@ -307,55 +330,56 @@ export default function LeadPopup() {
     }
   };
 
-  // 4. Return null (hide completely) if on the student panel, IT services, food ingredients, or if show is false
   if (isStudentPanel || isItServicesPage || isFoodIngredientsPage || !show) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/10 pointer-events-none">
-      <div className="relative h-[390px] w-[850px] max-w-[97%] bg-white rounded-lg overflow-hidden flex pointer-events-auto">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-transparent pointer-events-none overflow-hidden p-4 md:p-0">
+
+      {/* ---------------- MOBILE LAYOUT (< md) ---------------- */}
+      {/* Clean white form, no image, no weird scaled offsets */}
+      <div className="md:hidden relative w-full max-w-[400px] bg-white rounded-2xl shadow-2xl p-6 pointer-events-auto flex flex-col z-50">
         <button
           onClick={closePopup}
-          className="absolute top-1 right-3 text-3xl  text-gray-600 cursor-pointer hover:text-red-600"
+          className="absolute top-3 right-4 text-2xl text-gray-400 hover:text-gray-700 transition-colors z-20 cursor-pointer"
         >
           ×
         </button>
 
-        <div className="hidden md:block p-5 w-[62%] bg-gray-100">
-          <img
-            src="/popup-image-2.webp"
-            alt="Popup Image "
-            className="h-full w-full object-cover"
-          />
-        </div>
-
-        <div className="w-full md:w-[38%] p-6 flex items-center justify-center">
-          {success ? (
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-green-600 mb-2">
-                Thank You!
-              </h3>
-              <p className="text-gray-700">
-                Your enquiry has been sent successfully.
-                <br />
-                We will respond shortly.
-              </p>
-            </div>
-          ) : (
-            <div className="w-full">
-              <h2 className="text-2xl text-[#0072b1] font-extrabold mb-5 text-center">
+        {success ? (
+          <div className="text-center py-6">
+            <h3 className="text-xl font-semibold text-green-600 mb-2">Thank You!</h3>
+            <p className="text-gray-700 text-sm">Your enquiry has been sent successfully.<br />We will respond shortly.</p>
+          </div>
+        ) : (
+          <div className="w-full mt-2">
+            <div className="text-center mb-6">
+              <h2 className="text-[22px] text-[#051c3d] font-black leading-tight tracking-tight">
                 AN Global Services!
               </h2>
+              <p className="text-[#555] text-[13px] mt-1 font-medium">
+                Get in touch with our experts
+              </p>
+            </div>
 
-              <form onSubmit={handleSubmit} className="space-y-3">
+            <form onSubmit={handleSubmit} className="space-y-3.5">
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#555]">
+                  <FaUser size={15} />
+                </div>
                 <input
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
                   placeholder="Your name"
-                  className="w-full border border-gray-500 rounded-md px-3 py-1"
+                  className="w-full border border-[#cbd5e1] rounded-[8px] pl-10 pr-3 py-2.5 text-[14px] text-gray-800 focus:outline-none focus:border-[#002B7F] focus:ring-1 focus:ring-[#002B7F] transition-all bg-white shadow-sm"
                 />
+              </div>
 
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#555]">
+                  <FaEnvelope size={15} />
+                </div>
                 <input
                   type="email"
                   name="email"
@@ -363,9 +387,14 @@ export default function LeadPopup() {
                   onChange={handleChange}
                   required
                   placeholder="Email address"
-                  className="w-full border border-gray-500 rounded-md px-3 py-1"
+                  className="w-full border border-[#cbd5e1] rounded-[8px] pl-10 pr-3 py-2.5 text-[14px] text-gray-800 focus:outline-none focus:border-[#002B7F] focus:ring-1 focus:ring-[#002B7F] transition-all bg-white shadow-sm"
                 />
+              </div>
 
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#555]">
+                  <FaPhoneAlt size={15} />
+                </div>
                 <input
                   type="tel"
                   name="phone"
@@ -374,24 +403,163 @@ export default function LeadPopup() {
                   required
                   pattern="[0-9]{10}"
                   placeholder="10 digit phone number"
-                  className="w-full border border-gray-500 rounded-md px-3 py-1"
+                  className="w-full border border-[#cbd5e1] rounded-[8px] pl-10 pr-3 py-2.5 text-[14px] text-gray-800 focus:outline-none focus:border-[#002B7F] focus:ring-1 focus:ring-[#002B7F] transition-all bg-white shadow-sm"
                 />
+              </div>
 
+              <div className="relative">
+                <div className="absolute top-3 left-0 pl-3.5 flex pointer-events-none text-[#555]">
+                  <FaCommentDots size={15} />
+                </div>
                 <textarea
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  placeholder="Tell us which service you’re interested in…"
-                  className="w-full border border-gray-500 rounded-md px-3 py-2 h-20"
+                  placeholder="Tell us which service you're interested in..."
+                  className="w-full border border-[#cbd5e1] rounded-[8px] pl-10 pr-3 py-2.5 h-[76px] text-[14px] text-gray-800 focus:outline-none focus:border-[#002B7F] focus:ring-1 focus:ring-[#002B7F] transition-all resize-none bg-white shadow-sm"
                 />
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-[#002B7F] text-white py-3 rounded-full cursor-pointer font-bold text-[14px] tracking-wider hover:bg-[#001c54] disabled:opacity-60 transition-colors flex items-center justify-center gap-2 mt-1 shadow-lg"
+              >
+                {loading ? "SUBMITTING..." : "SUBMIT ENQUIRY"}
+                {!loading && <FaArrowRight size={13} />}
+              </button>
+            </form>
+          </div>
+        )}
+      </div>
+
+      {/* ---------------- TABLET/DESKTOP LAYOUT (md and up) ---------------- */}
+      {/* ---------------- TABLET/DESKTOP LAYOUT (md and up) ---------------- */}
+      {/* ---------------- TABLET/DESKTOP LAYOUT (md and up) ---------------- */}
+      {/* ---------------- TABLET/DESKTOP LAYOUT (md and up) ---------------- */}
+      <div
+        className="hidden md:flex relative h-[410px] w-[940px] min-w-[940px] shrink-0 bg-white rounded-2xl overflow-hidden pointer-events-auto shadow-[0_20px_50px_rgba(0,0,0,0.3)] ring-1 ring-black/5"
+        style={{
+          transform: `scale(${scale})`,
+          transformOrigin: 'center'
+        }}
+      >
+        {/* Close Button */}
+        <button
+          onClick={closePopup}
+          className="absolute top-4 right-5 text-2xl text-gray-400 hover:text-gray-900 transition-colors z-20 font-bold cursor-pointer bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-sm border border-gray-100 hover:bg-gray-50"
+        >
+          ×
+        </button>
+
+        {/* Left Side - Image (58%) */}
+        <div className="w-[58%] h-full bg-white px-3 py-0 flex items-center justify-center relative overflow-hidden">
+          <img
+            src="/popup-image-2.webp"
+            alt="Premium Industrial Solutions"
+            className="w-full h-full object-contain rounded-2xl"
+          />
+        </div>
+
+        {/* Right Side - Form (42%) */}
+        <div className="w-[42%] h-full px-8 flex flex-col justify-center z-10 bg-white relative">
+          {success ? (
+            <div className="text-center flex flex-col items-center justify-center h-full animation-fade-in">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Thank You!
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                Your enquiry has been received.<br />Our experts will contact you shortly.
+              </p>
+            </div>
+          ) : (
+            <div className="w-full">
+              <div className="text-center mb-6">
+                <h2 className="text-[24px] text-[#051c3d] font-extrabold leading-tight tracking-tight">
+                  AN Global Services!
+                </h2>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-3.5">
+                <div className="relative group">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 group-focus-within:text-[#002B7F] transition-colors">
+                    <FaUser size={14} />
+                  </div>
+                  <input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Your name"
+                    className="w-full border border-gray-400 bg-gray-50/50 rounded-xl pl-10 pr-3 py-2.5 text-[14px] text-gray-900 font-medium placeholder-gray-600 focus:outline-none focus:border-[#002B7F]/50 focus:ring-2 focus:ring-[#002B7F]/10 focus:bg-white transition-all shadow-sm"
+                  />
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 group-focus-within:text-[#002B7F] transition-colors">
+                    <FaEnvelope size={14} />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="Email address"
+                    className="w-full border border-gray-400 bg-gray-50/50 rounded-xl pl-10 pr-3 py-2.5 text-[14px] text-gray-900 font-medium placeholder-gray-600 focus:outline-none focus:border-[#002B7F]/50 focus:ring-2 focus:ring-[#002B7F]/10 focus:bg-white transition-all shadow-sm"
+                  />
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 group-focus-within:text-[#002B7F] transition-colors">
+                    <FaPhoneAlt size={14} />
+                  </div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    pattern="[0-9]{10}"
+                    placeholder="10 digit phone number"
+                    className="w-full border border-gray-400 bg-gray-50/50 rounded-xl pl-10 pr-3 py-2.5 text-[14px] text-gray-900 font-medium placeholder-gray-600 focus:outline-none focus:border-[#002B7F]/50 focus:ring-2 focus:ring-[#002B7F]/10 focus:bg-white transition-all shadow-sm"
+                  />
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute top-3 left-0 pl-3.5 flex pointer-events-none text-gray-400 group-focus-within:text-[#002B7F] transition-colors">
+                    <FaCommentDots size={14} />
+                  </div>
+                  <textarea
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    placeholder="Tell us which service you're interested in..."
+                    className="w-full border border-gray-400 bg-gray-50/50 rounded-xl pl-10 pr-3 py-2.5 h-[76px] text-[14px] text-gray-900 font-medium placeholder-gray-600 focus:outline-none focus:border-[#002B7F]/50 focus:ring-2 focus:ring-[#002B7F]/10 focus:bg-white transition-all resize-none shadow-sm leading-relaxed"
+                  />
+                </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-blue-900 text-white py-2 rounded-full cursor-pointer font-semibold hover:bg-blue-800 disabled:opacity-60"
+                  className="w-full bg-gradient-to-r from-[#002B7F] to-[#0052a3] text-white py-3 rounded-full cursor-pointer font-bold text-[14px] tracking-wide hover:shadow-lg hover:from-[#001c54] hover:to-[#004182] hover:-translate-y-0.5 disabled:opacity-60 disabled:hover:translate-y-0 transition-all duration-300 flex items-center justify-center gap-2 mt-4 shadow-md border border-transparent"
                 >
-                  {loading ? "Submitting..." : "SUBMIT ENQUIRY"}
+                  {loading ? (  
+                    <span className="flex items-center gap-2">
+                      <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                      SUBMITTING...
+                    </span>
+                  ) : (
+                    <>
+                      SUBMIT ENQUIRY
+                      <FaArrowRight size={12} className="opacity-90" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
