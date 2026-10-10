@@ -584,7 +584,7 @@ export default function Hero() {
           style={{ transform: `translateX(-${heroSlide * 100}%)` }}
         >
           {extendedHeroSlides.map((slide, idx) => (
-            <div key={idx} className="w-full shrink-0 relative h-[520px] sm:h-[420px] md:h-[420px] lg:h-[550px] xl:h-[620px]">
+            <div key={idx} className="w-full shrink-0 relative h-[560px] sm:h-[480px] md:h-[520px] lg:h-[620px] xl:h-[720px]">
 
               {/* IMAGE - absolute, fills container perfectly */}
               <img
@@ -596,22 +596,22 @@ export default function Hero() {
               <div className="absolute inset-0 bg-black/10 z-[1]"></div>
 
               {/* TEXT CONTENT LAYER - absolute, overlays on image */}
-              <div className="absolute inset-0 z-10 w-full flex items-start pt-1.5 sm:pt-6 md:pt-6 lg:pt-8 xl:pt-6">
+              <div className="absolute inset-0 z-10 w-full flex items-start pt-3 sm:pt-8 md:pt-8 lg:pt-12 xl:pt-12">
                 <div className="w-full max-w-7xl mx-auto px-3 pr-12 sm:px-6 md:px-4 lg:px-8">
                   <div className={slide.containerClass || "w-[95%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
-                    <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[28px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-1.5 sm:mb-1 md:mb-2 lg:mb-3 xl:mb-6 drop-shadow-lg tracking-tight">
+                    <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[28px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-3 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-8 drop-shadow-lg tracking-tight">
                       <span className={`whitespace-normal ${slide.wrapHeading ? "" : "sm:whitespace-nowrap"}`}>{slide.headingMain}</span> <br className="block" />
                       <span className="text-[#0075B6] drop-shadow-md bg-white/95 px-2 md:px-2 lg:px-3 xl:px-5 py-0.5 md:py-1 lg:py-1.5 xl:py-2 rounded md:rounded-lg inline-block mt-1 sm:mt-1 md:mt-1 lg:mt-2 xl:mt-4 text-[11px] sm:text-[10px] md:text-sm lg:text-[18px] xl:text-[32px] whitespace-normal sm:whitespace-nowrap">
                         {slide.headingSub}
                       </span>
                     </h1>
 
-                    <p className="text-white font-medium text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
+                    <p className="text-white font-medium text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-4 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
                       {slide.paragraph}
                     </p>
 
                     <div
-                      className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-3 xl:gap-6 mb-2.5 sm:mb-2 md:mb-4 lg:mb-4 xl:mb-5"
+                      className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-3 xl:gap-6 mb-4 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10"
                       onMouseEnter={() => setIsButtonHovered(true)}
                       onMouseLeave={() => setIsButtonHovered(false)}
                     >
@@ -657,11 +657,11 @@ export default function Hero() {
                       )}
                     </div>
 
-                    <div className="bg-black/30 p-2.5 sm:p-2 md:p-3 lg:p-3 xl:p-4 rounded-lg md:rounded-xl shadow-xl w-full md:w-[100%] xl:max-w-2xl">
-                      <h3 className="text-[#00c3ff] text-[13px] sm:text-[10px] md:text-sm lg:text-sm xl:text-xl font-bold mb-1 sm:mb-1 md:mb-1 xl:mb-2">
+                    <div className="bg-black/40 p-3 sm:p-3 md:p-4 lg:p-4 xl:p-6 rounded-lg md:rounded-xl shadow-2xl border border-white/10 w-full md:w-[100%] xl:max-w-2xl">
+                      <h3 className="text-[#00c3ff] text-[14px] sm:text-[12px] md:text-[15px] lg:text-[16px] xl:text-[22px] font-extrabold mb-1.5 sm:mb-1 md:mb-2 xl:mb-2 tracking-wide drop-shadow-md">
                         A N Global Services Private Limited
                       </h3>
-                      <p className="text-gray-200 text-[11px] sm:text-[8px] md:text-[10px] lg:text-[11px] xl:text-sm leading-snug sm:leading-snug md:leading-relaxed mb-2 sm:mb-2 md:mb-3 xl:mb-2">
+                      <p className="text-white font-medium text-[12px] sm:text-[9px] md:text-[11px] lg:text-[13px] xl:text-[15px] leading-relaxed sm:leading-snug md:leading-relaxed mb-3 sm:mb-2 md:mb-3 xl:mb-4 drop-shadow-sm">
                         A complete industrial solution provider. We help manufacturers meet quality, safety, and compliance standards with complete confidence.
                       </p>
 
