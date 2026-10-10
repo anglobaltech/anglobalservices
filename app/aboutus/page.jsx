@@ -208,7 +208,7 @@ export default function AboutPage() {
             </div>
             
             {/* Main Heading */}
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-[#0a192f] leading-[1.1]">
+            <h2 className="text-4xl md:text-4xl font-extrabold mb-8 text-[#0a192f] leading-[1.1]">
               Leading <span className="text-[#0075B6]">Consulting Firm</span>
             </h2>
             
@@ -354,7 +354,7 @@ export default function AboutPage() {
       {/* Our Services Interactive Tabs */}
       <AboutServicesTabs />
 
-      <div className="relative py-20 bg-white">
+      <div className="relative py-20 bg-gray-100">
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-gray-200 to-transparent"></div>
 
         {/* Content */}
@@ -376,7 +376,7 @@ export default function AboutPage() {
                 hover:bg-[#005a8f] transition-all duration-300
                 shadow-lg hover:scale-105"
             >
-              Contact Us Today
+              Contact Us
             </Link>
 
             <Link

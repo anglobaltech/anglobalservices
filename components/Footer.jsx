@@ -860,26 +860,26 @@ export default function Footer() {
                 <div className="h-[2px] w-10 bg-[#0075B6]"></div>
               </h3>
               <div className="grid grid-cols-2 gap-x-2 gap-y-4 text-[14.5px] font-bold text-gray-950">
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/in.png" width="16" alt="India" className="rounded-sm shadow-sm" /> India</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/us.png" width="16" alt="USA" className="rounded-sm shadow-sm" /> USA</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/za.png" width="16" alt="South Africa" className="rounded-sm shadow-sm" /> South Africa</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/gb.png" width="16" alt="UK" className="rounded-sm shadow-sm" /> United Kingdom</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/np.png" width="16" alt="Nepal" className="rounded-sm shadow-sm" /> Nepal</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/de.png" width="16" alt="Germany" className="rounded-sm shadow-sm" /> Germany</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/hk.png" width="16" alt="Hongkong" className="rounded-sm shadow-sm" /> Hongkong</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/ca.png" width="16" alt="Canada" className="rounded-sm shadow-sm" /> Canada</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/sg.png" width="16" alt="Singapore" className="rounded-sm shadow-sm" /> Singapore</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/au.png" width="16" alt="Australia" className="rounded-sm shadow-sm" /> Australia</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/gr.png" width="16" alt="Greece" className="rounded-sm shadow-sm" /> Greece</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/ae.png" width="16" alt="UAE" className="rounded-sm shadow-sm" /> UAE</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/cn.png" width="16" alt="China" className="rounded-sm shadow-sm" /> China</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/fr.png" width="16" alt="France" className="rounded-sm shadow-sm" /> France</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/jp.png" width="16" alt="Japan" className="rounded-sm shadow-sm" /> Japan</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/br.png" width="16" alt="Brazil" className="rounded-sm shadow-sm" /> Brazil</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/kr.png" width="16" alt="South Korea" className="rounded-sm shadow-sm" /> South Korea</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/mx.png" width="16" alt="Mexico" className="rounded-sm shadow-sm" /> Mexico</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/th.png" width="16" alt="Thailand" className="rounded-sm shadow-sm" /> Thailand</span>
-                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/it.png" width="16" alt="Italy" className="rounded-sm shadow-sm" /> Italy</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/in.png" width="16" alt="India" className="shadow-sm" /> India</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/us.png" width="16" alt="USA" className="shadow-sm" /> USA</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/za.png" width="16" alt="South Africa" className="shadow-sm" /> South Africa</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/gb.png" width="16" alt="UK" className="shadow-sm" /> United Kingdom</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/np.png" width="16" alt="Nepal" className="shadow-sm" /> Nepal</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/de.png" width="16" alt="Germany" className="shadow-sm" /> Germany</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/hk.png" width="16" alt="Hongkong" className="shadow-sm" /> Hongkong</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/ca.png" width="16" alt="Canada" className="shadow-sm" /> Canada</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/sg.png" width="16" alt="Singapore" className="shadow-sm" /> Singapore</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/au.png" width="16" alt="Australia" className="shadow-sm" /> Australia</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/gr.png" width="16" alt="Greece" className="shadow-sm" /> Greece</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/ae.png" width="16" alt="UAE" className="shadow-sm" /> UAE</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/cn.png" width="16" alt="China" className="shadow-sm" /> China</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/fr.png" width="16" alt="France" className="shadow-sm" /> France</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/jp.png" width="16" alt="Japan" className="shadow-sm" /> Japan</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/br.png" width="16" alt="Brazil" className="shadow-sm" /> Brazil</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/kr.png" width="16" alt="South Korea" className="shadow-sm" /> South Korea</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/mx.png" width="16" alt="Mexico" className="shadow-sm" /> Mexico</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/th.png" width="16" alt="Thailand" className="shadow-sm" /> Thailand</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/it.png" width="16" alt="Italy" className="shadow-sm" /> Italy</span>
               </div>
               <p className="mt-6 text-[12px] text-[#032b4d] italic font-bold">
                 * And delivering to clients globally all over the world.
