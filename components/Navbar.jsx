@@ -272,7 +272,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, FileText, ChevronRight, ShoppingCart } from "lucide-react";
+import { Menu, X, ChevronDown, FileText, ChevronRight, ArrowUpRight, ShoppingCart } from "lucide-react";
 
 import { servicesMenu } from "@/data/services";
 import { testingMenu } from "@/data/testing";
@@ -364,8 +364,8 @@ export default function Navbar() {
               pathname={pathname}
             />
             <DesktopDropdown title="UPDATES" menu={updatesMenu} pathname={pathname} />
-
             <NavLink href="/contact-us" label="CONTACT US" pathname={pathname} />
+            
             <DesktopDropdown title="FOOD INGREDIENTS" menu={foodMenu} href="/food-ingredients" align="right" pathname={pathname} isFeatured={true} />
             <NavLink href="/it-services-and-solutions" label="IT SERVICES" pathname={pathname} />
             <NavLink href="/student-panel" label="STUDENT PANEL" pathname={pathname} />
@@ -489,6 +489,12 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
       // Check sub-menu items too
       if (item.isSubMenu && item.subItems) {
         return item.subItems.some((sub) => {
+          if (sub.isSubMenu && sub.subItems) {
+            return sub.subItems.some((sub2) => {
+              const sub2Path = sub2.root ? `/${sub2.slug}` : `/services/${sub2.slug}`;
+              return pathname === sub2Path;
+            });
+          }
           const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
           return pathname === subPath;
         });
@@ -575,51 +581,113 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
       )}
 
       <div 
-        className={`absolute ${align === "right" ? "right-0" : "left-0"} top-full mt-3 bg-white shadow-xl rounded-lg p-6 transition-all duration-200 z-50 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`absolute ${align === "right" ? "right-0" : "left-0"} top-full mt-3 bg-white shadow-[0_20px_40px_-15px_rgba(0,78,122,0.15)] ring-1 ring-slate-100 rounded-2xl p-7 transition-all duration-300 z-50 ${
+          isOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
         }`}
       >
         <div className="flex gap-10">
           {menu.map((group, gIndex) => (
             <div key={`${title}-group-${gIndex}`} className="min-w-60">
-              {group.title && (
-                <h4 className="mb-3 text-gray-800 font-semibold text-sm border-b pb-2 whitespace-nowrap uppercase">
-                  {group.title}
-                </h4>
-              )}
+              {group.title ? (
+                <div className="relative mb-5 bg-gradient-to-r from-blue-50 via-blue-50/50 to-transparent py-2 px-3 border-l-[3px] border-[#0075B6] rounded-r-lg">
+                  <h4 className="text-[#004e7a] font-extrabold text-[13px] tracking-widest uppercase">
+                    {group.title}
+                  </h4>
+                </div>
+              ) : menu.some(g => g.title) ? (
+                <div className="relative mb-5 py-2 px-3 border-l-[3px] border-transparent pointer-events-none opacity-0 select-none">
+                  <h4 className="font-extrabold text-[13px] tracking-widest uppercase">
+                    SPACER
+                  </h4>
+                </div>
+              ) : null}
 
-              <ul className="space-y-3 text-sm font-normal">
+              <ul className="space-y-1 text-sm font-normal">
                 {group.items.map((item, iIndex) => (
                   <li key={`${item.slug || item.name}-${iIndex}`} className={item.isSubMenu ? "relative group/sub" : ""}>
                     {item.isSubMenu ? (
                       <>
-                        <div className="flex items-center justify-between gap-3 text-gray-700 hover:text-[#0075B6] cursor-pointer">
-                          <div className="flex items-start gap-3">
-                            {item.icon === "ShoppingCart" ? (
-                              <ShoppingCart size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                            ) : (
-                              <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                            )}
-                            <span className="leading-6 uppercase">{item.name}</span>
+                        <div className="group flex items-center justify-between gap-2 text-slate-600 hover:text-[#004e7a] cursor-pointer py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                          <div className="flex items-center gap-2.5">
+                            <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                              {item.icon === "ShoppingCart" ? (
+                                <ShoppingCart size={14} strokeWidth={2} />
+                              ) : (
+                                <FileText size={14} strokeWidth={2} />
+                              )}
+                            </div>
+                            <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{item.name}</span>
                           </div>
-                          <ChevronRight size={14} className="opacity-70" />
+                          <ChevronRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
                         </div>
-                        <div className={`absolute ${align === "right" ? "left-[50%] top-full" : "left-full ml-2 top-0"} w-72 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
-                          <ul className="space-y-3">
+                        <div className={`absolute ${align === "right" ? "left-[50%] top-full" : `left-full ml-2 ${iIndex === group.items.length - 1 ? 'bottom-0' : 'top-0'}`} w-72 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
+                          <ul className="space-y-1">
                             {item.subItems.map((sub, sIdx) => (
-                              <li key={sIdx}>
-                                <Link
-                                  href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
-                                  className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  {sub.icon === "ShoppingCart" ? (
-                                    <ShoppingCart size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                                  ) : (
-                                    <FileText size={16} strokeWidth={1.75} className="mt-0.5 text-[#0075B6] shrink-0" />
-                                  )}
-                                  <span className="leading-6 uppercase">{sub.name}</span>
-                                </Link>
+                              <li key={sIdx} className={sub.isSubMenu ? "relative group/sub2" : ""}>
+                                {sub.isSubMenu ? (
+                                  <>
+                                    <div className="group flex items-center justify-between gap-2 text-slate-600 hover:text-[#004e7a] cursor-pointer py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                                      <div className="flex items-center gap-2.5">
+                                        <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                                          {sub.icon === "ShoppingCart" ? (
+                                            <ShoppingCart size={14} strokeWidth={2} />
+                                          ) : (
+                                            <FileText size={14} strokeWidth={2} />
+                                          )}
+                                        </div>
+                                        <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{sub.name}</span>
+                                      </div>
+                                      <ChevronRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
+                                    </div>
+                                    <div className={`absolute ${align === "right" ? "left-[50%] top-full" : `left-full ml-2 ${sIdx === item.subItems.length - 1 ? 'bottom-0' : 'top-0'}`} w-72 opacity-0 invisible group-hover/sub2:opacity-100 group-hover/sub2:visible bg-white shadow-2xl border border-gray-100 rounded-lg p-4 transition-all duration-200 z-50`}>
+                                      <ul className="space-y-1">
+                                        {sub.subItems.map((sub2, s2Idx) => (
+                                          <li key={s2Idx}>
+                                            <Link
+                                              href={sub2.root ? `/${sub2.slug}` : `/services/${sub2.slug}`}
+                                              onClick={() => setIsOpen(false)}
+                                              className="block w-full"
+                                            >
+                                              <div className="group flex items-center justify-between gap-2 text-slate-600 hover:text-[#004e7a] py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out w-full">
+                                                <div className="flex items-center gap-2.5">
+                                                  <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                                                    {sub2.icon === "ShoppingCart" ? (
+                                                      <ShoppingCart size={14} strokeWidth={2} />
+                                                    ) : (
+                                                      <FileText size={14} strokeWidth={2} />
+                                                    )}
+                                                  </div>
+                                                  <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{sub2.name}</span>
+                                                </div>
+                                                <ArrowUpRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
+                                              </div>
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  </>
+                                ) : (
+                                    <Link
+                                      href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
+                                      onClick={() => setIsOpen(false)}
+                                      className="block w-full"
+                                    >
+                                      <div className="group flex items-center justify-between gap-2 text-slate-600 hover:text-[#004e7a] py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                                        <div className="flex items-center gap-2.5">
+                                          <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                                            {sub.icon === "ShoppingCart" ? (
+                                              <ShoppingCart size={14} strokeWidth={2} />
+                                            ) : (
+                                              <FileText size={14} strokeWidth={2} />
+                                            )}
+                                          </div>
+                                          <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{sub.name}</span>
+                                        </div>
+                                        <ArrowUpRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
+                                      </div>
+                                    </Link>
+                                )}
                               </li>
                             ))}
                           </ul>
@@ -627,18 +695,23 @@ function DesktopDropdown({ title, menu, href, align = "left", isPrimary, isFeatu
                       </>
                     ) : (
                       <Link
-                        href={
-                          item.root ? `/${item.slug}` : `/services/${item.slug}`
-                        }
-                        className="flex items-start gap-3 text-gray-700 hover:text-[#0075B6]"
+                        href={item.root ? `/${item.slug}` : `/services/${item.slug}`}
                         onClick={() => setIsOpen(false)}
+                        className="block w-full"
                       >
-                        <FileText
-                          size={16}
-                          strokeWidth={1.75}
-                          className="mt-0.5 text-[#0075B6] shrink-0"
-                        />
-                        <span className="leading-6 uppercase">{item.name}</span>
+                        <div className="group flex items-center justify-between gap-2 text-slate-600 hover:text-[#004e7a] py-1 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-all duration-300 ease-out">
+                          <div className="flex items-center gap-2.5">
+                            <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-blue-50 text-[#0075B6] group-hover:bg-[#0075B6] group-hover:text-white transition-colors duration-300 shrink-0 shadow-sm">
+                              {item.icon === "ShoppingCart" ? (
+                                <ShoppingCart size={14} strokeWidth={2} />
+                              ) : (
+                                <FileText size={14} strokeWidth={2} />
+                              )}
+                            </div>
+                            <span className="leading-snug text-[13px] font-semibold uppercase transition-colors duration-300">{item.name}</span>
+                          </div>
+                          <ArrowUpRight size={18} strokeWidth={2.5} className="text-[#0075B6] transition-all duration-300 group-hover:translate-x-1 shrink-0" />
+                        </div>
                       </Link>
                     )}
                   </li>
@@ -676,18 +749,22 @@ function MobileNestedAccordion({ item, close }) {
         <ul className="pl-5 space-y-3 mt-3 border-l border-white/10 ml-2">
           {item.subItems.map((sub, sIdx) => (
             <li key={sIdx}>
-              <Link
-                href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
-                onClick={() => close(false)}
-                className="flex items-start gap-2 text-xs text-gray-300 hover:text-white"
-              >
-                {sub.icon === "ShoppingCart" ? (
-                  <ShoppingCart size={14} className="shrink-0 mt-0.5" />
-                ) : (
-                  <FileText size={14} className="shrink-0 mt-0.5" />
-                )}
-                <span className="uppercase text-left leading-tight">{sub.name}</span>
-              </Link>
+              {sub.isSubMenu ? (
+                <MobileNestedAccordion item={sub} close={close} />
+              ) : (
+                <Link
+                  href={sub.root ? `/${sub.slug}` : `/services/${sub.slug}`}
+                  onClick={() => close(false)}
+                  className="flex items-start gap-2 text-xs text-gray-300 hover:text-white"
+                >
+                  {sub.icon === "ShoppingCart" ? (
+                    <ShoppingCart size={14} className="shrink-0 mt-0.5" />
+                  ) : (
+                    <FileText size={14} className="shrink-0 mt-0.5" />
+                  )}
+                  <span className="uppercase text-left leading-tight">{sub.name}</span>
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -703,6 +780,12 @@ function MobileAccordion({ title, menu, active, setActive, close, pathname }) {
       if (pathname === itemPath) return true;
       if (item.isSubMenu && item.subItems) {
         return item.subItems.some((sub) => {
+          if (sub.isSubMenu && sub.subItems) {
+            return sub.subItems.some((sub2) => {
+              const sub2Path = sub2.root ? `/${sub2.slug}` : `/services/${sub2.slug}`;
+              return pathname === sub2Path;
+            });
+          }
           const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
           return pathname === subPath;
         });

@@ -45,6 +45,9 @@ export default function HorizontalRectangularAutoclavePage() {
               },
               "offers": {
                 "@type": "Offer",
+                "url": "https://www.anglobalservices.com/contact-us",
+                "priceCurrency": "INR",
+                "price": "0",
                 "availability": "https://schema.org/InStock",
                 "seller": {
                   "@type": "Organization",
@@ -197,8 +200,8 @@ export default function HorizontalRectangularAutoclavePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🏗️
+                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  01
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Triple Walled Construction</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -213,8 +216,8 @@ export default function HorizontalRectangularAutoclavePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🛡️
+                <div className="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  02
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Foolproof Safety Systems</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -229,8 +232,8 @@ export default function HorizontalRectangularAutoclavePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🌡️
+                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  03
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Efficient Steam Generation</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">

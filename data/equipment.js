@@ -52,9 +52,67 @@ export const equipmentMenu = [
         isSubMenu: true,
         subItems: [
           {
-            name: "Programmable High Speed Refrigerated Centrifuge",
-            slug: "programmable-high-speed-refrigerated-centrifuge",
-            root: true,
+            name: "Fully Programmable",
+            isSubMenu: true,
+            subItems: [
+              {
+                name: "Programmable High Speed Refrigerated Centrifuge",
+                slug: "programmable-high-speed-refrigerated-centrifuge",
+                root: true,
+              },
+              {
+                name: "Programmable Large Capacity Refrigerated Centrifuge",
+                slug: "programmable-large-capacity-refrigerated-centrifuge",
+                root: true,
+              }
+            ]
+          },
+          {
+            name: "Industrial Centrifuge",
+            isSubMenu: true,
+            subItems: [
+              {
+                name: "Table Top Oil Test Centrifuge",
+                slug: "table-top-oil-test-centrifuge",
+                root: true,
+              },
+              {
+                name: "Table Top Dairy Test Centrifuge",
+                slug: "table-top-dairy-test-centrifuge",
+                root: true,
+              }
+            ]
+          },
+          {
+            name: "Non Refrigerated",
+            isSubMenu: true,
+            subItems: [
+              {
+                name: "Bench Top High Speed Centrifuge",
+                slug: "bench-top-high-speed-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top High Speed Micro Centrifuge",
+                slug: "bench-top-high-speed-micro-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top Low Capacity Centrifuge",
+                slug: "bench-top-low-capacity-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top Large Capacity Centrifuge",
+                slug: "bench-top-large-capacity-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top Low Speed Centrifuge",
+                slug: "bench-top-low-speed-centrifuge",
+                root: true,
+              }
+            ]
           }
         ]
       },
@@ -65,6 +123,26 @@ export const equipmentMenu = [
           {
             name: "Chemical Balance",
             slug: "chemical-balance",
+            root: true,
+          },
+          {
+            name: "Electronic Platform Balance",
+            slug: "electronic-platform-balance",
+            root: true,
+          },
+          {
+            name: "Electronic Top Loading Balance",
+            slug: "electronic-top-loading-balance",
+            root: true,
+          },
+          {
+            name: "Infrared Moisture Balance",
+            slug: "infrared-moisture-balance",
+            root: true,
+          },
+          {
+            name: "Physical Balance",
+            slug: "physical-balance",
             root: true,
           }
         ]
