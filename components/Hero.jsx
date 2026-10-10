@@ -584,13 +584,13 @@ export default function Hero() {
           style={{ transform: `translateX(-${heroSlide * 100}%)` }}
         >
           {extendedHeroSlides.map((slide, idx) => (
-            <div key={idx} className="w-full shrink-0 relative h-[470px] sm:h-[358px] md:h-[358px] lg:h-[460px] xl:h-[calc(100vh-190px)] xl:min-h-[500px] xl:max-h-[800px]">
+            <div key={idx} className="w-full shrink-0 relative h-[470px] sm:h-[358px] md:h-auto md:aspect-[2.25]">
 
               {/* IMAGE - absolute, fills container perfectly */}
               <img
                 src={slide.image}
                 alt={slide.headingMain}
-                className="absolute inset-0 w-full h-full object-cover object-left sm:object-fill"
+                className="absolute inset-0 w-full h-full object-cover object-left sm:object-center"
               />
               {/* Subtle overlay to enhance text contrast over the graphic */}
               <div className="absolute inset-0 bg-black/10 z-[1]"></div>
