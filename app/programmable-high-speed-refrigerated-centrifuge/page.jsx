@@ -3,17 +3,22 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Programmable High Speed Refrigerated Centrifuge | AN Global Services",
+  title: "Refrigerated Centrifuge Machine | Programmable High-Speed | AN Global Services",
   description:
-    "Premium Programmable High Speed Refrigerated Centrifuge designed for molecular biology, clinical diagnostics, and advanced research. Features high-speed precision and CFC-free cooling. Setup by AN Global Services.",
+    "Get premium programmable high-speed refrigerated centrifuge machines for laboratories, molecular biology, and clinical diagnostics. Best cooling lab centrifuge setup by AN Global Services.",
   keywords: [
-    "High Speed Refrigerated Centrifuge",
-    "Programmable Refrigerated Centrifuge",
-    "High Speed Cooling Centrifuge",
-    "Laboratory Refrigerated Centrifuge",
-    "Clinical Centrifuge Machine",
-    "High RPM Refrigerated Centrifuge",
-    "Medical Centrifuge Equipment",
+    "Programmable High Speed Refrigerated Centrifuge",
+    "Refrigerated Centrifuge",
+    "High Speed Centrifuge",
+    "Centrifuge Machine",
+    "Programmable Centrifuge",
+    "Cooling Centrifuge",
+    "Lab Centrifuge",
+    "Laboratory Centrifuge Machine",
+    "Medical Centrifuge",
+    "High RPM Centrifuge",
+    "Clinical Centrifuge",
+    "Benchtop Refrigerated Centrifuge",
     "AN Global Services laboratory equipment",
   ],
   alternates: {
@@ -37,6 +42,7 @@ export default function RefrigeratedCentrifugePage() {
             {
               "@type": "Product",
               "name": "Programmable High Speed Refrigerated Centrifuge",
+              "alternateName": "Refrigerated Centrifuge Machine",
               "description": "Premium Programmable High Speed Refrigerated Centrifuge designed for molecular biology, clinical diagnostics, and advanced research. Features a high-speed brushless motor and ultra-precise temperature control.",
               "image": "https://www.anglobalservices.com/equipment/centrifuge/programmable-high-speed-refrigerated-centrifuge.webp",
               "brand": {
@@ -45,6 +51,9 @@ export default function RefrigeratedCentrifugePage() {
               },
               "offers": {
                 "@type": "Offer",
+                "url": "https://www.anglobalservices.com/contact-us",
+                "priceCurrency": "INR",
+                "price": "0",
                 "availability": "https://schema.org/InStock",
                 "seller": {
                   "@type": "Organization",
@@ -122,10 +131,10 @@ export default function RefrigeratedCentrifugePage() {
               
               <div className="space-y-5 text-gray-700 text-base md:text-lg leading-relaxed font-medium">
                 <p>
-                  The <strong className="text-[#0075B6]">Programmable High Speed Refrigerated Centrifuge</strong> is a state-of-the-art laboratory instrument engineered for the most demanding molecular biology, biochemistry, and clinical applications.
+                  The <strong className="text-[#0075B6]">Programmable High Speed Refrigerated Centrifuge</strong> (commonly referred to as a high-speed cooling centrifuge or lab centrifuge machine) is a state-of-the-art laboratory instrument engineered for the most demanding molecular biology, biochemistry, and clinical applications.
                 </p>
                 <p>
-                  When spinning samples at extreme speeds up to 20,000 RPM, air friction naturally generates immense heat. This advanced centrifuge utilizes a robust, CFC-free refrigeration system to combat this, ensuring your temperature-sensitive samples remain perfectly preserved at steady, low temperatures throughout the entire run.
+                  When spinning samples at extreme speeds up to 20,000 RPM, air friction naturally generates immense heat. This advanced <strong className="font-semibold text-gray-900">refrigerated centrifuge machine</strong> utilizes a robust, CFC-free refrigeration system to combat this. It ensures your temperature-sensitive samples remain perfectly preserved at steady, low temperatures throughout the entire run.
                 </p>
                 <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
                   <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
@@ -190,21 +199,21 @@ export default function RefrigeratedCentrifugePage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">Key Users & Facilities</h3>
               <ul className="space-y-5">
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 text-2xl">🧬</div>
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#0075B6] flex-shrink-0"></div>
                   <div>
                     <strong className="block text-lg text-gray-900">Molecular Biology Labs</strong>
                     <span className="text-gray-600">Used daily to extract DNA/RNA and purify temperature-sensitive cellular components.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 text-2xl">🏥</div>
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#0075B6] flex-shrink-0"></div>
                   <div>
                     <strong className="block text-lg text-gray-900">Clinical Diagnostics</strong>
                     <span className="text-gray-600">Utilized to rapidly separate blood serum or plasma for advanced pathology and diagnostic testing.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 text-2xl">💊</div>
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#0075B6] flex-shrink-0"></div>
                   <div>
                     <strong className="block text-lg text-gray-900">Pharmaceutical R&D</strong>
                     <span className="text-gray-600">Essential for drug development processes, enzyme assays, and precise biochemical fractionations.</span>
@@ -230,8 +239,8 @@ export default function RefrigeratedCentrifugePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🎛️
+                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  01
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Precision Control</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -246,8 +255,8 @@ export default function RefrigeratedCentrifugePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🛡️
+                <div className="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  02
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Redundant Safety</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -262,8 +271,8 @@ export default function RefrigeratedCentrifugePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🏗️
+                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  03
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Rugged Build Quality</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">

@@ -441,13 +441,13 @@ export default function Hero() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
+
     if (name === "phone") {
       const sanitized = value.replace(/\D/g, "").slice(0, 10);
       setFormData((prev) => ({ ...prev, [name]: sanitized }));
       return;
     }
-    
+
     if (name === "name") {
       const sanitized = value.replace(/[^a-zA-Z\s]/g, "");
       setFormData((prev) => ({ ...prev, [name]: sanitized }));
@@ -584,34 +584,34 @@ export default function Hero() {
           style={{ transform: `translateX(-${heroSlide * 100}%)` }}
         >
           {extendedHeroSlides.map((slide, idx) => (
-            <div key={idx} className="w-full shrink-0 relative h-[520px] sm:h-[420px] md:h-[420px] lg:h-[550px] xl:h-[620px]">
+            <div key={idx} className="w-full shrink-0 relative h-[470px] sm:h-[358px] md:h-[358px] lg:h-[460px] xl:h-[calc(100vh-190px)] xl:min-h-[500px] xl:max-h-[800px]">
 
               {/* IMAGE - absolute, fills container perfectly */}
               <img
                 src={slide.image}
                 alt={slide.headingMain}
-                className="absolute inset-0 w-full h-full object-cover object-left sm:object-center"
+                className="absolute inset-0 w-full h-full object-cover object-left sm:object-fill"
               />
               {/* Subtle overlay to enhance text contrast over the graphic */}
               <div className="absolute inset-0 bg-black/10 z-[1]"></div>
 
               {/* TEXT CONTENT LAYER - absolute, overlays on image */}
-              <div className="absolute inset-0 z-10 w-full flex items-start pt-1.5 sm:pt-6 md:pt-6 lg:pt-8 xl:pt-6">
-                <div className="w-full max-w-7xl mx-auto px-3 pr-12 sm:px-6 md:px-4 lg:px-8">
-                  <div className={slide.containerClass || "w-[95%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
-                    <h1 className="text-[22px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[28px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-1.5 sm:mb-1 md:mb-2 lg:mb-3 xl:mb-6 drop-shadow-lg tracking-tight">
+              <div className="absolute inset-0 z-10 w-full flex items-start sm:items-center overflow-hidden pt-1.5 sm:pt-0">
+                <div className="w-full max-w-7xl mx-auto px-3 py-8 sm:py-1 md:px-4 md:py-2 xl:py-6 sm:px-6 lg:px-8">
+                  <div className={slide.containerClass || "w-[90%] sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl"}>
+                    <h1 className="text-[19px] leading-tight sm:text-[16px] md:text-[24px] lg:text-[28px] xl:text-[46px] font-extrabold text-white md:leading-tight mb-1.5 sm:mb-1 md:mb-2 lg:mb-3 xl:mb-6 drop-shadow-lg tracking-tight">
                       <span className={`whitespace-normal ${slide.wrapHeading ? "" : "sm:whitespace-nowrap"}`}>{slide.headingMain}</span> <br className="block" />
                       <span className="text-[#0075B6] drop-shadow-md bg-white/95 px-2 md:px-2 lg:px-3 xl:px-5 py-0.5 md:py-1 lg:py-1.5 xl:py-2 rounded md:rounded-lg inline-block mt-1 sm:mt-1 md:mt-1 lg:mt-2 xl:mt-4 text-[11px] sm:text-[10px] md:text-sm lg:text-[18px] xl:text-[32px] whitespace-normal sm:whitespace-nowrap">
                         {slide.headingSub}
                       </span>
                     </h1>
 
-                    <p className="text-white font-medium text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
+                    <p className="text-white font-medium text-[13px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[18px] mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-10 leading-relaxed sm:leading-snug md:leading-relaxed drop-shadow-md inline-block w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-full">
                       {slide.paragraph}
                     </p>
 
                     <div
-                      className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-3 xl:gap-6 mb-2.5 sm:mb-2 md:mb-4 lg:mb-4 xl:mb-5"
+                      className="flex flex-wrap items-center gap-2 sm:gap-1 md:gap-3 lg:gap-3 xl:gap-6 mb-2.5 sm:mb-2 md:mb-4 lg:mb-4 xl:mb-10"
                       onMouseEnter={() => setIsButtonHovered(true)}
                       onMouseLeave={() => setIsButtonHovered(false)}
                     >
@@ -657,31 +657,31 @@ export default function Hero() {
                       )}
                     </div>
 
-                    <div className="bg-black/30 p-2.5 sm:p-2 md:p-3 lg:p-3 xl:p-4 rounded-lg md:rounded-xl shadow-xl w-full md:w-[100%] xl:max-w-2xl">
+                    <div className="bg-black/30 p-2.5 sm:p-2 md:p-3 lg:p-3 xl:p-6 rounded-lg md:rounded-xl shadow-xl w-full md:w-[100%] xl:max-w-2xl">
                       <h3 className="text-[#00c3ff] text-[13px] sm:text-[10px] md:text-sm lg:text-sm xl:text-xl font-bold mb-1 sm:mb-1 md:mb-1 xl:mb-2">
                         A N Global Services Private Limited
                       </h3>
-                      <p className="text-gray-200 text-[11px] sm:text-[8px] md:text-[10px] lg:text-[11px] xl:text-sm leading-snug sm:leading-snug md:leading-relaxed mb-2 sm:mb-2 md:mb-3 xl:mb-2">
+                      <p className="text-gray-200 text-[11px] sm:text-[8px] md:text-[10px] lg:text-[11px] xl:text-sm leading-snug sm:leading-snug md:leading-relaxed mb-2 sm:mb-2 md:mb-3 xl:mb-6">
                         A complete industrial solution provider. We help manufacturers meet quality, safety, and compliance standards with complete confidence.
                       </p>
 
                       <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 xl:gap-8">
                         <a href="mailto:info@anglobalservices.com" className="flex items-center gap-2 md:gap-2 group cursor-pointer relative z-20">
-                          <div className="bg-white/10 group-hover:bg-[#00c3ff]/20 p-1 md:p-1.5 rounded-full transition-colors">
+                          <div className="bg-white/20 group-hover:bg-[#00c3ff]/30 p-1 md:p-1.5 rounded-full transition-colors border border-white/10">
                             <svg className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-[#00c3ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                           </div>
-                          <span className="text-gray-200 group-hover:text-white transition-colors text-[11px] sm:text-[8px] md:text-[10px] lg:text-[11px] xl:text-sm">info@anglobalservices.com</span>
+                          <span className="text-white font-medium group-hover:text-[#00c3ff] transition-colors text-[12px] sm:text-[9px] md:text-[11px] lg:text-[13px] xl:text-[15px] drop-shadow-sm">info@anglobalservices.com</span>
                         </a>
 
                         <a href="tel:+917782069184" className="flex items-center gap-2 md:gap-2 group cursor-pointer relative z-20">
-                          <div className="bg-white/10 group-hover:bg-[#00c3ff]/20 p-1 md:p-1.5 rounded-full transition-colors">
+                          <div className="bg-white/20 group-hover:bg-[#00c3ff]/30 p-1 md:p-1.5 rounded-full transition-colors border border-white/10">
                             <svg className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-[#00c3ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                           </div>
-                          <span className="text-gray-200 group-hover:text-white transition-colors text-[11px] sm:text-[8px] md:text-[10px] lg:text-[11px] xl:text-sm">+91 7782069184</span>
+                          <span className="text-white font-medium group-hover:text-[#00c3ff] transition-colors text-[12px] sm:text-[9px] md:text-[11px] lg:text-[13px] xl:text-[15px] drop-shadow-sm">+91 7782069184</span>
                         </a>
                       </div>
                     </div>
@@ -713,7 +713,7 @@ export default function Hero() {
 
       <section className="bg-white py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6">
-          
+
           {/* Top Section: Image & Intro */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-10 lg:mb-12">
             <div className="flex justify-center w-full">
@@ -853,17 +853,17 @@ export default function Hero() {
       {/* Certification and License Banner Section */}
       <section className="w-full relative overflow-hidden flex items-center min-h-[450px] md:min-h-[400px] lg:min-h-[550px] py-12 md:py-8">
         {/* Background Image Layer */}
-        <div 
-          className="absolute inset-0 bg-no-repeat bg-cover bg-[position:left_center] lg:bg-[position:right_center] lg:bg-[length:100%_100%]" 
+        <div
+          className="absolute inset-0 bg-no-repeat bg-cover bg-[position:left_center] lg:bg-[position:right_center] lg:bg-[length:100%_100%]"
           style={{ backgroundImage: "url('/certification-and-license.webp')" }}
         ></div>
-        
+
         {/* Subtle dark gradient overlay to ensure text readability on mobile/tablet */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f]/90 via-[#0a192f]/60 to-transparent md:w-[80%] lg:w-[60%] pointer-events-none"></div>
 
         <div className="relative w-full max-w-7xl mx-auto px-4 md:px-6 z-10 flex items-center">
           <div className="flex flex-col justify-center w-full md:w-[80%] lg:w-[60%] xl:w-[55%] text-center mt-6 md:mt-0 lg:ml-8 mx-auto md:mx-0 md:text-left lg:text-center">
-            
+
             {/* Top Subheading */}
             <div className="flex items-center justify-center md:justify-start lg:justify-center gap-4 mb-3 md:mb-5">
               <div className="w-8 md:w-12 lg:w-16 h-[1px] bg-gradient-to-r from-transparent to-[#e3b64c]"></div>
@@ -882,7 +882,7 @@ export default function Hero() {
             <p className="text-gray-100 text-sm md:text-lg lg:text-xl font-medium mb-5 md:mb-6 drop-shadow-sm max-w-2xl mx-auto md:mx-0 lg:mx-auto tracking-wide leading-relaxed">
               Ensure top-tier quality and build market trust. Get your products certified with ISI, BIS & Gold Hallmark with absolute confidence and guaranteed 100% compliance.
             </p>
-            
+
             {/* Premium Features List */}
             <div className="flex flex-col md:flex-row flex-wrap justify-center md:justify-start lg:justify-center items-center md:items-start gap-3 md:gap-6 lg:gap-8 mb-8 md:mb-10 text-white text-sm md:text-base font-semibold drop-shadow-md">
               <span className="flex items-center gap-2">
@@ -898,20 +898,18 @@ export default function Hero() {
                 100% Compliance
               </span>
             </div>
-            
+
             {/* CTA Button */}
             <div className="flex justify-center md:justify-start lg:justify-center">
-              <a 
-                href="https://www.anglobalservices.com/bis-isi-mark-certification" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <Link
+                href="/contact-us"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base md:text-lg font-black text-[#0a192f] uppercase tracking-wide bg-gradient-to-r from-[#e3b64c] via-[#ffe082] to-[#e3b64c] bg-[length:200%_auto] rounded-full shadow-[0_0_20px_rgba(227,182,76,0.3)] hover:shadow-[0_0_30px_rgba(227,182,76,0.6)] hover:-translate-y-1 hover:bg-[position:right_center] transition-all duration-300 group"
               >
                 Get Certified Today
                 <svg className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </a>
+              </Link>
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -1173,19 +1171,19 @@ export default function Hero() {
         </div>
       </section>
 
-            {/* Trusted by Businesses Section */}
-      <section className="w-full relative overflow-hidden flex items-center min-h-[500px] lg:min-h-[550px] xl:min-h-[600px] py-10 lg:py-12">
-        
+      {/* Trusted by Businesses Section */}
+      <section className="w-full relative overflow-hidden flex items-center min-h-[450px] lg:min-h-[450px] xl:min-h-[500px] py-10 lg:py-8">
+
         {/* Background Image Layer */}
-        <div 
-          className="absolute inset-0 bg-no-repeat bg-cover bg-[position:10%_center] md:bg-[position:0%_center] xl:bg-[position:center] contrast-[1.05] saturate-[1.1]" 
+        <div
+          className="absolute inset-0 bg-no-repeat bg-cover bg-[position:left_center] lg:bg-center lg:bg-[length:100%_100%] contrast-[1.05] saturate-[1.1]"
           style={{ backgroundImage: "url('/trusted-by-business.webp')", imageRendering: "-webkit-optimize-contrast" }}
         ></div>
 
         <div className="relative w-full max-w-[1400px] mx-auto px-6 z-10 flex flex-col h-full justify-center items-center lg:items-start text-center lg:text-left">
-          
+
           {/* Main Text Content */}
-          <div className="flex flex-col max-w-[340px] md:max-w-[480px] lg:max-w-[500px] xl:max-w-[650px] items-center lg:items-start">
+          <div className="flex flex-col max-w-[340px] md:max-w-[650px] lg:max-w-[420px] xl:max-w-[550px] items-center lg:items-start">
             {/* Heading */}
             <h2 className="text-[36px] md:text-[42px] lg:text-[48px] font-black tracking-tight text-[#0a1b35] leading-[1.1] mb-1">
               Trusted by Businesses.
@@ -1212,7 +1210,7 @@ export default function Hero() {
           <div className="mt-10 md:mt-12 lg:mt-16 self-center lg:self-start w-full md:w-auto">
             <div className="bg-[#041029]/90 rounded-3xl lg:rounded-full p-5 md:p-6 lg:py-4 lg:px-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#23589b] inline-block backdrop-blur-md w-full lg:w-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 sm:gap-y-8 gap-x-4 md:gap-x-6 lg:flex lg:items-center divide-y divide-[#4d86c4]/40 sm:divide-y-0 lg:divide-x lg:divide-[#4d86c4]">
-                
+
                 {/* Stat 1 */}
                 <div className="flex items-center gap-4 py-4 sm:py-0 lg:px-7">
                   <div className="bg-gradient-to-br from-[#0055ff] to-[#0099ff] rounded-full p-2.5 shrink-0 flex items-center justify-center w-12 h-12 lg:w-[54px] lg:h-[54px] shadow-[0_0_15px_rgba(0,153,255,0.8)] border border-[#66b3ff]">
@@ -1222,7 +1220,7 @@ export default function Hero() {
                   </div>
                   <div className="flex flex-col">
                     <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">10,000+</h3>
-                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Certifications<br/>Facilitated</p>
+                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Certifications<br />Facilitated</p>
                   </div>
                 </div>
 
@@ -1235,7 +1233,7 @@ export default function Hero() {
                   </div>
                   <div className="flex flex-col">
                     <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">30+</h3>
-                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Countries<br/>Served</p>
+                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Countries<br />Served</p>
                   </div>
                 </div>
 
@@ -1248,7 +1246,7 @@ export default function Hero() {
                   </div>
                   <div className="flex flex-col">
                     <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">8,000+</h3>
-                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Satisfied<br/>Clients</p>
+                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Satisfied<br />Clients</p>
                   </div>
                 </div>
 
@@ -1261,7 +1259,7 @@ export default function Hero() {
                   </div>
                   <div className="flex flex-col">
                     <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">20+</h3>
-                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Years of<br/>Expertise</p>
+                    <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Years of<br />Expertise</p>
                   </div>
                 </div>
               </div>
@@ -1270,7 +1268,7 @@ export default function Hero() {
         </div>
       </section>
 
-<section className="relative w-full py-20 px-4 md:px-10 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+      <section className="relative w-full py-20 px-4 md:px-10 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Header Section */}
           <div className="text-center mb-10">

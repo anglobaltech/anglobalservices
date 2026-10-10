@@ -44,6 +44,9 @@ export default function PortableAutoclavePage() {
               },
               "offers": {
                 "@type": "Offer",
+                "url": "https://www.anglobalservices.com/contact-us",
+                "priceCurrency": "INR",
+                "price": "0",
                 "availability": "https://schema.org/InStock",
                 "seller": {
                   "@type": "Organization",
@@ -189,21 +192,21 @@ export default function PortableAutoclavePage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">Key Users & Facilities</h3>
               <ul className="space-y-5">
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 text-2xl">🦷</div>
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#0075B6] flex-shrink-0"></div>
                   <div>
                     <strong className="block text-lg text-gray-900">Dental & Medical Clinics</strong>
                     <span className="text-gray-600">Perfect for the daily sterilization of dental tools, surgical instruments, and dressings in small spaces.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 text-2xl">🔬</div>
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#0075B6] flex-shrink-0"></div>
                   <div>
                     <strong className="block text-lg text-gray-900">Small Laboratories</strong>
                     <span className="text-gray-600">Used to sterilize glassware, pipettes, and prepare biological media batches quickly.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 text-2xl">🚑</div>
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#0075B6] flex-shrink-0"></div>
                   <div>
                     <strong className="block text-lg text-gray-900">Mobile Hospitals & Camps</strong>
                     <span className="text-gray-600">Easily transportable, making it essential for remote medical camps and field hospitals.</span>
@@ -229,8 +232,8 @@ export default function PortableAutoclavePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🎛️
+                <div className="w-12 h-12 bg-blue-100 text-[#0075B6] rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  01
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Easy Operation & Monitoring</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -245,8 +248,8 @@ export default function PortableAutoclavePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🛡️
+                <div className="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  02
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Advanced Safety Mechanisms</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">
@@ -261,8 +264,8 @@ export default function PortableAutoclavePage() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
-                  🏗️
+                <div className="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm font-black">
+                  03
                 </div>
                 <h3 className="text-xl font-extrabold text-[#0a192f] mb-3">Compact & Durable Build</h3>
                 <ul className="space-y-3 text-gray-600 font-medium text-sm">

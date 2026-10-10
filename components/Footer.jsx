@@ -461,6 +461,7 @@ export default function Footer() {
   const pathname = usePathname();
   const isStudentPanel = pathname?.startsWith("/student-panel");
   const isFoodIngredients = pathname?.startsWith("/food-ingredients");
+  const isContactUs = pathname?.startsWith("/contact-us");
 
   const [formData, setFormData] = useState({
     service: "",
@@ -569,11 +570,11 @@ export default function Footer() {
       {/* 3. Conditionally render the Consultation Call section */}
       {/* 3. Conditionally render the Consultation Call section */}
       {/* 3. Conditionally render the Consultation Call section */}
-      {!isStudentPanel && !isFoodIngredients && (
+      {!isStudentPanel && !isFoodIngredients && !isContactUs && (
         <section className="relative w-full overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/request-consultation-call-2.webp')" }}>
           {/* Gradient Overlay for Text Readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#04122d]/80 via-[#04122d]/50 to-[#04122d]/10 md:to-transparent"></div>
-          
+
           <div className="relative max-w-7xl mx-auto px-6 py-12 md:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Content */}
@@ -604,7 +605,7 @@ export default function Footer() {
                 </div>
 
                 <form
-                  onSubmit={handleSubmit} 
+                  onSubmit={handleSubmit}
                   className="grid grid-cols-1 md:grid-cols-2 gap-4"
                 >
                   {/* Row 1 – Name */}
@@ -715,7 +716,7 @@ export default function Footer() {
 
       {/* --- NEW FOOTER DESIGN --- */}
       <div
-        className="relative overflow-hidden pt-16 pb-14 text-[#0f172a]"
+        className="relative overflow-hidden pt-8 pb-6 text-[#0f172a]"
         style={{
           backgroundImage: "url('/footer-1.webp')",
           backgroundSize: "cover",
@@ -741,7 +742,7 @@ export default function Footer() {
 
               <h3 className="text-[#032b4d] text-xl font-extrabold mb-6 drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">Contact Us</h3>
 
-              <div className="space-y-4 text-[14px] font-bold text-gray-950 bg-white/60 backdrop-blur-[2px] p-4 rounded-xl shadow-sm border border-white/40">
+              <div className="space-y-4 text-[14px] font-bold text-gray-950 bg-white/40 p-4 rounded-xl shadow-sm border border-white/40">
                 {/* Phone 1 */}
                 <a href="tel:+917782069184" className="flex items-center gap-4 hover:text-[#0072b1] transition-colors">
                   <div className="w-8 h-8 shrink-0 rounded-full bg-[#0075B6] flex items-center justify-center shadow-md">
@@ -780,7 +781,7 @@ export default function Footer() {
               </div>
 
               {/* ISO Image & Text */}
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-2 flex items-center gap-4">
                 <Image src="/iso.png" alt="ISO Certified" width={160} height={160} className="drop-shadow-xl" />
                 <div className="text-[14.5px] font-extrabold text-[#032b4d] leading-tight border-l-[2px] border-[#032b4d] pl-4 py-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] tracking-wide">
                   Quality <br /> Compliance <br /> Global Trust
@@ -808,6 +809,36 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/bis-certification" className="flex items-center gap-2 hover:text-[#0075B6] transition-colors group">
+                    <ChevronRight className="w-4 h-4 text-[#0075B6] group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+                    BIS Certification
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/laboratory-equipment-and-setup-services" className="flex items-center gap-2 hover:text-[#0075B6] transition-colors group">
+                    <ChevronRight className="w-4 h-4 text-[#0075B6] group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+                    Laboratory Setup
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/food-ingredients" className="flex items-center gap-2 hover:text-[#0075B6] transition-colors group">
+                    <ChevronRight className="w-4 h-4 text-[#0075B6] group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+                    Food Ingredients
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/it-services-and-solutions" className="flex items-center gap-2 hover:text-[#0075B6] transition-colors group">
+                    <ChevronRight className="w-4 h-4 text-[#0075B6] group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+                    IT Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/student-panel" className="flex items-center gap-2 hover:text-[#0075B6] transition-colors group">
+                    <ChevronRight className="w-4 h-4 text-[#0075B6] group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+                    Student Panel
+                  </Link>
+                </li>
+                <li>
                   <Link href="/contact-us" className="flex items-center gap-2 hover:text-[#0075B6] transition-colors group">
                     <ChevronRight className="w-4 h-4 text-[#0075B6] group-hover:translate-x-1 transition-transform" strokeWidth={3} />
                     Contact Us
@@ -829,26 +860,26 @@ export default function Footer() {
                 <div className="h-[2px] w-10 bg-[#0075B6]"></div>
               </h3>
               <div className="grid grid-cols-2 gap-x-2 gap-y-4 text-[14.5px] font-bold text-gray-950">
-                <span className="flex items-center gap-2">🇮🇳 India</span>
-                <span className="flex items-center gap-2">🇺🇸 USA</span>
-                <span className="flex items-center gap-2">🇿🇦 South Africa</span>
-                <span className="flex items-center gap-2">🇬🇧 United Kingdom</span>
-                <span className="flex items-center gap-2">🇳🇵 Nepal</span>
-                <span className="flex items-center gap-2">🇩🇪 Germany</span>
-                <span className="flex items-center gap-2">🇭🇰 Hongkong</span>
-                <span className="flex items-center gap-2">🇨🇦 Canada</span>
-                <span className="flex items-center gap-2">🇸🇬 Singapore</span>
-                <span className="flex items-center gap-2">🇦🇺 Australia</span>
-                <span className="flex items-center gap-2">🇬🇷 Greece</span>
-                <span className="flex items-center gap-2">🇦🇪 UAE</span>
-                <span className="flex items-center gap-2">🇨🇳 China</span>
-                <span className="flex items-center gap-2">🇫🇷 France</span>
-                <span className="flex items-center gap-2">🇯🇵 Japan</span>
-                <span className="flex items-center gap-2">🇧🇷 Brazil</span>
-                <span className="flex items-center gap-2">🇰🇷 South Korea</span>
-                <span className="flex items-center gap-2">🇲🇽 Mexico</span>
-                <span className="flex items-center gap-2">🇹🇭 Thailand</span>
-                <span className="flex items-center gap-2">🇮🇹 Italy</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/in.png" width="16" alt="India" className="rounded-sm shadow-sm" /> India</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/us.png" width="16" alt="USA" className="rounded-sm shadow-sm" /> USA</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/za.png" width="16" alt="South Africa" className="rounded-sm shadow-sm" /> South Africa</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/gb.png" width="16" alt="UK" className="rounded-sm shadow-sm" /> United Kingdom</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/np.png" width="16" alt="Nepal" className="rounded-sm shadow-sm" /> Nepal</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/de.png" width="16" alt="Germany" className="rounded-sm shadow-sm" /> Germany</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/hk.png" width="16" alt="Hongkong" className="rounded-sm shadow-sm" /> Hongkong</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/ca.png" width="16" alt="Canada" className="rounded-sm shadow-sm" /> Canada</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/sg.png" width="16" alt="Singapore" className="rounded-sm shadow-sm" /> Singapore</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/au.png" width="16" alt="Australia" className="rounded-sm shadow-sm" /> Australia</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/gr.png" width="16" alt="Greece" className="rounded-sm shadow-sm" /> Greece</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/ae.png" width="16" alt="UAE" className="rounded-sm shadow-sm" /> UAE</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/cn.png" width="16" alt="China" className="rounded-sm shadow-sm" /> China</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/fr.png" width="16" alt="France" className="rounded-sm shadow-sm" /> France</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/jp.png" width="16" alt="Japan" className="rounded-sm shadow-sm" /> Japan</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/br.png" width="16" alt="Brazil" className="rounded-sm shadow-sm" /> Brazil</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/kr.png" width="16" alt="South Korea" className="rounded-sm shadow-sm" /> South Korea</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/mx.png" width="16" alt="Mexico" className="rounded-sm shadow-sm" /> Mexico</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/th.png" width="16" alt="Thailand" className="rounded-sm shadow-sm" /> Thailand</span>
+                <span className="flex items-center gap-2"><img src="https://flagcdn.com/w20/it.png" width="16" alt="Italy" className="rounded-sm shadow-sm" /> Italy</span>
               </div>
               <p className="mt-6 text-[12px] text-[#032b4d] italic font-bold">
                 * And delivering to clients globally all over the world.
@@ -919,7 +950,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:w-1/3 text-center lg:text-right border-t lg:border-t-0 lg:border-l border-gray-700 pt-4 lg:pt-0 lg:pl-6 text-[13px] font-medium text-gray-400">
-            © 2024 A N Global Services Private Limited. All Rights Reserved.
+            © 2026 A N Global Services Private Limited. All Rights Reserved.
           </div>
         </div>
       </div>
