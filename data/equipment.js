@@ -52,7 +52,7 @@ export const equipmentMenu = [
         isSubMenu: true,
         subItems: [
           {
-            name: "Fully Programmable",
+            name: "Full Programmable",
             isSubMenu: true,
             subItems: [
               {
@@ -84,6 +84,37 @@ export const equipmentMenu = [
             ]
           },
           {
+            name: "Refrigerated",
+            isSubMenu: true,
+            subItems: [
+              {
+                name: "Bench Top High Speed Refrigerated Centrifuge",
+                slug: "bench-top-high-speed-refrigerated-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top High Speed Micro Refrigerated Centrifuge",
+                slug: "bench-top-high-speed-micro-refrigerated-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top Low Speed Refrigerated Centrifuge",
+                slug: "bench-top-low-speed-refrigerated-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top Large Capacity Refrigerated Centrifuge",
+                slug: "bench-top-large-capacity-refrigerated-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top Low Capacity Refrigerated Centrifuge",
+                slug: "bench-top-low-capacity-refrigerated-centrifuge",
+                root: true,
+              }
+            ]
+          },
+          {
             name: "Non Refrigerated",
             isSubMenu: true,
             subItems: [
@@ -110,6 +141,37 @@ export const equipmentMenu = [
               {
                 name: "Bench Top Low Speed Centrifuge",
                 slug: "bench-top-low-speed-centrifuge",
+                root: true,
+              }
+            ]
+          },
+          {
+            name: "Pathological",
+            isSubMenu: true,
+            subItems: [
+              {
+                name: "Bench Top Filtration Centrifuge",
+                slug: "bench-top-filtration-centrifuge",
+                root: true,
+              },
+              {
+                name: "Bench Top Urine Sedimentation Centrifuge",
+                slug: "bench-top-urine-sedimentation-centrifuge",
+                root: true,
+              },
+              {
+                name: "Cell Smear Centrifuge",
+                slug: "cell-smear-centrifuge",
+                root: true,
+              },
+              {
+                name: "Immunity Blood Centrifuge",
+                slug: "immunity-blood-centrifuge",
+                root: true,
+              },
+              {
+                name: "Micro-Haematocrit Centrifuge",
+                slug: "micro-haemocrit-centrifuge",
                 root: true,
               }
             ]

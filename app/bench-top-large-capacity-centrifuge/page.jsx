@@ -1,23 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { CheckCircle2, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import CentrifugeBreadcrumbs from "@/components/CentrifugeBreadcrumbs";
 
 export const metadata = {
-  title: "Bench Top Large Capacity Centrifuge | High Volume Lab Centrifuge",
+  title: "Bench Top Large Capacity Centrifuge | High Volume Lab Centrifuge - AN Global Services",
   description:
-    "Buy a premium Bench Top Large Capacity Centrifuge. Ideal for blood banks, hospitals, and high-volume clinical labs. Built by AN Global Services for maximum reliability.",
+    "Buy heavy-duty bench top large capacity centrifuge machines. Ideal for blood banks, hospitals, and high-volume clinical labs. Commonly sought as Large Capacity Centrifuge or High Volume Centrifuge. Request a quote.",
   keywords: [
     "Bench Top Large Capacity Centrifuge",
+    "Benchtop Large Capacity Centrifuge",
     "Large Capacity Centrifuge",
     "High Volume Centrifuge",
+    "Large Centrifuge",
+    "High Capacity Centrifuge",
     "Bench Top Centrifuge",
+    "Benchtop Centrifuge",
     "Clinical Centrifuge",
     "Blood Bank Centrifuge",
     "Tabletop Large Centrifuge",
+    "Hospital Centrifuge",
+    "Laboratory Equipment",
     "AN Global Services laboratory equipment",
   ],
   alternates: {
     canonical: "https://www.anglobalservices.com/bench-top-large-capacity-centrifuge",
+  },
+  openGraph: {
+    title: "Bench Top Large Capacity Centrifuge | High Volume Lab Centrifuge",
+    description: "Heavy-duty bench top large capacity centrifuge for blood banks and high-volume clinical labs by AN Global Services.",
+    url: "https://www.anglobalservices.com/bench-top-large-capacity-centrifuge",
+    images: ["https://www.anglobalservices.com/equipment/centrifuge/bench-top-large-capacity-centrifuge.webp"],
   },
   robots: {
     index: true,
@@ -26,87 +40,155 @@ export const metadata = {
 };
 
 export default function BenchTopLargeCapacityCentrifugePage() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "Bench Top Large Capacity Centrifuge",
+        "alternateName": [
+          "Large Capacity Centrifuge",
+          "High Volume Centrifuge",
+          "Large Centrifuge",
+          "High Capacity Centrifuge",
+          "Blood Bank Centrifuge",
+          "Clinical Centrifuge",
+          "Benchtop Large Centrifuge"
+        ],
+        "description": "A heavy-duty, large capacity bench top centrifuge engineered for high-throughput laboratories, hospitals, and blood banks requiring simultaneous processing of large sample volumes.",
+        "image": "https://www.anglobalservices.com/equipment/centrifuge/bench-top-large-capacity-centrifuge.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "AN Global Services"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.anglobalservices.com/contact-us",
+          "priceCurrency": "INR",
+          "price": "0",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "AN Global Services"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.anglobalservices.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Laboratory Equipment",
+            "item": "https://www.anglobalservices.com/laboratory-equipment-and-setup-services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-large-capacity-centrifuge"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Bench Top Large Capacity Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-large-capacity-centrifuge"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What makes this a 'large capacity' centrifuge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unlike standard centrifuges that hold a few 15ml tubes, a large capacity centrifuge is designed with heavy-duty rotors that can hold massive volumes—such as 4 x 250ml bottles, 4 x 500ml bottles, or dozens of standard blood tubes simultaneously in swing-out bucket rotors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it suitable for a blood bank?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It is highly favored by hospitals and blood banks for component separation. With specialized rotor inserts, it can rapidly process multiple blood bags or hundreds of vacutainers in a single automated spin cycle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does it handle the weight and vibration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It utilizes an advanced induction motor and heavy steel housing. It also features automatic electronic imbalance detection that continuously monitors the rotor; if the samples are improperly balanced, the machine safely aborts the run."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can it fit on a standard laboratory bench?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, it is specifically designed as a 'bench top' unit. Despite its massive internal capacity, its reinforced chassis is engineered to sit securely on heavy-duty laboratory casework without requiring a standalone floor model setup."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="w-full bg-gray-50 min-h-screen">
       {/* Schema Markup */}
-      <Script id="large-capacity-centrifuge-schema" type="application/ld+json" strategy="afterInteractive">
-        {`
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Product",
-              "name": "Bench Top Large Capacity Centrifuge",
-              "alternateName": ["Large Capacity Centrifuge", "High Volume Centrifuge", "Blood Bank Centrifuge"],
-              "description": "A heavy-duty, large capacity bench top centrifuge engineered for high-throughput laboratories, hospitals, and blood banks requiring simultaneous processing of large sample volumes.",
-              "image": "https://www.anglobalservices.com/equipment/centrifuge/bench-top-large-capacity-centrifuge.webp",
-              "brand": {
-                "@type": "Brand",
-                "name": "AN Global Services"
-              },
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.anglobalservices.com/contact-us",
-                "priceCurrency": "INR",
-                "price": "0",
-                "availability": "https://schema.org/InStock",
-                "seller": {
-                  "@type": "Organization",
-                  "name": "AN Global Services"
-                }
-              }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [{
-                "@type": "Question",
-                "name": "What makes this a 'large capacity' centrifuge?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Unlike standard centrifuges that hold a few 15ml tubes, a large capacity centrifuge is designed with heavy-duty rotors that can hold massive volumes—such as 4 x 250ml bottles, 4 x 500ml bottles, or dozens of standard blood tubes simultaneously in swing-out bucket rotors."
-                }
-              },{
-                "@type": "Question",
-                "name": "Is it suitable for a blood bank?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. It is highly favored by hospitals and blood banks for component separation. With specialized rotor inserts, it can rapidly process multiple blood bags or hundreds of vacutainers in a single automated spin cycle."
-                }
-              },{
-                "@type": "Question",
-                "name": "How does it handle the weight and vibration?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "It utilizes an advanced induction motor and heavy steel housing. It also features automatic electronic imbalance detection that continuously monitors the rotor; if the samples are improperly balanced, the machine safely aborts the run."
-                }
-              },{
-                "@type": "Question",
-                "name": "Can it fit on a standard laboratory bench?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, it is specifically designed as a 'bench top' unit. Despite its massive internal capacity, its reinforced chassis is engineered to sit securely on heavy-duty laboratory casework without requiring a standalone floor model setup."
-                }
-              }]
-            }
-          ]
-        }
-        `}
-      </Script>
+      <Script
+        id="large-capacity-centrifuge-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Bench Top Large Capacity Centrifuge Laboratory Equipment"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
-              BENCH TOP LARGE CAPACITY CENTRIFUGE
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdowns */}
+          <CentrifugeBreadcrumbs
+            category="Non Refrigerated"
+            currentTitle="Bench Top Large Capacity Centrifuge"
+            currentSlug="bench-top-large-capacity-centrifuge"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              High-Throughput Clinical Series
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
+              Bench Top Large Capacity Centrifuge
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Heavy-duty benchtop high-volume centrifuge. Commonly sought as <strong className="font-semibold text-white">Large Capacity Centrifuge</strong>, <strong className="font-semibold text-white">High Volume Centrifuge</strong>, or <strong className="font-semibold text-white">Blood Bank Centrifuge</strong> for hospital clinics and research.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Multi-Carrier Swing-Out Rotors
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Brushless Induction Drive
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -145,22 +227,28 @@ export default function BenchTopLargeCapacityCentrifugePage() {
                 <p>
                   Engineered for high-volume clinical diagnostics, hospital blood banks, and large-scale industrial research, this machine allows operators to process massive quantities of samples—ranging from hundreds of blood tubes to multiple liters of chemical solutions—in a single, automated spin cycle.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">⚙️</span> Complete Setup by AN Global Services
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Installing heavy-duty equipment requires expertise. We handle the heavy lifting, ensuring the machine is perfectly leveled on your benchtop, the induction motor is calibrated, and your staff is trained on swapping multi-carrier swing-out rotors safely.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Turnkey Support by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Installing heavy-duty equipment requires expertise. We handle the heavy lifting, ensuring the machine is perfectly leveled on your benchtop, the induction motor is calibrated, and your staff is trained on swapping multi-carrier swing-out rotors safely.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -359,6 +447,102 @@ export default function BenchTopLargeCapacityCentrifugePage() {
                 <li>Testing the emergency braking system and auto-imbalance cut-off triggers.</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Centrifuges (Explore Other Centrifuges) */}
+      <section className="bg-slate-50 py-14 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+            <div>
+              <span className="text-[#0075B6] font-bold text-xs uppercase tracking-widest block mb-1">
+                Centrifuge Portfolio
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a192f]">
+                Explore Other Centrifuges
+              </h2>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="text-[#0075B6] hover:text-[#002B7F] font-bold text-sm flex items-center gap-1.5 transition-colors"
+            >
+              View Full Equipment Catalog <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link
+              href="/bench-top-filtration-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Pathological</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Filtration Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Precision solid-liquid separation with perforated basket rotor for clinical and chemical labs.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-high-speed-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">High Speed</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top High Speed Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  High-velocity microcentrifuge designed for subcellular organelles and genomics research.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-high-speed-micro-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Microcentrifuge</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top High Speed Micro Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Precision micro-volume processing for PCR sample prep and molecular biology.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/programmable-large-capacity-refrigerated-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Refrigerated</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Programmable Large Capacity Refrigerated Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Temperature-controlled high-capacity spinning for temperature-sensitive blood and vaccines.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

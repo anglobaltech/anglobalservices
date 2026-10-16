@@ -8,6 +8,7 @@ export const updatesMenu = [
       },
       { name: "NEWS & UPDATES", slug: "news-updates", root: true },
       { name: "BLOGS", slug: "blogs", root: true },
+      { name: "CAREERS", slug: "careers", root: true },
     ],
   },
 ];

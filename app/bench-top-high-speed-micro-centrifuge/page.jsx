@@ -1,23 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { CheckCircle2, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import CentrifugeBreadcrumbs from "@/components/CentrifugeBreadcrumbs";
 
 export const metadata = {
-  title: "Bench Top High Speed Micro Centrifuge | Microcentrifuge",
+  title: "Bench Top High Speed Micro Centrifuge | Microcentrifuge - AN Global Services",
   description:
-    "Buy a premium Bench Top High Speed Micro Centrifuge. Ideal for DNA/RNA extraction, PCR preparation, and fast processing of micro-volumes. Advanced lab equipment by AN Global Services.",
+    "High-efficiency bench top high speed micro centrifuge for PCR preparation, nucleic acid pelleting, and molecular biology. Commonly sought as Micro Centrifuge or Microfuge. Request a quote.",
   keywords: [
     "Bench Top High Speed Micro Centrifuge",
+    "Benchtop High Speed Micro Centrifuge",
     "Micro Centrifuge",
+    "Microcentrifuge",
     "High Speed Microcentrifuge",
-    "Bench Top Centrifuge",
     "Microfuge",
+    "Bench Top Centrifuge",
+    "Benchtop Centrifuge",
     "High Speed Lab Centrifuge",
     "DNA Extraction Centrifuge",
+    "PCR Centrifuge",
+    "Micro Tube Centrifuge",
+    "Laboratory Equipment",
     "AN Global Services laboratory equipment",
   ],
   alternates: {
     canonical: "https://www.anglobalservices.com/bench-top-high-speed-micro-centrifuge",
+  },
+  openGraph: {
+    title: "Bench Top High Speed Micro Centrifuge | Microcentrifuge",
+    description: "High-efficiency bench top high speed micro centrifuge for PCR preparation and molecular biology by AN Global Services.",
+    url: "https://www.anglobalservices.com/bench-top-high-speed-micro-centrifuge",
+    images: ["https://www.anglobalservices.com/equipment/centrifuge/bench-top-high-speed-micro-centrifuge.webp"],
   },
   robots: {
     index: true,
@@ -26,87 +40,154 @@ export const metadata = {
 };
 
 export default function BenchTopHighSpeedMicroCentrifugePage() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "Bench Top High Speed Micro Centrifuge",
+        "alternateName": [
+          "Micro Centrifuge",
+          "Microcentrifuge",
+          "High Speed Microcentrifuge",
+          "Microfuge",
+          "Benchtop Micro Centrifuge",
+          "PCR Centrifuge"
+        ],
+        "description": "A high speed micro centrifuge designed specifically for rapid processing of small volumes (0.2ml to 2.0ml tubes) in molecular biology, genomics, and clinical labs.",
+        "image": "https://www.anglobalservices.com/equipment/centrifuge/bench-top-high-speed-micro-centrifuge.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "AN Global Services"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.anglobalservices.com/contact-us",
+          "priceCurrency": "INR",
+          "price": "0",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "AN Global Services"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.anglobalservices.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Laboratory Equipment",
+            "item": "https://www.anglobalservices.com/laboratory-equipment-and-setup-services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-high-speed-micro-centrifuge"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Bench Top High Speed Micro Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-high-speed-micro-centrifuge"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between a standard centrifuge and a micro centrifuge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard centrifuge typically handles larger volumes (15ml, 50ml, or blood bags) at moderate speeds. A micro centrifuge (or microfuge) is engineered specifically for micro-tubes (0.2ml, 0.5ml, 1.5ml, 2.0ml) and operates at much higher speeds to precipitate extremely tiny particles like DNA and RNA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the primary applications of this high speed microcentrifuge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is essential for life science research, molecular biology, and diagnostics. Key applications include DNA/RNA extraction, protein purification, PCR sample preparation, and separating cellular organelles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it noisy at maximum speed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Our micro centrifuges feature aerodynamic rotors and brushless motor technology that keep noise levels below 58 dB, ensuring a quiet working environment even when running at 15,000+ RPM."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it have a quick spin function?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our models include a dedicated 'Short Spin' or pulse button, allowing operators to rapidly spin down droplets from the sides of micro-tubes in just a few seconds before conducting PCR or assays."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="w-full bg-gray-50 min-h-screen">
       {/* Schema Markup */}
-      <Script id="micro-centrifuge-schema" type="application/ld+json" strategy="afterInteractive">
-        {`
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Product",
-              "name": "Bench Top High Speed Micro Centrifuge",
-              "alternateName": ["Micro Centrifuge", "High Speed Microcentrifuge", "Microfuge"],
-              "description": "A high speed micro centrifuge designed specifically for rapid processing of small volumes (0.2ml to 2.0ml tubes) in molecular biology, genomics, and clinical labs.",
-              "image": "https://www.anglobalservices.com/equipment/centrifuge/bench-top-high-speed-micro-centrifuge.webp",
-              "brand": {
-                "@type": "Brand",
-                "name": "AN Global Services"
-              },
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.anglobalservices.com/contact-us",
-                "priceCurrency": "INR",
-                "price": "0",
-                "availability": "https://schema.org/InStock",
-                "seller": {
-                  "@type": "Organization",
-                  "name": "AN Global Services"
-                }
-              }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [{
-                "@type": "Question",
-                "name": "What is the difference between a standard centrifuge and a micro centrifuge?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A standard centrifuge typically handles larger volumes (15ml, 50ml, or blood bags) at moderate speeds. A micro centrifuge (or microfuge) is engineered specifically for micro-tubes (0.2ml, 0.5ml, 1.5ml, 2.0ml) and operates at much higher speeds to precipitate extremely tiny particles like DNA and RNA."
-                }
-              },{
-                "@type": "Question",
-                "name": "What are the primary applications of this high speed microcentrifuge?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "It is essential for life science research, molecular biology, and diagnostics. Key applications include DNA/RNA extraction, protein purification, PCR sample preparation, and separating cellular organelles."
-                }
-              },{
-                "@type": "Question",
-                "name": "Is it noisy at maximum speed?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No. Our micro centrifuges feature aerodynamic rotors and brushless motor technology that keep noise levels below 58 dB, ensuring a quiet working environment even when running at 15,000+ RPM."
-                }
-              },{
-                "@type": "Question",
-                "name": "Does it have a quick spin function?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, our models include a dedicated 'Short Spin' or pulse button, allowing operators to rapidly spin down droplets from the sides of micro-tubes in just a few seconds before conducting PCR or assays."
-                }
-              }]
-            }
-          ]
-        }
-        `}
-      </Script>
+      <Script
+        id="micro-centrifuge-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Bench Top High Speed Micro Centrifuge Laboratory Equipment"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
-              BENCH TOP HIGH SPEED MICRO CENTRIFUGE
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdowns */}
+          <CentrifugeBreadcrumbs
+            category="Non Refrigerated"
+            currentTitle="Bench Top High Speed Micro Centrifuge"
+            currentSlug="bench-top-high-speed-micro-centrifuge"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              Molecular Biology & Genomics Series
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
+              Bench Top High Speed Micro Centrifuge
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Precision ultra-compact micro-volume centrifuge. Commonly sought as <strong className="font-semibold text-white">Micro Centrifuge</strong>, <strong className="font-semibold text-white">Microcentrifuge</strong>, or <strong className="font-semibold text-white">Microfuge</strong> for DNA/RNA extraction and PCR workflows.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Micro-Tube Rotors (0.2 - 2.0ml)
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Brushless Induction Motor
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -145,22 +226,28 @@ export default function BenchTopHighSpeedMicroCentrifugePage() {
                 <p>
                   Specifically engineered to accommodate very small sample volumes (typically 0.2ml to 2.0ml micro-centrifuge tubes), this machine rapidly accelerates to extreme rotational speeds. This generates the massive gravitational force necessary to pellet microscopic biological matter—such as nucleic acids (DNA/RNA) and proteins—safely and efficiently.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">⚙️</span> Complete Setup by AN Global Services
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Working with micro-volumes requires exact precision. We deliver, install, and calibrate your high-speed microcentrifuge, ensuring the microprocessor controls and digital displays are perfectly accurate, and we provide staff training on quick-spin and protocol programming.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Turnkey Support by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Working with micro-volumes requires exact precision. We deliver, install, and calibrate your high-speed microcentrifuge, ensuring the microprocessor controls and digital displays are perfectly accurate, and we provide staff training on quick-spin and protocol programming.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -360,6 +447,102 @@ export default function BenchTopHighSpeedMicroCentrifugePage() {
                 <li>Testing the emergency stop and imbalance sensor sensitivity.</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Centrifuges (Explore Other Centrifuges) */}
+      <section className="bg-slate-50 py-14 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+            <div>
+              <span className="text-[#0075B6] font-bold text-xs uppercase tracking-widest block mb-1">
+                Centrifuge Portfolio
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a192f]">
+                Explore Other Centrifuges
+              </h2>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="text-[#0075B6] hover:text-[#002B7F] font-bold text-sm flex items-center gap-1.5 transition-colors"
+            >
+              View Full Equipment Catalog <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link
+              href="/bench-top-filtration-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Pathological</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Filtration Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Precision solid-liquid separation with perforated basket rotor for clinical and chemical labs.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-high-speed-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">High Speed</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top High Speed Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  High-velocity microcentrifuge designed for subcellular organelles and genomics research.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-large-capacity-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">High Volume</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Large Capacity Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Massive multi-carrier swing-out rotors for blood banks and high-throughput clinics.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/programmable-high-speed-refrigerated-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Refrigerated</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Programmable High Speed Refrigerated Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Ultra-low temperature protection for thermal-sensitive DNA, RNA, and proteins.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

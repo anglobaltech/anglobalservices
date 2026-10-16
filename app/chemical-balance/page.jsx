@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { CheckCircle2, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import BalanceBreadcrumbs from "@/components/BalanceBreadcrumbs";
 
 export const metadata = {
   title: "Precision Chemical Balance & Analytical Scale | AN Global Services",
@@ -85,20 +87,42 @@ export default function ChemicalBalancePage() {
         `}
       </Script>
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Precision Chemical Balance Laboratory Equipment"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
-              PRECISION CHEMICAL BALANCE
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdown */}
+          <BalanceBreadcrumbs
+            currentTitle="Analytical Chemical Balance"
+            currentSlug="chemical-balance"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              Sub-Milligram Analytical Precision
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
+              Analytical Chemical Balance
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Ultra-precision analytical scale engineered for sub-milligram laboratory formulation and quantitative analysis. Commonly sought as <strong className="font-semibold text-white">Analytical Balance</strong>, <strong className="font-semibold text-white">0.1mg Chemical Balance</strong>, or <strong className="font-semibold text-white">Lab Analytical Scale</strong>.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> 0.1mg (0.0001g) Readability
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> EMFC Electromagnetic Cell
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Glass Draft Shield Included
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -137,22 +161,28 @@ export default function ChemicalBalancePage() {
                 <p>
                   Operating at a readability of 0.1 mg (0.0001g), this balance utilizes Electromagnetic Force Compensation (EMFC) technology to deliver rapid, stable, and highly accurate readings. It is housed within a protective glass draft shield to eliminate environmental variables like air currents and dust, ensuring flawless reproducibility in quantitative analysis and pharmaceutical compounding.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">⚙️</span> Complete Setup by AN Global Services
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Achieving 0.1mg accuracy requires perfect environmental isolation. Our team provides <strong className="text-[#0a192f]">comprehensive end-to-end solutions</strong>. We don't just deliver the scale; we install it on an anti-vibration table, perform the initial multi-point weight calibration, and integrate it with your laboratory information systems.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Setup by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Achieving 0.1mg accuracy requires perfect environmental isolation. Our team provides <strong className="text-[#0a192f]">comprehensive end-to-end solutions</strong>. We don&apos;t just deliver the scale; we install it on an anti-vibration table, perform the initial multi-point weight calibration, and integrate it with your laboratory information systems.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -176,7 +206,7 @@ export default function ChemicalBalancePage() {
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-[#0075B6] font-bold text-xl">1</div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Isolation & Taring</h3>
-                    <p className="text-gray-600 leading-relaxed">The empty beaker or weighing paper is placed on the stainless steel pan inside the draft shield. The doors are closed, and the operator presses 'Tare' to zero out the container's weight.</p>
+                    <p className="text-gray-600 leading-relaxed">The empty beaker or weighing paper is placed on the stainless steel pan inside the draft shield. The doors are closed, and the operator presses &apos;Tare&apos; to zero out the container&apos;s weight.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -355,6 +385,105 @@ export default function ChemicalBalancePage() {
         </div>
       </section>
       
+      {/* Explore Other Balance Models Section */}
+      <section className="bg-slate-50 py-16 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-200 text-xs font-semibold uppercase tracking-wider text-[#0075B6] mb-3">
+                Laboratory Balance Portfolio
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a192f] tracking-tight">
+                Explore Other Balance Models
+              </h2>
+              <p className="text-sm text-slate-500 mt-1 max-w-xl">
+                Browse our complete selection of analytical, precision top-loading, moisture, and heavy-duty industrial platform balances.
+              </p>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0075B6] hover:text-[#005a8f] transition-colors whitespace-nowrap self-start sm:self-auto"
+            >
+              View Full Equipment Catalog <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link
+              href="/electronic-top-loading-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Precision</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Electronic Top Loading Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  High-speed precision benchtop balance for routine laboratory formulations and density determination.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/infrared-moisture-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Moisture</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Infrared Moisture Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Thermogravimetric moisture analyzer for rapid loss-on-drying determination in food and pharma.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/physical-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">General Lab</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Digital Physical Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Rugged and reliable multi-capacity digital benchtop balance for educational and industrial quality control.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/electronic-platform-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Industrial</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Electronic Platform Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Heavy-duty SS 304 floor scale up to 1000kg for chemical drums, parcels, and bulky materials.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="bg-white py-16 border-t border-gray-200" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

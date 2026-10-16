@@ -442,6 +442,17 @@ export default function AdminLayout({ children }) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
             Create New Blog
           </Link>
+
+          {/* CAREERS & JOBS MANAGEMENT */}
+          <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest pl-2 mb-3 mt-6">Careers & Recruitment</p>
+          <Link href="/adminpanel/jobs" onClick={() => setIsMobileMenuOpen(false)} className={`cursor-pointer w-full text-left px-4 py-3 rounded-xl text-sm font-bold transition-all flex items-center gap-3 ${pathname === "/adminpanel/jobs" ? "bg-white shadow-sm border border-gray-200/50 text-[#0072b1]" : "text-gray-600 hover:bg-white/50"}`}>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Job Openings
+          </Link>
+          <Link href="/adminpanel/createjob" onClick={() => setIsMobileMenuOpen(false)} className={`cursor-pointer w-full text-left px-4 py-3 rounded-xl text-sm font-bold transition-all flex items-center gap-3 ${pathname === "/adminpanel/createjob" ? "bg-white shadow-sm border border-gray-200/50 text-[#0072b1]" : "text-gray-600 hover:bg-white/50"}`}>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path></svg>
+            Post New Job
+          </Link>
         </div>
 
         <div className="p-4 space-y-2 border-t border-gray-200/50 bg-gray-50/30">

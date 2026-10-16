@@ -10,6 +10,7 @@ import { isiProductsList } from "../datatable/isiProducts";
 
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/src/lib/firebase";
+import GlobalFootprint from "./GlobalFootprint";
 
 const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
   ssr: false,
@@ -359,7 +360,7 @@ export default function Hero() {
     if (isButtonHovered) return;
     const interval = setInterval(() => {
       setHeroSlide((prev) => prev + 1);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [isButtonHovered]);
 
@@ -851,7 +852,7 @@ export default function Hero() {
       </section>
 
       {/* Certification and License Banner Section */}
-      <section className="w-full relative overflow-hidden flex items-center min-h-[450px] md:min-h-[400px] lg:min-h-[550px] py-12 md:py-8">
+      <section className="w-full relative overflow-hidden flex items-center min-h-0 md:min-h-[400px] lg:min-h-[550px] pt-6 pb-10 sm:pt-8 sm:pb-12 md:py-8">
         {/* Background Image Layer */}
         <div
           className="absolute inset-0 bg-no-repeat bg-cover bg-[position:left_center] lg:bg-[position:right_center] lg:bg-[length:100%_100%]"
@@ -862,7 +863,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f]/90 via-[#0a192f]/60 to-transparent md:w-[80%] lg:w-[60%] pointer-events-none"></div>
 
         <div className="relative w-full max-w-7xl mx-auto px-4 md:px-6 z-10 flex items-center">
-          <div className="flex flex-col justify-center w-full md:w-[80%] lg:w-[60%] xl:w-[55%] text-center mt-6 md:mt-0 lg:ml-8 mx-auto md:mx-0 md:text-left lg:text-center">
+          <div className="flex flex-col justify-center w-full md:w-[80%] lg:w-[60%] xl:w-[55%] text-center mt-2 md:mt-0 lg:ml-8 mx-auto md:mx-0 md:text-left lg:text-center">
 
             {/* Top Subheading */}
             <div className="flex items-center justify-center md:justify-start lg:justify-center gap-4 mb-3 md:mb-5">
@@ -903,10 +904,10 @@ export default function Hero() {
             <div className="flex justify-center md:justify-start lg:justify-center">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base md:text-lg font-black text-[#0a192f] uppercase tracking-wide bg-gradient-to-r from-[#e3b64c] via-[#ffe082] to-[#e3b64c] bg-[length:200%_auto] rounded-full shadow-[0_0_20px_rgba(227,182,76,0.3)] hover:shadow-[0_0_30px_rgba(227,182,76,0.6)] hover:-translate-y-1 hover:bg-[position:right_center] transition-all duration-300 group"
+                className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 text-xs sm:text-sm md:text-base lg:text-lg font-black text-[#0a192f] uppercase tracking-wide bg-gradient-to-r from-[#e3b64c] via-[#ffe082] to-[#e3b64c] bg-[length:200%_auto] rounded-full shadow-[0_0_20px_rgba(227,182,76,0.3)] hover:shadow-[0_0_30px_rgba(227,182,76,0.6)] hover:-translate-y-1 hover:bg-[position:right_center] transition-all duration-300 group"
               >
                 Get Certified Today
-                <svg className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </Link>
             </div>
 
@@ -1172,7 +1173,7 @@ export default function Hero() {
       </section>
 
       {/* Trusted by Businesses Section */}
-      <section className="w-full relative overflow-hidden flex items-center min-h-[450px] lg:min-h-[450px] xl:min-h-[500px] py-10 lg:py-8">
+      <section className="w-full relative overflow-hidden flex items-center min-h-0 lg:min-h-[450px] xl:min-h-[500px] pt-5 pb-8 sm:pt-8 sm:pb-10 lg:py-8">
 
         {/* Background Image Layer */}
         <div
@@ -1180,15 +1181,15 @@ export default function Hero() {
           style={{ backgroundImage: "url('/trusted-by-business.webp')", imageRendering: "-webkit-optimize-contrast" }}
         ></div>
 
-        <div className="relative w-full max-w-[1400px] mx-auto px-6 z-10 flex flex-col h-full justify-center items-center lg:items-start text-center lg:text-left">
+        <div className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 z-10 flex flex-col h-full justify-center items-center lg:items-start text-center lg:text-left">
 
           {/* Main Text Content */}
-          <div className="flex flex-col max-w-[340px] md:max-w-[650px] lg:max-w-[420px] xl:max-w-[550px] items-center lg:items-start">
-            {/* Heading */}
-            <h2 className="text-[36px] md:text-[42px] lg:text-[48px] font-black tracking-tight text-[#0a1b35] leading-[1.1] mb-1">
+          <div className="flex flex-col w-full max-w-[360px] md:max-w-[650px] lg:max-w-[420px] xl:max-w-[550px] items-center lg:items-start">
+            {/* Heading - Strictly 2 lines */}
+            <h2 className="text-[21px] sm:text-[30px] md:text-[38px] lg:text-[48px] font-black tracking-tight text-[#0a1b35] leading-[1.15] mb-1">
               Trusted by Businesses.
             </h2>
-            <h2 className="text-[36px] md:text-[42px] lg:text-[48px] font-black tracking-tight text-[#0a1b35] leading-[1.1] mb-3">
+            <h2 className="text-[21px] sm:text-[30px] md:text-[38px] lg:text-[48px] font-black tracking-tight text-[#0a1b35] leading-[1.15] mb-3">
               Proven by <span className="text-[#0066ff]">Results.</span>
             </h2>
 
@@ -1338,6 +1339,9 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
+      {/* Global Footprint & International Reach Section */}
+      <GlobalFootprint />
 
       <section className="w-full relative py-4 lg:py-6 overflow-hidden bg-white">
         {/* Background Decorative Elements */}
