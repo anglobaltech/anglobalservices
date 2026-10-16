@@ -1,23 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { CheckCircle2, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import CentrifugeBreadcrumbs from "@/components/CentrifugeBreadcrumbs";
 
 export const metadata = {
-  title: "Bench Top Low Speed Centrifuge | Clinical Lab Centrifuge",
+  title: "Bench Top Low Speed Centrifuge | Clinical Lab Centrifuge - AN Global Services",
   description:
-    "Buy a reliable Bench Top Low Speed Centrifuge. Perfect for PRP, blood separation, and routine clinical processing. Engineered by AN Global Services for daily lab use.",
+    "Buy a reliable bench top low speed centrifuge. Perfect for PRP, blood separation, and routine clinical processing. Commonly sought as Low Speed Centrifuge or Clinical Centrifuge. Request a quote.",
   keywords: [
     "Bench Top Low Speed Centrifuge",
+    "Benchtop Low Speed Centrifuge",
     "Low Speed Centrifuge",
     "Clinical Centrifuge",
+    "Bench Top Centrifuge",
     "Benchtop Centrifuge",
     "PRP Centrifuge",
     "Blood Separation Centrifuge",
+    "Blood Centrifuge",
     "Routine Lab Centrifuge",
+    "Pathology Centrifuge",
+    "Laboratory Equipment",
     "AN Global Services laboratory equipment",
   ],
   alternates: {
     canonical: "https://www.anglobalservices.com/bench-top-low-speed-centrifuge",
+  },
+  openGraph: {
+    title: "Bench Top Low Speed Centrifuge | Clinical Lab Centrifuge",
+    description: "Reliable bench top low speed centrifuge for PRP and clinical blood separation by AN Global Services.",
+    url: "https://www.anglobalservices.com/bench-top-low-speed-centrifuge",
+    images: ["https://www.anglobalservices.com/equipment/centrifuge/bench-top-low-speed-centrifuge.webp"],
   },
   robots: {
     index: true,
@@ -26,87 +39,153 @@ export const metadata = {
 };
 
 export default function BenchTopLowSpeedCentrifugePage() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "Bench Top Low Speed Centrifuge",
+        "alternateName": [
+          "Low Speed Centrifuge",
+          "Clinical Centrifuge",
+          "PRP Centrifuge",
+          "Benchtop Low Speed Centrifuge",
+          "Blood Separation Centrifuge"
+        ],
+        "description": "A high-durability, low speed bench top centrifuge optimized for routine clinical analysis, blood component separation, PRP preparation, and urine processing.",
+        "image": "https://www.anglobalservices.com/equipment/centrifuge/bench-top-low-speed-centrifuge.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "AN Global Services"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.anglobalservices.com/contact-us",
+          "priceCurrency": "INR",
+          "price": "0",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "AN Global Services"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.anglobalservices.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Laboratory Equipment",
+            "item": "https://www.anglobalservices.com/laboratory-equipment-and-setup-services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-low-speed-centrifuge"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Bench Top Low Speed Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-low-speed-centrifuge"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is considered 'low speed' for a centrifuge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Low speed centrifuges typically operate in the range of 300 RPM to 6,000 RPM. This speed is perfectly calibrated to separate heavier cellular components like red blood cells from plasma without rupturing delicate cell walls."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can this be used for PRP (Platelet-Rich Plasma) therapy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, absolutely. Its precise lower RPM settings and smooth deceleration profiles make it the standard choice for aesthetic clinics, orthopedic surgeons, and dermatologists preparing high-quality PRP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it heat up during operation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. By operating at lower speeds, the aerodynamic friction is minimal. Additionally, our machines feature a flow-through ventilation design that keeps the internal chamber at ambient room temperature, protecting heat-sensitive clinical samples."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What type of tubes can I spin in this machine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It features versatile rotor options that can accept standard 10ml to 15ml vacuum blood collection tubes, conical urine tubes, and specialized PRP kits, making it highly adaptable for clinical work."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="w-full bg-gray-50 min-h-screen">
       {/* Schema Markup */}
-      <Script id="low-speed-centrifuge-schema" type="application/ld+json" strategy="afterInteractive">
-        {`
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Product",
-              "name": "Bench Top Low Speed Centrifuge",
-              "alternateName": ["Low Speed Centrifuge", "Clinical Centrifuge", "PRP Centrifuge", "Benchtop Centrifuge"],
-              "description": "A high-durability, low speed bench top centrifuge optimized for routine clinical analysis, blood component separation, PRP preparation, and urine processing.",
-              "image": "https://www.anglobalservices.com/equipment/centrifuge/bench-top-low-speed-centrifuge.webp",
-              "brand": {
-                "@type": "Brand",
-                "name": "AN Global Services"
-              },
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.anglobalservices.com/contact-us",
-                "priceCurrency": "INR",
-                "price": "0",
-                "availability": "https://schema.org/InStock",
-                "seller": {
-                  "@type": "Organization",
-                  "name": "AN Global Services"
-                }
-              }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [{
-                "@type": "Question",
-                "name": "What is considered 'low speed' for a centrifuge?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Low speed centrifuges typically operate in the range of 300 RPM to 6,000 RPM. This speed is perfectly calibrated to separate heavier cellular components like red blood cells from plasma without rupturing delicate cell walls."
-                }
-              },{
-                "@type": "Question",
-                "name": "Can this be used for PRP (Platelet-Rich Plasma) therapy?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, absolutely. Its precise lower RPM settings and smooth deceleration profiles make it the standard choice for aesthetic clinics, orthopedic surgeons, and dermatologists preparing high-quality PRP."
-                }
-              },{
-                "@type": "Question",
-                "name": "Does it heat up during operation?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No. By operating at lower speeds, the aerodynamic friction is minimal. Additionally, our machines feature a flow-through ventilation design that keeps the internal chamber at ambient room temperature, protecting heat-sensitive clinical samples."
-                }
-              },{
-                "@type": "Question",
-                "name": "What type of tubes can I spin in this machine?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "It features versatile rotor options that can accept standard 10ml to 15ml vacuum blood collection tubes, conical urine tubes, and specialized PRP kits, making it highly adaptable for clinical work."
-                }
-              }]
-            }
-          ]
-        }
-        `}
-      </Script>
+      <Script
+        id="low-speed-centrifuge-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Bench Top Low Speed Centrifuge Laboratory Equipment"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
-              BENCH TOP LOW SPEED CENTRIFUGE
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdowns */}
+          <CentrifugeBreadcrumbs
+            category="Non Refrigerated"
+            currentTitle="Bench Top Low Speed Centrifuge"
+            currentSlug="bench-top-low-speed-centrifuge"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              Clinical & Diagnostic Series
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
+              Bench Top Low Speed Centrifuge
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Quiet, dependable benchtop clinical separation centrifuge. Commonly sought as <strong className="font-semibold text-white">Low Speed Centrifuge</strong>, <strong className="font-semibold text-white">Clinical Centrifuge</strong>, or <strong className="font-semibold text-white">PRP Centrifuge</strong> for blood separation and routine diagnostics.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Clinical Tube Compatibility (5 - 50ml)
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Soft Brake & Acceleration Control
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -145,22 +224,28 @@ export default function BenchTopLowSpeedCentrifugePage() {
                 <p>
                   This highly dependable workhorse is a staple in medical labs, hospitals, and aesthetic clinics. Operating at optimized lower RPMs, it perfectly stratifies whole blood into plasma, buffy coat, and red blood cells, ensuring high yields for diagnostic testing and regenerative medicine (PRP) applications.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">⚙️</span> Complete Setup by AN Global Services
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Clinical accuracy demands precision setup. We deliver and calibrate your low speed centrifuge directly at your facility, ensuring the RPM/RCF conversion is exact, and training your team to store their most used clinical protocols in the digital memory.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Turnkey Support by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Clinical accuracy demands precision setup. We deliver and calibrate your low speed centrifuge directly at your facility, ensuring the RPM/RCF conversion is exact, and training your team to store their most used clinical protocols in the digital memory.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -359,6 +444,102 @@ export default function BenchTopLowSpeedCentrifugePage() {
                 <li>Testing the lid lock mechanism for safety compliance.</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Centrifuges (Explore Other Centrifuges) */}
+      <section className="bg-slate-50 py-14 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+            <div>
+              <span className="text-[#0075B6] font-bold text-xs uppercase tracking-widest block mb-1">
+                Centrifuge Portfolio
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a192f]">
+                Explore Other Centrifuges
+              </h2>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="text-[#0075B6] hover:text-[#002B7F] font-bold text-sm flex items-center gap-1.5 transition-colors"
+            >
+              View Full Equipment Catalog <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link
+              href="/bench-top-filtration-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Pathological</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Filtration Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Precision solid-liquid separation with perforated basket rotor for clinical and chemical labs.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-high-speed-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">High Speed</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top High Speed Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  High-velocity microcentrifuge designed for subcellular organelles and genomics research.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-high-speed-micro-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Microcentrifuge</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top High Speed Micro Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Precision micro-volume processing for PCR sample prep and molecular biology.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-large-capacity-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">High Volume</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Large Capacity Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Massive multi-carrier swing-out rotors for blood banks and high-throughput clinics.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

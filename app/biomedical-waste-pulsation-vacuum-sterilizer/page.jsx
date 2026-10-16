@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import AutoclaveBreadcrumbs from "@/components/AutoclaveBreadcrumbs";
 
 export const metadata = {
   title: "Biomedical Waste Pulsation Vacuum Sterilizer | AN Global Services",
@@ -90,20 +92,43 @@ export default function BiomedicalWasteSterilizerPage() {
         `}
       </Script>
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Biomedical Waste Pulsation Vacuum Sterilizer"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
-              BIOMEDICAL WASTE PULSATION VACUUM STERILIZER
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdowns */}
+          <AutoclaveBreadcrumbs
+            category="Specialized & Portable"
+            currentTitle="Biomedical Waste Pulsation Vacuum Sterilizer"
+            currentSlug="biomedical-waste-pulsation-vacuum-sterilizer"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              Heavy-Duty Hospital & Laboratory Grade
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
+              Biomedical Waste Pulsation Vacuum Sterilizer
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Advanced pre- & post-vacuum steam sterilizer engineered for infectious hospital waste. Commonly sought as <strong className="font-semibold text-white">Biomedical Waste Autoclave</strong>, <strong className="font-semibold text-white">Pulse Vacuum Sterilizer</strong>, or <strong className="font-semibold text-white">Biohazard Steam Sterilizer</strong> for safe clinical waste decontamination.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Multi-Pulse Dynamic Vacuum
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Heavy-Gauge SS 304 / 316L
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Automated PLC & Safety Interlocks
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -142,22 +167,28 @@ export default function BiomedicalWasteSterilizerPage() {
                 <p>
                   Unlike standard gravity autoclaves, this system utilizes mechanical vacuum pumps to perform multiple "pulses" (alternating vacuum and steam injection). This completely eliminates cold air pockets—the primary barrier to effective sterilization—allowing high-pressure saturated steam to penetrate deep into porous materials, hollow instruments, and complex biomedical waste loads.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">⚙️</span> Complete Setup by AN Global Services
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Our company doesn't just supply the equipment; we provide <strong className="text-[#0a192f]">comprehensive end-to-end solutions</strong>. Our expert engineering team will handle the complete delivery, installation, calibration, and operational training to ensure your facility is running safely and compliantly from day one.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Setup by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Our company doesn't just supply equipment; we deliver <strong className="text-[#0a192f]">comprehensive turnkey solutions</strong>. Our certified engineers manage end-to-end site preparation, rigorous calibration, IQ/OQ documentation, and operator safety training.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -370,6 +401,68 @@ export default function BiomedicalWasteSterilizerPage() {
         </div>
       </section>
       
+      {/* Explore Other Autoclaves Models */}
+      <section className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 py-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-gray-200">
+            <div>
+              <span className="text-xs uppercase font-extrabold tracking-wider text-[#0075B6]">Sterilization Systems</span>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1">Explore Other Autoclave Models</h2>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="mt-3 sm:mt-0 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0075B6] hover:text-[#005a8e] transition-colors"
+            >
+              View Full Equipment Catalog <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link
+              href="/vertical-autoclave-deluxe"
+              className="group p-5 rounded-2xl bg-white border border-gray-200 hover:border-[#0075B6] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span className="inline-block text-[11px] font-bold text-[#0075B6] bg-blue-50 px-2.5 py-0.5 rounded-full mb-2">Vertical Radial</span>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#0075B6] transition-colors">Vertical Autoclave Deluxe</h3>
+                <p className="text-xs text-gray-500 mt-1.5 line-clamp-2">Radial locking lid and foot pedal lift mechanism for hospital & laboratory sterilization.</p>
+              </div>
+              <div className="mt-4 flex items-center text-xs font-semibold text-[#0075B6] group-hover:translate-x-1 transition-transform">
+                View Specifications <ArrowRight size={14} className="ml-1" />
+              </div>
+            </Link>
+
+            <Link
+              href="/horizontal-autoclave-cylindrical"
+              className="group p-5 rounded-2xl bg-white border border-gray-200 hover:border-[#0075B6] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span className="inline-block text-[11px] font-bold text-[#0075B6] bg-blue-50 px-2.5 py-0.5 rounded-full mb-2">Horizontal Steam</span>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#0075B6] transition-colors">Horizontal Autoclave Cylindrical</h3>
+                <p className="text-xs text-gray-500 mt-1.5 line-clamp-2">Front-loading heavy-gauge sterilizer engineered for hospitals, bulk linen & surgical trays.</p>
+              </div>
+              <div className="mt-4 flex items-center text-xs font-semibold text-[#0075B6] group-hover:translate-x-1 transition-transform">
+                View Specifications <ArrowRight size={14} />
+              </div>
+            </Link>
+
+            <Link
+              href="/portable-autoclave"
+              className="group p-5 rounded-2xl bg-white border border-gray-200 hover:border-[#0075B6] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span className="inline-block text-[11px] font-bold text-[#0075B6] bg-blue-50 px-2.5 py-0.5 rounded-full mb-2">Mobile / Benchtop</span>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#0075B6] transition-colors">Portable Autoclaves</h3>
+                <p className="text-xs text-gray-500 mt-1.5 line-clamp-2">Compact aluminum & stainless steel mobile steam sterilizers for clinics, field labs, and nursing homes.</p>
+              </div>
+              <div className="mt-4 flex items-center text-xs font-semibold text-[#0075B6] group-hover:translate-x-1 transition-transform">
+                View Specifications <ArrowRight size={14} />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="bg-white py-16 border-t border-gray-200" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

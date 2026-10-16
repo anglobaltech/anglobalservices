@@ -121,6 +121,7 @@ export default function RootLayout({ children }) {
         </div>
 
         <FloatingContact />
+        {/* ChatBot temporarily commented out - will deploy later */}
         {/* <ChatBot /> */}
 
         <div className="layout-item">

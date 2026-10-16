@@ -186,3 +186,26 @@ body.ads-page .layout-item {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(107, 114, 128, 0.8);
 }
+
+/* Chatbot Input Box Styling */
+.chat-input-box {
+  border: 2px solid #000000 !important;
+  background-color: #ffffff !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.chat-input-box:focus {
+  border: 2.5px solid #0075B6 !important;
+  border-color: #0075B6 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Prevent scroll chaining from chatbot to the main page */
+#chat-scroll-container,
+#chatbot-window {
+  overscroll-behavior: contain !important;
+  overscroll-behavior-y: contain !important;
+}

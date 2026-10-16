@@ -420,6 +420,7 @@ export default function Navbar() {
             <DesktopDropdown
               title="EQUIPMENTS & MACHINERY"
               menu={equipmentMenu}
+              href="/equipments-and-machinery"
               align="right"
               pathname={pathname}
             />
@@ -577,28 +578,30 @@ function DesktopDropdown({
   pathname,
 }) {
   // Check if any child page in this dropdown is currently active
-  const isChildActive = menu.some((group) =>
-    group.items.some((item) => {
-      const itemPath = item.root ? `/${item.slug}` : `/services/${item.slug}`;
-      if (pathname === itemPath) return true;
-      // Check sub-menu items too
-      if (item.isSubMenu && item.subItems) {
-        return item.subItems.some((sub) => {
-          if (sub.isSubMenu && sub.subItems) {
-            return sub.subItems.some((sub2) => {
-              const sub2Path = sub2.root
-                ? `/${sub2.slug}`
-                : `/services/${sub2.slug}`;
-              return pathname === sub2Path;
-            });
-          }
-          const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
-          return pathname === subPath;
-        });
-      }
-      return false;
-    }),
-  );
+  const isChildActive =
+    (href && pathname === href) ||
+    menu.some((group) =>
+      group.items.some((item) => {
+        const itemPath = item.root ? `/${item.slug}` : `/services/${item.slug}`;
+        if (pathname === itemPath) return true;
+        // Check sub-menu items too
+        if (item.isSubMenu && item.subItems) {
+          return item.subItems.some((sub) => {
+            if (sub.isSubMenu && sub.subItems) {
+              return sub.subItems.some((sub2) => {
+                const sub2Path = sub2.root
+                  ? `/${sub2.slug}`
+                  : `/services/${sub2.slug}`;
+                return pathname === sub2Path;
+              });
+            }
+            const subPath = sub.root ? `/${sub.slug}` : `/services/${sub.slug}`;
+            return pathname === subPath;
+          });
+        }
+        return false;
+      }),
+    );
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -613,6 +616,12 @@ function DesktopDropdown({
       const handleOpen = () => setIsOpen(true);
       window.addEventListener("open-food-dropdown", handleOpen);
       return () => window.removeEventListener("open-food-dropdown", handleOpen);
+    }
+    if (title === "EQUIPMENTS & MACHINERY") {
+      const handleOpen = () => setIsOpen(true);
+      window.addEventListener("open-equipment-dropdown", handleOpen);
+      return () =>
+        window.removeEventListener("open-equipment-dropdown", handleOpen);
     }
   }, [title]);
 

@@ -10,160 +10,245 @@ export const metadata = {
 };
 
 const equipments = [
+  // --- REFRIGERATED CENTRIFUGES ---
   {
-    title: "Bench Top High Speed Centrifuge",
-    slug: "bench-top-high-speed-centrifuge",
-    category: "Centrifuge",
-    image: "/equipment/centrifuge/bench-top-high-speed-centrifuge.webp",
-    excerpt: "High-performance benchtop centrifuge for precise separation in laboratory and industrial applications."
+    title: "Bench Top High Speed Refrigerated Centrifuge",
+    slug: "bench-top-high-speed-refrigerated-centrifuge",
+    category: "Refrigerated",
+    image: "/equipment/centrifuge/bench-top-high-speed-refrigerated-centrifuge.webp",
+    excerpt: "Precision high-speed refrigerated benchtop centrifuge with CFC-free cooling for molecular biology and clinical research."
   },
   {
-    title: "Bench Top High Speed Micro Centrifuge",
-    slug: "bench-top-high-speed-micro-centrifuge",
-    category: "Centrifuge",
-    image: "/equipment/centrifuge/bench-top-high-speed-micro-centrifuge.webp",
-    excerpt: "Compact and powerful micro centrifuge designed for quick spin-downs and micro-volume protocols."
+    title: "Bench Top High Speed Micro Refrigerated Centrifuge",
+    slug: "bench-top-high-speed-micro-refrigerated-centrifuge",
+    category: "Refrigerated",
+    image: "/equipment/centrifuge/bench-top-high-speed-micro-refrigerated-centrifuge.webp",
+    excerpt: "High-speed refrigerated microcentrifuge designed for nucleic acid extraction, protein isolation, and PCR temperature stability."
   },
   {
-    title: "Bench Top Large Capacity Centrifuge",
-    slug: "bench-top-large-capacity-centrifuge",
-    category: "Centrifuge",
-    image: "/equipment/centrifuge/bench-top-large-capacity-centrifuge.webp",
-    excerpt: "Handle high-volume samples efficiently with our large capacity benchtop centrifuge."
+    title: "Bench Top Low Speed Refrigerated Centrifuge",
+    slug: "bench-top-low-speed-refrigerated-centrifuge",
+    category: "Refrigerated",
+    image: "/equipment/centrifuge/bench-top-low-speed-refrigerated-centrifuge.webp",
+    excerpt: "Low-speed refrigerated centrifuge engineered for gentle blood component separation, cell cultures, and clinical diagnostics."
   },
+  {
+    title: "Bench Top Large Capacity Refrigerated Centrifuge",
+    slug: "bench-top-large-capacity-refrigerated-centrifuge",
+    category: "Refrigerated",
+    image: "/equipment/centrifuge/bench-top-large-capacity-refrigerated-centrifuge.webp",
+    excerpt: "High-throughput refrigerated centrifuge accommodating large-volume sample processing with rapid pre-cooling protocols."
+  },
+  {
+    title: "Bench Top Low Capacity Refrigerated Centrifuge",
+    slug: "bench-top-low-capacity-refrigerated-centrifuge",
+    category: "Refrigerated",
+    image: "/equipment/centrifuge/bench-top-low-capacity-refrigerated-centrifuge.webp",
+    excerpt: "Compact refrigerated benchtop centrifuge offering energy-efficient thermal stability for routine clinical and academic separation."
+  },
+
+  // --- PROGRAMMABLE CENTRIFUGES ---
   {
     title: "Programmable High Speed Refrigerated Centrifuge",
     slug: "programmable-high-speed-refrigerated-centrifuge",
-    category: "Centrifuge",
+    category: "Full Programmable",
     image: "/equipment/centrifuge/programmable-high-speed-refrigerated-centrifuge.webp",
     excerpt: "Advanced programmable features with precise temperature control for sensitive biological samples."
   },
   {
     title: "Programmable Large Capacity Refrigerated Centrifuge",
     slug: "programmable-large-capacity-refrigerated-centrifuge",
-    category: "Centrifuge",
+    category: "Full Programmable",
     image: "/equipment/centrifuge/programmable-large-capacity-refrigerated-centrifuge.webp",
     excerpt: "Large capacity refrigerated centrifuge ideal for high-throughput blood and biological processing."
+  },
+
+  // --- INDUSTRIAL CENTRIFUGES ---
+  {
+    title: "Table Top Oil Test Centrifuge",
+    slug: "table-top-oil-test-centrifuge",
+    category: "Industrial Centrifuge",
+    image: "/equipment/centrifuge/table-top-oil-test-centrifuge.webp",
+    excerpt: "Specialized for petroleum and oil testing applications, meeting stringent ASTM industry standards."
   },
   {
     title: "Table Top Dairy Test Centrifuge",
     slug: "table-top-dairy-test-centrifuge",
-    category: "Centrifuge",
+    category: "Industrial Centrifuge",
     image: "/equipment/centrifuge/table-top-dairy-test-centrifuge.webp",
     excerpt: "Specialized centrifuge for accurate dairy product testing and fat analysis."
   },
+
+  // --- NON-REFRIGERATED CENTRIFUGES ---
   {
-    title: "Biomedical Waste Pulsation Vacuum Sterilizer",
-    slug: "biomedical-waste-pulsation-vacuum-sterilizer",
-    category: "Autoclave & Sterilizer",
-    image: "/equipment/autoclave/biomedical-waste-pulsation-vacuum-sterilizer.webp",
-    excerpt: "State-of-the-art sterilization technology for safe and efficient biomedical waste management."
+    title: "Bench Top High Speed Centrifuge",
+    slug: "bench-top-high-speed-centrifuge",
+    category: "Non Refrigerated",
+    image: "/equipment/centrifuge/bench-top-high-speed-centrifuge.webp",
+    excerpt: "High-performance benchtop centrifuge for precise separation in laboratory and industrial applications."
   },
   {
-    title: "Horizontal Rectangular Autoclave",
-    slug: "horizontal-rectangular-autoclave",
-    category: "Autoclave & Sterilizer",
-    image: "/equipment/autoclave/horizontal-rectangular-autoclave.webp",
-    excerpt: "Heavy-duty rectangular autoclave designed for bulk sterilization in hospitals and labs."
-  },
-  {
-    title: "Vertical Autoclave Triple Walled",
-    slug: "vertical-autoclave-triple-walled",
-    category: "Autoclave & Sterilizer",
-    image: "/equipment/autoclave/vertical-autoclave-triple-walled.webp",
-    excerpt: "Triple-walled construction for superior heat retention and maximum sterilization efficiency."
-  },
-  {
-    title: "Cement Autoclave",
-    slug: "cement-autoclave",
-    category: "Autoclave & Sterilizer",
-    image: "/equipment/autoclave/cement-autoclave.webp",
-    excerpt: "Specifically engineered for testing the soundness of cement in construction material labs."
-  },
-  {
-    title: "Electronic Platform Balance",
-    slug: "electronic-platform-balance",
-    category: "Industrial Balance",
-    image: "/equipment/lab-balances/electronic-platform-balance.webp",
-    excerpt: "High-capacity electronic weighing platform for robust industrial material measurement."
-  },
-  {
-    title: "Infrared Moisture Balance",
-    slug: "infrared-moisture-balance",
-    category: "Industrial Balance",
-    image: "/equipment/lab-balances/infrared-moisture-balance.webp",
-    excerpt: "Rapid and precise moisture determination using advanced infrared heating technology."
-  },
-  {
-    title: "Electronic Top Loading Balance",
-    slug: "electronic-top-loading-balance",
-    category: "Industrial Balance",
-    image: "/equipment/lab-balances/electronic-top-loading-balance.webp",
-    excerpt: "Accurate and reliable top-loading balance for everyday laboratory and industrial weighing."
+    title: "Bench Top High Speed Micro Centrifuge",
+    slug: "bench-top-high-speed-micro-centrifuge",
+    category: "Non Refrigerated",
+    image: "/equipment/centrifuge/bench-top-high-speed-micro-centrifuge.webp",
+    excerpt: "Compact and powerful micro centrifuge designed for quick spin-downs and micro-volume protocols."
   },
   {
     title: "Bench Top Low Capacity Centrifuge",
     slug: "bench-top-low-capacity-centrifuge",
-    category: "Centrifuge",
+    category: "Non Refrigerated",
     image: "/equipment/centrifuge/bench-top-low-capacity-centrifuge.webp",
     excerpt: "Ideal for routine low-volume separation tasks with precise control and compact design."
   },
   {
+    title: "Bench Top Large Capacity Centrifuge",
+    slug: "bench-top-large-capacity-centrifuge",
+    category: "Non Refrigerated",
+    image: "/equipment/centrifuge/bench-top-large-capacity-centrifuge.webp",
+    excerpt: "Handle high-volume samples efficiently with our large capacity benchtop centrifuge."
+  },
+  {
     title: "Bench Top Low Speed Centrifuge",
     slug: "bench-top-low-speed-centrifuge",
-    category: "Centrifuge",
+    category: "Non Refrigerated",
     image: "/equipment/centrifuge/bench-top-low-speed-centrifuge.webp",
     excerpt: "Reliable low-speed centrifuge designed for clinical diagnostics and basic cellular separation."
   },
+
+  // --- PATHOLOGICAL CENTRIFUGES ---
   {
-    title: "Table Top Oil Test Centrifuge",
-    slug: "table-top-oil-test-centrifuge",
-    category: "Centrifuge",
-    image: "/equipment/centrifuge/table-top-oil-test-centrifuge.webp",
-    excerpt: "Specialized for petroleum and oil testing applications, meeting stringent industry standards."
+    title: "Bench Top Filtration Centrifuge",
+    slug: "bench-top-filtration-centrifuge",
+    category: "Pathological",
+    image: "/equipment/centrifuge/bench-top-filtration-centrifuge.webp",
+    excerpt: "Specialized filtration centrifuge engineered for rapid particulate recovery and precise analytical filtering protocols."
   },
   {
-    title: "Portable Autoclave",
-    slug: "portable-autoclave",
-    category: "Autoclave & Sterilizer",
-    image: "/equipment/autoclave/portable-autoclave.webp",
-    excerpt: "Compact and easy-to-use portable sterilization unit for small clinics and mobile testing."
+    title: "Bench Top Urine Sedimentation Centrifuge",
+    slug: "bench-top-urine-sedimentation-centrifuge",
+    category: "Pathological",
+    image: "/equipment/centrifuge/bench-top-urine-sedimentation-centrifuge.webp",
+    excerpt: "Calibrated low-speed sedimentation centrifuge designed for clinical urinalysis and sediment preparation without cell distortion."
+  },
+  {
+    title: "Cell Smear Centrifuge",
+    slug: "cell-smear-centrifuge",
+    category: "Pathological",
+    image: "/equipment/centrifuge/cell-smear-centrifuge.webp",
+    excerpt: "Advanced cyto-centrifuge producing uniform monolayer cellular smears for cytology, oncology, and histological evaluation."
+  },
+  {
+    title: "Immunity Blood Centrifuge",
+    slug: "immunity-blood-centrifuge",
+    category: "Pathological",
+    image: "/equipment/centrifuge/immunity-blood-centrifuge.webp",
+    excerpt: "Specialized for blood bank immunohematology, antibody screening, blood grouping, and cross-matching tests."
+  },
+  {
+    title: "Micro-Haematocrit Centrifuge",
+    slug: "micro-haemocrit-centrifuge",
+    category: "Pathological",
+    image: "/equipment/centrifuge/micro-haemocrit-centrifuge.webp",
+    excerpt: "High-speed capillary tube centrifuge for rapid, accurate determination of blood haematocrit (PCV) values."
+  },
+
+  // --- AUTOCLAVES & STERILIZERS ---
+  {
+    title: "Biomedical Waste Pulsation Vacuum Sterilizer",
+    slug: "biomedical-waste-pulsation-vacuum-sterilizer",
+    category: "Autoclave",
+    image: "/equipment/autoclave/biomedical-waste-pulsation-vacuum-sterilizer.webp",
+    excerpt: "State-of-the-art sterilization technology for safe and efficient biomedical waste management."
+  },
+  {
+    title: "Cement Autoclave",
+    slug: "cement-autoclave",
+    category: "Autoclave",
+    image: "/equipment/autoclave/cement-autoclave.webp",
+    excerpt: "Specifically engineered for testing the soundness of cement in construction material labs."
   },
   {
     title: "Horizontal Autoclave Cylindrical",
     slug: "horizontal-autoclave-cylindrical",
-    category: "Autoclave & Sterilizer",
+    category: "Autoclave",
     image: "/equipment/autoclave/horizontal-autoclave-cylindrical.webp",
     excerpt: "Durable cylindrical horizontal autoclave designed for consistent, high-pressure sterilization."
   },
   {
+    title: "Horizontal Rectangular Autoclave",
+    slug: "horizontal-rectangular-autoclave",
+    category: "Autoclave",
+    image: "/equipment/autoclave/horizontal-rectangular-autoclave.webp",
+    excerpt: "Heavy-duty rectangular autoclave designed for bulk sterilization in hospitals and labs."
+  },
+  {
+    title: "Portable Autoclave",
+    slug: "portable-autoclave",
+    category: "Autoclave",
+    image: "/equipment/autoclave/portable-autoclave.webp",
+    excerpt: "Compact and easy-to-use portable sterilization unit for small clinics and mobile testing."
+  },
+  {
+    title: "Vertical Autoclave Triple Walled",
+    slug: "vertical-autoclave-triple-walled",
+    category: "Autoclave",
+    image: "/equipment/autoclave/vertical-autoclave-triple-walled.webp",
+    excerpt: "Triple-walled construction for superior heat retention and maximum sterilization efficiency."
+  },
+  {
     title: "Vertical Autoclave Deluxe",
     slug: "vertical-autoclave-deluxe",
-    category: "Autoclave & Sterilizer",
+    category: "Autoclave",
     image: "/equipment/autoclave/vertical-autoclave-deluxe.webp",
     excerpt: "Premium vertical autoclave featuring advanced digital controls and enhanced safety mechanisms."
   },
   {
     title: "Vertical Autoclave Economy",
     slug: "vertical-autoclave-economy",
-    category: "Autoclave & Sterilizer",
+    category: "Autoclave",
     image: "/equipment/autoclave/vertical-autoclave-economy.webp",
     excerpt: "Cost-effective vertical sterilization solution without compromising on safety or performance."
+  },
+
+  // --- LAB BALANCES ---
+  {
+    title: "Chemical Balance",
+    slug: "chemical-balance",
+    category: "Lab Balances",
+    image: "/equipment/lab-balances/chemical-balance.webp",
+    excerpt: "Precision chemical balance engineered for exact formulations in pharmaceutical and chemical labs."
+  },
+  {
+    title: "Electronic Platform Balance",
+    slug: "electronic-platform-balance",
+    category: "Lab Balances",
+    image: "/equipment/lab-balances/electronic-platform-balance.webp",
+    excerpt: "High-capacity electronic weighing platform for robust industrial material measurement."
+  },
+  {
+    title: "Electronic Top Loading Balance",
+    slug: "electronic-top-loading-balance",
+    category: "Lab Balances",
+    image: "/equipment/lab-balances/electronic-top-loading-balance.webp",
+    excerpt: "Accurate and reliable top-loading balance for everyday laboratory and industrial weighing."
+  },
+  {
+    title: "Infrared Moisture Balance",
+    slug: "infrared-moisture-balance",
+    category: "Lab Balances",
+    image: "/equipment/lab-balances/infrared-moisture-balance.webp",
+    excerpt: "Rapid and precise moisture determination using advanced infrared heating technology."
   },
   {
     title: "Physical Balance",
     slug: "physical-balance",
-    category: "Industrial Balance",
+    category: "Lab Balances",
     image: "/equipment/lab-balances/physical-balance.webp",
     excerpt: "Traditional, highly sensitive physical balance for precise analytical and academic weighing."
   },
-  {
-    title: "Chemical Balance",
-    slug: "chemical-balance",
-    category: "Industrial Balance",
-    image: "/equipment/lab-balances/chemical-balance.webp",
-    excerpt: "Precision chemical balance engineered for exact formulations in pharmaceutical and chemical labs."
-  },
+
+  // --- TESTING & MANUFACTURING EQUIPMENT ---
   {
     title: "Toys Testing & Inspection Equipment",
     slug: "equipmentfortoy",
@@ -267,20 +352,18 @@ export default function EquipmentsAndMachinery() {
         </div>
       </section>
 
-      {/* Equipment Listings Section (Blog Design Style) - Temporarily disabled for deployment */}
-      {/* 
-      <section id="equipment-list" className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">Explore Our Machinery Catalog</h2>
-            <div className="w-24 h-1 bg-[#0075B6] mx-auto rounded-full mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">Browse our comprehensive range of high-performance industrial and laboratory equipment engineered for excellence.</p>
+      {/* Equipment Listings Section (All Products 4-Column Grid) */}
+      <section id="equipment-list" className="py-16 md:py-20">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6 md:mb-7">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-3">Explore Our Machinery Catalog</h2>
+            <div className="w-24 h-1 bg-[#0075B6] mx-auto rounded-full mb-4"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">Browse our comprehensive range of high-performance industrial, clinical, and laboratory equipment engineered for excellence.</p>
           </div>
 
           <EquipmentList equipments={equipments} />
         </div>
       </section>
-      */}
       
       {/* SEO Content Section */}
       <section className="bg-white py-16 border-t border-gray-100">

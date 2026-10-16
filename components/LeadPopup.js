@@ -211,6 +211,8 @@ export default function LeadPopup() {
   const isStudentPanel = pathname?.startsWith("/student-panel");
   const isItServicesPage = pathname?.startsWith("/it-services-and-solutions");
   const isFoodIngredientsPage = pathname?.startsWith("/food-ingredients");
+  const isCareersPage = pathname?.startsWith("/careers");
+  const isAdminPanel = pathname?.startsWith("/adminpanel");
 
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -225,7 +227,7 @@ export default function LeadPopup() {
   });
 
   useEffect(() => {
-    if (isStudentPanel || isItServicesPage || isFoodIngredientsPage) return;
+    if (isStudentPanel || isItServicesPage || isFoodIngredientsPage || isCareersPage || isAdminPanel) return;
 
     const firstTimer = setTimeout(() => {
       // Do not interrupt the user if they are currently chatting with the bot
@@ -234,7 +236,7 @@ export default function LeadPopup() {
     }, 10000);
 
     return () => clearTimeout(firstTimer);
-  }, [pathname, isStudentPanel, isItServicesPage, isFoodIngredientsPage]);
+  }, [pathname, isStudentPanel, isItServicesPage, isFoodIngredientsPage, isCareersPage, isAdminPanel]);
 
   useEffect(() => {
     const updateScale = () => {
@@ -330,7 +332,7 @@ export default function LeadPopup() {
     }
   };
 
-  if (isStudentPanel || isItServicesPage || isFoodIngredientsPage || !show) return null;
+  if (isStudentPanel || isItServicesPage || isFoodIngredientsPage || isCareersPage || isAdminPanel || !show) return null;
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-transparent pointer-events-none overflow-hidden p-4 md:p-0">

@@ -1,25 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { CheckCircle2, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import CentrifugeBreadcrumbs from "@/components/CentrifugeBreadcrumbs";
 
 export const metadata = {
-  title: "Bench Top High Speed Centrifuge | High Speed Lab Centrifuge",
+  title: "Bench Top High Speed Centrifuge | High Speed Lab Centrifuge - AN Global Services",
   description:
-    "Buy premium bench top high speed centrifuge machines for clinical and research laboratories. Find the best high speed centrifuge setups by AN Global Services.",
+    "High-performance bench top high speed centrifuge (microcentrifuge) for clinical research, molecular biology, and DNA/RNA separation. Commonly sought as High Speed Centrifuge or Lab Centrifuge. Request a quote.",
   keywords: [
     "Bench Top High Speed Centrifuge",
+    "Benchtop High Speed Centrifuge",
     "High Speed Centrifuge",
-    "Bench Top Centrifuge",
-    "High Speed Machine",
-    "Lab Centrifuge",
-    "Table Top High Speed Centrifuge",
+    "High Speed Lab Centrifuge",
     "Microcentrifuge",
+    "Micro Centrifuge",
+    "Lab Centrifuge",
+    "Bench Top Centrifuge",
+    "Benchtop Centrifuge",
+    "High Speed Machine",
+    "Table Top High Speed Centrifuge",
     "High Speed Spin",
+    "Molecular Biology Centrifuge",
     "Laboratory Equipment",
     "AN Global Services laboratory equipment",
   ],
   alternates: {
     canonical: "https://www.anglobalservices.com/bench-top-high-speed-centrifuge",
+  },
+  openGraph: {
+    title: "Bench Top High Speed Centrifuge | High Speed Lab Centrifuge",
+    description: "High-performance bench top high speed centrifuge for clinical research and molecular biology by AN Global Services.",
+    url: "https://www.anglobalservices.com/bench-top-high-speed-centrifuge",
+    images: ["https://www.anglobalservices.com/equipment/centrifuge/top-high-speed-centrifuge.webp"],
   },
   robots: {
     index: true,
@@ -28,87 +41,154 @@ export const metadata = {
 };
 
 export default function BenchTopHighSpeedCentrifugePage() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "Bench Top High Speed Centrifuge",
+        "alternateName": [
+          "High Speed Centrifuge",
+          "High Speed Lab Centrifuge",
+          "Microcentrifuge",
+          "Lab Centrifuge",
+          "Benchtop Centrifuge",
+          "High Speed Machine"
+        ],
+        "description": "Premium Bench Top High Speed Centrifuge designed for rapid separation of biological samples, DNA/RNA extraction, and clinical research.",
+        "image": "https://www.anglobalservices.com/equipment/centrifuge/top-high-speed-centrifuge.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "AN Global Services"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.anglobalservices.com/contact-us",
+          "priceCurrency": "INR",
+          "price": "0",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "AN Global Services"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.anglobalservices.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Laboratory Equipment",
+            "item": "https://www.anglobalservices.com/laboratory-equipment-and-setup-services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-high-speed-centrifuge"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Bench Top High Speed Centrifuge",
+            "item": "https://www.anglobalservices.com/bench-top-high-speed-centrifuge"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a bench top high speed centrifuge used for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A bench top high speed centrifuge is used for rapidly separating liquids and particles of varying densities. It is widely used in molecular biology, clinical diagnostics, and biochemistry for extracting DNA, RNA, proteins, and cellular components."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes a centrifuge 'high speed'?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unlike standard centrifuges that spin around 4,000 RPM, a high speed centrifuge is equipped with a high-torque motor capable of reaching extremely high speeds (often 15,000 to 20,000+ RPM). This generates the immense gravitational force (g-force) needed to precipitate microscopic particles like DNA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can this machine handle different tube sizes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our bench top centrifuges come with interchangeable fixed-angle and swing-out rotors, allowing you to seamlessly switch between standard 1.5/2.0ml micro-tubes, 15ml, and 50ml conical tubes depending on your research needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it safe to operate this machine at such high speeds on a standard lab bench?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our bench top high speed centrifuges are equipped with heavy-duty shock absorbers and advanced vibration dampening technology. As long as the rotor is properly balanced, the machine runs extremely quietly without 'walking' or vibrating across your bench."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="w-full bg-gray-50 min-h-screen">
       {/* Schema Markup */}
-      <Script id="bench-top-high-speed-centrifuge-schema" type="application/ld+json" strategy="afterInteractive">
-        {`
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Product",
-              "name": "Bench Top High Speed Centrifuge",
-              "alternateName": "High Speed Centrifuge",
-              "description": "Premium Bench Top High Speed Centrifuge designed for rapid separation of biological samples, DNA/RNA extraction, and clinical research.",
-              "image": "https://www.anglobalservices.com/equipment/centrifuge/top-high-speed-centrifuge.webp",
-              "brand": {
-                "@type": "Brand",
-                "name": "AN Global Services"
-              },
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.anglobalservices.com/contact-us",
-                "priceCurrency": "INR",
-                "price": "0",
-                "availability": "https://schema.org/InStock",
-                "seller": {
-                  "@type": "Organization",
-                  "name": "AN Global Services"
-                }
-              }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [{
-                "@type": "Question",
-                "name": "What is a bench top high speed centrifuge used for?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A bench top high speed centrifuge is used for rapidly separating liquids and particles of varying densities. It is widely used in molecular biology, clinical diagnostics, and biochemistry for extracting DNA, RNA, proteins, and cellular components."
-                }
-              },{
-                "@type": "Question",
-                "name": "What makes a centrifuge 'high speed'?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Unlike standard centrifuges that spin around 4,000 RPM, a high speed centrifuge is equipped with a high-torque motor capable of reaching extremely high speeds (often 15,000 to 20,000+ RPM). This generates the immense gravitational force (g-force) needed to precipitate microscopic particles like DNA."
-                }
-              },{
-                "@type": "Question",
-                "name": "Can this machine handle different tube sizes?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, our bench top centrifuges come with interchangeable fixed-angle and swing-out rotors, allowing you to seamlessly switch between standard 1.5/2.0ml micro-tubes, 15ml, and 50ml conical tubes depending on your research needs."
-                }
-              },{
-                "@type": "Question",
-                "name": "Is it safe to operate this machine at such high speeds on a standard lab bench?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Our bench top high speed centrifuges are equipped with heavy-duty shock absorbers and advanced vibration dampening technology. As long as the rotor is properly balanced, the machine runs extremely quietly without 'walking' or vibrating across your bench."
-                }
-              }]
-            }
-          ]
-        }
-        `}
-      </Script>
+      <Script
+        id="bench-top-high-speed-centrifuge-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Bench Top High Speed Centrifuge Laboratory Equipment"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
-              BENCH TOP HIGH SPEED CENTRIFUGE
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdowns */}
+          <CentrifugeBreadcrumbs
+            category="Non Refrigerated"
+            currentTitle="Bench Top High Speed Centrifuge"
+            currentSlug="bench-top-high-speed-centrifuge"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              High-Speed Research Series
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
+              Bench Top High Speed Centrifuge
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Precision high-velocity laboratory microcentrifuge. Commonly sought as <strong className="font-semibold text-white">High Speed Centrifuge</strong>, <strong className="font-semibold text-white">Microcentrifuge</strong>, or <strong className="font-semibold text-white">Lab Centrifuge</strong> for molecular biology and clinical research.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> High RCF Acceleration
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Brushless Induction Motor
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -147,22 +227,28 @@ export default function BenchTopHighSpeedCentrifugePage() {
                 <p>
                   Built to deliver immense relative centrifugal force (RCF) while minimizing its footprint, this <strong className="font-semibold text-gray-900">high speed machine</strong> ensures rapid, distinct separation of subcellular organelles, DNA, RNA, and protein precipitations. Despite its immense speed, the aerodynamic rotor design ensures incredibly quiet operation and minimal heat generation.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">⚙️</span> Complete Setup by AN Global Services
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Operating high-speed rotational equipment demands precise benchtop balancing and rotor configuration. Our team provides <strong className="text-[#0a192f]">comprehensive end-to-end solutions</strong>. We install the unit, verify rotor speed limits, and train your staff on safe balancing procedures to prevent equipment failure.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Turnkey Support by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Operating high-speed rotational equipment demands precise benchtop balancing and rotor configuration. Our team provides comprehensive end-to-end solutions. We install the unit, verify rotor speed limits, and train your staff on safe balancing procedures to prevent equipment failure.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -362,6 +448,102 @@ export default function BenchTopHighSpeedCentrifugePage() {
                 <li>Replacement of any degraded rotor O-rings to maintain biocontainment safety.</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Centrifuges (Explore Other Centrifuges) */}
+      <section className="bg-slate-50 py-14 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+            <div>
+              <span className="text-[#0075B6] font-bold text-xs uppercase tracking-widest block mb-1">
+                Centrifuge Portfolio
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a192f]">
+                Explore Other Centrifuges
+              </h2>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="text-[#0075B6] hover:text-[#002B7F] font-bold text-sm flex items-center gap-1.5 transition-colors"
+            >
+              View Full Equipment Catalog <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link
+              href="/bench-top-filtration-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Pathological</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Filtration Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Precision solid-liquid separation with perforated basket rotor for clinical and chemical labs.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-large-capacity-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">High Volume</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Large Capacity Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Massive multi-carrier swing-out rotors for blood banks and high-throughput clinics.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/programmable-high-speed-refrigerated-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Refrigerated</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Programmable High Speed Refrigerated Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Ultra-low temperature protection for thermal-sensitive DNA, RNA, and proteins.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/bench-top-low-speed-centrifuge"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Clinical</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Bench Top Low Speed Centrifuge
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Gentle separation ideal for serum, plasma, and routine biological specimen assays.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 // src/lib/firebase.js
 import { initializeApp, getApps, getApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { initializeFirestore, getFirestore, setLogLevel } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage"; // <-- ADDED THIS FOR IMAGES
 import { getAnalytics, isSupported } from "firebase/analytics";
@@ -18,10 +18,26 @@ const firebaseConfig = {
 // 1. Initialize Firebase App FIRST
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-// 2. Initialize and Export Services (using the 'app' we just created)
-export const db = getFirestore(app);
-export const auth = getAuth(app); // <-- Moved down here so it works!
-export const storage = getStorage(app); // <-- ADDED THIS
+// Set Firestore log level to suppress harmless offline/reconnect connection warnings
+try {
+  setLogLevel("error");
+} catch (e) {
+  // Ignore in case already initialized
+}
+
+// 2. Initialize and Export Services with autoDetectLongPolling to prevent backend 10s timeout errors
+let firestoreDb;
+try {
+  firestoreDb = initializeFirestore(app, {
+    experimentalAutoDetectLongPolling: true,
+  });
+} catch (e) {
+  firestoreDb = getFirestore(app);
+}
+
+export const db = firestoreDb;
+export const auth = getAuth(app);
+export const storage = getStorage(app);
 
 // 3. Initialize Analytics safely (Only runs on the client side, preventing SSR errors)
 export const analytics = typeof window !== "undefined" 
