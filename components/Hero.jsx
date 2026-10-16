@@ -360,7 +360,7 @@ export default function Hero() {
     if (isButtonHovered) return;
     const interval = setInterval(() => {
       setHeroSlide((prev) => prev + 1);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [isButtonHovered]);
 
@@ -369,7 +369,7 @@ export default function Hero() {
       const timeoutId = setTimeout(() => {
         setIsTransitioning(false);
         setHeroSlide(0);
-      }, 1000);
+      }, 1500);
       return () => clearTimeout(timeoutId);
     } else {
       if (!isTransitioning) {
@@ -581,7 +581,7 @@ export default function Hero() {
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full bg-[#051c35] overflow-hidden">
         <div
-          className={`flex w-full ${isTransitioning ? "transition-transform duration-1000 ease-in-out" : ""}`}
+          className={`flex w-full ${isTransitioning ? "transition-transform duration-[1500ms] ease-in-out" : ""}`}
           style={{ transform: `translateX(-${heroSlide * 100}%)` }}
         >
           {extendedHeroSlides.map((slide, idx) => (
