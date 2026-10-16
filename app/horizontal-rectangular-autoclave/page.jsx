@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import AutoclaveBreadcrumbs from "@/components/AutoclaveBreadcrumbs";
 
 export const metadata = {
   title: "Horizontal Rectangular Autoclave | High-Capacity Sterilization",
@@ -78,20 +80,43 @@ export default function HorizontalRectangularAutoclavePage() {
         `}
       </Script>
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Horizontal Rectangular Autoclaves Banner"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-5xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdowns */}
+          <AutoclaveBreadcrumbs
+            category="Horizontal Autoclaves"
+            currentTitle="Horizontal Rectangular Autoclave"
+            currentSlug="horizontal-rectangular-autoclave"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              Heavy-Duty Hospital &amp; Pharmaceutical Grade
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
               Horizontal Rectangular Autoclave
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Maximum usable chamber volume for bulk sterilization of hospital packs, surgical trays, and laboratory media. Commonly sought as <strong className="font-semibold text-white">Rectangular Steam Sterilizer</strong>, <strong className="font-semibold text-white">Bulk Hospital Autoclave</strong>, or <strong className="font-semibold text-white">CSSD Front-Loading Sterilizer</strong>.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> 100% Usable Rectangular Chamber
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Heavy-Gauge SS 316L / 304
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Microprocessor PLC &amp; Touch HMI
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -118,8 +143,8 @@ export default function HorizontalRectangularAutoclavePage() {
 
             {/* Content Side */}
             <div className="lg:w-[55%] p-8 md:p-12 flex flex-col justify-center">
-              <h2 className="text-3xl md:text-4xl font-black text-[#0a192f] mb-4">
-                Bulk Sterilization Made Easy
+              <h2 className="text-2xl md:text-3xl font-black text-[#0a192f] mb-4">
+                About the Product
               </h2>
               <div className="w-16 h-1.5 bg-[#0075B6] rounded-full mb-6"></div>
 
@@ -130,22 +155,28 @@ export default function HorizontalRectangularAutoclavePage() {
                 <p>
                   Built with heavy-duty <strong>Stainless Steel (SS 316L / 304)</strong>, this front-loading sterilizer is designed for heavy daily use in hospitals, pharmaceutical manufacturing plants, and large research centers.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">🛠️</span> Complete Installation & Training
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Large-scale autoclaves require professional handling. Our expert team at AN Global Services manages the <strong className="text-[#0a192f]">complete installation</strong>, rigorous safety testing, and on-site staff training to ensure your operations run smoothly and safely from day one.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Setup by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Large-scale autoclaves require professional handling. Our expert team at AN Global Services manages the <strong className="text-[#0a192f]">complete installation</strong>, rigorous safety testing, and on-site staff training to ensure your operations run smoothly and safely from day one.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none text-lg"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -299,6 +330,68 @@ export default function HorizontalRectangularAutoclavePage() {
               <h4 className="text-xl font-bold text-gray-900 mb-2">Research Labs</h4>
               <p className="text-gray-600">Decontamination of large quantities of glassware, bio-hazardous waste, and culture media.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore Other Autoclaves Models */}
+      <section className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 py-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-gray-200">
+            <div>
+              <span className="text-xs uppercase font-extrabold tracking-wider text-[#0075B6]">Sterilization Systems</span>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1">Explore Other Autoclave Models</h2>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="mt-3 sm:mt-0 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0075B6] hover:text-[#005a8e] transition-colors"
+            >
+              View Full Equipment Catalog <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link
+              href="/horizontal-autoclave-cylindrical"
+              className="group p-5 rounded-2xl bg-white border border-gray-200 hover:border-[#0075B6] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span className="inline-block text-[11px] font-bold text-[#0075B6] bg-blue-50 px-2.5 py-0.5 rounded-full mb-2">Horizontal Steam</span>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#0075B6] transition-colors">Horizontal Autoclave Cylindrical</h3>
+                <p className="text-xs text-gray-500 mt-1.5 line-clamp-2">Front-loading heavy-gauge sterilizer engineered for hospitals, bulk linen &amp; surgical trays.</p>
+              </div>
+              <div className="mt-4 flex items-center text-xs font-semibold text-[#0075B6] group-hover:translate-x-1 transition-transform">
+                View Specifications <ArrowRight size={14} className="ml-1" />
+              </div>
+            </Link>
+
+            <Link
+              href="/vertical-autoclave-deluxe"
+              className="group p-5 rounded-2xl bg-white border border-gray-200 hover:border-[#0075B6] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span className="inline-block text-[11px] font-bold text-[#0075B6] bg-blue-50 px-2.5 py-0.5 rounded-full mb-2">Vertical Radial</span>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#0075B6] transition-colors">Vertical Autoclave Deluxe</h3>
+                <p className="text-xs text-gray-500 mt-1.5 line-clamp-2">Radial locking lid and foot pedal lift mechanism for hospital &amp; laboratory sterilization.</p>
+              </div>
+              <div className="mt-4 flex items-center text-xs font-semibold text-[#0075B6] group-hover:translate-x-1 transition-transform">
+                View Specifications <ArrowRight size={14} className="ml-1" />
+              </div>
+            </Link>
+
+            <Link
+              href="/biomedical-waste-pulsation-vacuum-sterilizer"
+              className="group p-5 rounded-2xl bg-white border border-gray-200 hover:border-[#0075B6] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span className="inline-block text-[11px] font-bold text-[#0075B6] bg-blue-50 px-2.5 py-0.5 rounded-full mb-2">Pulsation Vacuum</span>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#0075B6] transition-colors">Biomedical Waste Sterilizer</h3>
+                <p className="text-xs text-gray-500 mt-1.5 line-clamp-2">Multi-pulse vacuum steam sterilizer engineered for hospital bio-waste decontamination.</p>
+              </div>
+              <div className="mt-4 flex items-center text-xs font-semibold text-[#0075B6] group-hover:translate-x-1 transition-transform">
+                View Specifications <ArrowRight size={14} className="ml-1" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>

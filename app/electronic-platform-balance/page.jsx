@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { CheckCircle2, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import BalanceBreadcrumbs from "@/components/BalanceBreadcrumbs";
 
 export const metadata = {
   title: "Heavy-Duty Electronic Platform Balance | AN Global Services",
@@ -85,20 +87,42 @@ export default function ElectronicPlatformBalancePage() {
         `}
       </Script>
 
-      {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-72">
-        <Image
-          src="/service/pages-of-services-dash-1.webp"
-          alt="Heavy-Duty Electronic Platform Balance Equipment"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a3d62]/40 flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-white text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
-              ELECTRONIC PLATFORM BALANCE
+      {/* Hero Banner Section */}
+      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white py-14 md:py-20 overflow-hidden shadow-md">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          
+          {/* Breadcrumbs with interactive dropdown */}
+          <BalanceBreadcrumbs
+            currentTitle="Electronic Platform Balance"
+            currentSlug="electronic-platform-balance"
+          />
+
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
+              <Sparkles size={14} className="text-yellow-400" />
+              Heavy-Duty Industrial Weighing
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
+              Electronic Platform Balance
             </h1>
+
+            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+              Heavy-duty industrial weighing scale engineered for warehouse, chemical drum, and high-capacity batch weighing. Commonly sought as <strong className="font-semibold text-white">Industrial Platform Scale</strong>, <strong className="font-semibold text-white">Floor Weighing Scale</strong>, or <strong className="font-semibold text-white">Electronic Bench Scale</strong>.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> 50kg to 1000kg Heavy Capacity
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> Heavy-Duty SS 304 Platform
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
+                <CheckCircle2 size={15} className="text-emerald-400" /> 40-Hour Battery Backup
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -137,22 +161,28 @@ export default function ElectronicPlatformBalancePage() {
                 <p>
                   Built with a reinforced steel structure and topped with a high-grade stainless steel pan, this balance utilizes advanced strain gauge load cells to provide highly accurate readings for bulky items, chemicals in drums, or heavy manufactured goods. The adjustable pole-mounted indicator ensures the display is always visible, even when weighing oversized packages.
                 </p>
-                <div className="bg-blue-50/80 border-l-4 border-[#0075B6] p-5 rounded-r-lg mt-6 shadow-sm">
-                  <h3 className="text-[#0a192f] font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="text-xl">⚙️</span> Complete Setup by AN Global Services
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-base">
-                    Accurate high-capacity weighing requires proper floor leveling and sensor calibration. Our team provides <strong className="text-[#0a192f]">comprehensive end-to-end solutions</strong>. We install the platform, calibrate the load cells to standard test weights, and connect the data outputs directly to your inventory management system.
-                  </p>
+                <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
+                  <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0a192f] text-sm sm:text-base">
+                      Complete Setup by AN Global Services
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
+                      Accurate high-capacity weighing requires proper floor leveling and sensor calibration. Our team provides <strong className="text-[#0a192f]">comprehensive end-to-end solutions</strong>. We install the platform, calibrate the load cells to standard test weights, and connect the data outputs directly to your inventory management system.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="bg-[#0075B6] hover:bg-[#005a8f] text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-center flex-1 sm:flex-none"
+                  className="bg-[#002B7F] hover:bg-[#001f5c] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 text-center"
                 >
                   Request a Quote & Setup
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -176,7 +206,7 @@ export default function ElectronicPlatformBalancePage() {
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-[#0075B6] font-bold text-xl">1</div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Load Placement & Taring</h3>
-                    <p className="text-gray-600 leading-relaxed">If weighing goods inside a crate or pallet, the empty container is placed on the platform and 'Tared' to zero. The heavy goods are then loaded onto the wide stainless steel pan.</p>
+                    <p className="text-gray-600 leading-relaxed">If weighing goods inside a crate or pallet, the empty container is placed on the platform and &apos;Tared&apos; to zero. The heavy goods are then loaded onto the wide stainless steel pan.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -321,7 +351,7 @@ export default function ElectronicPlatformBalancePage() {
             <h2 className="text-3xl font-black text-[#0a192f] mb-4">Comprehensive Maintenance & Calibration Guide</h2>
             <div className="w-16 h-1.5 bg-[#0075B6] rounded-full mb-6"></div>
             <p className="text-gray-600 text-lg max-w-3xl leading-relaxed">
-              Industrial platform balances take significant daily abuse from heavy loads and forklifts. To maintain pinpoint accuracy and extend the equipment's lifespan, AN Global Services recommends the following protocols:
+              Industrial platform balances take significant daily abuse from heavy loads and forklifts. To maintain pinpoint accuracy and extend the equipment&apos;s lifespan, AN Global Services recommends the following protocols:
             </p>
           </div>
 
@@ -329,7 +359,7 @@ export default function ElectronicPlatformBalancePage() {
             <div className="border-l-4 border-[#0075B6] pl-6 py-2 bg-gray-50 rounded-r-xl">
               <h4 className="text-lg font-bold text-gray-900 mb-3 uppercase tracking-wide">Routine Inspections</h4>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Check the leveling bubble weekly to ensure the platform hasn't shifted due to floor vibration.</li>
+                <li>Check the leveling bubble weekly to ensure the platform hasn&apos;t shifted due to floor vibration.</li>
                 <li>Wipe down the stainless steel pan at the end of each shift to prevent chemical corrosion.</li>
                 <li>Ensure the indicator cable is not pinched or severely bent.</li>
               </ul>
@@ -347,7 +377,7 @@ export default function ElectronicPlatformBalancePage() {
               <h4 className="text-lg font-bold text-gray-900 mb-3 uppercase tracking-wide">Annual Servicing</h4>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
                 <li>Official dead-weight calibration using certified cast iron test weights.</li>
-                <li>Physical inspection of the load cell's silicone seals for moisture ingress.</li>
+                <li>Physical inspection of the load cell&apos;s silicone seals for moisture ingress.</li>
                 <li>Battery load testing and replacement if discharge rates are high.</li>
               </ul>
             </div>
@@ -355,6 +385,105 @@ export default function ElectronicPlatformBalancePage() {
         </div>
       </section>
       
+      {/* Explore Other Balance Models Section */}
+      <section className="bg-slate-50 py-16 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-200 text-xs font-semibold uppercase tracking-wider text-[#0075B6] mb-3">
+                Laboratory Balance Portfolio
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a192f] tracking-tight">
+                Explore Other Balance Models
+              </h2>
+              <p className="text-sm text-slate-500 mt-1 max-w-xl">
+                Browse our complete selection of analytical, precision top-loading, moisture, and heavy-duty industrial platform balances.
+              </p>
+            </div>
+            <Link
+              href="/equipments-and-machinery"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0075B6] hover:text-[#005a8f] transition-colors whitespace-nowrap self-start sm:self-auto"
+            >
+              View Full Equipment Catalog <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link
+              href="/chemical-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Analytical</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Analytical Chemical Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Ultra-precision 0.1mg analytical scale with EMFC sensor and draft shield for quantitative analysis.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/electronic-top-loading-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Precision</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Electronic Top Loading Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  High-speed precision benchtop balance for routine laboratory formulations and density determination.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/infrared-moisture-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">Moisture</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Infrared Moisture Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Thermogravimetric moisture analyzer for rapid loss-on-drying determination in food and pharma.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/physical-balance"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white hover:border-[#0075B6] hover:shadow-lg transition-all flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-[#0075B6] uppercase tracking-wider block mb-1">General Lab</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-[#0075B6] transition-colors text-base mb-2">
+                  Digital Physical Balance
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  Rugged and reliable multi-capacity digital benchtop balance for educational and industrial quality control.
+                </p>
+              </div>
+              <span className="text-xs font-semibold text-[#0075B6] mt-4 flex items-center gap-1">
+                Learn More <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="bg-white py-16 border-t border-gray-200" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -409,7 +538,7 @@ export default function ElectronicPlatformBalancePage() {
                 </span>
               </summary>
               <div className="px-5 pb-5 text-gray-600 pt-2 border-t border-gray-100">
-                The balance is equipped with a standard RS-232 serial interface. This allows it to seamlessly connect to computers, PLCs, and label printers. Weights can be directly exported into Excel or your company's inventory management system without manual data entry.
+                The balance is equipped with a standard RS-232 serial interface. This allows it to seamlessly connect to computers, PLCs, and label printers. Weights can be directly exported into Excel or your company&apos;s inventory management system without manual data entry.
               </div>
             </details>
           </div>

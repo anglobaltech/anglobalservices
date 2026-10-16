@@ -462,6 +462,7 @@ export default function Footer() {
   const isStudentPanel = pathname?.startsWith("/student-panel");
   const isFoodIngredients = pathname?.startsWith("/food-ingredients");
   const isContactUs = pathname?.startsWith("/contact-us");
+  const isCareers = pathname?.startsWith("/careers");
 
   const [formData, setFormData] = useState({
     service: "",
@@ -570,7 +571,7 @@ export default function Footer() {
       {/* 3. Conditionally render the Consultation Call section */}
       {/* 3. Conditionally render the Consultation Call section */}
       {/* 3. Conditionally render the Consultation Call section */}
-      {!isStudentPanel && !isFoodIngredients && !isContactUs && (
+      {!isStudentPanel && !isFoodIngredients && !isContactUs && !isCareers && (
         <section className="relative w-full overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/request-consultation-call-2.webp')" }}>
           {/* Gradient Overlay for Text Readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#04122d]/80 via-[#04122d]/50 to-[#04122d]/10 md:to-transparent"></div>
