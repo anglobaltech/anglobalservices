@@ -22,6 +22,7 @@ import {
   Send,
   Users,
   ShieldCheck,
+  ShieldAlert,
   Globe2,
   TrendingUp,
   HeartPulse,
@@ -271,6 +272,10 @@ export default function CareersClient({ initialJobs = [] }) {
 
   // FAQs data
   const faqs = [
+    {
+      q: "Does AN Global Services charge any fees during the recruitment or interview process?",
+      a: "No, absolutely not. AN Global Services strictly follows a 100% free, transparent, and merit-based hiring policy. We never ask for any money, registration fees, security deposits, document verification charges, or laptop costs at any stage. Please beware of fraudulent callers, fake placement agencies, or phishing messages asking for money in our name. All official communications are only sent from verified @anglobalservices.com email addresses.",
+    },
     {
       q: "What is the typical hiring process at AN Global Services?",
       a: "Our recruitment timeline is designed to be swift and respectful of your time, typically concluding within 7 to 14 business days. The stages include: 1) Initial application and resume review by our HR team, 2) Technical/Domain assessment with our practice directors, 3) Cultural and leadership alignment interview, and 4) Final offer rollout and seamless onboarding.",
@@ -650,11 +655,47 @@ export default function CareersClient({ initialJobs = [] }) {
             </div>
           </div>
 
+          {/* Important Recruitment Disclaimer & Anti-Fraud Alert */}
+          <div className="mb-8 rounded-2xl bg-gradient-to-r from-amber-50/95 via-orange-50/70 to-amber-50/95 border border-amber-200/90 p-4 sm:p-6 shadow-sm">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+              <div className="w-11 h-11 rounded-2xl bg-amber-500/15 border border-amber-300/60 flex items-center justify-center text-amber-700 shrink-0">
+                <ShieldAlert size={24} className="text-amber-600" />
+              </div>
+              <div className="flex-1 space-y-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+                    Recruitment Disclaimer & Fraud Alert
+                  </h3>
+                  <span className="text-[10px] sm:text-[11px] font-extrabold text-amber-900 bg-amber-200/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                    Beware of Fake Calls & Scam Offers
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  <strong className="text-slate-900">
+                    AN Global Services does NOT charge any money, registration fee, or security deposit at any stage of our hiring process.
+                  </strong>{" "}
+                  Our recruitment is 100% free and strictly based on merit. We never ask candidates to pay for interviews, tests, or job offer letters. If someone calls, sends a WhatsApp message, or demands money in our name, it is a fake offer. Please do not pay any money to anyone.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-xs text-slate-700">
+                  <div className="flex items-center gap-1.5 font-medium bg-white/80 px-3 py-1.5 rounded-lg border border-amber-200/60">
+                    <span className="text-red-500 font-bold">✕</span> Never pay money for any interview or job offer
+                  </div>
+                  <div className="flex items-center gap-1.5 font-medium bg-white/80 px-3 py-1.5 rounded-lg border border-amber-200/60">
+                    <span className="text-emerald-600 font-bold">✓</span> Official emails come only from <strong className="text-slate-900">@anglobalservices.com</strong>
+                  </div>
+                  <div className="flex items-center gap-1.5 font-medium bg-white/80 px-3 py-1.5 rounded-lg border border-amber-200/60">
+                    <span className="text-blue-600 font-bold">ℹ</span> Got a suspicious call? Call us at <a href="tel:+917782069184" className="text-[#0075B6] font-bold hover:underline">+91 77820 69184</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Search & Filter Toolbar */}
           <div className="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm mb-10 space-y-4">
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+            <div>
               {/* Search Bar */}
-              <div className="relative w-full lg:w-96">
+              <div className="relative w-full">
                 <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                 <input
                   type="text"
@@ -663,26 +704,6 @@ export default function CareersClient({ initialJobs = [] }) {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0075B6]/20 focus:border-[#0075B6] transition-all"
                 />
-              </div>
-
-              {/* Location Chips */}
-              <div className="flex flex-wrap items-center gap-2 w-full lg:w-auto">
-                <span className="text-xs font-bold text-slate-400 mr-1 flex items-center gap-1">
-                  <MapPin size={13} /> Location:
-                </span>
-                {locationsList.map((loc) => (
-                  <button
-                    key={loc}
-                    onClick={() => setSelectedLocation(loc)}
-                    className={`cursor-pointer px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                      selectedLocation === loc
-                        ? "bg-[#0075B6] text-white shadow-sm"
-                        : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                    }`}
-                  >
-                    {loc}
-                  </button>
-                ))}
               </div>
             </div>
 
@@ -885,6 +906,22 @@ export default function CareersClient({ initialJobs = [] }) {
                 dedicated mentorship on Day 1.
               </p>
             </div>
+          </div>
+
+          {/* Zero-Fee Commitment Strip */}
+          <div className="mt-10 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+            <div className="flex items-center gap-2.5 text-center sm:text-left">
+              <ShieldCheck size={20} className="text-emerald-600 shrink-0" />
+              <span>
+                <strong className="text-slate-800">100% Free & Transparent Selection:</strong> We never ask for any processing charges, training fees, or equipment deposits at any stage.
+              </span>
+            </div>
+            <a
+              href="mailto:info@anglobalservices.com"
+              className="text-[#0075B6] font-bold hover:underline shrink-0 text-xs inline-flex items-center gap-1"
+            >
+              Report Fake Communication →
+            </a>
           </div>
         </div>
       </section>
@@ -1376,6 +1413,14 @@ export default function CareersClient({ initialJobs = [] }) {
                       onChange={(e) => setFormData({ ...formData, whyJoin: e.target.value })}
                       className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0075B6]/20 focus:border-[#0075B6]"
                     ></textarea>
+                  </div>
+
+                  {/* Anti-Fraud Disclaimer Notice in Modal */}
+                  <div className="p-3.5 rounded-xl bg-amber-50/95 border border-amber-200 text-amber-950 text-xs flex items-start gap-2.5">
+                    <ShieldAlert size={18} className="text-amber-600 shrink-0 mt-0.5" />
+                    <p className="leading-relaxed">
+                      <strong>Important Notice:</strong> Our hiring is 100% free and strictly merit-based. AN Global Services never asks for any money, registration fees, or deposits. Beware of fake calls, and never pay anyone for an interview or offer letter.
+                    </p>
                   </div>
 
                   {/* Submit Button */}

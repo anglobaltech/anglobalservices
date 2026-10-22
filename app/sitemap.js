@@ -20,6 +20,7 @@ const baseUrl = 'https://www.anglobalservices.com'
     'bench-top-low-speed-refrigerated-centrifuge',
     'bench-top-large-capacity-refrigerated-centrifuge',
     'bench-top-low-capacity-refrigerated-centrifuge',
+    'rotary-flask-shaker',
     'bee_services',
     'bis-crs-registration-electronic-products',
     'bis-isi-mark-certification-furniture-plywood',
