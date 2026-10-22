@@ -210,6 +210,17 @@ export const equipmentMenu = [
         ]
       },
       {
+        name: "Laboratory Shaking Machine",
+        isSubMenu: true,
+        subItems: [
+          {
+            name: "Rotary Flask Shaker",
+            slug: "rotary-flask-shaker",
+            root: true,
+          },
+        ]
+      },
+      {
         name: "EQUIPMENT FOR SOLAR PANEL PRODUCT TESTING",
         slug: "eqipmentforsolar",
         root: true,

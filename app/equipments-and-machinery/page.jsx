@@ -248,6 +248,15 @@ const equipments = [
     excerpt: "Traditional, highly sensitive physical balance for precise analytical and academic weighing."
   },
 
+  // --- LABORATORY SHAKING MACHINES ---
+  {
+    title: "Rotary Flask Shaker",
+    slug: "rotary-flask-shaker",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/rotary-flask-shaker.webp",
+    excerpt: "Heavy-duty orbital rotary flask shaker (flask agitator) with universal clamps for microbiology, cell culture, and chemical dissolution."
+  },
+
   // --- TESTING & MANUFACTURING EQUIPMENT ---
   {
     title: "Toys Testing & Inspection Equipment",
