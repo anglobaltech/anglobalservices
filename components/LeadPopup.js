@@ -199,7 +199,7 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation"; // 1. Added this import
 import { doc, runTransaction, serverTimestamp } from "firebase/firestore";
 import { db } from "@/src/lib/firebase";
@@ -225,18 +225,49 @@ export default function LeadPopup() {
     phone: "",
     service: "",
   });
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    if (isStudentPanel || isItServicesPage || isFoodIngredientsPage || isCareersPage || isAdminPanel) return;
+    // Clear any active timer on route change or unmount
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
 
-    const firstTimer = setTimeout(() => {
-      // Do not interrupt the user if they are currently chatting with the bot
-      if (document.getElementById('chatbot-window')) return;
+    // Reset popup closed state when entering any page
+    setShow(false);
+
+    // Skip on excluded admin/student/career/special panels
+    if (
+      pathname?.startsWith("/student-panel") ||
+      pathname?.startsWith("/it-services-and-solutions") ||
+      pathname?.startsWith("/food-ingredients") ||
+      pathname?.startsWith("/careers") ||
+      pathname?.startsWith("/adminpanel")
+    ) {
+      return;
+    }
+
+    // If user already submitted the form in this session, do not prompt again
+    try {
+      if (sessionStorage.getItem("lead_popup_submitted") === "true") {
+        return;
+      }
+    } catch (e) {}
+
+    // Strictly 12 seconds after opening ANY page
+    timerRef.current = setTimeout(() => {
+      if (document.getElementById("chatbot-window")) return;
       setShow(true);
-    }, 10000);
+    }, 12000);
 
-    return () => clearTimeout(firstTimer);
-  }, [pathname, isStudentPanel, isItServicesPage, isFoodIngredientsPage, isCareersPage, isAdminPanel]);
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, [pathname]);
 
   useEffect(() => {
     const updateScale = () => {
@@ -256,9 +287,16 @@ export default function LeadPopup() {
 
   const closePopup = () => {
     setShow(false);
-    setTimeout(() => {
-      // Do not interrupt the user if they are currently chatting with the bot
-      if (document.getElementById('chatbot-window')) return;
+
+    // Clear previous timer if any
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+
+    // Reappears strictly 60 seconds after cutting
+    timerRef.current = setTimeout(() => {
+      if (document.getElementById("chatbot-window")) return;
       setShow(true);
     }, 60000);
   };
@@ -312,6 +350,9 @@ export default function LeadPopup() {
       });
 
       setSuccess(true);
+      try {
+        sessionStorage.setItem("lead_popup_submitted", "true");
+      } catch (e) {}
 
       setFormData({
         name: "",

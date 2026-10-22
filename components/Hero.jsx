@@ -1259,7 +1259,7 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">20+</h3>
+                    <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">8+</h3>
                     <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Years of<br />Expertise</p>
                   </div>
                 </div>
