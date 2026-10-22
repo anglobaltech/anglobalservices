@@ -171,7 +171,7 @@ export default function GlobalFootprint() {
               </div>
               <div className="flex items-center gap-6 text-[11px] sm:text-xs">
                 <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5" /> 100% Guaranteed Approvals
+                  <CheckCircle2 className="w-3.5 h-3.5" /> 99% Guaranteed Approvals
                 </span>
                 <span className="text-sky-400 font-semibold flex items-center gap-1">
                   <CheckCircle2 className="w-3.5 h-3.5" /> NABL & BIS Synchronized

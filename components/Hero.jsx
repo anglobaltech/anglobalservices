@@ -26,7 +26,7 @@ const heroSlidesData = [
     containerClass: "w-full sm:w-[65%] md:w-[60%] lg:w-[55%] xl:w-full xl:max-w-3xl",
     paragraph: (
       <>
-        Get certified today! India's leading consultants for <span className="font-bold text-yellow-400">BIS Registration</span>, <span className="font-bold text-yellow-400">ISI Mark</span>, <span className="font-bold text-yellow-400">FMCS Certification</span>, and <span className="font-bold text-yellow-400">CRS Approval</span>. We ensure 100% compliance, safety, and rapid market entry for domestic and foreign manufacturers.
+        Get certified today! India's leading consultants for <span className="font-bold text-yellow-400">BIS Registration</span>, <span className="font-bold text-yellow-400">ISI Mark</span>, <span className="font-bold text-yellow-400">FMCS Certification</span>, and <span className="font-bold text-yellow-400">CRS Approval</span>. We ensure 99% compliance, safety, and rapid market entry for domestic and foreign manufacturers.
       </>
     )
   },
@@ -38,7 +38,7 @@ const heroSlidesData = [
     containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[42%] xl:w-[40%] xl:max-w-lg",
     paragraph: (
       <>
-        Launch your own <span className="font-bold text-yellow-400">Assaying & Hallmarking Center</span> with India's top consultants. We provide end-to-end setup, <span className="font-bold text-yellow-400">BIS Registration</span>, NABL accreditation, and advanced testing equipment for 100% genuine Gold & Silver testing.
+        Launch your own <span className="font-bold text-yellow-400">Assaying & Hallmarking Center</span> with India's top consultants. We provide end-to-end setup, <span className="font-bold text-yellow-400">BIS Registration</span>, NABL accreditation, and advanced testing equipment for 99% genuine Gold & Silver testing.
       </>
     )
   },
@@ -50,7 +50,7 @@ const heroSlidesData = [
     containerClass: "w-full sm:w-[55%] md:w-[50%] lg:w-[45%] xl:w-[45%] xl:max-w-xl",
     paragraph: (
       <>
-        Source top-tier natural food ingredients like <span className="font-bold text-yellow-400">Whey Protein</span> and <span className="font-bold text-yellow-400">Premium Phool Makhana</span> for your FMCG business. We provide 100% clean-label, high-quality bulk supplies with guaranteed international compliance and seamless global logistics.
+        Source top-tier natural food ingredients like <span className="font-bold text-yellow-400">Whey Protein</span> and <span className="font-bold text-yellow-400">Premium Phool Makhana</span> for your FMCG business. We provide 99% clean-label, high-quality bulk supplies with guaranteed international compliance and seamless global logistics.
       </>
     )
   },
@@ -741,7 +741,7 @@ export default function Hero() {
                 </span>{" "}
                 is a well-established and leading consulting firm, the assured
                 service provider. We have placed ourselves amongst reliable
-                names in the corporate world, committed to excellence and 100% compliance.
+                names in the corporate world, committed to excellence and 99% compliance.
               </p>
             </div>
           </div>
@@ -881,7 +881,7 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-gray-100 text-sm md:text-lg lg:text-xl font-medium mb-5 md:mb-6 drop-shadow-sm max-w-2xl mx-auto md:mx-0 lg:mx-auto tracking-wide leading-relaxed">
-              Ensure top-tier quality and build market trust. Get your products certified with ISI, BIS & Gold Hallmark with absolute confidence and guaranteed 100% compliance.
+              Ensure top-tier quality and build market trust. Get your products certified with ISI, BIS & Gold Hallmark with absolute confidence and guaranteed 99% compliance.
             </p>
 
             {/* Premium Features List */}
@@ -896,7 +896,7 @@ export default function Hero() {
               </span>
               <span className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-[#e3b64c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                100% Compliance
+                99% Compliance
               </span>
             </div>
 
@@ -1202,7 +1202,7 @@ export default function Hero() {
                 Your Strategic Partner for Global Compliance, Quality Standards, and Business Growth.
               </p>
               <p className="text-[#1a365d] text-[14px] md:text-[15px] lg:text-[17px] font-bold leading-relaxed">
-                We empower enterprises worldwide with seamless <strong className="font-black text-[#0047b3]">ISO Certification, BIS Registration, Trademark, and EPR Compliance</strong> services. Our expert consultants ensure zero-hassle paperwork, lightning-fast approvals, and 100% regulatory adherence.
+                We empower enterprises worldwide with seamless <strong className="font-black text-[#0047b3]">ISO Certification, BIS Registration, Trademark, and EPR Compliance</strong> services. Our expert consultants ensure zero-hassle paperwork, lightning-fast approvals, and 99% regulatory adherence.
               </p>
             </div>
           </div>
@@ -1259,7 +1259,7 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">20+</h3>
+                    <h3 className="text-xl lg:text-[24px] font-black text-[#8ad1ff] leading-none mb-[2px] tracking-wide">8+</h3>
                     <p className="text-white text-xs lg:text-[13px] font-medium leading-[1.25]">Years of<br />Expertise</p>
                   </div>
                 </div>
