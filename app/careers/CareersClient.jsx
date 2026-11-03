@@ -478,7 +478,7 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 2. WHY CHOOSE AN GLOBAL SERVICES (CULTURAL PILLARS REDESIGNED) */}
       {/* ============================================================== */}
-      <section id="why-choose-us" className="relative py-12 sm:py-16 bg-gradient-to-b from-white via-slate-50 to-white border-b border-slate-200/80 overflow-hidden">
+      <section id="why-choose-us" className="relative py-10 sm:py-12 bg-gradient-to-b from-white via-slate-50 to-white border-b border-slate-200/80 overflow-hidden">
         {/* Subtle Background Pattern */}
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
@@ -678,9 +678,9 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 4. CURRENT OPENINGS SECTION (LIVE JOB BOARD)                   */}
       {/* ============================================================== */}
-      <section id="openings-section" className="py-20 bg-slate-50 scroll-mt-20">
+      <section id="openings-section" className="py-12 sm:py-14 bg-slate-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
             <div>
               <span className="text-xs font-bold text-[#0075B6] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full inline-block mb-3">
                 Live Opportunities
@@ -905,9 +905,9 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 5. OUR 4-STEP HIRING JOURNEY                                   */}
       {/* ============================================================== */}
-      <section className="py-20 bg-white border-b border-slate-200/80">
+      <section className="py-10 sm:py-12 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
             <span className="text-xs font-bold text-[#0075B6] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Clear & Transparent
             </span>
@@ -962,7 +962,7 @@ export default function CareersClient({ initialJobs = [] }) {
           </div>
 
           {/* Zero-Fee Commitment Strip */}
-          <div className="mt-10 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+          <div className="mt-6 sm:mt-7 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
             <div className="flex items-center gap-2.5 text-center sm:text-left">
               <ShieldCheck size={20} className="text-emerald-600 shrink-0" />
               <span>
@@ -982,9 +982,9 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 6. CANDIDATE FAQ ACCORDION                                     */}
       {/* ============================================================== */}
-      <section className="py-20 bg-slate-50 border-b border-slate-200/80">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+      <section className="py-10 sm:py-12 bg-slate-50 border-b border-slate-200/80">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10">
             <span className="text-xs font-bold text-[#0075B6] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Have Questions?
             </span>

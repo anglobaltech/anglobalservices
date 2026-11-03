@@ -305,7 +305,7 @@ export default function SoilMoistureMeterPage() {
       </div>
 
       {/* Operating Principle Section (How It Works) */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -385,9 +385,9 @@ export default function SoilMoistureMeterPage() {
       </section>
 
       {/* Detailed Specifications Cards */}
-      <section className="bg-gray-100 py-16 border-t border-gray-200">
+      <section className="bg-gray-100 py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-[#0a192f] mb-4">Equipment Features &amp; Specs</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">Engineered for instantaneous, accurate, and repeatable soil moisture and temperature evaluation.</p>
           </div>
@@ -489,9 +489,9 @@ export default function SoilMoistureMeterPage() {
       </section>
 
       {/* Maintenance & Compliance Section */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="mb-12">
+          <div className="mb-8 sm:mb-10">
             <h2 className="text-3xl font-black text-[#0a192f] mb-4">Maintenance &amp; Calibration Guide</h2>
             <div className="w-16 h-1.5 bg-[#0075B6] rounded-full mb-6"></div>
             <p className="text-gray-600 text-lg max-w-3xl leading-relaxed">
@@ -531,9 +531,9 @@ export default function SoilMoistureMeterPage() {
       </section>
       
       {/* Explore Other Moisture Meter & Balance Models Section */}
-      <section className="bg-slate-50 py-16 border-t border-slate-200">
+      <section className="bg-slate-50 py-10 sm:py-12 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-200 text-xs font-semibold uppercase tracking-wider text-[#0075B6] mb-3">
                 Moisture &amp; Laboratory Balances Portfolio
@@ -630,11 +630,11 @@ export default function SoilMoistureMeterPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white py-16 border-t border-gray-200" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200" id="faqs">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">Frequently Asked Questions</h2>
-            <div className="w-16 h-1 bg-[#0075B6] rounded-full mx-auto mb-6"></div>
+            <div className="w-16 h-1 bg-[#0075B6] rounded-full mx-auto mb-4 sm:mb-6"></div>
             <p className="text-gray-500 text-lg">Common inquiries about our Digital Soil Moisture Meter (SM-200) equipment.</p>
           </div>
 
