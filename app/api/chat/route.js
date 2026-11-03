@@ -6,19 +6,44 @@ import { collection, getDocs } from 'firebase/firestore';
 import fs from 'fs';
 import path from 'path';
 
-// In-memory cache for live Firestore ISI products (5-minute TTL)
+// In-memory cache for live Firestore ISI products (Stale-While-Revalidate pattern for ZERO latency)
 let cachedProducts = null;
 let lastCacheTime = 0;
-const CACHE_TTL_MS = 5 * 60 * 1000;
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1-hour TTL
 
 async function getLiveIsiProducts() {
   const now = Date.now();
+  // If fresh cache, return immediately (0 ms)
   if (cachedProducts && now - lastCacheTime < CACHE_TTL_MS) {
     return cachedProducts;
   }
+
+  // If stale cache exists, return stale immediately (0 ms) and revalidate in background
+  if (cachedProducts) {
+    getDocs(collection(db, "isi_products"))
+      .then((snap) => {
+        cachedProducts = snap.docs.map((doc) => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            title: data.title || doc.id,
+            slug: data.slug || doc.id,
+            isNumber: data.dataTableIsNumber || "",
+            productName: data.dataTableProductName || "",
+            keywords: Array.isArray(data.seo?.keywords) ? data.seo.keywords : [],
+          };
+        });
+        lastCacheTime = Date.now();
+      })
+      .catch((err) => console.error("Background product cache refresh error:", err?.message || err));
+
+    return cachedProducts;
+  }
+
+  // Initial cold fetch
   try {
     const snap = await getDocs(collection(db, "isi_products"));
-    cachedProducts = snap.docs.map(doc => {
+    cachedProducts = snap.docs.map((doc) => {
       const data = doc.data();
       return {
         id: doc.id,
@@ -36,6 +61,11 @@ async function getLiveIsiProducts() {
     return cachedProducts || [];
   }
 }
+
+// Background warm-up
+try {
+  getLiveIsiProducts().catch(() => {});
+} catch (_) {}
 
 function findMatchingProducts(userQuery, products) {
   if (!products || !products.length || !userQuery) return [];
@@ -97,41 +127,160 @@ function findMatchingProducts(userQuery, products) {
   return scored.slice(0, 4).map(s => s.prod);
 }
 
-function getApiKey() {
-  const envVars = [
-    process.env.GEMINI_API_KEY,
-    process.env.GOOGLE_API_KEY,
-    process.env.GOOGLE_GEMINI_API_KEY,
-    process.env.NEXT_PUBLIC_GEMINI_API_KEY,
-    process.env.GEMINI_KEY,
-  ];
-  for (const v of envVars) {
-    if (v && v.trim()) return v.trim();
+// In-memory cache for API keys and preferred model (60-second TTL)
+let cachedApiKeys = null;
+let lastKeysReadTime = 0;
+let cachedModelName = null;
+let lastModelReadTime = 0;
+
+function getApiKeys() {
+  const now = Date.now();
+  if (cachedApiKeys && cachedApiKeys.length > 0 && now - lastKeysReadTime < 60000) {
+    return cachedApiKeys;
   }
 
-  // Fallback: Read directly from .env.local and .env on disk
+  const keys = [];
   try {
     for (const fileName of ['.env.local', '.env']) {
       const envPath = path.join(process.cwd(), fileName);
       if (fs.existsSync(envPath)) {
         const content = fs.readFileSync(envPath, 'utf8');
-        const match = content.match(/^(?:GEMINI_API_KEY|GOOGLE_API_KEY|GOOGLE_GEMINI_API_KEY|NEXT_PUBLIC_GEMINI_API_KEY|GEMINI_KEY)\s*=\s*["']?([^"'\r\n#]+)["']?/im);
-        if (match && match[1]) {
-          return match[1].trim();
+        const primaryMatch = content.match(/^(?:GEMINI_API_KEY|GOOGLE_API_KEY|GOOGLE_GEMINI_API_KEY|NEXT_PUBLIC_GEMINI_API_KEY|GEMINI_KEY)\s*=\s*["']?([^"'\r\n#]+)["']?/im);
+        if (primaryMatch && primaryMatch[1]) {
+          keys.push(primaryMatch[1].trim());
+        }
+        const backupMatch = content.match(/^(?:BACKUP_GEMINI_API_KEY|PREVIOUS_GEMINI_API_KEY)\s*=\s*["']?([^"'\r\n#]+)["']?/im);
+        if (backupMatch && backupMatch[1]) {
+          keys.push(backupMatch[1].trim());
         }
       }
     }
   } catch (err) {
     console.error("Error reading .env fallback:", err);
   }
-  return null;
+
+  const envVars = [
+    process.env.GEMINI_API_KEY,
+    process.env.BACKUP_GEMINI_API_KEY,
+    process.env.PREVIOUS_GEMINI_API_KEY,
+    process.env.GOOGLE_API_KEY,
+    process.env.GOOGLE_GEMINI_API_KEY,
+    process.env.NEXT_PUBLIC_GEMINI_API_KEY,
+    process.env.GEMINI_KEY,
+  ];
+  for (const v of envVars) {
+    if (v && v.trim()) keys.push(v.trim());
+  }
+
+  cachedApiKeys = [...new Set(keys.filter(Boolean))];
+  lastKeysReadTime = now;
+  return cachedApiKeys;
 }
+
+function getPreferredModel() {
+  const now = Date.now();
+  if (cachedModelName && now - lastModelReadTime < 60000) {
+    return cachedModelName;
+  }
+
+  try {
+    for (const fileName of ['.env.local', '.env']) {
+      const envPath = path.join(process.cwd(), fileName);
+      if (fs.existsSync(envPath)) {
+        const content = fs.readFileSync(envPath, 'utf8');
+        const match = content.match(/^GEMINI_MODEL\s*=\s*["']?([^"'\r\n#]+)["']?/im);
+        if (match && match[1]) {
+          cachedModelName = match[1].trim();
+          lastModelReadTime = now;
+          return cachedModelName;
+        }
+      }
+    }
+  } catch (err) {
+    console.error("Error reading GEMINI_MODEL from .env:", err);
+  }
+  cachedModelName = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+  lastModelReadTime = now;
+  return cachedModelName;
+}
+
+// Cache the last working model name in-memory to guarantee instant, zero-retry responses
+let lastWorkingModel = null;
 
 export async function POST(req) {
   try {
-    const apiKey = getApiKey();
+    const body = await req.json();
+    const { history, message } = body;
+    const trimmedMsg = (message || "").trim();
+    const lowerMsg = trimmedMsg.toLowerCase();
 
-    if (!apiKey) {
+    // =========================================================================
+    // INSTANT FAST-PATH 1: Closing & Gratitude Intent (< 5ms response)
+    // Whenever user says "thank you", "thanks", "bye", "okay bye", "ok thanks"
+    // =========================================================================
+    const isClosingIntent = 
+      /^(?:thank\s*you|thanks|thanks\s*a\s*lot|thank\s*u|thx|bye|goodbye|cya|see\s*you|take\s*care|ok\s*bye|okay\s*bye|ok\s*thanks|okay\s*thanks|alright\s*thanks|done|ok\s*done|okay\s*done)[.!]?$/i.test(trimmedMsg) ||
+      /\b(?:thank\s*you\s*so\s*much|thanks\s*for\s*your\s*help|have\s*a\s*(?:good|great|nice)\s*day|bye\s*bye)\b/i.test(lowerMsg);
+
+    if (isClosingIntent) {
+      const closingReply = 
+`You are most welcome! We are always glad to assist you.
+
+If you ever need any further support with regulatory compliance (BIS/ISI, FMCS, CRS), certified laboratory equipment, food ingredients, or custom IT solutions, please feel free to reach out to our team at any time.
+
+### AN Global Services Contact Details:
+- **Phone:** +91 7782069184 / +91 9958820184
+- **WhatsApp Support:** https://wa.me/917782069184
+- **Email:** info@anglobalservices.com
+- **Contact Us:** https://www.anglobalservices.com/contact-us
+- **Corporate Office:** S-63, 7th Floor, Urbtech NPX, Sector-153, Noida, Uttar Pradesh - Pin 201310
+- **Working Hours:** Monday to Saturday, 9:30 AM to 6:30 PM IST
+
+Have a great day ahead!`;
+      return NextResponse.json({ reply: closingReply });
+    }
+
+    // =========================================================================
+    // INSTANT FAST-PATH 2: Simple Common Greetings (< 5ms response)
+    // Whenever user begins with "hi", "hello", "hii", "hey"
+    // =========================================================================
+    const isSimpleGreeting = /^(?:hi|hello|hii|hiii|hey|heyy|good\s*(?:morning|afternoon|evening)|namaste|hola)[.!]?$/i.test(trimmedMsg);
+    if (isSimpleGreeting && (!history || history.length <= 1)) {
+      const greetingReply =
+`Welcome to AN Global Services!
+
+How can we assist you today? Whether you are looking for certified laboratory equipment, regulatory compliance & BIS/ISI certification, B2B food ingredients, or custom IT software solutions, please let us know your requirements.`;
+      return NextResponse.json({ reply: greetingReply });
+    }
+
+    // =========================================================================
+    // INSTANT FAST-PATH 3: Direct Contact & Location Queries (< 5ms response)
+    // =========================================================================
+    const isDirectContactInquiry = 
+      /^(?:contact(?:\s*us)?|contact\s*details|phone|phone\s*number|mobile\s*number|call(?:\s*us)?|email(?:\s*id)?|whatsapp|office\s*address|location|address)[?.]?$/i.test(trimmedMsg) ||
+      /(?:what\s+is\s+(?:your\s+)?|give\s+me\s+(?:your\s+)?|tell\s+me\s+(?:your\s+)?|share\s+(?:your\s+)?|how\s+to\s+contact|where\s+is\s+(?:your\s+)?)\b.*(?:phone|number|contact|email|address|location|office|whatsapp)/i.test(lowerMsg);
+
+    if (isDirectContactInquiry) {
+      const contactReply = 
+`Here are the official contact details for AN Global Services:
+
+- **Phone:** +91 7782069184 / +91 9958820184
+- **WhatsApp Support:** https://wa.me/917782069184
+- **Email:** info@anglobalservices.com
+- **Contact Us Page:** https://www.anglobalservices.com/contact-us
+- **Corporate Office:** S-63, 7th Floor, Urbtech NPX, Sector-153, Noida, Uttar Pradesh - Pin 201310
+- **Working Hours:** Monday to Saturday, 9:30 AM to 6:30 PM IST
+
+Please let us know how we can assist your project or requirement today!`;
+      return NextResponse.json({ reply: contactReply });
+    }
+
+    // =========================================================================
+    // COMPLEX / DOMAIN INQUIRIES: Ultra-Fast AI Processing Pipeline
+    // =========================================================================
+    const apiKeys = getApiKeys();
+
+    if (!apiKeys || apiKeys.length === 0) {
       console.error("Gemini API key is missing. Please define GEMINI_API_KEY in .env.local and save the file.");
       return NextResponse.json(
         { error: "Chat service is currently unavailable. Please ensure GEMINI_API_KEY is saved in .env.local." },
@@ -139,61 +288,72 @@ export async function POST(req) {
       );
     }
 
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const body = await req.json();
-    const { history, message } = body;
-
-    // Fetch live products from Firestore (cached in-memory for speed)
+    // Fetch live products from Firestore (only append if there is an exact match to avoid prompt bloat)
     let dynamicContext = "";
     try {
       const liveProducts = await getLiveIsiProducts();
       const matchedProducts = findMatchingProducts(message, liveProducts);
 
       if (matchedProducts.length > 0) {
-        dynamicContext = `\n\n=======================================================\nDYNAMICALLY MATCHED LIVE PRODUCT PAGES FROM DATABASE:\n=======================================================\nThe user's query specifically matches the following product page(s) from our live database. In your response, ALWAYS provide a dedicated markdown section (e.g., "### Relevant Standards & Guides") featuring these exact live links and Indian Standard numbers:\n${matchedProducts.map(p => `- ${p.title} (${p.isNumber || 'BIS Scheme'}): https://www.anglobalservices.com/isi-products/${p.slug}`).join('\n')}\nAlso include our primary BIS guide: https://www.anglobalservices.com/bis-isi-mark-certification\n`;
-      } else {
-        dynamicContext = `\n\n=======================================================\nPRODUCT FALLBACK REDIRECTION DIRECTIVE:\n=======================================================\nIf the user is inquiring about BIS ISI Mark Certification, standard compliance, or registration for ANY specific product where no dedicated individual product page was matched above, you MUST still provide an authoritative response and REDIRECT them to our primary certification service pages:\n- Primary Domestic BIS ISI Mark Certification: https://www.anglobalservices.com/bis-isi-mark-certification\n- For Foreign / Overseas Manufacturers: https://www.anglobalservices.com/foreign-manufacturers-certification-scheme-fmcs\n- For Electronic & IT Goods (CRS Scheme): https://www.anglobalservices.com/bis-crs-registration-electronic-products\nReassure the user that AN Global Services provides complete end-to-end turnkey consultancy for all 600+ mandatory BIS notified products under Indian Quality Control Orders (QCOs), and invite them to share their Name, Phone Number, Email, and Requirement for a customized consultation.\n`;
+        dynamicContext = `\n\n=======================================================\nMATCHED PRODUCT PAGES FROM LIVE DATABASE:\n=======================================================\nFeature these exact links in your response:\n${matchedProducts.map(p => `- ${p.title} (${p.isNumber || 'BIS Scheme'}): https://www.anglobalservices.com/isi-products/${p.slug}`).join('\n')}\nPrimary BIS guide: https://www.anglobalservices.com/bis-isi-mark-certification\n`;
       }
     } catch (e) {
       console.error("Firestore product matching error:", e);
     }
 
+    // Ultra-fast, currently supported Google Gemini models for lightning-quick replies
+    const preferredModel = getPreferredModel();
     const candidateModels = [
-      process.env.GEMINI_MODEL,
+      preferredModel,
+      lastWorkingModel,
       "gemini-3.5-flash-lite",
       "gemini-flash-lite-latest",
+      "gemini-3.6-flash",
       "gemini-3.5-flash",
       "gemini-3.8-flash",
       "gemini-flash-latest",
-      "gemini-2.5-flash",
-      "gemini-1.5-flash",
     ].filter(Boolean);
+
+    const uniqueModels = [...new Set(candidateModels)];
+
+    // Keep history concise (last 6 turns) to prevent latency buildup
+    const trimmedHistory = Array.isArray(history) && history.length > 6 ? history.slice(-6) : (history || []);
+
+    const speedDirective = `\n\nCRITICAL SPEED RULE: Deliver a crisp, direct, highly structured answer in under 100-130 words. Give key specifications and direct URLs immediately.`;
 
     let text = null;
     let lastError = null;
 
-    for (const modelName of candidateModels) {
-      try {
-        const model = genAI.getGenerativeModel({ 
-          model: modelName,
-          systemInstruction: knowledgeBase + dynamicContext,
-          generationConfig: {
-            temperature: 0.2,
-            maxOutputTokens: 2500,
+    // Iterate through API keys (primary then backup) and candidate models
+    keyLoop: for (const key of apiKeys) {
+      const genAI = new GoogleGenerativeAI(key);
+
+      for (const modelName of uniqueModels) {
+        try {
+          const model = genAI.getGenerativeModel({ 
+            model: modelName,
+            systemInstruction: knowledgeBase + dynamicContext + speedDirective,
+            generationConfig: {
+              temperature: 0.1,
+              maxOutputTokens: 500,
+            }
+          });
+
+          const chat = model.startChat({
+            history: trimmedHistory,
+          });
+
+          const result = await chat.sendMessage(message);
+          const response = await result.response;
+          text = response.text();
+          if (text) {
+            lastWorkingModel = modelName;
+            break keyLoop;
           }
-        });
-
-        const chat = model.startChat({
-          history: history || [],
-        });
-
-        const result = await chat.sendMessage(message);
-        const response = await result.response;
-        text = response.text();
-        if (text) break;
-      } catch (err) {
-        lastError = err;
-        console.warn(`Model ${modelName} failed, attempting next model:`, err.message);
+        } catch (err) {
+          lastError = err;
+          console.warn(`Model ${modelName} with key (${key.slice(0, 8)}...) failed, attempting next:`, err.message);
+        }
       }
     }
 

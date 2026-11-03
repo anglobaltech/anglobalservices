@@ -121,11 +121,26 @@ export default function ChatBot() {
     });
   };
 
-  // Helper to safely render text with URLs as clickable links and bold markdown
+  // Helper to safely render text with markdown links [label](url), bare URLs, and bold markdown
   const renderMessageText = (text) => {
     if (!text) return null;
-    const urlRegex = /(https?:\/\/[^\s\)\],]+)/g;
-    return text.split(urlRegex).map((part, i) => {
+    const linkRegex = /(\[[^\]]+\]\(https?:\/\/[^\s\)]+\)|https?:\/\/[^\s\)\],]+)/g;
+    return text.split(linkRegex).map((part, i) => {
+      const mdMatch = part.match(/^\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)$/);
+      if (mdMatch) {
+        const [, label, url] = mdMatch;
+        return (
+          <a
+            key={i}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-100 underline underline-offset-2 font-semibold break-all hover:text-white transition-colors"
+          >
+            {label}
+          </a>
+        );
+      }
       if (part.match(/^https?:\/\//)) {
         const cleanUrl = part.replace(/[.,;:)]+$/, "");
         const trailing = part.slice(cleanUrl.length);
