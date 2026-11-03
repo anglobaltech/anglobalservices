@@ -138,12 +138,12 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= 1. INTRO TO TESTING & TRAINING ================= */}
-      <section className="py-20 bg-white">
+      <section className="py-10 sm:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">
             Building Skilled Professionals Through <span className="text-[#0075B6]">Scientific Testing Training</span>
           </h2>
-          <div className="w-24 h-1 bg-[#0075B6] mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-[#0075B6] mx-auto mb-6 sm:mb-8"></div>
           <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed mb-6">
             Testing plays a critical role in ensuring the quality, durability, safety, and performance of materials used in construction, manufacturing, furniture production, water management, and various industrial applications.
           </p>
@@ -154,7 +154,7 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= 2 & 3. IMPORTANCE & BENEFITS ================= */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             
@@ -209,9 +209,9 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= 4. WHAT WE OFFER ================= */}
-      <section className="py-20 bg-white">
+      <section className="py-10 sm:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl font-bold text-[#0a192f] mb-4">About Our Training Program</h2>
             <div className="w-16 h-1 bg-[#0075B6] mx-auto mb-6"></div>
           </div>
@@ -242,9 +242,9 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= 5. PROGRAM HIGHLIGHTS ================= */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl font-bold text-[#0a192f] mb-4">Training Highlights</h2>
             <div className="w-16 h-1 bg-[#0075B6] mx-auto"></div>
           </div>
@@ -266,7 +266,7 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= 6. FREE CERTIFICATION BANNER ================= */}
-      <section className="py-16 bg-[#0075B6]">
+      <section className="py-10 sm:py-12 bg-[#0075B6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <Award size={64} className="mx-auto mb-6 text-yellow-300" strokeWidth={1.5} />
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Free Training & Certification</h2>
@@ -283,7 +283,7 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= 7 & 8. WHO CAN JOIN & WHY CHOOSE US ================= */}
-      <section className="py-20 bg-white">
+      <section className="py-10 sm:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -332,7 +332,7 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= 9. STATISTICS ================= */}
-      <section className="py-16 bg-[#0a192f] border-t border-blue-900">
+      <section className="py-10 sm:py-12 bg-[#0a192f] border-t border-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
             {stats.map((stat, index) => {
@@ -350,9 +350,9 @@ export default function StudentPanelPage() {
       </section>
 
       {/* ================= TESTING SERVICES GRID ================= */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 sm:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">
               Explore Our Testing Programs
             </h2>

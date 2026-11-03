@@ -191,7 +191,7 @@ export default function ChemicalBalancePage() {
       </div>
 
       {/* Operating Principle Section (How It Works) */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -257,7 +257,7 @@ export default function ChemicalBalancePage() {
       </section>
 
       {/* Detailed Specifications Cards */}
-      <section className="bg-gray-100 py-16 border-t border-gray-200">
+      <section className="bg-gray-100 py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-[#0a192f] mb-4">Equipment Features & Specs</h2>
@@ -345,7 +345,7 @@ export default function ChemicalBalancePage() {
       </section>
 
       {/* Maintenance & Compliance Section */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-12">
             <h2 className="text-3xl font-black text-[#0a192f] mb-4">Comprehensive Maintenance & Calibration Guide</h2>
@@ -386,7 +386,7 @@ export default function ChemicalBalancePage() {
       </section>
       
       {/* Explore Other Balance Models Section */}
-      <section className="bg-slate-50 py-16 border-t border-slate-200">
+      <section className="bg-slate-50 py-10 sm:py-12 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
@@ -485,8 +485,8 @@ export default function ChemicalBalancePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white py-16 border-t border-gray-200" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200" id="faqs">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">Frequently Asked Questions</h2>
             <div className="w-16 h-1 bg-[#0075B6] rounded-full mx-auto mb-6"></div>
