@@ -163,9 +163,9 @@ export default function BenchTopHighSpeedMicroCentrifugePage() {
             currentSlug="bench-top-high-speed-micro-centrifuge"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
               Molecular Biology & Genomics Series
             </div>
 
@@ -173,19 +173,19 @@ export default function BenchTopHighSpeedMicroCentrifugePage() {
               Bench Top High Speed Micro Centrifuge
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               Precision ultra-compact micro-volume centrifuge. Commonly sought as <strong className="font-semibold text-white">Micro Centrifuge</strong>, <strong className="font-semibold text-white">Microcentrifuge</strong>, or <strong className="font-semibold text-white">Microfuge</strong> for DNA/RNA extraction and PCR workflows.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Micro-Tube Rotors (0.2 - 2.0ml)
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Micro-Tube Rotors (0.2 - 2.0ml)
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Brushless Induction Motor
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Brushless Induction Motor
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> ISO & CE Certified Engineering
               </span>
             </div>
           </div>
