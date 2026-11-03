@@ -98,29 +98,29 @@ export default function PhysicalBalancePage() {
             currentSlug="physical-balance"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
-              General Laboratory & Pharmacy Grade
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
+              General Laboratory &amp; Pharmacy Grade
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
               Digital Physical Balance
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               Rugged and dependable digital balance engineered for standard physical measurements, academic labs, and routine quality checks. Commonly sought as <strong className="font-semibold text-white">Physical Balance</strong>, <strong className="font-semibold text-white">Digital Lab Scale</strong>, or <strong className="font-semibold text-white">Precision Physical Scale</strong>.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> High-Precision Strain Gauge Sensor
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> High-Precision Strain Gauge Sensor
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Bright Backlit LCD Display
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Bright Backlit LCD Display
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Tare & Auto-Calibration Functions
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Tare &amp; Auto-Calibration Functions
               </span>
             </div>
           </div>

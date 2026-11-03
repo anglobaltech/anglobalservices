@@ -98,9 +98,9 @@ export default function ElectronicPlatformBalancePage() {
             currentSlug="electronic-platform-balance"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
               Heavy-Duty Industrial Weighing
             </div>
 
@@ -108,19 +108,19 @@ export default function ElectronicPlatformBalancePage() {
               Electronic Platform Balance
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               Heavy-duty industrial weighing scale engineered for warehouse, chemical drum, and high-capacity batch weighing. Commonly sought as <strong className="font-semibold text-white">Industrial Platform Scale</strong>, <strong className="font-semibold text-white">Floor Weighing Scale</strong>, or <strong className="font-semibold text-white">Electronic Bench Scale</strong>.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> 50kg to 1000kg Heavy Capacity
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> 50kg to 1000kg Heavy Capacity
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Heavy-Duty SS 304 Platform
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Heavy-Duty SS 304 Platform
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> 40-Hour Battery Backup
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> 40-Hour Battery Backup
               </span>
             </div>
           </div>

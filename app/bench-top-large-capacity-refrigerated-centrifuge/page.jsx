@@ -222,9 +222,9 @@ export default function BenchTopLargeCapacityRefrigeratedCentrifugePage() {
             currentSlug="bench-top-large-capacity-refrigerated-centrifuge"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
               Refrigerated &amp; High-Volume Separation Series
             </div>
 
@@ -232,19 +232,19 @@ export default function BenchTopLargeCapacityRefrigeratedCentrifugePage() {
               Bench Top Large Capacity Refrigerated Centrifuge
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               High-throughput temperature-controlled laboratory centrifuge for high-volume bioprocessing, blood component separation, and cellular pelleting. Widely identified as <strong className="font-semibold text-white">Low Temperature Centrifuge</strong>, <strong className="font-semibold text-white">Large Capacity Refrigerated Centrifuge</strong>, <strong className="font-semibold text-white">Cold Centrifuge</strong>, or <strong className="font-semibold text-white">Low Temp Centrifuge</strong>.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> -20°C to +40°C CFC-Free Cooling
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> -20°C to +40°C CFC-Free Cooling
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Up to 25,000 RPM / 64,800 xg High Velocity
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Up to 25,000 RPM / 64,800 xg High Velocity
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> High-Volume 4 x 750ml / 6 x 500ml Multi-Rotor Capacity
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> High-Volume 4 x 750ml / 6 x 500ml Multi-Rotor Capacity
               </span>
             </div>
           </div>

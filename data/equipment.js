@@ -218,6 +218,138 @@ export const equipmentMenu = [
             slug: "rotary-flask-shaker",
             root: true,
           },
+          {
+            name: "Gyratory Sieve Shaker",
+            slug: "gyratory-sieve-shaker",
+            root: true,
+          },
+          {
+            name: "Rotap Sieve Shaker",
+            slug: "rotap-sieve-shaker",
+            root: true,
+          },
+          {
+            name: "Kahn Reciprocating Shaking Machine",
+            slug: "kahn-reciprocating-shaking-machine",
+            root: true,
+          },
+          {
+            name: "Magnetic Shaker",
+            slug: "magnetic-shaker",
+            root: true,
+          },
+          {
+            name: "Table Top Sieve Shaker",
+            slug: "table-top-sieve-shaker",
+            root: true,
+          },
+          {
+            name: "Universal Shaking Machine",
+            slug: "universal-shaking-machine",
+            root: true,
+          },
+          {
+            name: "Vortex Shaker",
+            slug: "vortex-shaker",
+            root: true,
+          },
+          {
+            name: "Wagner Shaking Machine",
+            slug: "wagner-shaking-machine",
+            root: true,
+          },
+          {
+            name: "Wet Sieve Shaker",
+            slug: "wet-sieve-shaker",
+            root: true,
+          },
+          {
+            name: "Wrist Action Shaking Machine",
+            slug: "wrist-action-shaking-machine",
+            root: true,
+          },
+        ]
+      },
+      {
+        name: "Microscopes",
+        isSubMenu: true,
+        subItems: [
+          {
+            name: "Trinocular Microscope",
+            slug: "trinocular-microscope",
+            root: true,
+          },
+          {
+            name: "Binocular Microscope",
+            slug: "binocular-microscope",
+            root: true,
+          },
+          {
+            name: "Monocular Microscope",
+            slug: "monocular-microscope",
+            root: true,
+          },
+          {
+            name: "Tissue Culture Microscope",
+            slug: "tissue-culture-microscope",
+            root: true,
+          },
+          {
+            name: "Stereoscopic Zoom Binocular Microscope",
+            slug: "stereoscopic-zoom-binocular-microscope",
+            root: true,
+          },
+          {
+            name: "Projection Microscope",
+            slug: "projection-microscope",
+            root: true,
+          },
+        ]
+      },
+      {
+        name: "Moisture Meter",
+        isSubMenu: true,
+        subItems: [
+          {
+            name: "Flour Moisture Meter",
+            slug: "flour-moisture-meter",
+            root: true,
+          },
+          {
+            name: "Grain Moisture Meter",
+            slug: "grain-moisture-meter",
+            root: true,
+          },
+          {
+            name: "Hay Moisture Meter",
+            slug: "hay-moisture-meter",
+            root: true,
+          },
+          {
+            name: "Red Pepper Moisture Meter",
+            slug: "red-pepper-moisture-meter",
+            root: true,
+          },
+          {
+            name: "Seed Moisture Meter",
+            slug: "seed-moisture-meter",
+            root: true,
+          },
+          {
+            name: "Soil Moisture Meter",
+            slug: "soil-moisture-meter",
+            root: true,
+          },
+          {
+            name: "Tobacco Moisture Meter",
+            slug: "tobacco-moisture-meter",
+            root: true,
+          },
+          {
+            name: "Wood Moisture Meter",
+            slug: "wood-moisture-meter",
+            root: true,
+          },
         ]
       },
       {

@@ -106,20 +106,51 @@ export default function ChatBot() {
     }
   };
 
-  // Helper to safely render text with URLs as clickable links
+  // Helper to format bold markdown and text
+  const renderFormattedText = (content) => {
+    const boldRegex = /(\*\*.*?\*\*)/g;
+    return content.split(boldRegex).map((seg, idx) => {
+      if (seg.startsWith("**") && seg.endsWith("**") && seg.length > 4) {
+        return (
+          <strong key={idx} className="font-bold text-white">
+            {seg.slice(2, -2)}
+          </strong>
+        );
+      }
+      return seg;
+    });
+  };
+
+  // Helper to safely render text with markdown links [label](url), bare URLs, and bold markdown
   const renderMessageText = (text) => {
-    const urlRegex = /(https?:\/\/[^\s\)\],]+)/g;
-    return text.split(urlRegex).map((part, i) => {
+    if (!text) return null;
+    const linkRegex = /(\[[^\]]+\]\(https?:\/\/[^\s\)]+\)|https?:\/\/[^\s\)\],]+)/g;
+    return text.split(linkRegex).map((part, i) => {
+      const mdMatch = part.match(/^\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)$/);
+      if (mdMatch) {
+        const [, label, url] = mdMatch;
+        return (
+          <a
+            key={i}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-100 underline underline-offset-2 font-semibold break-all hover:text-white transition-colors"
+          >
+            {label}
+          </a>
+        );
+      }
       if (part.match(/^https?:\/\//)) {
         const cleanUrl = part.replace(/[.,;:)]+$/, "");
         const trailing = part.slice(cleanUrl.length);
         return (
-          <span key={i}>
+          <span key={i} className="break-all">
             <a
               href={cleanUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-200 underline font-semibold break-words hover:text-white transition-colors"
+              className="text-blue-100 underline underline-offset-2 font-semibold break-all hover:text-white transition-colors"
             >
               {cleanUrl}
             </a>
@@ -127,14 +158,9 @@ export default function ChatBot() {
           </span>
         );
       }
-      return <span key={i}>{part}</span>;
+      return <span key={i}>{renderFormattedText(part)}</span>;
     });
   };
-  // ============================================================================
-  // CHATBOT TEMPORARILY DISABLED (WILL BE DEPLOYED LATER)
-  // To re-enable: remove the line below and uncomment ChatBot in app/layout.js
-  // ============================================================================
-  return null;
 
   return (
     <>
@@ -156,7 +182,7 @@ export default function ChatBot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div id="chatbot-window" className="fixed bottom-6 right-6 z-50 w-[350px] sm:w-[400px] max-h-[600px] h-[80vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 animate-in slide-in-from-bottom-5 overscroll-contain">
+        <div id="chatbot-window" className="fixed bottom-4 right-4 left-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 w-auto sm:w-[400px] max-w-[420px] max-h-[600px] h-[80vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 animate-in slide-in-from-bottom-5 overscroll-contain">
           
           {/* Header */}
           <div className="bg-[#0075B6] p-4 flex justify-between items-center text-white">
@@ -174,68 +200,56 @@ export default function ChatBot() {
           </div>
 
           {/* Messages Area Container */}
-          <div className="relative flex-1 overflow-hidden bg-gray-50 flex flex-col">
-            {/* Repeating Diagonal Watermark Pattern */}
-            <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
-              <svg className="w-full h-full opacity-30 mix-blend-multiply" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern
-                    id="company-logo-watermark"
-                    width="170"
-                    height="85"
-                    patternUnits="userSpaceOnUse"
-                    patternTransform="rotate(-18)"
-                  >
-                    <image
-                      href="/company-logo.png"
-                      x="0"
-                      y="10"
-                      width="125"
-                      height="28"
-                      preserveAspectRatio="xMidYMid meet"
-                    />
-                    <image
-                      href="/company-logo.png"
-                      x="85"
-                      y="52"
-                      width="125"
-                      height="28"
-                      preserveAspectRatio="xMidYMid meet"
-                    />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#company-logo-watermark)" />
-              </svg>
-            </div>
-
+          <div className="relative flex-1 overflow-hidden bg-[#f0f9ff] flex flex-col">
             {/* Scrollable Messages Area */}
-            <div id="chat-scroll-container" className="relative z-10 flex-1 p-4 overflow-y-auto overscroll-contain flex flex-col gap-4 scroll-smooth">
-              {messages.map((msg, index) => (
-                <div 
-                  key={index}
-                  id={index === messages.length - 1 ? "latest-message" : undefined}
-                  className={`flex items-start gap-2 max-w-[85%] ${msg.role === 'user' ? 'ml-auto flex-row-reverse' : 'mr-auto'}`}
-                >
-                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${msg.role === 'user' ? 'bg-[#0a192f] text-white' : 'bg-blue-100 text-[#0075B6]'}`}>
-                    {msg.role === 'user' ? <User size={16} /> : <Bot size={18} />}
+            <div id="chat-scroll-container" className="flex-1 p-3.5 sm:p-4 overflow-y-auto overscroll-contain flex flex-col gap-3.5 scroll-smooth bg-[#f0f9ff]">
+              {messages.map((msg, index) => {
+                const isUser = msg.role === 'user';
+                return (
+                  <div 
+                    key={index}
+                    id={index === messages.length - 1 ? "latest-message" : undefined}
+                    className={`w-full flex ${isUser ? 'justify-end' : 'justify-center'}`}
+                  >
+                    {isUser ? (
+                      <div className="flex items-start gap-2 max-w-[85%] ml-auto flex-row-reverse">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-[#0a192f] text-white shadow-xs">
+                          <User size={16} />
+                        </div>
+                        <div className="p-3 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap bg-[#0a192f] text-white rounded-tr-none shadow-xs break-words">
+                          {renderMessageText(msg.text)}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex flex-col items-start w-full max-w-[96%] sm:max-w-[94%]">
+                        <div className="flex items-center gap-1.5 mb-1 px-1">
+                          <div className="w-5 h-5 rounded-full bg-blue-100 text-[#0075B6] flex items-center justify-center shadow-xs">
+                            <Bot size={13} />
+                          </div>
+                          <span className="text-[11px] font-semibold text-gray-500 tracking-wide">Support Assistant</span>
+                        </div>
+                        <div className="w-full p-3.5 rounded-2xl rounded-tl-sm text-sm leading-relaxed whitespace-pre-wrap bg-[#0075B6] text-white shadow-sm break-words">
+                          {renderMessageText(msg.text)}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <div className={`p-3 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
-                    msg.role === 'user' 
-                      ? 'bg-[#0a192f] text-white rounded-tr-none' 
-                      : 'bg-[#0075B6] text-white rounded-tl-none shadow-sm'
-                  }`}>
-                    {renderMessageText(msg.text)}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
               
               {isLoading && (
-                <div className="flex items-start gap-2 mr-auto max-w-[85%]">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-[#0075B6] flex items-center justify-center">
-                    <Bot size={18} />
-                  </div>
-                  <div className="p-4 rounded-2xl rounded-tl-none bg-[#0075B6] text-white flex items-center">
-                    <Loader2 size={16} className="animate-spin" />
+                <div className="w-full flex justify-center">
+                  <div className="flex flex-col items-start w-full max-w-[96%] sm:max-w-[94%]">
+                    <div className="flex items-center gap-1.5 mb-1 px-1">
+                      <div className="w-5 h-5 rounded-full bg-blue-100 text-[#0075B6] flex items-center justify-center shadow-xs">
+                        <Bot size={13} />
+                      </div>
+                      <span className="text-[11px] font-semibold text-gray-500 tracking-wide">Support Assistant</span>
+                    </div>
+                    <div className="p-3 px-4 rounded-2xl rounded-tl-sm bg-[#0075B6] text-white flex items-center gap-2 shadow-xs">
+                      <Loader2 size={16} className="animate-spin text-white" />
+                      <span className="text-xs text-blue-100 font-medium">Generating response...</span>
+                    </div>
                   </div>
                 </div>
               )}

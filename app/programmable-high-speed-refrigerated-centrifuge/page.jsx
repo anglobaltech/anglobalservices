@@ -98,9 +98,9 @@ export default function RefrigeratedCentrifugePage() {
             currentSlug="programmable-high-speed-refrigerated-centrifuge"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
               Refrigerated High-Speed Series
             </div>
 
@@ -108,19 +108,19 @@ export default function RefrigeratedCentrifugePage() {
               Programmable High Speed Refrigerated Centrifuge
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               State-of-the-art cooling microcentrifuge engineered for molecular biology, biochemistry, and clinical diagnostics. Commonly sought as <strong className="font-semibold text-white">Refrigerated Centrifuge Machine</strong>, <strong className="font-semibold text-white">High Speed Cooling Centrifuge</strong>, or <strong className="font-semibold text-white">Lab Centrifuge</strong>.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Up to 20,000 RPM / 27,800 x g
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Up to 20,000 RPM / 27,800 x g
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> -20°C to +40°C CFC-Free Cooling
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> -20°C to +40°C CFC-Free Cooling
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> ISO &amp; CE Certified Engineering
               </span>
             </div>
           </div>

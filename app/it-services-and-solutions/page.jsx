@@ -507,7 +507,7 @@ export default function ITServicesPage() {
               </h2>
               <div className="w-20 h-1 bg-[#0075B6] mx-auto mb-6" />
               <p className="text-gray-600 max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
-                A CRM isn't just a contact database. A well-built custom CRM transforms every department — sales, marketing, support, and operations — into a high-performance machine.
+                A CRM isn&apos;t just a contact database. A well-built custom CRM transforms every department — sales, marketing, support, and operations — into a high-performance machine.
               </p>
             </div>
 
