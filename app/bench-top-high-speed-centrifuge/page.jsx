@@ -115,7 +115,7 @@ export default function BenchTopHighSpeedCentrifugePage() {
           },
           {
             "@type": "Question",
-            "name": "What makes a centrifuge 'high speed'?",
+            "name": "What makes a centrifuge &apos;high speed&apos;?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Unlike standard centrifuges that spin around 4,000 RPM, a high speed centrifuge is equipped with a high-torque motor capable of reaching extremely high speeds (often 15,000 to 20,000+ RPM). This generates the immense gravitational force (g-force) needed to precipitate microscopic particles like DNA."
@@ -164,9 +164,9 @@ export default function BenchTopHighSpeedCentrifugePage() {
             currentSlug="bench-top-high-speed-centrifuge"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
               High-Speed Research Series
             </div>
 
@@ -174,19 +174,19 @@ export default function BenchTopHighSpeedCentrifugePage() {
               Bench Top High Speed Centrifuge
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               Precision high-velocity laboratory microcentrifuge. Commonly sought as <strong className="font-semibold text-white">High Speed Centrifuge</strong>, <strong className="font-semibold text-white">Microcentrifuge</strong>, or <strong className="font-semibold text-white">Lab Centrifuge</strong> for molecular biology and clinical research.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> High RCF Acceleration
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> High RCF Acceleration
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Brushless Induction Motor
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Brushless Induction Motor
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> ISO & CE Certified Engineering
               </span>
             </div>
           </div>
@@ -257,7 +257,7 @@ export default function BenchTopHighSpeedCentrifugePage() {
       </div>
 
       {/* Operating Principle Section (How It Works) */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -323,7 +323,7 @@ export default function BenchTopHighSpeedCentrifugePage() {
       </section>
 
       {/* Detailed Specifications Cards */}
-      <section className="bg-gray-100 py-16 border-t border-gray-200">
+      <section className="bg-gray-100 py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-[#0a192f] mb-4">Equipment Features & Specs</h2>
@@ -411,7 +411,7 @@ export default function BenchTopHighSpeedCentrifugePage() {
       </section>
 
       {/* Comprehensive Maintenance & Calibration Guide */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-12">
             <h2 className="text-3xl font-black text-[#0a192f] mb-4">Comprehensive Maintenance & Calibration Guide</h2>
@@ -436,7 +436,7 @@ export default function BenchTopHighSpeedCentrifugePage() {
               <ul className="list-disc list-inside text-gray-600 space-y-2">
                 <li><strong>Interlock Check:</strong> Verify the motorized lid lock securely fastens before the motor engages.</li>
                 <li><strong>Balance Test:</strong> Routinely test the imbalance detection sensors to prevent catastrophic vibration.</li>
-                <li><strong>Rotor Seating:</strong> Confirm that the central rotor nut is tightened to the manufacturer's specification.</li>
+                <li><strong>Rotor Seating:</strong> Confirm that the central rotor nut is tightened to the manufacturer&apos;s specification.</li>
               </ul>
             </div>
 
@@ -549,8 +549,8 @@ export default function BenchTopHighSpeedCentrifugePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white py-16 border-t border-gray-200" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200" id="faqs">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">Frequently Asked Questions</h2>
             <div className="w-16 h-1 bg-[#0075B6] rounded-full mx-auto mb-6"></div>
@@ -602,7 +602,7 @@ export default function BenchTopHighSpeedCentrifugePage() {
                 </span>
               </summary>
               <div className="px-5 pb-5 text-gray-600 pt-2 border-t border-gray-100">
-                Yes. Our bench top high speed centrifuges are equipped with heavy-duty shock absorbers and advanced vibration dampening technology. As long as the rotor is properly balanced, the machine runs extremely quietly without "walking" or vibrating across your bench.
+                Yes. Our bench top high speed centrifuges are equipped with heavy-duty shock absorbers and advanced vibration dampening technology. As long as the rotor is properly balanced, the machine runs extremely quietly without &quot;walking&quot; or vibrating across your bench.
               </div>
             </details>
           </div>

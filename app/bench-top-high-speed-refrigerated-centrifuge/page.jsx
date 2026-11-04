@@ -220,9 +220,9 @@ export default function BenchTopHighScoreRefrigeratedCentrifugePage() {
             currentSlug="bench-top-high-speed-refrigerated-centrifuge"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
               Refrigerated & Molecular Biology Series
             </div>
 
@@ -230,19 +230,19 @@ export default function BenchTopHighScoreRefrigeratedCentrifugePage() {
               Bench Top High Speed Refrigerated Centrifuge
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               Precision temperature-controlled laboratory centrifuge for molecular biology and biochemistry. Widely identified as <strong className="font-semibold text-white">Refrigerated Centrifuge</strong>, <strong className="font-semibold text-white">Cold Centrifuge</strong>, <strong className="font-semibold text-white">Cooling Centrifuge</strong>, or <strong className="font-semibold text-white">High Speed Refrigerated Centrifuge</strong> for DNA/RNA purification and protein isolation.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> -20°C to +40°C CFC-Free Cooling
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> -20°C to +40°C CFC-Free Cooling
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> 16,500 RPM / 21,300 xg High Velocity
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> 16,500 RPM / 21,300 xg High Velocity
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> ISO & CE Certified Engineering
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> ISO & CE Certified Engineering
               </span>
             </div>
           </div>
@@ -313,7 +313,7 @@ export default function BenchTopHighScoreRefrigeratedCentrifugePage() {
       </div>
 
       {/* Operating Principle Section (How It Works) */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -379,7 +379,7 @@ export default function BenchTopHighScoreRefrigeratedCentrifugePage() {
       </section>
 
       {/* Detailed Specifications Cards */}
-      <section className="bg-gray-100 py-16 border-t border-gray-200" id="equipment-features">
+      <section className="bg-gray-100 py-10 sm:py-12 border-t border-gray-200" id="equipment-features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-[#0a192f] mb-4">Equipment Features & Specs</h2>
@@ -467,7 +467,7 @@ export default function BenchTopHighScoreRefrigeratedCentrifugePage() {
       </section>
 
       {/* Comprehensive Maintenance & Calibration Guide */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-12">
             <h2 className="text-3xl font-black text-[#0a192f] mb-4">Comprehensive Maintenance & Calibration Guide</h2>
@@ -605,8 +605,8 @@ export default function BenchTopHighScoreRefrigeratedCentrifugePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white py-16 border-t border-gray-200" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200" id="faqs">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">Frequently Asked Questions</h2>
             <div className="w-16 h-1 bg-[#0075B6] rounded-full mx-auto mb-6"></div>

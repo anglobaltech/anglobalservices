@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { collection, query, getDocs, orderBy } from "firebase/firestore";
 import { db } from "@/src/lib/firebase";
 import {
@@ -301,121 +302,173 @@ export default function CareersClient({ initialJobs = [] }) {
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-sans selection:bg-[#0075B6] selection:text-white">
       {/* ============================================================== */}
-      {/* 1. HERO SECTION (MATCHING AN GLOBAL SERVICES SIGNATURE BLUE)   */}
+      {/* 1. HERO SECTION (YOUR CAREER WITHOUT BORDERS • LUXURY GLOBE)   */}
       {/* ============================================================== */}
-      <section className="relative w-full bg-gradient-to-r from-[#001c3d] via-[#002f63] to-[#004e8c] text-white min-h-[calc(100vh-175px)] flex flex-col justify-center py-5 sm:py-6 lg:py-7 overflow-hidden shadow-md">
-        {/* Signature Dot-Grid Pattern Overlay */}
-        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none"></div>
+      <section className="relative w-full bg-[#00091a] text-white overflow-hidden border-b border-white/10 shadow-2xl flex flex-col justify-start sm:justify-between pt-1 sm:pt-0 md:pt-0 lg:pt-0 2xl:pt-4 pb-2 sm:pb-1 md:pb-1 lg:pb-2.5 xl:pb-3 2xl:pb-4 h-auto sm:h-[320px] md:h-[340px] lg:h-[480px] xl:min-h-[550px] xl:h-[570px] 2xl:min-h-[660px] 2xl:h-[700px]">
+        {/* Layer 1: High-Resolution Visual Artwork with Glowing Earth & 4 Floating Vignettes (FULL BLEED • ZERO SEAMS • 100% VISIBLE) */}
+        <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
+          <div className="absolute right-0 top-0 bottom-0 w-full h-full pointer-events-none select-none overflow-hidden">
+            <Image
+              src="/career-page-hero-section.webp"
+              alt="AN Global Services - Careers Without Borders - Industrial Testing & Regulatory Compliance"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-right md:object-cover md:object-right lg:object-contain lg:object-right"
+              quality={100}
+            />
+            {/* Smooth left-edge fade into section background #00091a on ultra-wide / 4K */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#00091a] to-transparent pointer-events-none hidden 2xl:block"></div>
+          </div>
+          {/* Mobile Overlay for guaranteed text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#00091a]/95 via-[#00091a]/85 to-[#00091a]/95 sm:hidden"></div>
+          {/* Left Contrast Fade — wider gradient ensures text never overlaps right-side globe/photo cards */}
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[48%] md:w-[48%] lg:w-[47%] xl:w-[46%] 2xl:w-[45%] bg-gradient-to-r from-[#00091a] from-30% via-[#00091a]/90 via-60% to-transparent hidden sm:block pointer-events-none z-[1]"></div>
+        </div>
 
-        {/* Ambient Subtle Radial Glow Highlights */}
-        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-sky-400/10 blur-[100px] pointer-events-none"></div>
+        {/* Layer 2: Subtle Ambient Atmospheric Aurora Glow */}
+        <div className="absolute -top-24 left-1/4 w-[450px] h-[250px] bg-sky-500/10 rounded-full blur-[90px] pointer-events-none"></div>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 w-full flex-1 flex flex-col justify-around items-center py-2">
-          {/* Eyebrow Live Status Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold tracking-wide uppercase text-blue-200 shadow-sm">
-            <Sparkles size={14} className="text-yellow-400" />
-            <span>Live Recruitment Active</span>
-            <span className="text-white/40">•</span>
-            <span className="text-white font-normal lowercase">Delhi NCR HQ & Labs</span>
+        {/* Layer 3: Main Content Container (Immediate Navbar Transition • Dedicated Left Column) */}
+        <div className="relative max-w-7xl 2xl:max-w-[1450px] mx-auto px-2.5 sm:px-5 md:px-6 lg:px-8 xl:px-10 z-10 w-full flex-1 flex flex-col justify-start sm:justify-between overflow-hidden sm:overflow-visible">
+          {/* Top/Middle Text Column - Exact 4K Proportional Alignment on Tablet, Laptop S/M/L & 4K */}
+          <div className="w-full sm:w-[48%] md:w-[46%] lg:w-[45%] xl:w-[45%] 2xl:w-[44%] max-w-none text-left my-auto sm:my-auto py-1 sm:py-0.5 md:py-1 lg:py-1.5 xl:py-2.5 2xl:py-3 flex flex-col justify-center">
+            {/* Eyebrow Live Status Pill */}
+            <div className="inline-flex items-center gap-1.5 sm:gap-1.5 md:gap-1.5 lg:gap-2 px-2.5 sm:px-2 md:px-2.5 lg:px-3 py-1 sm:py-0.5 md:py-0.5 lg:py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[9px] sm:text-[7px] md:text-[7.5px] lg:text-[9px] xl:text-[10px] 2xl:text-xs font-semibold tracking-wide uppercase text-blue-200 shadow-sm mb-2 sm:mb-1.5 md:mb-1.5 lg:mb-2 xl:mb-2.5 2xl:mb-3 w-fit">
+              <Sparkles size={11} className="text-yellow-400 shrink-0" />
+              <span>Live Recruitment Active</span>
+              <span className="text-white/40">•</span>
+              <span className="text-white font-normal lowercase">delhi ncr hq & labs</span>
+            </div>
+
+            {/* Master Headline (Exact 100% Copy of Live Heading • Beautifully Scaled) */}
+            <h1 className="text-[21px] sm:text-[15px] md:text-[18px] lg:text-[22px] xl:text-[28px] 2xl:text-[40px] font-black tracking-tight leading-[1.08] mb-2 sm:mb-1.5 md:mb-1.5 lg:mb-2 xl:mb-2.5 2xl:mb-3.5 drop-shadow-md uppercase">
+              <span className="block text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+                Build the Future of
+              </span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-white drop-shadow-[0_3px_20px_rgba(34,211,238,0.45)]">
+                Global Trade & Industrial Compliance
+              </span>
+            </h1>
+
+            {/* Subtitle (Exact 100% Copy of Live Subtitle • Generous Apple-Grade Cadence) */}
+            <p className="text-[11px] sm:text-[7.5px] md:text-[8px] lg:text-[10px] xl:text-[12px] 2xl:text-[15px] text-blue-100/90 font-normal leading-relaxed sm:leading-snug md:leading-relaxed mb-2 sm:mb-1.5 md:mb-2 lg:mb-2.5 xl:mb-3 2xl:mb-4 drop-shadow-sm">
+              At AN Global Services, we connect 1,500+ multinational manufacturers with certified Indian compliance, turnkey laboratory machinery, and high-impact regulatory advisory across 50+ countries.
+            </p>
+
+            {/* Feature Chips Matrix (Exact 100% Copy of 4K View • Single-Line Horizontal Pills) */}
+            <div className="grid grid-cols-2 gap-1.5 sm:gap-1.5 md:gap-1.5 lg:gap-2 xl:gap-2.5 2xl:gap-3 mb-2 sm:mb-1.5 md:mb-2 lg:mb-2.5 xl:mb-3 2xl:mb-4 w-full">
+              <div className="flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1.5 xl:gap-2 bg-white/[0.08] hover:bg-white/[0.14] px-2 sm:px-1.5 md:px-2 lg:px-2.5 xl:px-3.5 py-1.5 sm:py-1 md:py-1 lg:py-1.5 xl:py-2 2xl:py-2.5 rounded-lg border border-white/15 backdrop-blur-md transition-all group overflow-hidden">
+                <CheckCircle2 size={12} className="text-emerald-400 shrink-0" />
+                <span className="text-[9.5px] sm:text-[7px] md:text-[7.5px] lg:text-[9.5px] xl:text-[11.5px] 2xl:text-[13px] font-medium text-white truncate">
+                  BIS ISI & CRS Affairs
+                </span>
+              </div>
+              <div className="flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1.5 xl:gap-2 bg-white/[0.08] hover:bg-white/[0.14] px-2 sm:px-1.5 md:px-2 lg:px-2.5 xl:px-3.5 py-1.5 sm:py-1 md:py-1 lg:py-1.5 xl:py-2 2xl:py-2.5 rounded-lg border border-white/15 backdrop-blur-md transition-all group overflow-hidden">
+                <CheckCircle2 size={12} className="text-emerald-400 shrink-0" />
+                <span className="text-[9.5px] sm:text-[7px] md:text-[7.5px] lg:text-[9.5px] xl:text-[11.5px] 2xl:text-[13px] font-medium text-white truncate">
+                  ISO/IEC 17025 Testing Labs
+                </span>
+              </div>
+              <div className="flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1.5 xl:gap-2 bg-white/[0.08] hover:bg-white/[0.14] px-2 sm:px-1.5 md:px-2 lg:px-2.5 xl:px-3.5 py-1.5 sm:py-1 md:py-1 lg:py-1.5 xl:py-2 2xl:py-2.5 rounded-lg border border-white/15 backdrop-blur-md transition-all group overflow-hidden">
+                <CheckCircle2 size={12} className="text-emerald-400 shrink-0" />
+                <span className="text-[9.5px] sm:text-[7px] md:text-[7.5px] lg:text-[9.5px] xl:text-[11.5px] 2xl:text-[13px] font-medium text-white truncate">
+                  Turnkey Industrial Machinery
+                </span>
+              </div>
+              <div className="flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1.5 xl:gap-2 bg-white/[0.08] hover:bg-white/[0.14] px-2 sm:px-1.5 md:px-2 lg:px-2.5 xl:px-3.5 py-1.5 sm:py-1 md:py-1 lg:py-1.5 xl:py-2 2xl:py-2.5 rounded-lg border border-white/15 backdrop-blur-md transition-all group overflow-hidden">
+                <CheckCircle2 size={12} className="text-emerald-400 shrink-0" />
+                <span className="text-[9.5px] sm:text-[7px] md:text-[7.5px] lg:text-[9.5px] xl:text-[11.5px] 2xl:text-[13px] font-medium text-white truncate">
+                  FMCS Global Plant Audits
+                </span>
+              </div>
+            </div>
+
+            {/* Action CTAs (Exact 100% Copy of Live Buttons • High-Conversion Elevation) */}
+            <div className="flex flex-nowrap items-center gap-1.5 sm:gap-1.5 md:gap-2 lg:gap-2.5 xl:gap-3">
+              <a
+                href="#openings-section"
+                className="group cursor-pointer px-3 sm:px-2 md:px-2.5 lg:px-3.5 xl:px-4.5 2xl:px-6 py-2 sm:py-1 md:py-1.5 lg:py-2 xl:py-2.5 2xl:py-3 rounded-xl bg-gradient-to-r from-[#0075B6] to-cyan-500 hover:from-[#005a8f] hover:to-cyan-600 text-white font-bold text-[10px] sm:text-[7.5px] md:text-[8px] lg:text-[9.5px] xl:text-[11.5px] 2xl:text-[13.5px] shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1 md:gap-1.5 lg:gap-2 border border-cyan-300/40 whitespace-nowrap shrink-0"
+              >
+                <span>Explore {activeJobs.length > 0 ? `${activeJobs.length} ` : ""}Open Position{activeJobs.length === 1 ? "" : "s"}</span>
+                <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-200 shrink-0" />
+              </a>
+
+              <button
+                onClick={() => handleOpenApply(null)}
+                className="group cursor-pointer px-3 sm:px-2 md:px-2.5 lg:px-3 xl:px-4 2xl:px-5 py-2 sm:py-1 md:py-1.5 lg:py-2 xl:py-2.5 2xl:py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 hover:border-cyan-300/50 text-white font-semibold text-[10px] sm:text-[7.5px] md:text-[8px] lg:text-[9.5px] xl:text-[11.5px] 2xl:text-[13.5px] backdrop-blur-md transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1 md:gap-1.5 lg:gap-2 shadow-sm hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap shrink-0"
+              >
+                <UploadCloud size={12} className="text-cyan-300 shrink-0" />
+                <span>Spontaneous Application</span>
+              </button>
+            </div>
+
+            {/* Candidate Trust Strip (Exact 100% Copy of 4K View • Clean Horizontal Row) */}
+            <div className="flex flex-nowrap items-center gap-x-2 sm:gap-x-1.5 md:gap-x-2 lg:gap-x-3.5 xl:gap-x-4 2xl:gap-x-5 mt-2 sm:mt-1 md:mt-1.5 lg:mt-2 xl:mt-2.5 2xl:mt-3 text-[9px] sm:text-[7px] md:text-[7px] lg:text-[8.5px] xl:text-[10px] 2xl:text-[11px] text-slate-300/90 font-medium whitespace-nowrap overflow-hidden">
+              <span className="inline-flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1.5 shrink-0">
+                <CheckCircle2 size={11} className="text-emerald-400 shrink-0" />
+                100% Merit-Based Selection
+              </span>
+              <span className="inline-flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1.5 shrink-0">
+                <Clock size={11} className="text-cyan-400 shrink-0" />
+                48h Fast-Track Review
+              </span>
+              <span className="inline-flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1.5 shrink-0">
+                <Building2 size={11} className="text-sky-400 shrink-0" />
+                Delhi NCR HQ & Hybrid
+              </span>
+            </div>
           </div>
 
-          {/* Master Headline (Generous Width, Strong, Majestic) */}
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-black tracking-tight leading-[1.18] uppercase drop-shadow-sm text-center text-white max-w-5xl mx-auto my-2">
-            Build the Future of <br className="hidden sm:inline" />
-            <span className="text-cyan-300">Global Trade & Industrial Compliance</span>
-          </h1>
-
-          {/* Subtitle (Proper Width & Room to Breathe) */}
-          <p className="text-sm sm:text-base lg:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl sm:max-w-4xl text-center mx-auto my-1.5">
-            At AN Global Services, we connect 1,500+ multinational manufacturers with certified
-            Indian compliance, turnkey laboratory machinery, and high-impact regulatory advisory across 50+ countries.
-          </p>
-
-          {/* Feature Chips (Spanning Across Width) */}
-          <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs sm:text-sm text-blue-100 max-w-5xl mx-auto my-2">
-            <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-md border border-white/15 backdrop-blur-sm font-medium">
-              <CheckCircle2 size={14} className="text-emerald-400" /> BIS ISI & CRS Affairs
-            </span>
-            <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-md border border-white/15 backdrop-blur-sm font-medium">
-              <CheckCircle2 size={14} className="text-emerald-400" /> ISO/IEC 17025 Testing Labs
-            </span>
-            <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-md border border-white/15 backdrop-blur-sm font-medium">
-              <CheckCircle2 size={14} className="text-emerald-400" /> Turnkey Industrial Machinery
-            </span>
-            <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-md border border-white/15 backdrop-blur-sm font-medium">
-              <CheckCircle2 size={14} className="text-emerald-400" /> FMCS Global Plant Audits
-            </span>
-          </div>
-
-          {/* Action CTAs */}
-          <div className="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 my-2">
-            <a
-              href="#openings-section"
-              className="cursor-pointer px-6 py-2.5 sm:px-8 sm:py-3 rounded-xl bg-gradient-to-r from-[#0075B6] to-cyan-500 hover:from-[#005a8f] hover:to-cyan-600 text-white font-bold text-xs sm:text-sm shadow-md shadow-[#001c3d]/60 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-cyan-300/30"
-            >
-              {activeJobs.length > 0 ? (
-                <>Explore {activeJobs.length} Open Position{activeJobs.length === 1 ? "" : "s"} <ArrowRight size={15} /></>
-              ) : (
-                <>Explore Open Positions <ArrowRight size={15} /></>
-              )}
-            </a>
-            <button
-              onClick={() => handleOpenApply(null)}
-              className="cursor-pointer px-6 py-2.5 sm:px-8 sm:py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-xs sm:text-sm backdrop-blur-md transition-all flex items-center justify-center gap-2 shadow-sm"
-            >
-              <UploadCloud size={15} className="text-cyan-300" /> Spontaneous Application
-            </button>
-          </div>
-
-          {/* Metric Highlights Console (Wide & Well-Spaced, 1 Row) */}
-          <div className="w-full max-w-5xl mx-auto rounded-2xl bg-white/[0.08] backdrop-blur-xl border border-white/15 p-2.5 sm:p-3.5 shadow-xl mt-1">
-            <div className="grid grid-cols-4 gap-2 sm:gap-4 divide-x divide-white/10">
-              {/* Stat 1 */}
-              <div className="flex flex-col items-center justify-center text-center px-1 sm:px-3">
-                <div className="flex items-center gap-1.5 text-cyan-300 mb-0.5">
-                  <Globe2 size={14} className="hidden sm:inline" />
-                  <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
+          {/* Bottom Horizontal Stats Bar (Exact 100% Copy of Live Metric Highlights) */}
+          <div className="w-full mt-2 sm:mt-auto pt-1 sm:pt-1 md:pt-1 lg:pt-1.5 xl:pt-2 2xl:pt-3 pb-1 sm:pb-0.5 md:pb-1 lg:pb-1.5 xl:pb-2 2xl:pb-3.5 border-t border-white/10 backdrop-blur-sm">
+            <div className="grid grid-cols-4 gap-1 sm:gap-1.5 md:gap-3 lg:gap-5 xl:gap-7 2xl:gap-8 w-full items-center">
+              {/* Stat 1: REACH 50+ Countries */}
+              <div className="flex flex-col items-center justify-center text-center px-0.5 sm:px-1 md:px-1.5">
+                <div className="flex items-center gap-1 text-cyan-300 mb-0.5">
+                  <Globe2 size={11} className="hidden sm:inline" />
+                  <span className="text-[8px] sm:text-[6.5px] md:text-[7px] lg:text-[8.5px] xl:text-[10px] 2xl:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
                     Reach
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-2xl font-black text-white leading-tight">50+</h3>
-                <p className="text-[10px] sm:text-xs text-blue-100/90 font-medium truncate">Countries</p>
+                <h3 className="text-[12px] sm:text-[9.5px] md:text-[11px] lg:text-[15px] xl:text-[19px] 2xl:text-2xl font-black text-white leading-tight">50+</h3>
+                <p className="text-[7.5px] sm:text-[6px] md:text-[6.5px] lg:text-[8.5px] xl:text-[10px] 2xl:text-xs text-blue-100/90 font-medium truncate">Countries</p>
               </div>
 
-              {/* Stat 2 */}
-              <div className="flex flex-col items-center justify-center text-center px-1 sm:px-3">
-                <div className="flex items-center gap-1.5 text-sky-300 mb-0.5">
-                  <Building2 size={14} className="hidden sm:inline" />
-                  <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
+              {/* Stat 2: ENTERPRISES 1,500+ Clients */}
+              <div className="flex flex-col items-center justify-center text-center px-0.5 sm:px-1 md:px-1.5">
+                <div className="flex items-center gap-1 text-sky-300 mb-0.5">
+                  <Building2 size={11} className="hidden sm:inline" />
+                  <span className="text-[8px] sm:text-[6.5px] md:text-[7px] lg:text-[8.5px] xl:text-[10px] 2xl:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
                     Enterprises
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-2xl font-black text-white leading-tight">1,500+</h3>
-                <p className="text-[10px] sm:text-xs text-blue-100/90 font-medium truncate">Clients</p>
+                <h3 className="text-[12px] sm:text-[9.5px] md:text-[11px] lg:text-[15px] xl:text-[19px] 2xl:text-2xl font-black text-white leading-tight">1,500+</h3>
+                <p className="text-[7.5px] sm:text-[6px] md:text-[6.5px] lg:text-[8.5px] xl:text-[10px] 2xl:text-xs text-blue-100/90 font-medium truncate">Clients</p>
               </div>
 
-              {/* Stat 3 */}
-              <div className="flex flex-col items-center justify-center text-center px-1 sm:px-3">
-                <div className="flex items-center gap-1.5 text-emerald-400 mb-0.5">
-                  <TrendingUp size={14} className="hidden sm:inline" />
-                  <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
+              {/* Stat 3: TRAJECTORY 100% Merit Growth */}
+              <div className="flex flex-col items-center justify-center text-center px-0.5 sm:px-1 md:px-1.5">
+                <div className="flex items-center gap-1 text-emerald-400 mb-0.5">
+                  <TrendingUp size={11} className="hidden sm:inline" />
+                  <span className="text-[8px] sm:text-[6.5px] md:text-[7px] lg:text-[8.5px] xl:text-[10px] 2xl:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
                     Trajectory
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-2xl font-black text-white leading-tight">100%</h3>
-                <p className="text-[10px] sm:text-xs text-blue-100/90 font-medium truncate">Merit Growth</p>
+                <h3 className="text-[12px] sm:text-[9.5px] md:text-[11px] lg:text-[15px] xl:text-[19px] 2xl:text-2xl font-black text-white leading-tight">100%</h3>
+                <p className="text-[7.5px] sm:text-[6px] md:text-[6.5px] lg:text-[8.5px] xl:text-[10px] 2xl:text-xs text-blue-100/90 font-medium truncate">Merit Growth</p>
               </div>
 
-              {/* Stat 4 */}
-              <div className="flex flex-col items-center justify-center text-center px-1 sm:px-3">
-                <div className="flex items-center gap-1.5 text-yellow-400 mb-0.5">
-                  <Award size={14} className="hidden sm:inline" />
-                  <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
+              {/* Stat 4: SATISFACTION 4.9 ★ Trust Rating */}
+              <div className="flex flex-col items-center justify-center text-center px-0.5 sm:px-1 md:px-1.5">
+                <div className="flex items-center gap-1 text-yellow-400 mb-0.5">
+                  <Award size={11} className="hidden sm:inline" />
+                  <span className="text-[8px] sm:text-[6.5px] md:text-[7px] lg:text-[8.5px] xl:text-[10px] 2xl:text-[11px] font-extrabold uppercase tracking-wider text-blue-200">
                     Satisfaction
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-2xl font-black text-white leading-tight">4.9 ★</h3>
-                <p className="text-[10px] sm:text-xs text-blue-100/90 font-medium truncate">Trust Rating</p>
+                <h3 className="text-[12px] sm:text-[9.5px] md:text-[11px] lg:text-[15px] xl:text-[19px] 2xl:text-2xl font-black text-white leading-tight">4.9 ★</h3>
+                <p className="text-[7.5px] sm:text-[6px] md:text-[6.5px] lg:text-[8.5px] xl:text-[10px] 2xl:text-xs text-blue-100/90 font-medium truncate">Trust Rating</p>
               </div>
             </div>
           </div>
@@ -425,7 +478,7 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 2. WHY CHOOSE AN GLOBAL SERVICES (CULTURAL PILLARS REDESIGNED) */}
       {/* ============================================================== */}
-      <section className="relative py-12 sm:py-16 bg-gradient-to-b from-white via-slate-50 to-white border-b border-slate-200/80 overflow-hidden">
+      <section id="why-choose-us" className="relative py-10 sm:py-12 bg-gradient-to-b from-white via-slate-50 to-white border-b border-slate-200/80 overflow-hidden">
         {/* Subtle Background Pattern */}
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
@@ -625,9 +678,9 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 4. CURRENT OPENINGS SECTION (LIVE JOB BOARD)                   */}
       {/* ============================================================== */}
-      <section id="openings-section" className="py-20 bg-slate-50 scroll-mt-20">
+      <section id="openings-section" className="py-12 sm:py-14 bg-slate-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
             <div>
               <span className="text-xs font-bold text-[#0075B6] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full inline-block mb-3">
                 Live Opportunities
@@ -852,9 +905,9 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 5. OUR 4-STEP HIRING JOURNEY                                   */}
       {/* ============================================================== */}
-      <section className="py-20 bg-white border-b border-slate-200/80">
+      <section className="py-10 sm:py-12 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
             <span className="text-xs font-bold text-[#0075B6] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Clear & Transparent
             </span>
@@ -909,7 +962,7 @@ export default function CareersClient({ initialJobs = [] }) {
           </div>
 
           {/* Zero-Fee Commitment Strip */}
-          <div className="mt-10 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+          <div className="mt-6 sm:mt-7 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
             <div className="flex items-center gap-2.5 text-center sm:text-left">
               <ShieldCheck size={20} className="text-emerald-600 shrink-0" />
               <span>
@@ -929,9 +982,9 @@ export default function CareersClient({ initialJobs = [] }) {
       {/* ============================================================== */}
       {/* 6. CANDIDATE FAQ ACCORDION                                     */}
       {/* ============================================================== */}
-      <section className="py-20 bg-slate-50 border-b border-slate-200/80">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+      <section className="py-10 sm:py-12 bg-slate-50 border-b border-slate-200/80">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10">
             <span className="text-xs font-bold text-[#0075B6] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Have Questions?
             </span>

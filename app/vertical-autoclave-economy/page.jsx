@@ -91,9 +91,9 @@ export default function PortableAutoclavePage() {
             currentSlug="vertical-autoclave-economy"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
               Cost-Effective Reliable Clinic Grade
             </div>
 
@@ -101,19 +101,19 @@ export default function PortableAutoclavePage() {
               Vertical Autoclave Economy
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
               Cost-effective vertical steam sterilizer featuring a durable square-body design, digital temperature control, and radial lid locking. Commonly sought as <strong className="font-semibold text-white">Economy Vertical Autoclave</strong>, <strong className="font-semibold text-white">Budget Laboratory Sterilizer</strong>, or <strong className="font-semibold text-white">Clinic Top-Loading Autoclave</strong>.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Budget-Friendly Durable Build
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Budget-Friendly Durable Build
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Stainless Steel Inner Chamber
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Stainless Steel Inner Chamber
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Digital PID Temperature Control
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Digital PID Temperature Control
               </span>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function PortableAutoclavePage() {
       </div>
 
       {/* Operating Principle Section (How It Works) */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -250,7 +250,7 @@ export default function PortableAutoclavePage() {
       </section>
 
       {/* Detailed Specifications Cards */}
-      <section className="bg-gray-100 py-16 border-t border-gray-200">
+      <section className="bg-gray-100 py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-[#0a192f] mb-4">Equipment Features & Specs</h2>
@@ -338,7 +338,7 @@ export default function PortableAutoclavePage() {
       </section>
 
       {/* Maintenance & Compliance Section */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-12">
             <h2 className="text-3xl font-black text-[#0a192f] mb-4">Maintenance & Operation Guidelines</h2>
@@ -380,7 +380,7 @@ export default function PortableAutoclavePage() {
       </section>
       
       {/* Explore Other Autoclaves Models */}
-      <section className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 py-14">
+      <section className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 py-10 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-gray-200">
             <div>
@@ -442,8 +442,8 @@ export default function PortableAutoclavePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white py-16 border-t border-gray-200" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200" id="faqs">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">Frequently Asked Questions</h2>
             <div className="w-16 h-1 bg-[#0075B6] rounded-full mx-auto mb-6"></div>

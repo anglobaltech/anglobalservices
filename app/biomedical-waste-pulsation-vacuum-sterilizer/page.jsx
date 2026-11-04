@@ -104,29 +104,29 @@ export default function BiomedicalWasteSterilizerPage() {
             currentSlug="biomedical-waste-pulsation-vacuum-sterilizer"
           />
 
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm">
-              <Sparkles size={14} className="text-yellow-400" />
-              Heavy-Duty Hospital & Laboratory Grade
+          <div className="max-w-5xl lg:max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs md:text-sm font-semibold tracking-wide uppercase text-blue-200 mb-4 shadow-sm text-center">
+              <Sparkles size={14} className="text-yellow-400 shrink-0" />
+              Heavy-Duty Hospital &amp; Laboratory Grade
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-sm text-center">
               Biomedical Waste Pulsation Vacuum Sterilizer
             </h1>
 
-            <p className="mt-3 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-3xl text-center mx-auto">
-              Advanced pre- & post-vacuum steam sterilizer engineered for infectious hospital waste. Commonly sought as <strong className="font-semibold text-white">Biomedical Waste Autoclave</strong>, <strong className="font-semibold text-white">Pulse Vacuum Sterilizer</strong>, or <strong className="font-semibold text-white">Biohazard Steam Sterilizer</strong> for safe clinical waste decontamination.
+            <p className="mt-4 text-base sm:text-lg text-blue-100/90 font-normal leading-relaxed max-w-5xl text-center mx-auto">
+              Advanced pre- &amp; post-vacuum steam sterilizer engineered for infectious hospital waste. Commonly sought as <strong className="font-semibold text-white">Biomedical Waste Autoclave</strong>, <strong className="font-semibold text-white">Pulse Vacuum Sterilizer</strong>, or <strong className="font-semibold text-white">Biohazard Steam Sterilizer</strong> for safe clinical waste decontamination.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Multi-Pulse Dynamic Vacuum
+            <div className="mt-7 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Multi-Pulse Dynamic Vacuum
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Heavy-Gauge SS 304 / 316L
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Heavy-Gauge SS 304 / 316L
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <CheckCircle2 size={15} className="text-emerald-400" /> Automated PLC & Safety Interlocks
+              <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-lg border border-white/15 shadow-sm">
+                <CheckCircle2 size={15} className="text-emerald-400 shrink-0" /> Automated PLC &amp; Safety Interlocks
               </span>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function BiomedicalWasteSterilizerPage() {
                   The <strong className="text-[#0075B6]">Biomedical Waste Pulsation Vacuum Sterilizer</strong> is a high-efficiency industrial autoclave designed specifically for the rigorous demands of medical waste management, laboratories, and pharmaceutical facilities.
                 </p>
                 <p>
-                  Unlike standard gravity autoclaves, this system utilizes mechanical vacuum pumps to perform multiple "pulses" (alternating vacuum and steam injection). This completely eliminates cold air pockets—the primary barrier to effective sterilization—allowing high-pressure saturated steam to penetrate deep into porous materials, hollow instruments, and complex biomedical waste loads.
+                  Unlike standard gravity autoclaves, this system utilizes mechanical vacuum pumps to perform multiple &quot;pulses&quot; (alternating vacuum and steam injection). This completely eliminates cold air pockets—the primary barrier to effective sterilization—allowing high-pressure saturated steam to penetrate deep into porous materials, hollow instruments, and complex biomedical waste loads.
                 </p>
                 <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 my-6">
                   <div className="p-2 rounded-xl bg-[#0075B6] text-white shrink-0 mt-0.5">
@@ -176,7 +176,7 @@ export default function BiomedicalWasteSterilizerPage() {
                       Complete Setup by AN Global Services
                     </h4>
                     <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-normal">
-                      Our company doesn't just supply equipment; we deliver <strong className="text-[#0a192f]">comprehensive turnkey solutions</strong>. Our certified engineers manage end-to-end site preparation, rigorous calibration, IQ/OQ documentation, and operator safety training.
+                      Our company doesn&apos;t just supply equipment; we deliver <strong className="text-[#0a192f]">comprehensive turnkey solutions</strong>. Our certified engineers manage end-to-end site preparation, rigorous calibration, IQ/OQ documentation, and operator safety training.
                     </p>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export default function BiomedicalWasteSterilizerPage() {
       </div>
 
       {/* Operating Principle Section */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -212,7 +212,7 @@ export default function BiomedicalWasteSterilizerPage() {
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-[#0075B6] font-bold text-xl">1</div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Pre-Vacuum Phase</h3>
-                    <p className="text-gray-600 leading-relaxed">A mechanical vacuum pump extracts the ambient air from the chamber. Steam is injected and vacuumed out repeatedly in "pulses." This dynamic action removes over 99% of trapped cold air, which is the leading cause of sterilization failure in porous loads.</p>
+                    <p className="text-gray-600 leading-relaxed">A mechanical vacuum pump extracts the ambient air from the chamber. Steam is injected and vacuumed out repeatedly in &quot;pulses.&quot; This dynamic action removes over 99% of trapped cold air, which is the leading cause of sterilization failure in porous loads.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -270,7 +270,7 @@ export default function BiomedicalWasteSterilizerPage() {
       </section>
 
       {/* Detailed Information Cards */}
-      <section className="bg-gray-100 py-16 border-t border-gray-200">
+      <section className="bg-gray-100 py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-[#0a192f] mb-4">Comprehensive Specifications</h2>
@@ -358,7 +358,7 @@ export default function BiomedicalWasteSterilizerPage() {
       </section>
 
       {/* Maintenance & Compliance Section */}
-      <section className="bg-white py-16 border-t border-gray-200">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-12">
             <h2 className="text-3xl font-black text-[#0a192f] mb-4">Comprehensive Maintenance & Compliance Guide</h2>
@@ -402,7 +402,7 @@ export default function BiomedicalWasteSterilizerPage() {
       </section>
       
       {/* Explore Other Autoclaves Models */}
-      <section className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 py-14">
+      <section className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 py-10 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-gray-200">
             <div>
@@ -464,8 +464,8 @@ export default function BiomedicalWasteSterilizerPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white py-16 border-t border-gray-200" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="bg-white py-10 sm:py-12 border-t border-gray-200" id="faqs">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a192f] mb-4">Frequently Asked Questions</h2>
             <div className="w-16 h-1 bg-[#0075B6] rounded-full mx-auto mb-6"></div>
@@ -505,7 +505,7 @@ export default function BiomedicalWasteSterilizerPage() {
                 </span>
               </summary>
               <div className="px-5 pb-5 text-gray-600 pt-2 border-t border-gray-100">
-                The vacuum pump removes 99% of ambient air before steam is introduced, preventing "cold spots" inside the chamber. After the cycle, the vacuum also pulls moisture out of the load, ensuring completely dry and safe waste removal.
+                The vacuum pump removes 99% of ambient air before steam is introduced, preventing &quot;cold spots&quot; inside the chamber. After the cycle, the vacuum also pulls moisture out of the load, ensuring completely dry and safe waste removal.
               </div>
             </details>
 
@@ -517,7 +517,7 @@ export default function BiomedicalWasteSterilizerPage() {
                 </span>
               </summary>
               <div className="px-5 pb-5 text-gray-600 pt-2 border-t border-gray-100">
-                Absolutely. AN Global Services handles the entire installation process, validates the machine's safety, and provides comprehensive hands-on training for operators to ensure compliant and safe waste management.
+                Absolutely. AN Global Services handles the entire installation process, validates the machine&apos;s safety, and provides comprehensive hands-on training for operators to ensure compliant and safe waste management.
               </div>
             </details>
           </div>

@@ -256,6 +256,120 @@ const equipments = [
     image: "/equipment/laboratory-shaking-machine-manufacturer-products/rotary-flask-shaker.webp",
     excerpt: "Heavy-duty orbital rotary flask shaker (flask agitator) with universal clamps for microbiology, cell culture, and chemical dissolution."
   },
+  {
+    title: "Gyratory Sieve Shaker",
+    slug: "gyratory-sieve-shaker",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/gyratory-sieve-shaker.webp",
+    excerpt: "Planetary orbital gyratory motion (280–320 RPM) for 200mm & 300mm sieves complying with ASTM C136 & IS 2720."
+  },
+  {
+    title: "Rotap Sieve Shaker",
+    slug: "rotap-sieve-shaker",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/rotap-sieve-shaker.webp",
+    excerpt: "Circular horizontal motion and mechanical hammer tapping conforming to ASTM E11 & ISO 3310 particle size analysis."
+  },
+  {
+    title: "Kahn Reciprocating Shaking Machine",
+    slug: "kahn-reciprocating-shaking-machine",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/kahn-reciprocating-shaking-machine.webp",
+    excerpt: "Linear reciprocating back-and-forth serological agitation for Kahn test tube racks, bottles, and chemical extraction."
+  },
+  {
+    title: "Magnetic Shaker",
+    slug: "magnetic-shaker",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/magnetic-shaker.webp",
+    excerpt: "Precision magnetic stirrer and shaker with stepless RPM speed control and chemical-resistant top plate."
+  },
+  {
+    title: "Table Top Sieve Shaker",
+    slug: "table-top-sieve-shaker",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/table-top-sieve-shaker.webp",
+    excerpt: "Compact electromagnetic 3D vibratory particle sizing machine with digital amplitude control for benchtop labs."
+  },
+  {
+    title: "Universal Shaking Machine",
+    slug: "universal-shaking-machine",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/universal-shaking-machine.webp",
+    excerpt: "Heavy-duty dual-action orbital and linear reciprocal shaker with adjustable universal platform clamps."
+  },
+  {
+    title: "Vortex Shaker",
+    slug: "vortex-shaker",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/vortex-shaker.webp",
+    excerpt: "High-speed 3000 RPM touch and continuous orbital vortex mixer for tubes, vials, and microplates."
+  },
+  {
+    title: "Wagner Shaking Machine",
+    slug: "wagner-shaking-machine",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/wagner-shaking-machine.webp",
+    excerpt: "360° vertical end-over-end rotary bottle agitator for soil leaching, sediment extraction, and mineral assaying."
+  },
+  {
+    title: "Wet Sieve Shaker",
+    slug: "wet-sieve-shaker",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/wet-sieve-shaker.webp",
+    excerpt: "Specialized wet sieving apparatus with continuous water spray nozzles and drainage for clay and fine aggregates."
+  },
+  {
+    title: "Wrist Action Shaking Machine",
+    slug: "wrist-action-shaking-machine",
+    category: "Laboratory Shaking Machine",
+    image: "/equipment/laboratory-shaking-machine-manufacturer-products/wrist-action-shaking-machine.webp",
+    excerpt: "Simulates human wrist-swirling action for up to 8 separatory funnels and Erlenmeyer flasks in solvent extractions."
+  },
+
+  // --- MICROSCOPES ---
+  {
+    title: "Trinocular Microscope",
+    slug: "trinocular-microscope",
+    category: "Microscopes",
+    image: "/microscopes/trinocular-microscope.webp",
+    excerpt: "Dual ocular viewing with dedicated vertical digital camera phototube and infinity plan achromatic optics."
+  },
+  {
+    title: "Binocular Microscope",
+    slug: "binocular-microscope",
+    category: "Microscopes",
+    image: "/equipment/microscopes/binocular-microscope.webp",
+    excerpt: "High-resolution ergonomic Siedentopf dual-eyepiece compound laboratory microscope for clinical diagnostics."
+  },
+  {
+    title: "Monocular Microscope",
+    slug: "monocular-microscope",
+    category: "Microscopes",
+    image: "/microscopes/monocular-microscope.webp",
+    excerpt: "Durable 45° inclined educational laboratory microscope with 40x–1000x magnification and cordless rechargeable LED."
+  },
+  {
+    title: "Tissue Culture Microscope",
+    slug: "tissue-culture-microscope",
+    category: "Microscopes",
+    image: "/equipment/microscopes/tissue-culture-microscope.webp",
+    excerpt: "Inverted tissue culture microscope with long working distance optics for petri dishes and cell culture flasks."
+  },
+  {
+    title: "Stereoscopic Zoom Binocular Microscope",
+    slug: "stereoscopic-zoom-binocular-microscope",
+    category: "Microscopes",
+    image: "/microscopes/stereoscopic-zoom-binocular-microscope.webp",
+    excerpt: "Continuous 7X–45X stereo zoom 3D inspection microscope with incident and transmitted dual illumination."
+  },
+  {
+    title: "Projection Microscope",
+    slug: "projection-microscope",
+    category: "Microscopes",
+    image: "/microscopes/projection-microscope.webp",
+    excerpt: "Large 150mm/200mm circular projection screen microscope for group demonstration and institutional teaching."
+  },
 
   // --- TESTING & MANUFACTURING EQUIPMENT ---
   {
@@ -292,6 +406,64 @@ const equipments = [
     category: "Testing Equipment",
     image: "/equipment/solar-testing/solar-panel-testing.png",
     excerpt: "Essential testing machinery for solar panels to guarantee performance and regulatory compliance."
+  },
+
+  // --- MOISTURE METERS ---
+  {
+    title: "Flour Moisture Meter",
+    slug: "flour-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/flour-moisture-meter.webp",
+    excerpt: "Digital microprocessor-based flour moisture meter with automatic temperature compensation for wheat flour, atta, maida, and food powders."
+  },
+  {
+    title: "Grain Moisture Meter",
+    slug: "grain-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/grain-moisture-meter.webp",
+    excerpt: "Rapid multi-grain moisture tester for paddy, wheat, corn, pulses, and oilseeds with digital LCD readout."
+  },
+  {
+    title: "Hay Moisture Meter",
+    slug: "hay-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/hay-moisture-meter.webp",
+    excerpt: "Rugged probe-style moisture analyzer for baled hay, straw, forage, and animal silage quality control."
+  },
+  {
+    title: "Red Pepper Moisture Meter",
+    slug: "red-pepper-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/red-pepper-moisture-meter.webp",
+    excerpt: "Specialized moisture content tester for whole, crushed, and powdered dried red chilies and spices."
+  },
+  {
+    title: "Seed Moisture Meter",
+    slug: "seed-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/seed-moisture-meter.webp",
+    excerpt: "Non-destructive digital seed moisture analyzer for seed testing laboratories and certified seed growers."
+  },
+  {
+    title: "Soil Moisture Meter",
+    slug: "soil-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/soil-moisture-meter.webp",
+    excerpt: "Direct soil moisture and temperature measurement probe for agricultural research and field agronomy."
+  },
+  {
+    title: "Tobacco Moisture Meter",
+    slug: "tobacco-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/tobacco-moisture-meter.webp",
+    excerpt: "Rapid electronic moisture analyzer for green, cured, and processed tobacco leaf bundles."
+  },
+  {
+    title: "Wood Moisture Meter",
+    slug: "wood-moisture-meter",
+    category: "Moisture Meter",
+    image: "/equipment/moisture-meter/wood-moisture-meter.webp",
+    excerpt: "Dual-pin digital moisture detector for timber, lumber, plywood, and woodworking moisture verification."
   }
 ];
 
