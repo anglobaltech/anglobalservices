@@ -187,7 +187,7 @@ export default function ISIPage() {
             </h1>
 
             <p className="mt-4 text-md max-w-3xl mx-auto leading-relaxed text-white text-lg md:text-xl font-medium mt-3 drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
-              Expert ISI Certificate & BIS Certificate Consultants in India for
+              Expert ISI C ertificate & BIS Certificate Consultants in India for
               manufacturers, importers & brand owners.
             </p>
           </div>
